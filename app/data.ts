@@ -64,6 +64,96 @@ export const blogPosts = [
 ] as const;
 export const stats = [{label:'Typical savings target',value:'30-60%',note:'depends on role, management, and local hiring plan'},{label:'Best pilot length',value:'14 days',note:'enough time to test quality before scaling'},{label:'Start with',value:'5-10 tasks',note:'clear recurring tasks beat vague job descriptions'}] as const;
 
+export const blogDetails = {
+  'website-design-outsource-provider-questions': {
+    shortAnswer: 'Ask how the provider protects access, reviews design quality, fixes missed briefs, and hands over files. A nice portfolio helps, but the daily handoff rules matter more once work starts.',
+    answerRows: [
+      {
+        question: 'Who owns the source files?',
+        weak: '"You get everything after the project."',
+        useful: '"You get Figma, image exports, font notes, page copy, and handoff links in your workspace before final signoff."',
+      },
+      {
+        question: 'How do you handle revisions?',
+        weak: '"We include unlimited edits."',
+        useful: '"We collect feedback in one board, confirm what is in scope, and show the owner what changed before the next page starts."',
+      },
+      {
+        question: 'How is quality checked?',
+        weak: '"Our team reviews everything."',
+        useful: '"We check mobile layout, forms, page speed basics, SEO fields, links, and brand rules before sending the page back."',
+      },
+      {
+        question: 'How do you protect logins?',
+        weak: '"You can send us the password."',
+        useful: '"Use role-based access, a password manager, and remove access when the work is done. No shared owner login."',
+      },
+    ],
+    scriptIntro: 'Use this plain script when a sales call starts to sound too broad.',
+    callScript: [
+      '"Can you walk me through the first page you would take from brief to live review?"',
+      '"What files and links will we own if we stop after the pilot?"',
+      '"Who checks mobile, forms, metadata, accessibility basics, and broken links before handoff?"',
+      '"What should we never give your team direct access to?"',
+      '"If the first draft misses the brief, what happens in the next 48 hours?"',
+    ],
+    checks: [
+      {
+        title: 'Brief quality',
+        body: 'Give one real page, one target customer, three competitor links, and the conversion action. If they cannot repeat the brief back in plain words, pause.',
+      },
+      {
+        title: 'Access control',
+        body: 'Use named accounts and the least access needed. NIST and the FTC both push simple access rules for small businesses.',
+      },
+      {
+        title: 'SEO handoff',
+        body: 'Ask for titles, meta descriptions, headings, redirects, image alt text, and index checks. Google says helpful pages need clear structure and crawlable links.',
+      },
+      {
+        title: 'Accessibility basics',
+        body: 'Ask how they check contrast, keyboard use, alt text, labels, and readable layouts. WCAG is the right baseline, even for small sites.',
+      },
+    ],
+    sources: [
+      {
+        name: 'Google Search Central SEO starter guide',
+        url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide',
+        note: 'Used for crawlable links, titles, headings, and helpful page basics.',
+      },
+      {
+        name: 'W3C Web Accessibility Initiative WCAG overview',
+        url: 'https://www.w3.org/WAI/standards-guidelines/wcag/',
+        note: 'Used for the accessibility baseline in design QA.',
+      },
+      {
+        name: 'NIST Small Business Cybersecurity Corner',
+        url: 'https://www.nist.gov/itl/smallbusinesscyber',
+        note: 'Used for access-control and small business security checks.',
+      },
+      {
+        name: 'FTC Cybersecurity for Small Business',
+        url: 'https://www.ftc.gov/business-guidance/small-businesses/cybersecurity',
+        note: 'Used for simple password, access, and vendor safety rules.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Should I hire a freelancer or a managed design team?',
+        answer: 'Use a freelancer when the work is small and you can review it closely. Use a managed team when you need coverage, QA, backup, and steady page production.',
+      },
+      {
+        question: 'What should be in the first website design outsource brief?',
+        answer: 'Include the page goal, audience, brand rules, examples, must-have sections, tool access, review owner, and launch checklist.',
+      },
+      {
+        question: 'Should I give full website admin access on day one?',
+        answer: 'No. Start with the lowest access that lets the person do the task. Add access only when the work and review process are stable.',
+      },
+    ],
+  },
+} as const;
+
 export const stealthOffer = {
   partner: 'Stealth Agents',
   promise: 'Get a managed offshore staffing plan built around the work you need removed from your plate.',
