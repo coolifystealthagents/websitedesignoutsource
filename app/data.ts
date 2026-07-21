@@ -16,24 +16,24 @@ export const site = {
 } as const;
 export const services = [
   {
-    "slug": "operations-support",
-    "title": "Operations Support",
-    "desc": "Operations Support for teams using website design outsource with clear SOPs, weekly review, and measurable handoffs."
+    "slug": "landing-page-design",
+    "title": "Landing Page Design",
+    "desc": "Turn an approved brief into a responsive landing page with clear review points and a clean source-file handoff."
   },
   {
-    "slug": "customer-support",
-    "title": "Customer Support",
-    "desc": "Customer Support for teams using website design outsource with clear SOPs, weekly review, and measurable handoffs."
+    "slug": "website-rebuilds",
+    "title": "Website Rebuilds",
+    "desc": "Refresh an aging site while keeping useful pages, redirects, forms, and search details intact."
   },
   {
-    "slug": "admin-support",
-    "title": "Admin Support",
-    "desc": "Admin Support for teams using website design outsource with clear SOPs, weekly review, and measurable handoffs."
+    "slug": "design-systems",
+    "title": "Design Systems",
+    "desc": "Build reusable sections, components, states, and type rules so new pages do not start from scratch."
   },
   {
-    "slug": "reporting-and-qa",
-    "title": "Reporting and QA",
-    "desc": "Reporting and QA for teams using website design outsource with clear SOPs, weekly review, and measurable handoffs."
+    "slug": "responsive-qa-handoff",
+    "title": "Responsive QA & Handoff",
+    "desc": "Check layouts, links, forms, metadata, and source files before the project returns to your team."
   }
 ] as const;
 export const blogPosts = [

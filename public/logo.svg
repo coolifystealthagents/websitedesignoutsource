@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Site logo">
-  <rect width="96" height="96" rx="24" fill="#17324D"/>
-  <path d="M24 60V29h13l22 28V29h13v38H59L37 39v28H24z" fill="#FFF8EE"/>
-  <circle cx="70" cy="26" r="8" fill="#F27B3D"/>
-  <path d="M22 73c15-8 36-8 52 0" fill="none" stroke="#0F8F73" stroke-width="8" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Website Design Outsource logo">
+  <rect width="96" height="96" rx="22" fill="#D9FF76"/>
+  <path d="M18 24h60v48H18z" fill="#10201B"/>
+  <path d="M18 24h60v12H18z" fill="#F4F1E9"/>
+  <circle cx="26" cy="30" r="2.6" fill="#FF6846"/>
+  <circle cx="34" cy="30" r="2.6" fill="#10201B" opacity=".35"/>
+  <path d="M27 45l8 19 9-13 8 13 17-22" fill="none" stroke="#D9FF76" stroke-width="7" stroke-linecap="square" stroke-linejoin="bevel"/>
 </svg>

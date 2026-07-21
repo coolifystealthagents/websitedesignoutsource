@@ -1,30 +1,196 @@
-import * as data from './data';
-import { Header, Footer, JsonLd } from './components';
-const d=data as any;
-const site=d.site||{};
-const services=(d.services||d.roles||d.industries||[]).slice(0,4);
-const posts=(d.blogPosts||[]).slice(0,3);
-const stats=(d.stats||[]).slice(0,3);
-const offer=d.staffingOffer||{};
-const pretty=(v:any)=>String(v||'virtual assistant support').replace(/\b\w/g,(m)=>m.toUpperCase());
-const title=(x:any)=>typeof x==='string'?x:(x.title||x.name||x.label||x.question||'Assistant role');
-const text=(x:any)=>typeof x==='string'?x:(x.desc||x.excerpt||x.note||x.body||(x.bestFor?`Best for ${x.bestFor.join(', ')}`:'Clear tasks, safe access, and review rules.'));
-const slug=(x:any)=>(x.slug||title(x).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''));
-const primary=site.primary||site.brand||'virtual assistant support';
-const rolePhrase=String(primary).toLowerCase()
-  .replace(/^best\s+/,'')
-  .replace(/(company|companies|services|service|provider|providers)/g,'')
-  .replace(/(outsource|outsourced|outsourcing|offshore|overseas)/g,'')
-  .replace(/\s+/g,' ')
-  .trim() || 'business support';
-const roleLabel=pretty(rolePhrase.includes('assistant')?rolePhrase:`${rolePhrase} support`).replace(/\bVa\b/g,'VA');
-const domain=site.domain||site.brand||'Staffing Guide';
-const heroImage=site.heroImage||site.serviceImage||'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80';
-const tagline=site.angle||site.audience||'managed hiring support with clear scope, safe access, onboarding, and quality checks';
-export default function Home(){const schema={'@context':'https://schema.org','@type':'WebSite',name:site.brand,url:`https://${domain}`};return <><Header/><main className="belay"><JsonLd data={schema}/>
-<section className="hero"><div className="container hero-grid"><div className="copy"><p className="eyebrow">Premium staffing match</p><h1>Hire managed {roleLabel} without screening alone.</h1><p className="lead">Get clear communicators, business-hour coverage, and a managed launch plan for {tagline}.</p><div className="actions"><a className="btn primary" href="/contact">Request staffing plan</a><a className="btn secondary" href="#tasks">Get task ideas</a></div><p className="risk">No public rate card. Share the role first, then get a practical scope.</p></div><div className="match-card"><div className="portrait-wrap"><img src={heroImage} alt={site.alt||`${site.brand||roleLabel} managed staffing visual`}/><span className="badge">Top-fit match</span></div><div className="task-note note-a"><b>Daily handoff</b><span>clear owner brief</span></div><div className="task-note note-b"><b>Quality checks</b><span>work reviewed weekly</span></div><div className="task-note note-c"><b>21-day launch</b><span>scope → shadow → live QA</span></div></div></div><div className="container proof-bar"><span>Right role before right hire</span>{stats.length?stats.map((s:any,i:number)=><b key={i}>{s.value||s.label}</b>):['Scope first','7-21 days','5-10 tasks'].map((x,i)=><b key={i}>{x}</b>)}</div></section>
-<section className="container section" id="tasks"><div className="split-head"><div><p className="eyebrow">Task ideas</p><h2>Start with work that repeats every week.</h2></div><p>Inspired by premium VA and outsourcing competitors: make the hire feel human, specific, and low risk before the contact form.</p></div><div className="task-grid">{services.map((s:any,i:number)=><a key={i} href={`/services/${slug(s)}`}><span>{String(i+1).padStart(2,'0')}</span><h3>{title(s)}</h3><p>{text(s)}</p><b>See handoff →</b></a>)}</div></section>
-<section className="relationship"><div className="container rel-grid"><div><p className="eyebrow">Managed, not marketplace</p><h2>Your staffing plan should come with backup, onboarding, and quality checks.</h2></div><div className="rel-list">{(offer.included||['role planning call','candidate matching','onboarding guidance','managed support']).slice(0,4).map((x:string,i:number)=><article key={i}><span>✓</span><p>{x}</p></article>)}</div></div></section>
-<section className="container section guide-row"><div><p className="eyebrow">Before you hire</p><h2>Short guides for safer staffing decisions.</h2></div>{posts.map((p:any,i:number)=><a href={`/blog/${p.slug}`} key={i}><span>{p.minutes||7} min</span><strong>{title(p)}</strong><p>{text(p)}</p></a>)}</section>
-<section className="container final"><h2>Request the staffing plan before you interview.</h2><a className="btn primary" href="/contact">Request staffing plan</a></section>
-</main><Footer/></>}
+import { Footer, Header, JsonLd } from './components';
+import { blogPosts, services } from './data';
+
+const work = [
+  {
+    number: '01',
+    title: 'Landing pages',
+    body: 'Send the brief, brand rules, and conversion goal. Get a responsive page ready for your team to review.',
+    tag: 'Design + build',
+  },
+  {
+    number: '02',
+    title: 'Website rebuilds',
+    body: 'Turn an aging site into a cleaner system without losing the pages, redirects, or search details that still matter.',
+    tag: 'Structure + UI',
+  },
+  {
+    number: '03',
+    title: 'Design systems',
+    body: 'Create reusable sections, states, and type rules so the next page does not start from a blank canvas.',
+    tag: 'Figma + components',
+  },
+  {
+    number: '04',
+    title: 'QA and handoff',
+    body: 'Check mobile layouts, links, forms, metadata, and source files before anything comes back to the client.',
+    tag: 'Review + release',
+  },
+];
+
+const steps = [
+  ['Brief the page', 'Share the goal, audience, examples, platform, and the one action the page needs to earn.'],
+  ['Review the route', 'The pod flags missing copy, unclear states, access risks, and scope questions before design starts.'],
+  ['Build in view', 'Work moves through named review points. Your team can see what changed and what still needs a decision.'],
+  ['Take the files', 'Figma, exports, page assets, and handoff notes return to your workspace. Nothing stays trapped with us.'],
+];
+
+const articleText = (post: (typeof blogPosts)[number]) => post.excerpt || 'A practical guide for planning and reviewing outsourced website work.';
+
+export default function Home() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Website Design Outsource',
+    url: 'https://websitedesignoutsource.com',
+  };
+
+  return (
+    <>
+      <Header />
+      <main className="studio-home">
+        <JsonLd data={schema} />
+
+        <section className="studio-hero">
+          <div className="studio-orbit studio-orbit-one" aria-hidden="true" />
+          <div className="studio-orbit studio-orbit-two" aria-hidden="true" />
+          <div className="studio-shell studio-hero-grid">
+            <div className="studio-hero-copy">
+              <p className="studio-kicker"><span /> White-label website production</p>
+              <h1>A web design pod that works <em>behind your brand.</em></h1>
+              <p className="studio-intro">Hand off the pages your team cannot get to. We help shape the brief, design the interface, build the site, and return clean source files for client review.</p>
+              <div className="studio-actions">
+                <a className="studio-button studio-button-primary" href="/contact">Plan a website handoff <span>↗</span></a>
+                <a className="studio-text-link" href="#work">See what the pod handles <span>↓</span></a>
+              </div>
+              <div className="studio-assurances" aria-label="Service assurances">
+                <span>Private delivery</span>
+                <span>Your files, in your workspace</span>
+                <span>QA before handoff</span>
+              </div>
+            </div>
+
+            <div className="studio-board" aria-label="Website design production workspace preview">
+              <div className="studio-board-top">
+                <span className="studio-board-brand"><i>W</i> Production desk</span>
+                <span className="studio-board-status"><i /> In review</span>
+              </div>
+              <div className="studio-canvas">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=88" alt="Website team reviewing work together at a screen" />
+                <div className="studio-canvas-shade" />
+                <div className="studio-floating-copy">
+                  <small>Homepage / concept 02</small>
+                  <strong>Clearer pages.<br />Quieter handoffs.</strong>
+                  <span>Desktop approved</span>
+                </div>
+                <div className="studio-comment-card">
+                  <div className="studio-avatar">A</div>
+                  <p><b>Review note</b><br />Keep the CTA visible after the mobile crop.</p>
+                </div>
+              </div>
+              <div className="studio-board-footer">
+                <div><span>Brief</span><b>Locked</b></div>
+                <div><span>Responsive</span><b>Checked</b></div>
+                <div><span>Files</span><b>Ready</b></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="studio-shell studio-rail" aria-label="Website design capabilities">
+            {services.map((item, index) => (
+              <a href={`/services/${item.slug}`} key={item.slug}><i>{String(index + 1).padStart(2, '0')}</i>{item.title}</a>
+            ))}
+          </div>
+        </section>
+
+        <section className="studio-work studio-shell" id="work">
+          <div className="studio-section-head">
+            <div>
+              <p className="studio-kicker studio-kicker-dark"><span /> Work to hand off</p>
+              <h2>Give the overflow a proper desk.</h2>
+            </div>
+            <p>You should not need another maze of freelancers to get four pages out the door. Put the brief, design, build, and final checks in one lane.</p>
+          </div>
+          <div className="studio-work-grid">
+            {work.map((item) => (
+              <a href="/contact" className="studio-work-card" key={item.number}>
+                <div className="studio-work-meta"><span>{item.number}</span><small>{item.tag}</small></div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <b>Discuss this work <span>↗</span></b>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="studio-process" id="process">
+          <div className="studio-shell studio-process-grid">
+            <div className="studio-process-copy">
+              <p className="studio-kicker"><span /> A visible process</p>
+              <h2>The work stays quiet. The handoff does not.</h2>
+              <p>Your client relationship stays yours. Behind it, every page has a brief, an owner, a review point, and a final file list.</p>
+              <a className="studio-button studio-button-primary" href="/contact">Map the first project <span>↗</span></a>
+            </div>
+            <div className="studio-step-list">
+              {steps.map(([title, body], index) => (
+                <article key={title}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <div><h3>{title}</h3><p>{body}</p></div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="studio-fit studio-shell">
+          <div className="studio-fit-panel">
+            <div className="studio-fit-title">
+              <p className="studio-kicker studio-kicker-dark"><span /> Good fit</p>
+              <h2>For teams with more website work than hands.</h2>
+            </div>
+            <div className="studio-fit-copy">
+              <p>This works best when your agency already owns the strategy and client relationship but needs a dependable design and production lane.</p>
+              <ul>
+                <li><span>01</span> You have approved brand rules and a real review owner.</li>
+                <li><span>02</span> You want the source files and build notes back in your tools.</li>
+                <li><span>03</span> You care about responsive QA as much as the first desktop concept.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="studio-guides studio-shell">
+          <div className="studio-section-head">
+            <div>
+              <p className="studio-kicker studio-kicker-dark"><span /> Field notes</p>
+              <h2>Useful before the kickoff call.</h2>
+            </div>
+            <a className="studio-text-link studio-text-link-dark" href="/blog">Read all guides <span>↗</span></a>
+          </div>
+          <div className="studio-guide-grid">
+            {blogPosts.slice(0, 3).map((post, index) => (
+              <a href={`/blog/${post.slug}`} key={post.slug}>
+                <span>{String(index + 1).padStart(2, '0')} / {post.minutes} min</span>
+                <h3>{post.title}</h3>
+                <p>{articleText(post)}</p>
+                <b>Read the note ↗</b>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="studio-final studio-shell">
+          <div>
+            <p className="studio-kicker"><span /> Start with one project</p>
+            <h2>What is stuck in your website queue?</h2>
+          </div>
+          <div>
+            <p>Send the page list, platform, deadline, and what your team already has. We will help turn it into a handoff that a design pod can actually use.</p>
+            <a className="studio-button studio-button-primary" href="/contact">Plan the handoff <span>↗</span></a>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
