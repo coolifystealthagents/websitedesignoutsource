@@ -1,11 +1,1 @@
-import * as data from '../data';
-export function GET() {
-  const d=data as any;
-  const site=d.site||{};
-  const services=d.services||[];
-  const blogPosts=d.blogPosts||[];
-  const base = `https://${String(site.domain).toLowerCase()}`;
-  const urls = ['/', '/blog', '/contact', '/privacy', '/terms', '/cancellation-policy', ...services.map((service:any) => `/services/${service.slug}`), ...blogPosts.map((post:any) => `/blog/${post.slug}`)];
-  const body = urls.map((path) => `<url><loc>${base}${path === '/' ? '' : path}</loc></url>`).join('');
-  return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${body}</urlset>`, { headers: { 'content-type': 'application/xml' } });
-}
+import {fleetServices,researchPosts} from '../fleet-content';import {blogPosts} from '../data';const base='https://websitedesignoutsource.com';export async function GET(){const pages=['','/services','/pricing','/blog','/research','/contact','/privacy','/terms','/cancellation-policy'];const blogPages=Array.from({length:Math.max(1,Math.ceil(blogPosts.length/20))},(_,i)=>i+1).filter(n=>n>1).map(n=>`/blog/page/${n}`);const urls=[...pages,...fleetServices.map(s=>`/services/${s.slug}`),...blogPosts.map(p=>`/blog/${p.slug}`),...blogPages,...researchPosts.map(p=>`/research/${p.slug}`)];const xml=`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(x=>`<url><loc>${base}${x}</loc></url>`).join('')}</urlset>`;return new Response(xml,{headers:{'Content-Type':'application/xml'}})}
