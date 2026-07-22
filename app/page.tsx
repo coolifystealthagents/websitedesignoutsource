@@ -1,5 +1,6 @@
 import { Footer, Header, JsonLd } from './components';
-import { blogPosts, services } from './data';
+import { blogPosts } from './data';
+import { fleetServices } from './fleet-content';
 
 const work = [
   {
@@ -56,9 +57,9 @@ export default function Home() {
           <div className="studio-orbit studio-orbit-two" aria-hidden="true" />
           <div className="studio-shell studio-hero-grid">
             <div className="studio-hero-copy">
-              <p className="studio-kicker"><span /> White-label website production</p>
-              <h1>A web design pod that works <em>behind your brand.</em></h1>
-              <p className="studio-intro">Hand off the pages your team cannot get to. We help shape the brief, design the interface, build the site, and return clean source files for client review.</p>
+              <p className="studio-kicker"><span /> Philippines-based website production</p>
+              <h1>A Filipino web design pod that works <em>behind your brand.</em></h1>
+              <p className="studio-intro">Hand off the pages your team cannot get to. Our Philippines-based specialists help shape the brief, design the interface, build the site, and return clean source files for client review.</p>
               <div className="studio-actions">
                 <a className="studio-button studio-button-primary" href="/contact">Plan a website handoff <span>↗</span></a>
                 <a className="studio-text-link" href="#work">See what the pod handles <span>↓</span></a>
@@ -97,7 +98,7 @@ export default function Home() {
           </div>
 
           <div className="studio-shell studio-rail" aria-label="Website design capabilities">
-            {services.map((item, index) => (
+            {fleetServices.slice(0, 4).map((item, index) => (
               <a href={`/services/${item.slug}`} key={item.slug}><i>{String(index + 1).padStart(2, '0')}</i>{item.title}</a>
             ))}
           </div>
@@ -109,7 +110,7 @@ export default function Home() {
               <p className="studio-kicker studio-kicker-dark"><span /> Work to hand off</p>
               <h2>Give the overflow a proper desk.</h2>
             </div>
-            <p>You should not need another maze of freelancers to get four pages out the door. Put the brief, design, build, and final checks in one lane.</p>
+            <p>You should not need another maze of freelancers to get four pages out the door. Put the brief, design, build, and final checks with one Philippines-based pod.</p>
           </div>
           <div className="studio-work-grid">
             {work.map((item) => (
@@ -128,7 +129,7 @@ export default function Home() {
             <div className="studio-process-copy">
               <p className="studio-kicker"><span /> A visible process</p>
               <h2>The work stays quiet. The handoff does not.</h2>
-              <p>Your client relationship stays yours. Behind it, every page has a brief, an owner, a review point, and a final file list.</p>
+              <p>Your client relationship stays yours. Behind it, your Filipino production team gives every page a brief, an owner, a review point, and a final file list.</p>
               <a className="studio-button studio-button-primary" href="/contact">Map the first project <span>↗</span></a>
             </div>
             <div className="studio-step-list">
