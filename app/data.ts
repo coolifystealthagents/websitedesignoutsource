@@ -38,6 +38,12 @@ export const services = [
 ] as const;
 export const blogPosts = [
   {
+    "slug": "philippines-website-design-outsourcing-accessible-handoff",
+    "title": "Philippines Website Design Outsourcing: An Accessible Handoff Plan",
+    "excerpt": "A practical way to brief, review, and take ownership of website design work completed by a Philippines-based team.",
+    "minutes": 12
+  },
+  {
     "slug": "website-design-outsource-planning",
     "title": "Website Design Outsource: What does it plan?",
     "excerpt": "A plain-English guide to staffing details, scope, and hidden planning.",

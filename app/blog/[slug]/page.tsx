@@ -1,5 +1,6 @@
 import { Header, Footer, CTA, JsonLd } from '../../components';
 import { blogDetails, blogPosts, site } from '../../data';
+import { AccessibleHandoffArticle } from './rich-article';
 
 const baseUrl = 'https://websitedesignoutsource.com';
 
@@ -16,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug) || blogPosts[0];
+  if (slug === 'philippines-website-design-outsourcing-accessible-handoff') return <AccessibleHandoffArticle />;
   const detail = blogDetails[post.slug as keyof typeof blogDetails];
   const canonical = `${baseUrl}/blog/${post.slug}`;
 
