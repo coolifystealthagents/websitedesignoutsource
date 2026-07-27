@@ -42,32 +42,7 @@ export const blogPosts = [
     "title": "Philippines Website Design Outsourcing: An Accessible Handoff Plan",
     "excerpt": "A practical way to brief, review, and take ownership of website design work completed by a Philippines-based team.",
     "minutes": 12
-  },
-  {
-    "slug": "website-design-outsource-planning",
-    "title": "Website Design Outsource: What does it plan?",
-    "excerpt": "A plain-English guide to staffing details, scope, and hidden planning.",
-    "minutes": 6
-  },
-  {
-    "slug": "website-design-outsource-tasks-to-outsource",
-    "title": "Website Design Outsource: What tasks should you outsource first?",
-    "excerpt": "Start with recurring work that has examples and clear review rules.",
-    "minutes": 7
-  },
-  {
-    "slug": "website-design-outsource-provider-questions",
-    "title": "Website Design Outsource: Questions to ask before hiring",
-    "excerpt": "Use these questions before you sign with a provider or freelancer.",
-    "minutes": 8
-  },
-  {
-    "slug": "website-design-outsource-onboarding-checklist",
-    "title": "Website Design Outsource: First week onboarding checklist",
-    "excerpt": "A simple checklist for tools, SOPs, calls, QA, and reporting.",
-    "minutes": 9
-  }
-] as const;
+  },] as const;
 export const stats = [{label:'Typical savings target',value:'30-60%',note:'depends on role, management, and local hiring plan'},{label:'Best pilot length',value:'14 days',note:'enough time to test quality before scaling'},{label:'Start with',value:'5-10 tasks',note:'clear recurring tasks beat vague job descriptions'}] as const;
 
 export const blogDetails = {
