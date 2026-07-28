@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="studio-home">
+      <main className="studio-home" data-gi-rollout="two-illustration-packs-one-icon-pack">
         <JsonLd data={schema} />
 
         <section className="studio-hero">
@@ -65,9 +65,9 @@ export default function Home() {
                 <a className="studio-text-link" href="#work">See what the pod handles <span>↓</span></a>
               </div>
               <div className="studio-assurances" aria-label="Service assurances">
-                <span>Private delivery</span>
-                <span>Your files, in your workspace</span>
-                <span>QA before handoff</span>
+                <span><img src="/icons/getillustrations/sharpie-ui/private-delivery.svg" alt="" aria-hidden="true" />Private delivery</span>
+                <span><img src="/icons/getillustrations/sharpie-ui/source-files-workspace.svg" alt="" aria-hidden="true" />Your files, in your workspace</span>
+                <span><img src="/icons/getillustrations/sharpie-ui/responsive-qa-review.svg" alt="" aria-hidden="true" />QA before handoff</span>
               </div>
             </div>
 
@@ -77,7 +77,7 @@ export default function Home() {
                 <span className="studio-board-status"><i /> In review</span>
               </div>
               <div className="studio-canvas">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=88" alt="Website team reviewing work together at a screen" />
+                <img src="/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp" alt="Filipino web design pod creating and developing a client website" />
                 <div className="studio-canvas-shade" />
                 <div className="studio-floating-copy">
                   <small>Homepage / concept 02</small>
@@ -148,6 +148,7 @@ export default function Home() {
             <div className="studio-fit-title">
               <p className="studio-kicker studio-kicker-dark"><span /> Good fit</p>
               <h2>For teams with more website work than hands.</h2>
+              <img className="studio-fit-illustration" src="/illustrations/getillustrations/drawink-startup/responsive-interface-handoff.svg" alt="Designer preparing a responsive website interface for handoff" />
             </div>
             <div className="studio-fit-copy">
               <p>This works best when your agency already owns the strategy and client relationship but needs a dependable design and production lane.</p>
