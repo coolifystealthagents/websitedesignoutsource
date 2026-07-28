@@ -38,6 +38,12 @@ export const services = [
 ] as const;
 export const blogPosts = [
   {
+    "slug": "philippines-website-redesign-outsourcing-migration-checklist",
+    "title": "Philippines Website Redesign Outsourcing: A Safe Migration Checklist",
+    "excerpt": "A plain plan for moving pages, search signals, accounts, and approvals when a Philippines-based team helps redesign an existing website.",
+    "minutes": 13
+  },
+  {
     "slug": "philippines-website-design-outsourcing-accessible-handoff",
     "title": "Philippines Website Design Outsourcing: An Accessible Handoff Plan",
     "excerpt": "A practical way to brief, review, and take ownership of website design work completed by a Philippines-based team.",
