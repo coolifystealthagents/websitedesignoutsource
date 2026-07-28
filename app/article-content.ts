@@ -118,3 +118,29 @@ export const philippinesRedesignMigration = {
     { question: 'How long should redirects stay in place?', answer: 'Keep permanent redirects for as long as old URLs may still receive visits or links. Review logs and Search Console after launch rather than removing redirects on an arbitrary date.' },
   ],
 } as const;
+
+export const philippinesMobileQa = {
+  slug: 'philippines-website-design-outsourcing-mobile-qa-signoff-sheet',
+  title: 'Philippines Website Design Outsourcing: A Mobile QA Signoff Sheet',
+  excerpt: 'A task-based signoff sheet for checking phone layouts, forms, accessibility, search details, and owner approval with a Philippines-based website team.',
+  published: '2026-07-28',
+  revision: '2026-07-28-mobile-qa-signoff-v1',
+  banners: [
+    { label: 'Test set', title: 'Choose real visitor tasks before review', body: 'Name the page, browser, phone view, action, expected result, and owner. The team can then repeat the same test after each fix.', href: '/services/website-ui-design', cta: 'Review UI design support' },
+    { label: 'Access check', title: 'Test keyboard, zoom, labels, and errors', body: 'A working mobile page needs more than a tidy screenshot. Use the page and record every failed task while fixes are still easy.', href: '/services/website-accessibility-remediation', cta: 'Check accessibility support' },
+    { label: 'Owner signoff', title: 'Close the job on the public page', body: 'Your owner should repeat the main phone task, confirm the expected content, and save the final signoff sheet with the release note.', href: '/contact', cta: 'Plan the QA handoff' },
+  ],
+  sources: [
+    { id: 1, name: 'Statcounter Global Stats: Desktop vs mobile vs tablet market share, Philippines', url: 'https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/philippines', note: 'The June 2026 page reports desktop at 54.04%, mobile at 44.99%, and tablet at 0.97% of measured page views in the Philippines, based on more than 3 billion monthly page views.' },
+    { id: 2, name: 'World Bank: Individuals using the Internet, Philippines', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.USER.ZS?format=json&date=2023&per_page=1', note: 'The World Bank record, last updated July 13, 2026, reports 77.86699677% for the Philippines in 2023. The article rounds this to 77.9%.' },
+    { id: 3, name: 'WebAIM: The WebAIM Million 2026', url: 'https://webaim.org/projects/million/', note: 'The February 2026 study reports detected WCAG failures on 95.9% of one million homepages, 56,114,377 distinct errors, 56.1 errors per page, and a 10.1% increase in average errors from 2025.' },
+    { id: 4, name: 'W3C Web Accessibility Initiative: Introduction to web accessibility', url: 'https://www.w3.org/WAI/fundamentals/accessibility-intro/', note: 'Source for the exact Tim Berners-Lee quotation and the explanation of web access across different abilities and situations.' },
+    { id: 5, name: 'Google Search Central: Mobile site and mobile-first indexing best practices', url: 'https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing', note: 'Google explains that it uses the mobile version of site content for indexing and ranking and documents content, metadata, image, and structured-data parity checks.' },
+  ],
+  faqs: [
+    { question: 'What phone sizes should a website design team test?', answer: 'Start with the device and browser records from the current site. When those records are missing, use one narrow phone view, one wider phone view, and one desktop view, then add Safari, Chrome, keyboard, zoom, slow loading, and failed-form checks.' },
+    { question: 'Who should approve a mobile website page?', answer: 'Name one person inside your company to approve the message, form destination, account access, and launch. The outside team can build, test, and fix the page, but it should not make the final business decision alone.' },
+    { question: 'Is a screenshot enough for mobile QA?', answer: 'No. The reviewer should open the menu, follow links, submit the form, trigger errors, zoom the page, use a keyboard, and check wide tables or graphics. Record the exact steps so another person can repeat the result.' },
+    { question: 'What should happen after a mobile defect is fixed?', answer: 'A different reviewer should rerun the failed task and one nearby task on the same test setup. Keep the fix and retest result on the original defect record, then include the closed sheet with the release note.' },
+  ],
+} as const;

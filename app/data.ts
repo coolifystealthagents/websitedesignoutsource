@@ -38,6 +38,12 @@ export const services = [
 ] as const;
 export const blogPosts = [
   {
+    "slug": "philippines-website-design-outsourcing-mobile-qa-signoff-sheet",
+    "title": "Philippines Website Design Outsourcing: A Mobile QA Signoff Sheet",
+    "excerpt": "A task-based signoff sheet for checking phone layouts, forms, accessibility, search details, and owner approval with a Philippines-based website team.",
+    "minutes": 13
+  },
+  {
     "slug": "philippines-website-redesign-outsourcing-migration-checklist",
     "title": "Philippines Website Redesign Outsourcing: A Safe Migration Checklist",
     "excerpt": "A plain plan for moving pages, search signals, accounts, and approvals when a Philippines-based team helps redesign an existing website.",
