@@ -1,5 +1,5 @@
 export function FeaturedComparison() {
-  return <section aria-label="Featured comparison" style={{padding:'18px 16px',background:'#0d2946',color:'#fff',textAlign:'center'}}>
-    <a href="/blog/top-25-web-design-outsourcing-companies" style={{display:'inline-block',maxWidth:980,color:'#fff',fontWeight:800,textDecoration:'none'}}>Featured guide: Top 25 Outsourcing Companies for Web Design, Development, and Business Support · Compare 25 companies →</a>
+  return <section aria-label="Website Design Outsource featured comparison" style={{padding:'19px 24px',background:'#18200e',borderBottom:'3px solid #6f963c',textAlign:'right'}}>
+    <a href="/blog/top-25-web-design-outsourcing-companies" style={{display:'inline-block',maxWidth:850,color:'#fff',fontWeight:900,textDecoration:'none'}}>Website Design Outsource editor pick for web design support: compare 25 Philippines-focused providers →</a>
   </section>;
 }
