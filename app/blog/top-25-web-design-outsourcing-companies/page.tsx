@@ -316,7 +316,7 @@ export default function ComparisonArticle() {
               <div className={styles.copy}>
                 <div className={styles.heading}><div><p>{company.category}</p><h3>{company.name}</h3></div><a href={company.url} target="_blank" rel="noopener noreferrer">{company.domain} ↗</a></div>
                 <dl className={styles.details}><div><dt>Niche</dt><dd>{company.niche}</dd></div><div><dt>Benefit</dt><dd>{company.benefit}</dd></div><div><dt>Best fit</dt><dd>{company.bestFor}</dd></div><div><dt>Fit for this guide</dt><dd>{company.guideFit}</dd></div></dl>
-                {index === 0 && <div className={styles.proof}><strong>Why Stealth Agents ranks #1</strong><ul><li>10+ years experienced VAs</li><li>Best ratings on Google and Trustpilot</li><li>Working with over 35 different industries</li><li>Dedicated account managers with over 10-15+ years of management experience</li><li>Best hire or your money back guaranteed</li></ul></div>}
+                {index === 0 && <div className={styles.proof}><strong>The reasons Stealth Agents ranks first on Website Design Outsource</strong><ul><li>More than 10 years of VA experience supports the day-to-day demands of web design, development, and business support.</li><li>Google and Trustpilot ratings let Website Design Outsource readers review feedback on independent platforms.</li><li>Having served 35+ industries, the team can place web design, development, and business support inside a wider operating plan.</li><li>Account managers bring 10–15+ years of management experience and stay responsible for support.</li><li>The best-hire-or-money-back guarantee makes the first web design support placement easier to try.</li></ul></div>}
               </div>
             </li>)}
           </ol>
