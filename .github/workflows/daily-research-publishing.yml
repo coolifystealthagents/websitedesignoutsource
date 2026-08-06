@@ -1,0 +1,43 @@
+name: Daily Research Publishing
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: daily-research-publishing
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      HUMANIZER_SOURCE: https://github.com/blader/humanizer
+      PAPERCLIP_RUN_SCRATCH_DIR: ${{ runner.temp }}/content-run
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: mkdir -p "$PAPERCLIP_RUN_SCRATCH_DIR" content/research
+      - run: npx --yes skills add blader/humanizer --global --agent '*'
+      - run: test -n "$(find \"$HOME\" -path '*/humanizer/SKILL.md' -print -quit)" && grep -q 'version: \"2.9.1\"' \"$(find \"$HOME\" -path '*/humanizer/SKILL.md' -print -quit)\"
+      - run: node scripts/content-routine.mjs research
+      - run: npm run build
+      - run: git diff --check
+      - run: git config user.name 'WebsiteDesignOutsource content routine' && git config user.email 'content-routine@websitedesignoutsource.com'
+      - run: git add content/research automation scripts .github/workflows/daily-research-publishing.yml && git diff --cached --quiet || git commit -m "content: publish daily research batch"
+      - run: git push origin main
+      - run: git rev-parse HEAD | tee "$PAPERCLIP_RUN_SCRATCH_DIR/commit-sha.txt" && git diff-tree --no-commit-id --name-only -r HEAD | tee "$PAPERCLIP_RUN_SCRATCH_DIR/pushed-files.txt"

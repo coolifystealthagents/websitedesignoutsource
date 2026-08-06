@@ -1,0 +1,33 @@
+{
+  "version": "2.4",
+  "repository": "coolifystealthagents/websitedesignoutsource",
+  "productionBranch": "main",
+  "site": "WebsiteDesignOutsource.com",
+  "timezone": "UTC",
+  "routines": [
+    {
+      "name": "Daily Blog Publishing",
+      "id": "daily-blog-publishing",
+      "cron": "0 9 * * 1-5",
+      "concurrency": "skip_if_active",
+      "catchUp": "skip_missed",
+      "priority": "medium",
+      "kind": "blog",
+      "directory": "content/blog",
+      "minimum": 20,
+      "maximum": 25
+    },
+    {
+      "name": "Daily Research Publishing",
+      "id": "daily-research-publishing",
+      "cron": "0 6 * * *",
+      "concurrency": "always_enqueue",
+      "catchUp": "skip_missed",
+      "priority": "high",
+      "kind": "research",
+      "directory": "content/research",
+      "minimum": 10,
+      "maximum": 15
+    }
+  ]
+}
