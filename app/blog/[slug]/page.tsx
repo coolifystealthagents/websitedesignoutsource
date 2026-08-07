@@ -4,15 +4,18 @@ import { blogDetails, blogPosts, site } from '../../data';
 import { AccessibleHandoffArticle } from './rich-article';
 import { RedesignMigrationArticle } from './redesign-migration-article';
 import { MobileQaArticle } from './mobile-qa-article';
+import { contentBlogPosts, renderMarkdown } from '../../content-library';
 
 const baseUrl = 'https://websitedesignoutsource.com';
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return [...blogPosts.map((post) => ({ slug: post.slug })), ...contentBlogPosts.map((post) => ({ slug: post.slug }))];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const contentPost = contentBlogPosts.find((item) => item.slug === slug);
+  if (contentPost) return <><Header/><main className="section"><article className="container article-shell"><p className="eyebrow">WebsiteDesignOutsource.com blog</p><h1>{contentPost.title}</h1><p className="lead">{contentPost.excerpt}</p><img src="/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp" alt="Website design production workspace" />{renderMarkdown(contentPost.body)}<CTA /></article></main><Footer/></>;
   const post = blogPosts.find((item) => item.slug === slug);
   return { title: post?.title || 'Guide', description: post?.excerpt };
 }
