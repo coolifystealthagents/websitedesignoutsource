@@ -1,0 +1,66 @@
+---
+title: "Redirect Mapping as a Website Research Task"
+description: "A practical method for mapping changed URLs before an outsourced redesign launches."
+slug: "website-redirect-mapping-research"
+published: "2026-08-07"
+---
+# Redirect Mapping as a Website Research Task
+
+Redirects are not a clerical afterthought. They preserve useful paths, clarify content decisions, and give reviewers a concrete migration artifact.
+
+## Build the map
+
+Export known URLs, classify their purpose, choose a destination or retirement decision, and record confidence and owner. Test exact path behavior, query handling, chains, loops, and representative old links after implementation.
+
+## Methodology
+
+This synthesis uses search and HTTP standards documentation. It does not predict rankings or decide which content a business should retain.
+
+## Key Stats
+
+- HTTP defines 3xx status codes for redirection (IETF)
+- Google documents 301 and 308 redirects as permanent redirects (Google)
+
+## Key Takeaways
+
+- Map URLs before implementation.
+- Prefer one direct, relevant destination.
+- Test both expected redirects and accidental chains.
+
+## Sources
+
+1. [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html) HTTP semantics.
+2. [Google redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects) Search guidance.
+3. [Google site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) Migration guidance.
+4. [MDN redirections](https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections) HTTP behavior.
+5. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) URL inventory context.
+6. [Google canonicalization](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) URL consolidation.
+7. [Apache redirects](https://httpd.apache.org/docs/2.4/rewrite/remapping.html) Server implementation.
+8. [NGINX redirects](https://nginx.org/en/docs/http/ngx_http_rewrite_module.html) Server implementation.
+9. [Cloudflare redirects](https://developers.cloudflare.com/rules/url-forwarding/) Edge implementation.
+10. [W3C links](https://www.w3.org/WAI/tips/writing/#provide-clear-navigation) Navigation context.
+
+## Further reading
+
+[Content migration quality controls](/research/content-migration-quality-controls)  
+[Website QA evidence pack](/research/website-qa-evidence-pack)
+
+## Related Research
+
+[Related reading](/research/seo-briefs-for-outsourced-web-content)  
+[Related reading](/research/website-change-management-controls)  
+[Related reading](/research/component-inventory-for-site-migrations)
+
+## Frequently asked questions
+
+### Should redirects point to the home page?
+
+Only when it is genuinely the closest useful destination. Broad irrelevant redirects create a poor user experience.
+
+### What is a redirect chain?
+
+A sequence where one redirect points to another. Direct mappings are easier to test and maintain.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

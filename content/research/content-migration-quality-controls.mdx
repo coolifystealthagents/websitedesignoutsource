@@ -1,0 +1,70 @@
+---
+title: "Content Migration Quality Controls for Website Redesigns"
+description: "How to reduce content loss, broken links, and metadata drift during an outsourced migration."
+slug: "content-migration-quality-controls"
+published: "2026-08-07"
+---
+# Content Migration Quality Controls for Website Redesigns
+
+Migration is a data movement project with editorial consequences. A source inventory, explicit mapping, and post-import review are more dependable than a last-minute spot check.
+
+## Build the inventory first
+
+Record source URL, content type, owner, status, destination, redirect decision, metadata, media dependencies, and review state. Separate keep, revise, merge, and retire decisions so the implementation team does not infer editorial intent.
+
+## Validate after import
+
+Check titles, headings, links, images, structured data, canonical behavior, redirects, and representative templates. Compare counts by content type and retain an exception list for anything not mapped.
+
+## Methodology
+
+This note synthesizes search-engine documentation, accessibility guidance, and migration practice. It intentionally avoids promising ranking outcomes.
+
+## Key Stats
+
+- Google describes permanent redirects as signals for consolidating URLs (Google Search Central)
+- WCAG includes text alternatives as a core accessibility requirement (W3C)
+
+## Key Takeaways
+
+- Decide content fate before the import script runs.
+- Validate both records and rendered pages.
+- Keep redirect and exception ownership explicit.
+
+## Sources
+
+1. [Google site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) URL-change guidance.
+2. [Google redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects) Redirect guidance.
+3. [Google title links](https://developers.google.com/search/docs/appearance/title-link) Title guidance.
+4. [Google canonicalization](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) Canonical guidance.
+5. [WCAG text alternatives](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) Image accessibility.
+6. [Schema.org](https://schema.org/) Structured-data vocabulary.
+7. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) Sitemap format.
+8. [MDN HTTP redirects](https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections) Redirect behavior.
+9. [Contentful migration guide](https://www.contentful.com/developers/docs/tutorials/general/migration-guide/) Migration concepts.
+10. [GOV.UK content principles](https://www.gov.uk/guidance/content-design) Editorial guidance.
+
+## Further reading
+
+[Website QA evidence pack](/research/website-qa-evidence-pack)  
+[Website change management controls](/research/website-change-management-controls)
+
+## Related Research
+
+[Related reading](/research/component-inventory-for-site-migrations)  
+[Related reading](/research/accessible-forms-and-error-messages)  
+[Related reading](/research/outsourced-design-review-rubric)
+
+## Frequently asked questions
+
+### Should every old URL redirect?
+
+No. Map useful URLs to the closest relevant destination and document intentional retirements.
+
+### Who approves deletions?
+
+The content owner, not the migration implementer, should approve editorial removals.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

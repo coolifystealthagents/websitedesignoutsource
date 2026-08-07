@@ -1,0 +1,70 @@
+---
+title: "A Core Web Vitals Workflow for Outsourced Website Work"
+description: "How to make performance measurement, remediation, and regression review visible across a distributed team."
+slug: "core-web-vitals-outsourced-website-workflow"
+published: "2026-08-07"
+---
+# A Core Web Vitals Workflow for Outsourced Website Work
+
+Performance work benefits from a shared measurement contract. The client defines the page types and user journeys; the production team records field and lab evidence; the approver decides whether a change is ready.
+
+## What to measure
+
+Google’s current Core Web Vitals are Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift. Use field data for real-user experience and lab data for diagnosis. Do not treat a single synthetic run as a population result.
+
+## Handoff controls
+
+Record the URL, device assumptions, test date, build identifier, finding, suspected cause, change, and retest. Keep image optimization, script loading, font behavior, layout stability, and third-party code as separate work items so ownership stays clear.
+
+## Methodology
+
+This note compares official web performance definitions and measurement tools. Thresholds and tool behavior can change, so the linked documentation is the source of truth at review time.
+
+## Key Stats
+
+- Core Web Vitals currently cover LCP, INP, and CLS (web.dev)
+- Chrome UX Report data is based on real user experiences (Chrome)
+
+## Key Takeaways
+
+- Pair field evidence with lab diagnostics.
+- Measure representative templates, not only the home page.
+- Recheck after content, dependency, and layout changes.
+
+## Sources
+
+1. [Web Vitals](https://web.dev/articles/vitals) Definitions and thresholds.
+2. [Core Web Vitals](https://web.dev/articles/defining-core-web-vitals-thresholds) Threshold rationale.
+3. [PageSpeed Insights](https://pagespeed.web.dev/) Field and lab reports.
+4. [Chrome UX Report](https://developer.chrome.com/docs/crux) Real-user dataset.
+5. [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) Lab auditing tool.
+6. [MDN Performance](https://developer.mozilla.org/en-US/docs/Web/Performance) Platform concepts.
+7. [HTTP Archive](https://httparchive.org/) Web technology measurements.
+8. [web.dev performance](https://web.dev/learn/performance) Learning material.
+9. [W3C Navigation Timing](https://www.w3.org/TR/navigation-timing-2/) Timing API standard.
+10. [Chrome performance patterns](https://developer.chrome.com/docs/performance) Diagnostic guidance.
+
+## Further reading
+
+[Accessibility acceptance checklist](/research/accessibility-acceptance-checklist-outsourced-web-projects)  
+[Website QA evidence pack](/research/website-qa-evidence-pack)
+
+## Related Research
+
+[Related reading](/research/image-optimization-brief-for-web-teams)  
+[Related reading](/research/website-change-management-controls)  
+[Related reading](/research/design-system-handoff-controls)
+
+## Frequently asked questions
+
+### Is a good Lighthouse score enough?
+
+No. It is lab evidence under an assumed environment, not a guarantee about field users.
+
+### Who should own regression review?
+
+The delivery team should run the test; the designated site owner should approve the result.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

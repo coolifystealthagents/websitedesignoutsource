@@ -1,0 +1,66 @@
+---
+title: "A Website Analytics Implementation Brief"
+description: "The questions an outsourced team should answer before adding or changing website measurement."
+slug: "website-analytics-implementation-brief"
+published: "2026-08-07"
+---
+# A Website Analytics Implementation Brief
+
+Analytics work starts with decisions, not tags. The brief should explain what the team needs to learn, what data is necessary, and how consent and access will be handled.
+
+## Define the measurement contract
+
+Document event name, trigger, parameters, owner, destination, retention, consent behavior, and test evidence. Keep business definitions separate from vendor-specific implementation so the measurement survives a tool change.
+
+## Methodology
+
+This note synthesizes official analytics, privacy, and tag-management guidance. It is not legal advice and does not determine a jurisdiction’s consent obligations.
+
+## Key Stats
+
+- Google Analytics 4 uses events as its measurement model (Google)
+- NIST Privacy Framework has five core functions (NIST)
+
+## Key Takeaways
+
+- Define the question before the event.
+- Minimize personal data and document access.
+- Test consent, firing, payload, and reporting behavior.
+
+## Sources
+
+1. [GA4 events](https://support.google.com/analytics/answer/9322688) Event model.
+2. [GA4 measurement](https://developers.google.com/analytics/devguides/collection/ga4) Implementation.
+3. [Google Tag Manager](https://support.google.com/tagmanager/) Tag guidance.
+4. [NIST Privacy Framework](https://www.nist.gov/privacy-framework) Privacy risk management.
+5. [ICO cookies guidance](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/) Consent context.
+6. [CNIL cookies](https://www.cnil.fr/en/cookies-and-other-trackers) Consent context.
+7. [OWASP privacy risks](https://owasp.org/www-project-top-10-privacy-risks/) Privacy risks.
+8. [W3C tracking protection](https://www.w3.org/2011/tracking-protection/) Web privacy context.
+9. [MDN data privacy](https://developer.mozilla.org/en-US/docs/Web/Privacy) Platform context.
+10. [Google consent mode](https://developers.google.com/tag-platform/security/guides/consent) Consent implementation.
+
+## Further reading
+
+[Website change management controls](/research/website-change-management-controls)  
+[Website QA evidence pack](/research/website-qa-evidence-pack)
+
+## Related Research
+
+[Related reading](/research/accessible-forms-and-error-messages)  
+[Related reading](/research/content-migration-quality-controls)  
+[Related reading](/research/core-web-vitals-outsourced-website-workflow)
+
+## Frequently asked questions
+
+### Can an implementer decide what to track?
+
+They can recommend events, but the business owner should approve purpose, access, and retention.
+
+### Is an event firing proof that reporting is correct?
+
+No. Validate the payload, processing, dimensions, and resulting report.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

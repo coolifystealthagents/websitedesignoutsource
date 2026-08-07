@@ -1,0 +1,66 @@
+---
+title: "Component Inventories for Site Migrations"
+description: "Why cataloging templates and components reduces migration surprises."
+slug: "component-inventory-for-site-migrations"
+published: "2026-08-07"
+---
+# Component Inventories for Site Migrations
+
+An inventory gives a redesign team a shared map of templates, modules, states, and dependencies. It also exposes where a screenshot-based handoff is hiding behavior.
+
+## What to record
+
+List component name, purpose, source locations, content fields, variants, responsive states, accessibility rules, analytics dependencies, owner, and destination. Mark unknowns rather than silently guessing.
+
+## Methodology
+
+This process note synthesizes component, accessibility, and migration documentation. It is intended for planning and review, not as a claim about project savings.
+
+## Key Stats
+
+- WCAG 2.2 is organized around four principles (W3C)
+- The HTML specification defines native interactive elements and states (WHATWG)
+
+## Key Takeaways
+
+- Inventory behavior as well as visual appearance.
+- Record ownership and unresolved questions.
+- Reconcile the inventory with post-build QA.
+
+## Sources
+
+1. [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility criteria.
+2. [HTML standard](https://html.spec.whatwg.org/) Native web behavior.
+3. [ARIA APG](https://www.w3.org/WAI/ARIA/apg/) Interaction patterns.
+4. [USWDS](https://designsystem.digital.gov/) Component example.
+5. [GOV.UK Design System](https://design-system.service.gov.uk/) Component example.
+6. [Storybook](https://storybook.js.org/docs/writing-stories) Component documentation.
+7. [Google site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) Migration guidance.
+8. [Schema.org](https://schema.org/) Structured data.
+9. [Nielsen design systems](https://www.nngroup.com/articles/design-systems-101/) System overview.
+10. [MDN web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) Component concepts.
+
+## Further reading
+
+[Design-system handoff controls](/research/design-system-handoff-controls)  
+[Content migration quality controls](/research/content-migration-quality-controls)
+
+## Related Research
+
+[Related reading](/research/website-qa-evidence-pack)  
+[Related reading](/research/outsourced-design-review-rubric)  
+[Related reading](/research/website-change-management-controls)
+
+## Frequently asked questions
+
+### Is a component inventory only for large sites?
+
+No. Even a small site benefits from knowing which repeated patterns must remain consistent.
+
+### What happens to unknowns?
+
+Give each one an owner and resolution date; do not turn an assumption into an undocumented requirement.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

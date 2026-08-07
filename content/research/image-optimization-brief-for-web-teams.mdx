@@ -1,0 +1,70 @@
+---
+title: "An Image Optimization Brief for Outsourced Web Teams"
+description: "The decisions a team should record before preparing images for a production website."
+slug: "image-optimization-brief-for-web-teams"
+published: "2026-08-07"
+---
+# An Image Optimization Brief for Outsourced Web Teams
+
+Images affect performance, meaning, accessibility, and editorial quality. A useful brief identifies the purpose of each image before anyone chooses a file format or compression setting.
+
+## Record purpose and constraints
+
+For each image, record role, subject, alternative text, crop behavior, maximum display size, source license, focal point, and fallback. Decorative images need a different treatment from informative images.
+
+## Validate in context
+
+Check the largest and smallest layouts, slow loading, high-density displays, dark or light surfaces, and content management behavior. Confirm that the chosen asset is not merely small but still legible and meaningful.
+
+## Methodology
+
+This note synthesizes web platform, accessibility, and performance documentation. It does not recommend a single universal format.
+
+## Key Stats
+
+- The HTML `img` element supports responsive image selection through `srcset` and `sizes` (WHATWG)
+- WCAG requires text alternatives for meaningful non-text content (W3C)
+
+## Key Takeaways
+
+- Define meaning before compression.
+- Test assets at their actual display sizes.
+- Preserve licensing and source metadata.
+
+## Sources
+
+1. [HTML images](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) Image standard.
+2. [MDN responsive images](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Performance/Responsive_images) Responsive guidance.
+3. [web.dev image performance](https://web.dev/learn/images) Image lessons.
+4. [WCAG non-text content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) Alternative text.
+5. [Google image SEO](https://developers.google.com/search/docs/appearance/google-images) Search guidance.
+6. [WebP](https://developers.google.com/speed/webp) Format documentation.
+7. [AVIF](https://aomediacodec.github.io/av1-avif/) Format specification.
+8. [MDN lazy loading](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading) Loading behavior.
+9. [Creative Commons licenses](https://creativecommons.org/share-your-work/cclicenses/) Licensing reference.
+10. [W3C alt decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) Alt-text decisions.
+
+## Further reading
+
+[Core Web Vitals workflow](/research/core-web-vitals-outsourced-website-workflow)  
+[Accessibility acceptance checklist](/research/accessibility-acceptance-checklist-outsourced-web-projects)
+
+## Related Research
+
+[Related reading](/research/design-system-handoff-controls)  
+[Related reading](/research/content-migration-quality-controls)  
+[Related reading](/research/website-qa-evidence-pack)
+
+## Frequently asked questions
+
+### Should every image have alt text?
+
+Every meaningful image needs an appropriate text alternative. Decorative images can use an empty alternative when implemented correctly.
+
+### Is the smallest file always best?
+
+No. The right asset balances clarity, meaning, compatibility, and transfer cost.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
