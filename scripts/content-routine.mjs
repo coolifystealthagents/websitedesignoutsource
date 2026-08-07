@@ -26,7 +26,7 @@ async function generateArticles() {
   const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + encodeURIComponent(process.env.GEMINI_API_KEY), {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0.35 }, tools: [{ google_search: {} }] })
+    body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0.35 } })
   });
   if (!response.ok) throw new Error('Gemini request failed with HTTP ' + response.status);
   const data = await response.json();
@@ -44,7 +44,7 @@ function render(article) {
     for (const paragraph of section.paragraphs || []) lines.push(paragraph, '');
     if (section.bullets?.length) lines.push(...section.bullets.map((item) => '- ' + item), '');
   }
-  const links = article.internalLinks || [];
+  const links = (article.internalLinks || []).slice(0, 2);
   if (links.length) lines.push('', '## Further reading', '', ...links.map((url) => '[Read the related guide](' + url + ')'), '');
   if (kind === 'research') {
     lines.push('', '## Key Stats', '');

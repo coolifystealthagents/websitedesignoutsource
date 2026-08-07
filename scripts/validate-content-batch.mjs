@@ -25,7 +25,8 @@ for (const file of files) {
   if (slugs.has(slug)) errors.push(`${file}: duplicate slug`);
   slugs.add(slug);
   if (kind === 'blog') {
-    const bodyLinks = (source.match(/\]\(\/blog\//g) || []).length;
+    const furtherReading = source.match(/## Further reading\n([\s\S]*?)(?=\n## |$)/)?.[1] || '';
+    const bodyLinks = (furtherReading.match(/\]\(\/blog\//g) || []).length;
     if (bodyLinks !== 2) errors.push(`${file}: expected exactly two contextual internal blog links, found ${bodyLinks}`);
     if ((source.match(/## Related Articles/g) || []).length !== 1) errors.push(`${file}: missing Related Articles section`);
   } else {
