@@ -1,0 +1,93 @@
+---
+title: "Outsourced Website Acceptance Test Matrix"
+description: "A research-backed matrix for turning website review tasks into repeatable acceptance evidence."
+slug: "outsourced-website-acceptance-test-matrix"
+published: "2026-08-09"
+---
+
+# Outsourced Website Acceptance Test Matrix
+
+An outsourced website project is easier to approve when every important visitor task has an expected result, a test setup, and a named owner. The matrix below turns a vague design review into evidence that another reviewer can repeat.
+
+## Data points that shape the matrix
+
+The matrix uses three standards as anchors: WCAG 2.2 organizes accessibility around four principles, Core Web Vitals currently names three user experience metrics, and the sitemap protocol uses one XML urlset as the document root. These are stable reference points, not claims about the performance of a particular site.
+
+| Test area | Required record | Acceptance question |
+| --- | --- | --- |
+| Content | Page, heading, source, owner | Is the approved message present? |
+| Interaction | Action, setup, expected result | Can a visitor complete the task? |
+| Accessibility | Keyboard, focus, label, contrast | Can the task be completed without a pointer? |
+| Release | URL, browser, date, evidence | Can the result be reproduced? |
+
+## Methodology and operating use
+
+This synthesis starts with W3C, Google, MDN, OWASP, NIST, and sitemap documentation. The numeric statements are quoted only as counts defined by those references. Recommendations are operational interpretations for WebsiteDesignOutsource.com teams. Record a failed test before assigning a fix, then rerun the same task after the change.
+
+## Key Stats
+
+- WCAG 2.2 has 4 accessibility principles (W3C WCAG 2.2)
+- Core Web Vitals currently has 3 metrics (web.dev)
+- The sitemap protocol requires a urlset root element (Sitemaps.org)
+
+## Key Takeaways
+
+- Define the visitor task before reviewing the visual design.
+- Keep the expected result beside the evidence and owner.
+- Treat unresolved access, privacy, and release defects as explicit exceptions.
+
+## Source-backed test sections
+
+### Accessibility task evidence
+
+Use the WCAG principles to group keyboard, focus, text, and structure checks. A matrix should name the route and the exact action, such as opening a menu or submitting a form. Automated output is useful evidence, but it is not a substitute for a manual task.
+
+### Performance task evidence
+
+Record the page, connection conditions, device class, and measurement date when reviewing loading or interaction. Google describes field data as real-user data, while lab tools are controlled diagnostics. Do not compare results without recording which method produced them.
+
+### Release and ownership evidence
+
+Keep the change record, test result, source file, and approval together. Least privilege means the delivery team receives only the access needed for its assignment. The company should retain ownership of production credentials and the final release decision.
+
+## Consolidated statistics
+
+The defensible numeric set for this article is 4 accessibility principles, 3 Core Web Vitals metrics, and 1 sitemap root element. No project conversion, speed, or error-rate claim is inferred from those standard counts.
+
+## Sources
+
+1. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Four principles and conformance requirements.
+2. [W3C Understanding WCAG](https://www.w3.org/WAI/WCAG22/Understanding/) Explanations and techniques for review.
+3. [W3C WAI Easy Checks](https://www.w3.org/WAI/test-evaluate/preliminary/) Preliminary manual accessibility checks.
+4. [Google Search Central SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) Search and page organization guidance.
+5. [Google Core Web Vitals](https://web.dev/articles/vitals) Definitions and measurement context.
+6. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) XML sitemap structure.
+7. [MDN Web accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) Implementation reference.
+8. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Application verification controls.
+9. [NIST least privilege](https://csrc.nist.gov/glossary/term/least_privilege) Access-control definition.
+10. [Git documentation](https://git-scm.com/docs/git-log) Change-history reference.
+
+## Further reading
+
+[Related research](/research/website-qa-evidence-pack)
+[Related research](/research/outsourced-design-review-rubric)
+
+## Related Research
+
+[Related reading](/research/remote-website-review-evidence-workflow)
+[Related reading](/research/website-change-management-controls)
+[Related reading](/research/outsourced-website-brief-acceptance-criteria)
+
+## Frequently asked questions
+
+### Who owns the matrix?
+
+The company should own the acceptance record. The outsourced team can prepare and execute tests, while the named company owner accepts the result.
+
+### Should every visual detail be a test?
+
+No. Prioritize visitor tasks, content accuracy, accessibility, security, forms, and release-critical behavior. Keep visual preferences as separate review notes.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

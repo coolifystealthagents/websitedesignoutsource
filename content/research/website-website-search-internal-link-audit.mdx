@@ -1,0 +1,92 @@
+---
+title: "Internal Link Audit for an Outsourced Website"
+description: "A research-backed audit method for internal links, labels, destinations, ownership, and review evidence."
+slug: "website-website-search-internal-link-audit"
+published: "2026-08-09"
+---
+
+# Internal Link Audit for an Outsourced Website
+
+Internal links connect a visitor’s next task to the page that can help. During outsourced production, audit them as a set of destinations, labels, owners, and tests instead of accepting a link list without context.
+
+## Link audit record
+
+| Field | Required detail |
+| --- | --- |
+| Source | Page and section containing the link |
+| Label | Text a visitor sees |
+| Destination | Target URL and purpose |
+| Status | Working, redirected, blocked, or removed |
+| Owner | Editorial and technical reviewer |
+
+## Methodology
+
+This synthesis uses Google Search Central, W3C WCAG 2.2, MDN, the sitemap protocol, HTTP, Schema.org, OWASP, NIST, and Git documentation. Numeric claims are limited to formal counts in those sources. The audit method is an operational recommendation for an outsourced website team.
+
+## Key Stats
+
+- WCAG 2.2 has 4 principles (W3C)
+- Core Web Vitals has 3 metrics (web.dev)
+- HTTP 3xx responses represent redirection (IETF RFC 9110)
+
+## Key Takeaways
+
+- Review link purpose and label, not only response status.
+- Keep links to useful, canonical, accessible destinations.
+- Save the route list, exceptions, owner, and retest evidence.
+
+## Audit sections
+
+### Labels and purpose
+
+Google recommends descriptive link text and logical site organization. W3C’s accessibility guidance also makes link purpose important for people navigating by links or assistive technology. Record the visitor task that each important link supports.
+
+### Destination and response
+
+Check the final URL, status, canonical, content purpose, and access. A link that returns a redirect may still need review if it creates a chain or lands on an unrelated page. Pair the link audit with the current URL map.
+
+### Ownership and maintenance
+
+Give each high-value cluster an editorial owner and a technical owner. Keep the audit date, changed files, test method, and exception in the project record. Least privilege means contributors need only the access required to make assigned changes.
+
+## Consolidated statistics
+
+The research frame contains 4 WCAG principles, 3 Core Web Vitals metrics, and the HTTP 3xx redirect class. These counts do not estimate link equity, rankings, or visitor behavior.
+
+## Sources
+
+1. [Google SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) Link text and site organization guidance.
+2. [Google Search Central links](https://developers.google.com/search/docs/crawling-indexing/links-crawlable) Crawlable link implementation.
+3. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility criteria.
+4. [W3C Understanding link purpose](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html) Link-purpose guidance.
+5. [MDN HTML anchor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) Link implementation reference.
+6. [IETF RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html) HTTP status semantics.
+7. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) URL-set reference.
+8. [Schema.org](https://schema.org/) Structured vocabulary.
+9. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Security checks.
+10. [NIST least privilege](https://csrc.nist.gov/glossary/term/least_privilege) Access principle.
+
+## Further reading
+
+[Related research](/research/website-redirect-mapping-research)
+[Related research](/research/seo-briefs-for-outsourced-web-content)
+
+## Related Research
+
+[Related reading](/research/website-redirect-review-outsourced-project)
+[Related reading](/research/website-content-qa-outsourced-production)
+[Related reading](/research/website-qa-evidence-pack)
+
+## Frequently asked questions
+
+### Is a working status code enough?
+
+No. Review the label, destination purpose, canonical behavior, accessibility, and whether the visitor can continue the intended task.
+
+### Who owns internal-link changes?
+
+The company should name the editorial owner and approve important destination changes. The outsourced team can audit, implement, and retest within the agreed scope.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

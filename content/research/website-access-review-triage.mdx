@@ -1,0 +1,92 @@
+---
+title: "Accessibility Review Triage for an Outsourced Website"
+description: "A repeatable way to sort accessibility findings by visitor impact, evidence, owner, and remediation path."
+slug: "website-access-review-triage"
+published: "2026-08-09"
+---
+
+# Accessibility Review Triage for an Outsourced Website
+
+Accessibility triage should help a team fix the obstacle that blocks a visitor’s task. Sort findings by affected task, evidence, severity, owner, and retest state rather than by the order produced by an automated scanner.
+
+## Triage record
+
+| Field | Example |
+| --- | --- |
+| Task | Open navigation or submit form |
+| Barrier | Missing label or unavailable focus |
+| Evidence | Route, setup, steps, result |
+| Owner | Named implementer and approver |
+| Retest | Same task and nearby task |
+
+## Methodology
+
+This synthesis uses W3C WCAG 2.2, WAI testing guidance, MDN, WebAIM, Google, OWASP, and NIST. Numeric claims are limited to standard counts or the cited WebAIM study. Triage recommendations are operational guidance, not a conformance certification.
+
+## Key Stats
+
+- WCAG 2.2 has 4 principles (W3C)
+- WCAG 2.2 has 13 guidelines (W3C)
+- WebAIM Million 2025 reported detected failures on 94.8% of tested homepages (WebAIM)
+
+## Key Takeaways
+
+- Start with the task and barrier, not the tool label.
+- Combine automated checks with keyboard and user-task review.
+- Keep exceptions visible and retain the final approval record.
+
+## Findings sections
+
+### Automated findings
+
+Use scanners for repeatable signals such as missing names, contrast warnings, and structural issues. Confirm the finding in the actual page and remove false positives with a short explanation. Never turn a tool count into a claim about every accessibility barrier.
+
+### Manual tasks
+
+Run keyboard navigation, zoom, focus, form, heading, and error tasks. W3C explains that accessibility depends on people with different abilities and situations, so a screenshot or automated score cannot close every risk.
+
+### Fix and retest
+
+Assign one owner, one expected result, and one retest date. After a fix, repeat the original task and one related task. The company owner should decide whether a known exception is acceptable for the release.
+
+## Consolidated statistics
+
+The article reports 4 principles, 13 guidelines, and the WebAIM 2025 homepage study’s 94.8% detected-failure rate. The study is a population snapshot, not a measurement of this site.
+
+## Sources
+
+1. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Requirements and principles.
+2. [W3C WAI Easy Checks](https://www.w3.org/WAI/test-evaluate/preliminary/) Manual review guidance.
+3. [W3C Web accessibility introduction](https://www.w3.org/WAI/fundamentals/accessibility-intro/) Context and user diversity.
+4. [WebAIM Million](https://webaim.org/projects/million/) Homepage study methodology and results.
+5. [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) Implementation reference.
+6. [Google Lighthouse accessibility](https://developer.chrome.com/docs/lighthouse/accessibility) Automated audit context.
+7. [Google Search Central SEO guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) Page structure guidance.
+8. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Security verification.
+9. [NIST least privilege](https://csrc.nist.gov/glossary/term/least_privilege) Access principle.
+10. [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) Interaction patterns.
+
+## Further reading
+
+[Related research](/research/accessibility-acceptance-checklist-outsourced-web-projects)
+[Related research](/research/accessible-website-outsourcing-review-operations)
+
+## Related Research
+
+[Related reading](/research/accessible-forms-and-error-messages)
+[Related reading](/research/website-qa-evidence-pack)
+[Related reading](/research/outsourced-design-review-rubric)
+
+## Frequently asked questions
+
+### Is an automated accessibility score a pass?
+
+No. It is one signal. Manual interaction and user-task review are still needed, and the company should document any accepted exception.
+
+### Who decides issue priority?
+
+The delivery team can recommend priority from evidence and affected task. The company owner should approve release risk and tradeoffs.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

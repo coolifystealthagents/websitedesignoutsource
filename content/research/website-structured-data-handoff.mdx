@@ -1,0 +1,92 @@
+---
+title: "Structured Data Handoff for an Outsourced Website"
+description: "A practical way to document structured-data scope, source truth, validation, and ownership during outsourced website work."
+slug: "website-structured-data-handoff"
+published: "2026-08-09"
+---
+
+# Structured Data Handoff for an Outsourced Website
+
+Structured data should describe visible, supportable page content. An outsourced handoff is safer when each property has a source of truth, a page owner, a validation result, and a plan for keeping markup current.
+
+## Property map
+
+| Property class | Source of truth | Review |
+| --- | --- | --- |
+| Title and description | Approved page content | Editorial owner |
+| Organization identity | Company record | Business owner |
+| Article date | Publication record | Editor |
+| Image | Rights and asset record | Design owner |
+| URL | Canonical route map | Technical owner |
+
+## Methodology
+
+The article uses Schema.org, Google Search Central, W3C, sitemap, MDN, OWASP, NIST, and Git documentation. Numeric claims are standard counts only. Structured data does not guarantee a search feature or ranking; it helps machines interpret page content when implemented accurately.
+
+## Key Stats
+
+- Schema.org is a shared vocabulary for structured data (Schema.org)
+- WCAG 2.2 has 4 principles (W3C)
+- JSON-LD is one structured-data syntax supported by Google documentation (Google)
+
+## Key Takeaways
+
+- Tie every value to visible or approved source content.
+- Validate syntax and policy before a release.
+- Keep the site owner responsible for identity, claims, and removal decisions.
+
+## Review sections
+
+### Source truth
+
+Keep a property map beside the page brief. Dates, author names, images, organization details, and URLs should have named owners. If the page changes, the reviewer should know which properties need a second look.
+
+### Validation
+
+Use a syntax validator and Google’s relevant testing tools, then inspect the rendered page. Check for missing, stale, or contradictory values. A parser pass cannot establish that a claim is true or that the page is eligible for a search enhancement.
+
+### Handoff and maintenance
+
+Record the file, route, schema type, reviewer, validation date, and known exception. Limit contributor access to the required repository or CMS scope. The company should own the identity fields and approve future changes.
+
+## Consolidated statistics
+
+The research frame includes 4 WCAG principles and one named JSON-LD syntax. These are not forecasts of rich-result visibility or ranking performance.
+
+## Sources
+
+1. [Schema.org](https://schema.org/) Vocabulary reference.
+2. [Schema.org Article](https://schema.org/Article) Article type reference.
+3. [Google structured data intro](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) Implementation guidance.
+4. [Google structured data policies](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) Quality requirements.
+5. [Google JSON-LD](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data#structured-data-format) Syntax guidance.
+6. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility reference.
+7. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) URL reference.
+8. [MDN JSON](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON) Syntax reference.
+9. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Security controls.
+10. [NIST least privilege](https://csrc.nist.gov/glossary/term/least_privilege) Access-control reference.
+
+## Further reading
+
+[Related research](/research/seo-briefs-for-outsourced-web-content)
+[Related research](/research/outsourced-website-brief-acceptance-criteria)
+
+## Related Research
+
+[Related reading](/research/website-redirect-mapping-research)
+[Related reading](/research/website-content-qa-outsourced-production)
+[Related reading](/research/website-analytics-handoff-outsourced-team)
+
+## Frequently asked questions
+
+### Does structured data guarantee a rich result?
+
+No. Accurate markup is only one condition. Search systems can choose how to display a result and can change eligibility or presentation.
+
+### Who owns organization details?
+
+The company should own the identity source and approve changes. The delivery team can implement and validate the markup.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

@@ -1,0 +1,92 @@
+---
+title: "Release Notes for an Outsourced Website Change"
+description: "A compact evidence model for documenting website changes, reviewers, risks, and recovery steps."
+slug: "outsourced-website-release-notes"
+published: "2026-08-09"
+---
+
+# Release Notes for an Outsourced Website Change
+
+A release note should let a new reviewer answer five questions: what changed, why it changed, what was tested, who approved it, and how the team would recover if the result is wrong.
+
+## Release record
+
+| Field | Example evidence |
+| --- | --- |
+| Scope | Files, routes, and integrations changed |
+| Reason | Approved request or defect reference |
+| Validation | Task result, browser, date, and screenshot |
+| Approval | Named company owner and timestamp |
+| Recovery | Revert, restore, or forward-fix procedure |
+
+## Methodology
+
+The model draws on Git documentation, OWASP ASVS, NIST least privilege, W3C WCAG 2.2, Google Search Central, and web performance guidance. Numeric claims are limited to formal counts in those references. The record fields are practical controls for outsourced production.
+
+## Key Stats
+
+- WCAG 2.2 has 4 principles (W3C)
+- Core Web Vitals has 3 metrics (web.dev)
+- The HTTP specification defines 3xx responses as redirection responses (IETF RFC 9110)
+
+## Key Takeaways
+
+- Record the changed route and the changed file together.
+- Preserve failed checks and exceptions instead of hiding them.
+- Keep rollback authority and production access with the company owner.
+
+## Evidence sections
+
+### Change scope
+
+Use a short file list and route list. If a change affects metadata, redirects, forms, or analytics, say so explicitly. Google’s guidance makes URLs, titles, links, and structured data part of the page’s discoverability context, not optional decoration.
+
+### Validation and risk
+
+Name the user task, browser, viewport, data state, expected result, observed result, and evidence location. Run accessibility, form, link, and structured-data checks appropriate to the change. A failed check should become an owned exception with a next action.
+
+### Recovery and access
+
+NIST defines least privilege as limiting access to the minimum needed for assigned work. Pair that with a tested recovery path and a company-controlled owner account. Do not place passwords or private tokens in a release note.
+
+## Consolidated statistics
+
+This article uses three formal counts: 4 WCAG principles, 3 Core Web Vitals metrics, and the 3xx redirection class. None is a performance promise for a particular release.
+
+## Sources
+
+1. [Git log documentation](https://git-scm.com/docs/git-log) Commit history reference.
+2. [Git revert documentation](https://git-scm.com/docs/git-revert) Safe change-reversal reference.
+3. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Verification controls.
+4. [NIST least privilege](https://csrc.nist.gov/glossary/term/least_privilege) Access-control principle.
+5. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility requirements.
+6. [Google SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) Search implementation guidance.
+7. [Google Core Web Vitals](https://web.dev/articles/vitals) Metric definitions.
+8. [IETF RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html) HTTP status-code semantics.
+9. [Schema.org](https://schema.org/) Structured vocabulary reference.
+10. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) Sitemap validation reference.
+
+## Further reading
+
+[Related research](/research/website-change-management-controls)
+[Related research](/research/remote-website-review-evidence-workflow)
+
+## Related Research
+
+[Related reading](/research/website-qa-evidence-pack)
+[Related reading](/research/outsourced-website-launch-runbook)
+[Related reading](/research/outsourced-website-brief-acceptance-criteria)
+
+## Frequently asked questions
+
+### Is a screenshot enough for a release note?
+
+No. Keep the task steps, environment, expected result, and reviewer with the screenshot. A visual can support evidence but cannot explain an interaction or redirect.
+
+### Who can approve a release?
+
+The company should name the release owner. The outsourced team can prepare and validate the change but should not silently make the final business decision.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

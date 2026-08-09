@@ -1,0 +1,92 @@
+---
+title: "Website Design Review Commentary Protocol"
+description: "A practical protocol for turning distributed website design feedback into owned, testable decisions."
+slug: "website-design-review-commentary-protocol"
+published: "2026-08-09"
+---
+
+# Website Design Review Commentary Protocol
+
+Design feedback becomes expensive when it is scattered across screenshots, chat, and contradictory requests. A review protocol makes each comment specific, gives it an owner, and records the decision that closes it.
+
+## Comment record
+
+| Field | Required detail |
+| --- | --- |
+| Location | Route, component, and viewport |
+| Observation | What is visible or blocked |
+| Requested outcome | The change or decision needed |
+| Priority | Visitor, accessibility, content, or preference |
+| Decision | Accepted, declined, deferred, or retest |
+
+## Methodology
+
+This article synthesizes W3C, Google Search Central, MDN, OWASP, NIST, Git, Schema.org, and sitemap documentation. Numeric statements are restricted to standard counts. The protocol is a workflow recommendation for WebsiteDesignOutsource.com and not a substitute for a signed statement of work.
+
+## Key Stats
+
+- WCAG 2.2 has 4 principles (W3C)
+- Core Web Vitals has 3 metrics (web.dev)
+- The sitemap protocol uses one urlset root element (Sitemaps.org)
+
+## Key Takeaways
+
+- Anchor every comment to the page and task.
+- Separate a release blocker from a visual preference.
+- Close feedback with an evidence-backed decision, not a silent edit.
+
+## Protocol sections
+
+### Gather
+
+Ask reviewers to describe the visitor goal, observed problem, expected change, and page location. Capture the browser and viewport when the issue is responsive. A comment that cannot be located cannot be tested reliably.
+
+### Decide
+
+The company owner should resolve scope, brand, content, legal, and release decisions. The delivery team can suggest fixes and identify technical dependencies. Keep accepted, declined, deferred, and duplicate comments distinguishable.
+
+### Retest
+
+After a change, record the original task, new observation, evidence, reviewer, and remaining exception. Repeat accessibility, forms, links, metadata, and performance checks that the change could affect.
+
+## Consolidated statistics
+
+The formal frame is 4 WCAG principles, 3 Core Web Vitals metrics, and one sitemap root element. These standards do not measure reviewer speed or design quality.
+
+## Sources
+
+1. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility review baseline.
+2. [W3C WAI Easy Checks](https://www.w3.org/WAI/test-evaluate/preliminary/) Manual check guidance.
+3. [Google SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) Content and link guidance.
+4. [Google Core Web Vitals](https://web.dev/articles/vitals) Metric definitions.
+5. [MDN Web accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) Implementation reference.
+6. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Security verification.
+7. [NIST least privilege](https://csrc.nist.gov/glossary/term/least_privilege) Access principle.
+8. [Schema.org](https://schema.org/) Structured-data vocabulary.
+9. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) URL-set reference.
+10. [Git diff documentation](https://git-scm.com/docs/git-diff) Reviewable change reference.
+
+## Further reading
+
+[Related research](/research/outsourced-design-review-rubric)
+[Related research](/research/remote-website-review-evidence-workflow)
+
+## Related Research
+
+[Related reading](/research/website-access-review-triage)
+[Related reading](/research/outsourced-website-acceptance-test-matrix)
+[Related reading](/research/website-change-management-controls)
+
+## Frequently asked questions
+
+### Should every comment block a release?
+
+No. Classify it against the agreed acceptance criteria. Visitor, accessibility, security, data, and broken-function issues usually deserve higher priority than preference differences.
+
+### Can several people approve the same page?
+
+Several people can review it, but one named owner should close the decision and record any unresolved exception.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

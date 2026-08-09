@@ -1,0 +1,92 @@
+---
+title: "Performance Budget Handoff for an Outsourced Website"
+description: "How to turn performance goals into a measurable, reviewable handoff for an outsourced website team."
+slug: "website-performance-budget-handoff"
+published: "2026-08-09"
+---
+
+# Performance Budget Handoff for an Outsourced Website
+
+A performance budget is useful only when it names the page, device, connection, measurement method, and owner. A number without those controls becomes an argument instead of a release decision.
+
+## Budget record
+
+| Record | Required detail |
+| --- | --- |
+| Page | URL and template |
+| Metric | Metric name and threshold |
+| Method | Lab or field source |
+| Setup | Device, browser, connection, date |
+| Action | Owner, exception, and retest |
+
+## Methodology
+
+This synthesis uses web.dev, Google Search Central, W3C, MDN, HTTP, OWASP, NIST, and Git sources. Numbers are limited to metric or standard counts. The budget workflow is guidance for outsourced teams and should be tailored to the site’s actual audience and content.
+
+## Key Stats
+
+- Core Web Vitals currently has 3 metrics (web.dev)
+- WCAG 2.2 has 4 principles (W3C)
+- HTTP defines 2 cache-control directives commonly used for revalidation, max-age and no-cache (IETF RFC 9111)
+
+## Key Takeaways
+
+- Compare like with like by preserving the test setup.
+- Treat images, scripts, fonts, and third-party tags as owned budget items.
+- Make exceptions visible and give each one a retest date.
+
+## Data sections
+
+### Lab and field evidence
+
+Google explains that field data reflects real-user conditions, while lab data is controlled. Keep both labels in the handoff. Do not claim that a lab pass proves a field pass or that a single field sample describes every visitor.
+
+### Asset and integration review
+
+List large images, fonts, scripts, embeds, and analytics tags by owner and purpose. Test the page after realistic content is inserted. A fast empty template can hide the cost of the approved page.
+
+### Accessibility and release
+
+Performance work must preserve readable content, keyboard operation, and usable focus. Record the change, measurement, reviewer, and company approval. Keep deployment credentials outside the article and handoff document.
+
+## Consolidated statistics
+
+This article names 3 Core Web Vitals metrics, 4 WCAG principles, and 2 cache-control directives. Those counts frame the review but do not establish a site-specific budget.
+
+## Sources
+
+1. [web.dev Core Web Vitals](https://web.dev/articles/vitals) Metric definitions.
+2. [Google Search Console Core Web Vitals](https://support.google.com/webmasters/answer/9205520) Field-data report context.
+3. [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) Lab and field measurement context.
+4. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility baseline.
+5. [MDN Performance](https://developer.mozilla.org/en-US/docs/Web/Performance) Performance concepts.
+6. [IETF RFC 9111](https://www.rfc-editor.org/rfc/rfc9111.html) HTTP caching semantics.
+7. [HTTP Archive](https://httparchive.org/) Public web measurement methodology.
+8. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Security review reference.
+9. [NIST least privilege](https://csrc.nist.gov/glossary/term/least_privilege) Access principle.
+10. [Git diff documentation](https://git-scm.com/docs/git-diff) Change review reference.
+
+## Further reading
+
+[Related research](/research/core-web-vitals-outsourced-website-workflow)
+[Related research](/research/image-optimization-brief-for-web-teams)
+
+## Related Research
+
+[Related reading](/research/website-image-license-handoff-checklist)
+[Related reading](/research/design-system-handoff-controls)
+[Related reading](/research/website-qa-evidence-pack)
+
+## Frequently asked questions
+
+### Should a budget use one score?
+
+No. Keep the individual metrics, method, setup, and page context. A single score can hide a slow interaction or an accessibility regression.
+
+### Who approves a budget exception?
+
+The named company owner should accept the tradeoff and record the reason, owner, and retest plan.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
