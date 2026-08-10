@@ -1,0 +1,76 @@
+---
+title: "Analytics and Consent Handoffs for Outsourced Websites"
+description: "A practical research guide to documenting analytics events, consent states, and ownership during outsourced website work."
+slug: "website-analytics-consent-implementation-study"
+published: "2026-08-10"
+---
+
+# Analytics and Consent Handoffs for Outsourced Websites
+
+Analytics implementation is a product handoff as much as a technical task. Clear event names, consent behavior, and ownership prevent a dashboard from becoming an untrusted record of the site.
+
+## Key Stats
+
+- GDPR defines 6 lawful bases for processing (EUR-Lex GDPR Article 6)
+- Google Consent Mode documents 2 consent mode versions (Google)
+- GA4 recommends event parameters for additional context (Google Analytics)
+
+## Key Takeaways
+
+- Define events with purpose, trigger, parameters, and consent state.
+- Test denied, granted, and changed consent paths independently.
+- Keep measurement ownership with the company, including account access.
+
+## Methodology
+
+This synthesis compares GDPR provisions with Google Analytics and Consent Mode documentation, ICO guidance, and browser privacy standards. Legal application depends on jurisdiction and facts; the operational controls here are not legal advice.
+
+## Event contract
+
+For every event, record the business question, event name, trigger, parameters, examples, and excluded data. A vendor may implement the contract, but the company should approve what is collected and why.
+
+## Consent test matrix
+
+Test first visit, rejection, partial consent, later change, and withdrawal. Confirm tags, storage, network requests, and reporting behavior. Save timestamps and screenshots with the build identifier.
+
+## Consolidated statistics
+
+The article identifies 6 GDPR lawful bases and 2 documented Consent Mode versions. These counts describe source frameworks and do not determine whether a specific implementation is compliant.
+
+## Sources
+
+1. [GDPR Article 6](https://eur-lex.europa.eu/eli/reg/2016/679/art_6/oj) Lawful bases.
+2. [GDPR Article 7](https://eur-lex.europa.eu/eli/reg/2016/679/art_7/oj) Consent conditions.
+3. [ICO cookies guidance](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-cookies-and-similar-technologies/) Cookie guidance.
+4. [Google Consent Mode](https://developers.google.com/tag-platform/security/concepts/consent-mode) Consent behavior.
+5. [Google Analytics events](https://developers.google.com/analytics/devguides/collection/ga4/events) Event model.
+6. [Google Analytics measurement protocol](https://developers.google.com/analytics/devguides/collection/protocol/ga4) Collection reference.
+7. [CNIL cookies](https://www.cnil.fr/en/cookies-and-other-trackers) French regulator guidance.
+8. [W3C Do Not Track](https://www.w3.org/TR/tracking-dnt/) Tracking preference context.
+9. [MDN Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API) Browser storage reference.
+10. [OWASP privacy risks](https://owasp.org/www-project-top-10-privacy-risks/) Privacy risk context.
+
+## Further reading
+
+[Analytics handoff](/research/website-analytics-handoff-outsourced-team)
+[Consent handoff controls](/research/website-analytics-consent-handoff-controls)
+
+## Related Research
+
+[Related reading](/research/website-form-consent-handoff)
+[Related reading](/research/website-analytics-implementation-brief)
+[Related reading](/research/website-content-ownership-handoff)
+
+## Frequently asked questions
+
+### Can an analytics vendor decide the consent design?
+
+The vendor can propose an implementation, but the company should approve purposes, data, consent behavior, and retention with appropriate legal review.
+
+### Should event names change whenever a page changes?
+
+No. Events should remain tied to stable user actions and business questions, with versioned changes documented.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

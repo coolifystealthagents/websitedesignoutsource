@@ -1,0 +1,76 @@
+---
+title: "Evidence Packs for Outsourced Website QA"
+description: "A practical research model for making outsourced website QA findings reproducible, attributable, and ready for approval."
+slug: "website-qa-evidence-pack-research"
+published: "2026-08-10"
+---
+
+# Evidence Packs for Outsourced Website QA
+
+An evidence pack turns a QA opinion into a reviewable record. It should show what was tested, under which conditions, what failed, what changed, and who accepted the result.
+
+## Key Stats
+
+- WCAG 2.2 has 4 principles (W3C)
+- HTTP defines 5 status code classes (IETF)
+- Git records changes as commits with parents and metadata (Git)
+
+## Key Takeaways
+
+- Make test conditions part of the evidence, not a footnote.
+- Separate defect, reproduction, expected result, and retest.
+- Keep approval and exception decisions with the company.
+
+## Methodology
+
+This synthesis uses WCAG, HTTP semantics, Git documentation, and W3C testing guidance. The evidence model adapts these references to outsourced website review and does not supersede domain-specific testing standards.
+
+## Pack contents
+
+Include build identifier, route list, browser and viewport, test data class, screenshots or recordings, console or network notes where relevant, issue IDs, retest output, and approval state. Keep sensitive data out of captures.
+
+## Release decision
+
+Summarize open findings by severity and owner. A release decision should state what is fixed, deferred, accepted, or blocked. The vendor can recommend; the company should authorize risk acceptance.
+
+## Consolidated statistics
+
+The cited references use 4 WCAG principles, 5 HTTP status classes, and Git commit metadata. These facts describe the evidence vocabulary and do not establish release quality by themselves.
+
+## Sources
+
+1. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility requirements.
+2. [W3C evaluation tools](https://www.w3.org/WAI/test-evaluate/tools/) Testing guidance.
+3. [IETF RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html) HTTP semantics.
+4. [Git commits](https://git-scm.com/docs/git-commit) Commit evidence.
+5. [Git diff](https://git-scm.com/docs/git-diff) Change comparison.
+6. [OWASP testing guide](https://owasp.org/www-project-web-security-testing-guide/) Security testing context.
+7. [MDN DevTools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) Browser evidence.
+8. [W3C WebDriver](https://www.w3.org/TR/webdriver2/) Automation context.
+9. [NIST testing](https://csrc.nist.gov/publications/detail/sp/800-115/final) Security assessment guidance.
+10. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) Route inventory reference.
+
+## Further reading
+
+[QA evidence workflow](/research/website-qa-evidence-pack)
+[Acceptance matrix](/research/outsourced-website-acceptance-test-matrix)
+
+## Related Research
+
+[Related reading](/research/outsourced-website-launch-runbook)
+[Related reading](/research/website-content-qa-outsourced-production)
+[Related reading](/research/accessible-website-outsourcing-review-operations)
+
+## Frequently asked questions
+
+### Are screenshots enough?
+
+No. They help with visual state, while reproducibility also requires route, build, test conditions, steps, and expected behavior.
+
+### How long should evidence be retained?
+
+Use the company's release and retention policy, and avoid retaining personal or secret data in test artifacts.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

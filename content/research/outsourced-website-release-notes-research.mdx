@@ -1,0 +1,76 @@
+---
+title: "Release Notes as a Control for Outsourced Website Work"
+description: "How concise release notes preserve context, approval, and rollback information across outsourced website changes."
+slug: "outsourced-website-release-notes-research"
+published: "2026-08-10"
+---
+
+# Release Notes as a Control for Outsourced Website Work
+
+Release notes are a compact control for making a website change legible after the delivery meeting ends. They connect scope, risk, validation, owner approval, and rollback information.
+
+## Key Stats
+
+- Semantic Versioning defines 3 version components (semver.org)
+- Git tags can identify particular points in repository history (Git)
+- WCAG 2.2 has 4 principles (W3C)
+
+## Key Takeaways
+
+- Name the change and affected routes in plain language.
+- Include validation results and known exceptions.
+- Tie the release to an immutable commit or build identifier.
+
+## Methodology
+
+This synthesis compares Semantic Versioning, Git documentation, WCAG, and HTTP guidance. The release note fields are an operational model for website work; versioning conventions may vary by project.
+
+## Note template
+
+Record date, scope, affected routes, content family, commit, migrations, analytics impact, accessibility checks, performance checks, open issues, approver, and rollback action. Keep implementation detail only where it helps future diagnosis.
+
+## Review loop
+
+Ask the delivery team to draft notes with the change. The owner verifies scope and approval. QA attaches evidence. Later maintainers can then distinguish a code regression from an intentional content or route decision.
+
+## Consolidated statistics
+
+The article cites 3 Semantic Versioning components, Git tags as history markers, and 4 WCAG principles. These facts do not prescribe a release risk rating.
+
+## Sources
+
+1. [Semantic Versioning](https://semver.org/) Versioning specification.
+2. [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) History markers.
+3. [Git commit](https://git-scm.com/docs/git-commit) Commit metadata.
+4. [Git revert](https://git-scm.com/docs/git-revert) Reversal guidance.
+5. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility requirements.
+6. [IETF RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html) HTTP semantics.
+7. [Google site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) Route change context.
+8. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) URL inventory.
+9. [NIST configuration management](https://csrc.nist.gov/glossary/term/configuration_management) Change control context.
+10. [OWASP change management](https://owasp.org/www-project-application-security-verification-standard/) Verification context.
+
+## Further reading
+
+[Release notes](/research/website-release-notes)
+[Change management](/research/website-change-management-controls)
+
+## Related Research
+
+[Related reading](/research/website-qa-evidence-pack)
+[Related reading](/research/outsourced-website-launch-runbook)
+[Related reading](/research/website-content-ownership-handoff)
+
+## Frequently asked questions
+
+### Should every release note list every changed file?
+
+No. Link to the commit for technical detail and summarize the user-visible and operational impact in the note.
+
+### Who signs off?
+
+The accountable company owner should approve scope and exceptions, while the delivery and QA roles provide implementation evidence.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

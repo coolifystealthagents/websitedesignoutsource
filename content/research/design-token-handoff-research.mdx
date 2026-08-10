@@ -1,0 +1,76 @@
+---
+title: "Design Token Handoffs in Outsourced Web Production"
+description: "Research-backed controls for transferring design tokens from an outsourced design system into maintainable website code."
+slug: "design-token-handoff-research"
+published: "2026-08-10"
+---
+
+# Design Token Handoffs in Outsourced Web Production
+
+Design tokens make visual decisions explicit. A reliable handoff connects names, values, semantic intent, component usage, and change approval across design and code.
+
+## Key Stats
+
+- Design Tokens Community Group format modules define 3 core file concepts used here: groups, tokens, and modes (Design Tokens CG)
+- CSS custom properties are defined by the CSS Variables specification (W3C)
+- WCAG 2.2 has 4 principles (W3C)
+
+## Key Takeaways
+
+- Name tokens by purpose instead of one-off screen location.
+- Map primitive values to semantic roles before component use.
+- Test contrast and responsive states after token changes.
+
+## Methodology
+
+This synthesis uses the Design Tokens Community Group format draft, W3C CSS specifications, WCAG 2.2, and MDN documentation. The token categories are a working model for handoff, not a claim about every design system.
+
+## Handoff fields
+
+For each token record name, type, value, mode, semantic role, component consumers, source file, and owner. Keep the design export and code transformation versioned together.
+
+## Review evidence
+
+Review color contrast, focus, typography wrapping, spacing at breakpoints, and dark or alternate modes where applicable. Screenshots help, but computed values and component references make defects easier to reproduce.
+
+## Consolidated statistics
+
+The article uses 3 token file concepts in the cited format model and 4 WCAG principles. These are structural references and not a measure of design-system maturity.
+
+## Sources
+
+1. [Design Tokens Community Group](https://www.designtokens.org/) Token format work.
+2. [Design Tokens format](https://www.designtokens.org/tr/format/) Format reference.
+3. [CSS Custom Properties](https://www.w3.org/TR/css-variables-1/) W3C specification.
+4. [MDN CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) Implementation guidance.
+5. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility requirements.
+6. [W3C contrast minimum](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) Contrast guidance.
+7. [W3C media queries](https://www.w3.org/TR/mediaqueries-5/) Responsive behavior.
+8. [CSS Color 5](https://www.w3.org/TR/css-color-5/) Color specification.
+9. [Figma variables](https://help.figma.com/hc/en-us/articles/15339657135383-Create-and-manage-variables) Design variable context.
+10. [Storybook design systems](https://storybook.js.org/tutorials/design-systems-for-developers/) Component documentation context.
+
+## Further reading
+
+[Design token handoff](/research/design-token-handoff-outsourced-web-project)
+[Design system governance](/research/website-component-governance-outsourced-teams)
+
+## Related Research
+
+[Related reading](/research/website-design-review-commentary-protocol)
+[Related reading](/research/outsourced-design-review-rubric)
+[Related reading](/research/website-component-governance-outsourced-teams)
+
+## Frequently asked questions
+
+### Should tokens be named after colors?
+
+Usually semantic names travel better because they explain usage, while primitive values can remain part of the source layer.
+
+### Who approves a token change?
+
+The design and product owners should approve the intended visual change; the implementation team should provide affected components and test evidence.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

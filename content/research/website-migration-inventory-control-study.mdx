@@ -1,0 +1,76 @@
+---
+title: "Migration Inventory Controls for Outsourced Website Teams"
+description: "How to build a defensible URL and content inventory before an outsourced website migration."
+slug: "website-migration-inventory-control-study"
+published: "2026-08-10"
+---
+
+# Migration Inventory Controls for Outsourced Website Teams
+
+An inventory is the control surface for a migration. It connects old URLs, content purpose, owners, redirect decisions, and test evidence before a release makes gaps harder to see.
+
+## Key Stats
+
+- HTTP status codes are grouped into 5 classes (IETF RFC 9110)
+- XML sitemap files have a 50,000 URL limit (Sitemaps protocol)
+- Google recommends keeping redirects for at least 1 year after a move (Google)
+
+## Key Takeaways
+
+- Reconcile repository routes, sitemap URLs, analytics, and backlinks.
+- Give every removed URL an explicit disposition.
+- Keep the inventory as a versioned release artifact.
+
+## Methodology
+
+This synthesis uses Google site-move guidance, RFC 9110, the Sitemaps protocol, and Search Console documentation. Numeric statements refer to those sources. The inventory workflow is a practical interpretation for outsourced delivery.
+
+## Inventory fields
+
+Record old URL, new URL, status, purpose, owner, traffic evidence, redirect type, canonical expectation, test date, and decision. Unknowns should remain visible rather than being silently mapped to the home page.
+
+## Release review
+
+Compare the inventory to the built route list and sitemap. Test direct redirects, chains, loops, destination relevance, canonical tags, and internal links. Have the owner approve deletions and broad consolidations.
+
+## Consolidated statistics
+
+The article cites 5 HTTP status classes, a 50,000 URL sitemap file limit, and Google's 1-year redirect recommendation. These are protocol or guidance facts, not a forecast of migration performance.
+
+## Sources
+
+1. [Google site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) Migration guidance.
+2. [IETF RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html) HTTP status semantics.
+3. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) Sitemap limits.
+4. [Google SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) Link and crawl guidance.
+5. [Google Search Console](https://search.google.com/search-console/about) Monitoring context.
+6. [Google canonicalization](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) Duplicate URL guidance.
+7. [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986) URI syntax.
+8. [IETF HTTP caching](https://www.rfc-editor.org/rfc/rfc9111) Cache behavior.
+9. [Google redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects) Redirect guidance.
+10. [Git diff](https://git-scm.com/docs/git-diff) Review evidence reference.
+
+## Further reading
+
+[Migration inventory](/research/website-migration-inventory-outsourced-team)
+[Redirect review](/research/website-redirect-review-outsourced-project)
+
+## Related Research
+
+[Related reading](/research/content-migration-quality-controls)
+[Related reading](/research/website-redirect-mapping-research)
+[Related reading](/research/outsourced-website-launch-runbook)
+
+## Frequently asked questions
+
+### Should every old URL go to the home page?
+
+No. A destination should preserve the old URL's useful purpose or the inventory should record a deliberate removal.
+
+### Who owns the final inventory?
+
+The company should retain the approved version, while the outsourced team maintains implementation and test updates.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

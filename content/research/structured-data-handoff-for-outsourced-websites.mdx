@@ -1,0 +1,76 @@
+---
+title: "Structured Data Handoffs for Outsourced Websites"
+description: "A source-led guide to specifying, testing, and handing over structured data during website production."
+slug: "structured-data-handoff-for-outsourced-websites"
+published: "2026-08-10"
+---
+
+# Structured Data Handoffs for Outsourced Websites
+
+Structured data should be treated as a versioned content contract. The useful handoff identifies the entity, properties, source content, validation result, and owner for every markup change.
+
+## Key Stats
+
+- Schema.org lists 3 core concepts: types, properties, and enumerations (Schema.org)
+- JSON-LD is a W3C standard recommendation (W3C)
+- Google documents 17 supported search appearance features (Google Search Central)
+
+## Key Takeaways
+
+- Keep markup aligned with visible page content.
+- Validate syntax and eligibility separately.
+- Record the tested URL, schema type, warnings, and approval.
+
+## Methodology
+
+This review compares Schema.org, JSON-LD, Google Search Central, and validator documentation. The count of supported appearances is taken from the cited Google documentation at the time of writing and may change. Recommendations are workflow guidance, not a guarantee of rich results.
+
+## Handoff contract
+
+Specify the canonical URL, primary entity, required properties, source field, and fallback when a value is absent. Reject markup that invents ratings, prices, reviews, or dates not shown to users.
+
+## Validation evidence
+
+Run syntax validation, then the relevant search feature test. Save the URL, markup version, output, and unresolved warnings. Recheck after content or template changes.
+
+## Consolidated statistics
+
+The article uses 3 Schema.org concept categories, JSON-LD's W3C recommendation status, and Google's documented count of 17 supported appearances. Search eligibility remains controlled by search engine requirements.
+
+## Sources
+
+1. [Schema.org introduction](https://schema.org/docs/gs.html) Vocabulary concepts.
+2. [Schema.org full hierarchy](https://schema.org/docs/full.html) Type and property reference.
+3. [W3C JSON-LD 1.1](https://www.w3.org/TR/json-ld11/) JSON-LD standard.
+4. [Google structured data intro](https://developers.google.com/search/docs/appearance/structured-data/intro) Search guidance.
+5. [Google rich result gallery](https://developers.google.com/search/docs/appearance/structured-data/search-gallery) Supported features.
+6. [Google Rich Results Test](https://search.google.com/test/rich-results) Validation tool.
+7. [Schema Markup Validator](https://validator.schema.org/) Syntax and vocabulary validation.
+8. [Google general structured data guidelines](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) Quality policies.
+9. [Google canonicalization](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) URL consolidation.
+10. [IETF RFC 8259](https://www.rfc-editor.org/rfc/rfc8259) JSON syntax reference.
+
+## Further reading
+
+[Structured data handoff](/research/website-structured-data-handoff)
+[SEO briefs](/research/seo-briefs-for-outsourced-web-content)
+
+## Related Research
+
+[Related reading](/research/website-content-qa-outsourced-production)
+[Related reading](/research/website-redirect-review-outsourced-project)
+[Related reading](/research/website-qa-evidence-pack)
+
+## Frequently asked questions
+
+### Does valid markup guarantee a rich result?
+
+No. Valid markup is one condition. Search systems can choose whether to show an eligible appearance.
+
+### Who should approve structured data?
+
+The content owner should approve claims and visible-source mapping; the implementation team should provide validation evidence.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

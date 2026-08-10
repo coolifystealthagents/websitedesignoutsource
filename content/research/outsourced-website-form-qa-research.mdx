@@ -1,0 +1,76 @@
+---
+title: "Form QA Research for Outsourced Website Projects"
+description: "A practical evidence model for testing validation, errors, consent, delivery, and accessibility in outsourced website forms."
+slug: "outsourced-website-form-qa-research"
+published: "2026-08-10"
+---
+
+# Form QA Research for Outsourced Website Projects
+
+Forms combine content, accessibility, validation, privacy, and delivery. A good QA plan tests the complete journey rather than only whether a submit button responds.
+
+## Key Stats
+
+- WCAG 2.2 has 4 principles (W3C)
+- HTML defines 3 common constraint validation states used in this workflow: valid, invalid, and suffering from a constraint violation (WHATWG)
+- GDPR Article 5 lists 7 principles for processing personal data (EUR-Lex)
+
+## Key Takeaways
+
+- Test empty, malformed, boundary, duplicate, and successful submissions.
+- Check labels, focus, errors, consent, transport, storage, and notifications.
+- Use synthetic test data and retain an evidence trail.
+
+## Methodology
+
+This synthesis uses WCAG 2.2, the HTML specification, GDPR principles, WAI forms guidance, and OWASP validation guidance. The count of GDPR principles comes from Article 5. The QA model is operational guidance and not legal advice.
+
+## Test matrix
+
+Create cases for keyboard-only use, screen reader announcements, mobile input, server rejection, timeout, duplicate submission, and recovery. Record expected and observed outcomes separately.
+
+## Handoff controls
+
+The delivery team should document endpoint, fields, validation rules, retention, notification path, and failure behavior. The company should approve destinations and any personal-data collection before release.
+
+## Consolidated statistics
+
+The cited material identifies 4 WCAG principles, 3 validation state categories used here, and 7 GDPR Article 5 principles. These counts do not measure form conversion or compliance.
+
+## Sources
+
+1. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility requirements.
+2. [WAI forms tutorial](https://www.w3.org/WAI/tutorials/forms/) Form accessibility guidance.
+3. [HTML constraint validation](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api) Browser form behavior.
+4. [MDN form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) Implementation guidance.
+5. [GDPR Article 5](https://eur-lex.europa.eu/eli/reg/2016/679/art_5/oj) Data principles.
+6. [GDPR Article 32](https://eur-lex.europa.eu/eli/reg/2016/679/art_32/oj) Security of processing.
+7. [OWASP input validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) Validation guidance.
+8. [OWASP CSRF prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) Request protection.
+9. [W3C accessible name](https://www.w3.org/TR/accname-1.2/) Naming guidance.
+10. [NIST digital identity](https://pages.nist.gov/800-63-4/) Identity and assurance context.
+
+## Further reading
+
+[Form QA runbook](/research/outsourced-website-form-qa-runbook)
+[Accessible forms](/research/accessible-forms-and-error-messages)
+
+## Related Research
+
+[Related reading](/research/website-form-consent-handoff)
+[Related reading](/research/website-qa-evidence-pack)
+[Related reading](/research/outsourced-website-acceptance-test-matrix)
+
+## Frequently asked questions
+
+### Is client-side validation enough?
+
+No. Server-side validation and safe handling are required because client-side behavior can be bypassed.
+
+### What data should be used in tests?
+
+Use synthetic data that exercises the rule without exposing a real person's information.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

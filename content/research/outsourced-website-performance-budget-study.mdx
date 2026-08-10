@@ -1,0 +1,76 @@
+---
+title: "Performance Budgets for Outsourced Website Projects"
+description: "How to translate web performance guidance into measurable budgets, test conditions, and delivery evidence."
+slug: "outsourced-website-performance-budget-study"
+published: "2026-08-10"
+---
+
+# Performance Budgets for Outsourced Website Projects
+
+Performance budgets give an outsourced website team a shared definition of acceptable speed before implementation choices become expensive to reverse.
+
+## Key Stats
+
+- Core Web Vitals has 3 current metrics (web.dev)
+- The recommended LCP threshold is 2.5 seconds or less (web.dev)
+- The recommended INP threshold is 200 milliseconds or less (web.dev)
+
+## Key Takeaways
+
+- Define budgets by template and device, not only by an average site score.
+- Keep lab tests and field data separate because they answer different questions.
+- Require a regression note when a change crosses a budget.
+
+## Methodology
+
+This review uses web.dev metric definitions, the Chrome UX Report documentation, HTTP caching guidance, and platform specifications. Thresholds are quoted as current guidance from the cited sources. Delivery recommendations are an operational interpretation.
+
+## Budget structure
+
+Set targets for LCP, INP, CLS, transferred bytes, image weight, and third-party scripts. Record test URL, device class, connection profile, browser version, and build identifier. A budget is useful only when the test conditions are reproducible.
+
+## Release evidence
+
+An outsourced team should attach before and after measurements, the changed assets, and a short explanation of any regression. The owner can then trade performance against business requirements with visible evidence.
+
+## Consolidated statistics
+
+The cited Core Web Vitals guidance uses 3 metrics, with recommended thresholds of 2.5 seconds for LCP and 200 milliseconds for INP. These are thresholds, not a promise of a particular user outcome.
+
+## Sources
+
+1. [web.dev Core Web Vitals](https://web.dev/articles/vitals) Metric definitions and thresholds.
+2. [web.dev LCP](https://web.dev/articles/lcp) Largest Contentful Paint guidance.
+3. [web.dev INP](https://web.dev/articles/inp) Interaction to Next Paint guidance.
+4. [web.dev CLS](https://web.dev/articles/cls) Cumulative Layout Shift guidance.
+5. [Chrome UX Report](https://developer.chrome.com/docs/crux/) Field data context.
+6. [MDN HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) Cache behavior reference.
+7. [HTTP Semantics](https://httpwg.org/specs/rfc9110.html) Protocol reference.
+8. [W3C Resource Timing](https://www.w3.org/TR/resource-timing/) Browser timing data.
+9. [web.dev image performance](https://web.dev/learn/images) Image delivery guidance.
+10. [Google Search page experience](https://developers.google.com/search/docs/appearance/page-experience) Search documentation context.
+
+## Further reading
+
+[Performance budget handoff](/research/website-performance-budget-handoff)
+[Image optimization brief](/research/image-optimization-brief-for-web-teams)
+
+## Related Research
+
+[Related reading](/research/core-web-vitals-outsourced-website-workflow)
+[Related reading](/research/website-qa-evidence-pack)
+[Related reading](/research/outsourced-website-launch-runbook)
+
+## Frequently asked questions
+
+### Should a vendor report one score?
+
+No. Report the metrics, test conditions, and distribution or field context so the result can be reproduced.
+
+### What happens when a budget is exceeded?
+
+Record the cause, owner, expected remediation, and approval. Do not silently change the budget after the test.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
