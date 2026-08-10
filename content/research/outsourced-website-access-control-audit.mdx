@@ -1,0 +1,72 @@
+---
+title: "Access-Control Audits for Outsourced Website Projects"
+description: "How to inventory accounts, apply least privilege, and preserve evidence when an external team works on a website."
+slug: "outsourced-website-access-control-audit"
+published: "2026-08-10"
+---
+
+# Access-Control Audits for Outsourced Website Projects
+
+An access audit should answer who can reach each system, why they need it, when access expires, and who reviews the decision. This is especially important when a website team crosses design, CMS, analytics, hosting, and repository boundaries.
+
+## Key Stats
+
+- NIST defines least privilege as minimum necessary access (NIST)
+- OWASP ASVS is organized into 14 verification categories (OWASP)
+- WCAG 2.2 has 4 principles (W3C)
+
+## Key Takeaways
+
+- Keep a single access inventory with an owner.
+- Use role-specific access and time-bound exceptions.
+- Revoke temporary credentials after the work is accepted.
+
+## Methodology
+
+The control model is based on NIST, OWASP, and website standards. It describes process controls and does not assess a particular account or provider.
+
+## Audit record
+
+List system, account, role, owner, purpose, creation date, last review, expiry, authentication method, and revocation evidence. Include service accounts and shared integrations, not only named human users.
+
+## Handoff boundary
+
+The company should own domains, hosting, analytics, repositories, form destinations, and billing accounts. The production team should receive the smallest role that supports its task and should document any exception before using it.
+
+## Sources
+
+1. [NIST least privilege](https://csrc.nist.gov/glossary/term/least_privilege) Minimum-access definition.
+2. [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework) Governance and risk context.
+3. [NIST Digital Identity Guidelines](https://pages.nist.gov/800-63-4/) Identity guidance.
+4. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Application verification standard.
+5. [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) Authentication practices.
+6. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) User-accessibility reference.
+7. [Google Analytics consent guidance](https://support.google.com/analytics/answer/9976101) Consent and data controls.
+8. [GitHub managing team access](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories) Repository access guidance.
+9. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) Site discovery reference.
+10. [IANA HTTP status codes](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) Web response reference.
+
+## Further reading
+
+[Access review triage](/research/website-access-review-triage)
+[Analytics consent controls](/research/website-analytics-consent-handoff-controls)
+
+## Related Research
+
+[Security best practices](/research/website-component-governance-outsourced-teams)
+[QA evidence](/research/website-qa-evidence-pack-research)
+[Migration controls](/research/content-migration-quality-controls)
+
+## Frequently asked questions
+
+### Should accounts be shared?
+
+Prefer named accounts with role-based access and a recorded owner. Shared access makes review and revocation harder.
+
+### When should access be reviewed?
+
+Review it at project start, when responsibilities change, and when the handoff closes.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

@@ -1,0 +1,72 @@
+---
+title: "Analytics Event Taxonomy Handoff for Web Teams"
+description: "A careful handoff method for naming events, documenting parameters, checking consent, and preserving analytics ownership."
+slug: "website-analytics-event-taxonomy-handoff"
+published: "2026-08-10"
+---
+
+# Analytics Event Taxonomy Handoff for Web Teams
+
+An analytics handoff should describe what a visitor does, what event is emitted, which parameters are allowed, what consent state applies, and who owns the property. A name alone is not a test plan.
+
+## Key Stats
+
+- Google Analytics 4 uses events to measure interactions (Google)
+- WCAG 2.2 has 4 principles (W3C)
+- NIST defines least privilege as minimum necessary access (NIST)
+
+## Key Takeaways
+
+- Define an event contract before implementation.
+- Test consent and denied-consent states explicitly.
+- Keep property ownership and access with the company.
+
+## Methodology
+
+The workflow applies official Google, W3C, and NIST guidance. It does not infer user behavior, attribution, or conversion performance from documentation.
+
+## Event contract
+
+For each event record trigger, name, parameters, allowed values, page context, consent requirement, expected destination, owner, and test evidence. Mark events that are proposed, implemented, tested, accepted, or retired.
+
+## Handoff evidence
+
+Use a test page and controlled actions. Save the event payload, consent state, timestamp, browser, expected result, actual result, and reviewer. Remove temporary access after the company accepts the implementation.
+
+## Sources
+
+1. [Google Analytics events](https://support.google.com/analytics/answer/9322688) Event collection concepts.
+2. [Google Analytics recommended events](https://developers.google.com/analytics/devguides/collection/ga4/reference/events) Event reference.
+3. [Google consent mode](https://developers.google.com/tag-platform/security/concepts/consent-mode) Consent behavior guidance.
+4. [Google Analytics data governance](https://support.google.com/analytics/answer/6004245) Data-use guidance.
+5. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessible interaction reference.
+6. [NIST least privilege](https://csrc.nist.gov/glossary/term/least_privilege) Access-control principle.
+7. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Verification controls.
+8. [Google Search Central SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) Search context.
+9. [Schema.org Action](https://schema.org/Action) Action vocabulary.
+10. [IANA URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) URI reference.
+
+## Further reading
+
+[Analytics handoff](/research/website-analytics-handoff-outsourced-team)
+[Consent controls](/research/website-analytics-consent-implementation-study)
+
+## Related Research
+
+[Form QA](/research/outsourced-website-form-qa-research)
+[Content QA](/research/website-content-qa-outsourced-production)
+[Access review](/research/website-access-review-triage)
+
+## Frequently asked questions
+
+### Should an event name include page copy?
+
+Prefer a stable name with documented parameters. Copy changes should not silently change the event contract.
+
+### Who owns the analytics property?
+
+The company should own the property and approve access, retention, consent behavior, and data decisions.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

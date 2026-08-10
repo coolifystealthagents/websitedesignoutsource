@@ -1,0 +1,72 @@
+---
+title: "Redirect Map Validation for Outsourced Website Redesigns"
+description: "A source-led method for mapping old URLs, testing destinations, and preserving evidence during a website redesign."
+slug: "outsourced-website-redirect-map-validation"
+published: "2026-08-10"
+---
+
+# Redirect Map Validation for Outsourced Website Redesigns
+
+A redirect map is a set of user and search transitions, not a spreadsheet to archive after launch. Every changed URL needs a deliberate destination, a test result, and an owner.
+
+## Key Stats
+
+- HTTP status codes have 5 classes (IANA)
+- A sitemap URL entry can contain one loc value (Sitemaps protocol)
+- Google documents permanent redirects as part of a site move workflow (Google)
+
+## Key Takeaways
+
+- Inventory old URLs before deleting or renaming pages.
+- Map to the closest useful destination, not a generic home page.
+- Test redirect chains, targets, canonicals, and sitemap inputs.
+
+## Methodology
+
+This guide uses Google Search Central, IANA, and the sitemap protocol as primary references. The checklist is an operational interpretation for an outsourced redesign and does not predict ranking outcomes.
+
+## Map fields
+
+Include old URL, status, new URL, redirect type, reason, content owner, canonical target, test date, result, and exception. Compare the map with crawls, analytics landing pages, known campaigns, and the existing sitemap.
+
+## Validation pass
+
+Test representative old URLs, query strings, trailing-slash variants, missing pages, and destination responses. Check that the final destination is useful, accessible, internally linked, and not part of a redirect chain.
+
+## Sources
+
+1. [Google Search Central site moves](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) Redirect and migration guidance.
+2. [Google Search Central redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects) Redirect recommendations.
+3. [IANA HTTP status codes](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) Response-code registry.
+4. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) Sitemap requirements.
+5. [Google Search Central canonicals](https://developers.google.com/search/docs/crawling-indexing/canonicalization) Canonical guidance.
+6. [Google Search Central links](https://developers.google.com/search/docs/crawling-indexing/links-crawlable) Internal link guidance.
+7. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility reference.
+8. [Schema.org WebPage](https://schema.org/WebPage) Page vocabulary.
+9. [NIST risk management](https://csrc.nist.gov/projects/risk-management/about-rmf) Risk context.
+10. [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) Verification reference.
+
+## Further reading
+
+[Redirect review](/research/website-redirect-review-outsourced-project)
+[Migration inventory](/research/website-migration-inventory-control-study)
+
+## Related Research
+
+[Migration quality controls](/research/content-migration-quality-controls)
+[Launch runbook](/research/outsourced-website-launch-runbook)
+[Search internal links](/research/website-search-internal-link-research)
+
+## Frequently asked questions
+
+### Should every old URL redirect to the home page?
+
+No. Use the closest useful destination, or return an intentional status when no equivalent exists.
+
+### Who approves a redirect map?
+
+The company owner should approve business and content decisions; the production team should supply tests and evidence.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
