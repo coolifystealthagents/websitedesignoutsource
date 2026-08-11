@@ -1,0 +1,56 @@
+---
+title: "Form Layout Accessibility in Outsourced Website Projects"
+description: "What to verify when reviewing labels, errors, grouping, and keyboard behavior in an outsourced website form design."
+slug: "outsourced-website-form-layout-accessibility-study"
+published: "2026-08-11"
+---
+
+# Form Layout Accessibility in Outsourced Website Projects
+
+Forms combine content, interaction, validation, and sensitive information. A design handoff should make the relationship between labels, controls, instructions, errors, and submission states explicit.
+
+## Research basis
+
+WCAG form criteria and the HTML specification provide the core semantics, while WAI-ARIA guidance describes when additional relationships are appropriate. The safest review starts with native HTML behavior and adds custom interaction only where its semantics are documented.
+
+## Review method
+
+Test a complete form with keyboard only, an empty submission, an invalid value, a corrected value, and a server-side failure. Record the accessible name, required state, error association, focus destination, and whether entered data remains available after correction.
+
+## Sources
+
+1. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility standard.
+2. [W3C labels](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) Label guidance.
+3. [W3C error identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) Error guidance.
+4. [W3C error suggestion](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html) Correction guidance.
+5. [WHATWG forms](https://html.spec.whatwg.org/multipage/forms.html) Native form semantics.
+6. [MDN label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) Label element.
+7. [MDN input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) Input behavior.
+8. [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) Widget guidance.
+9. [W3C focus order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) Focus guidance.
+10. [W3C status messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) Submission feedback.
+
+## Further reading
+
+[Form consent handoff](/research/website-form-consent-handoff)
+[Form QA research](/research/outsourced-website-form-qa-research)
+
+## Related Research
+
+[Related reading](/research/accessible-forms-and-error-messages)
+[Related reading](/research/website-qa-evidence-pack)
+[Related reading](/research/website-analytics-consent-handoff-controls)
+
+## Frequently asked questions
+
+### Are visual labels optional when placeholders exist?
+
+Placeholders are not a reliable replacement for persistent labels. The review should verify the accessible name and the visible instruction separately.
+
+### Who decides which fields are required?
+
+The business and content owners decide what data is necessary. The design partner should make required state and consequences clear.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

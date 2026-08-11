@@ -1,0 +1,56 @@
+---
+title: "Font Loading Handoffs for Outsourced Website Design"
+description: "What a design and engineering handoff should document about web fonts, fallback behavior, and readable performance."
+slug: "website-font-loading-handoff-research"
+published: "2026-08-11"
+---
+
+# Font Loading Handoffs for Outsourced Website Design
+
+Typography decisions affect brand, layout, and loading behavior. An outsourced handoff becomes safer when it documents font sources, permitted weights, fallback metrics, loading strategy, and what happens when a font is unavailable.
+
+## Research basis
+
+CSS Fonts and CSS Font Loading define how fonts are declared and observed, while the W3C Web Performance Working Group documents the user experience implications of loading resources. The review should treat fallback layout as a designed state, not a failure hidden by a screenshot.
+
+## Handoff evidence
+
+List each family and weight, its license source, preload or loading decision, fallback stack, and tested language coverage. Review headings, navigation, buttons, and long-form content before and after the custom font is available.
+
+## Sources
+
+1. [W3C CSS Fonts](https://www.w3.org/TR/css-fonts-4/) Font model.
+2. [MDN @font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) Font declarations.
+3. [MDN FontFaceSet](https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet) Loading API.
+4. [W3C CSS Font Loading](https://www.w3.org/TR/css-font-loading/) Font loading behavior.
+5. [Google Fonts FAQ](https://developers.google.com/fonts/faq) Service context.
+6. [W3C Web Performance](https://www.w3.org/webperf/) Performance standards work.
+7. [MDN font-display](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display) Rendering choice.
+8. [W3C CSS Values](https://www.w3.org/TR/css-values-4/) CSS value model.
+9. [MDN font-family](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family) Fallback stacks.
+10. [W3C WCAG text spacing](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html) Readability tolerance.
+
+## Further reading
+
+[Design token handoff](/research/design-token-handoff-research)
+[Responsive breakpoint study](/research/outsourced-website-responsive-breakpoint-study)
+
+## Related Research
+
+[Related reading](/research/design-system-handoff-controls)
+[Related reading](/research/website-qa-evidence-pack-research)
+[Related reading](/research/image-optimization-brief-for-web-teams)
+
+## Frequently asked questions
+
+### Is a font preview enough for approval?
+
+No. Approval should include the actual loading and fallback states, plus licensing and language coverage appropriate to the site.
+
+### Can a fallback change the layout?
+
+Yes. Different metrics can alter wrapping and component height, which is why representative content should be tested with the fallback stack.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

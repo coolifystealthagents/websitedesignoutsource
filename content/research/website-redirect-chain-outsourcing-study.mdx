@@ -1,0 +1,56 @@
+---
+title: "Redirect Chain Reviews for Outsourced Website Projects"
+description: "How to review redirect maps and chains as part of a controlled outsourced website migration."
+slug: "website-redirect-chain-outsourcing-study"
+published: "2026-08-11"
+---
+
+# Redirect Chain Reviews for Outsourced Website Projects
+
+A redirect map is more than a list of old and new URLs. It is a claim about how visitors, crawlers, bookmarks, and shared links should reach the new information architecture.
+
+## Research basis
+
+HTTP semantics distinguish temporary and permanent redirection, while Google Search documentation discusses canonical signals and redirect handling. An outsourced review should test the final destination, avoid unnecessary hops, and preserve the user's intended content wherever the migration allows.
+
+## Evidence to collect
+
+For each source URL, record status, destination, redirect type, hop count, destination status, and rationale. Include removed pages and protocol or hostname variants, then retest a sample after rules are deployed to the test environment.
+
+## Sources
+
+1. [IETF RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html) HTTP redirection semantics.
+2. [MDN 301](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301) Permanent redirect behavior.
+3. [MDN 302](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302) Temporary redirect behavior.
+4. [Google redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects) Search guidance.
+5. [Google canonicalization](https://developers.google.com/search/docs/crawling-indexing/canonicalization) Canonical signals.
+6. [Google site migrations](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) Migration guidance.
+7. [IANA status registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) Status registry.
+8. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) URL inventory context.
+9. [RFC URI](https://www.rfc-editor.org/rfc/rfc3986.html) URI syntax.
+10. [MDN Location header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Location) Destination header.
+
+## Further reading
+
+[Redirect map validation](/research/outsourced-website-redirect-map-validation)
+[Website migration inventory](/research/website-migration-inventory-control-study)
+
+## Related Research
+
+[Related reading](/research/website-redirect-mapping-research)
+[Related reading](/research/website-redesign-risk-register-controls)
+[Related reading](/research/website-qa-evidence-pack-research)
+
+## Frequently asked questions
+
+### Is every old URL entitled to a redirect?
+
+No. Map routes where the new destination preserves the user's likely intent, and document deliberate removals or replacements.
+
+### Are multiple redirects always wrong?
+
+They are a useful signal to investigate. A direct final destination is generally easier to test and less fragile than a chain.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
