@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "contract": "sites3-aug10-public-date-v6",
+  "targetDate": "2026-08-10",
+  "family": "research",
+  "domain": "websitedesignoutsource.com",
+  "repository": "coolifystealthagents/websitedesignoutsource",
+  "branch": "main",
+  "minimum": 10,
+  "priorRunId": "22f0156d-6c63-48ea-860f-cffa2082c941",
+  "priorIssueId": "164812d2-d902-44c0-994a-3c96989d56f4",
+  "validationCommands": [
+    "node scripts/validate-content-batch.mjs research",
+    "npm run build",
+    "node scripts/validate-aug10-research.mjs"
+  ],
+  "cleanBuildPassed": true,
+  "existingCompliancePassed": true,
+  "indexNewestFirstPassed": true,
+  "entries": [
+    {
+      "slug": "outsourced-website-access-control-audit",
+      "route": "/research/outsourced-website-access-control-audit",
+      "sourcePath": "content/research/outsourced-website-access-control-audit.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "outsourced-website-component-inventory-audit",
+      "route": "/research/outsourced-website-component-inventory-audit",
+      "sourcePath": "content/research/outsourced-website-component-inventory-audit.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "outsourced-website-content-calendar-evidence",
+      "route": "/research/outsourced-website-content-calendar-evidence",
+      "sourcePath": "content/research/outsourced-website-content-calendar-evidence.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "outsourced-website-redirect-map-validation",
+      "route": "/research/outsourced-website-redirect-map-validation",
+      "sourcePath": "content/research/outsourced-website-redirect-map-validation.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "website-analytics-event-taxonomy-handoff",
+      "route": "/research/website-analytics-event-taxonomy-handoff",
+      "sourcePath": "content/research/website-analytics-event-taxonomy-handoff.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "website-design-brief-acceptance-metrics",
+      "route": "/research/website-design-brief-acceptance-metrics",
+      "sourcePath": "content/research/website-design-brief-acceptance-metrics.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "website-image-performance-handoff-study",
+      "route": "/research/website-image-performance-handoff-study",
+      "sourcePath": "content/research/website-image-performance-handoff-study.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "website-qa-sampling-plan-outsourced-team",
+      "route": "/research/website-qa-sampling-plan-outsourced-team",
+      "sourcePath": "content/research/website-qa-sampling-plan-outsourced-team.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "website-redesign-risk-register-controls",
+      "route": "/research/website-redesign-risk-register-controls",
+      "sourcePath": "content/research/website-redesign-risk-register-controls.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "website-search-intent-cluster-audit",
+      "route": "/research/website-search-intent-cluster-audit",
+      "sourcePath": "content/research/website-search-intent-cluster-audit.mdx",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "d3b265bbf42ff9733faaec15c47c7873bc8505eb",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": ["datePublished", "time[datetime]"],
+      "renderedDate": "2026-08-10"
+    }
+  ]
+}
