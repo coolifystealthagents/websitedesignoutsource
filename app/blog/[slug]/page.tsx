@@ -8,6 +8,14 @@ import { contentBlogPosts, renderMarkdown } from '../../content-library';
 
 const baseUrl = 'https://websitedesignoutsource.com';
 
+const publicationDateFormatter = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+});
+const formatPublicationDate = (value?: string) => {
+  if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return value ?? '';
+  return publicationDateFormatter.format(new Date(`${value}T00:00:00Z`));
+};
+
 export function generateStaticParams() {
   return [...blogPosts.map((post) => ({ slug: post.slug })), ...contentBlogPosts.map((post) => ({ slug: post.slug }))];
 }
@@ -15,7 +23,21 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const contentPost = contentBlogPosts.find((item) => item.slug === slug);
-  if (contentPost) return <><Header/><main className="section"><article className="container article-shell"><JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:contentPost.title,description:contentPost.excerpt,url:`${baseUrl}/blog/${contentPost.slug}`,datePublished:contentPost.published,dateModified:contentPost.published}}/><p className="eyebrow">WebsiteDesignOutsource.com blog</p><h1>{contentPost.title}</h1><p className="lead">{contentPost.excerpt}</p><time dateTime={contentPost.published}>{contentPost.published}</time><img src="/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp" alt="Website design production workspace" />{renderMarkdown(contentPost.body)}<CTA /></article></main><Footer/></>;
+  if (contentPost) {
+    const canonical = `${baseUrl}/blog/${contentPost.slug}`;
+    return {
+      title: contentPost.title,
+      description: contentPost.excerpt,
+      alternates: { canonical },
+      openGraph: {
+        type: 'article',
+        title: contentPost.title,
+        description: contentPost.excerpt,
+        url: canonical,
+        publishedTime: contentPost.published,
+      },
+    };
+  }
   const post = blogPosts.find((item) => item.slug === slug);
   return { title: post?.title || 'Guide', description: post?.excerpt };
 }
@@ -23,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const contentPost = contentBlogPosts.find((item) => item.slug === slug);
-  if (contentPost) return <><Header/><main className="section"><article className="container article-shell"><JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:contentPost.title,description:contentPost.excerpt,url:`${baseUrl}/blog/${contentPost.slug}`,datePublished:contentPost.published,dateModified:contentPost.published}}/><p className="eyebrow">WebsiteDesignOutsource.com blog</p><h1>{contentPost.title}</h1><p className="lead">{contentPost.excerpt}</p><time dateTime={contentPost.published}>{contentPost.published}</time><img src="/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp" alt="Website design production workspace" />{renderMarkdown(contentPost.body)}<CTA /></article></main><Footer/></>;
+  if (contentPost) return <><Header/><main className="section"><article className="container article-shell"><JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:contentPost.title,description:contentPost.excerpt,url:`${baseUrl}/blog/${contentPost.slug}`,datePublished:contentPost.published,dateModified:contentPost.published}}/><p className="eyebrow">WebsiteDesignOutsource.com blog</p><h1>{contentPost.title}</h1><p className="lead">{contentPost.excerpt}</p><time dateTime={contentPost.published}>{formatPublicationDate(contentPost.published)}</time><img src="/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp" alt="Website design production workspace" />{renderMarkdown(contentPost.body)}<CTA /></article></main><Footer/></>;
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) notFound();
   if (slug === 'philippines-website-design-outsourcing-mobile-qa-signoff-sheet') return <MobileQaArticle />;
