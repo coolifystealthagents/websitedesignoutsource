@@ -1,0 +1,108 @@
+---
+title: "Accessibility Conformance Evidence in an Outsourced Website Redesign"
+description: "How WCAG criteria, user tasks, and bounded evidence can make accessibility decisions reviewable during an outsourced redesign."
+slug: "website-accessibility-conformance-evidence-2026"
+published: "2026-08-13"
+---
+
+# Accessibility Conformance Evidence in an Outsourced Website Redesign
+
+Accessibility evidence is strongest when it connects a real user task to a specific WCAG success criterion, the observed result, and the limits of the test. A redesign team may have automated findings, keyboard notes, and screenshots, but those artifacts answer different questions. Treating them as one score hides uncertainty. This study examines how an outsourced website design project can interpret accessibility evidence without claiming that a tool scan proves conformance.
+
+## What WCAG actually measures
+
+WCAG 2.2 organizes requirements under four principles: perceivable, operable, understandable, and robust. It defines success criteria at A, AA, and AAA levels. A criterion is a testable requirement, not a percentage grade. For example, keyboard accessibility asks whether functionality is operable through a keyboard interface. It does not say that a page with one successful keyboard path is fully accessible.
+
+The distinction matters in a redesign. A team can record the criterion, the route, the component state, and the tested interaction. The company can then decide whether the evidence covers the intended scope. That is more defensible than reporting that a page is “accessible” because a browser extension returned no high-severity alerts.
+
+## Automated findings and human observation
+
+Automated tools are useful for repeatable checks such as missing alternative text, some contrast failures, invalid labels, and structural problems. W3C describes automated evaluation as one part of a broader evaluation process. A tool cannot reliably decide whether alternative text communicates the purpose of an image, whether a focus order makes sense, or whether an error message helps a person recover.
+
+Human observation should be recorded as an observation, not converted into a false measurement. A useful record names the browser, viewport, input method, route, state, steps, expected result, actual result, and criterion. If a result depends on an account, language, or assistive technology, that cohort should be named. These details make a finding reproducible without pretending that a small sample represents every visitor.
+
+## Task coverage is a unit of analysis
+
+A redesign should be evaluated through tasks such as finding a service, reading a navigation menu, completing a form, correcting an error, and returning to a previous page. Each task can cross several components and criteria. This is different from reviewing isolated pages because a technically correct component can still create a broken journey when states change.
+
+For a small site, a practical sample might include one desktop keyboard path, one mobile screen-reader path, one zoomed path, and one reduced-motion observation for each high-value journey. The sample is not a conformance claim. It is a coverage statement: these routes, states, input methods, and viewport conditions were observed during this period.
+
+## Contrast, focus, and content are different risks
+
+Contrast is a relationship between foreground and background colors, and WCAG defines separate requirements for normal text, large text, and non-text content. Focus visibility concerns whether a keyboard user can locate the active control. Content clarity concerns whether labels, instructions, and errors communicate meaning. A redesign can pass a contrast ratio and still fail because the focus indicator disappears or an error identifies no field.
+
+Separating these risks helps an external design team describe the work precisely. The review can list a color token finding, a focus-state finding, and a content finding as separate observations even when they occur on one button. The owner can then choose an appropriate correction and retest the same condition.
+
+## Findings
+
+The evidence-led approach produces three useful outputs. First, a criterion register says what was assessed and what was out of scope. Second, a task record shows the observed experience across route and state. Third, an exception record preserves unresolved barriers and retest evidence. Together, they create an auditable boundary around the conclusion.
+
+The main interpretation is bounded: evidence supports statements about tested conditions, not every possible combination of user, device, browser, content, and assistive technology. The strongest handoff therefore includes both passed observations and limitations. It also keeps the company decision owner responsible for acceptance and any legal or policy interpretation.
+
+## Limitations
+
+No finite test set covers every browser, assistive technology, language, zoom level, dynamic state, or third-party embed. Automated tools can change results as rules and engines change. A manual review can miss a path that was not selected. WCAG conformance also depends on the complete page and its content, not only the design system or component source.
+
+## Conclusion
+
+Outsourced redesigns become easier to assess when accessibility is represented as traceable evidence rather than a single score. Name the criterion, task, cohort, state, observation, and limitation. Preserve the route and retest conditions. This gives the company a clear basis for review while avoiding an unsupported promise of universal accessibility.
+
+## Interpreting evidence across a redesign
+
+Evidence collected before a redesign and evidence collected after it should be compared carefully. A template may change the number of controls, the content order, or the states available to a user. A lower finding count can mean improvement, but it can also mean that a route or state was not tested. Preserve the scope of both rounds and identify additions and removals. The comparison should explain changed coverage before it explains changed quality.
+
+The same discipline applies to component libraries. A component-level result is not automatically a page-level result. A button may expose a visible focus style in isolation while a parent overflow rule clips it in the page. A dialog may have correct ARIA attributes while the surrounding page remains available to keyboard focus. Record the integration context and test the composed experience.
+
+## Review roles and decision quality
+
+A useful review separates observation from disposition. The reviewer records what happened, the designer proposes a correction, and the decision owner determines whether an exception is acceptable. This separation reduces the temptation to rewrite a failed result as a pass. It also makes escalation proportional: a missing label, a blocked keyboard path, and an unresolved legal question need different owners.
+
+Reviewers should preserve evidence in a form that survives tool changes. A screenshot is helpful, but it should be accompanied by text describing the route, steps, browser, viewport, and expected result. Automated output should retain the tool and version. Manual notes should identify the input method. This makes a later retest comparable even if the original scanning interface is no longer available.
+
+## A bounded conclusion
+
+The final statement should use verbs that match the evidence. “Observed on the tested checkout path” is stronger than “the site is accessible” when the sample is narrow. “No issue was found by this automated rule set” is more accurate than “there are no accessibility issues.” This wording is not evasive. It tells an approval owner exactly what has been established and what remains uncertain.
+
+For an outsourced project, that boundary protects both sides. The external team can demonstrate careful work and identify open risks. The company can decide which audiences, jurisdictions, and policies govern acceptance. A record that preserves limitations is more useful than a confident statement that cannot be reproduced.
+
+## Sources
+
+1. [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) Success criteria, principles, and conformance model.
+2. [W3C Understanding WCAG](https://www.w3.org/WAI/WCAG22/Understanding/) Interpretations and examples for success criteria.
+3. [W3C Evaluating Web Accessibility](https://www.w3.org/WAI/test-evaluate/) Evaluation methods and limitations.
+4. [W3C Easy Checks](https://www.w3.org/WAI/test-evaluate/preliminary/) Preliminary manual checks.
+5. [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) Implementation concepts and testing context.
+6. [WAI ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) Keyboard and widget behavior patterns.
+7. [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) Contrast calculation reference.
+8. [GOV.UK accessibility guidance](https://www.gov.uk/service-manual/helping-people-to-use-your-service) Service accessibility context.
+9. [W3C Understanding Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) Focus evidence.
+10. [W3C Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) Responsive accessibility evidence.
+
+## Further reading
+
+[Research on accessible forms](/research/website-form-error-recovery-evidence-2026)
+[Research on navigation evidence](/research/website-information-architecture-evidence-2026)
+
+## Related Research
+
+[Responsive image research](/research/website-responsive-image-delivery-2026)
+[Design system measurement](/research/website-design-system-adoption-measurement-2026)
+[Content migration research](/research/website-content-migration-findability-2026)
+
+## Frequently asked questions
+
+### Does a clean scan prove conformance?
+
+No. It provides automated evidence for the rules it can evaluate and should be paired with manual and task-based review.
+
+### Should every page be tested?
+
+Scope should be explicit. Test representative templates and every high-risk journey, then state which routes and states were included.
+
+### Who accepts the result?
+
+The company should name the decision owner. The external team can supply evidence and corrections, but should not invent the company’s compliance position.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
