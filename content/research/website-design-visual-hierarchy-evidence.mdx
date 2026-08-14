@@ -18,10 +18,48 @@ Responsive review matters because a desktop hierarchy can collapse on a narrow v
 
 This synthesis uses W3C, HTML, MDN, Google Search Central, and usability research. It does not measure a particular audience’s attention or conversion behavior.
 
+## Translate hierarchy into observable relationships
+
+Before adjusting size or color, write the page’s intended reading sequence in plain language. A visitor should identify context, the question being answered, supporting evidence, and the available next step. The sequence need not be linear for every person, but visual grouping and semantic structure should not contradict each other. If a qualification changes whether a service is relevant, it deserves a relationship to the main explanation that remains visible and reachable.
+
+Heading hierarchy is one signal of that relationship. A large text element is not automatically the page heading, and a smaller heading is not automatically a subsection. Inspect actual HTML order, labels, and structure. A card grid may look balanced while giving every destination equal prominence even though one is central to the task. Compare the route at supported widths and interaction modes, including text order, icon-only cues, focus order, and disclosures that hide qualifications.
+
+Use a named task rather than asking whether the page “feels clear.” A task produces evidence about what was found and missed. It still does not predict conversion, but it can show whether hierarchy supports the page’s stated job. Preserve the distinction between attention and understanding: prominence may produce notice without correct interpretation. Use wording, grouping, and semantic structure to carry meaning; use visual emphasis to reinforce it.
+
 ## Key Stats
+
+Include the page’s source list and related links in the review because they affect perceived priority. A source section that is visually detached from the claim may be difficult to inspect, while an oversized related card may compete with the article’s conclusion. The right treatment depends on the task, but the relationship should be intentional and testable.
+
+When hierarchy is reviewed with real copy, record the specific relationship that failed: a heading did not establish context, a qualification was visually buried, a link label did not match its destination, or focus order contradicted the reading order. These findings lead to targeted changes and remain useful even if the visual design system changes.
+
+Do not use prominence as a substitute for evidence. A larger claim is still unsupported if its source is missing, and a quieter qualification may be the most important information for the decision.
+
+Use real content during the final hierarchy review. Short placeholders conceal wrapping, long labels, and the space needed for qualifications. Check the route with its actual title, sources, related links, and FAQ so the judgment concerns the public page rather than an idealized mockup.
+
+Reviewers should be able to explain why an element is prominent. The answer may be that it establishes page context, identifies a decision, supplies evidence, or offers a relevant next step. If the answer is only that the element was supplied by a stakeholder, record that as a preference rather than an evidence-based priority. Preferences are legitimate, but they should not be confused with task requirements.
+
+Check hierarchy after real copy is inserted. Sample-length text can make a composition look coherent while a longer qualification changes the order, contrast, or available space. Test headings, links, lists, tables, and error messages under the same conditions a visitor will encounter. A stable hierarchy supports meaning even when content length varies.
+
+The conclusion should identify the change and the reason, while acknowledging that attention and conversion were not measured unless a separate study did so.
+
+## Make emphasis answer a page question
+
+Hierarchy should begin with the question the page is responsible for answering. If the page explains a service, the opening context should make the service recognizable before a decorative claim competes for attention. If it presents research, the title and summary should establish topic, period, and scope before a related action appears. This does not prescribe one visual composition. It gives the composition a reason that can be reviewed.
+
+Check relationships at three levels: document, section, and control. At document level, the title and introductory content establish context. At section level, headings and spacing show which ideas belong together. At control level, labels and focus states identify what can be operated. A polished design can fail when one level contradicts another, such as a visually grouped card whose link label describes a different destination or a heading that is visually prominent but absent from the semantic structure.
+
+Use contrast and spacing to support meaning, not to stand in for it. A muted qualification may be hard to see, while a bold action may imply a promise that the body does not support. Test zoom and narrow widths because emphasis can change when text wraps or sections reorder. Record the condition and the task that revealed the issue. The result should describe what the visitor could or could not understand, not claim a universal attention pattern.
+
+A good hierarchy recommendation is therefore specific: change this label, relationship, order, or focus behavior for this task under these conditions. It remains valid even when the owner chooses a different visual style, because it is grounded in meaning rather than taste.
 
 - WCAG 2.2 has 4 principles (W3C)
 - Core Web Vitals includes 3 named metrics (Google)
+
+If a hierarchy change moves an item below the fold, record whether the item is essential to the first decision or supporting evidence for a later question. This distinction helps the owner choose between reordering, shortening, adding a summary, or leaving the layout intact. It keeps the recommendation tied to meaning instead of treating all below-the-fold content as equally problematic.
+
+Also record whether the change affects a reusable pattern or only one route. A component-level adjustment may improve several pages, but each page still needs a content-specific review because headings, qualifications, and next steps differ. This prevents a successful test on one page from being treated as proof for every use of the component.
+
+If the hierarchy relies on color, size, or position, verify that the same relationship remains available in text, headings, labels, and focus behavior. The visual treatment can vary by theme or viewport; the page’s meaning should not.
 
 ## Key Takeaways
 
@@ -57,4 +95,3 @@ Some preferences are subjective, but task clarity, semantic order, contrast, and
 ### Should the primary action always be visually largest?
 
 No. Its prominence should match the page task and should not hide important context or limitations.
-

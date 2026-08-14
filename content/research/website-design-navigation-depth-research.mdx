@@ -38,7 +38,27 @@ A shallow tree may hide excessive choice. A deep tree may be appropriate for a l
 
 This article synthesizes W3C, WHATWG, Google Search Central, the Sitemaps protocol, and usability research on information scent and navigation. Its test frame is a practical recommendation for outsourced website work. It does not predict search rankings or conversion rates.
 
+## Test path quality, not only path length
+
+For an important route, create two test paths: one beginning at the homepage and one beginning at a realistic entry page such as a service article or search result. The first reveals whether the main information architecture exposes the destination. The second reflects how visitors may actually arrive. Write the task in visitor language and avoid naming the destination route. If the participant already knows the label, the test measures memory rather than findability.
+
+Record the labels encountered and the point at which the participant hesitates. A route may be reachable through “Resources” but effectively invisible to someone looking for evidence about a service. That finding does not prove that “Resources” is wrong in every context. It shows a mismatch between a group label and a particular task. The appropriate response might be a clearer sublabel, a contextual link, a revised heading, or a different grouping. The evidence should inform that choice instead of prescribing one universal menu.
+
+## Balance navigation and context
+
+Global navigation is useful for stable destinations, while contextual links explain why a next page matters. Build a relationship record for high-value routes: source page, destination, link wording, visitor question, and whether the destination supplies the promised answer. This is more informative than counting links or demanding that every page sit at the same depth. Pagination and archives need the same discipline: verify later pages, preserve older entries, and state the deterministic tie-breaker for same-day records. The recommendation should name the observed condition, tested task, and proposed change. It should not claim that reducing one click will increase enquiries or rankings without separate evidence.
+
 ## Key Stats
+
+## Compare depth with findability evidence
+
+For each priority route, record the homepage path, the shortest contextual path, the starting route used in a task, and the labels encountered. This separates structural reachability from human recognition. A route can be two clicks away through an internal label that a visitor does not understand, while a longer contextual path can be clearer because each link answers a question. Do not average these observations into one site-wide score.
+
+Search entry pages deserve special attention. A person who lands on an article may never see the homepage navigation before needing a service explanation or related evidence. Add links where the next question naturally arises, and make the visible label describe the destination. Test the link from the reader’s current context rather than assuming that a global menu will repair a missing relationship.
+
+When reorganizing a tree, preserve route identity and check all affected links. A new group name can improve recognition while an old bookmarked route remains valid. A redirect, canonical, or archive change needs its own review because discoverability and URL continuity are different concerns. Sitemap presence helps discovery by crawlers, but it does not demonstrate that a person can choose the correct destination.
+
+The conclusion should state the task and conditions that support it. “The service page was found from the homepage by three participants at a named viewport” is bounded. “The site has excellent navigation” is not. This distinction gives an outsourced team an actionable change while protecting the owner from a false performance guarantee.
 
 - WCAG 2.2 uses 4 accessibility principles (W3C)
 - An XML sitemap uses a urlset document root (Sitemaps.org)
@@ -77,4 +97,3 @@ No. It is a rough heuristic, not a usability law. Label clarity and task success
 ### Should every page appear in the main menu?
 
 No. Use contextual links, footer navigation, and search when they better match the page’s role, then test whether the intended audience can find it.
-

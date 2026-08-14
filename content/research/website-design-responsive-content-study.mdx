@@ -22,11 +22,43 @@ Content priority should come from the user task and evidence, not from the deskt
 
 Two viewport tests cannot cover every device, browser, font setting, or assistive technology. A responsive review finds defects under named conditions. It does not prove universal compatibility. Keep the conditions and repeat the same task after a change.
 
+## Treat layout changes as meaning changes when they affect access
+
+Responsive behavior has three layers. The first is geometry: columns stack, images resize, and spacing changes. The second is content order: a qualification may move below an action, a navigation group may collapse, or a definition may become a disclosure. The third is operation: controls may acquire a different keyboard path, label, or focus location. A review that checks only the first layer can miss a material change in what the visitor learns before making a decision.
+
+Create a content-priority table for the route. Mark each element as essential to context, necessary to the decision, useful supporting evidence, or decorative. Then compare the rendered order at named widths. If an element moves, record whether the visitor can still reach it before the relevant decision and whether its relationship to the heading remains clear. If it is hidden, identify the equivalent path or explain why it is out of scope.
+
+Text wrapping is part of the review. A heading that becomes four lines may remain correct, while a short label that loses its context may mislead. Test the actual font state, zoom level, and language assumptions relevant to the page. A browser emulator helps repeat the condition, but a screenshot from one device is not proof of compatibility. If performance is in scope, record the measurement tool, page state, network condition, and date, keeping it separate from the editorial judgment about task clarity.
+
 ## Methodology
 
 This synthesis uses W3C, WHATWG, MDN, and web performance guidance. It is an operational review model, not a performance result.
 
 ## Key Stats
+
+The comparison should include reading order as well as visual order. Extract headings and links, move through the page with a keyboard, and confirm that the same essential qualification is available without relying on a hover or pointer gesture. If the route uses a table, cards, or disclosure, check that labels remain associated with their values and that the open state is announced clearly. These checks do not certify every assistive technology, but they expose a meaningful class of responsive failures under named conditions.
+
+Check long and short content states because responsive defects often appear at the extremes. A short heading may create an unexpected gap, while a long heading can push an action below important context. Test a disclosed section and an error state when the route supports them. The finding should name the state, width, interaction method, and task affected.
+
+Responsive acceptance is a decision about named conditions. Preserve the conditions with the result so future content changes can trigger a focused retest instead of an unsupported assumption that all layouts remain equivalent.
+
+When a responsive change is approved, retain the before condition and the replacement condition. This gives the next reviewer a concrete comparison and prevents a later regression from being dismissed as an intentional layout variation. It also makes clear whether the change addressed content order, interaction, overflow, or only appearance.
+
+The review should include states that alter meaning, not only widths. Check an expanded navigation menu, an error message, a long heading, a missing image, and a focus indicator where those states are relevant. A layout can appear correct in its default state and fail when a person zooms, opens a disclosure, or receives validation feedback. Record the state and expected task so the finding is reproducible.
+
+Preserve the relationship between evidence and qualification. If a supporting note moves after an action, test whether a visitor can discover it before acting. If a table becomes cards, check whether comparison labels remain associated with values. If a control becomes an icon, check its accessible name and visible context. These are content and operation questions as much as layout questions.
+
+Responsive conclusions should stay attached to the conditions tested. They can justify a targeted change and a repeat test, but they cannot certify every browser, device, assistive technology, or future content length.
+
+## Preserve qualifications across layouts
+
+The most important responsive question is not whether every block occupies the same position. It is whether the page still communicates the conditions a visitor needs before choosing a next step. Mark qualifications, exclusions, definitions, and evidence that affect that decision. Then inspect whether they remain visible, reachable, and associated with the relevant heading at each supported condition. If a disclosure is introduced, test its name, state, focus behavior, and ability to be understood when opened.
+
+Do not treat mobile as a trimmed desktop by default. Narrow space may justify a different sequence, but the reason should come from the task. A secondary illustration can move below the explanation. A service limitation should not disappear merely because it is visually inconvenient. If content is intentionally omitted, state the equivalent route and confirm that the visitor can reach it without reconstructing the desktop layout.
+
+Responsive findings also need a stable vocabulary. Describe a content omission, order change, clipping defect, horizontal overflow, focus problem, or performance measurement separately. These conditions have different remedies and different evidence. A screenshot may prove clipping at one width, while a keyboard trace is needed to prove focus loss. Recording them separately prevents a broad “mobile issue” from becoming an untestable task.
+
+The final recommendation should identify tested widths, browser or device assumptions, page state, and the task. It can justify a design change under those conditions, but it cannot promise compatibility with every device or establish improved business results without a separate measurement plan.
 
 - WCAG 2.2 is organized around 4 principles (W3C)
 - Core Web Vitals currently include 3 named metrics (Google)
@@ -65,4 +97,3 @@ No. It may be reorganized, but shortening must not remove information needed for
 ### Is a screenshot enough for review?
 
 No. Review the rendered page, keyboard path, text order, and interactive behavior under named conditions.
-

@@ -20,7 +20,43 @@ Include browser, viewport, keyboard path, content state, and relevant device con
 
 This synthesis uses W3C, Google Search Central, HTML, Schema.org, and usability research. It is an approval-record recommendation, not a warranty that every defect has been found.
 
+## Build a decision record that can be reopened
+
+The most useful approval record is not the longest one. It is the one that lets a different reviewer reconstruct the decision without relying on a conversation that has disappeared. Start with an immutable identifier for the artifact under review. A route, screenshot filename, or project label alone is weak because each can remain unchanged while the underlying copy, data, or component changes. Pair the identifier with a version, capture time, and a short description of the changed scope. If the review covers several routes, list them rather than using a phrase such as “the website.”
+
+Then separate observations from decisions. An observation might say that the keyboard focus moved from the menu button to the first link after activation. A decision might say that this behavior is accepted for the named scope. A request might say that the link label must be changed before approval. These are different states and should not be collapsed into one green check. This distinction is particularly important when an external team is making the change: the owner can approve a design direction while still leaving a factual statement or accessibility issue open.
+
+Exceptions need enough detail to prevent accidental expansion. Record the affected route, exact condition, impact, owner, and next review point. “Known mobile issue” is not an actionable exception; “at 320 CSS pixels, the comparison table requires horizontal scrolling and the owner has accepted that behavior for the current release” is. The latter still may be a poor experience, but it makes the trade-off visible and gives the owner something concrete to revisit. If the exception is rejected, preserve the rejection and its reason so a later reviewer does not repeat the same discussion.
+
+## Interpreting evidence without overclaiming
+
+Screenshots are strong evidence for visible arrangement at a named moment. They are weak evidence for semantics, keyboard operation, responsive behavior, or the accuracy of text. A screen recording can show a path, but it does not establish that all paths work. Automated checks can identify certain markup or contrast conditions, but they cannot decide whether a heading answers the visitor’s question. Approval should therefore list the evidence type beside each conclusion and state what remains outside the test.
+
+The resulting record supports a practical handoff. The owner can see what has been accepted, the external team can see what remains, and a future reviewer can distinguish a new regression from an old exception. This is process evidence, not proof of business performance. It improves the quality of decisions by making their scope and limits explicit.
+
 ## Key Stats
+
+For repeatability, preserve the evidence in a form another reviewer can open. A link to a changing preview is not enough unless the version is also identified. Note whether the evidence is a rendered route, source excerpt, keyboard sequence, or reviewer observation. Different evidence types answer different questions, and the closeout should not imply that one proves the others.
+
+If the review reveals a disagreement about a factual statement, route the question to the factual owner. The person who notices the issue can describe it precisely without deciding the company’s position. This boundary keeps external work moving on safe portions of the page while protecting claims that require authority.
+
+Use approval labels consistently. “Approved” means the named scope is accepted. “Approved with exception” means the exception is explicit and owned. “Rejected” means the artifact or change should not proceed in that form. “Awaiting information” means a decision cannot yet be made. Consistent labels reduce the chance that a provisional comment is mistaken for a final decision when the work moves between an owner and an external contributor.
+
+The record should also distinguish approval of content from approval of implementation. A reviewer may accept the wording while leaving a focus defect open, or accept the route while requesting a factual source. Recording these decisions separately helps an outsourced team resolve the right issue without reopening unrelated work. It also prevents a visual sign-off from being interpreted as approval of every claim on the page.
+
+When several reviewers disagree, preserve the question rather than averaging the comments. Name the decision owner, summarize the competing interpretations, and identify the evidence that would resolve them. A short unresolved record is more useful than a long list of contradictory annotations. Once decided, link the decision to the version that was reviewed and note whether the result applies to one route or a reusable component.
+
+Finally, state the review boundary in the closeout: routes examined, states not examined, and conditions used. This makes later maintenance safer and keeps the evidence proportional to what the team actually observed.
+
+## Applying the frame to an outsourced review
+
+An owner can make the review manageable by dividing it into evidence passes. The first pass checks whether the named routes and version are the ones under consideration. The second checks content meaning: page purpose, scope, factual claims, links, and exceptions. The third checks operation under the recorded conditions. This order helps prevent a visually pleasing screen from receiving approval while its route, content source, or keyboard behavior remains uncertain.
+
+For each finding, preserve a small reproduction recipe. Include the route, viewport or device condition, starting state, action taken, observed result, expected result, and evidence link. A reproduction recipe is useful to an external contributor because it replaces an abstract comment with a shared condition. It also helps the owner decide whether a defect is release-blocking, acceptable with an exception, or outside the current scope. The classification should belong to the owner or named authority, not be inferred by the person implementing the change.
+
+Approval should expire when the approved assumptions change. A new service claim, moved route, changed form, altered navigation model, or replacement of a key content block is not automatically covered by an earlier decision. The previous record can remain valid for the unchanged scope, while the changed part receives a focused review. This avoids two opposite errors: reopening every settled detail for a minor change, or treating a broad old approval as permission for unrelated edits.
+
+The strongest closeout states what was reviewed, what was accepted, what remains open, and what was not tested. That final sentence is valuable evidence because it limits later interpretation. It makes the handoff auditable without suggesting that a finite review establishes universal quality or business success.
 
 - WCAG 2.2 is grouped into 4 principles (W3C)
 - Sitemaps defines one urlset root element (Sitemaps.org)
