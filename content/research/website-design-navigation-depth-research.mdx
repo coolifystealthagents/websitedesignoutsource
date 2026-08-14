@@ -1,0 +1,80 @@
+---
+title: "Navigation Depth and Findability in Outsourced Website Projects"
+description: "A bounded research model for judging whether important pages are reachable without mistaking shallow navigation for good information architecture."
+slug: "website-design-navigation-depth-research"
+published: "2026-08-14"
+---
+# Navigation Depth and Findability in Outsourced Website Projects
+
+Navigation depth is often reduced to a number of clicks from the homepage. That number can be useful for locating outliers, but it is not a quality score by itself. A page two clicks away can be harder to find than a page four clicks away if the labels are vague, the hierarchy is inconsistent, or the visitor starts from a search result. An outsourced design team needs a richer record that distinguishes path length from findability.
+
+## Define the starting point
+
+There is no single site-wide depth. A visitor may start at the homepage, a service page, a blog article, a search result, or a bookmarked URL. For each important page, record the starting point used in the test. Then record the shortest menu path, the shortest contextual-link path, and whether the page is discoverable through the sitemap. These are different signals. A sitemap helps crawlers discover URLs; it does not guarantee a human can understand the site.
+
+Google Search Central recommends crawlable links with discoverable destinations. The practical implication is to inspect the actual anchor text and href, not merely a visual design. A button that changes state without exposing a meaningful link may support a visual prototype while leaving the route ambiguous to a crawler or keyboard user.
+
+## Labels carry more information than depth
+
+A label should identify the destination in language a visitor can predict. Services, industries, and resources may be legitimate groups, but a team should test whether the group name matches the question a visitor has. If a page is placed under “Solutions” while the audience searches for “website maintenance,” record both the organizational label and the user language. The gap is a content and navigation finding, not evidence that one naming system is universally correct.
+
+Card grids create a similar problem. A grid may show many destinations at the same visual level, yet headings, order, and link text determine whether the group is usable. Test the list with the images hidden and with link text extracted. This catches designs that depend on color or photography to communicate hierarchy.
+
+## A testable review frame
+
+For each selected task, note the scenario, start route, target route, first expected action, wrong turns, completion condition, and evidence. A reviewer should be able to repeat the task without a private explanation from the designer. Record whether the person used the main navigation, a footer link, an internal search feature, or a contextual link. Do not combine these paths when comparing results.
+
+Accessibility changes the review frame. WCAG requires keyboard operability and a meaningful focus order. A mouse-only path can therefore report success while the route remains unusable for another user. Check focus visibility, submenu behavior, headings, skip links, and the name of each interactive destination. The HTML and ARIA guidance should be treated as implementation references, not decoration added after the route is chosen.
+
+## Evidence from search and internal links
+
+Search queries can reveal how visitors name a need. Internal link data can reveal which pages the site chooses to recommend. Neither one proves that a page is the best answer. Use them together with page content, support questions, and task testing. When evidence disagrees, keep separate hypotheses. This avoids redesigning the entire navigation around a single noisy metric.
+
+## Interpretation and limitations
+
+A shallow tree may hide excessive choice. A deep tree may be appropriate for a large service catalogue if each level has a clear purpose. Click counts also vary with device, viewport, authentication state, and whether a visitor already knows the destination. Report the test conditions and the route inventory date. Do not turn a small task sample into a claim about all users.
+
+## Methodology
+
+This article synthesizes W3C, WHATWG, Google Search Central, the Sitemaps protocol, and usability research on information scent and navigation. Its test frame is a practical recommendation for outsourced website work. It does not predict search rankings or conversion rates.
+
+## Key Stats
+
+- WCAG 2.2 uses 4 accessibility principles (W3C)
+- An XML sitemap uses a urlset document root (Sitemaps.org)
+
+## Key Takeaways
+
+- Define depth from the visitor’s actual starting point.
+- Review labels and link destinations separately from click count.
+- Preserve device, viewport, task, and route conditions in the finding.
+
+## Sources
+
+1. [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility criteria.
+2. [WCAG keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) Keyboard operation.
+3. [HTML links](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element) Link semantics.
+4. [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) Widget guidance.
+5. [Google crawlable links](https://developers.google.com/search/docs/crawling-indexing/links-crawlable) Link discovery.
+6. [Google site structure](https://developers.google.com/search/docs/crawling-indexing/organize-site) Site organization.
+7. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) Sitemap format.
+8. [Nielsen Norman Group information scent](https://www.nngroup.com/articles/information-scent/) Findability research.
+9. [WAI evaluating websites](https://www.w3.org/WAI/test-evaluate/) Evaluation guidance.
+10. [Schema.org WebPage](https://schema.org/WebPage) Page metadata.
+
+## Related Research
+
+[Information architecture evidence](/research/website-information-architecture-evidence-2026)
+[Search intent cluster audit](/research/website-search-intent-cluster-audit)
+[Website search internal links](/research/website-search-internal-link-research)
+
+## Frequently asked questions
+
+### Is three clicks a universal limit?
+
+No. It is a rough heuristic, not a usability law. Label clarity and task success matter more than an isolated click count.
+
+### Should every page appear in the main menu?
+
+No. Use contextual links, footer navigation, and search when they better match the page’s role, then test whether the intended audience can find it.
+
