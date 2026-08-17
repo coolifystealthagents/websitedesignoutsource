@@ -65,9 +65,9 @@ export default function Home() {
                 <a className="studio-text-link" href="#work">See what the pod handles <span>↓</span></a>
               </div>
               <div className="studio-assurances" aria-label="Service assurances">
-                <span><img src="/icons/getillustrations/sharpie-ui/private-delivery.svg" alt="" aria-hidden="true" />Private delivery</span>
-                <span><img src="/icons/getillustrations/sharpie-ui/source-files-workspace.svg" alt="" aria-hidden="true" />Your files, in your workspace</span>
-                <span><img src="/icons/getillustrations/sharpie-ui/responsive-qa-review.svg" alt="" aria-hidden="true" />QA before handoff</span>
+                <span><img src="/icons/getillustrations/sharpie-ui/private-delivery.svg" alt="Private website delivery icon" />Private delivery</span>
+                <span><img src="/icons/getillustrations/sharpie-ui/source-files-workspace.svg" alt="Source files workspace icon" />Your files, in your workspace</span>
+                <span><img src="/icons/getillustrations/sharpie-ui/responsive-qa-review.svg" alt="Responsive quality assurance review icon" />QA before handoff</span>
               </div>
             </div>
 
