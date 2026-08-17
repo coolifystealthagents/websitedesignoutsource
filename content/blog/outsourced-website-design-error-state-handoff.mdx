@@ -1,0 +1,26 @@
+---
+title: "Error-State Handoff for an Outsourced Website Design Team"
+description: "What an outsourced website design handoff should cover when a page action fails or returns incomplete information."
+slug: "outsourced-website-design-error-state-handoff"
+published: "2026-08-17"
+---
+
+# Error-State Handoff for an Outsourced Website Design Team
+
+An error message should help a person recover without pretending that the request succeeded. The design handoff should explain the failure state, its limits, and the action that remains possible.
+
+## Identify the failure point
+
+Record whether the problem occurs while loading a page, saving a change, submitting a form, or opening a link. The wording and available recovery action depend on that point. A generic "something went wrong" leaves the visitor and developer with different assumptions.
+
+## Define safe wording
+
+Do not expose private implementation details or blame the visitor. State what did not complete, whether their previous work is still present, and what they can try next. If retrying may duplicate an action, the brief must say how the interface should handle that risk.
+
+## Review the interaction
+
+Check focus movement, keyboard access, readable contrast, long messages, and the state after a retry. Ask the outsourced website design team to show the error beside the ordinary state so reviewers can confirm that the page still explains its purpose.
+
+## Keep ownership explicit
+
+The service owner approves the factual message and recovery rule. The design team records the visual and interaction behavior, route, source file, and unresolved dependency. That record prevents error handling from being lost when the main screen changes.
