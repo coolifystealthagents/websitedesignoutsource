@@ -1,0 +1,73 @@
+---
+title: "Calibrating Defect Severity in Outsourced Website Design Reviews"
+description: "Research on how outsourced website teams can distinguish blocking defects from lower-risk design changes with observable evidence."
+slug: "website-design-defect-severity-outsourced-review"
+published: "2026-08-17"
+---
+
+# Calibrating Defect Severity in Outsourced Website Design Reviews
+
+## Research question
+
+How should an outsourced website design team distinguish a release-blocking defect from a non-blocking refinement when reviewers disagree?
+
+## Evidence scope and method
+
+This synthesis compares WCAG conformance language, software defect-severity practice, and usability guidance. It treats the unit of analysis as a named page state and user task, not a vague impression about polish.
+
+## Severity is a decision about harm
+
+A severity label is useful only when it predicts a decision. “High priority” can mean that a defect affects many people, prevents a required task, creates legal or security exposure, or simply annoys the person reviewing the screen. Those are different reasons. An outsourced design team should record the affected route, the user task, the observed condition, the evidence, and the consequence separately. A missing accessible name on a control is not equivalent to a slightly uneven card gap, even if both appear in the same review list. The first can block a task for a keyboard or screen-reader user; the second may be a visual refinement.
+
+## Use the task as the anchor
+
+A review should start with the task the page is meant to support. For a service page, that may be understanding what the service includes and finding the next contact path. For a landing page, it may be comparing a promise with proof before deciding whether to continue. A defect becomes easier to calibrate when the team can say which step fails, for whom, and under which state. This keeps a stakeholder preference from becoming a release blocker without evidence, while still allowing a business owner to set a stricter acceptance rule for a high-value route.
+
+## Separate conformance from preference
+
+WCAG success criteria can provide a shared reference for some accessibility findings, but conformance status does not answer every design question. A page can meet a criterion and still make a service difficult to understand. Conversely, a reviewer can dislike a color or layout choice without showing that it prevents the intended task. The record should therefore distinguish a standards finding, a usability observation, a content error, a functional failure, and a visual preference. This classification makes escalation clearer when an external design pod hands work back to an owner for approval.
+
+## Evidence needs a repeatable state
+
+Screenshots are useful for visual defects but weak for focus order, keyboard access, responsive behavior, and error recovery. A strong finding names the URL, viewport, browser or assistive technology where relevant, starting state, action taken, expected result, observed result, and reproduction frequency. The same discipline helps with content. If a service description is wrong, quote the approved source or identify the missing decision. If a button is too close to another control, record the viewport and the task that becomes harder.
+
+## Escalate disagreement explicitly
+
+When two reviewers assign different severities, do not average the labels. Ask what assumption differs. One reviewer may be evaluating launch risk while another is evaluating later improvement. The owner can then choose a disposition such as block, fix before the next review, accept with a note, or defer. The final decision should preserve the evidence and the person who accepted the residual risk. That record is particularly useful when a distributed team returns to the same route after copy, layout, or implementation changes.
+
+## What this does not prove
+
+A severity model cannot predict every user impact from a single review, and it cannot replace testing with representative people. It also does not decide business priorities. A defect affecting a low-traffic page may still matter because the page supports an important customer or legal task. The model is a calibration aid for review conversations, not a warranty that a website is free of defects.
+
+## Conclusion
+
+For outsourced website design work, the evidence supports a narrower conclusion than a general quality score. The review should an outsourced website design team distinguish a release-blocking defect from a non-blocking refinement when reviewers disagree? The owner and production team should preserve the tested route, conditions, source basis, and unresolved assumptions so the next decision can be made from the same record.
+
+## Sources
+
+1. [W3C, WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+2. [W3C, Understanding Conformance](https://www.w3.org/WAI/WCAG22/Understanding/conformance)
+3. [W3C, Evaluating Web Accessibility](https://www.w3.org/WAI/test-evaluate/)
+4. [NIST, Software Testing](https://www.nist.gov/itl/ssd/software-quality-group/software-testing)
+5. [ISO, ISO/IEC 25010 overview](https://www.iso.org/standard/78176.html)
+6. [Nielsen Norman Group, Severity Ratings](https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/)
+7. [MDN, Web accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+8. [GOV.UK Service Manual, content design](https://www.gov.uk/service-manual/content)
+9. [WHATWG, HTML forms](https://html.spec.whatwg.org/multipage/forms.html)
+10. [W3C, Understanding keyboard accessibility](https://www.w3.org/WAI/WCAG22/Understanding/keyboard)
+
+## Related Research
+
+[Related research](/research/website-design-component-drift-outsourced-team)
+[Related research](/research/website-design-content-priority-responsive-outsourcing)
+[Related research](/research/website-design-brief-evidence-confidence-outsourced)
+
+## Frequently asked questions
+
+### Does this research guarantee a successful website outcome?
+
+No. It describes a bounded review method and the evidence it can support. The result depends on the tested route, content, users, implementation, and decisions made by the site owner.
+
+### Who should approve the final decision?
+
+The owner of the affected service, content, or user task should approve the decision. The outsourced website team should provide the evidence and state what remains outside the review scope.
