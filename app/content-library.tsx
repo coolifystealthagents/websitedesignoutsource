@@ -30,7 +30,7 @@ export function renderMarkdown(source: string) {
     if (!line.trim()) return null;
     if (line.startsWith('### ')) return <h3 key={index}>{line.slice(4)}</h3>;
     if (line.startsWith('## ')) return <h2 key={index}>{line.slice(3)}</h2>;
-    if (line.startsWith('# ')) return <h1 key={index}>{line.slice(2)}</h1>;
+    if (line.startsWith('# ')) return null;
     if (line.startsWith('- ')) return <li key={index}>{line.slice(2)}</li>;
     const linked = line.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => `<a href="${href}">${label}</a>`);
     return <p key={index} dangerouslySetInnerHTML={{ __html: linked }} />;
