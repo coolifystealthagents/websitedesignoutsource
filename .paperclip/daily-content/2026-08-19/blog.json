@@ -1,0 +1,53 @@
+{
+  "date": "2026-08-19",
+  "articles": [
+    {
+      "route": "/blog/website-design-intake-source-register",
+      "source": "content/blog/website-design-intake-source-register.md"
+    },
+    {
+      "route": "/blog/website-design-approval-evidence-matrix",
+      "source": "content/blog/website-design-approval-evidence-matrix.md"
+    },
+    {
+      "route": "/blog/website-design-exception-queue-triage",
+      "source": "content/blog/website-design-exception-queue-triage.md"
+    },
+    {
+      "route": "/blog/website-design-quality-review-cadence",
+      "source": "content/blog/website-design-quality-review-cadence.md"
+    },
+    {
+      "route": "/blog/website-design-handoff-acceptance-log",
+      "source": "content/blog/website-design-handoff-acceptance-log.md"
+    },
+    {
+      "route": "/blog/website-design-access-recertification-review",
+      "source": "content/blog/website-design-access-recertification-review.md"
+    },
+    {
+      "route": "/blog/website-design-weekly-decision-brief",
+      "source": "content/blog/website-design-weekly-decision-brief.md"
+    },
+    {
+      "route": "/blog/website-design-source-of-truth-map",
+      "source": "content/blog/website-design-source-of-truth-map.md"
+    },
+    {
+      "route": "/blog/website-design-change-control-record",
+      "source": "content/blog/website-design-change-control-record.md"
+    },
+    {
+      "route": "/blog/website-design-work-queue-ownership",
+      "source": "content/blog/website-design-work-queue-ownership.md"
+    },
+    {
+      "route": "/blog/website-design-escalation-path-design",
+      "source": "content/blog/website-design-escalation-path-design.md"
+    },
+    {
+      "route": "/blog/website-design-launch-readiness-review",
+      "source": "content/blog/website-design-launch-readiness-review.md"
+    }
+  ]
+}

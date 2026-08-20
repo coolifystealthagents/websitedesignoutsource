@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-19",
+  "articles": [
+    {
+      "route": "/research/website-design-source-quality-evidence-research",
+      "source": "content/research/website-design-source-quality-evidence-research.md"
+    },
+    {
+      "route": "/research/website-design-exception-aging-patterns-research",
+      "source": "content/research/website-design-exception-aging-patterns-research.md"
+    },
+    {
+      "route": "/research/website-design-review-consistency-research",
+      "source": "content/research/website-design-review-consistency-research.md"
+    },
+    {
+      "route": "/research/website-design-access-governance-research",
+      "source": "content/research/website-design-access-governance-research.md"
+    },
+    {
+      "route": "/research/website-design-handoff-reliability-research",
+      "source": "content/research/website-design-handoff-reliability-research.md"
+    }
+  ]
+}
