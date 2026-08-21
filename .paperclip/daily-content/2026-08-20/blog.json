@@ -1,0 +1,53 @@
+{
+  "date": "2026-08-20",
+  "articles": [
+    {
+      "route": "/blog/website-design-outsourcing-vendor-vetting-checklist",
+      "source": "content/blog/website-design-outsourcing-vendor-vetting-checklist.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-contract-review-guide",
+      "source": "content/blog/website-design-outsourcing-contract-review-guide.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-milestone-planning",
+      "source": "content/blog/website-design-outsourcing-milestone-planning.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-budget-allocation",
+      "source": "content/blog/website-design-outsourcing-budget-allocation.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-communication-cadence",
+      "source": "content/blog/website-design-outsourcing-communication-cadence.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-client-onboarding",
+      "source": "content/blog/website-design-outsourcing-client-onboarding.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-ip-ownership",
+      "source": "content/blog/website-design-outsourcing-ip-ownership.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-post-launch-support",
+      "source": "content/blog/website-design-outsourcing-post-launch-support.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-performance-metrics",
+      "source": "content/blog/website-design-outsourcing-performance-metrics.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-usability-testing",
+      "source": "content/blog/website-design-outsourcing-usability-testing.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-technical-seo-audit",
+      "source": "content/blog/website-design-outsourcing-technical-seo-audit.md"
+    },
+    {
+      "route": "/blog/website-design-outsourcing-conversion-optimization",
+      "source": "content/blog/website-design-outsourcing-conversion-optimization.md"
+    }
+  ]
+}
