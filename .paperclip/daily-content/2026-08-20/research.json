@@ -2,52 +2,24 @@
   "date": "2026-08-20",
   "articles": [
     {
-      "route": "/research/website-design-outsourcing-vendor-vetting-checklist-research",
-      "source": "content/research/website-design-outsourcing-vendor-vetting-checklist-research.md"
+      "route": "/research/website-design-outsourcing-accessibility-compliance-research",
+      "source": "content/research/website-design-outsourcing-accessibility-compliance-research.md"
     },
     {
-      "route": "/research/website-design-outsourcing-contract-review-guide-research",
-      "source": "content/research/website-design-outsourcing-contract-review-guide-research.md"
+      "route": "/research/website-design-outsourcing-data-privacy-regulations-research",
+      "source": "content/research/website-design-outsourcing-data-privacy-regulations-research.md"
     },
     {
-      "route": "/research/website-design-outsourcing-milestone-planning-research",
-      "source": "content/research/website-design-outsourcing-milestone-planning-research.md"
+      "route": "/research/website-design-outsourcing-agile-methodology-impact-research",
+      "source": "content/research/website-design-outsourcing-agile-methodology-impact-research.md"
     },
     {
-      "route": "/research/website-design-outsourcing-budget-allocation-research",
-      "source": "content/research/website-design-outsourcing-budget-allocation-research.md"
+      "route": "/research/website-design-outsourcing-vendor-lock-in-risks-research",
+      "source": "content/research/website-design-outsourcing-vendor-lock-in-risks-research.md"
     },
     {
-      "route": "/research/website-design-outsourcing-communication-cadence-research",
-      "source": "content/research/website-design-outsourcing-communication-cadence-research.md"
-    },
-    {
-      "route": "/research/website-design-outsourcing-client-onboarding-research",
-      "source": "content/research/website-design-outsourcing-client-onboarding-research.md"
-    },
-    {
-      "route": "/research/website-design-outsourcing-ip-ownership-research",
-      "source": "content/research/website-design-outsourcing-ip-ownership-research.md"
-    },
-    {
-      "route": "/research/website-design-outsourcing-post-launch-support-research",
-      "source": "content/research/website-design-outsourcing-post-launch-support-research.md"
-    },
-    {
-      "route": "/research/website-design-outsourcing-performance-metrics-research",
-      "source": "content/research/website-design-outsourcing-performance-metrics-research.md"
-    },
-    {
-      "route": "/research/website-design-outsourcing-usability-testing-research",
-      "source": "content/research/website-design-outsourcing-usability-testing-research.md"
-    },
-    {
-      "route": "/research/website-design-outsourcing-technical-seo-audit-research",
-      "source": "content/research/website-design-outsourcing-technical-seo-audit-research.md"
-    },
-    {
-      "route": "/research/website-design-outsourcing-conversion-optimization-research",
-      "source": "content/research/website-design-outsourcing-conversion-optimization-research.md"
+      "route": "/research/website-design-outsourcing-cross-cultural-communication-research",
+      "source": "content/research/website-design-outsourcing-cross-cultural-communication-research.md"
     }
   ]
 }
