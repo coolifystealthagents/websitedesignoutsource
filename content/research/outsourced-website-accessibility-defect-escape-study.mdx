@@ -1,0 +1,71 @@
+---
+title: "Which Accessibility Defects Escape Outsourced Website Design Review?"
+description: "A research design for comparing accessibility findings discovered during design review with those found during website acceptance."
+slug: "outsourced-website-accessibility-defect-escape-study"
+published: "2026-08-21"
+image: "/research-heroes/2026-08-21/accessibility-defect-escape.png"
+---
+
+# Which Accessibility Defects Escape Outsourced Website Design Review?
+
+## Research question
+
+Which categories of accessibility defect are missed during outsourced website design review but found during acceptance of the working page, and what can that difference reveal about the review method?
+
+## Method and evidence scope
+
+This synthesis draws on WCAG 2.2, W3C evaluation methodology, automated-testing limits, design annotation practice, and defect-analysis methods. It proposes matching findings across two gates: review of design artifacts and review of the implemented page. The unit is a confirmed accessibility finding tied to a criterion, page state, user task, and evidence record. The method does not treat every implementation finding as a design failure because content, code, browser behavior, and third-party components can introduce defects after design approval.
+
+## Define escape before counting it
+
+An escaped defect is a finding that was reasonably observable at an earlier gate, was within that gate's declared scope, and was first recorded later. That definition excludes behavior that a static design could not expose, such as actual keyboard order, computed accessible names, live validation announcements, or zoom reflow in code. It also excludes a defect introduced after the reviewed design changed. Without these exclusions, an escape rate becomes a blame metric rather than evidence about review coverage.
+
+Each finding needs category, severity, discovery gate, earliest observable gate, affected component, and cause hypothesis. Useful categories include contrast, text alternatives, heading structure, focus visibility, focus order, labels, instructions, errors, target size, reflow, motion, and status messages. Categories should map to the real acceptance method. A label such as "accessibility issue" is too broad to improve the next review.
+
+## Match design and implementation evidence
+
+Preserve the reviewed design version and its annotations. At implementation acceptance, record the route, browser, viewport, zoom, input method, component state, and criterion used. A reviewer then decides whether the later finding had an earlier observable signal. For example, insufficient text contrast may be measurable in the approved visual. A missing programmatic label may not be, although the design could still have omitted visible label requirements. The matching decision should include a short rationale and permit an uncertain classification.
+
+Use a second reviewer for a sample of matches. Agreement matters because "earliest observable" requires judgment. Report raw counts and category-specific proportions rather than a single league-table score. A project with many complex forms may have more opportunities for error handling defects than a brochure site. Denominators should therefore reflect the number of reviewed components or applicable checks, not only the number of pages.
+
+## What the pattern can change
+
+If contrast and text-sizing defects repeatedly escape, the design review may lack token checks or content stress states. If focus, name, role, and value defects appear only in the working page, the answer is not to demand that screenshots prove code behavior. The acceptance plan needs an implementation gate with keyboard and accessibility-tree evidence. If labels and error instructions escape despite being visible in design, annotations and component acceptance examples may need revision.
+
+Patterns should lead to a bounded method change. Add the missing check to the earliest gate where it can produce trustworthy evidence, then compare a later cohort using the same definitions. Do not move every implementation test into design review. That increases ceremony without making unobservable behavior testable. The aim is earlier discovery where possible and explicit later coverage where necessary.
+
+## Facts, analysis, and responsibility
+
+WCAG provides testable success criteria, while WCAG-EM describes defining evaluation scope and sampling. W3C guidance states that automated tools cannot determine all accessibility requirements. WebAIM's large-scale automated scans report detected errors, not complete conformance. These are factual boundaries. The proposed matched-gate escape study is an analytical quality method for outsourced website work and is not prescribed by WCAG.
+
+The outsourced design team can supply accessible component intent, annotations, and evidence from its review scope. Implementers remain responsible for code behavior within their work. The company owner decides supported content, risk acceptance, and release. No party should claim conformance from an automated scan or from the absence of recorded escapes. People with disabilities and skilled manual reviewers remain necessary sources of evidence.
+
+## Count opportunities, not only findings
+
+An escape proportion needs a meaningful denominator. If ten reviewed forms contain thirty required labels and one label defect escapes, the opportunity count differs from a project with one form and one label. The same is true for dialogs, status messages, and repeated navigation. Record how many applicable checks or component instances entered each gate, then show both defect and opportunity counts. Deduplicate a shared root cause when discussing repair effort, but retain affected instances when describing user exposure. This dual view prevents a single faulty component repeated across many routes from looking either trivial or like many unrelated design decisions.
+
+## Limitations
+
+Finding counts depend on reviewer skill, tool choice, sampled states, and the quality of implementation records. The same underlying component defect may appear on many pages, so page counts can exaggerate scale. Fixes made silently before acceptance reduce observed escapes. Small cohorts produce unstable percentages, and severity judgments can differ. The study should publish its scope internally, retain uncertain cases, and use trends to improve checks rather than to promise complete accessibility.
+
+## Evidence-led conclusion
+
+Accessibility escape analysis is useful only when it asks whether a defect was observable and in scope at the earlier gate. Matched findings can show which visual and content problems need stronger design review and which behavioral checks belong in implementation acceptance. The evidence does not support one undifferentiated escape score. Category, opportunity, and gate capability are necessary for a fair interpretation and for a safer outsourced website handoff.
+
+## Sources
+
+1. [W3C, Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+2. [W3C, WCAG Evaluation Methodology](https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/)
+3. [W3C, Easy Checks](https://www.w3.org/WAI/test-evaluate/preliminary/)
+4. [W3C, Understanding Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
+5. [W3C, Understanding Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)
+6. [W3C, Understanding Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html)
+7. [WebAIM, The WebAIM Million](https://webaim.org/projects/million/)
+8. [Deque University, Axe rule descriptions](https://dequeuniversity.com/rules/axe/)
+9. [NIST, Software Quality Group](https://www.nist.gov/itl/ssd/software-quality-group)
+10. [UK Government, Testing for accessibility](https://www.gov.uk/service-manual/helping-people-to-use-your-service/testing-for-accessibility)
+
+## Related Research
+
+[Related research](/research/website-accessibility-test-plan-outsourced-team)
+[Related research](/research/accessibility-acceptance-checklist-outsourced-web-projects)

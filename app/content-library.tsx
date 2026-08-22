@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-export type ContentPost = { slug: string; title: string; excerpt: string; published: string; body: string };
+export type ContentPost = { slug: string; title: string; excerpt: string; published: string; image?: string; body: string };
 
 function readPosts(kind: 'blog' | 'research'): ContentPost[] {
   const directory = path.join(process.cwd(), 'content', kind);
@@ -17,6 +17,7 @@ function readPosts(kind: 'blog' | 'research'): ContentPost[] {
       title: fields.title || file,
       excerpt: fields.description || '',
       published: fields.published || '',
+      image: fields.image || undefined,
       body: body.replace(/^---[\s\S]*?---\n?/, '').trim(),
     };
   });

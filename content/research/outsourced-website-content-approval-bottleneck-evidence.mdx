@@ -1,0 +1,71 @@
+---
+title: "Where Do Content Approvals Stall an Outsourced Website Redesign?"
+description: "A research method for locating approval bottlenecks without confusing elapsed time with design-team performance."
+slug: "outsourced-website-content-approval-bottleneck-evidence"
+published: "2026-08-21"
+image: "/research-heroes/2026-08-21/content-approval-bottlenecks.png"
+---
+
+# Where Do Content Approvals Stall an Outsourced Website Redesign?
+
+## Research question
+
+Which event records can show where content approval stalls an outsourced website redesign, and how can a team avoid blaming the design supplier for time controlled by internal decisions?
+
+## Method and evidence scope
+
+This synthesis combines queueing concepts, flow measurement, service-design guidance, content governance, and project-control research. The proposed unit is one page or reusable content block moving from ready-for-review to accepted, returned, superseded, or withdrawn. The method uses timestamped state changes rather than calendar impressions. It does not assume that faster approval is always better. Some pages carry legal, accessibility, or factual risk that justifies deeper review.
+
+## Start with events, not opinions
+
+A redesign timeline often records when a draft was sent and when it was finally approved. That interval hides most of the work. The item may have waited for a named reviewer, returned because the source copy changed, paused while a dependency was unresolved, or entered design before its factual owner was ready. Calling the full interval "design delay" assigns every cause to the supplier. A defensible record needs state changes with an actor, timestamp, reason, and next owner.
+
+Useful states are few and observable. A page can be not ready, ready for design, in design, ready for company review, returned with a bounded change, accepted, or blocked by a named dependency. The exact labels may differ, but each transition must answer who can act next. A generic "pending" state is weak because it hides ownership. Adding dozens of states is also weak because reviewers stop applying them consistently.
+
+## Measures that expose a bottleneck
+
+Lead time measures the span from an agreed starting event to acceptance. Active time records periods when someone worked on the item. Queue time records periods when it was ready but waiting for the next owner. Rework counts how often an accepted input changed or a review returned the item for a reason already covered by acceptance criteria. These measures answer different questions and should not be collapsed into one performance score.
+
+For example, a service page might spend two days in layout, six days waiting for subject-matter review, one day in revision, and three days waiting for final authority. The twelve-day lead time is factual, but it does not describe twelve days of design work. A cumulative-flow view can show how many items collect in each state. A rising ready-for-company-review band suggests that review capacity or decision clarity is constraining flow. It does not by itself identify why.
+
+## Cohorts and comparisons
+
+Compare like page types over a fixed period. A legal policy page, home page, and repeated location template do not have equal review risk. Cohorts can reflect page type, approval path, content owner, or whether the brief was complete before design began. Report median and range when a few exceptional pages would distort an average. Keep withdrawn and superseded work visible, because removing it can make a troubled process appear efficient.
+
+A before-and-after comparison needs a stable definition of each state. If the team changes what "ready" means halfway through the project, the apparent improvement may be a classification change. Record the definition version with each event. Also note batch size. Sending forty pages for approval at once creates a queue even when reviewers handle each item promptly after opening it.
+
+## Facts, interpretation, and ownership
+
+Little's Law relates average work in progress, throughput, and flow time in a stable system. Kanban guidance distinguishes lead time, delivery rate, and work in progress. GOV.UK content guidance assigns clear responsibility for accurate, maintained content. Those are source-backed principles. Applying them to page approval events is an analytical model for outsourced website design, not proof that every redesign behaves as a stable queue.
+
+The company owner should decide who can approve claims, regulated wording, brand exceptions, and launch scope. An outsourced design team can make review states visible, flag missing owners, and measure its own active work. It should not approve company facts or infer silence as consent. Conversely, an internal reviewer should not use late copy changes as evidence that the supplier missed an unchanged design requirement.
+
+## Read the outliers before changing the process
+
+The longest waits deserve a short record review before the team adds a new rule. One outlier may expose a missing factual owner; another may reflect a deliberate legal check; a third may show that design began against unstable copy. Those causes need different responses. A standing content owner can address the first. Earlier risk identification can help the second. A readiness rule can reduce the third. Grouping all three as slow approval would invite a generic deadline that changes none of the underlying conditions. The same review should examine unusually fast approvals, since a rapid transition may mean that a repeatable page was genuinely simple or that required review never happened.
+
+## Limitations
+
+Timestamp data can be incomplete or strategically edited. A person may work while an item is marked waiting, and a page may depend on several decisions at once. Small projects produce unstable comparisons. Faster flow can conceal shallow review, while slower flow can reflect necessary factual care. The method therefore needs spot checks against comments and source revisions. It should guide questions, not become an automatic vendor scorecard.
+
+## Evidence-led conclusion
+
+Approval bottlenecks become visible when each page carries explicit state transitions, next-owner identity, and reason codes. Lead time alone cannot assign responsibility. Separating active time, queue time, and rework lets the company and outsourced design team discuss the actual constraint. The evidence supports improving readiness and decision ownership before demanding generalized speed. It does not support treating every elapsed day as supplier performance.
+
+## Sources
+
+1. [Kanban Guides, The Kanban Guide](https://kanbanguides.org/english/)
+2. [Project Management Institute, Process Groups practice guide](https://www.pmi.org/standards/process-groups)
+3. [GOV.UK, Content design](https://www.gov.uk/guidance/content-design)
+4. [GOV.UK Service Manual, Managing content](https://www.gov.uk/service-manual/design/managing-content)
+5. [NIST, Measurement Guide for Information Security](https://csrc.nist.gov/pubs/sp/800/55/v1/final)
+6. [ISO, Quality management systems](https://www.iso.org/standard/62085.html)
+7. [Atlassian, Cumulative flow diagram](https://www.atlassian.com/agile/project-management/cumulative-flow-diagram)
+8. [Nielsen Norman Group, DesignOps 101](https://www.nngroup.com/articles/design-operations-101/)
+9. [W3C, Planning and managing web accessibility](https://www.w3.org/WAI/planning-and-managing/)
+10. [Google, Site moves with URL changes](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)
+
+## Related Research
+
+[Related research](/research/website-design-approval-latency-outsourced-teams)
+[Related research](/research/website-change-queue-controls-outsourced-team)

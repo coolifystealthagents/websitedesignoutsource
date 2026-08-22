@@ -1,0 +1,71 @@
+---
+title: "What Decision Provenance Should an Outsourced Website Handoff Preserve?"
+description: "Research into the evidence needed to explain who approved a website design decision, what source supported it, and when it should be revisited."
+slug: "outsourced-website-design-decision-provenance-study"
+published: "2026-08-21"
+image: "/research-heroes/2026-08-21/design-decision-provenance.png"
+---
+
+# What Decision Provenance Should an Outsourced Website Handoff Preserve?
+
+## Research question
+
+Which provenance fields help a company understand and safely revise website design decisions after an outsourced team has completed its handoff?
+
+## Method and evidence scope
+
+This synthesis compares data-provenance standards, architecture decision records, records-management concepts, content governance, and design-system documentation. The unit is one consequential website decision, such as a template exception, component variant, content source, accessibility tradeoff, or analytics behavior. The method asks whether a later owner can identify the decision, evidence, authority, affected routes, and review condition without reopening every project conversation.
+
+## A final file does not explain its own history
+
+Editable design files and source code show what exists. They rarely show why it exists. A developer may see a special banner variant but not know whether it is a temporary campaign exception, an accessibility correction, or the beginning of a reusable component. A content editor may see shortened wording but not know which approved source constrained it. When the outside team leaves, these gaps turn ordinary maintenance into archaeology.
+
+Provenance should remain selective. Recording every cursor movement or informal suggestion creates noise and may retain private discussion without a business need. The useful threshold is whether a future owner could make a harmful change because the reason, authority, or scope is missing. Decisions about shared components, navigation, canonical routes, consent, measurement, accessibility exceptions, and factual claims usually cross that threshold.
+
+## Fields that survive handoff
+
+A durable record names the decision in neutral terms and links it to the affected routes or component version. It states the question that required a choice, the options considered at a useful level, the selected outcome, and the source evidence. It identifies the approving role and approval date without publishing internal identities unnecessarily. It also records constraints, known consequences, and a review trigger such as a policy change, content migration, component replacement, or measured failure.
+
+Source identity matters. A bare screenshot or copied sentence can lose its origin. The record should point to the company-owned brief, approved content, design-system rule, or public standard that informed the choice. For external standards, include the stable URL and relevant version. For internal material, preserve access according to company policy. The public website should never expose private provenance records merely because they support maintenance.
+
+## Test whether provenance is usable
+
+Sample decisions after handoff and ask a maintainer who did not attend the project to answer five questions: what was decided, where it applies, who had authority, what evidence supported it, and what would trigger review. Record missing answers and time spent locating them. Then ask the maintainer to propose a safe change. The exercise tests retrieval and comprehension, not memory of the original team.
+
+Compare decision types rather than combining them into a single completeness score. A canonical URL choice needs route and migration evidence. A color token exception needs contrast context and affected components. An analytics event needs purpose, data boundary, and owner. A short common schema can hold identity and authority, while linked evidence carries domain-specific detail.
+
+## Facts, analysis, and role boundaries
+
+The W3C PROV model describes entities, activities, and agents involved in provenance. Architecture decision records commonly preserve context, decision, and consequences. NARA records guidance emphasizes trustworthy records and lifecycle management. These source-backed ideas support traceability. The proposed website-design fields and sampling exercise are an interpretation for outsourced handoffs, not a formal claim of compliance with those frameworks.
+
+The company remains responsible for factual claims, policy, legal interpretation, account ownership, and release authority. An outsourced design team can document who supplied and approved a decision, but it should not invent missing authority or convert a design preference into company policy. A provenance record is evidence of a decision process. It is not proof that the decision was legally correct, accessible in every context, or permanently optimal.
+
+## Supersession needs an explicit path
+
+A later decision should not erase the earlier record. Mark the old record superseded, link both directions, and explain which scope changed. A new navigation decision may change desktop behavior while leaving mobile behavior intact. A component update may apply only to new pages until a migration is approved. Without that boundary, maintainers may apply the newest decision everywhere or preserve an obsolete exception indefinitely. The current record should be easy to find from the component or route, while historical records remain available for audit. This pattern keeps the handoff truthful without forcing public pages to carry internal decision history or private reviewer information.
+
+## Limitations
+
+Provenance records can become stale, link to inaccessible systems, or reproduce the bias of the original decision. Teams may over-document trivial choices while leaving sensitive exceptions vague. A later owner may also treat a recorded decision as immutable. Review triggers and a clear supersession mechanism reduce those risks, but they do not remove the need for judgment. This synthesis does not measure long-term maintenance outcomes for a particular organization.
+
+## Evidence-led conclusion
+
+An outsourced website handoff is more maintainable when consequential decisions carry source, scope, authority, consequence, and review-trigger evidence. The record should be small enough to use and specific enough to prevent guesswork. Provenance does not freeze design choices or guarantee their quality. It lets a future owner revise them with an honest account of what the prior decision covered and what it did not.
+
+## Sources
+
+1. [W3C, PROV overview](https://www.w3.org/TR/prov-overview/)
+2. [W3C, PROV data model](https://www.w3.org/TR/prov-dm/)
+3. [NIST, Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework)
+4. [National Archives, Records management](https://www.archives.gov/records-mgmt)
+5. [GOV.UK, Managing content](https://www.gov.uk/service-manual/design/managing-content)
+6. [GitHub, About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+7. [Cognitect, Architecture Decision Records](https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
+8. [W3C, Understanding Conformance](https://www.w3.org/WAI/WCAG22/Understanding/conformance)
+9. [Schema.org, CreativeWork](https://schema.org/CreativeWork)
+10. [ISO, Records management](https://www.iso.org/standard/62542.html)
+
+## Related Research
+
+[Related research](/research/design-system-handoff-controls)
+[Related research](/research/website-qa-evidence-pack-research)
