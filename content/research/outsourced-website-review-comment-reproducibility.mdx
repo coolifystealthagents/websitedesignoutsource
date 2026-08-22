@@ -34,6 +34,8 @@ An outsourced design team can test comment quality with blinded replay. Give a s
 
 Sampling should cover more than dramatic defects. Include content, responsive layout, focus behavior, validation, and component-state findings. A sample drawn only from severe bugs will overstate documentation quality because those failures are often easier to see. Keep the original severity label out of the replay until after the finding is reproduced. That reduces the chance that the label steers the second reviewer toward the expected answer.
 
+Rejected comments belong in the sample too. A second reviewer may reproduce the reported state yet find that it matches the accepted design or browser behavior. Recording that outcome separates reliable observation from a correct acceptance judgment. The distinction matters because a team can improve comment evidence without inflating the number of defects that require repair.
+
 ## Facts, analysis, and decision boundaries
 
 W3C conformance testing requires pages and processes to be identified, while WCAG's input and focus criteria provide testable expectations for many interaction findings. Mozilla's bug-writing guidance calls for clear reproduction steps, actual results, and expected results. These are source-backed practices. The conclusion that a website design review should combine them into one compact replay record is analysis for outsourced production, not a claim that the sources mandate a particular project template.

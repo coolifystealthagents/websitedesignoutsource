@@ -44,6 +44,8 @@ The outsourced design team can supply accessible component intent, annotations, 
 
 An escape proportion needs a meaningful denominator. If ten reviewed forms contain thirty required labels and one label defect escapes, the opportunity count differs from a project with one form and one label. The same is true for dialogs, status messages, and repeated navigation. Record how many applicable checks or component instances entered each gate, then show both defect and opportunity counts. Deduplicate a shared root cause when discussing repair effort, but retain affected instances when describing user exposure. This dual view prevents a single faulty component repeated across many routes from looking either trivial or like many unrelated design decisions.
 
+Severity also needs to remain separate from escape frequency. A category with one missed keyboard trap may matter more to acceptance than a category with several small contrast deviations, even though its count is lower. Report the accepted severity method beside the category table and preserve the underlying findings. That lets a later reviewer examine both how often a check failed and what the failures prevented users from doing.
+
 ## Limitations
 
 Finding counts depend on reviewer skill, tool choice, sampled states, and the quality of implementation records. The same underlying component defect may appear on many pages, so page counts can exaggerate scale. Fixes made silently before acceptance reduce observed escapes. Small cohorts produce unstable percentages, and severity judgments can differ. The study should publish its scope internally, retain uncertain cases, and use trends to improve checks rather than to promise complete accessibility.
