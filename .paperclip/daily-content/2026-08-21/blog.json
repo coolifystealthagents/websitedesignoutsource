@@ -1,0 +1,55 @@
+{
+  "campaignDate": "2026-08-21",
+  "family": "blog",
+  "entries": [
+    {
+      "route": "/blog/outsourced-website-image-art-direction",
+      "sourcePath": "content/blog/outsourced-website-image-art-direction.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-debt-triage",
+      "sourcePath": "content/blog/outsourced-website-design-debt-triage.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-content-freeze-window",
+      "sourcePath": "content/blog/outsourced-website-content-freeze-window.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-staging-governance",
+      "sourcePath": "content/blog/outsourced-website-staging-governance.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-multilingual-typography",
+      "sourcePath": "content/blog/outsourced-website-multilingual-typography.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-font-handoff",
+      "sourcePath": "content/blog/outsourced-website-font-handoff.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-empty-state-acceptance",
+      "sourcePath": "content/blog/outsourced-website-empty-state-acceptance.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-domain-dns-handoff",
+      "sourcePath": "content/blog/outsourced-website-domain-dns-handoff.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-cms-editor-handoff",
+      "sourcePath": "content/blog/outsourced-website-cms-editor-handoff.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-visual-regression-review",
+      "sourcePath": "content/blog/outsourced-website-visual-regression-review.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-motion-accessibility-brief",
+      "sourcePath": "content/blog/outsourced-website-motion-accessibility-brief.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-browser-support-review",
+      "sourcePath": "content/blog/outsourced-website-browser-support-review.mdx"
+    }
+  ]
+}
+
