@@ -1,5 +1,7 @@
+import { AcrClient } from './acr-client';
+import Script from 'next/script';
 import './globals.css';
 import './home.css';
 import type { Metadata } from 'next';
 export const metadata: Metadata = { metadataBase: new URL('https://websitedesignoutsource.com'), title: { default: 'Website Design Outsource | Philippines web design production', template: '%s | Website Design Outsource' }, description: 'Plan and hand off website design, page production, responsive QA, and source-file delivery to a Philippines-based web team.', openGraph: { title: 'Website Design Outsource', description: 'A Philippines-based production desk for outsourced website design, build, and QA.', url: 'https://websitedesignoutsource.com', siteName: 'Website Design Outsource', type:'website' } };
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang='en'><body>{children}</body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang='en'><body>{children}<AcrClient/><Script id="acr-tracker-config" strategy="beforeInteractive">{`window.ACR_TRACKER_CONFIG={siteId:'website-design-outsource',endpoint:'/ingest/track',debug:false,funnelSteps:[{path:'/contact-us',step:1,label:'Form Page',event:'funnel_form_page'},{path:'/contact',step:1,label:'Form Page',event:'funnel_form_page'},{path:'/thank-you',step:2,label:'Form Submitted',event:'funnel_form_submitted'},{path:'/thanks-whats-next',step:3,label:'Booking Confirmed',event:'funnel_booking_confirmed'}]};`}</Script><Script src="https://acrtracking.stealthagents.us/v1/tracker.js" strategy="afterInteractive"/></body></html>}
