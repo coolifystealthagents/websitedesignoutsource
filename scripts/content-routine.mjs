@@ -12,11 +12,15 @@ if (!routine) throw new Error('Unknown routine kind: ' + kind);
 if (!process.env.GEMINI_API_KEY) throw new Error('GEMINI_API_KEY must be provided through protected workflow secrets');
 const scratch = process.env.PAPERCLIP_RUN_SCRATCH_DIR || path.join(root, '.content-run');
 fs.mkdirSync(scratch, { recursive: true });
-const target = routine.minimum + crypto.randomInt(routine.maximum - routine.minimum + 1);
+const requestedCount = process.env.CONTENT_COUNT ? Number.parseInt(process.env.CONTENT_COUNT, 10) : null;
+if (requestedCount !== null && (!Number.isInteger(requestedCount) || requestedCount < 1)) throw new Error("CONTENT_COUNT must be a positive integer");
+const campaignDate = process.env.CONTENT_DATE || new Date().toISOString().slice(0, 10);
+const visibleDate = new Intl.DateTimeFormat("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" }).format(new Date(campaignDate + "T00:00:00Z"));
+const target = requestedCount ?? routine.minimum + crypto.randomInt(routine.maximum - routine.minimum + 1);
 const outDir = path.join(root, routine.directory);
 fs.mkdirSync(outDir, { recursive: true });
 const existing = new Set(fs.readdirSync(outDir).filter((file) => /\.(md|mdx)$/.test(file)));
-const count = Math.max(0, target - existing.size);
+const count = requestedCount ?? Math.max(0, target - existing.size);
 
 async function generateArticles() {
   if (!count) return [];
@@ -38,7 +42,7 @@ async function generateArticles() {
 }
 
 function render(article) {
-  const lines = ['---', 'title: ' + JSON.stringify(article.title), 'description: ' + JSON.stringify(article.excerpt), 'slug: ' + JSON.stringify(article.slug), 'published: ' + new Date().toISOString().slice(0, 10), '---', '', '# ' + (article.h1 || article.title), '', article.intro || ''];
+  const lines = ['---', 'title: ' + JSON.stringify(article.title), 'description: ' + JSON.stringify(article.excerpt), 'slug: ' + JSON.stringify(article.slug), 'published: ' + campaignDate, '---', '', '# ' + (article.h1 || article.title), '', '**Published: ' + visibleDate + '**', '', article.intro || ''];
   for (const section of article.sections || []) {
     lines.push('', '## ' + section.heading, '');
     for (const paragraph of section.paragraphs || []) lines.push(paragraph, '');
