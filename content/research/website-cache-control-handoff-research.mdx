@@ -1,0 +1,89 @@
+---
+title: "Website Cache Control Handoff Research"
+description: "A practical research note on cache ownership, freshness, invalidation, sensitive responses, and release verification."
+slug: "website-cache-control-handoff-research"
+published: 2026-09-01
+---
+
+# Website Cache Control Handoff Research
+
+**Published: September 1, 2026**
+
+Caching can improve delivery and reduce repeated work, but stale content or incorrectly cached private responses can create serious operational problems. The correct policy depends on the resource and system architecture. Sources were reviewed for this WebsiteDesignOutsource.com note on September 1, 2026.
+
+## Research question
+
+What should an outsourced website team document so cache behavior can be accepted and operated safely?
+
+## Evidence synthesis
+
+Inventory page, API, and asset response classes. For each class, record freshness requirements, validation behavior, intermediary involvement, invalidation method, deployment interaction, and owner. Security-sensitive or user-specific responses require explicit review rather than inheritance from a broad default.
+
+## Verification approach
+
+- Inspect response headers for representative routes.
+- Test a content update through the delivery path.
+- Verify hashed assets and HTML use intentional policies.
+- Document purge scope, access, and recovery.
+
+## Interpretation
+
+Inference: Cache acceptance works best as a matrix of resource classes and expected behavior because a single site-wide statement cannot express the different risks of HTML, static assets, and personalized data.
+
+## Key Stats
+
+- WCAG 2.2 groups its success criteria under four accessibility principles (W3C).
+- The NIST Secure Software Development Framework organizes practices into four groups (NIST).
+
+## Key Takeaways
+
+- Connect requirements to the implemented route or component.
+- Give every exception and operational dependency a client owner.
+- Preserve repeatable test evidence with the final handoff.
+- Review the record after material design, platform, or vendor changes.
+
+## Methodology
+
+This qualitative synthesis prioritizes standards bodies, formal specifications, government guidance, and official platform documentation. Structural facts in Key Stats are attributed to their named sources. Recommendations combine those sources with project governance practices and are not claims that one configuration fits every website.
+
+## Sources
+
+1. [WCAG 2.2](https://www.w3.org/TR/WCAG22/) W3C accessibility requirements and explanatory context.
+2. [WAI Tutorials](https://www.w3.org/WAI/tutorials/) W3C implementation tutorials for common web content patterns.
+3. [HTML Standard](https://html.spec.whatwg.org/) The living standard for HTML elements, attributes, and browser behavior.
+4. [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) Technical reference and implementation guidance for web platform features.
+5. [HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110) The IETF specification for HTTP semantics.
+6. [web.dev Learn Performance](https://web.dev/learn/performance/) Google-authored learning material for web performance.
+7. [Google Search Central](https://developers.google.com/search/docs) Official guidance for crawling, indexing, and search-facing website behavior.
+8. [NIST Secure Software Development Framework](https://csrc.nist.gov/pubs/sp/800/218/final) NIST practices for integrating security into software development.
+9. [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/) Community-maintained web security testing guidance.
+10. [GOV.UK Service Manual](https://www.gov.uk/service-manual) Government service design, delivery, accessibility, and measurement guidance.
+
+## Further reading
+
+[Read the related research](/research/website-qa-evidence-pack)
+[Read the related research](/research/design-system-handoff-controls)
+
+## Frequently asked questions
+
+### Does citing guidance prove the website passes?
+
+No. A citation explains the basis for a requirement. Acceptance requires testing the actual implementation and retaining the result.
+
+### Who accepts the remaining risk?
+
+The client should name an accountable owner. The outsourced team explains implementation choices, supplies evidence, and resolves assigned defects.
+
+### When should the evidence be refreshed?
+
+Refresh it after changes to the relevant component, dependency, content model, browser support policy, or delivery path.
+
+## Related Research
+
+[Related reading](/research/website-qa-evidence-pack)
+[Related reading](/research/design-system-handoff-controls)
+[Related reading](/research/website-change-management-controls)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

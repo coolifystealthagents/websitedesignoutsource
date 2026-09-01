@@ -1,0 +1,89 @@
+---
+title: "Content Security Policy and Third-Party Integration Research"
+description: "Source-led guidance for inventorying origins, testing policy changes, assigning ownership, and preserving evidence."
+slug: "website-csp-third-party-integration-research"
+published: 2026-09-01
+---
+
+# Content Security Policy and Third-Party Integration Research
+
+**Published: September 1, 2026**
+
+A Content Security Policy can help control which resources a browser may load, but a useful policy depends on an accurate inventory and careful rollout. Third-party integrations often expand the required origin list and operational ownership. Sources were reviewed for this WebsiteDesignOutsource.com note on September 1, 2026.
+
+## Research question
+
+What evidence should accompany CSP work in an outsourced website project?
+
+## Evidence synthesis
+
+Map scripts, styles, images, fonts, frames, connections, and other resource types to their approved origins and business owners. Begin with observation where appropriate, review reports, remove unused allowances, and test critical journeys before enforcement changes. Policy design belongs with the site security model, not a copied header.
+
+## Verification approach
+
+- Exercise forms, analytics, media, and embedded tools.
+- Review violations for real and unexpected sources.
+- Confirm reporting endpoints and access ownership.
+- Retest after third-party or deployment changes.
+
+## Interpretation
+
+Inference: Combining the CSP record with the third-party dependency inventory gives security reviewers and site operators a shared change-control surface.
+
+## Key Stats
+
+- WCAG 2.2 groups its success criteria under four accessibility principles (W3C).
+- The NIST Secure Software Development Framework organizes practices into four groups (NIST).
+
+## Key Takeaways
+
+- Connect requirements to the implemented route or component.
+- Give every exception and operational dependency a client owner.
+- Preserve repeatable test evidence with the final handoff.
+- Review the record after material design, platform, or vendor changes.
+
+## Methodology
+
+This qualitative synthesis prioritizes standards bodies, formal specifications, government guidance, and official platform documentation. Structural facts in Key Stats are attributed to their named sources. Recommendations combine those sources with project governance practices and are not claims that one configuration fits every website.
+
+## Sources
+
+1. [WCAG 2.2](https://www.w3.org/TR/WCAG22/) W3C accessibility requirements and explanatory context.
+2. [WAI Tutorials](https://www.w3.org/WAI/tutorials/) W3C implementation tutorials for common web content patterns.
+3. [HTML Standard](https://html.spec.whatwg.org/) The living standard for HTML elements, attributes, and browser behavior.
+4. [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) Technical reference and implementation guidance for web platform features.
+5. [HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110) The IETF specification for HTTP semantics.
+6. [web.dev Learn Performance](https://web.dev/learn/performance/) Google-authored learning material for web performance.
+7. [Google Search Central](https://developers.google.com/search/docs) Official guidance for crawling, indexing, and search-facing website behavior.
+8. [NIST Secure Software Development Framework](https://csrc.nist.gov/pubs/sp/800/218/final) NIST practices for integrating security into software development.
+9. [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/) Community-maintained web security testing guidance.
+10. [GOV.UK Service Manual](https://www.gov.uk/service-manual) Government service design, delivery, accessibility, and measurement guidance.
+
+## Further reading
+
+[Read the related research](/research/website-qa-evidence-pack)
+[Read the related research](/research/design-system-handoff-controls)
+
+## Frequently asked questions
+
+### Does citing guidance prove the website passes?
+
+No. A citation explains the basis for a requirement. Acceptance requires testing the actual implementation and retaining the result.
+
+### Who accepts the remaining risk?
+
+The client should name an accountable owner. The outsourced team explains implementation choices, supplies evidence, and resolves assigned defects.
+
+### When should the evidence be refreshed?
+
+Refresh it after changes to the relevant component, dependency, content model, browser support policy, or delivery path.
+
+## Related Research
+
+[Related reading](/research/website-qa-evidence-pack)
+[Related reading](/research/design-system-handoff-controls)
+[Related reading](/research/website-change-management-controls)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
