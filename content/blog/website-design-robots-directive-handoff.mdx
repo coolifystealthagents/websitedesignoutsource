@@ -1,0 +1,60 @@
+---
+title: "Prepare a Robots Directive Handoff for Website Launch"
+description: "Inventory crawl and indexing directives, owners, environment differences, verification, and recovery before release."
+slug: "website-design-robots-directive-handoff"
+published: 2026-09-02
+---
+
+# Prepare a Robots Directive Handoff for Website Launch
+
+**Published: September 2, 2026**
+
+Robots controls can exist in a robots file, page metadata, and response headers. A copied staging setting or conflicting directive can make important public content difficult for search systems to process.
+
+## Inventory control points
+
+List the production robots file, page-level robots metadata, relevant response headers, sitemap references, and platform settings. For each rule, record its purpose, affected routes or file types, owner, and environment-specific behavior.
+
+## Separate staging from production
+
+- Document how non-public environments are protected.
+- Do not rely on a crawl directive as access control.
+- Identify configuration that changes during release.
+- Keep secrets and private data out of public environments.
+- Assign a production verification owner.
+
+## Resolve conflicts before launch
+
+Compare templates, headers, canonical URLs, and robots rules for representative routes. Review allowed pages, intentionally excluded pages, files, and error responses. The marketing or search owner should approve indexing intent; developers implement and evidence it.
+
+## Verify the released configuration
+
+Request the public robots file and inspect rendered page metadata and headers. Confirm sitemap locations use the correct host. Record the release identity and sampled URLs so a later change can be compared with the accepted state.
+
+## Further reading
+
+[Prepare an SEO handoff](/blog/website-design-outsourcing-seo-handoff)
+[Review launch readiness](/blog/website-design-outsourcing-launch-readiness)
+
+## Source
+
+[Google Search Central robots documentation](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
+
+## Frequently asked questions
+
+### Does robots.txt protect confidential pages?
+
+No. Use authentication and appropriate access controls for confidential material.
+
+### Who decides which pages are indexed?
+
+The client’s accountable search or content owner should approve intent and exceptions.
+
+## Related Articles
+
+[Security review](/blog/outsourced-website-design-security-review)
+[Content migration brief](/blog/outsourced-website-design-content-migration-brief)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

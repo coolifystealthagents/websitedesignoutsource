@@ -1,0 +1,60 @@
+---
+title: "Create a Breadcrumb Handoff for Website Design"
+description: "Document breadcrumb labels, hierarchy, URLs, structured data, and responsive behavior for outsourced implementation."
+slug: "website-design-breadcrumb-handoff"
+published: 2026-09-02
+---
+
+# Create a Breadcrumb Handoff for Website Design
+
+**Published: September 2, 2026**
+
+Breadcrumbs can help visitors understand where a page sits, but only when labels and destinations reflect a deliberate information architecture. A visual trail assembled late in development can disagree with navigation, canonical URLs, and structured data.
+
+## Map the hierarchy first
+
+For every template, list the home node, intermediate levels, current-page label, and destination of each linked item. Explain how dynamic categories, filtered views, and pages with more than one parent are handled. Keep display labels human-readable and connect them to stable canonical routes.
+
+## Specify visible behavior
+
+- Define wrapping or overflow on narrow screens.
+- Distinguish linked ancestors from the current page.
+- Preserve keyboard focus visibility.
+- State whether long labels may be shortened.
+- Test the trail at the deepest supported level.
+
+## Align machine-readable output
+
+If BreadcrumbList structured data is used, compare its order, names, and URLs with the visible trail. Structured data should describe the page visitors receive, not invent a separate hierarchy. Record representative rendered examples in the acceptance evidence.
+
+## Define ownership
+
+Name who approves information architecture, who maintains category labels, and who checks generated routes. A component owner can implement the pattern, but the client should decide the meaning of the hierarchy.
+
+## Further reading
+
+[Review navigation structure](/blog/outsourced-website-design-navigation-review)
+[Annotate page requirements](/blog/outsourced-website-design-page-annotation-guide)
+
+## Source
+
+[Google Search Central breadcrumb documentation](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)
+
+## Frequently asked questions
+
+### Must the current page be linked?
+
+No. The brief should make the current position clear and define the chosen interaction consistently.
+
+### What should happen when a page has two parents?
+
+Choose the trail that best represents the intended user hierarchy and document the rule for similar pages.
+
+## Related Articles
+
+[Content inventory](/blog/outsourced-website-design-content-inventory)
+[Template governance](/blog/outsourced-website-design-template-governance)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

@@ -1,0 +1,60 @@
+---
+title: "Plan Staging Access for an Outsourced Website Team"
+description: "Define staging users, permissions, test data, review windows, and access removal before external website work begins."
+slug: "outsourced-website-design-staging-access-plan"
+published: 2026-09-02
+---
+
+# Plan Staging Access for an Outsourced Website Team
+
+**Published: September 2, 2026**
+
+A staging site helps a client review work before release, but it can also expose unfinished content, personal data, or powerful administration tools. Treat staging access as a controlled workspace rather than a shared password.
+
+## Define the environment
+
+Record the staging address, hosting owner, deployment source, refresh process, data policy, and differences from production. State whether outbound email, payments, analytics, search indexing, and third-party integrations are disabled or redirected. Use synthetic test records when real customer data is not required.
+
+## Assign access by task
+
+- Give each person an individual account.
+- Match permissions to the work they must perform.
+- Set an expiry or review date for vendor access.
+- Keep credentials in the approved secrets system.
+- Name the client owner who can restore or revoke access.
+
+## Make review repeatable
+
+Tell reviewers which build is present, what routes changed, and which states need attention. Preserve a short acceptance record with the build identifier, reviewer, findings, and disposition. If staging differs materially from production, document the gap rather than treating the preview as complete proof.
+
+## Close the workspace safely
+
+After acceptance, remove temporary accounts, rotate shared secrets that could not be avoided, and retain only the evidence needed for operations. The client should keep ownership of hosting, domains, repositories, and recovery paths.
+
+## Further reading
+
+[Prepare an access control checklist](/blog/outsourced-website-design-access-control)
+[Review launch readiness](/blog/website-design-outsourcing-launch-readiness)
+
+## Source
+
+[NIST least privilege glossary](https://csrc.nist.gov/glossary/term/least_privilege)
+
+## Frequently asked questions
+
+### Should staging be publicly searchable?
+
+Usually no. Use appropriate access controls and confirm the environment is not presented as the canonical public site.
+
+### Can the vendor own the staging account?
+
+The vendor can operate it, but the client should retain administrative ownership and a recovery path.
+
+## Related Articles
+
+[Security review](/blog/outsourced-website-design-security-review)
+[Website owner handoff](/blog/outsourced-website-design-website-owner-handoff)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

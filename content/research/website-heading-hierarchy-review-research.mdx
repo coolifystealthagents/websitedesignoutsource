@@ -1,0 +1,73 @@
+---
+title: "Website Heading Hierarchy Review Research"
+description: "Evidence-led guidance for meaningful headings, page structure, CMS constraints, responsive layouts, and handoff testing."
+slug: "website-heading-hierarchy-review-research"
+published: 2026-09-02
+---
+
+# Website Heading Hierarchy Review Research
+
+**Published: September 2, 2026**
+
+Headings communicate the organization of a page to visual readers, assistive technology users, editors, and search systems. Text that merely looks large does not provide the same structure. Sources were reviewed for this WebsiteDesignOutsource.com note on September 2, 2026.
+
+## Research question
+
+How should a client evaluate heading structure delivered by an outsourced website team?
+
+## Evidence synthesis
+
+Review headings in the rendered page outline and in the visible reading experience. Each heading should introduce the content that follows, while levels express meaningful nesting rather than a preferred font size. Reusable components need rules for the context in which they are inserted, because a card or callout cannot safely assume the same heading level on every template.
+
+The content model matters as much as CSS. Editors need fields and previews that help them preserve structure when modules move. Empty sections, visually styled paragraphs, repeated page titles, and level choices driven only by appearance are useful review signals.
+
+## Verification approach
+
+- List headings in document order for representative templates.
+- Compare levels with visible section relationships.
+- Test component variants in more than one placement.
+- Zoom and review narrow-screen reflow without changing semantics.
+- Inspect editor controls and published output together.
+
+## Interpretation
+
+Inference: A template-and-component matrix prevents more heading defects than a one-time homepage audit because it tests the rules used to create future pages.
+
+## Key Stats
+
+- HTML defines six ranked heading elements, h1 through h6 (WHATWG).
+- WCAG 2.2 organizes its success criteria under four principles (W3C).
+
+## Key Takeaways
+
+- Choose heading levels from content relationships, not visual size.
+- Test reusable modules in their supported page contexts.
+- Give editors guardrails and a way to preview the published outline.
+- Record exceptions with an owner and correction decision.
+
+## Methodology
+
+This review synthesizes standards, accessibility guidance, and official design-system examples. It does not assign a universal outline to every template. Recommended checks translate cited principles into a repeatable outsourced acceptance workflow.
+
+## Sources
+
+1. [HTML Standard headings](https://html.spec.whatwg.org/multipage/sections.html#headings-and-outlines) Normative definitions for HTML section headings.
+2. [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility requirements including information and relationships.
+3. [WAI headings tutorial](https://www.w3.org/WAI/tutorials/page-structure/headings/) Guidance on organizing pages with headings.
+4. [WAI page structure tutorial](https://www.w3.org/WAI/tutorials/page-structure/) Broader page-structure guidance.
+5. [Understanding Success Criterion 1.3.1](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) Explanatory accessibility material.
+6. [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) Patterns and accessibility design considerations.
+7. [GOV.UK heading component](https://design-system.service.gov.uk/styles/headings/) Official design-system heading guidance.
+8. [USWDS typography guidance](https://designsystem.digital.gov/components/typography/) Government design-system typography patterns.
+9. [MDN heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) Technical reference for heading markup.
+10. [Google title links documentation](https://developers.google.com/search/docs/appearance/title-link) Search-facing context for page titles and prominent headings.
+
+## Related Research
+
+[Information architecture evidence](/research/website-information-architecture-evidence-2026)
+[Visual hierarchy evidence](/research/website-design-visual-hierarchy-evidence)
+[Content governance evidence](/research/website-design-content-governance-evidence)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

@@ -1,0 +1,60 @@
+---
+title: "Build a DNS Handoff Inventory for Outsourced Web Design"
+description: "Record domain ownership, DNS records, dependencies, approval, rollback, and verification before a website launch."
+slug: "outsourced-web-design-dns-handoff-inventory"
+published: 2026-09-02
+---
+
+# Build a DNS Handoff Inventory for Outsourced Web Design
+
+**Published: September 2, 2026**
+
+DNS changes can affect the website, email, verification services, and security controls at the same time. An outsourced team needs enough information to prepare a safe change, while the client retains ownership and final approval.
+
+## Capture the current state
+
+Record the registrar, DNS provider, administrative owner, recovery contact, nameservers, relevant records, time-to-live values, and services that rely on each record. Export or otherwise preserve the approved pre-change state without putting credentials in the inventory.
+
+## Prepare the change set
+
+- Identify every record to add, edit, or remove.
+- State the business purpose and requested value.
+- Name the operator and approver separately.
+- Set a verification step for web and email behavior.
+- Define a rollback condition and restoration values.
+
+## Coordinate timing
+
+Document the intended window, expected propagation behavior, freeze period, and escalation contacts. Lowering a time-to-live may require advance work; it should not be assumed to take effect immediately for already cached answers.
+
+## Verify from more than one view
+
+Check authoritative answers, public resolution, the chosen HTTPS hostname, redirects, and critical mail or verification records affected by the scope. Add timestamps to results. Do not call a launch complete based only on one browser session.
+
+## Further reading
+
+[Keep a launch command log](/blog/website-design-launch-day-command-log)
+[Prepare a redirect handoff](/blog/outsourced-website-design-redirect-handoff)
+
+## Source
+
+[ICANN guidance for domain registrants](https://www.icann.org/resources/pages/domain-name-registration-process-2017-06-20-en)
+
+## Frequently asked questions
+
+### Should an agency register the client domain?
+
+The client should control registration and recovery even when a vendor assists with configuration.
+
+### Does a successful homepage check prove DNS is complete?
+
+No. Verify every affected hostname and service named in the change set.
+
+## Related Articles
+
+[Launch readiness](/blog/website-design-outsourcing-launch-readiness)
+[Risk register](/blog/website-design-outsourcing-risk-register)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

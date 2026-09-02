@@ -1,0 +1,73 @@
+---
+title: "Website Sitemap Publication Hygiene Research"
+description: "A source-led review of sitemap inclusion, canonical URLs, timestamps, splitting, validation, and ownership."
+slug: "website-sitemap-publication-hygiene-research"
+published: 2026-09-02
+---
+
+# Website Sitemap Publication Hygiene Research
+
+**Published: September 2, 2026**
+
+An XML sitemap is a discovery aid, not a substitute for working navigation or correct responses. Its value depends on listing the preferred public URLs that the site actually serves. Sources were reviewed for this WebsiteDesignOutsource.com note on September 2, 2026.
+
+## Research question
+
+What should a website team verify when new articles and routes are added to a sitemap?
+
+## Evidence synthesis
+
+Generate entries from the same approved content inventory used by routing and indexes where practical. Each listed location should use the public protocol and host, return the intended successful content, and agree with the page canonical. Exclude redirects, error routes, staging hosts, and alternate addresses that compete with the preferred URL.
+
+Modification timestamps should describe meaningful page changes and use a valid format. Large sites can divide URLs into multiple sitemap files and connect them through an index. Robots discovery and search-tool submission can support operations, but neither corrects inaccurate entries.
+
+## Verification approach
+
+- Parse the generated XML rather than checking text fragments only.
+- Compare expected canonical routes with sitemap locations.
+- Request a sample and all newly published entries.
+- Detect duplicates, redirects, errors, and non-public hosts.
+- Confirm index and robots references resolve correctly.
+
+## Interpretation
+
+Inference: A set comparison between the release manifest and parsed sitemap entries gives clearer acceptance evidence than relying on a successful sitemap response alone.
+
+## Key Stats
+
+- One sitemap file is limited to 50,000 URLs and 50 MB uncompressed (Sitemaps.org).
+- A sitemap index can list up to 50,000 sitemap files (Sitemaps.org).
+
+## Key Takeaways
+
+- Publish preferred, working public URLs only.
+- Keep routes, indexes, canonicals, and sitemap generation aligned.
+- Treat timestamps as content metadata, not automatic proof of freshness.
+- Assign monitoring and correction ownership after handoff.
+
+## Methodology
+
+This synthesis prioritizes the sitemap protocol, search-engine documentation, and web standards. Numeric protocol limits are sourced directly. Workflow recommendations focus on content publishing and do not promise crawling or indexing outcomes.
+
+## Sources
+
+1. [Sitemaps protocol](https://www.sitemaps.org/protocol.html) XML format, location rules, and file limits.
+2. [Google build and submit a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap) Official construction and submission guidance.
+3. [Google sitemap file size documentation](https://developers.google.com/search/docs/crawling-indexing/sitemaps/large-sitemaps) Guidance for sitemap indexes and large collections.
+4. [Google robots.txt documentation](https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt) Robots file discovery and behavior.
+5. [Google canonical URL documentation](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) Canonical signal guidance.
+6. [RFC 9110 HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110) Response and redirect semantics.
+7. [W3C XML specification](https://www.w3.org/TR/xml/) Normative XML syntax.
+8. [RFC 3986 URI Generic Syntax](https://www.rfc-editor.org/rfc/rfc3986) URI syntax used by sitemap locations.
+9. [Bing sitemap guidance](https://www.bing.com/webmasters/help/sitemaps-3b5cf6ed) Search-engine guidance for sitemap submission and use.
+10. [Google Search Console sitemaps report](https://support.google.com/webmasters/answer/7451001) Official reporting and troubleshooting guidance.
+
+## Related Research
+
+[Canonical URL implementation](/research/website-canonical-url-implementation-research)
+[Structured data handoff](/research/website-structured-data-handoff)
+[Website change management controls](/research/website-change-management-controls)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
