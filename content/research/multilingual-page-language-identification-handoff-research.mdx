@@ -1,0 +1,80 @@
+---
+title: "Language Identification Evidence for Multilingual Website Handoffs"
+description: "Research on page language, passage changes, language selectors, and review boundaries in outsourced multilingual website design."
+slug: "multilingual-page-language-identification-handoff-research"
+published: "2026-08-23"
+---
+
+# Language Identification Evidence for Multilingual Website Handoffs
+
+## Research question
+
+What should an outsourced website handoff verify so that browsers and assistive technologies can identify a multilingual page's default language and meaningful language changes?
+
+## Evidence scope and method
+
+This synthesis reviews WCAG 2.2 criteria for page language and language of parts, the HTML specification for the `lang` attribute, MDN implementation guidance, and W3C internationalization material about language declarations. It focuses on sites where an owner supplies translations and an outsourced design or development team implements templates, navigation, and content fields. Translation accuracy itself is outside the technical evidence scope. A valid attribute cannot prove that a translation is correct, culturally suitable, or legally approved.
+
+The method separates four checks that are often collapsed into one: whether the document declares a default language, whether meaningful passages in another language are marked, whether the selector names each language clearly, and whether navigation leads to the intended localized route. Each check answers a different failure mode. Reviewing only the visible selector misses metadata. Reviewing only markup misses mislabeled links or untranslated interface text.
+
+## Why language metadata affects operation
+
+The HTML `lang` attribute supplies the language of an element and its descendants unless a child overrides it. User agents can use that information for pronunciation, spelling, quotation marks, line breaking, and other language-sensitive behavior. WCAG 3.1.1 addresses the default human language of a page. WCAG 3.1.2 covers passages or phrases in another human language when they can be programmatically determined, subject to exceptions for proper names, technical terms, and words that have become part of the surrounding language.
+
+This means the page title, navigation, and main content need a truthful default. A copied template can leave `lang="en"` on a Filipino, Spanish, or French route even when every visible paragraph has changed. The visual review will not reveal that defect. Conversely, marking every borrowed word creates noisy markup and may prompt unnecessary voice changes. The review needs editorial judgment about actual language shifts.
+
+Language selectors add another layer. W3C internationalization guidance recommends using the name of the language in that language, which helps visitors recognize the destination. A selector that shows country flags can be ambiguous because languages cross borders and many countries use several languages. This is a usability conclusion supported by the mismatch between geography and language, not a claim that every flag icon automatically violates a standard.
+
+## A handoff test built around routes
+
+Start with an inventory of localized routes and their intended language tags, using valid BCP 47 language tags where applicable. For each route, compare the declared `html lang` value with the dominant content. Then inspect repeated template regions: menus, form labels, errors, cookie controls, footer links, and accessibility labels. These fragments are easy to leave in the source language because they may live outside the page body supplied by the owner.
+
+Next, sample passages that intentionally retain another language. A quotation or linked title may need a local `lang` attribute so a screen reader can switch pronunciation. Product names and familiar loanwords often do not. The evidence record should name the sampled passage and the editorial reason for marking or exempting it. That prevents a developer from guessing solely from character shape or a dictionary lookup.
+
+Follow each selector option and inspect the destination's canonical address, document language, visible heading, and selected-state indication. A link labeled in French that opens an English fallback is a routing defect even if both pages have technically valid language attributes. If the localized route is unavailable, the interface should communicate the fallback rather than imply that a complete translation exists.
+
+## Ownership in outsourced production
+
+The website owner or appointed language reviewer approves translations, locale policy, and fallback behavior. The outsourced team implements the approved tags and components, reports mismatches, and avoids inventing translated claims. When a content management system allows editors to choose a locale, the handoff should document whether the template derives `lang` from that field and what happens when the field is empty.
+
+This boundary matters because language identification can look like a simple engineering task. A developer can detect that Spanish text appears beneath an English default, but may not know whether it is a quotation, a brand phrase, or evidence of the wrong content entry. The issue should return to the language owner when meaning is uncertain. Technical review can still catch deterministic failures such as missing attributes, malformed tags, or a selector that points to the wrong route.
+
+## Facts and analytical recommendations
+
+The normative facts come from HTML and WCAG: language can be declared programmatically, the page default must be identifiable, and qualifying language changes need identification. The route inventory, template-region sample, and selector traversal are analytical recommendations for an outsourced handoff. They provide reproducible evidence but do not appear as a prescribed WCAG test bundle.
+
+Automation can flag missing or invalid attributes and compare locale records with rendered pages. It cannot reliably decide the human language of every short string. Names, mixed-language marketing phrases, and user-generated content require context. A useful tool report should therefore separate deterministic metadata failures from passages needing editorial review.
+
+## Failure evidence and regression checks
+
+When a mismatch appears, capture the route, element, declared value, visible text, expected value, and content owner. Retest the same route after repair and one sibling route that shares the template. A change to the root layout can fix one locale while setting every other locale to the same value. Similarly, changing a selector component can repair labels but break canonical routing. The regression sample should follow the layer that changed.
+
+Content inserted after load deserves attention. Validation messages, modal headings, chat prompts, and consent text may come from a separate translation source. Inspecting initial HTML alone will not cover them. Trigger representative states and confirm that both visible wording and inherited language remain appropriate.
+
+## Limitations
+
+Language tags do not measure translation quality, reading level, regional preference, or cultural fit. Screen readers differ in installed voices and language switching behavior. Browser inspection can confirm attributes without showing how every assistive technology pronounces a passage. Route samples may miss editor-created pages, and automated language detection can misclassify short or mixed strings.
+
+The handoff should state which locales, templates, and dynamic states were checked. Native-language review remains necessary for meaning. Legal or regulated wording needs its own approval path. These constraints prevent a technical metadata pass from being presented as full multilingual quality assurance.
+
+## Evidence-led conclusion
+
+A defensible multilingual handoff connects language metadata to actual routes and content ownership. It verifies the default language, meaningful passage changes, selector destinations, and repeated interface states. The outsourced team can make those checks reproducible, while the owner retains authority over translation and fallback policy. Passing evidence shows that the tested pages communicate their languages to software and visitors; it does not certify the quality of the translation itself.
+
+## Sources
+
+1. [W3C, Understanding Language of Page](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html)
+2. [W3C, Understanding Language of Parts](https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html)
+3. [WHATWG, The lang and xml:lang attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)
+4. [MDN, HTML lang global attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang)
+5. [W3C Internationalization, Language declarations in HTML](https://www.w3.org/International/questions/qa-html-language-declarations)
+6. [W3C Internationalization, Choosing a language tag](https://www.w3.org/International/questions/qa-choosing-language-tags)
+7. [W3C Internationalization, Language tags in HTML and XML](https://www.w3.org/International/articles/language-tags/)
+8. [IETF, BCP 47](https://www.rfc-editor.org/info/bcp47)
+9. [MDN, hreflang](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/hreflang)
+10. [W3C, H57 Using language attributes](https://www.w3.org/WAI/WCAG22/Techniques/html/H57)
+
+## Related Research
+
+[Link-name accessibility research](/research/website-link-name-accessibility-research)
+[Structured data handoff controls](/research/structured-data-handoff-controls)

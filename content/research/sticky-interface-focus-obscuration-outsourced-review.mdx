@@ -1,0 +1,82 @@
+---
+title: "Do Sticky Website Interfaces Hide Keyboard Focus?"
+description: "Research on detecting focus obscuration caused by sticky headers, banners, drawers, and other persistent website layers."
+slug: "sticky-interface-focus-obscuration-outsourced-review"
+published: "2026-08-23"
+---
+
+# Do Sticky Website Interfaces Hide Keyboard Focus?
+
+## Research question
+
+How can an outsourced website review determine whether sticky headers, cookie notices, chat launchers, and fixed navigation obscure the component that currently has keyboard focus?
+
+## Method and evidence scope
+
+This analysis compares WCAG 2.2 Success Criteria 2.4.11 and 2.4.12 with W3C explanations of focus visibility, MDN documentation for sticky positioning and scrolling, and browser-based keyboard testing. The subject is geometric visibility: whether another author-created layer covers a focused component. It is distinct from focus indicator styling, keyboard operability, or whether focus moves in a logical order, though one component can fail more than one requirement.
+
+The proposed review samples persistent interface layers and the page positions where they overlap content. It considers desktop and narrow layouts, zoom, opening and closing states, and in-page navigation. It does not claim to cover overlays injected by browser extensions or operating-system controls, because those are outside the site's authored interface.
+
+## What changed with WCAG 2.2
+
+WCAG 2.2 added Focus Not Obscured at the AA level. The criterion requires that when a component receives keyboard focus, it is not entirely hidden by content the author created. The enhanced AAA criterion requires that no part of the focus indicator be hidden by author-created content. These thresholds are facts from the standard. A team should state which conformance target it is evaluating instead of using the vague label "focus visible" for both.
+
+The distinction has practical consequences. A sticky header that covers most of a focused heading link may pass the AA wording if some part remains visible, yet still be difficult to use. A fixed consent panel can completely cover footer controls reached late in the tab sequence. A floating chat button can sit over a small control without changing DOM order. None of these defects is reliably exposed by a static screenshot taken before keyboard interaction.
+
+CSS `position: sticky` and `position: fixed` are not themselves failures. They become relevant when their painted area intersects the focused component. The same header can behave correctly at one viewport and obscure focus at another because its height changes when navigation wraps. The review unit is therefore the combination of component, focused target, viewport, zoom, and layer state.
+
+## Build an overlap-focused sample
+
+Inventory author-created elements that remain attached to a viewport edge or appear above page content: headers, bottom bars, cookie controls, promotional notices, drawers, floating action buttons, and modal backdrops. For each one, note when it appears, whether it grows with text, and whether the user can dismiss it. Then navigate by keyboard through targets near the corresponding edge.
+
+In-page links need their own test. Activating a skip link or table of contents entry can scroll a heading beneath a sticky header. The destination may technically receive focus or become the scroll target while its label remains covered. CSS properties such as `scroll-margin-top` can create space around a target, but the required value depends on the actual persistent header height. Evidence should show the behavior, not merely the presence of a CSS declaration.
+
+Error handling is another risk state. Submitting a form can move focus to an error summary near the top while a banner occupies the same region. Opening an accordion may focus a control close to a bottom notice. Test after state changes because layout height and scroll position often differ from the initial page. At 200 percent zoom, a horizontal navigation row may become a multi-line sticky block and cover far more content.
+
+## A reproducible observation record
+
+For a failed case, record the route, viewport dimensions, zoom, browser, active overlays, focused element, overlap source, and whether coverage is partial or complete. Include a screenshot with the focus indicator and a short keyboard sequence that reaches the state. A screenshot alone cannot show which element owns focus, so pair it with an element identifier or accessible name.
+
+After a repair, repeat the exact sequence and nearby states. If the fix adds scroll padding to the document, also test nested scroll containers. If it lowers a floating widget, check narrow heights where the widget and a bottom banner compete for space. If it dismisses a layer automatically, confirm that the dismissal does not remove information or a control the visitor still needs.
+
+The outsourced team can own this mechanical evidence and repair accepted interface behavior. The website owner should decide which persistent messages are required, when they can be dismissed, and whether the project aims only at AA or also adopts the stronger no-part-obscured target. Third-party widget settings may require access or vendor coordination that the design team does not possess.
+
+## Facts versus analysis
+
+The WCAG thresholds and CSS positioning behavior are factual foundations. The layer inventory, boundary sampling, and observation record are analysis for website production. They translate a criterion into a review that an owner can repeat after changes. They are not a substitute for the complete WCAG conformance process.
+
+Automated geometry checks can compare bounding rectangles and stacking positions. They may be useful for regression coverage, but they can mistake transparent pixels for usable visibility or overlook a focus indicator painted outside an element's box. Human keyboard review remains useful for interpreting whether the focused control can be found and operated.
+
+## Design choices that reduce recurrence
+
+Persistent layers need a spacing contract, not isolated patches. The contract can define edge reservations at supported breakpoints, maximum layer heights, wrapping behavior, and how in-page destinations offset scrolling. It should account for browser text enlargement and owner-supplied copy rather than assuming a one-line banner.
+
+Component review should also ask whether the persistent behavior is necessary. A header that becomes static after zoom may preserve access while freeing space. A consent panel can reserve layout space instead of covering content. These are design options, not universal prescriptions. The correct choice depends on the information hierarchy, supported layouts, and owner-approved requirements.
+
+## Limitations
+
+Manual tab sequences sample only selected paths. Keyboard shortcuts, reverse navigation, programmatic focus, and assistive-technology commands can reach other targets. Third-party widgets may change independently after handoff. Browser chrome and on-screen keyboards reduce usable space but are not always represented accurately in desktop emulation. A passing geometry check does not establish that the focus indicator has enough contrast or area.
+
+The evidence should list tested layers and states. It should not promise that no future banner, localization change, or injected tool can create overlap. Owners need a regression trigger when persistent components, header copy, widget configuration, or layout breakpoints change.
+
+## Evidence-led conclusion
+
+Sticky interface review is strongest when it follows keyboard focus through the overlap zones created by authored layers. Static design approval and source inspection cannot show the whole failure. A bounded test names the active layer, focused target, viewport, zoom, and degree of coverage, then repeats that state after repair. This gives an outsourced team and website owner a shared basis for accepting persistent navigation without hiding the visitor's current action.
+
+## Sources
+
+1. [W3C, Understanding Focus Not Obscured Minimum](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)
+2. [W3C, Understanding Focus Not Obscured Enhanced](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced.html)
+3. [W3C, Understanding Focus Appearance](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html)
+4. [MDN, position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+5. [MDN, scroll-margin-top](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top)
+6. [W3C, Understanding Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html)
+7. [W3C, Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
+8. [MDN, scroll-padding-top](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-top)
+9. [MDN, Document activeElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement)
+10. [WAI-ARIA Authoring Practices, Keyboard Interface](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/)
+
+## Related Research
+
+[Accessible modal acceptance criteria](/research/accessible-modal-acceptance-criteria)
+[Viewport sampling study](/research/outsourced-website-responsive-viewport-sampling-study)

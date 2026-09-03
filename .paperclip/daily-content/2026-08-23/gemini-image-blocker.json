@@ -1,0 +1,16 @@
+{
+  "campaignDate": "2026-08-23",
+  "family": "research",
+  "provider": "Gemini",
+  "status": "text-complete-image-fallback",
+  "reason": "The authenticated Gemini API model catalog exposed no image-generation model to this run.",
+  "stockSubstitutionUsed": false,
+  "unresolvedImagePathsPublished": false,
+  "routes": [
+    "/research/client-side-navigation-focus-management-handoff-study",
+    "/research/multilingual-page-language-identification-handoff-research",
+    "/research/outsourced-website-dom-order-visual-layout-study",
+    "/research/sticky-interface-focus-obscuration-outsourced-review",
+    "/research/website-cookie-consent-withdrawal-interface-research"
+  ]
+}
