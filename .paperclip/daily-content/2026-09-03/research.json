@@ -1,0 +1,11 @@
+{
+  "campaignDate": "2026-09-03",
+  "family": "research",
+  "entries": [
+    {"route":"/research/form-autocomplete-handoff-research","sourcePath":"content/research/form-autocomplete-handoff-research.mdx"},
+    {"route":"/research/responsive-data-table-accessibility-research","sourcePath":"content/research/responsive-data-table-accessibility-research.mdx"},
+    {"route":"/research/website-language-metadata-localization-research","sourcePath":"content/research/website-language-metadata-localization-research.mdx"},
+    {"route":"/research/website-reduced-motion-handoff-research","sourcePath":"content/research/website-reduced-motion-handoff-research.mdx"},
+    {"route":"/research/website-session-timeout-accessibility-research","sourcePath":"content/research/website-session-timeout-accessibility-research.mdx"}
+  ]
+}

@@ -1,0 +1,89 @@
+---
+title: "Language Metadata Handoffs for Localized Websites"
+description: "Research on document language, language changes, locale routes, and verification in outsourced website delivery."
+slug: "website-language-metadata-localization-research"
+published: 2026-09-03
+---
+
+# Language Metadata Handoffs for Localized Websites
+
+**Published: September 3, 2026**
+
+A translated page is not complete merely because its visible sentences changed. Browsers, assistive technologies, search systems, templates, and content tools also need consistent language information. In an outsourced website project, responsibility can become fragmented between translators, designers, developers, and the client. A language handoff makes those boundaries testable.
+
+## Research question
+
+What language metadata and route evidence should a client require from an outsourced team delivering a localized website?
+
+## Evidence scope and method
+
+This qualitative review uses the HTML Standard, WCAG 2.2, W3C internationalization guidance, BCP 47 language-tag specifications, and Google documentation for localized versions. It compares requirements for the document's default language, changes within content, locale identifiers, and alternate-page signals. Operational recommendations are derived for design and delivery teams. They are not a guarantee of search visibility or translation quality.
+
+The review unit is a public locale route paired with its content source. For each pair, inspect the HTML language value, visible content language, changes marked within the page, canonical URL, alternate-language links where used, directionality, navigation, and fallback behavior. Then compare those outputs with the locale choices available to editors.
+
+## Document language is functional metadata
+
+HTML's `lang` attribute identifies the language of an element, and the root value supplies the default for the document. WCAG includes a criterion for the language of the page because correct identification helps software present and pronounce content. The value should use a valid language tag rather than a marketing label or an internal CMS name.
+
+BCP 47 provides the language-tag framework used on the web. Teams should choose the shortest tag that truthfully describes the content. A region subtag can be useful when regional language differences matter, but adding one by habit can imply a distinction the content does not make. Locale routing and language tags are related but not identical: a path segment selected for product operations does not automatically make a valid HTML value.
+
+The handoff should show the rendered root element for representative pages. Checking a configuration file alone misses templates that override or omit the value. It also misses a common failure where all localized routes inherit the original site's language.
+
+## Mark genuine language changes
+
+WCAG separately addresses changes in the human language of passages or phrases. Names, technical terms, and words absorbed into the surrounding language do not always need marking. Longer quotations, alternate-language instructions, or a language selector's native labels may benefit from explicit values.
+
+This is primarily a content-model problem. If editors can insert multilingual sections, the CMS needs a reliable way to store the language change. A developer cannot infer every case from character sets, and automatic detection can be wrong. The outsourced team should document which components accept language metadata and what happens when the field is empty.
+
+Typography and direction also need review. The `dir` attribute communicates text direction when content requires it. CSS alignment alone does not provide the same semantics. Mixed-direction strings such as addresses, codes, or product identifiers should be tested with real examples supplied or approved by the client.
+
+## Locale routes, canonicals, and alternates
+
+Each localized page should have a deliberate public identity. A self-canonical URL tells systems which address represents that specific page. Alternate-language annotations can connect equivalent versions, but they should point to real, reciprocal pages and use supported language or region values. They do not compensate for missing translations or incorrect redirects.
+
+The route matrix should list each locale, public URL, default document language, canonical, alternate set, and fallback rule. If a translation is absent, decide whether visitors see the original language, a localized parent, or a not-found response. Silent redirects based solely on an assumed preference can make a chosen URL hard to access and test.
+
+Language selectors deserve content and interaction review. Each option needs a name the intended visitor can recognize. The current selection should be perceivable, and changing languages should lead to the corresponding page when one exists. A flag is an unreliable substitute for a language name because countries and languages do not map one to one.
+
+## CMS and production boundaries
+
+The client usually owns the approved languages, translation source, legal wording, and fallback policy. The outsourced website team can implement fields, templates, route generation, selectors, and validation. Translators or editors own the accuracy of the text unless the engagement explicitly assigns that work elsewhere.
+
+Record these boundaries in the handoff. A technically valid `lang` value does not prove a translation is correct. Likewise, a reviewed translation can still be delivered with the wrong page metadata. Acceptance needs both content approval and implementation evidence, with each signed by the appropriate owner.
+
+CMS previews should expose the selected locale and final route. Shared components need testing because header, footer, consent text, form errors, and structured data can remain in the default language even when the main body changes. Error and empty states are especially easy to omit from translation inventories.
+
+## Verification approach
+
+Build an expected-route table from the approved locale inventory. Request every new locale route and record its response without concealing redirects. Inspect the root `lang`, any material inline language changes, text direction, canonical, alternate links, title, main heading, and visible selector state. Compare the sitemap membership with the route decision.
+
+Test at least one content-rich page, one form, one error state, and shared navigation for each template or locale behavior. Use browser accessibility inspection and a screen-reader sample to detect obvious pronunciation changes, while recognizing that pronunciation engines vary. Validate language tags syntactically and inspect the final production HTML rather than relying only on component tests.
+
+For alternate annotations, verify reciprocity and destination status. A generated tag can be well formed while pointing at a redirect, missing page, wrong language, or canonical conflict. The evidence record should keep expected and observed values together so reviewers can see the mismatch.
+
+## Facts, interpretation, and limitations
+
+The semantics of `lang`, `dir`, and language tags come from standards. Search documentation describes alternate-page signals but does not promise rankings or traffic. The route matrix, ownership split, and sampling method are production recommendations based on those sources.
+
+This review does not assess linguistic accuracy, cultural suitability, or legal compliance in a target market. It does not prescribe URL structures. Assistive technology behavior varies, and machine validation cannot judge whether every embedded phrase needs a language change. Native-language editorial review remains necessary.
+
+## Evidence-led conclusion
+
+A reliable localization handoff connects approved language content to the HTML, route, canonical, alternate signals, selector, and fallback that visitors actually receive. Testing these elements as a route matrix reveals failures hidden by a translated screenshot. It also keeps a useful boundary: language experts approve the words, while the website team proves that the platform identifies and delivers them as intended.
+
+## Sources
+
+1. [HTML Standard language attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes) Normative language metadata behavior.
+2. [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Page-language and language-change criteria.
+3. [W3C Language on the Web](https://www.w3.org/International/getting-started/language) Internationalization guidance for declaring language.
+4. [BCP 47](https://www.rfc-editor.org/info/bcp47) Internet best current practice for language tags.
+5. [W3C Choosing a language tag](https://www.w3.org/International/questions/qa-choosing-language-tags) Practical tag-selection guidance.
+6. [Google localized versions documentation](https://developers.google.com/search/docs/specialty/international/localized-versions) Alternate-language page guidance.
+7. [HTML Standard directionality](https://html.spec.whatwg.org/multipage/dom.html#the-dir-attribute) Normative text-direction behavior.
+
+## Related Research
+
+[Multilingual typography review](/research/multilingual-typography-website-outsourcing)
+[Canonical URL implementation](/research/website-canonical-url-implementation-research)
+[Content governance evidence](/research/website-design-content-governance-evidence)
+

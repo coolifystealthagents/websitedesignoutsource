@@ -1,0 +1,78 @@
+---
+title: "Reduced Motion Handoffs for Outsourced Website Design"
+description: "Research on translating motion accessibility evidence into testable design, development, and content decisions."
+slug: "website-reduced-motion-handoff-research"
+published: 2026-09-03
+---
+
+# Reduced Motion Handoffs for Outsourced Website Design
+
+**Published: September 3, 2026**
+
+Animation can explain a state change, draw attention, or make an interface feel responsive. It can also make a website difficult or unsafe to use. The design question is therefore not whether motion is good or bad. An outsourced team needs evidence about the purpose of each effect, the visitor control available, and what remains when the operating system requests less motion.
+
+## Research question
+
+What evidence should a client require when an outsourced website team hands off animated interfaces and reduced-motion behavior?
+
+## Evidence scope and method
+
+This review compares WCAG 2.2 success criteria with the CSS media-query specification, MDN implementation references, and public design-system guidance. The standards establish minimum requirements and platform behavior. The handoff method below is an operational interpretation for website design projects. It does not measure medical outcomes, certify conformance, or prove that an interface will suit every visitor.
+
+The useful unit of analysis is an individual motion event. Record its trigger, duration, repeated behavior, visual distance, purpose, and reduced-motion alternative. Then test the event with the browser and operating system preference enabled. A page-level statement such as "supports reduced motion" is too broad to show which components were examined.
+
+## What the standards establish
+
+WCAG 2.2 includes criteria for pausing, stopping, or hiding certain moving content and for motion animation triggered by interaction. The interaction criterion permits animation that is essential to functionality or conveyed information. That exception needs a narrow reading. A decorative entrance, parallax layer, or smooth scroll is rarely the only way to communicate a required fact.
+
+CSS defines the `prefers-reduced-motion` media feature so a site can respond to a user preference. The feature does not prescribe one replacement for every animation. A team might remove movement, shorten a transition, replace spatial travel with an opacity change, or present the final state immediately. The right treatment depends on what the motion was doing.
+
+Facts from standards should stay separate from project judgment. The existence of a media feature is a fact. Choosing to retain a short status transition is a design decision that still needs review. A successful automated scan also cannot establish that remaining movement is comfortable or that information survives when effects are removed.
+
+## Build a motion inventory before approval
+
+An outsourced website may contain motion in places that are easy to miss during a homepage review. Menus slide, accordions expand, validation messages appear, carousels advance, videos autoplay, counters animate, and loading placeholders pulse. Third-party embeds can introduce additional movement after the main code has loaded.
+
+For each event, the inventory should identify the route and component, whether it starts automatically or after input, whether it repeats, the information it conveys, and its behavior under reduced motion. Include the source file or component owner so a reviewer can return a defect to the right place. If the effect comes from a dependency, record the version and configuration rather than pretending the project controls its internals.
+
+The inventory should also distinguish animation from a genuine change of content. Removing a transition must not leave a menu closed, a dialog invisible, or a success message undiscoverable. The final state needs to remain understandable without relying on travel direction or a flourish that no longer appears.
+
+## Test the preference as a real interface state
+
+Testing should begin with the operating system preference because that is the visitor-facing signal the browser reports. Developer tools can help reproduce the state, but the acceptance record should name the environment and method. Reload routes where scripts read preferences only during initialization. Exercise keyboard, pointer, and touch interactions because different event handlers can activate different effects.
+
+Compare the default and reduced versions side by side. Check whether focus moves predictably, whether content appears in the expected reading order, and whether status changes remain perceivable. A transition that is visually quiet may still delay interaction. Conversely, setting every duration to a near-zero value can create rapid flashes or unexpected event sequencing. The test should evaluate the resulting experience, not merely confirm that a media query exists in a stylesheet.
+
+Responsive layouts deserve separate samples. A desktop navigation bar may have no animated disclosure while the narrow-screen menu does. Sticky headers, off-canvas panels, and swipe galleries also tend to appear only at certain viewport sizes. The team should choose samples from the supported template and component matrix, not from one convenient screen.
+
+## Ownership across design and development
+
+Design files should state the purpose and reduced-motion treatment for each approved effect. Development should implement that behavior and document any platform constraint. Content editors need guidance when their CMS choices can add video, animated images, or component variants. The client retains authority over exceptions and over claims made in the final accessibility statement.
+
+This split matters during change requests. If a stakeholder asks for a new entrance effect after acceptance, the request should return to the motion inventory. Otherwise, a late visual adjustment can bypass the reduced-motion behavior that was already reviewed. The same rule applies when a library upgrade changes default transition timing.
+
+The handoff record should contain the tested routes, preference state, browsers or devices sampled, results, unresolved exceptions, and named owner. Screenshots alone provide weak evidence for animation. A short recording can show behavior, while source references and written observations explain what was expected. Preserve enough detail for another reviewer to reproduce the result.
+
+## Limitations
+
+Standards conformance is not a medical safety assessment. Preferences vary, and `prefers-reduced-motion` only communicates the setting exposed by the user agent. This review does not establish universal duration thresholds or prove that every third-party embed respects the preference. Manual testing covers selected states and environments, so teams should state the sample rather than imply exhaustive coverage.
+
+## Evidence-led conclusion
+
+A defensible reduced-motion handoff connects each motion event to a purpose, an alternative, a test result, and an owner. The strongest evidence is not a global toggle or a passing scanner. It is a component-level record showing that the website remains understandable and operable when the visitor asks for less movement. That record gives the client a practical basis for acceptance and for reviewing later changes.
+
+## Sources
+
+1. [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility success criteria and conformance framework.
+2. [Understanding WCAG 2.3.3 Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) Intent, exceptions, and examples for interaction-triggered motion.
+3. [Understanding WCAG 2.2.2 Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html) Guidance for moving and updating content.
+4. [CSS Media Queries Level 5](https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion) Definition of the reduced-motion preference feature.
+5. [MDN prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) Browser-facing implementation reference.
+6. [GOV.UK Design System motion](https://design-system.service.gov.uk/styles/animation/) Public design-system guidance on animation and reduced motion.
+
+## Related Research
+
+[Focus-trap reviews](/research/website-design-focus-trap-review-outsourced)
+[Sticky interface focus obscuration](/research/sticky-interface-focus-obscuration-outsourced-review)
+[Accessible review operations](/research/accessible-website-outsourcing-review-operations)
+

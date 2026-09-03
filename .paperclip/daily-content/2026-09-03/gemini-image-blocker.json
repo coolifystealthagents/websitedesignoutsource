@@ -1,0 +1,8 @@
+{
+  "campaignDate": "2026-09-03",
+  "family": "research",
+  "provider": "Gemini",
+  "status": "unavailable",
+  "reason": "No Gemini image-generation capability is available in this execution environment.",
+  "fallback": "Text and route publication completed without stock or substituted image assets; the existing site-wide Research fallback image remains unchanged."
+}
