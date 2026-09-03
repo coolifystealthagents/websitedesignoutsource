@@ -1,0 +1,23 @@
+{
+  "campaignDate": "2026-08-23",
+  "family": "blog",
+  "provider": "Gemini",
+  "status": "text-complete-image-fallback",
+  "reason": "The authenticated repository Gemini generation request failed with HTTP 400.",
+  "stockSubstitutionUsed": false,
+  "existingRouteImageryPreserved": true,
+  "routes": [
+    "/blog/outsourced-website-design-accessibility-statement-handoff",
+    "/blog/outsourced-website-design-assumption-register",
+    "/blog/outsourced-website-design-cms-preview-permissions",
+    "/blog/outsourced-website-design-content-dependency-map",
+    "/blog/outsourced-website-design-cookie-preference-center-brief",
+    "/blog/outsourced-website-design-file-upload-acceptance",
+    "/blog/outsourced-website-design-iconography-system-handoff",
+    "/blog/outsourced-website-design-microcopy-decision-record",
+    "/blog/outsourced-website-design-review-environment-matrix",
+    "/blog/outsourced-website-design-search-synonym-governance",
+    "/blog/outsourced-website-design-third-party-embed-fallback",
+    "/blog/outsourced-website-design-transactional-email-handoff"
+  ]
+}

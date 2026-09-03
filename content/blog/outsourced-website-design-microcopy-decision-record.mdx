@@ -1,0 +1,104 @@
+---
+title: "Keep a Microcopy Decision Record for Outsourced Website Design"
+description: "Document why interface labels, instructions, errors, and confirmations say what they say so later revisions preserve their meaning."
+slug: "outsourced-website-design-microcopy-decision-record"
+published: 2026-08-23
+---
+
+# Keep a Microcopy Decision Record for Outsourced Website Design
+
+**Published: August 23, 2026**
+
+Small interface phrases carry large decisions. A button label sets an expectation. An error message tells a visitor whether work was saved. A consent note may reflect an approved policy. When an outsourced team changes these words without context, a cleaner sentence can accidentally change the interaction.
+
+A microcopy decision record preserves the reason behind important labels, instructions, errors, empty states, and confirmations. It does not archive every comma. It captures copy whose meaning depends on business rules, technical behavior, accessibility, or a named approval.
+
+## Choose copy worth recording
+
+Start with phrases that trigger actions, explain consequences, request information, report status, or guide recovery. Include primary buttons, form labels, validation, permissions, destructive actions, account states, search messages, and confirmation screens.
+
+Record shared strings that appear across components. One change to "Submit" may affect several unrelated forms, while two identical phrases may need different behavior. Link each entry to routes, states, and the component source.
+
+Skip ordinary editorial sentences unless they control an interface decision. The record must stay small enough that designers and editors will consult it.
+
+## Capture the decision, not only the words
+
+For each entry, save the approved phrase, user task, triggering condition, resulting system action, alternatives considered, reason selected, owner, approver, and date. Note any character or layout constraint, but do not let an arbitrary width decide meaning.
+
+An error message should identify what happened, what information was preserved, and what the visitor can do next. The record should connect those promises to real behavior. If the copy says a request was saved, the implementation must actually save it.
+
+Link policy or technical sources rather than paraphrasing them from memory. Keep private operational details outside public copy.
+
+## Clarify authority
+
+The outsourced copywriter can propose plain language and test comprehension. Product owners decide workflow meaning. Legal or privacy owners approve regulated language. Support owners confirm that published contact routes and response expectations are real.
+
+Mark which phrases the design team may revise without renewed approval and which need escalation. This avoids two extremes: freezing every word forever or treating every label as decoration.
+
+When owners disagree, document the unresolved question and its effect. Do not let the latest design comment become accidental approval.
+
+## Write for the exact state
+
+Generic microcopy often hides missing product decisions. Separate empty results from service failures. Separate an invalid field from a rejected transaction. Separate a saved draft from a completed request.
+
+Map each phrase to its state and recovery path. Check what appears after refresh, back navigation, slow responses, duplicate actions, and expired sessions where those states are in scope. A message is useful only if it matches what the system does.
+
+Use consistent terms for the same object and action. Elegant variation can confuse visitors. If the interface calls something a "project" in one place and a "job" elsewhere, decide whether the difference is intentional.
+
+## Include accessibility and translation context
+
+Labels need to make sense when read out of visual order or announced by assistive technology. Record accessible names for icon-only controls and relationships between help text, errors, and fields. Avoid relying on hint text inside a field as the only label.
+
+For multilingual work, include meaning notes rather than forcing translators to infer context from isolated strings. Record variables, plural behavior, maximum realistic expansion, and text that must remain unchanged. Do not concatenate fragments that may fail in another language.
+
+Review the built interface with zoom, keyboard navigation, and representative assistive workflows. A clear sentence can still fail if the implementation does not associate it with the right control.
+
+## Manage changes with version context
+
+When behavior changes, review its microcopy entries. Update the phrase, reason, affected states, approval, and version together. When only tone changes, confirm that the new wording preserves the action and consequences.
+
+Do not maintain disconnected copies in design files, tickets, and code. Choose an authoritative record and link other tools to it. The production implementation remains evidence of what ships, while the decision record explains why.
+
+Archive superseded wording when the history matters. A short disposition helps future reviewers understand whether a phrase changed because of behavior, policy, accessibility, translation, or editorial preference.
+
+## Test in the real interface
+
+Review copy with representative data, narrow screens, long names, blank values, validation failures, and slow states. Confirm buttons fit without hiding meaning and instructions remain near the relevant control.
+
+Ask a reviewer to predict what will happen before activating a consequential control. After the action, ask whether the result matches the message. This simple check often exposes labels that sound polished but make a false promise.
+
+Record the environment and version. A design prototype can test comprehension, but only the implemented page can prove actual system behavior.
+
+## Further reading
+
+[Review error-state copy](/blog/outsourced-website-design-error-state-copy)
+[Define button labels](/blog/outsourced-website-design-button-labels)
+
+## Handoff the vocabulary
+
+Return the active record, glossary, component references, approval rules, localization notes, test evidence, and named owner. Remove obsolete draft exports or label them clearly. The client should be able to change a workflow without asking the former vendor what a label meant.
+
+A good record makes small copy easier to maintain. It protects accurate meaning while leaving room for careful editorial improvement.
+
+## Frequently asked questions
+
+### Does every button need a decision entry?
+
+No. Record copy with meaningful behavioral, policy, accessibility, or cross-component consequences.
+
+### Should code or the design file be authoritative?
+
+Choose one governed source for approved wording and decisions, then reconcile the implemented interface against it.
+
+### Who approves error messages?
+
+The workflow owner should confirm behavior, while content and accessibility reviewers check clarity. Other specialists approve language within their authority.
+
+## Related Articles
+
+[Empty-state copy](/blog/outsourced-website-design-empty-state-copy)
+[Copy handoff](/blog/outsourced-website-design-copy-handoff)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
