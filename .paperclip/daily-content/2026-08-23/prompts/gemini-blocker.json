@@ -1,0 +1,20 @@
+{
+  "provider": "Gemini",
+  "status": "unavailable",
+  "reason": "No Gemini image-generation capability is exposed in this execution environment.",
+  "fallback": "Text and routes completed with the existing route imagery preserved, as authorized by the v8 contract.",
+  "routes": [
+    "/blog/outsourced-website-design-component-deprecation-plan",
+    "/blog/outsourced-website-design-design-qa-evidence-sampling",
+    "/blog/outsourced-website-design-content-ownership-raci",
+    "/blog/outsourced-website-design-responsive-image-crop-brief",
+    "/blog/outsourced-website-design-multistep-form-recovery",
+    "/blog/outsourced-website-design-cms-rollback-runbook",
+    "/blog/outsourced-website-design-browser-cache-invalidation-handoff",
+    "/blog/outsourced-website-design-design-token-migration",
+    "/blog/outsourced-website-design-analytics-consent-mode-handoff",
+    "/blog/outsourced-website-design-multilingual-url-architecture",
+    "/blog/outsourced-website-design-zero-results-recovery",
+    "/blog/outsourced-website-design-accessibility-remediation-acceptance"
+  ]
+}

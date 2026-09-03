@@ -1,0 +1,52 @@
+{
+  "entries": [
+    {
+      "route": "/blog/outsourced-website-design-component-deprecation-plan",
+      "sourcePath": "content/blog/outsourced-website-design-component-deprecation-plan.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-design-qa-evidence-sampling",
+      "sourcePath": "content/blog/outsourced-website-design-design-qa-evidence-sampling.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-content-ownership-raci",
+      "sourcePath": "content/blog/outsourced-website-design-content-ownership-raci.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-responsive-image-crop-brief",
+      "sourcePath": "content/blog/outsourced-website-design-responsive-image-crop-brief.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-multistep-form-recovery",
+      "sourcePath": "content/blog/outsourced-website-design-multistep-form-recovery.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-cms-rollback-runbook",
+      "sourcePath": "content/blog/outsourced-website-design-cms-rollback-runbook.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-browser-cache-invalidation-handoff",
+      "sourcePath": "content/blog/outsourced-website-design-browser-cache-invalidation-handoff.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-design-token-migration",
+      "sourcePath": "content/blog/outsourced-website-design-design-token-migration.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-analytics-consent-mode-handoff",
+      "sourcePath": "content/blog/outsourced-website-design-analytics-consent-mode-handoff.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-multilingual-url-architecture",
+      "sourcePath": "content/blog/outsourced-website-design-multilingual-url-architecture.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-zero-results-recovery",
+      "sourcePath": "content/blog/outsourced-website-design-zero-results-recovery.mdx"
+    },
+    {
+      "route": "/blog/outsourced-website-design-accessibility-remediation-acceptance",
+      "sourcePath": "content/blog/outsourced-website-design-accessibility-remediation-acceptance.mdx"
+    }
+  ]
+}
