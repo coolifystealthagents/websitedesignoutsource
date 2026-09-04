@@ -1,0 +1,63 @@
+---
+title: "Form Error Identification Evidence for Outsourced Website QA"
+description: "A standards-based review of identifying, describing, and helping users recover from website form errors."
+slug: "form-error-identification-accessibility-research"
+published: 2026-09-04
+---
+
+# Form Error Identification Evidence for Outsourced Website QA
+
+**Published: September 4, 2026**
+
+A red border may be noticeable to some users while providing no programmatic explanation or recovery instruction. This WebsiteDesignOutsource.com note reviews W3C requirements and supporting techniques for outsourced form-error QA. Sources were reviewed on September 4, 2026.
+
+## Research question
+
+What does standards-based evidence support checking when a website detects invalid form input?
+
+## Evidence synthesis
+
+WCAG requires errors that are automatically detected to be identified and described in text under Error Identification. Labels or Instructions addresses expected input, and Error Suggestion applies when a correction is known and offering it would not jeopardize security or purpose. Parsing the criteria separately prevents one generic “accessible errors” checkbox from hiding gaps.
+
+WAI tutorials illustrate notifications, field associations, and feedback patterns. Technique documents provide examples, but W3C notes that techniques are informative rather than the only ways to satisfy a success criterion.
+
+## Practical interpretation
+
+Inference: acceptance should combine visible message review, programmatic association, focus and reading-order observation, correction, resubmission, and preservation of valid data. Color styling alone is insufficient evidence.
+
+## Verification approach
+
+- Trigger each validation class with synthetic input.
+- Confirm the problem is identified in text.
+- Check association between message and affected control.
+- Verify summaries and focus behavior in the implemented journey.
+- Correct the value and confirm a successful, non-duplicated continuation.
+- Test server-detected failures as well as client validation.
+
+## Evidence scope and limitations
+
+This is a standards synthesis, not a conformance determination for a particular form. Security-sensitive suggestions may fall under stated exceptions. Assistive-technology behavior varies with markup, browser, and product, so representative manual testing remains necessary.
+
+## Key takeaways
+
+- Evaluate identification, instruction, and suggestion requirements distinctly.
+- Test the actual correction journey.
+- Preserve valid input when safe and feasible.
+- Use synthetic data and sanitized evidence.
+
+## Sources
+
+1. [WCAG 2.2 Recommendation](https://www.w3.org/TR/WCAG22/) Normative success criteria and conformance framework.
+2. [Understanding SC 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) Intent and examples for error descriptions.
+3. [Understanding SC 3.3.2: Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) Guidance on expected user input.
+4. [Understanding SC 3.3.3: Error Suggestion](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html) Scope and exceptions for correction suggestions.
+5. [WAI Forms Tutorial: Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/) Implementation patterns for user feedback.
+
+## Related research
+
+[Form autocomplete handoff](/research/form-autocomplete-handoff-research)
+[Session timeout accessibility](/research/website-session-timeout-accessibility-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

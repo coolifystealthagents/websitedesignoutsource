@@ -1,0 +1,62 @@
+---
+title: "Interaction to Next Paint Evidence for Outsourced Web Delivery"
+description: "A source-led review of INP measurement, interpretation, and limitations for website performance handoffs."
+slug: "interaction-to-next-paint-outsourced-web-research"
+published: 2026-09-04
+---
+
+# Interaction to Next Paint Evidence for Outsourced Web Delivery
+
+**Published: September 4, 2026**
+
+Teams can optimize an easy button demo while users still encounter slow menus, filters, and form controls. This WebsiteDesignOutsource.com research note reviews how official sources define Interaction to Next Paint (INP) and what that permits a delivery team to claim. Sources were reviewed on September 4, 2026.
+
+## Research question
+
+How should an outsourced website team use INP in performance acceptance without treating one lab run as proof of field experience?
+
+## Evidence synthesis
+
+The web.dev INP guidance describes a page-level responsiveness metric derived from interaction latency across a visit, generally reporting a high-latency interaction. Chrome's Core Web Vitals documentation uses the 75th percentile of eligible field experiences and publishes threshold guidance. Field tools aggregate real-user observations, whereas lab tooling can exercise chosen interactions under controlled conditions.
+
+An acceptance record should separate field and lab evidence, identify the route or template, record the data window and population when available, and list the interactions deliberately exercised. Slow interaction diagnosis needs main-thread, event-handler, and rendering evidence; the metric alone does not identify the cause.
+
+## Practical interpretation
+
+Inference: lab interaction tests are valuable regression checks, but they cannot guarantee the site's field INP because actual devices, visits, interactions, and data eligibility vary.
+
+## Verification approach
+
+- Identify important interactive journeys per template.
+- Exercise opening, typing, filtering, validation, and submission states.
+- Record test hardware, throttling, build, and tool version.
+- Keep field percentile, period, and sample eligibility beside results.
+- Investigate interaction traces rather than optimizing only the headline value.
+
+## Evidence scope and limitations
+
+This review synthesizes official metric and tooling documentation. It does not benchmark this site's users or prescribe a contractual service level. Field datasets can omit low-traffic routes or lack sufficient observations; lab conditions are selected rather than representative by default.
+
+## Key takeaways
+
+- Separate controlled diagnostics from real-user evidence.
+- Test meaningful interactions, not only initial page load.
+- Preserve population and time-window context.
+- Treat INP as a signal that guides investigation, not a root-cause label.
+
+## Sources
+
+1. [web.dev: Interaction to Next Paint](https://web.dev/articles/inp) Definition, interpretation, and threshold guidance.
+2. [Google Search Central: Core Web Vitals](https://developers.google.com/search/docs/appearance/core-web-vitals) Official search guidance and field-measurement context.
+3. [Chrome UX Report documentation](https://developer.chrome.com/docs/crux) Coverage and real-user dataset documentation.
+4. [PageSpeed Insights documentation](https://developers.google.com/speed/docs/insights/v5/about) Explanation of field and lab information in the tool.
+5. [web.dev: Optimize INP](https://web.dev/articles/optimize-inp) Diagnostic and optimization guidance.
+
+## Related research
+
+[HTTP status and route QA](/research/website-http-status-route-qa-research)
+[Website cache control handoff](/research/website-cache-control-handoff-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

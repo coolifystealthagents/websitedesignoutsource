@@ -1,0 +1,51 @@
+---
+title: "Create a Redirect Ownership Register for an Outsourced Redesign"
+description: "Track why redirects exist, who approves changes, how destinations are tested, and when temporary rules expire."
+slug: "outsourced-website-redirect-ownership-register"
+published: 2026-09-04
+---
+
+# Create a Redirect Ownership Register for an Outsourced Redesign
+
+**Published: September 4, 2026**
+
+A redirect spreadsheet is useful only while its decisions remain understandable. Add ownership, rationale, and validation fields so an outsourced redesign team can implement changes without guessing which old URLs still matter.
+
+## Give every row a reason
+
+Record the source URL, proposed destination, response type, reason, evidence source, approver, implementation location, and test result. Distinguish a permanent move from a temporary campaign detour or a page that should genuinely be removed.
+
+## Resolve collisions openly
+
+- Flag several old URLs pointing to one broad destination.
+- Flag destinations that redirect again.
+- Identify query parameters that must be retained or discarded.
+- Separate canonical choices from redirect behavior.
+- Escalate disputed high-traffic or high-value routes.
+
+## Test what was actually deployed
+
+Request each source without automatically following redirects, then check the destination content and status. Test representative capitalization, trailing-slash, protocol, hostname, and parameter cases that the current platform supports.
+
+## Keep the register after launch
+
+Add the deployment date and configuration owner. Review temporary rules on their expiry date and investigate unexpected redirect chains. Never remove a rule solely because it looks old; check logs, links, and business purpose first.
+
+## Related guides
+
+[Review a redirect map](/blog/outsourced-website-design-redirect-map-review)
+[Preserve URLs during a redesign](/blog/outsourced-website-design-url-preservation-brief)
+
+## Frequently asked questions
+
+### Should every deleted page redirect to the home page?
+
+No. Use a relevant replacement when one exists; otherwise document the intended removal behavior.
+
+### Who owns the redirect register?
+
+The client should name a web or search owner, while the production partner maintains implementation evidence.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

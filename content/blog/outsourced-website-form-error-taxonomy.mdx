@@ -1,0 +1,52 @@
+---
+title: "Build a Form Error Taxonomy for Outsourced Website QA"
+description: "Give designers, writers, developers, and testers shared names for validation, service, permission, and recovery failures."
+slug: "outsourced-website-form-error-taxonomy"
+published: 2026-09-04
+---
+
+# Build a Form Error Taxonomy for Outsourced Website QA
+
+**Published: September 4, 2026**
+
+“The form is broken” sends a distributed team in several directions. A small error taxonomy helps the reporter describe what happened and helps the owner route it without exposing customer details.
+
+## Separate the failure classes
+
+Use plain categories such as missing required input, invalid format, conflicting values, expired session, insufficient permission, unavailable service, duplicate submission, upload failure, and unknown error. Add product-specific categories only when they change ownership or recovery.
+
+## Define the evidence packet
+
+- Page and form name, not copied personal data.
+- Test environment and build identifier.
+- Step where the failure appeared.
+- Expected and observed behavior.
+- Browser, viewport, and assistive technology when relevant.
+- Safe screenshot or recording with sensitive fields removed.
+
+## Pair messages with recovery
+
+For each class, define the user-facing summary, field-level guidance, focus behavior, preserved inputs, retry option, and escalation path. Avoid blaming language and do not reveal internal security or service details.
+
+## Test more than blank fields
+
+Include boundary lengths, unexpected formats, slow responses, interrupted uploads, repeated submission, server rejection, and recovery after correction. Confirm keyboard and screen-reader users can locate the summary and affected control.
+
+## Related guides
+
+[Write an error summary brief](/blog/outsourced-website-design-error-summary-brief)
+[Inventory error states](/blog/outsourced-website-design-error-state-inventory)
+
+## Frequently asked questions
+
+### Should testers paste real customer records?
+
+No. Use approved synthetic data and remove sensitive content from evidence.
+
+### Is message copy enough for acceptance?
+
+No. Verify programmatic association, focus, retained input, and a workable recovery path.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

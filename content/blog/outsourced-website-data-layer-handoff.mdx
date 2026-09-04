@@ -1,0 +1,51 @@
+---
+title: "Prepare a Website Data Layer Handoff for an Outsourced Build"
+description: "Define event meaning, fields, consent conditions, test evidence, ownership, and change control before analytics launch."
+slug: "outsourced-website-data-layer-handoff"
+published: 2026-09-04
+---
+
+# Prepare a Website Data Layer Handoff for an Outsourced Build
+
+**Published: September 4, 2026**
+
+An analytics event name can look correct while its timing, fields, or consent conditions are wrong. A data layer handoff connects the measurement decision to implementation and safe verification.
+
+## Start with questions, not tags
+
+For every requested event, record the business question, trigger, allowed properties, prohibited data, consent condition, owner, and downstream report. Remove events with no decision or operational use.
+
+## Define the contract
+
+- Use stable, documented event and property names.
+- State data types, allowed values, and missing-value behavior.
+- Distinguish page context from user-entered content.
+- Define whether an event fires once or may repeat.
+- Record versioning and deprecation rules.
+
+## Test without collecting live personal data
+
+Use synthetic inputs and an approved test property or debug mode. Check accepted, rejected, cancelled, and repeated journeys. Capture the page version, action, observed payload with sensitive fields removed, and expected outcome.
+
+## Assign change control
+
+The implementation partner can propose and test changes, but a client measurement owner and privacy owner should approve meaning and data collection. Update the contract before releasing a renamed field or changed trigger.
+
+## Related guides
+
+[Plan an analytics handoff](/blog/outsourced-website-design-analytics-handoff)
+[Prepare a UTM link handoff](/blog/website-design-utm-link-handoff)
+
+## Frequently asked questions
+
+### Can form text be sent as an analytics property?
+
+Do not collect user-entered content by default. Route the proposal through the client's privacy review.
+
+### Who owns event naming?
+
+Assign one client measurement owner so names remain stable across vendors and tools.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
