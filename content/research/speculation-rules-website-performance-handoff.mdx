@@ -1,0 +1,63 @@
+---
+title: "Speculation Rules Evidence for Website Performance Handoffs"
+description: "A scoped review of prefetching, prerendering, privacy, compatibility, measurement, and fallback decisions."
+slug: "speculation-rules-website-performance-handoff"
+published: 2026-09-07
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Speculation Rules Evidence for Website Performance Handoffs
+
+**Published: September 7, 2026**
+
+Loading a likely next page early may improve navigation, but it can also consume bandwidth, execute requests, or distort measurement. This WebsiteDesignOutsource.com review examines platform documentation for handing off Speculation Rules work. Sources were reviewed September 7, 2026.
+
+## Research question
+
+What should an outsourced team document before using browser speculation to prefetch or prerender website routes?
+
+## Evidence synthesis
+
+The WICG specification and Chrome documentation describe a declarative API for selecting candidate URLs and eagerness. MDN documents syntax and compatibility. Prerendering may prepare a page more fully than prefetching, creating different resource, privacy, analytics, and server implications.
+
+HTTP caching, robots controls, user settings, browser heuristics, and page eligibility still affect behavior. Unsupported browsers should follow ordinary navigation. A performance claim therefore needs field context and a comparison that includes transferred bytes, server work, correctness, and not only perceived speed on a fast test route.
+
+## Practical interpretation
+
+Inference: conservative candidates tied to strong navigation intent are easier to govern than broad prediction across every visible link. Sensitive, state-changing, personalized, or expensive routes need explicit exclusion and review.
+
+## Verification approach
+
+- Inventory candidate, excluded, authenticated, and state-changing routes.
+- Distinguish prefetch from prerender in configuration and evidence.
+- Check analytics, consent, cache, authentication, and server-log behavior.
+- Measure navigation and resource cost with and without speculation.
+- Exercise cancellation, stale content, failed requests, and unsupported browsers.
+- Record browser versions, heuristics, data conditions, and limitations.
+
+## Evidence scope and limitations
+
+This is an emerging-feature documentation synthesis, not a benchmark of this website or a guarantee of cross-browser support. Specifications and implementations may change. Current compatibility and privacy review are required before production use.
+
+## Sources
+
+1. [WICG Speculation Rules](https://wicg.github.io/nav-speculation/speculation-rules.html) Draft API specification.
+2. [Chrome Speculation Rules API](https://developer.chrome.com/docs/web-platform/prerender-pages) Implementation guidance.
+3. [MDN Speculation Rules API](https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API) Platform overview and compatibility.
+4. [MDN script type speculationrules](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/speculationrules) Declarative syntax reference.
+5. [HTML Speculative Loading](https://html.spec.whatwg.org/multipage/urls-and-fetching.html#speculative-loading) HTML loading model context.
+6. [HTTP Caching](https://httpwg.org/specs/rfc9111.html) HTTP cache semantics.
+7. [Chrome DevTools Prerender Status](https://developer.chrome.com/docs/devtools/application/debugging-speculation-rules) Debugging guidance.
+8. [web.dev Prefetching and Prerendering](https://web.dev/articles/preload-prefetch-and-priorities-in-chrome) Resource-priority background.
+9. [Page Visibility API](https://www.w3.org/TR/page-visibility-2/) Document visibility specification.
+10. [Navigation Timing Level 2](https://www.w3.org/TR/navigation-timing-2/) Navigation performance measurement specification.
+
+## Related Research
+
+[Interaction to Next Paint research](/research/interaction-to-next-paint-outsourced-web-research)
+
+[Website cache control handoff](/research/website-cache-control-handoff-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

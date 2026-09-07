@@ -1,0 +1,63 @@
+---
+title: "Focus Appearance Evidence for Outsourced Design Review"
+description: "A standards-led review of visible keyboard focus, contrast, obscuration, component states, and test limitations."
+slug: "focus-appearance-outsourced-design-review"
+published: 2026-09-07
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Focus Appearance Evidence for Outsourced Design Review
+
+**Published: September 7, 2026**
+
+Keyboard focus can technically exist while being too faint, clipped, or covered to guide a person through a page. This WebsiteDesignOutsource.com note reviews WCAG 2.2 and platform guidance relevant to outsourced component acceptance. Sources were reviewed September 7, 2026.
+
+## Research question
+
+What evidence supports a reviewable claim that focus remains visible across website components and page states?
+
+## Evidence synthesis
+
+WCAG 2.2 includes Focus Visible at Level AA, Focus Not Obscured at Level AA and AAA variants, and Focus Appearance at Level AAA. The criteria address distinct outcomes. W3C understanding documents explain intent and examples, while CSS specifications and browser references describe author styling mechanisms such as `:focus-visible` and outlines.
+
+Component screenshots alone omit traversal order, sticky overlays, scroll changes, validation, and transient states. Browser defaults can be useful, but resets or theme tokens may suppress them. Custom indicators need review against adjacent colors and component shapes.
+
+## Practical interpretation
+
+Inference: acceptance should combine systematic keyboard traversal with state and viewport coverage. Teams should document which criterion and conformance level they are evaluating rather than using a vague “focus compliant” label.
+
+## Verification approach
+
+- Traverse every operable element in a meaningful task order.
+- Check default, selected, expanded, invalid, disabled, and modal states.
+- Test sticky headers, cookie layers, drawers, and virtual keyboards.
+- Inspect indicators in light, dark, image, and high-contrast contexts.
+- Repeat at zoom and narrow widths without using a pointer.
+- Record browser, operating system, input, build, and observed exception.
+
+## Evidence scope and limitations
+
+This synthesis does not certify WCAG conformance or cover every assistive technology. Focus visibility is only one keyboard concern; operation, order, semantics, target size, and error recovery require separate evidence.
+
+## Sources
+
+1. [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Normative accessibility recommendation.
+2. [Understanding Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) Level AA criterion guidance.
+3. [Understanding Focus Not Obscured Minimum](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html) Level AA obscuration guidance.
+4. [Understanding Focus Not Obscured Enhanced](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced.html) Level AAA obscuration guidance.
+5. [Understanding Focus Appearance](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html) Level AAA appearance guidance.
+6. [WAI Keyboard Compatibility](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) Keyboard operation context.
+7. [Selectors Level 4 focus-visible](https://www.w3.org/TR/selectors-4/#the-focus-visible-pseudo) CSS selector definition.
+8. [CSS UI Outline Properties](https://www.w3.org/TR/css-ui-4/#outline-props) CSS outline specification.
+9. [MDN focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible) Browser implementation reference.
+10. [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) Composite-widget keyboard guidance.
+
+## Related Research
+
+[Sticky interface focus obscuration](/research/sticky-interface-focus-obscuration-outsourced-review)
+
+[Target size accessibility research](/research/target-size-accessibility-design-review-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

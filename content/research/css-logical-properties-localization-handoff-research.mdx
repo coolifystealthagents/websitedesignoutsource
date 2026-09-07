@@ -1,0 +1,63 @@
+---
+title: "CSS Logical Properties Evidence for Localization Handoffs"
+description: "A standards-based review of flow-relative layout, writing modes, bidirectionality, and testing for localized websites."
+slug: "css-logical-properties-localization-handoff-research"
+published: 2026-09-07
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# CSS Logical Properties Evidence for Localization Handoffs
+
+**Published: September 7, 2026**
+
+Left and right are not universal descriptions of inline flow. This WebsiteDesignOutsource.com research note reviews standards and internationalization guidance relevant to teams handing off layouts for right-to-left and vertical writing modes. Sources were reviewed September 7, 2026.
+
+## Research question
+
+When do CSS logical properties improve a localized component handoff, and what still requires human review?
+
+## Evidence synthesis
+
+CSS Logical Properties define flow-relative dimensions, margins, padding, borders, and positioning. CSS Writing Modes defines block and inline directions, while HTML directionality supplies document semantics. W3C Internationalization guidance explains structural and inline bidirectional text concerns.
+
+Replacing every physical property mechanically is not enough. Brand marks, media controls, maps, directional icons, charts, mixed-script strings, and intentionally physical alignment may need case-specific decisions. Translation expansion also creates constraints unrelated to direction.
+
+## Practical interpretation
+
+Inference: logical properties reduce duplicated layout rules when spacing follows reading flow, but the handoff must label intentional physical directions. Acceptance should use real or linguistically representative content rather than mirrored screenshots alone.
+
+## Verification approach
+
+- Identify supported languages, scripts, directions, and writing modes.
+- Test document direction plus nested opposite-direction content.
+- Inspect navigation, forms, tables, breadcrumbs, icons, and overflow.
+- Stress labels, numbers, punctuation, addresses, and user-generated strings.
+- Record each retained physical property and its design reason.
+- Include zoom, keyboard order, and assistive-technology review.
+
+## Evidence scope and limitations
+
+This standards synthesis does not validate a translation, prescribe support for every writing mode, or replace review by native readers. Browser behavior, fonts, content systems, and third-party widgets can affect the final result.
+
+## Sources
+
+1. [CSS Logical Properties Level 1](https://www.w3.org/TR/css-logical-1/) Flow-relative CSS specification.
+2. [CSS Writing Modes Level 3](https://www.w3.org/TR/css-writing-modes-3/) Writing-mode and direction specification.
+3. [HTML directionality](https://html.spec.whatwg.org/multipage/dom.html#the-dir-attribute) HTML direction semantics.
+4. [W3C Internationalization: Structural markup and right-to-left text](https://www.w3.org/International/questions/qa-html-dir) Directionality guidance.
+5. [W3C Internationalization: Inline markup and bidirectional text](https://www.w3.org/International/articles/inline-bidi-markup/) Mixed-direction text guidance.
+6. [W3C Internationalization: Styling vertical Chinese, Japanese, Korean and Mongolian text](https://www.w3.org/International/articles/vertical-text/) Vertical text overview.
+7. [MDN CSS logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) Implementation reference.
+8. [MDN writing-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) Writing-mode examples and syntax.
+9. [Unicode Bidirectional Algorithm](https://www.unicode.org/reports/tr9/) Normative Unicode direction algorithm.
+10. [WAI Language of Page](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html) Accessibility context for page language.
+
+## Related Research
+
+[Multilingual language identification](/research/multilingual-page-language-identification-handoff-research)
+
+[DOM order and visual layout study](/research/outsourced-website-dom-order-visual-layout-study)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

@@ -7,6 +7,7 @@ import { MobileQaArticle } from './mobile-qa-article';
 import { contentBlogPosts, renderMarkdown } from '../../content-library';
 
 const baseUrl = 'https://websitedesignoutsource.com';
+const defaultArticleImage = '/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp';
 
 const publicationDateFormatter = new Intl.DateTimeFormat('en-US', {
   year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description: contentPost.excerpt,
         url: canonical,
         publishedTime: contentPost.published,
+        images: [contentPost.image || defaultArticleImage],
       },
     };
   }

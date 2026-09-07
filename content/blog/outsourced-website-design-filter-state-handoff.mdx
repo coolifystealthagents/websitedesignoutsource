@@ -1,0 +1,48 @@
+---
+title: "Hand Off Search and Filter States Without Hidden Decisions"
+description: "Document filter logic, URL behavior, empty results, accessibility, and analytics for outsourced website implementation."
+slug: "outsourced-website-design-filter-state-handoff"
+published: 2026-09-07
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Hand Off Search and Filter States Without Hidden Decisions
+
+**Published: September 7, 2026**
+
+A filter mockup shows controls but often hides the product rules. The handoff should explain which filters combine, whether choices affect the URL, and how the page responds when data changes.
+
+## Write the state model
+
+For every control, record its data field, allowed values, default, multi-select behavior, and relationship to other controls. Define whether selections use AND or OR logic. Include sorting, pagination, and the order in which result counts update.
+
+## Decide what belongs in the URL
+
+Shareable searches need stable, readable parameters and a defined canonical strategy. Specify back-button behavior, preserved scroll position, invalid parameters, and reset actions. Ask the search owner to decide which combinations, if any, should be indexed.
+
+## Design beyond populated results
+
+- Loading and delayed response.
+- No results with active filters.
+- Partial data or a failed service.
+- Long labels and translated values.
+- Keyboard and screen-reader operation.
+- A filter panel opening and closing on narrow screens.
+
+## Verify with known fixtures
+
+Create a small test dataset with expected counts. Record query, filters, sort, expected identifiers, and observed result. That evidence exposes logic errors a screenshot cannot.
+
+## Further reading
+
+[Brief a search results page](/blog/website-design-search-results-page-brief)
+
+[Design zero-results recovery](/blog/outsourced-website-design-zero-results-recovery)
+
+## Related Articles
+
+Keep filter acceptance tied to the documented content model and analytics plan.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
