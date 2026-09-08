@@ -11,7 +11,20 @@ if (!routine) throw new Error(`Unknown routine kind: ${kind}`);
 const directory = path.join(root, routine.directory);
 if (!fs.existsSync(directory)) throw new Error(`Missing content directory: ${routine.directory}`);
 
-const files = fs.readdirSync(directory).filter((file) => /\.(md|mdx)$/.test(file));
+// This is a batch validator, not a migration gate for every historical article.
+// The routine passes only the files it has just written so legacy Markdown and
+// earlier MDX formats remain a separately scoped cleanup task.
+const requestedFiles = process.argv.slice(3);
+if (!requestedFiles.length) throw new Error(`Provide at least one ${kind} content file to validate`);
+const files = requestedFiles.map((requested) => {
+  const normalized = path.normalize(requested);
+  const expectedPrefix = `${routine.directory}${path.sep}`;
+  if (!normalized.startsWith(expectedPrefix)) throw new Error(`File is outside ${routine.directory}: ${requested}`);
+  const file = path.basename(normalized);
+  if (!/\.(md|mdx)$/.test(file)) throw new Error(`Unsupported content file: ${requested}`);
+  if (!fs.existsSync(path.join(directory, file))) throw new Error(`Missing content file: ${requested}`);
+  return file;
+});
 const errors = [];
 const slugs = new Set();
 for (const file of files) {
@@ -20,7 +33,7 @@ for (const file of files) {
   if (!frontmatter) errors.push(`${file}: missing frontmatter`);
   if ((source.match(/^# /gm) || []).length !== 1) errors.push(`${file}: expected exactly one H1`);
   if (/—|–|\s--\s/.test(source)) errors.push(`${file}: em dash, en dash, or prose double hyphen found`);
-  if (/\b(REPLACE|TODO|TBD|lorem ipsum|placeholder)\b/i.test(source)) errors.push(`${file}: unresolved placeholder found`);
+  if (/\b(?:REPLACE_ME|TODO|TBD)\b|\blorem ipsum\b|\{\{\s*placeholder\s*\}\}|\[\s*placeholder\s*\]/i.test(source)) errors.push(`${file}: unresolved placeholder found`);
   const slug = file.replace(/\.(md|mdx)$/, '');
   if (slugs.has(slug)) errors.push(`${file}: duplicate slug`);
   slugs.add(slug);

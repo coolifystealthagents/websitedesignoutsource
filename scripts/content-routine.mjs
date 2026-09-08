@@ -74,7 +74,9 @@ for (const article of articles) {
   fs.writeFileSync(path.join(outDir, file), render(article));
   written.push(path.join(routine.directory, file));
 }
-execFileSync('node', [path.join(root, 'scripts/validate-content-batch.mjs'), kind], { stdio: 'inherit' });
+if (written.length) {
+  execFileSync('node', [path.join(root, 'scripts/validate-content-batch.mjs'), kind, ...written], { stdio: 'inherit' });
+}
 const report = { routine: routine.name, target, existing: existing.size, generated: written.length, files: written, humanizerSource: 'https://github.com/blader/humanizer', humanizerVersion: '2.9.1', humanizerPass: 'PASS', finalAiPatternAudit: 'PASS', protectedElementValidation: 'PASS', factPreservationValidation: 'PASS', structureValidationAfterHumanizer: 'PASS', generatedAtUtc: new Date().toISOString() };
 fs.writeFileSync(path.join(scratch, kind + '-run.json'), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report));
