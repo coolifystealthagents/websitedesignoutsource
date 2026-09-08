@@ -1,0 +1,60 @@
+---
+title: "Time-Zone Interface Evidence for Outsourced Web Projects"
+description: "A source-led review of named zones, offsets, daylight saving transitions, date context, storage, and test limits."
+slug: "time-zone-interface-outsourced-web-research"
+published: 2026-09-08
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Time-Zone Interface Evidence for Outsourced Web Projects
+
+**Published: September 8, 2026**
+
+A time-zone selector sits on top of political and historical rules that change independently of a website release. This WebsiteDesignOutsource.com review asks what an outsourced team can verify about zone selection and displayed times. Sources were reviewed September 8, 2026.
+
+## Research question
+
+Which evidence helps distinguish a robust named-zone interface from one that stores or displays a temporary UTC offset as if it were permanent?
+
+## Methodology and scope
+
+We reviewed the IANA Time Zone Database, Unicode locale-data guidance, ECMAScript internationalization specifications, HTML date and time input definitions, and relevant MDN references. We mapped the material to selecting a zone, storing an instant, formatting it for a person, and testing transitions. The scope is website interfaces. Calendar policy, legal deadlines, and native applications are excluded.
+
+## Evidence synthesis
+
+The IANA database records rules and identifiers for civil time zones. A named zone can have different UTC offsets on different dates; a fixed offset alone cannot express those rules. Unicode CLDR supplies localized naming and formatting data, while ECMA-402 defines JavaScript internationalization behavior that can use supported time-zone identifiers.
+
+HTML's local date and time control represents a local value without carrying a time zone. Applications therefore need a separate decision about which zone gives that value meaning. Ambiguous or nonexistent local times can occur around clock changes. The correct response depends on the product's scheduling policy, not merely on formatting.
+
+## Practical interpretation
+
+Inference: acceptance records should keep the source instant, selected named zone, displayed date and time, and data or runtime version together. Fixtures should include dates on both sides of seasonal transitions, zones without such transitions, non-hour offsets, travel or device-zone changes, and events that cross a local date boundary.
+
+The interface should identify which zone controls a value and let users review an inferred default. Search results and labels should remain understandable without relying on ambiguous abbreviations. When users schedule a local wall time, the product owner must define how the system handles repeated or skipped values. The outsourced team should implement and evidence that policy rather than choose it silently.
+
+## Inference limits and limitations
+
+Time-zone rules can change after deployment, and runtime data versions can differ. The reviewed sources do not decide business policy for deadlines, billing, travel, or historical records. This qualitative review is not legal advice and cannot prove future civil-time rules. Cross-browser behavior and the application's storage layer need direct testing.
+
+## Sources
+
+1. [IANA Time Zone Database](https://www.iana.org/time-zones) Named-zone data and releases.
+2. [Theory and pragmatics of the tz code and data](https://data.iana.org/time-zones/tzdb/theory.html) Database scope and naming rationale.
+3. [Unicode TR35 dates](https://unicode.org/reports/tr35/tr35-dates.html) Locale date, time, and zone data.
+4. [ECMAScript Internationalization API](https://tc39.es/ecma402/) JavaScript internationalization specification.
+5. [HTML local date and time state](https://html.spec.whatwg.org/multipage/input.html#local-date-and-time-state-(type=datetime-local)) Local value definition.
+6. [MDN Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) Browser-facing formatting reference.
+7. [MDN datetime-local](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) Input behavior and limitations.
+8. [Temporal proposal](https://tc39.es/proposal-temporal/) JavaScript date, time, instant, and zone model.
+9. [Unicode time-zone names](https://unicode.org/reports/tr35/tr35-dates.html#Time_Zone_Names) Localized time-zone naming model.
+10. [IANA tz database releases](https://data.iana.org/time-zones/releases/) Published database release archive.
+
+## Related Research
+
+[Localization metadata research](/research/website-language-metadata-localization-research)
+
+[Form error recovery evidence](/research/website-form-error-recovery-evidence-2026)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
