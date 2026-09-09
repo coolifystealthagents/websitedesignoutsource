@@ -1,0 +1,58 @@
+---
+title: "Can a Website Release Prevent Mixed Asset Versions?"
+description: "A source-led study of HTTP caching, validators, versioned assets, service workers, and release evidence."
+slug: "web-asset-cache-versioning-handoff-study"
+published: 2026-09-09
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Can a Website Release Prevent Mixed Asset Versions?
+
+**Published: September 9, 2026**
+
+Visitors may receive HTML, scripts, styles, images, and fonts through different caches. This research note examines evidence that a release converges on compatible versions. Sources were reviewed September 9, 2026.
+
+## Research question
+
+What can an outsourced website team verify about cache invalidation and asset identity without claiming control over every intermediary?
+
+## Methodology and scope
+
+We reviewed HTTP caching and conditional request standards, MDN and web.dev deployment guidance, service worker specifications, and CDN documentation concepts. Scope covers ordinary static web assets and HTML releases. Personalized application data and vendor-specific incident procedures are excluded.
+
+## Evidence synthesis
+
+HTTP caching uses freshness, validation, and cache directives. Validators such as ETag and Last-Modified can support conditional requests. Long-lived caching is compatible with updates when an asset URL changes with its content. Reusing the same URL for different immutable bytes defeats that contract.
+
+HTML often needs a shorter update path because it points to the current asset graph. Service workers can add another cache and lifecycle boundary. A successful build or purge request alone does not prove what a returning visitor receives.
+
+## Practical interpretation
+
+Inference: capture the old page and asset URLs, publish one identified release, then navigate normally from warm and clean sessions. Record requested filenames, response headers, body hashes, service worker state, and visible result. Test rollback with the same discipline. Prefer deterministic asset versioning over instructions to hard refresh.
+
+## Inference limits and limitations
+
+Private caches, browser heuristics, network intermediaries, and CDN configuration vary. A limited browser matrix cannot prove every edge location. This synthesis is not a vendor runbook or performance guarantee.
+
+## Sources
+
+1. [RFC 9111 HTTP Caching](https://httpwg.org/specs/rfc9111.html) Cache semantics.
+2. [RFC 9110 validators](https://httpwg.org/specs/rfc9110.html#validators) Representation validators.
+3. [MDN HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) Practical reference.
+4. [MDN Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) Directive reference.
+5. [MDN ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag) Entity tags.
+6. [web.dev cache guidance](https://web.dev/articles/http-cache) Caching patterns.
+7. [Service Workers specification](https://www.w3.org/TR/service-workers/) Worker lifecycle and caches.
+8. [MDN service worker lifecycle](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) Browser lifecycle reference.
+9. [WHATWG script element](https://html.spec.whatwg.org/multipage/scripting.html#the-script-element) Script fetching context.
+10. [Subresource Integrity](https://www.w3.org/TR/SRI/) Resource integrity metadata.
+
+## Related Research
+
+[Performance budget handoff](/research/website-performance-budget-handoff)
+
+[QA evidence pack research](/research/website-qa-evidence-pack-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

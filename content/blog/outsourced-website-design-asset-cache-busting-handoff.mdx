@@ -1,0 +1,39 @@
+---
+title: "Plan Cache Busting Without Teaching Users to Hard Refresh"
+description: "Define versioned assets, cache boundaries, rollback evidence, and acceptance checks for outsourced releases."
+slug: "outsourced-website-design-asset-cache-busting-handoff"
+published: 2026-09-09
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Plan Cache Busting Without Teaching Users to Hard Refresh
+
+**Published: September 9, 2026**
+
+When a release mixes old styles with new markup, asking visitors to clear their cache is not a durable fix. The deployment handoff needs an asset identity strategy.
+
+## Name the cache boundaries
+
+List versioned scripts, styles, images, fonts, documents, HTML responses, and external caches. Record which layer controls each lifetime. Content editors should know when replacing a file at the same path can leave stale copies in circulation.
+
+## Make releases coherent
+
+Prefer content-derived asset names or another proven versioning mechanism. Ensure generated pages reference the matching assets and preserve a rollback path. Do not append random query strings manually without an ownership rule.
+
+## Test ordinary visitors
+
+Load the old release, deploy the candidate, then navigate normally in the same browser. Inspect response headers and requested filenames, test a clean session, and verify rollback behavior. Evidence should show that visitors converge on one coherent version without special instructions.
+
+## Further reading
+
+[Set a performance budget](/blog/outsourced-website-performance-budget-acceptance)
+
+[Build a launch readiness review](/blog/website-design-launch-readiness-review)
+
+## Related Articles
+
+Connect cache behavior to the build, content, and rollback records for each release.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

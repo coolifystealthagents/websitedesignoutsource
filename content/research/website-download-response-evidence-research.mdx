@@ -1,0 +1,58 @@
+---
+title: "Testing Website Downloads From Link Label to Saved File"
+description: "A standards-led review of download names, media types, response headers, accessible purpose, and maintenance."
+slug: "website-download-response-evidence-research"
+published: 2026-09-09
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Testing Website Downloads From Link Label to Saved File
+
+**Published: September 9, 2026**
+
+A download crosses page copy, HTML behavior, an HTTP response, browser policy, and a file stored outside the website. This research note defines evidence at each boundary. Sources were reviewed September 9, 2026.
+
+## Research question
+
+How can an outsourced delivery team verify that a download is understandable before activation and recognizable after it is saved?
+
+## Methodology and scope
+
+We compared HTML and HTTP standards, IANA media registrations, WCAG link guidance, PDF accessibility material, and browser references. Scope includes first-party public downloads initiated from links. Authenticated exports and malware analysis are outside scope.
+
+## Evidence synthesis
+
+HTML provides a download attribute, but browsers may apply origin and security constraints. HTTP Content-Disposition can suggest inline or attachment handling and a filename. Content-Type describes the representation. None of those fields alone proves that the bytes match the advertised file or that a person understands the link.
+
+Accessible link purpose is evaluated from its text and context. File type, size, language, and date may matter when they affect the choice. The saved filename becomes an important identifier after surrounding page content disappears.
+
+## Practical interpretation
+
+Inference: record visible label, accessible name, source URL, status, redirects, media type, disposition, byte size, final filename, and a safe open result. Compare advertised and actual facts. Retest after replacement and include stale-link monitoring for high-value documents.
+
+## Inference limits and limitations
+
+Browser download prompts and filename sanitation differ across platforms. Response inspection does not establish document accessibility, safety, accuracy, or legal approval. Those require their own reviews and owners.
+
+## Sources
+
+1. [WHATWG download attribute](https://html.spec.whatwg.org/multipage/links.html#downloading-resources) Download processing.
+2. [RFC 6266 Content-Disposition](https://www.rfc-editor.org/rfc/rfc6266) Filename and disposition semantics.
+3. [RFC 9110 Content-Type](https://httpwg.org/specs/rfc9110.html#field.content-type) Representation metadata.
+4. [IANA media types](https://www.iana.org/assignments/media-types/media-types.xhtml) Registered types.
+5. [MDN download attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#download) Browser-facing reference.
+6. [WCAG link purpose](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html) Link labeling.
+7. [WCAG consistent identification](https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html) Consistent controls.
+8. [WAI link text tips](https://www.w3.org/WAI/tips/writing/#make-link-text-meaningful) Writing guidance.
+9. [W3C PDF techniques](https://www.w3.org/WAI/WCAG22/Techniques/pdf/) PDF accessibility techniques.
+10. [OWASP file download guidance](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html) File handling security context.
+
+## Related Research
+
+[Link name accessibility research](/research/website-link-name-accessibility-research)
+
+[File upload accessibility and security research](/research/website-file-upload-accessibility-security-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

@@ -1,0 +1,58 @@
+---
+title: "What Counts as Evidence for a Production Favicon Set?"
+description: "A source-led study of favicon formats, discovery, installed icons, caching, and review limits."
+slug: "website-favicon-delivery-evidence-research"
+published: 2026-09-09
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# What Counts as Evidence for a Production Favicon Set?
+
+**Published: September 9, 2026**
+
+Small browser icons are delivered through several HTML and manifest mechanisms. This WebsiteDesignOutsource.com study asks what an outsourced team can verify without claiming identical presentation across browsers. Sources were reviewed September 9, 2026.
+
+## Research question
+
+Which source files, metadata, response checks, and visual samples support a defensible favicon acceptance record?
+
+## Methodology and scope
+
+We compared WHATWG link-type requirements, W3C manifest material, MDN references, browser guidance, and image-format documentation. Scope includes public websites and installable web experiences. Native application packaging and individual browser branding choices are excluded.
+
+## Evidence synthesis
+
+HTML icon links can provide several candidates with types and sizes, while user agents select an appropriate resource. A web app manifest introduces additional icon purposes and size declarations. This means one screenshot cannot prove the full set. Direct asset responses, parsed metadata, dimensions, transparency, and representative browser views answer different parts of the question.
+
+The favicon also sits behind caches. A stale local icon can disagree with the current response even when production is correct. A review should identify the requested URL and response separately from a browser's displayed result.
+
+## Practical interpretation
+
+Inference: a compact evidence pack should include the approved master, an asset matrix, direct HTTP results, document and manifest references, and fresh-profile views at representative small sizes. Review contrast against common light and dark chrome, but do not infer universal appearance from two browsers.
+
+## Inference limits and limitations
+
+Browser selection, masking, scaling, caching, and installed shortcut behavior vary by product and operating system. Standards describe inputs more reliably than final chrome. This is not trademark guidance, a complete progressive web app audit, or proof of every device.
+
+## Sources
+
+1. [WHATWG link type icon](https://html.spec.whatwg.org/multipage/links.html#rel-icon) HTML icon processing.
+2. [W3C Web App Manifest](https://www.w3.org/TR/appmanifest/) Manifest model.
+3. [MDN rel icon](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel#icon) Link relationship reference.
+4. [MDN manifest icons](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) Manifest icon fields.
+5. [web.dev adaptive icon guidance](https://web.dev/articles/maskable-icon) Maskable icon overview.
+6. [Chrome install criteria](https://developer.chrome.com/docs/capabilities/pwa-install) Browser installation guidance.
+7. [Apple web app configuration](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html) Apple touch icon behavior.
+8. [W3C PNG specification](https://www.w3.org/TR/png/) PNG format.
+9. [IANA image media types](https://www.iana.org/assignments/media-types/media-types.xhtml#image) Registered image types.
+10. [HTTP caching specification](https://httpwg.org/specs/rfc9111.html) Cache behavior.
+
+## Related Research
+
+[Image format selection research](/research/website-image-format-selection-research)
+
+[Website QA evidence pack](/research/website-qa-evidence-pack-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

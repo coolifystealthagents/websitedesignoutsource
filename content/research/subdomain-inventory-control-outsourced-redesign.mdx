@@ -1,0 +1,58 @@
+---
+title: "Why a Redesign Needs a Subdomain Control Record"
+description: "Research on discovering subdomains, assigning ownership, mapping trust boundaries, and limiting audit claims."
+slug: "subdomain-inventory-control-outsourced-redesign"
+published: 2026-09-09
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Why a Redesign Needs a Subdomain Control Record
+
+**Published: September 9, 2026**
+
+Public web estates often extend beyond the hostname in the main navigation. This WebsiteDesignOutsource.com review considers how an outsourced team can inventory those boundaries without claiming that passive discovery is complete. Sources were reviewed September 9, 2026.
+
+## Research question
+
+Which evidence sources and ownership fields make a subdomain inventory useful for redesign, migration, and security coordination?
+
+## Methodology and scope
+
+We reviewed DNS and certificate standards, search and migration documentation, OWASP testing guidance, and web security references. Scope covers authorized domains connected to a website program. Active intrusion testing, takeover attempts, and systems outside the client's authorization are excluded.
+
+## Evidence synthesis
+
+DNS records expose configured names but not necessarily business purpose. Certificate transparency can reveal names seen in issued certificates, while analytics, search tools, code, and stakeholder records expose different subsets. No single source establishes completeness.
+
+Subdomains can also form separate origins, affecting cookies, browser permissions, content security policy, and authentication. A visual brand inventory therefore needs technical owners and trust-boundary notes, not only screenshots.
+
+## Practical interpretation
+
+Inference: merge authorized DNS exports, certificate records, search properties, analytics hosts, repositories, and known vendor integrations. For each hostname record purpose, environment, platform, owners, data sensitivity, certificate, navigation dependencies, and keep, migrate, restrict, or retire decision. Flag unknowns for a named owner.
+
+## Inference limits and limitations
+
+Passive sources can be stale or incomplete, and wildcard records complicate counts. This review is not a penetration test or authorization to probe third-party systems. A point-in-time inventory needs ongoing ownership to remain useful.
+
+## Sources
+
+1. [RFC 1034 Domain Names](https://www.rfc-editor.org/rfc/rfc1034) DNS concepts.
+2. [RFC 1035 DNS implementation](https://www.rfc-editor.org/rfc/rfc1035) DNS records.
+3. [RFC 9162 Certificate Transparency](https://www.rfc-editor.org/rfc/rfc9162) Certificate logs.
+4. [OWASP subdomain enumeration](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server) Authorized information gathering context.
+5. [MDN same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) Origin boundaries.
+6. [MDN cookie Domain](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#domain) Cookie scope.
+7. [Google site move guidance](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) Migration evidence.
+8. [Google canonicalization](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) URL identity.
+9. [W3C Content Security Policy](https://www.w3.org/TR/CSP3/) Resource boundaries.
+10. [NIST asset management category](https://www.nist.gov/cyberframework) Governance context.
+
+## Related Research
+
+[Migration inventory control study](/research/website-migration-inventory-control-study)
+
+[Access governance research](/research/website-design-access-governance-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
