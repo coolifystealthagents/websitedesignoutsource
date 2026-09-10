@@ -1,0 +1,39 @@
+---
+title: "Specify Loading States With Real Timing and Content"
+description: "Define pending feedback, layout stability, errors, retries, and acceptance checks for loading interfaces."
+slug: "outsourced-website-design-loading-state-spec"
+published: 2026-09-10
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Specify Loading States With Real Timing and Content
+
+**Published: September 10, 2026**
+
+Loading states are easiest to miss on a fast local connection. They become part of the main experience when a request is slow, repeated, or unsuccessful.
+
+## Match feedback to the wait
+
+List every action that starts a request and say what remains usable while it runs. Reserve space for arriving content when dimensions are known. For a submitted action, prevent accidental duplicates without trapping a visitor in a disabled interface.
+
+## Separate pending from failed
+
+A spinner cannot explain an error. Define timeout, error, empty, partial, and offline messages separately. Give retries a clear label and preserve input when it is safe to do so.
+
+## Slow the test environment
+
+Use network throttling and delayed fixtures to make each state observable. Check layout movement, repeated activation, screen-reader announcements, and recovery after a failed request. Record thresholds as implementation expectations, not universal promises about network speed.
+
+## Further reading
+
+[Plan error messages](/blog/outsourced-website-design-error-message-guide)
+
+[Set a performance budget](/blog/website-design-performance-budget)
+
+## Related Articles
+
+Keep this decision with the approved page brief and acceptance record.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

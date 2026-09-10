@@ -1,0 +1,56 @@
+---
+title: "Breadcrumb Semantics and Verification in Website Handoffs"
+description: "Research on breadcrumb structure, accessible naming, structured data, and limits of visual review."
+slug: "website-breadcrumb-semantics-handoff-research"
+published: 2026-09-10
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Breadcrumb Semantics and Verification in Website Handoffs
+
+**Published: September 10, 2026**
+
+This WebsiteDesignOutsource.com review asks what evidence supports acceptance of a breadcrumb component. Sources were reviewed September 10, 2026.
+
+## Research question
+
+Which visible, semantic, navigation, and machine-readable checks can establish that a production breadcrumb matches an approved website hierarchy?
+
+## Methodology and scope
+
+We compared the WAI-ARIA Authoring Practices breadcrumb pattern, WCAG 2.2 requirements, HTML navigation semantics, and Google's breadcrumb structured-data documentation. Scope covers public HTML pages with hierarchical breadcrumbs. Faceted navigation and application history controls are outside scope.
+
+## Evidence synthesis
+
+The ARIA pattern places the trail in a navigation landmark with an accessible label and marks the current page. WCAG supplies broader requirements for meaningful sequence, link purpose, focus visibility, and consistent navigation. Google documents a separate machine-readable breadcrumb representation. These layers overlap, but none proves the others.
+
+## Practical interpretation
+
+Inference: acceptance evidence should pair a hierarchy fixture with DOM inspection, keyboard traversal, accessible-name output, destination checks, and structured-data parsing. Review representative long labels and narrow widths. A screenshot can confirm visual order and wrapping, but it cannot establish landmark naming or destination accuracy.
+
+## Inference boundaries and limitations
+
+The sources define patterns and conformance expectations, not one mandatory visual design. Search engines decide whether to display supplied structured data. This review does not validate an information architecture, guarantee rich-result display, or replace testing with disabled users.
+
+## Sources
+
+1. [WAI-ARIA Authoring Practices breadcrumb pattern](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/)
+2. [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+3. [WHATWG navigation element](https://html.spec.whatwg.org/multipage/sections.html#the-nav-element)
+4. [Google breadcrumb structured data](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)
+5. [Schema.org BreadcrumbList](https://schema.org/BreadcrumbList)
+6. [W3C Understanding Link Purpose](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html)
+7. [W3C Understanding Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html)
+8. [W3C Understanding Consistent Navigation](https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html)
+9. [WHATWG link element](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element)
+10. [Google structured-data policies](https://developers.google.com/search/docs/appearance/structured-data/sd-policies)
+
+## Related Research
+
+[Canonical URL implementation research](/research/website-canonical-url-implementation-research)
+
+[Navigation depth research](/research/website-design-navigation-depth-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

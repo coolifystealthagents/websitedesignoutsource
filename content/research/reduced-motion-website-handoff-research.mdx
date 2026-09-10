@@ -1,0 +1,56 @@
+---
+title: "Reduced Motion Evidence in Website Design Handoffs"
+description: "Research on motion triggers, user preferences, pause controls, testing, and inference limits."
+slug: "reduced-motion-website-handoff-research"
+published: 2026-09-10
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Reduced Motion Evidence in Website Design Handoffs
+
+**Published: September 10, 2026**
+
+This WebsiteDesignOutsource.com study asks how a team can document reduced-motion behavior without claiming that one preference query resolves every motion-related risk. Sources were reviewed September 10, 2026.
+
+## Research question
+
+What inventory and test evidence can show how a website responds to motion preferences and WCAG requirements?
+
+## Methodology and scope
+
+We reviewed WCAG 2.2 criteria and guidance concerning animation and moving content, the Media Queries specification, and CSS guidance for `prefers-reduced-motion`. Scope includes CSS and script-driven motion in web interfaces. Video captioning and hardware display settings are excluded.
+
+## Evidence synthesis
+
+The media feature communicates a user's preference for less nonessential motion. WCAG addresses motion triggered by interaction and provides pause, stop, or hide requirements for certain moving content. These are related controls, not substitutes. A preference response can reduce a transition while a separate pause control remains necessary for continuing movement.
+
+## Practical interpretation
+
+Inference: teams should maintain a motion inventory with trigger, duration, repetition, purpose, default behavior, reduced alternative, and owner. Verification should run each component with both preference states, reload the page, navigate within the application, and confirm that disabled reveals do not hide content. Record motion that remains and the reason.
+
+## Inference boundaries and limitations
+
+The preference does not identify a medical condition or prescribe one universal design response. Browser support and application architecture affect when changes take effect. This method does not establish full WCAG conformance or measure an individual's physical response.
+
+## Sources
+
+1. [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+2. [Understanding Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)
+3. [Understanding Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html)
+4. [Media Queries Level 5](https://www.w3.org/TR/mediaqueries-5/)
+5. [MDN prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+6. [W3C Understanding Three Flashes](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html)
+7. [W3C Understanding Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)
+8. [CSS Conditional Rules Level 5](https://www.w3.org/TR/css-conditional-5/)
+9. [W3C Understanding Moving, Blinking, Scrolling](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html)
+10. [WAI vestibular disorders note](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html#benefits)
+
+## Related Research
+
+[Accessible animation and motion research](/research/accessible-animation-motion-research)
+
+[Client-side navigation focus study](/research/client-side-navigation-focus-management-handoff-study)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)

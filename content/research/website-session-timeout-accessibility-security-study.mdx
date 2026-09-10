@@ -1,0 +1,56 @@
+---
+title: "Session Timeout Evidence for Accessible, Secure Websites"
+description: "Research on timeout warnings, extensions, reauthentication, saved work, and acceptance boundaries."
+slug: "website-session-timeout-accessibility-security-study"
+published: 2026-09-10
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Session Timeout Evidence for Accessible, Secure Websites
+
+**Published: September 10, 2026**
+
+This WebsiteDesignOutsource.com review considers session timeout evidence at the boundary between interface accessibility and application security. Sources were reviewed September 10, 2026.
+
+## Research question
+
+What policy, warning, extension, preservation, and recovery evidence should accompany a timed authenticated website experience?
+
+## Methodology and scope
+
+We compared WCAG 2.2 timing requirements, WAI guidance on time limits, OWASP session-management guidance, and NIST digital-identity guidance. Scope includes authenticated browser sessions with inactivity or absolute limits. Transaction-specific legal deadlines and native applications are excluded.
+
+## Evidence synthesis
+
+WCAG provides mechanisms for turning off, adjusting, or extending many time limits and defines exceptions. Security guidance calls for server-side timeout enforcement and distinguishes idle and absolute limits. A visual countdown alone cannot prove either accessibility or enforcement. The interface, server state, and recovery path need separate evidence.
+
+## Practical interpretation
+
+Inference: a handoff record should identify the policy owner, idle and absolute limits, warning interval, extension rule, announcement behavior, server response after expiry, and treatment of unsaved work. Test with keyboard and a screen reader, across multiple tabs, and with a deliberately expired server session. Confirm the destination after reauthentication and whether safe work returns.
+
+## Inference boundaries and limitations
+
+There is no universally correct timeout duration. Risk, data sensitivity, user task, and jurisdiction affect the decision. WCAG exceptions require case-specific analysis, while security sources do not determine interface wording. This study is not legal advice, a penetration test, or a complete authentication review.
+
+## Sources
+
+1. [WCAG 2.2, Timing Adjustable](https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html)
+2. [WCAG 2.2, Timeouts](https://www.w3.org/WAI/WCAG22/Understanding/timeouts.html)
+3. [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+4. [NIST SP 800-63B](https://pages.nist.gov/800-63-4/sp800-63b.html)
+5. [WAI forms time limits tutorial](https://www.w3.org/WAI/tutorials/forms/notifications/)
+6. [W3C Understanding Re-authenticating](https://www.w3.org/WAI/WCAG22/Understanding/re-authenticating.html)
+7. [W3C Understanding Accessible Authentication](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html)
+8. [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+9. [OWASP Transaction Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transaction_Authorization_Cheat_Sheet.html)
+10. [NIST Digital Identity Guidelines](https://pages.nist.gov/800-63-4/)
+
+## Related Research
+
+[Session timeout accessibility research](/research/website-session-timeout-accessibility-research)
+
+[Accessible authentication research](/research/accessible-authentication-outsourced-website-research)
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
