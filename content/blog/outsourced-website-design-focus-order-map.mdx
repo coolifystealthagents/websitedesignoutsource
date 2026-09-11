@@ -1,0 +1,39 @@
+---
+title: "Map Focus Order Before Website Acceptance"
+description: "Document keyboard sequence, visual order, dynamic insertion, and component boundaries for QA."
+slug: "outsourced-website-design-focus-order-map"
+published: 2026-09-11
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Map Focus Order Before Website Acceptance
+
+**Published: September 11, 2026**
+
+Keyboard sequence should follow the page's meaning and operation. A simple focus map exposes disagreements between the design, DOM, and interactive behavior before launch.
+
+## Trace the expected sequence
+
+Number interactive elements through header, main content, dialogs, repeated cards, forms, and footer. Note skipped links, conditional controls, and the element that should receive focus after an action.
+
+## Compare order with meaning
+
+CSS can rearrange content without changing keyboard sequence. Confirm that the visual and programmatic order tell the same story and that positive tabindex values are not being used to patch structure.
+
+## Test dynamic paths
+
+Use Tab and Shift+Tab after opening menus, adding rows, dismissing notices, and encountering errors. Watch for focus loss, loops, invisible targets, and jumps into inactive content.
+
+## Further reading
+
+[Use the accessibility checklist](/blog/website-design-accessibility-checklist)
+
+[Review responsive behavior](/blog/website-design-responsive-qa-checklist)
+
+## Related Articles
+
+Attach the accepted sequence to the page or component record.
+
+## Ready to plan your next step?
+
+[Contact WebsiteDesignOutsource.com](/contact)
