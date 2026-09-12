@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const validator = fs.readFileSync(path.join(root, 'scripts/validate-content-batch.mjs'), 'utf8');
+const aug10BlogValidator = fs.readFileSync(path.join(root, 'scripts/validate-aug10-blog.mjs'), 'utf8');
 const routine = fs.readFileSync(path.join(root, 'scripts/content-routine.mjs'), 'utf8');
 
 test('content batch validation is scoped to files written by the routine', () => {
@@ -18,4 +19,10 @@ test('content batch validation is scoped to files written by the routine', () =>
 test('placeholder checks reject markers without rejecting ordinary placeholder prose', () => {
   assert.ok(validator.includes('\\{\\{\\s*placeholder\\s*\\}\\}'));
   assert.ok(!validator.includes('|placeholder)\\b'));
+});
+
+test('August 10 blog validator follows the rendered formatted date contract', () => {
+  assert.ok(aug10BlogValidator.includes("Intl.DateTimeFormat('en-US'"));
+  assert.ok(aug10BlogValidator.includes('entry.renderedDate'));
+  assert.ok(!aug10BlogValidator.includes('dateTime=\\\"2026-08-10\\\">2026-08-10'));
 });
