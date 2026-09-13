@@ -21,15 +21,15 @@ Current content is split between `app/fleet-content.ts`, `app/data.ts`, and Mark
 | `/services/website-content-migration` | Preserve useful URLs and content through a redesign | `/research/website-migration-inventory-control-study` |
 | `/services/website-maintenance` | Set a controlled process for recurring website changes | `/research/website-change-management-controls` |
 
-## First contextual-link candidate
+## Delivered contextual link
 
-Inspect `/research/website-accessibility-conformance-evidence-2026` first. It is a sourced, existing research page about recording accessibility findings during outsourced redesigns, and `/services/website-accessibility-remediation` is an existing Philippines-only service route for that next step.
+`/research/website-accessibility-conformance-evidence-2026` now has a body-level link to `/services/website-accessibility-remediation`. It gives a reader with a documented issue one specific next step while keeping exception acceptance, policy questions, and release conditions with the company.
 
-If the built route confirms a sentence where a reader needs help addressing a documented accessibility issue, add one body-level link using a specific label such as "website accessibility remediation". Keep the surrounding copy about the evidence boundary and owner review. Do not link a generic closing CTA, add a new service claim, or replace source citations.
+Do not add another accessibility-service CTA to this research route. The existing link is the typed, route-local handoff for this supporting-page/pillar pair.
 
-## Release checks for a later public edit
+## 2026-09-13 — accessibility evidence handoff status
 
-1. Confirm both route slugs exist in the generated build and sitemap.
-2. Verify the generated research HTML contains the exact contextual label and `/services/website-accessibility-remediation` href.
-3. Run the repository test and production build, then inspect the generated route before commit.
-4. Commit and push only after the local gates pass. Trigger one Coolify deployment, retain its handle, and cache-bust verify the exact marker on the apex and `www` hosts before calling the change public.
+- Rendered source: `d2db7cdb9a0f46cf7304d0324397ed5e4589d492`.
+- Local production artifact: H1, canonical, one route-local `website accessibility remediation` link, visible `Updated September 13, 2026`, Open Graph modified date, Article dates, and sitemap `<loc>` passed. This sitemap intentionally emits no `<lastmod>`.
+- Public checks: cache-busted apex and `www` returned 200 HTML with the expected H1 and apex canonical, but both omitted the new route-local marker, service href, and modified date. The apex sitemap includes the canonical route and has no `<lastmod>` by contract.
+- Preserve rendered-source commit `d2db7cdb9a0f46cf7304d0324397ed5e4589d492`; public verification is pending. No repository-approved deployment target or routine was configured, so none was inferred or triggered.
