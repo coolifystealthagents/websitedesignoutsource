@@ -1,5 +1,6 @@
 'use client';
 import { useEffect } from 'react';
+declare global { interface Window { acrTracker?: { trackLead: (payload: Record<string, string>) => void } } }
 const HONEYPOTS=new Set(['websiteConfirm','website_confirm','website_url','company_homepage']);
 function slug(value:string){return value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,48)||'action'}
 export function AcrClient(){useEffect(()=>{
