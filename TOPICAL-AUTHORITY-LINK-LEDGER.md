@@ -33,3 +33,10 @@ Do not add another accessibility-service CTA to this research route. The existin
 - Local production artifact: H1, canonical, one route-local `website accessibility remediation` link, visible `Updated September 13, 2026`, Open Graph modified date, Article dates, and sitemap `<loc>` passed. This sitemap intentionally emits no `<lastmod>`.
 - Public checks: cache-busted apex and `www` returned 200 HTML with the expected H1 and apex canonical, but both omitted the new route-local marker, service href, and modified date. The apex sitemap includes the canonical route and has no `<lastmod>` by contract.
 - Preserve rendered-source commit `d2db7cdb9a0f46cf7304d0324397ed5e4589d492`; public verification is pending. No repository-approved deployment target or routine was configured, so none was inferred or triggered.
+
+## 2026-09-17 — visual hierarchy to UI-design handoff status
+
+- Rendered source: `6bcd536d231b6838d99e61ad78cff08456e1299b`.
+- Local production artifact: `Visual Hierarchy Evidence for Website Pages` has its canonical URL, one route-local `/services/website-ui-design` link, the owner-boundary sentence, Open Graph modified time, and Article `datePublished` `2026-08-14` / `dateModified` `2026-09-17`. The UI-design service artifact has its H1 and canonical URL; both routes are in the sitemap, which intentionally has no `<lastmod>`.
+- Public checks: cache-busted apex, `www`, and canonical sitemap each returned `403 text/plain` without an HTML or XML body. These denied responses provide no route-marker, H1, canonical, or sitemap evidence.
+- Preserve rendered-source commit `6bcd536d231b6838d99e61ad78cff08456e1299b`; source delivery is complete, while deployment remains pending public verification / public unavailable. Do not add a duplicate UI-design CTA to this research route; recheck the two hosts and sitemap after an approved rollout path is available.

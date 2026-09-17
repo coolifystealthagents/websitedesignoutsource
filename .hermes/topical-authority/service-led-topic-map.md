@@ -16,7 +16,7 @@ This ledger maps existing, Philippines-based service pages to existing research 
 
 | Service pillar | Existing supporting route | Reader question | Editorial next action | Current link state |
 | --- | --- | --- | --- | --- |
-| `/services/website-ui-design` | `/research/website-design-visual-hierarchy-evidence` | How can a team review page hierarchy before it approves a design? | Consider a UI-design handoff after the review criteria. | Target href absent from generated source. |
+| `/services/website-ui-design` | `/research/website-design-visual-hierarchy-evidence` | How can a team review page hierarchy before it approves a design? | Delivered locally in rendered source `6bcd536d231b6838d99e61ad78cff08456e1299b`; do not add a duplicate handoff. | One route-local target href in the fresh production artifact; deployment_pending_public_verification / public_unavailable after denied host and sitemap probes. |
 | `/services/nextjs-website-development` | `/research/website-structured-data-handoff` | What should a technical handoff record before a site release? | Consider a Next.js build handoff only if the article's technical checks remain the focus. | Target href absent from generated source. |
 | `/services/wordpress-website-builds` | `/research/website-component-governance-outsourced-teams` | How should a team control reusable page parts during a build? | Review for a WordPress build link only if the route stays platform-specific. | Target href absent from generated source. |
 | `/services/shopify-store-design` | `/research/website-image-performance-handoff-study` | What image evidence should an ecommerce page handoff include? | Review for a store-design link after image delivery guidance. | Target href absent from generated source. |
