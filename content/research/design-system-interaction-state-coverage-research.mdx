@@ -1,0 +1,89 @@
+---
+title: "Design System Interaction State Coverage Research for Outsourced Teams"
+description: "A source-led acceptance method for default, hover, focus, active, disabled, loading, empty, error, and success states in outsourced design systems."
+slug: "design-system-interaction-state-coverage-research"
+published: "2026-09-18"
+---
+
+# Design System Interaction State Coverage Research for Outsourced Teams
+
+## Research question
+
+How can a business tell whether an outsourced design system covers the interaction states needed for real website production? A component library can look complete in a gallery while omitting focus, loading, error, empty, permission, and narrow-screen behavior. The acceptance decision should evaluate state coverage and meaning, not only the number of components.
+
+## Method and evidence scope
+
+This review compares W3C accessibility standards and authoring practices, the HTML Living Standard, ARIA specifications, US Web Design System guidance, and GOV.UK Design System guidance. Sources were checked on September 18, 2026. The method maps product states to design artifacts, implementation examples, accessibility semantics, tests, and ownership.
+
+The sources do not define one universal component inventory. A marketing site, store, dashboard, and editorial platform have different needs. The recommended matrix is therefore derived delivery guidance. Teams should select states from actual workflows and avoid adding decorative complexity without a user or system need.
+
+## Inventory behavior, not just nouns
+
+A list of button, input, card, modal, and navigation components does not describe what users experience. For each interactive component, record relevant states such as default, hover, focus, active, visited, selected, disabled, read-only, loading, success, warning, error, empty, unavailable, and permission denied. Not every state applies to every component.
+
+State meaning should be tied to a trigger. “Error” might follow client validation, server rejection, timeout, or lost connectivity, and each may require different content and recovery. “Disabled” might represent a temporarily unavailable action or a permission boundary. If users need to understand why an action is unavailable, a disabled control without explanation can be inadequate.
+
+The matrix should cover transitions as well as snapshots. What initiates loading? Can the action be repeated? Where does focus go after a dialog opens or closes? How is success announced? What remains after a retry? A static design can show appearance, while a prototype or implemented example shows timing and sequence.
+
+## Bind visual states to semantics
+
+Native HTML elements provide established semantics and behavior when used according to specification. ARIA can expose additional roles, states, and properties, but it does not add keyboard behavior or fix unsuitable interaction design by itself. The handoff should identify the intended element and accessible name, not merely a visual label.
+
+Focus needs a distinct review. Hover styling does not cover keyboard navigation. The focus indicator must be visible, and sticky headers, cookie banners, drawers, or other overlays should not obscure the focused item. Focus order should follow meaning and operation. The component example should be tested in a representative page because surrounding layout can create defects not visible in isolation.
+
+Status communication must not rely only on color. Errors need identifiable text and, when known, useful correction guidance. Loading and asynchronous completion may need programmatic status messages. Repeated announcements can also be disruptive, so the implementation should communicate meaningful changes rather than every visual update.
+
+## Include content and responsive stress
+
+Component acceptance should use realistic content variation: long headings, translated labels, missing images, validation text, multiple currency formats, long names, zero results, and maximum expected items. Placeholder-friendly designs often fail when production copy wraps or data is absent.
+
+Responsive review should test reflow, zoom, text spacing, target size, content order, and overflow. A component can pass at its catalogue width but fail inside a narrow grid or alongside a persistent control. Design tokens for spacing and type help consistency, but they do not prove each composed layout works.
+
+Themes and forced-color modes may also affect state distinction. If the project supports dark mode or brand themes, the matrix should specify whether state tokens are global, semantic, or component-specific. A raw color value named after appearance is harder to adapt than a semantic role, but naming alone does not establish sufficient contrast.
+
+## Connect design, code, and tests
+
+Every accepted state should link to a design reference, implementation example, and test where practical. The design source explains intent; code defines behavior; tests reduce regression. A mismatch should be resolved by an owner, not hidden by declaring one artifact automatically authoritative.
+
+Automated component tests can check attributes, accessible names, event outcomes, and selected visual regressions. Browser-level keyboard and screen-reader checks remain important for focus movement and announcements. Test evidence should name browser, viewport, assistive technology where used, component version, and result.
+
+Versioning matters because consumers need to know whether a change is compatible. Renaming a token, changing markup, removing a state, or altering event behavior can affect many pages. The release note should describe impact, migration, deprecation window where appropriate, and rollback. Counting component adoption is separate from proving state quality.
+
+This framework supports WebsiteDesignOutsource.com's [design system production service](/services/design-system-production). It complements [design system handoff controls](/research/design-system-handoff-controls) by concentrating on the state-level evidence that a general governance record can miss.
+
+## Acceptance matrix and ownership
+
+The matrix should contain component, state, trigger, visual cue, text, HTML or ARIA semantics, keyboard behavior, focus result, announcement behavior, responsive constraints, design reference, code example, test identifier, and owner. Rows marked not applicable should include a reason. Rows still undecided should not be presented as accepted.
+
+Ownership should distinguish system-wide decisions from product-specific composition. The design-system owner may define button focus and disabled behavior, while a form owner defines validation timing and error text. The website owner approves brand and business rules; qualified accessibility review may be needed for complex widgets.
+
+Handoff access should include the design library, code package or repository, documentation, release history, issue queue, and publishing rights appropriate to each role. The client should not depend on one contractor's personal account to retrieve the system. Secrets and private package credentials require separate protected transfer.
+
+## Limitations and conclusion
+
+Component-level success does not prove a full page is accessible or usable. Composition, content, routing, third-party scripts, and application state introduce new behavior. Screen-reader results vary across browser and assistive-technology combinations. A matrix is a maintained control, not a one-time certification.
+
+The evidence-led conclusion is that a mature design system makes interaction states observable across intent, semantics, implementation, and tests. Acceptance should favor coverage of real workflow states and recoveries over a large catalogue of polished defaults. This gives outsourced production a shared language for defects and changes without claiming that the library alone guarantees every page outcome.
+
+## Operational review cadence
+
+Review state coverage when a component changes semantics, styling, dependencies, supported browsers, or product use. Sample real pages as well as the catalogue, because composition can obscure focus, announcements, and error recovery. Confirm that documentation and package versions still agree, and retire examples that consumers should no longer copy. Record exceptions with an owner and review date rather than silently treating an incomplete state as the system standard.
+
+## Sources
+
+1. [W3C, WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility requirements; checked 2026-09-18.
+2. [W3C, WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/) Roles, states, and properties; checked 2026-09-18.
+3. [W3C, ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) Widget patterns and keyboard guidance; checked 2026-09-18.
+4. [WHATWG, HTML Living Standard](https://html.spec.whatwg.org/) Native element semantics; checked 2026-09-18.
+5. [W3C, Understanding Focus Appearance](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html) Focus indicator guidance; checked 2026-09-18.
+6. [W3C, Understanding Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) Asynchronous message guidance; checked 2026-09-18.
+7. [W3C, Understanding Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) Non-color cues; checked 2026-09-18.
+8. [USWDS, Component lifecycle](https://designsystem.digital.gov/documentation/developers/) Public design-system implementation guidance; checked 2026-09-18.
+9. [GOV.UK Design System, Components](https://design-system.service.gov.uk/components/) Component states and usage examples; checked 2026-09-18.
+10. [W3C, Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) Responsive reflow guidance; checked 2026-09-18.
+
+## Related Research
+
+[Design system handoff controls](/research/design-system-handoff-controls)
+[Design token governance](/research/design-token-governance-outsourced-teams)
+[Website component governance](/research/website-component-governance-outsourced-teams)
