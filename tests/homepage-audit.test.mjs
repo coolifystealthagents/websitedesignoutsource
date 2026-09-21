@@ -18,3 +18,10 @@ test('homepage logo and assurance icons have descriptive image labels', () => {
     assert.ok(!line.includes('aria-hidden="true"'), `${src} must not be hidden from accessibility tools`);
   }
 });
+
+test('homepage H1 has no nested markup for heading auditors', () => {
+  const home = fs.readFileSync(path.join(process.cwd(), 'app/page.tsx'), 'utf8');
+  const headings = [...home.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
+  assert.equal(headings.length, 1, `expected one homepage H1, found ${headings.length}`);
+  assert.doesNotMatch(headings[0][1], /<[^>]+>/, 'the H1 must contain text only');
+});

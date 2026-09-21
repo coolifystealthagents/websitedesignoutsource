@@ -58,7 +58,7 @@ export default function Home() {
           <div className="studio-shell studio-hero-grid">
             <div className="studio-hero-copy">
               <p className="studio-kicker"><span /> Philippines-based website production</p>
-              <h1>A Filipino web design pod that works <em>behind your brand.</em></h1>
+              <h1>A Filipino web design pod that works behind your brand.</h1>
               <p className="studio-intro">Hand off the pages your team cannot get to. Our Philippines-based specialists help shape the brief, design the interface, build the site, and return clean source files for client review.</p>
               <div className="studio-actions">
                 <a className="studio-button studio-button-primary" href="/contact">Plan a website handoff <span>↗</span></a>
