@@ -37,5 +37,5 @@ jobs:
       - run: git config user.name "WebsiteDesignOutsource content routine"
       - run: git config user.email "content-routine@websitedesignoutsource.com"
       - run: git add content/blog automation scripts .github/workflows/daily-blog-publishing.yml
-      - run: git diff --cached --quiet || git commit -m "content: publish daily blog batch"
+      - run: git diff --cached --quiet || git commit -m "content publish daily blog batch"
       - run: git push origin main
