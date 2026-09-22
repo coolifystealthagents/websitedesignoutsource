@@ -19,7 +19,7 @@ jobs:
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       CONTENT_COUNT: 12
-      PAPERCLIP_RUN_SCRATCH_DIR: ${{ runner.temp }}/content-run
+      PAPERCLIP_RUN_SCRATCH_DIR: /tmp/content-run
     steps:
       - uses: actions/checkout@v4
         with:
