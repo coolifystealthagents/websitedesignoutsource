@@ -20,13 +20,15 @@ const target = requestedCount ?? routine.minimum + crypto.randomInt(routine.maxi
 const outDir = path.join(root, routine.directory);
 fs.mkdirSync(outDir, { recursive: true });
 const existing = new Set(fs.readdirSync(outDir).filter((file) => /\.(md|mdx)$/.test(file)));
+const existingSlugs = [...existing].map((file) => file.replace(/\.(md|mdx)$/, ''));
 const count = requestedCount ?? Math.max(0, target - existing.size);
 
 async function generateArticles() {
   if (!count) return [];
-  const prompt = kind === 'blog'
+  let prompt = kind === 'blog'
     ? 'Create ' + count + ' distinct, commercially relevant article records for WebsiteDesignOutsource.com, a site about outsourced website design. Return JSON only as {\"articles\":[...]}. Each record must contain slug, title, excerpt, h1, intro, sections (array of {heading, paragraphs, bullets}), faq (array of {question, answer}), two distinct internalLinks beginning /blog/, one authoritative externalLink object with name and url, three relatedArticles beginning /blog/, and ctaPath. Use only supported facts or clearly label illustrative examples. Do not use em dashes, en dashes, double hyphens, placeholders, fake testimonials, or unsupported statistics.'
     : 'Create ' + count + ' distinct research article records for WebsiteDesignOutsource.com, a site about outsourced website design. Return JSON only as {\"articles\":[...]}. Each record must contain slug, title, excerpt, h1, intro, verifiedDate, keyStats, keyTakeaways, methodology, sections, sources with at least 10 real objects containing name,url,note, at least 2 internalLinks beginning /research/, faq, exactly 3 relatedResearch beginning /research/, and ctaPath. Use current real sources and trace every number to a source. Do not invent statistics, use em dashes, en dashes, double hyphens, placeholders, or fake testimonials.';
+  if (kind === 'blog') prompt += ' Each rendered article must contain at least 950 substantive words, at least seven useful sections, at least four FAQ entries, one clearly labeled illustrative example, and a practical decision framework. Select internal and related links from these existing slugs. Do not repeat or closely paraphrase an existing topic or slug: ' + existingSlugs.join(', ') + '.';
   const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + encodeURIComponent(process.env.GEMINI_API_KEY), {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
@@ -74,6 +76,7 @@ for (const article of articles) {
   fs.writeFileSync(path.join(outDir, file), render(article));
   written.push(path.join(routine.directory, file));
 }
+if (written.length !== count) throw new Error('Expected ' + count + ' genuinely new articles but wrote ' + written.length);
 if (written.length) {
   execFileSync('node', [path.join(root, 'scripts/validate-content-batch.mjs'), kind, ...written], { stdio: 'inherit' });
 }

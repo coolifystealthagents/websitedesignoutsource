@@ -38,6 +38,8 @@ for (const file of files) {
   if (slugs.has(slug)) errors.push(`${file}: duplicate slug`);
   slugs.add(slug);
   if (kind === 'blog') {
+    const wordCount = source.split(/\s+/).filter(Boolean).length;
+    if (wordCount < 900) errors.push(file + ": expected at least 900 words, found " + wordCount);
     const furtherReading = source.match(/## Further reading\n([\s\S]*?)(?=\n## |$)/)?.[1] || '';
     const bodyLinks = (furtherReading.match(/\]\(\/blog\//g) || []).length;
     if (bodyLinks !== 2) errors.push(`${file}: expected exactly two contextual internal blog links, found ${bodyLinks}`);

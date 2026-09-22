@@ -19,6 +19,7 @@ jobs:
     timeout-minutes: 45
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      CONTENT_COUNT: 12
       HUMANIZER_SOURCE: https://github.com/blader/humanizer
       PAPERCLIP_RUN_SCRATCH_DIR: ${{ runner.temp }}/content-run
     steps:
