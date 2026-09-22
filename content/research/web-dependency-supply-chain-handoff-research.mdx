@@ -1,0 +1,84 @@
+---
+title: "Web Dependency Supply Chain Handoff for Outsourced Builds"
+description: "A source-led acceptance method for dependency inventory, provenance, build integrity, updates, ownership, and recovery."
+slug: "web-dependency-supply-chain-handoff-research"
+published: "2026-09-22"
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Web Dependency Supply Chain Handoff for Outsourced Builds
+
+## Research question
+
+What should a client receive when an outsourced website depends on packages, build tools, hosted scripts, plugins, actions, fonts, and external services? A successful production build proves that one dependency graph worked once. It does not establish provenance, maintenance ownership, supported versions, security response, or the ability to rebuild after the contractor leaves.
+
+## Method and evidence scope
+
+This review compares OWASP software supply-chain guidance, NIST Secure Software Development Framework material, CISA software bill of materials guidance, SLSA, SPDX, CycloneDX, package-manager documentation, and web security standards. Sources were checked September 22, 2026. The result is a delivery-control synthesis, not a vulnerability assessment or certification.
+
+The inventory should cover direct and transitive packages, lockfiles, runtimes, package registries, build images, CI actions, plugins, themes, browser scripts, tag-manager injections, fonts, media processors, APIs, and deployment adapters. Hosted assets matter even when they never appear in the application lockfile. Record component name, version or immutable reference, source, purpose, license, integrity control, update channel, data access, execution context, and owner.
+
+## Establish reproducible provenance
+
+Keep manifests and lockfiles in company-controlled version control. Pin production toolchains at the level supported by the ecosystem and avoid mutable branch references for privileged automation. Record the runtime and package-manager versions and the command that produces the deployable artifact. A clean build from the approved revision is stronger evidence than an archive copied from a contractor workstation.
+
+An SBOM can normalize component identity and relationships, but its presence does not prove the components are safe, used, licensed correctly, or complete. Compare the generated inventory with runtime observations and manually configured services. Note generation time, source revision, tool, format, and known omissions. Treat an SBOM as maintained evidence, not a decorative compliance file.
+
+Provenance should connect source revision, builder, dependencies, artifact, and deployment. Hashes can show that two files match; they do not show that the source or builder was trustworthy. Restrict publishing and deployment permissions, use protected secrets, review workflow changes, and separate approval from implementation where project risk warrants it.
+
+## Decide how updates and incidents work
+
+For each dependency class, name the person who watches advisories, triages impact, tests updates, approves release, and can roll back. Severity scores alone do not describe exploitability in a specific website. Consider reachability, exposed functionality, data, privilege, compensating controls, and vendor guidance. Document accepted exceptions with an owner and review date.
+
+Automated update proposals can reduce discovery delay, but they still need tests and accountable review. A version change can alter markup, accessibility, styling, performance, browser support, analytics, or stored data without presenting a known security advisory. Test representative routes, critical forms, authentication, build reproducibility, and rollback according to the affected component.
+
+Third-party browser scripts deserve explicit approval because they execute in the user-facing context and may change independently. Record the loading origin, purpose, consent rule, data flow, failure behavior, performance budget, and removal steps. Subresource Integrity can detect unexpected changes for eligible cross-origin static resources, while Content Security Policy can restrict allowed sources. Neither replaces vendor review or sound application design.
+
+## Handoff and acceptance record
+
+The client should receive repository access, dependency manifests, lockfiles, build instructions, runtime definitions, SBOM, license notes, service inventory, account ownership, workflow permissions, update policy, exception log, incident contacts, backup, and rollback procedure. Secrets belong in an approved secret store, not the public repository or article.
+
+Acceptance evidence should include a clean install and build from the exact revision, integrity or signature checks used by the ecosystem, automated tests, a dependency scan with its limitations, generated SBOM, artifact identity, and production smoke results. Expired tokens, removed packages, unavailable registries, and a compromised maintainer need recovery paths appropriate to business risk.
+
+This framework supports WebsiteDesignOutsource.com's [website development service](/services/website-development) and complements [third-party script inventory research](/research/third-party-script-inventory-web-projects) and [WordPress plugin governance](/research/wordpress-plugin-governance-outsourced-build-research).
+
+## Classify control and exercise recovery
+
+Group dependencies by where they execute, what they access, whether they can change without a repository commit, and how failure affects the site. A build formatter differs from a browser script that reads form fields, a server package that processes uploads, or a plugin that modifies stored content. The register should expose these differences without leaving low-risk items ownerless.
+
+Hosted services need extra evidence because a lockfile cannot freeze their behavior. Record the company account, administrator, authentication method, data categories, export path, retention setting, status channel, and removal plan. Confirm that the company can recover access without an individual contractor. When a service enters through a tag manager or content platform, inventory both the service and the injection mechanism.
+
+License records should name the detected license, material restrictions or notices, lifecycle status, and project decision. Automated classifiers help but may not resolve dual licensing, copied assets, fonts, or commercial plugin terms. Escalate uncertainty to legal or procurement owners instead of presenting a scanner result as approval.
+
+Test replacement and failure as well as installation. Observe behavior when an optional script is blocked, a registry is unavailable, an API credential expires, or a release is withdrawn. Critical content and forms should follow documented product decisions without indefinite spinners or aggressive retries. The playbook should identify who can disable a component, rotate credentials, revert a version, inspect logs, and authorize restoration.
+
+Reconcile the repository inventory with the deployed system periodically. Source files miss scripts added through consoles, while runtime observation misses build-only tools and rarely visited routes. When removing a dependency, also remove its credentials, workflow permissions, tags, network allowances, documentation, and account access where applicable. Acceptance means the owner can identify, rebuild, update, observe, remove, and recover each component.
+
+## Decision review questions
+
+Before approval, rebuild from a clean environment using the documented runtime and locked dependency graph. Compare the generated inventory with browser requests, administrative injections, deployment adapters, and external services. Sample privileged automation for immutable references and least-necessary permissions. Confirm that company administrators can rotate credentials, disable a browser script, recover service access, and restore a known-good build without the contractor. Record unresolved licenses, unsupported components, accepted vulnerabilities, and missing provenance with named owners and review dates rather than allowing a successful scan to imply completeness.
+
+## Analysis and limitations
+
+Fact: OWASP recommends assessing suppliers and maintaining an inventory of tools and components. Fact: NIST SSDF treats secure development as organizational practices across preparation, protection, production, and vulnerability response. Inference: combining repository, SBOM, hosted-service, and ownership records closes gaps that any single scanner leaves, though no source promises complete discovery.
+
+Open-source and commercial components differ in disclosure, support, and licensing. Scanners can produce false positives and miss unpublished or context-specific risks. A clean result is time-bound. The evidence-led conclusion is that handoff must preserve the ability to identify, rebuild, update, remove, and recover each dependency under company control.
+
+## Sources
+
+1. [OWASP, Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html) Component and tool controls; checked 2026-09-22.
+2. [OWASP, Third Party JavaScript Management](https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Javascript_Management_Cheat_Sheet.html) Browser script risks; checked 2026-09-22.
+3. [NIST, Secure Software Development Framework](https://csrc.nist.gov/pubs/sp/800/218/final) Secure development practices; checked 2026-09-22.
+4. [CISA, Software Bill of Materials](https://www.cisa.gov/sbom) SBOM resources; checked 2026-09-22.
+5. [SLSA, Specification](https://slsa.dev/spec/) Build provenance framework; checked 2026-09-22.
+6. [SPDX, Specification](https://spdx.github.io/spdx-spec/) Component inventory format; checked 2026-09-22.
+7. [CycloneDX, Specification](https://cyclonedx.org/specification/overview/) BOM format; checked 2026-09-22.
+8. [MDN, Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) Resource integrity; checked 2026-09-22.
+9. [W3C, Content Security Policy Level 3](https://www.w3.org/TR/CSP3/) Content restrictions; checked 2026-09-22.
+10. [npm, package-lock.json](https://docs.npmjs.com/cli/configuring-npm/package-lock-json) Dependency-tree locking; checked 2026-09-22.
+
+## Related Research
+
+[Third-party script inventory](/research/third-party-script-inventory-web-projects)
+[WordPress plugin governance](/research/wordpress-plugin-governance-outsourced-build-research)
+[Website access governance](/research/website-design-access-governance-research)
