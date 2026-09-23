@@ -1,0 +1,88 @@
+---
+title: "Browser Support Matrix for Outsourced Website Acceptance"
+description: "A source-led method for turning audience evidence, web feature support, devices, accessibility, and fallback behavior into a testable browser contract."
+slug: "browser-support-matrix-outsourced-website-acceptance"
+published: "2026-09-23"
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Browser Support Matrix for Outsourced Website Acceptance
+
+## Research question
+
+How should a client and outsourced website team agree on browser support without using vague phrases such as works everywhere or latest browsers? A defensible contract identifies the audience, essential tasks, browser and operating-system combinations, support levels, fallback behavior, test evidence, and review date. It separates feature availability from a complete user experience.
+
+## Method and scope
+
+This review compares web standards, Web Platform Baseline, MDN compatibility guidance, accessibility standards, progressive enhancement guidance, and web testing documentation. Sources were checked September 23, 2026. The scope covers public websites and common conversion tasks. It does not prescribe a universal browser list, replace testing with real users, or promise identical presentation across engines and devices.
+
+Browser support changes over time. A browser name alone is incomplete because engine version, operating system, device capability, input method, settings, extensions, embedded webviews, and assistive technology can alter behavior. Conversely, a matrix containing every conceivable combination becomes impossible to maintain. The goal is a risk-based sample with explicit gaps.
+
+## Base support on audience and tasks
+
+Start with authorized first-party evidence such as privacy-respecting analytics, support cases, contractual customer requirements, device lab observations, and known markets. Record the measurement period and limitations. Analytics undercount visitors who block scripts and cannot reveal people who abandoned before measurement. Market-share data can provide context, but it should not silently override evidence about the site's actual audience.
+
+List essential journeys before tools. Examples include reading a service page, navigating with a keyboard, changing zoom, submitting an inquiry, opening a policy, downloading an approved file, and recovering from an error. Rank impact and frequency. A layout difference in a decorative section is not equivalent to a missing submit control or inaccessible navigation.
+
+Define levels such as full support, functional support with acceptable presentation differences, and unsupported with a safe explanation. Full support should still allow rendering differences that do not change information or function. Functional support can permit enhancement loss when the core journey remains available. Unsupported should never mean an uncontrolled blank page, corrupted data, or a misleading success state.
+
+## Use feature data correctly
+
+Web Platform Baseline summarizes availability of web features across a defined core browser set. MDN compatibility data describes specific features and versions. These are valuable design inputs, not proof that the assembled website is correct. Baseline does not cover every older browser, webview, assistive-technology combination, performance constraint, privacy mode, or integration defect.
+
+For each material non-Baseline or limited-availability feature, record why it is used, affected journey, detection method, fallback, and test cases. Prefer capability detection over browser-name parsing. CSS feature queries can apply rules conditionally, while JavaScript can test for APIs before use. Detection must itself be tested because partial implementations and dependent features can still fail.
+
+Progressive enhancement begins with meaningful HTML and layers presentation and behavior where supported. It is not a requirement that every advanced application operate fully without JavaScript. The acceptance question is whether the agreed essential information and recovery path remain truthful when a script, API, or third-party dependency is unavailable.
+
+Avoid unplanned polyfills. A polyfill adds code, security and maintenance obligations, performance cost, and its own support limits. Record its source, version, loading condition, license, update owner, and removal criterion. Transpilation also needs a target configuration tied to the matrix. A successful build does not prove that every emitted construct works in a target browser.
+
+## Construct the matrix
+
+Represent each required combination with browser family and version policy, operating system, device class, viewport or window behavior, input method, and support level. Add representative assistive technologies where they are part of the audience and test plan. Include at least one constrained network or processor profile for performance-sensitive journeys rather than treating engine correctness as sufficient.
+
+Use a version policy that can be maintained, such as current and previous major versions for named evergreen browsers, rather than freezing unexplained version numbers forever. Where managed enterprise devices require a longer window, name the exact constraint and owner. State how quickly a newly released version enters testing and when an obsolete version can leave support.
+
+Map each journey to combinations instead of running every cosmetic check everywhere. Broad automated checks can cover routes, markup, JavaScript errors, and screenshots. Focused manual checks should cover keyboard use, zoom, form errors, menus, dialogs, drag alternatives, media, printing when important, and real touch behavior. Automated emulation does not reproduce every device, browser UI, GPU, virtual keyboard, or assistive-technology interaction.
+
+## Capture reproducible evidence
+
+Record the URL, production revision, browser and version, operating system, device or virtual environment, viewport, zoom, input, test data, time, expected behavior, observed behavior, and evidence reference. Use stable test cases with a visible outcome. Preserve console and network details for defects without placing credentials or personal information in public records.
+
+Test direct navigation, refresh, back and forward behavior, deep links, slow loading, offline transition where relevant, blocked third-party scripts, rejected storage, and reduced capabilities. Private modes and tracking protections can change storage or embedded content. Treat these as named environments, not as one universal privacy mode.
+
+Responsive checks need content stress. Long headings, translated strings, large text, empty and error states, images with unusual ratios, and user-generated values can reveal failures that a polished fixture hides. Test real focus visibility and order after responsive components change shape. A menu that looks correct in a narrow screenshot may trap focus or lose its accessible name.
+
+Classify defects by journey impact and supported level. A blocker prevents an essential task with no safe workaround. A major defect materially impairs the task. A presentation variance can be accepted when content and operation remain intact. Record any exception with scope, user impact, compensating path, owner, and expiry date rather than quietly editing the matrix after discovery.
+
+## Handoff and maintenance
+
+The handoff should include audience evidence, essential journeys, matrix, feature-risk register, build targets, polyfills, device access, test cases, results, known differences, exceptions, and review cadence. The client should control analytics, testing accounts, source code, and production configuration. The delivery team should explain how a future dependency or platform update can change the promise.
+
+Monitor real errors and support reports by browser signals while respecting privacy. Recheck the matrix after framework upgrades, major redesigns, new conversion functions, or meaningful audience shifts. Remove workarounds only after the supported population and test evidence permit it. The matrix is a versioned product decision, not a permanent statement about the web.
+
+## Facts, inference, and limitations
+
+Fact: web standards define interoperable behavior but implementations and release timing vary. Fact: Baseline summarizes feature availability across a named browser set and explicitly does not replace accessibility, usability, performance, security, or other testing. Fact: WCAG applies to content outcomes rather than a visual requirement for pixel-identical browsers.
+
+Inference: a journey-to-environment matrix is a practical acceptance artifact for outsourced delivery, although no source mandates this exact format. Limitations include incomplete analytics, rapid releases, vendor updates, device fragmentation, assistive-technology combinations, geographies, extensions, and lab-to-field differences. The conclusion is to make support observable: name users and tasks, use feature evidence, test representative environments, preserve safe fallbacks, and review the promise.
+
+This supports WebsiteDesignOutsource.com's [Next.js website development service](/services/nextjs-website-development) and complements [responsive viewport sampling research](/research/outsourced-website-responsive-viewport-sampling-study) and [JavaScript-rendered content acceptance](/research/javascript-rendered-content-outsourced-website-acceptance).
+
+## Sources
+
+1. [W3C WebDX Community Group, Web Platform Baseline](https://web-platform-dx.github.io/web-features/) Feature availability definitions; checked 2026-09-23.
+2. [MDN, Baseline compatibility](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility) Baseline scope and limits; checked 2026-09-23.
+3. [MDN, Browser compatibility data](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) Compatibility data model; checked 2026-09-23.
+4. [MDN, Testing strategies](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Testing_strategies) Cross-browser testing strategy; checked 2026-09-23.
+5. [MDN, CSS feature queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports) Capability-based CSS; checked 2026-09-23.
+6. [WHATWG, HTML](https://html.spec.whatwg.org/) HTML standard and processing model; checked 2026-09-23.
+7. [ECMA International, ECMAScript Language Specification](https://tc39.es/ecma262/) JavaScript language standard; checked 2026-09-23.
+8. [W3C, WCAG 2.2](https://www.w3.org/TR/WCAG22/) Accessibility requirements; checked 2026-09-23.
+9. [W3C WAI, Easy Checks](https://www.w3.org/WAI/test-evaluate/preliminary/) Preliminary accessibility review; checked 2026-09-23.
+10. [web.dev, Progressive Web Apps and capability](https://web.dev/learn/pwa/progressive-enhancement) Progressive enhancement guidance; checked 2026-09-23.
+
+## Related Research
+
+[Responsive viewport sampling](/research/outsourced-website-responsive-viewport-sampling-study)
+[JavaScript-rendered content acceptance](/research/javascript-rendered-content-outsourced-website-acceptance)
+[Reduced motion handoff](/research/website-reduced-motion-handoff-research)

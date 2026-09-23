@@ -1,0 +1,80 @@
+---
+title: "DNS Cutover Evidence for an Outsourced Website Launch"
+description: "A source-led acceptance method for changing website DNS without confusing ownership, routing, certificates, email, or rollback."
+slug: "dns-cutover-evidence-outsourced-website-launch"
+published: "2026-09-23"
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# DNS Cutover Evidence for an Outsourced Website Launch
+
+## Research question
+
+What evidence should a client require before an outsourced website team changes public DNS? A successful preview does not prove that the apex domain, `www` host, certificates, email records, redirects, and recovery path will behave after delegation or record changes. The useful deliverable is a cutover record that connects every intended change to an owner, observation, and reversible decision.
+
+## Method and scope
+
+This review compares ICANN material, IETF standards, CA/Browser Forum requirements, Google guidance, and operational security references. Sources were checked September 23, 2026. The scope is a public website launch or migration. It does not prescribe one DNS provider, promise uninterrupted propagation, or authorize a delivery team to control a client's registrar account.
+
+DNS answers are cached for periods influenced by time to live values, but changing a TTL immediately before launch does not erase older cached answers. Delegation changes also involve parent and child zones. Consequently, a launch plan needs the current zone, the intended zone, the timing of prerequisite changes, and an observation period rather than an assumed global switch.
+
+## Establish control before change
+
+Record the registrant-controlled account, registrar, authoritative name servers, DNS host, domain expiry, renewal owner, recovery contact, DNSSEC state, and the people permitted to approve changes. Use role-based access and strong authentication where supported. The client should retain ownership. An outsourced designer or developer may prepare and execute an approved change without becoming the permanent registrant, recovery contact, or sole holder of credentials.
+
+Export or otherwise record the complete effective zone before work begins. Include A, AAAA, CNAME, MX, TXT, CAA, SRV, verification, and wildcard records, plus TTLs. Website work can accidentally damage mail delivery or third-party verification when someone treats a zone as if it contains only web records. Secrets and private account data belong in the client's protected system, not in public launch notes or source control.
+
+Identify the canonical website host and every expected entry point. For each, state the expected DNS answer, HTTP status, redirect destination, canonical URL, certificate name coverage, and visible marker. Decide how the apex and `www` host relate. Include known campaign or legacy hostnames only when they are genuinely in scope. A wildcard is not evidence that named routes are intentionally supported.
+
+## Build a timed cutover plan
+
+Lower TTLs early enough for existing cached records to age out before the planned switch, where the provider and record type permit it. Record the former value, temporary value, change time, and planned restoration. A lower TTL can shorten some cache lifetimes, but it cannot force recursive resolvers to discard answers already cached under a longer value.
+
+Provision the target before directing public traffic to it. The production deployment should answer the intended host, serve the correct certificate chain, redirect consistently, and render the release marker without relying on a preview hostname. Test through a controlled host override or provider-supported validation method when possible. Certificate issuance and renewal must not depend on a DNS or HTTP challenge path that disappears during cutover.
+
+Freeze unrelated changes during the cutover window. Capture the last known production revision, the new revision, database or content compatibility assumptions, cache behavior, health checks, and rollback trigger. If the new application writes incompatible state, changing DNS back may not restore a working service. DNS rollback is one control, not a complete recovery plan.
+
+## Verify multiple layers
+
+Query the authoritative name servers directly to prove the source zone, then query representative recursive resolvers to observe cached behavior. Record the query time, record type, answer, TTL, and resolver. Do not describe a small sample as worldwide propagation. The factual claim is that named vantage points returned named answers at named times.
+
+At the HTTP layer, check the apex, `www`, canonical host, and important legacy paths over HTTPS. Record status, redirect chain, final URL, certificate identity and validity, title, unique page marker, canonical tag, robots directive, structured data, form or conversion path, and critical assets. Repeat using IPv4 and IPv6 when both are published. An AAAA record pointing to an unprepared server can produce failures that an IPv4-only check misses.
+
+Inspect the sitemap and robots file on the final host. Google recommends consistent internal links, canonicals, redirects, and sitemap URLs during a site move. These signals should name the same public origin. Search indexing and ranking remain outside launch acceptance because crawlers decide when to revisit and process changes.
+
+Check mail and other non-web records against the baseline even when they were not intended to change. Verify that MX, SPF, DKIM selectors, DMARC, and service verification records remain present where applicable. This is a preservation check, not a claim that a single DNS lookup proves message delivery or policy correctness.
+
+## Evidence pack and rollback
+
+The cutover record should contain the approved change set, before and after zone evidence, timestamps in a named timezone, approver, operator, production revision, DNS observations, HTTP observations, certificate evidence, preserved non-web records, anomalies, and final disposition. Screenshots can supplement machine-readable results but should not replace text that can be searched and compared.
+
+Define rollback thresholds before launch. Examples include a certificate error on the canonical host, repeated failure of a primary conversion route, a material share of checks reaching the wrong origin after the agreed observation period, or loss of mail-related records. Name the decision owner and the exact records or deployment action to restore. Preserve the failed state long enough to diagnose it without delaying a necessary rollback.
+
+After stability is demonstrated, restore operational TTLs, remove temporary validation records that are no longer required, confirm monitoring, and transfer the final zone and runbook to the client. Schedule a later check because certificate automation, cached answers, and third-party dependencies may fail after the launch window.
+
+## Facts, inference, and limitations
+
+Fact: DNS standards define caching and TTL behavior, while DNSSEC adds authenticated DNS data when correctly deployed. Fact: certificate rules and validation methods are governed separately from DNS routing. Fact: Google treats redirects, canonicals, internal links, and sitemaps as site-move signals.
+
+Inference: a before-and-after evidence matrix is a practical acceptance artifact for outsourced work, although no cited standard mandates that exact document. It reduces ambiguity because design, hosting, registrar, and client responsibilities become observable. Limitations include resolver caching, anycast routing, local network interception, geography, split DNS, CDN behavior, and provider control planes. A finite test cannot prove universal reachability. The decision-grade conclusion is to accept a cutover only when ownership, target readiness, layered observations, and rollback are all documented.
+
+This supports WebsiteDesignOutsource.com's [Next.js website development service](/services/nextjs-website-development) and complements [subdomain inventory control](/research/subdomain-inventory-control-outsourced-redesign) and [canonical URL implementation research](/research/website-canonical-url-implementation-research).
+
+## Sources
+
+1. [IETF, RFC 1034 Domain Names Concepts and Facilities](https://www.rfc-editor.org/rfc/rfc1034) DNS architecture and caching; checked 2026-09-23.
+2. [IETF, RFC 1035 Domain Names Implementation and Specification](https://www.rfc-editor.org/rfc/rfc1035) DNS records and protocol behavior; checked 2026-09-23.
+3. [IETF, RFC 2181 Clarifications to the DNS Specification](https://www.rfc-editor.org/rfc/rfc2181) TTL and data clarifications; checked 2026-09-23.
+4. [IETF, RFC 4033 DNS Security Introduction and Requirements](https://www.rfc-editor.org/rfc/rfc4033) DNSSEC context; checked 2026-09-23.
+5. [ICANN, Registrant Program](https://www.icann.org/resources/pages/registrant-2014-01-29-en) Registrant responsibilities and resources; checked 2026-09-23.
+6. [ICANN, Domain Name Registration Data Lookup](https://lookup.icann.org/) Registration data lookup service; checked 2026-09-23.
+7. [CA Browser Forum, Baseline Requirements](https://cabforum.org/working-groups/server/baseline-requirements/requirements/) Public certificate requirements; checked 2026-09-23.
+8. [Google Search Central, Site moves with URL changes](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) Migration signals and monitoring; checked 2026-09-23.
+9. [Google Search Central, Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects) Redirect behavior; checked 2026-09-23.
+10. [NIST, Secure Domain Name System Deployment Guide](https://csrc.nist.gov/pubs/sp/800/81/2/final) DNS security and deployment guidance; checked 2026-09-23.
+
+## Related Research
+
+[Subdomain inventory control](/research/subdomain-inventory-control-outsourced-redesign)
+[Canonical URL implementation](/research/website-canonical-url-implementation-research)
+[HTTP status route QA](/research/website-http-status-route-qa-research)
