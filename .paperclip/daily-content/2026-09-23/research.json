@@ -1,0 +1,34 @@
+{
+  "runId": "4a2a0d65-7efa-401b-b9ea-6b5d4d446cbb",
+  "family": "research",
+  "requiredCount": 5,
+  "verifiedCount": 5,
+  "publicationDate": "2026-09-23",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/websitedesignoutsource",
+  "productionBranch": "main",
+  "contentCommit": "177a6c92a41f071d89d70aab5ddea890de716030",
+  "remoteShaAtVerification": "177a6c92a41f071d89d70aab5ddea890de716030",
+  "deployment": {
+    "platform": "Coolify3",
+    "applicationUuid": "bzwr1cecluixrzw89en7dguh",
+    "deploymentUuid": "d6o6d31dzrxjflq57zezdtgc",
+    "status": "finished",
+    "finishedAt": "2026-09-23T16:06:15Z"
+  },
+  "validation": {
+    "batchValidator": "PASS",
+    "repositoryTests": "7 passed, 0 failed",
+    "productionBuild": "PASS, 555 static pages",
+    "liveVerifiedAt": "2026-09-23T16:07:08Z",
+    "sitemapStatus": 200,
+    "sharedImageStatus": 200
+  },
+  "entries": [
+    {"slug":"dns-cutover-evidence-outsourced-website-launch","topic":"DNS cutover evidence for outsourced website launches","sourcePath":"content/research/dns-cutover-evidence-outsourced-website-launch.mdx","liveUrl":"https://websitedesignoutsource.com/research/dns-cutover-evidence-outsourced-website-launch","contentHash":"41623ddd578cbe365c7b67be040d692ea34a399c13c79ffc1af6ace15d8f3f82","publicationDate":"2026-09-23","verificationTime":"2026-09-23T16:07:08Z","liveStatus":200},
+    {"slug":"contact-form-message-delivery-acceptance-research","topic":"Contact form message delivery acceptance","sourcePath":"content/research/contact-form-message-delivery-acceptance-research.mdx","liveUrl":"https://websitedesignoutsource.com/research/contact-form-message-delivery-acceptance-research","contentHash":"3faba1d095ae39456b265fb407e25d9bb695da69ad64452958415835a1186398","publicationDate":"2026-09-23","verificationTime":"2026-09-23T16:07:08Z","liveStatus":200},
+    {"slug":"website-backup-restore-acceptance-outsourced-handoff","topic":"Website backup restore acceptance in outsourced handoffs","sourcePath":"content/research/website-backup-restore-acceptance-outsourced-handoff.mdx","liveUrl":"https://websitedesignoutsource.com/research/website-backup-restore-acceptance-outsourced-handoff","contentHash":"f8ada4af8dc31410f5b9d2c7cf140b8cda82050729ea813d8f2f78a566e69133","publicationDate":"2026-09-23","verificationTime":"2026-09-23T16:07:08Z","liveStatus":200},
+    {"slug":"browser-support-matrix-outsourced-website-acceptance","topic":"Browser support matrix for outsourced website acceptance","sourcePath":"content/research/browser-support-matrix-outsourced-website-acceptance.mdx","liveUrl":"https://websitedesignoutsource.com/research/browser-support-matrix-outsourced-website-acceptance","contentHash":"592ca17154a6a962fabace43d3b363679a01c095aabf88099f6973e4774e97a4","publicationDate":"2026-09-23","verificationTime":"2026-09-23T16:07:08Z","liveStatus":200},
+    {"slug":"website-zoom-reflow-acceptance-outsourced-design","topic":"Website zoom and reflow acceptance for outsourced design","sourcePath":"content/research/website-zoom-reflow-acceptance-outsourced-design.mdx","liveUrl":"https://websitedesignoutsource.com/research/website-zoom-reflow-acceptance-outsourced-design","contentHash":"ef502f83cffa1ab6745d621d87f62e1ed2d607b855aeb83b1fbb3eedf5921ac8","publicationDate":"2026-09-23","verificationTime":"2026-09-23T16:07:08Z","liveStatus":200}
+  ]
+}
