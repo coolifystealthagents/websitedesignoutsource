@@ -14,8 +14,8 @@
       "priority": "medium",
       "kind": "blog",
       "directory": "content/blog",
-      "minimum": 20,
-      "maximum": 25
+      "minimum": 12,
+      "maximum": 12
     },
     {
       "name": "Daily Research Publishing",

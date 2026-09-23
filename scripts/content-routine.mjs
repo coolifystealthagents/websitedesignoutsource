@@ -21,7 +21,7 @@ const outDir = path.join(root, routine.directory);
 fs.mkdirSync(outDir, { recursive: true });
 const existing = new Set(fs.readdirSync(outDir).filter((file) => /\.(md|mdx)$/.test(file)));
 const existingSlugs = [...existing].map((file) => file.replace(/\.(md|mdx)$/, ''));
-const count = requestedCount ?? Math.max(0, target - existing.size);
+const count = target;
 
 async function generateArticles() {
   if (!count) return [];
