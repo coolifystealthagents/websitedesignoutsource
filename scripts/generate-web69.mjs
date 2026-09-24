@@ -2,6 +2,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
+const publicationDate = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'UTC',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit'
+}).format(new Date());
 const topics = [
   {
     slug: 'visual-regression-review-outsourced-website-design',
@@ -98,12 +104,12 @@ const topics = [
 const prompt = `Write exactly five publication-ready Markdown research articles for WebsiteDesignOutsource.com, a Philippines-based outsourced website design production service. Return JSON only as {"articles":[{"slug":"...","content":"complete MDX text"}]}. Use exactly the topic records below and no others.
 
 Each complete MDX text must:
-- Start with YAML frontmatter fields title, description, slug, published: "2026-09-24", and image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp".
+- Start with YAML frontmatter fields title, description, slug, published: "${publicationDate}", and image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp".
 - Contain at least 1,350 substantive words after frontmatter.
 - Preserve the calm, practical, evidence-led editorial voice. Address buyer decisions in an outsourced website engagement. Do not claim customer results, rankings, prices, certifications, locations beyond the provided Philippines context, or services not established by the specified service route.
 - Use sections: Research question; Method and scope; several topic-specific analytical sections; Acceptance evidence; Facts, inference, and limitations; Sources; Related Research.
 - Clearly label facts and inference in the Facts section. Explain limitations and avoid invented statistics.
-- Use all ten supplied sources, and only those supplied sources, as a numbered Sources list. For each list item, include exact supplied publisher/title as linked text, its exact URL, a concise relevance note, and 'checked 2026-09-24'. Do not imply that a source mandates our proposed checklist when it does not.
+- Use all ten supplied sources, and only those supplied sources, as a numbered Sources list. For each list item, include exact supplied publisher/title as linked text, its exact URL, a concise relevance note, and 'checked ${publicationDate}'. Do not imply that a source mandates our proposed checklist when it does not.
 - Include one natural contextual link to the specified service route and all three specified related research links. Do not add other internal links.
 - Avoid em dash characters, en dash characters, double hyphens in prose, fake quotations, fabricated data, prompts, agents, QA process, manifests, deployment mechanics, or credentials.
 - Do not include an H1 because the page template renders the frontmatter title as H1.

@@ -37,6 +37,6 @@ jobs:
       - run: npm run build
       - run: git diff --check
       - run: git config user.name 'WebsiteDesignOutsource content routine' && git config user.email 'content-routine@websitedesignoutsource.com'
-      - run: git add content/research && git diff --cached --quiet || git commit -m "content: draft September 24 research batch"
+      - run: git add content/research && git diff --cached --quiet || git commit -m "content: publish daily research batch"
       - run: git push origin HEAD
       - run: git rev-parse HEAD | tee "$PAPERCLIP_RUN_SCRATCH_DIR/commit-sha.txt" && git diff-tree --no-commit-id --name-only -r HEAD | tee "$PAPERCLIP_RUN_SCRATCH_DIR/pushed-files.txt"
