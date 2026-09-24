@@ -14,7 +14,6 @@ permissions:
 
 jobs:
   publish:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -34,10 +33,10 @@ jobs:
       - run: mkdir -p "$PAPERCLIP_RUN_SCRATCH_DIR" content/research
       - run: npx --yes skills add blader/humanizer --global --agent '*'
       - run: test -n "$(find \"$HOME\" -path '*/humanizer/SKILL.md' -print -quit)" && grep -q 'version: \"2.9.1\"' \"$(find \"$HOME\" -path '*/humanizer/SKILL.md' -print -quit)\"
-      - run: node scripts/content-routine.mjs research
+      - run: node scripts/generate-web69.mjs
       - run: npm run build
       - run: git diff --check
       - run: git config user.name 'WebsiteDesignOutsource content routine' && git config user.email 'content-routine@websitedesignoutsource.com'
-      - run: git add content/research automation scripts .github/workflows/daily-research-publishing.yml && git diff --cached --quiet || git commit -m "content: publish daily research batch"
-      - run: git push origin main
+      - run: git add content/research && git diff --cached --quiet || git commit -m "content: draft September 24 research batch"
+      - run: git push origin HEAD
       - run: git rev-parse HEAD | tee "$PAPERCLIP_RUN_SCRATCH_DIR/commit-sha.txt" && git diff-tree --no-commit-id --name-only -r HEAD | tee "$PAPERCLIP_RUN_SCRATCH_DIR/pushed-files.txt"
