@@ -1,0 +1,86 @@
+---
+title: "Shopify Theme App Extension Compatibility Acceptance"
+description: "Research-led acceptance criteria for testing Shopify theme changes against app blocks, embeds, checkout boundaries, and merchant controls."
+slug: "shopify-theme-app-extension-compatibility-acceptance"
+published: "2026-09-25"
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Shopify Theme App Extension Compatibility Acceptance
+
+## Research question
+
+How should a merchant accept an outsourced Shopify theme release when apps also add storefront behavior? A theme can look correct in a preview while app blocks are absent, embeds are disabled, scripts load twice, or merchant settings disappear after publication. Compatibility is not proof that every installed app works everywhere. It is evidence that the approved theme, named app surfaces, representative templates, and critical buyer journeys behaved as expected under a recorded configuration.
+
+## Method and scope
+
+This review uses Shopify developer and merchant documentation, accessibility standards, performance guidance, and web specifications checked 2026-09-25. It applies platform behavior to a client-owned acceptance process. Shopify and app vendors define their products; the suggested evidence record and risk-based sampling method are our analysis.
+
+The scope is Online Store theme delivery, including app blocks, app embeds, theme settings, templates, sections, JavaScript, and customer-facing journeys available to the project. It excludes unsupported claims about app internals and does not authorize checkout, account, billing, or production changes. The merchant owns app selection, billing, production publication, and final risk decisions. The outsourced team owns its theme changes, test evidence, compatibility disclosures, and rollback instructions.
+
+## Inventory extension surfaces
+
+List every installed app that affects a storefront page and record how it integrates: app block, app embed, theme code modification, ScriptTag or other legacy mechanism, external proxy, pixel, or platform-managed checkout extension. Record the app owner, purpose, affected templates, required theme setting, data dependency, consent dependency, and test contact. An installed-app list alone is insufficient because some apps have no storefront output and others affect multiple surfaces.
+
+Map each integration to a buyer or operator task. Reviews may appear on product pages, subscriptions may alter purchase options, localization may change price or language, search apps may replace collection behavior, and support widgets may overlay controls. This task map determines which states deserve direct testing. Unknown injected code should be investigated rather than silently accepted as theme behavior.
+
+## Test in a faithful unpublished theme
+
+Use an unpublished theme derived from the intended production baseline and identify its theme ID and source revision. Confirm app blocks and embeds are available in the theme editor and enable only the configuration approved for the test. A developer preview, local render, or screenshot is not equivalent to the merchant's configured theme preview.
+
+The test record should include market, language, currency, customer state, product state, inventory condition, browser, viewport, consent state, and theme configuration. Use safe test products and approved payment testing where transaction checks are authorized. Do not create real orders or contact customers merely to prove a visual component.
+
+## Cover templates and state changes
+
+Sample the homepage, collection, search, product, cart, article, standard page, and account or post-purchase surfaces that are in scope. On product pages, include variants, unavailable items, discounts, selling plans, long titles, media changes, and dynamic checkout behavior where present. On cart surfaces, check quantity changes, removal, discounts, errors, and empty state. Verify that app content persists when sections are reordered and that merchants can identify the setting that controls it.
+
+Compatibility also includes failure behavior. Test what the buyer sees if an app response is delayed, blocked, or empty. A theme should not hide the primary product information or make purchase controls unusable because a secondary widget failed. Record whether the app owns the fallback, the theme owns it, or no fallback is available.
+
+## Separate theme, app, and platform findings
+
+When a defect appears, preserve the URL, template, theme ID, app surface, state, time, browser, console or network evidence where appropriate, and reproduction steps. Compare against the current published theme only when that comparison answers a defined question. A difference is not automatically a regression if the release intentionally changed the design.
+
+Classify findings by likely owner: theme markup or CSS, app output, configuration, content, platform boundary, or uncertain. This avoids editing vendor code to mask a configuration issue. The outsourced team should not promise repairs inside a third-party app it does not control. It should provide reproducible evidence and escalate to the merchant or vendor with the smallest useful case.
+
+## Review accessibility and performance as behavior
+
+App output participates in the same page as the theme. Check keyboard order, visible focus, names and labels, error messaging, zoom and reflow, dialog focus management, and whether overlays obscure important controls. Automated scans can identify some issues, but the relevant buyer task needs human interaction. Record exceptions without claiming that a passing scan proves conformance.
+
+Measure performance with and without important app surfaces when practical, using stable conditions and field data only where authorized and statistically meaningful. Network requests, main-thread work, layout shifts, and late content can reveal integration costs. The result supports a decision; it does not prove one app caused every observed metric change. If an app is optional, document the merchant-controlled disable path.
+
+## Preserve merchant control and rollback
+
+The handoff should explain how to enable, disable, move, and configure each accepted extension without exposing credentials. Confirm that the merchant retains account ownership and that removal does not leave undocumented theme edits. Preserve the previously published theme and state how the merchant can republish it. Theme rollback may not undo app configuration, product data, or platform changes, so list those separately.
+
+Before publication, record the approved theme ID, source commit, configuration capture, critical route results, open exceptions, and approval owner. After publication, repeat a bounded smoke test against the public host: product discovery, product details, cart change, primary conversion path, app markers, assets, canonical behavior, and mobile interaction. Stop or roll back according to agreed thresholds rather than improvising under pressure.
+
+## Acceptance record and limitations
+
+The final record should identify the theme, source revision, app versions or observed release identifiers where available, enabled extensions, templates and states tested, results, defects, owner dispositions, excluded surfaces, and publication decision. It should distinguish observation from inference. For example, seeing a review widget render proves that state rendered; it does not prove every moderation, import, or notification workflow.
+
+Testing is a sample of an evolving hosted system. Apps and Shopify can change after acceptance, and market configuration may introduce states not present in the test. The merchant should assign recurring ownership for app changes and recheck critical integrations after theme, app, or platform updates. This is especially valuable when a Philippines-based production pod hands work back across time zones: the next operator needs exact configuration and evidence, not a statement that the apps looked fine.
+
+## Practical conclusion
+
+Accept the integration, not just the pixels. A Shopify theme release is ready when the merchant can trace each important app surface to a configured theme, representative customer task, known owner, failure behavior, and rollback path. Unidentified storefront injections or untested purchase-critical extensions remain release risks.
+
+## Sources
+
+1. [Shopify Dev, Theme App Extensions](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions) Platform integration guidance; checked 2026-09-25.
+2. [Shopify Dev, App Blocks](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions/configuration#app-blocks) App-block reference; checked 2026-09-25.
+3. [Shopify Dev, App Embed Blocks](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions/configuration#app-embed-blocks) Embed reference; checked 2026-09-25.
+4. [Shopify Dev, Theme Architecture](https://shopify.dev/docs/storefronts/themes/architecture) Theme structure; checked 2026-09-25.
+5. [Shopify Dev, Theme Check](https://shopify.dev/docs/storefronts/themes/tools/theme-check) Static-analysis context; checked 2026-09-25.
+6. [Shopify Dev, Theme Performance](https://shopify.dev/docs/storefronts/themes/best-practices/performance) Performance guidance; checked 2026-09-25.
+7. [Shopify Dev, Theme Accessibility](https://shopify.dev/docs/storefronts/themes/best-practices/accessibility) Accessibility guidance; checked 2026-09-25.
+8. [Shopify Help, Adding App Blocks](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/apps) Merchant control guidance; checked 2026-09-25.
+9. [W3C, Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/) Accessibility standard; checked 2026-09-25.
+10. [WHATWG, HTML Living Standard](https://html.spec.whatwg.org/) Web-platform reference; checked 2026-09-25.
+
+## Related Research
+
+[Shopify checkout extensibility handoff](/research/shopify-checkout-extensibility-handoff-research)
+
+[Third-party script inventory](/research/third-party-script-inventory-web-projects)
+
+[Website performance budget handoff](/research/website-performance-budget-handoff)
