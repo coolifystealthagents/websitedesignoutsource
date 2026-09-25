@@ -48,6 +48,12 @@ A pre-release backup is necessary but is not, by itself, a safe rollback plan. R
 
 Define decision thresholds before launch: missing critical page, failed lead delivery, checkout failure, authentication failure, widespread server error, or confirmed record loss. Name who can pause traffic, revert code, restore data, or accept an exception. Preserve logs needed to understand the failure, but keep secrets and personal data out of public tickets and screenshots.
 
+## Reconcile records after the transfer
+
+Technical success should be followed by a record-level reconciliation. Compare the pre-release high-water marks with the new production state for each protected class, such as orders, form entries, users, comments, bookings, and scheduled posts. Counts are useful signals but not sufficient proof: equal totals can conceal a missing record and an unrelated new one. Sample immutable identifiers and timestamps, then investigate gaps according to the declared ownership map. This is analysis derived from the broader backup and database guidance, not a WordPress guarantee that every plugin exposes the same identifiers.
+
+Keep the reconciliation window bounded and name its owner. If asynchronous webhooks, queues, or scheduled jobs can finish after the release, state when the comparison becomes meaningful and which late arrivals are expected. Record any replayed or manually restored item with its source and approver. The goal is not to copy sensitive production data into a report; it is to leave enough aggregate and identifier-level evidence for the client to determine that live activity survived the change without relying on a successful homepage check.
+
 ## Acceptance record
 
 The final record should include the approved scope, source and target identities, source commit, theme and plugin versions, data map, freeze window, backup identifiers, migration commands or controlled procedure, operator, start and finish times, validation results, exceptions, and client decision. Include hashes or immutable identifiers where the platform supports them. Do not paste credentials or database contents into the record.

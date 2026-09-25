@@ -60,6 +60,12 @@ A monitor is not accepted merely because its script passes once. Schedule a cont
 
 Then examine the unhappy paths around the monitoring service itself. Document how the team recognizes an expired monitoring credential, disabled schedule, exhausted usage allowance, vendor outage, or alert-channel failure. Establish an independent periodic check that the expected runs are still arriving. This does not make the system self-proving, but it reduces the risk of interpreting silence as health. The cadence and escalation thresholds are business choices, so the handoff should label them as agreed operating decisions rather than universal reliability facts.
 
+## Govern changes to monitor coverage
+
+Monitoring should change with the website through a controlled review, not through silent script edits. Tie each monitor revision to the route or journey change that required it, preserve the previous assertion, and record whether the update changes coverage or merely repairs a locator. When a page is retired, confirm its replacement or redirect before deleting the check. Otherwise a maintenance cleanup can remove the only observation of a business-critical outcome.
+
+Use a periodic coverage review to compare the monitor inventory with current conversion paths, domains, certificates, forms, integrations, and ownership. Flag checks that have never failed during a controlled exercise, routes with no responsible owner, and alerts that are routinely ignored. These are signals for investigation rather than proof of poor monitoring. The review gives the client a reasoned choice to improve, replace, or retire a check while keeping the declared service evidence aligned with the actual website.
+
 ## Handoff and acceptance record
 
 Deliver an inventory with monitor ID, purpose, route, method, frequency, locations, assertions, test data, secret owner, alert recipients, severity, retry rule, dependencies, runbook, maintenance rule, and retention. Include source revision or export, vendor account ownership, billing owner, dashboard access, and disable procedure. Demonstrate one successful run, one controlled failed assertion, alert delivery, acknowledgement, and recovery.

@@ -54,6 +54,12 @@ The handoff should explain how to enable, disable, move, and configure each acce
 
 Before publication, record the approved theme ID, source commit, configuration capture, critical route results, open exceptions, and approval owner. After publication, repeat a bounded smoke test against the public host: product discovery, product details, cart change, primary conversion path, app markers, assets, canonical behavior, and mobile interaction. Stop or roll back according to agreed thresholds rather than improvising under pressure.
 
+## Set risk-based release gates
+
+Not every app observation should carry the same release consequence. Define gates from customer impact and reversibility before testing begins. A missing decorative badge may be accepted temporarily with an owner and due date. A subscription selector that displays the wrong selling plan, a consent-dependent script that runs before permission, or an overlay that blocks the purchase control should stop publication. This classification is an operational judgment based on the affected journey, not a claim that the platform assigns universal severity levels.
+
+For each gate, record the expected behavior, evidence method, failure threshold, decision owner, and permitted response. Include at least one test in which two extensions share a template or interaction point, because isolated component checks can miss ordering, styling, and event-handler conflicts. Where an extension cannot be exercised safely before release, label the gap explicitly and choose whether to defer the release, disable that surface, or accept bounded monitoring. This makes residual risk visible to the merchant instead of converting an untested state into an implied pass.
+
 ## Acceptance record and limitations
 
 The final record should identify the theme, source revision, app versions or observed release identifiers where available, enabled extensions, templates and states tested, results, defects, owner dispositions, excluded surfaces, and publication decision. It should distinguish observation from inference. For example, seeing a review widget render proves that state rendered; it does not prove every moderation, import, or notification workflow.

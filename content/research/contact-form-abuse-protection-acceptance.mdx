@@ -60,6 +60,12 @@ Use bounded test cases in a non-production environment or an approved production
 
 After deployment, verify the public canonical form, assets, accessibility-critical behavior, accepted test path, downstream receipt where authorized, and that rejected tests do not trigger unwanted side effects. Observe logs through approved access without copying sensitive content into the handoff. If delivery cannot be verified end to end, state the exact last confirmed boundary.
 
+## Calibrate controls with a review sample
+
+Before acceptance, review a bounded sample of rejected and accepted synthetic cases against the declared form contract. The sample should vary message length, language, assistive input patterns, network conditions, and submission timing without using real customer data. Record which layer made each decision and whether an operator can explain and reverse a false positive. A rule that reduces volume but cannot be audited may shift cost from spam handling to lost-lead investigation.
+
+Treat thresholds as versioned operating settings. Establish a baseline, a change trigger, and a comparison window, then require approval for materially stricter controls. If the team cannot inspect provider scoring, document that opacity as a limitation and retain an independent delivery check. This approach does not calculate a universal acceptable error rate; it gives the client evidence to choose the tradeoff for its own enquiry volume and response process.
+
 ## Acceptance record and limitations
 
 The handoff should include the form purpose, fields, endpoint, source revision, validation schema, request limits, rate policy, automation controls, third-party dependencies, secrets owner, delivery route, error states, accessibility results, test matrix, monitoring, retention, exceptions, and approval owner. Separate verified facts from assumptions. Link to provider configuration without exposing keys.
