@@ -1,0 +1,32 @@
+{
+  "cycleLabel": "September28",
+  "publicationDateCandidate": "2026-09-28",
+  "family": "blog",
+  "requiredCount": 12,
+  "draftCount": 12,
+  "baselineSha": "7538f7ed5415dd74772483f1158d3502bfcea3f1",
+  "branch": "web-74-daily-blog-96daa845",
+  "worktree": "/paperclip/instances/default/projects/5418e5ab-98ce-4f78-b993-04323d620f5a/2c2f67bc-b6f7-4600-ab91-a74ef27e14a2/_default/web74-run-96daa845",
+  "repositoryValidator": "PASS",
+  "bodyWordCounts": {
+    "outsourced-cms-scheduled-publishing-acceptance": 1569,
+    "outsourced-design-system-component-deprecation-plan": 1555,
+    "outsourced-website-analytics-data-retention-handoff": 1572,
+    "outsourced-website-authentication-flow-handoff": 1548,
+    "outsourced-website-content-security-policy-handoff": 1571,
+    "outsourced-website-customer-support-widget-handoff": 1569,
+    "outsourced-website-download-file-governance-handoff": 1552,
+    "outsourced-website-multi-step-form-state-recovery": 1564,
+    "outsourced-website-payment-provider-integration-acceptance": 1569,
+    "outsourced-website-third-party-font-privacy-handoff": 1569,
+    "outsourced-website-url-query-parameter-governance": 1551,
+    "outsourced-website-webhook-failure-recovery-handoff": 1544
+  },
+  "maximumPairwiseFiveWordShingleJaccard": 0.7611940298507462,
+  "maximumOverlapPair": [
+    "outsourced-website-content-security-policy-handoff",
+    "outsourced-website-third-party-font-privacy-handoff"
+  ],
+  "releaseEligible": false,
+  "requiredCorrection": "Substantively rewrite these same twelve articles until the body-only maximum pairwise five-word-shingle Jaccard overlap is below 0.50, then rerun all validation. Do not push this draft."
+}
