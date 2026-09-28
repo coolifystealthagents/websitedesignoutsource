@@ -29,5 +29,165 @@
   ],
   "releaseEligible": true,
   "requiredCorrection": null,
-  "editorialRepair": "Independently authored topic-specific core prose replaced the shared template body for the same 12 slugs."
+  "editorialRepair": "Independently authored topic-specific core prose replaced the shared template body for the same 12 slugs.",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/websitedesignoutsource",
+  "productionBranch": "main",
+  "publicationState": "COMBINED_PRE_PUSH_NOT_DEPLOYED_NOT_LIVE_VERIFIED",
+  "integratedResearchHandoff": "d092f0628e3d4ed4e75ec664d2fb7faa2e7d5c30",
+  "validation": {
+    "batchValidator": "PASS: 12 files",
+    "bodyOnlyWordCounts": {
+      "outsourced-cms-scheduled-publishing-acceptance": 1035,
+      "outsourced-design-system-component-deprecation-plan": 1021,
+      "outsourced-website-analytics-data-retention-handoff": 1031,
+      "outsourced-website-authentication-flow-handoff": 1096,
+      "outsourced-website-content-security-policy-handoff": 1080,
+      "outsourced-website-customer-support-widget-handoff": 1042,
+      "outsourced-website-download-file-governance-handoff": 1050,
+      "outsourced-website-multi-step-form-state-recovery": 1142,
+      "outsourced-website-payment-provider-integration-acceptance": 1046,
+      "outsourced-website-third-party-font-privacy-handoff": 1061,
+      "outsourced-website-url-query-parameter-governance": 1030,
+      "outsourced-website-webhook-failure-recovery-handoff": 1034
+    },
+    "maximumPairwiseFiveWordShingleJaccard": 0.4166666666666667,
+    "tests": "PASS: 8 passed, 0 failed",
+    "typecheck": "PASS",
+    "cleanProductionBuild": "PASS: 620 static pages"
+  },
+  "entries": [
+    {
+      "slug": "outsourced-cms-scheduled-publishing-acceptance",
+      "title": "Accept Scheduled Publishing in an Outsourced Website CMS",
+      "sourcePath": "content/blog/outsourced-cms-scheduled-publishing-acceptance.mdx",
+      "contentHash": "2d60196c26a7a54e019fc1e606089e880aafb9e62bdeb4d0b247e2cab5f27ff5",
+      "bodyOnlyWordCount": 1035,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-cms-scheduled-publishing-acceptance",
+      "sources": [
+        "https://www.w3.org/International/core/2005/09/timezone.html"
+      ]
+    },
+    {
+      "slug": "outsourced-design-system-component-deprecation-plan",
+      "title": "Create a Component Deprecation Plan for an Outsourced Design System",
+      "sourcePath": "content/blog/outsourced-design-system-component-deprecation-plan.mdx",
+      "contentHash": "f70c366888ae7e8263ef3ec0622f6a1f02d72dc4419cce01bf574b216cf0bc6c",
+      "bodyOnlyWordCount": 1021,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-design-system-component-deprecation-plan",
+      "sources": [
+        "https://design-system.service.gov.uk/community/backlog/deprecation/"
+      ]
+    },
+    {
+      "slug": "outsourced-website-analytics-data-retention-handoff",
+      "title": "Define Analytics Data Retention in an Outsourced Website Handoff",
+      "sourcePath": "content/blog/outsourced-website-analytics-data-retention-handoff.mdx",
+      "contentHash": "9059f2040995904f670f8e0e492abd99160de2859e2a40039594d76ba90eea99",
+      "bodyOnlyWordCount": 1031,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-analytics-data-retention-handoff",
+      "sources": [
+        "https://support.google.com/analytics/answer/7667196"
+      ]
+    },
+    {
+      "slug": "outsourced-website-authentication-flow-handoff",
+      "title": "Hand Off an Outsourced Website Authentication Flow Safely",
+      "sourcePath": "content/blog/outsourced-website-authentication-flow-handoff.mdx",
+      "contentHash": "8ebff22935a6b13d2d91f49374c793d471ef880314285c9748683408d4e6d633",
+      "bodyOnlyWordCount": 1096,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-authentication-flow-handoff",
+      "sources": [
+        "https://pages.nist.gov/800-63-4/sp800-63b.html"
+      ]
+    },
+    {
+      "slug": "outsourced-website-content-security-policy-handoff",
+      "title": "Plan a Content Security Policy Handoff for an Outsourced Website",
+      "sourcePath": "content/blog/outsourced-website-content-security-policy-handoff.mdx",
+      "contentHash": "ea0c429c6c0b9a09432eb36c6b8c8d834b060b1746cb59474bac3b2102392d1c",
+      "bodyOnlyWordCount": 1080,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-content-security-policy-handoff",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+      ]
+    },
+    {
+      "slug": "outsourced-website-customer-support-widget-handoff",
+      "title": "Hand Off a Customer Support Widget on an Outsourced Website",
+      "sourcePath": "content/blog/outsourced-website-customer-support-widget-handoff.mdx",
+      "contentHash": "300899b8e1b945589c2ecb8edb45b5d1492f93ba119ff6489a234a58e50d5848",
+      "bodyOnlyWordCount": 1042,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-customer-support-widget-handoff",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html"
+      ]
+    },
+    {
+      "slug": "outsourced-website-download-file-governance-handoff",
+      "title": "Govern Downloadable Files in an Outsourced Website Handoff",
+      "sourcePath": "content/blog/outsourced-website-download-file-governance-handoff.mdx",
+      "contentHash": "5f51f8c80df4ccf86962aed5e0b3862762a01c972fa49d35ac409b13b62045ab",
+      "bodyOnlyWordCount": 1050,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-download-file-governance-handoff",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html"
+      ]
+    },
+    {
+      "slug": "outsourced-website-multi-step-form-state-recovery",
+      "title": "Specify State Recovery for an Outsourced Multi-Step Website Form",
+      "sourcePath": "content/blog/outsourced-website-multi-step-form-state-recovery.mdx",
+      "contentHash": "4bb2b00f7c5d342b182130c2d6365e7ea1f9e60ae9b42d6b0d98bf3a6031a2e4",
+      "bodyOnlyWordCount": 1142,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-multi-step-form-state-recovery",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html"
+      ]
+    },
+    {
+      "slug": "outsourced-website-payment-provider-integration-acceptance",
+      "title": "Accept a Payment Provider Integration on an Outsourced Website",
+      "sourcePath": "content/blog/outsourced-website-payment-provider-integration-acceptance.mdx",
+      "contentHash": "165955f43bdd27c758f9422f159d86648eedfe0fa87b09af5759087fe09591a2",
+      "bodyOnlyWordCount": 1046,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-payment-provider-integration-acceptance",
+      "sources": [
+        "https://docs.stripe.com/payments/paymentintents/lifecycle"
+      ]
+    },
+    {
+      "slug": "outsourced-website-third-party-font-privacy-handoff",
+      "title": "Review Third-Party Font Privacy in an Outsourced Website Handoff",
+      "sourcePath": "content/blog/outsourced-website-third-party-font-privacy-handoff.mdx",
+      "contentHash": "d9e411e3af8df86f2934a5327bf99ccf320313a320406420ca1e5bf228592d46",
+      "bodyOnlyWordCount": 1061,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-third-party-font-privacy-handoff",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"
+      ]
+    },
+    {
+      "slug": "outsourced-website-url-query-parameter-governance",
+      "title": "Govern URL Query Parameters in an Outsourced Website Build",
+      "sourcePath": "content/blog/outsourced-website-url-query-parameter-governance.mdx",
+      "contentHash": "fb17282f8047d2656d3c049f22d5bb84a374b0ba5d0d7fba5c0f2815be8687f6",
+      "bodyOnlyWordCount": 1030,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-url-query-parameter-governance",
+      "sources": [
+        "https://developers.google.com/search/docs/crawling-indexing/canonicalization"
+      ]
+    },
+    {
+      "slug": "outsourced-website-webhook-failure-recovery-handoff",
+      "title": "Define Webhook Failure Recovery in an Outsourced Website Handoff",
+      "sourcePath": "content/blog/outsourced-website-webhook-failure-recovery-handoff.mdx",
+      "contentHash": "a4e5ba94a8ab0235bd9fbed8336d7f1409459ec94868c8f9375c573d769e33cf",
+      "bodyOnlyWordCount": 1034,
+      "candidateUrl": "https://websitedesignoutsource.com/blog/outsourced-website-webhook-failure-recovery-handoff",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc9110"
+      ]
+    }
+  ]
 }
