@@ -1,0 +1,105 @@
+---
+title: "Passkey User Journey Research for Outsourced Websites"
+description: "A research framework for accepting passkey creation, sign-in, recovery, accessibility, privacy, telemetry, and operational ownership in an outsourced website project."
+slug: "passkey-user-journey-outsourced-website-research"
+published: "2026-09-28"
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Passkey User Journey Research for Outsourced Websites
+
+## Research question
+
+What should a client require before accepting passkey registration and sign-in designed by an outsourced website team? Passkeys use Web Authentication public-key credentials, but a standards-conformant ceremony can still fail as a product journey. Visitors may not understand where a credential is stored, mistake device verification for a new password, become trapped after changing devices, or encounter inaccessible conditional UI. The relying party can also mishandle challenges, origins, account binding, credential deletion, or recovery.
+
+## Method and scope
+
+This review synthesizes the W3C WebAuthn Level 3 Recommendation, FIDO Alliance passkey UX guidance, MDN API references, WCAG 2.2, and OWASP authentication guidance checked 2026-09-28. Standards define protocol behavior and security requirements; UX guidance describes tested patterns. The acceptance matrix and ownership model below are analysis for outsourced website delivery. Scope includes consumer-facing creation, sign-in, passkey management, fallback, recovery, accessibility, telemetry, and handoff. It does not certify a complete identity system.
+
+Test with approved non-production accounts across the supported browser, operating-system, device, password-manager, and authenticator matrix. Preserve the relying-party configuration, route, ceremony, user state, authenticator choice, result, error, and observation date. Do not capture private keys, biometric data, full credential identifiers, session tokens, challenges, or personal recovery details in evidence.
+
+## Define the account journeys before designing prompts
+
+Map new-account creation, adding a passkey to an existing account, sign-in with a known account, discoverable sign-in, conditional mediation, cross-device use, adding another authenticator, renaming or reviewing credentials, deleting one, losing all authenticators, account recovery, and account closure. State which journeys exist at launch and which do not. A “Sign in with a passkey” button is not a complete account model.
+
+For each journey, identify how the site knows the account, what user verification is required, how intent is confirmed, what happens on cancellation, and how the visitor returns to a stable choice. Include users arriving from password reset links, shared devices, private browsing, and federated identity paths. The interface must not promise that a passkey will synchronize when the chosen authenticator is device-bound.
+
+## Explain the concept at the moment of choice
+
+Use familiar, action-oriented language. Explain that the person uses their device or password manager to sign in and may be asked for the device’s screen lock or biometric verification. Avoid implying that the website receives or stores their fingerprint or face data. That verification normally occurs through the authenticator; the site receives the outcome of the cryptographic ceremony, not the biometric template.
+
+Set expectations before invoking a browser or operating-system prompt because the website cannot fully control that interface. Keep the page context visible and provide a clear alternative. If the system dialog is canceled, return to the same task with an understandable message rather than treating cancellation as a suspicious failure. Do not repeatedly prompt on every visit after a person declines enrollment.
+
+## Bind ceremonies to the correct relying party
+
+Document the relying-party ID, allowed origins, subdomain model, challenge generation, challenge lifetime, user-verification requirement, attestation choice, credential-exclusion behavior, and server-side verification. WebAuthn credentials are scoped to a relying party. Domain migration, preview environments, embedded flows, and white-label hosts can change what is possible. Resolve this architecture before promising cross-domain reuse.
+
+Generate challenges with appropriate randomness on a trusted server, bind them to the intended ceremony and session, expire them, and prevent replay. Verify client data, origin, relying-party hash, flags, signature, and stored credential state according to the specification and the library’s supported flow. Treat client JavaScript as an orchestrator, not an authorization boundary. Review library maintenance and error handling rather than building cryptography from scratch.
+
+## Separate registration from authentication evidence
+
+During registration, confirm that the user is authorized to add a credential to the account. Prevent accidental duplicate enrollment when the authenticator and product support exclusion signals, while handling privacy-preserving browser behavior. Store only the server-side public credential material and metadata needed for account management. Give the user a useful label or context without exposing a raw identifier.
+
+During authentication, locate the credential through the selected account model, verify the assertion, update sign-count or device-related signals only according to current authenticator realities, and establish the session under the site’s normal security policy. Do not equate one counter anomaly with certain compromise. Record risk handling and escalation, including how false positives avoid locking out legitimate users.
+
+## Design fallback and recovery as security-critical journeys
+
+Passkeys reduce dependence on shared secrets only when fallback does not quietly recreate a weaker universal bypass. Inventory password, email link, one-time code, support-assisted recovery, federation, backup codes, and verified-device paths. For each, document threats, rate limits, notification, evidence, waiting periods where appropriate, and the owner allowed to approve exceptions.
+
+Let users register more than one passkey when the account policy permits it. Show a credential-management view with meaningful labels, approximate creation or last-use context when accurate, and a safe removal flow. Prevent removal of the final viable method without a clear recovery consequence or an approved alternative. After removal or account closure, define session revocation and server-record retention truthfully.
+
+## Test conditional UI and autofill carefully
+
+Conditional mediation can surface passkeys through a familiar sign-in field, but it depends on browser capability, autocomplete semantics, secure context, and platform behavior. Feature-detect the API and preserve a conventional path. Test whether the form remains usable when conditional mediation is unsupported, no matching credential exists, the prompt is dismissed, or another password manager controls the experience.
+
+Avoid racing an autofill ceremony with button-triggered authentication or rerendering the form while a request is pending. Define cancellation and restart behavior. Verify direct navigation, back and forward navigation, multiple tabs, expired sessions, and slow networks. The user should always understand whether they are choosing an identifier, selecting a passkey, verifying locally, or waiting for the site.
+
+## Include accessibility in the ceremony matrix
+
+The site-owned controls need programmatic labels, keyboard access, visible focus, clear instructions, status announcements, and errors that identify recovery actions. Test zoom, reflow, contrast, reduced motion, voice input, and supported screen readers. Browser and operating-system dialogs are outside the site’s markup, but the website still owns the context before the prompt and the recovery state after it.
+
+Do not use a QR code as the only explanation or cross-device route. Provide text that says what the code does and protect the surrounding state. Avoid countdowns that expire before users of assistive technology can complete a device switch; where security requires expiry, explain it and provide a straightforward restart. Error codes from an API are not user-facing copy.
+
+## Build a privacy-conscious telemetry plan
+
+Measure the funnel with events such as option shown, user initiated, platform prompt invoked, completed, canceled, unsupported, recoverable error, and fallback chosen. Define denominators and avoid interpreting every cancellation as failure. Segment only where the product decision requires it. Device, authenticator, credential, and account signals can become sensitive or identifying, so minimize collection and apply retention and access controls.
+
+Keep security logs distinct from product analytics even when they share correlation needs. Security evidence may require tighter access and different retention. Never send challenges, credential IDs, raw assertions, session data, or recovery secrets to general analytics. Document consent implications and how a user’s account deletion affects associated operational data.
+
+## Test failures, abuse controls, and support operations
+
+Exercise wrong origin in a controlled environment, expired challenge, replay, canceled prompt, unknown credential, deleted credential, disabled account, rate limit, network loss, server error, and concurrent ceremonies. Confirm that external messages are useful without revealing account existence or internal security decisions. Protect endpoints against request floods and preserve enough sanitized evidence to investigate.
+
+Train support staff on what they can and cannot infer. They should not ask users to reveal device unlock codes or biometric information. Define escalation for lost access, suspected takeover, domain migration, credential-store outage, and flawed release. The client must own identity-provider accounts, production configuration, recovery policy, incident contacts, and the authority to revoke or disable paths.
+
+## Acceptance record and limitations
+
+Retain supported journeys, relying-party and origin model, server library, user-verification policy, attestation policy, credential-management behavior, fallback inventory, recovery controls, accessibility matrix, telemetry schema, abuse tests, account ownership, exceptions, commit, and evidence date. Record actual platform samples rather than claiming every passkey provider behaves alike. Re-test after domain, identity, session, browser-support, or recovery changes.
+
+Platform prompts and synchronization behavior vary, and user research from one audience cannot establish universal comprehension. WebAuthn conformance does not prove the wider session and recovery system is secure. Conversely, one platform-specific cancellation does not invalidate passkeys as a whole. Preserve these limits with the handoff.
+
+## Practical conclusion
+
+Accept a passkey journey when the relying-party design is correct, registration and authentication are verified server-side, language sets honest expectations, cancellation and fallback remain usable, recovery is not an undocumented bypass, and the client can operate credentials after the vendor leaves. The goal is a resilient account journey grounded in public-key authentication, not a decorative passkey button.
+
+## Sources
+
+1. [W3C, Web Authentication Level 3](https://www.w3.org/TR/webauthn-3/) WebAuthn Recommendation; checked 2026-09-28.
+2. [W3C, WebAuthn Level 3 publication history](https://www.w3.org/standards/history/webauthn-3/) Recommendation status; checked 2026-09-28.
+3. [FIDO Alliance, Passkey UX Guidelines](https://fidoalliance.org/ux-guidelines/) User-journey guidance; checked 2026-09-28.
+4. [FIDO Alliance, Passkeys](https://fidoalliance.org/passkeys/) Passkey background; checked 2026-09-28.
+5. [MDN, Web Authentication API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API) Browser API reference; checked 2026-09-28.
+6. [MDN, PublicKeyCredential](https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential) Credential interface reference; checked 2026-09-28.
+7. [MDN, Conditional mediation](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get#mediation) Credential request mediation reference; checked 2026-09-28.
+8. [OWASP, Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) Authentication and recovery guidance; checked 2026-09-28.
+9. [OWASP, Forgot Password Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html) Recovery guidance; checked 2026-09-28.
+10. [W3C, Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/) Accessibility criteria; checked 2026-09-28.
+
+## Related Research
+
+[Accessible authentication research](/research/accessible-authentication-outsourced-website-research)
+
+[Website session-timeout accessibility research](/research/website-session-timeout-accessibility-research)
+
+[Website access-control audit](/research/outsourced-website-access-control-audit)
+
