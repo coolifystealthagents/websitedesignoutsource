@@ -20,6 +20,24 @@ Separate company decisions from vendor proposals. The company should approve cus
 
 Define evidence in observable terms. Name the route, starting state, input, expected result, actual result, environment, time, and reviewer. Include a normal path, a meaningful edge condition, and a safe recovery exercise. If production testing could cause harm, agree on a staging test and state exactly what remains unproven until release.
 
+## Turn the record into topic-specific decisions
+
+The webhook delivery contract must answer these questions against actual routes and representative examples:
+
+1. **Event name.** Capture event name when the website changes state, then compare it with the customer-visible result.
+2. **Producer.** Name who supplies and may alter producer, plus evidence that the recorded answer remains current.
+3. **Consumer.** Review consumer against a real route and representative input; record any template, provider, account, or regional boundary.
+4. **Payload version.** Make payload version recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+5. **Signature method.** Capture signature method when the website changes state, then compare it with the customer-visible result.
+6. **Timeout.** Name who supplies and may alter timeout, plus evidence that the recorded answer remains current.
+7. **Retry schedule.** Review retry schedule against a real route and representative input; record any template, provider, account, or regional boundary.
+8. **Idempotency key.** Make idempotency key recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+9. **Dead-letter path.** Capture dead-letter path when the website changes state, then compare it with the customer-visible result.
+10. **Replay owner.** Name who supplies and may alter replay owner, plus evidence that the recorded answer remains current.
+11. **Proof.** Review proof against a real route and representative input; record any template, provider, account, or regional boundary.
+
+Review the entries together. A technically correct value still fails acceptance when the customer message, support procedure, or approval authority contradicts it.
+
 ## Build a webhook delivery contract
 
 Create one controlled webhook delivery contract rather than distributing decisions across chat, screenshots, and private vendor notes. Give every row a stable identifier and capture event name, producer, consumer, payload version, signature method, timeout, retry schedule, idempotency key, dead-letter path, replay owner, and proof. Link to company-controlled evidence. Never place passwords, tokens, personal data, private logs, or recovery codes in a public article or broadly shared acceptance document.
@@ -43,6 +61,20 @@ Run the expected path first with representative content and a clean session. The
 For each case, record expected and actual results separately. Save the release identity and time with the evidence. Check narrow and wide layouts, keyboard operation, focus order, readable labels, status announcements, reflow, and understandable errors wherever those qualities apply. A technical response alone does not demonstrate that the customer can understand or complete the task.
 
 Exercise recovery without damaging production. Confirm what information survives, which action is safe to repeat, how an operator finds the relevant record, and which company-controlled account can correct the state. Where a real failure cannot be triggered safely, use lower-level evidence and document that limitation instead of claiming a broader pass.
+
+## Run topic-specific acceptance scenarios
+
+Adapt these cases to the actual platform without putting credentials or personal customer data into shared evidence:
+
+- **Out-of-order events:** Reproduce out-of-order events from a clean session and record both the interface response and underlying system state.
+- **Duplicate delivery:** For duplicate delivery, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Secret rotation:** Simulate secret rotation safely; verify keyboard and narrow-screen recovery as well as the technical response.
+- **Endpoint downtime:** Use endpoint downtime to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
+- **Schema changes:** Reproduce schema changes from a clean session and record both the interface response and underlying system state.
+- **Partial processing:** For partial processing, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Delayed retries:** Simulate delayed retries safely; verify keyboard and narrow-screen recovery as well as the technical response.
+
+Preserve expected and actual outcomes separately. A pass needs observable evidence and an owner; a surprise needs correction or a time-bounded exception with a retest trigger.
 
 ## Assign durable ownership and access
 

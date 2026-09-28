@@ -20,6 +20,23 @@ Separate company decisions from vendor proposals. The company should approve cus
 
 Define evidence in observable terms. Name the route, starting state, input, expected result, actual result, environment, time, and reviewer. Include a normal path, a meaningful edge condition, and a safe recovery exercise. If production testing could cause harm, agree on a staging test and state exactly what remains unproven until release.
 
+## Turn the record into topic-specific decisions
+
+The CSP directive and exception register must answer these questions against actual routes and representative examples:
+
+1. **Directive.** Capture directive when the website changes state, then compare it with the customer-visible result.
+2. **Allowed origin.** Name who supplies and may alter allowed origin, plus evidence that the recorded answer remains current.
+3. **Business purpose.** Review business purpose against a real route and representative input; record any template, provider, account, or regional boundary.
+4. **Affected route.** Make affected route recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+5. **Nonce or hash approach.** Capture nonce or hash approach when the website changes state, then compare it with the customer-visible result.
+6. **Report destination.** Name who supplies and may alter report destination, plus evidence that the recorded answer remains current.
+7. **Expiry.** Review expiry against a real route and representative input; record any template, provider, account, or regional boundary.
+8. **Approver.** Make approver recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+9. **Test case.** Capture test case when the website changes state, then compare it with the customer-visible result.
+10. **Removal owner.** Name who supplies and may alter removal owner, plus evidence that the recorded answer remains current.
+
+Review the entries together. A technically correct value still fails acceptance when the customer message, support procedure, or approval authority contradicts it.
+
 ## Build a CSP directive and exception register
 
 Create one controlled CSP directive and exception register rather than distributing decisions across chat, screenshots, and private vendor notes. Give every row a stable identifier and capture directive, allowed origin, business purpose, affected route, nonce or hash approach, report destination, expiry, approver, test case, and removal owner. Link to company-controlled evidence. Never place passwords, tokens, personal data, private logs, or recovery codes in a public article or broadly shared acceptance document.
@@ -43,6 +60,20 @@ Run the expected path first with representative content and a clean session. The
 For each case, record expected and actual results separately. Save the release identity and time with the evidence. Check narrow and wide layouts, keyboard operation, focus order, readable labels, status announcements, reflow, and understandable errors wherever those qualities apply. A technical response alone does not demonstrate that the customer can understand or complete the task.
 
 Exercise recovery without damaging production. Confirm what information survives, which action is safe to repeat, how an operator finds the relevant record, and which company-controlled account can correct the state. Where a real failure cannot be triggered safely, use lower-level evidence and document that limitation instead of claiming a broader pass.
+
+## Run topic-specific acceptance scenarios
+
+Adapt these cases to the actual platform without putting credentials or personal customer data into shared evidence:
+
+- **Preview domains:** Reproduce preview domains from a clean session and record both the interface response and underlying system state.
+- **Inline styles:** For inline styles, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Tag managers:** Simulate tag managers safely; verify keyboard and narrow-screen recovery as well as the technical response.
+- **Third-party frames:** Use third-party frames to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
+- **Browser extensions:** Reproduce browser extensions from a clean session and record both the interface response and underlying system state.
+- **Report noise:** For report noise, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Emergency rollback:** Simulate emergency rollback safely; verify keyboard and narrow-screen recovery as well as the technical response.
+
+Preserve expected and actual outcomes separately. A pass needs observable evidence and an owner; a surprise needs correction or a time-bounded exception with a retest trigger.
 
 ## Assign durable ownership and access
 

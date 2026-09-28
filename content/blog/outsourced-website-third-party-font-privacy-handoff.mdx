@@ -20,6 +20,24 @@ Separate company decisions from vendor proposals. The company should approve cus
 
 Define evidence in observable terms. Name the route, starting state, input, expected result, actual result, environment, time, and reviewer. Include a normal path, a meaningful edge condition, and a safe recovery exercise. If production testing could cause harm, agree on a staging test and state exactly what remains unproven until release.
 
+## Turn the record into topic-specific decisions
+
+The font delivery and rights register must answer these questions against actual routes and representative examples:
+
+1. **Family.** Capture family when the website changes state, then compare it with the customer-visible result.
+2. **Weight.** Name who supplies and may alter weight, plus evidence that the recorded answer remains current.
+3. **Source.** Review source against a real route and representative input; record any template, provider, account, or regional boundary.
+4. **License holder.** Make license holder recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+5. **Permitted use.** Capture permitted use when the website changes state, then compare it with the customer-visible result.
+6. **Hosting location.** Name who supplies and may alter hosting location, plus evidence that the recorded answer remains current.
+7. **Request origin.** Review request origin against a real route and representative input; record any template, provider, account, or regional boundary.
+8. **Preload rule.** Make preload rule recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+9. **Fallback stack.** Capture fallback stack when the website changes state, then compare it with the customer-visible result.
+10. **Renewal owner.** Name who supplies and may alter renewal owner, plus evidence that the recorded answer remains current.
+11. **Removal path.** Review removal path against a real route and representative input; record any template, provider, account, or regional boundary.
+
+Review the entries together. A technically correct value still fails acceptance when the customer message, support procedure, or approval authority contradicts it.
+
 ## Build a font delivery and rights register
 
 Create one controlled font delivery and rights register rather than distributing decisions across chat, screenshots, and private vendor notes. Give every row a stable identifier and capture family, weight, source, license holder, permitted use, hosting location, request origin, preload rule, fallback stack, renewal owner, and removal path. Link to company-controlled evidence. Never place passwords, tokens, personal data, private logs, or recovery codes in a public article or broadly shared acceptance document.
@@ -43,6 +61,21 @@ Run the expected path first with representative content and a clean session. The
 For each case, record expected and actual results separately. Save the release identity and time with the evidence. Check narrow and wide layouts, keyboard operation, focus order, readable labels, status announcements, reflow, and understandable errors wherever those qualities apply. A technical response alone does not demonstrate that the customer can understand or complete the task.
 
 Exercise recovery without damaging production. Confirm what information survives, which action is safe to repeat, how an operator finds the relevant record, and which company-controlled account can correct the state. Where a real failure cannot be triggered safely, use lower-level evidence and document that limitation instead of claiming a broader pass.
+
+## Run topic-specific acceptance scenarios
+
+Adapt these cases to the actual platform without putting credentials or personal customer data into shared evidence:
+
+- **Consent blocking:** Reproduce consent blocking from a clean session and record both the interface response and underlying system state.
+- **Slow networks:** For slow networks, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Unavailable CDNs:** Simulate unavailable CDNs safely; verify keyboard and narrow-screen recovery as well as the technical response.
+- **Missing glyphs:** Use missing glyphs to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
+- **Variable-font axes:** Reproduce variable-font axes from a clean session and record both the interface response and underlying system state.
+- **Print output:** For print output, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Localization:** Simulate localization safely; verify keyboard and narrow-screen recovery as well as the technical response.
+- **License expiry:** Use license expiry to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
+
+Preserve expected and actual outcomes separately. A pass needs observable evidence and an owner; a surprise needs correction or a time-bounded exception with a retest trigger.
 
 ## Assign durable ownership and access
 

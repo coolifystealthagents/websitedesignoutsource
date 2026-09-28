@@ -20,6 +20,24 @@ Separate company decisions from vendor proposals. The company should approve cus
 
 Define evidence in observable terms. Name the route, starting state, input, expected result, actual result, environment, time, and reviewer. Include a normal path, a meaningful edge condition, and a safe recovery exercise. If production testing could cause harm, agree on a staging test and state exactly what remains unproven until release.
 
+## Turn the record into topic-specific decisions
+
+The component deprecation register must answer these questions against actual routes and representative examples:
+
+1. **Component.** Capture component when the website changes state, then compare it with the customer-visible result.
+2. **Current version.** Name who supplies and may alter current version, plus evidence that the recorded answer remains current.
+3. **Affected routes.** Review affected routes against a real route and representative input; record any template, provider, account, or regional boundary.
+4. **Replacement.** Make replacement recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+5. **Behavior difference.** Capture behavior difference when the website changes state, then compare it with the customer-visible result.
+6. **Content migration.** Name who supplies and may alter content migration, plus evidence that the recorded answer remains current.
+7. **Analytics impact.** Review analytics impact against a real route and representative input; record any template, provider, account, or regional boundary.
+8. **Accessibility check.** Make accessibility check recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+9. **Deadline.** Capture deadline when the website changes state, then compare it with the customer-visible result.
+10. **Exception owner.** Name who supplies and may alter exception owner, plus evidence that the recorded answer remains current.
+11. **Removal proof.** Review removal proof against a real route and representative input; record any template, provider, account, or regional boundary.
+
+Review the entries together. A technically correct value still fails acceptance when the customer message, support procedure, or approval authority contradicts it.
+
 ## Build a component deprecation register
 
 Create one controlled component deprecation register rather than distributing decisions across chat, screenshots, and private vendor notes. Give every row a stable identifier and capture component, current version, affected routes, replacement, behavior difference, content migration, analytics impact, accessibility check, deadline, exception owner, and removal proof. Link to company-controlled evidence. Never place passwords, tokens, personal data, private logs, or recovery codes in a public article or broadly shared acceptance document.
@@ -43,6 +61,20 @@ Run the expected path first with representative content and a clean session. The
 For each case, record expected and actual results separately. Save the release identity and time with the evidence. Check narrow and wide layouts, keyboard operation, focus order, readable labels, status announcements, reflow, and understandable errors wherever those qualities apply. A technical response alone does not demonstrate that the customer can understand or complete the task.
 
 Exercise recovery without damaging production. Confirm what information survives, which action is safe to repeat, how an operator finds the relevant record, and which company-controlled account can correct the state. Where a real failure cannot be triggered safely, use lower-level evidence and document that limitation instead of claiming a broader pass.
+
+## Run topic-specific acceptance scenarios
+
+Adapt these cases to the actual platform without putting credentials or personal customer data into shared evidence:
+
+- **CMS-stored component names:** Reproduce CMS-stored component names from a clean session and record both the interface response and underlying system state.
+- **Experiments:** For experiments, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Old landing pages:** Simulate old landing pages safely; verify keyboard and narrow-screen recovery as well as the technical response.
+- **Nested variants:** Use nested variants to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
+- **Third-party templates:** Reproduce third-party templates from a clean session and record both the interface response and underlying system state.
+- **Visual snapshots:** For visual snapshots, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Rollback:** Simulate rollback safely; verify keyboard and narrow-screen recovery as well as the technical response.
+
+Preserve expected and actual outcomes separately. A pass needs observable evidence and an owner; a surprise needs correction or a time-bounded exception with a retest trigger.
 
 ## Assign durable ownership and access
 

@@ -20,6 +20,24 @@ Separate company decisions from vendor proposals. The company should approve cus
 
 Define evidence in observable terms. Name the route, starting state, input, expected result, actual result, environment, time, and reviewer. Include a normal path, a meaningful edge condition, and a safe recovery exercise. If production testing could cause harm, agree on a staging test and state exactly what remains unproven until release.
 
+## Turn the record into topic-specific decisions
+
+The support widget operating brief must answer these questions against actual routes and representative examples:
+
+1. **Route.** Capture route when the website changes state, then compare it with the customer-visible result.
+2. **Trigger.** Name who supplies and may alter trigger, plus evidence that the recorded answer remains current.
+3. **Collected field.** Review collected field against a real route and representative input; record any template, provider, account, or regional boundary.
+4. **Consent basis.** Make consent basis recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+5. **Availability schedule.** Capture availability schedule when the website changes state, then compare it with the customer-visible result.
+6. **Queue destination.** Name who supplies and may alter queue destination, plus evidence that the recorded answer remains current.
+7. **Response promise.** Review response promise against a real route and representative input; record any template, provider, account, or regional boundary.
+8. **Accessible label.** Make accessible label recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+9. **Fallback channel.** Capture fallback channel when the website changes state, then compare it with the customer-visible result.
+10. **Vendor administrator.** Name who supplies and may alter vendor administrator, plus evidence that the recorded answer remains current.
+11. **Removal step.** Review removal step against a real route and representative input; record any template, provider, account, or regional boundary.
+
+Review the entries together. A technically correct value still fails acceptance when the customer message, support procedure, or approval authority contradicts it.
+
 ## Build a support widget operating brief
 
 Create one controlled support widget operating brief rather than distributing decisions across chat, screenshots, and private vendor notes. Give every row a stable identifier and capture route, trigger, collected field, consent basis, availability schedule, queue destination, response promise, accessible label, fallback channel, vendor administrator, and removal step. Link to company-controlled evidence. Never place passwords, tokens, personal data, private logs, or recovery codes in a public article or broadly shared acceptance document.
@@ -43,6 +61,21 @@ Run the expected path first with representative content and a clean session. The
 For each case, record expected and actual results separately. Save the release identity and time with the evidence. Check narrow and wide layouts, keyboard operation, focus order, readable labels, status announcements, reflow, and understandable errors wherever those qualities apply. A technical response alone does not demonstrate that the customer can understand or complete the task.
 
 Exercise recovery without damaging production. Confirm what information survives, which action is safe to repeat, how an operator finds the relevant record, and which company-controlled account can correct the state. Where a real failure cannot be triggered safely, use lower-level evidence and document that limitation instead of claiming a broader pass.
+
+## Run topic-specific acceptance scenarios
+
+Adapt these cases to the actual platform without putting credentials or personal customer data into shared evidence:
+
+- **Blocked scripts:** Reproduce blocked scripts from a clean session and record both the interface response and underlying system state.
+- **Narrow screens:** For narrow screens, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Keyboard navigation:** Simulate keyboard navigation safely; verify keyboard and narrow-screen recovery as well as the technical response.
+- **Offline hours:** Use offline hours to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
+- **Attachments:** Reproduce attachments from a clean session and record both the interface response and underlying system state.
+- **Transcript requests:** For transcript requests, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Language mismatch:** Simulate language mismatch safely; verify keyboard and narrow-screen recovery as well as the technical response.
+- **Vendor downtime:** Use vendor downtime to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
+
+Preserve expected and actual outcomes separately. A pass needs observable evidence and an owner; a surprise needs correction or a time-bounded exception with a retest trigger.
 
 ## Assign durable ownership and access
 

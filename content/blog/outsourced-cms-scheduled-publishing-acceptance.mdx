@@ -20,6 +20,24 @@ Separate company decisions from vendor proposals. The company should approve cus
 
 Define evidence in observable terms. Name the route, starting state, input, expected result, actual result, environment, time, and reviewer. Include a normal path, a meaningful edge condition, and a safe recovery exercise. If production testing could cause harm, agree on a staging test and state exactly what remains unproven until release.
 
+## Turn the record into topic-specific decisions
+
+The scheduled release acceptance sheet must answer these questions against actual routes and representative examples:
+
+1. **Content item.** Capture content item when the website changes state, then compare it with the customer-visible result.
+2. **Intended local time.** Name who supplies and may alter intended local time, plus evidence that the recorded answer remains current.
+3. **Stored time zone.** Review stored time zone against a real route and representative input; record any template, provider, account, or regional boundary.
+4. **Dependency.** Make dependency recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+5. **Preview evidence.** Capture preview evidence when the website changes state, then compare it with the customer-visible result.
+6. **Publish event.** Name who supplies and may alter publish event, plus evidence that the recorded answer remains current.
+7. **Cache action.** Review cache action against a real route and representative input; record any template, provider, account, or regional boundary.
+8. **Sitemap result.** Make sitemap result recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
+9. **Failure alert.** Capture failure alert when the website changes state, then compare it with the customer-visible result.
+10. **Rollback owner.** Name who supplies and may alter rollback owner, plus evidence that the recorded answer remains current.
+11. **Final verifier.** Review final verifier against a real route and representative input; record any template, provider, account, or regional boundary.
+
+Review the entries together. A technically correct value still fails acceptance when the customer message, support procedure, or approval authority contradicts it.
+
 ## Build a scheduled release acceptance sheet
 
 Create one controlled scheduled release acceptance sheet rather than distributing decisions across chat, screenshots, and private vendor notes. Give every row a stable identifier and capture content item, intended local time, stored time zone, dependency, preview evidence, publish event, cache action, sitemap result, failure alert, rollback owner, and final verifier. Link to company-controlled evidence. Never place passwords, tokens, personal data, private logs, or recovery codes in a public article or broadly shared acceptance document.
@@ -43,6 +61,21 @@ Run the expected path first with representative content and a clean session. The
 For each case, record expected and actual results separately. Save the release identity and time with the evidence. Check narrow and wide layouts, keyboard operation, focus order, readable labels, status announcements, reflow, and understandable errors wherever those qualities apply. A technical response alone does not demonstrate that the customer can understand or complete the task.
 
 Exercise recovery without damaging production. Confirm what information survives, which action is safe to repeat, how an operator finds the relevant record, and which company-controlled account can correct the state. Where a real failure cannot be triggered safely, use lower-level evidence and document that limitation instead of claiming a broader pass.
+
+## Run topic-specific acceptance scenarios
+
+Adapt these cases to the actual platform without putting credentials or personal customer data into shared evidence:
+
+- **Daylight-saving changes:** Reproduce daylight-saving changes from a clean session and record both the interface response and underlying system state.
+- **Midnight boundaries:** For midnight boundaries, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Simultaneous items:** Simulate simultaneous items safely; verify keyboard and narrow-screen recovery as well as the technical response.
+- **Changed schedules:** Use changed schedules to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
+- **Failed webhooks:** Reproduce failed webhooks from a clean session and record both the interface response and underlying system state.
+- **Delayed builds:** For delayed builds, decide what may be retained, what must be discarded, and which action is safe to repeat.
+- **Stale previews:** Simulate stale previews safely; verify keyboard and narrow-screen recovery as well as the technical response.
+- **Cancelled releases:** Use cancelled releases to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
+
+Preserve expected and actual outcomes separately. A pass needs observable evidence and an owner; a surprise needs correction or a time-bounded exception with a retest trigger.
 
 ## Assign durable ownership and access
 
