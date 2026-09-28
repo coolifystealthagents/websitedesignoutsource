@@ -1,0 +1,94 @@
+{
+  "issue": "WEB-73",
+  "taskId": "0d88cee9-f10c-4bdf-b75d-8bdbac2a85d1",
+  "runId": "ad074e80-21c2-4299-90ad-3c9816d146f3",
+  "cycleLabel": "September 28, 2026",
+  "family": "research",
+  "requiredCount": 5,
+  "draftedCount": 5,
+  "publicationDateCandidate": "2026-09-28",
+  "dateStatus": "Must be reconciled by the Blog release integrator to the actual first-publication date in the site timezone before the sole combined push",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/websitedesignoutsource",
+  "productionBranch": "main",
+  "baselineSha": "7538f7ed5415dd74772483f1158d3502bfcea3f1",
+  "researchBranch": "web-73-daily-research-ad074e80",
+  "worktree": "/paperclip/instances/default/projects/5418e5ab-98ce-4f78-b993-04323d620f5a/2c2f67bc-b6f7-4600-ab91-a74ef27e14a2/_default/web73-run-ad074e80",
+  "contentCommit": "0cc5392541ec52a01e9fdac9d1e128460684c820",
+  "releaseOwner": "September 28 Blog routine",
+  "deploymentOwner": "Browser operator",
+  "publicationState": "LOCAL_HANDOFF_ONLY_NOT_PUSHED_NOT_DEPLOYED_NOT_LIVE_VERIFIED",
+  "validation": {
+    "batchValidator": "PASS: 5 files",
+    "repositoryTests": "PASS: 8 passed, 0 failed",
+    "typecheck": "PASS",
+    "productionBuild": "PASS: 607 static pages",
+    "internalLinkAudit": "PASS",
+    "diffCheck": "PASS",
+    "bodyOnlyWordCounts": {
+      "accessible-carousel-outsourced-website-acceptance": 1306,
+      "back-forward-cache-website-handoff-research": 1303,
+      "content-security-policy-reporting-handoff-research": 1380,
+      "ecommerce-product-structured-data-acceptance-research": 1320,
+      "passkey-user-journey-outsourced-website-research": 1470
+    },
+    "maximumPairwiseFiveWordShingleJaccardPercent": 0.352,
+    "maximumOverlapPair": [
+      "back-forward-cache-website-handoff-research",
+      "passkey-user-journey-outsourced-website-research"
+    ]
+  },
+  "entries": [
+    {
+      "slug": "accessible-carousel-outsourced-website-acceptance",
+      "topic": "Accessible carousel acceptance for outsourced websites",
+      "sourcePath": "content/research/accessible-carousel-outsourced-website-acceptance.mdx",
+      "contentHash": "716288f5060e71dfc2d16e784e9587d6bbc991704a8c5a2c6a7204f3c19143b3",
+      "bodyOnlyWordCount": 1306,
+      "candidateUrl": "https://websitedesignoutsource.com/research/accessible-carousel-outsourced-website-acceptance",
+      "sourcesChecked": "2026-09-28"
+    },
+    {
+      "slug": "back-forward-cache-website-handoff-research",
+      "topic": "Back-forward cache behavior in website handoffs",
+      "sourcePath": "content/research/back-forward-cache-website-handoff-research.mdx",
+      "contentHash": "14d9ca5821c9ac5df709ecd199e97a8b84124bb7f6626db9c438e4a38fd3fa5f",
+      "bodyOnlyWordCount": 1303,
+      "candidateUrl": "https://websitedesignoutsource.com/research/back-forward-cache-website-handoff-research",
+      "sourcesChecked": "2026-09-28"
+    },
+    {
+      "slug": "content-security-policy-reporting-handoff-research",
+      "topic": "Content Security Policy reporting and enforcement handoff",
+      "sourcePath": "content/research/content-security-policy-reporting-handoff-research.mdx",
+      "contentHash": "6041867c71c15a79f666c06a427036cb27ceef7840158737c70399121e9caae4",
+      "bodyOnlyWordCount": 1380,
+      "candidateUrl": "https://websitedesignoutsource.com/research/content-security-policy-reporting-handoff-research",
+      "sourcesChecked": "2026-09-28"
+    },
+    {
+      "slug": "ecommerce-product-structured-data-acceptance-research",
+      "topic": "Ecommerce Product structured data acceptance",
+      "sourcePath": "content/research/ecommerce-product-structured-data-acceptance-research.mdx",
+      "contentHash": "dd529fe5de9ac4ea8434a9c3ac830aaf3afc5a98c0255f00d5be1ee64b48a4ad",
+      "bodyOnlyWordCount": 1320,
+      "candidateUrl": "https://websitedesignoutsource.com/research/ecommerce-product-structured-data-acceptance-research",
+      "sourcesChecked": "2026-09-28"
+    },
+    {
+      "slug": "passkey-user-journey-outsourced-website-research",
+      "topic": "Passkey user journeys for outsourced websites",
+      "sourcePath": "content/research/passkey-user-journey-outsourced-website-research.mdx",
+      "contentHash": "6551929f673c5285aa31f4e2b5564590cadbe0fbedc12b5a1cfa536cbaadb135",
+      "bodyOnlyWordCount": 1470,
+      "candidateUrl": "https://websitedesignoutsource.com/research/passkey-user-journey-outsourced-website-research",
+      "sourcesChecked": "2026-09-28"
+    }
+  ],
+  "integratorActions": [
+    "Combine these exact five entries with the cycle's exact twelve Blog entries before the only production push",
+    "Reconcile every publication date to the actual first-publication date in the configured site timezone",
+    "Re-run combined manifest, hash, source, canonical, asset, link, sitemap, typecheck, test, body-depth, overlap, and clean-build checks",
+    "Do not describe candidate URLs as live until the user completes article-by-article public verification"
+  ]
+}
