@@ -29,17 +29,21 @@ Do not add another accessibility-service CTA to this research route. The existin
 
 ## Verified execution inventory — 2026-09-24
 
-The following five existing research routes were checked in a fresh production build. Each has one clear supporting question, its matching existing Philippines-only service pillar, an exact canonical artifact, and a sitemap entry. None currently has the named service link inside its route-local `<main>`, so these are possible future handoffs, not permission to add them together or to make a generic service list.
+The following five existing research routes were checked in a fresh production build. Each has one clear supporting question, its matching existing Philippines-only service pillar, an exact canonical artifact, and a sitemap entry. They are planning candidates only; do not turn the list into a generic service list or implement more than one handoff in a run.
 
 | Priority | Supporting route and reader question | Existing service pillar | Generated-route finding | Safe follow-up |
 | --- | --- | --- | --- | --- |
-| 1 | `/research/website-performance-budget-handoff` — What evidence should a team hand over when a page misses its performance budget? | `/services/core-web-vitals-optimization` | Exact route-local service href count: 0 | Add one handoff only after confirming the record owner, its modified-date contract, and the service scope. Keep performance targets and release approval with the owner. |
-| 2 | `/research/website-migration-inventory-control-study` — How can a team account for useful content before a redesign moves it? | `/services/website-content-migration` | Exact route-local service href count: 0 | Add one migration-service handoff beside the inventory decision. The owner keeps URL retirement, redirect, and release decisions. |
-| 3 | `/research/design-system-handoff-controls` — What should a distributed team document before reusing a component? | `/services/design-system-production` | Exact route-local service href count: 0 | Add one route-local handoff only if the typed record supports it. Keep component acceptance and production release with the owner. |
-| 4 | `/research/website-change-management-controls` — What evidence should accompany a recurring website change? | `/services/website-maintenance` | Exact route-local service href count: 0 | Add one maintenance handoff for a reader preparing recurring work. Keep access, exception, and publish decisions with the owner. |
-| 5 | `/research/website-design-website-copy-evidence` — What evidence should support website copy before a landing page is built? | `/services/landing-page-design` | Exact route-local service href count: 0 | Add one landing-page handoff only if it stays beside the copy-review decision. The owner approves claims, offers, and publication. |
+| Delivered | `/research/website-performance-budget-handoff` — What evidence should a team hand over when a page misses its performance budget? | `/services/core-web-vitals-optimization` | Exact route-local service href count: 1, using the canonical absolute URL | Do not add another performance-service CTA. Keep performance targets and release approval with the owner. |
+| 1 | `/research/website-migration-inventory-control-study` — How can a team account for useful content before a redesign moves it? | `/services/website-content-migration` | Exact route-local service href count: 0 | Add one migration-service handoff beside the inventory decision. The owner keeps URL retirement, redirect, and release decisions. |
+| 2 | `/research/design-system-handoff-controls` — What should a distributed team document before reusing a component? | `/services/design-system-production` | Exact route-local service href count: 0 | Add one route-local handoff only if the typed record supports it. Keep component acceptance and production release with the owner. |
+| 3 | `/research/website-change-management-controls` — What evidence should accompany a recurring website change? | `/services/website-maintenance` | Exact route-local service href count: 0 | Add one maintenance handoff for a reader preparing recurring work. Keep access, exception, and publish decisions with the owner. |
+| 4 | `/research/website-design-website-copy-evidence` — What evidence should support website copy before a landing page is built? | `/services/landing-page-design` | Exact route-local service href count: 0 | Add one landing-page handoff only if it stays beside the copy-review decision. The owner approves claims, offers, and publication. |
 
 The remaining older blog candidates need a separate metadata and artifact-contract review before they can enter this inventory. They are not treated as ready merely because a sitemap route exists.
+
+## 2026-09-28 — performance-handoff reconciliation
+
+A fresh production build found that the performance-budget route already renders exactly one canonical absolute link to the Core Web Vitals optimization service inside its route-local main. The earlier zero-link ledger row came from a probe that looked only for a relative href. The route and service each have a unique canonical artifact and a sitemap location; the sitemap intentionally has no lastmod. This source-only correction marks the pair delivered and promotes the migration pair without changing reader-facing output.
 
 ## 2026-09-13 — accessibility evidence handoff status
 
