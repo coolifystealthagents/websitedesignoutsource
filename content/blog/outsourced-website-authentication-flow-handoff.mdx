@@ -12,67 +12,23 @@ Define account states, recovery, accessible errors, security ownership, and acce
 
 The central failure to prevent is concrete: the interface reports success while the account remains unusable, or recovery depends on a vendor-controlled address. A polished screen or one successful demonstration does not prove the complete operating path. Acceptance must cover ownership, predictable variation, and recovery, while avoiding unsupported claims about security, compliance, customer results, or the business.
 
-## Define the outcome before discussing implementation
+## Inventory account states before reviewing screens
 
-Start at the route where the customer arrives. Record the action, the information already available, the decision the interface asks the person to make, and the final state that confirms completion. For authentication flow handoff, this journey description keeps design, development, content, and operations aligned even if the chosen platform changes.
+Write down the states the product actually supports: invited, unverified, active, locked, disabled, pending deletion, and deleted may all behave differently. For each state, identify permitted entry routes and the message returned for sign-in, password reset, email change, and support recovery. This exposes contradictions that a happy-path demo hides, such as a disabled account receiving a reset email that can never restore access.
 
-Separate company decisions from vendor proposals. The company should approve customer promises, policy, risk tolerance, data use, messages, and exception authority. The outsourced team may recommend an implementation and explain tradeoffs, but unknowns must remain visible. Turning an assumption into polished copy makes it harder for reviewers to see what still requires a decision.
+Treat identifiers and authenticators separately. Changing an email address, resetting a password, enrolling a passkey, and replacing a second factor each need their own proof and notification policy. Decide when an existing session is revoked and where the user can review active sessions. Avoid messages that reveal whether an unrelated person has an account; still give the real user a useful next step through a controlled channel.
 
-Define evidence in observable terms. Name the route, starting state, input, expected result, actual result, environment, time, and reviewer. Include a normal path, a meaningful edge condition, and a safe recovery exercise. If production testing could cause harm, agree on a staging test and state exactly what remains unproven until release.
+## Exercise recovery as an adversarial journey
 
-## Turn the record into topic-specific decisions
+Start reset tests from a clean browser. Check used, expired, malformed, and superseded links. Open one link twice and request a newer link before using the older one. Confirm that rate limiting does not strand legitimate users and that a support override leaves an auditable event. Password managers must be able to identify username, current-password, new-password, and one-time-code fields without guessing from visual placement.
 
-The authentication state register must answer these questions against actual routes and representative examples:
+Multifactor recovery deserves a written decision rather than an improvised support exception. State which evidence support may request, who approves bypass, how long temporary access lasts, and how the account owner is notified. Recovery codes should be regenerated after use when the platform supports it. Screenshots and tickets must never contain passwords, codes, secret keys, or full identity documents.
 
-1. **Account state.** Capture account state when the website changes state, then compare it with the customer-visible result.
-2. **Entry route.** Name who supplies and may alter entry route, plus evidence that the recorded answer remains current.
-3. **Permitted action.** Review permitted action against a real route and representative input; record any template, provider, account, or regional boundary.
-4. **Message.** Make message recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
-5. **Identity provider response.** Capture identity provider response when the website changes state, then compare it with the customer-visible result.
-6. **Retry rule.** Name who supplies and may alter retry rule, plus evidence that the recorded answer remains current.
-7. **Recovery route.** Review recovery route against a real route and representative input; record any template, provider, account, or regional boundary.
-8. **Audit signal.** Make audit signal recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
-9. **Support owner.** Capture support owner when the website changes state, then compare it with the customer-visible result.
-10. **Acceptance evidence.** Name who supplies and may alter acceptance evidence, plus evidence that the recorded answer remains current.
+## Verify ownership after the vendor leaves
 
-Review the entries together. A technically correct value still fails acceptance when the customer message, support procedure, or approval authority contradicts it.
+The company should control identity-provider administration, verified sending domains, redirect URI configuration, signing keys, recovery contacts, and billing. List key-rotation and certificate-expiry alerts and route them to a maintained group. Test that a company administrator can disable an account, revoke sessions, inspect a non-sensitive audit event, and restore the approved configuration.
 
-## Build a authentication state register
-
-Create one controlled authentication state register rather than distributing decisions across chat, screenshots, and private vendor notes. Give every row a stable identifier and capture account state, entry route, permitted action, message, identity provider response, retry rule, recovery route, audit signal, support owner, and acceptance evidence. Link to company-controlled evidence. Never place passwords, tokens, personal data, private logs, or recovery codes in a public article or broadly shared acceptance document.
-
-Use statuses that communicate reality: proposed, ready for review, accepted, accepted with an exception, or blocked. An exception needs a reason, risk owner, review date, and removal condition. A bare label such as done cannot tell a future operator whether the item was implemented, tested, approved, or simply discussed.
-
-Keep the current decision easy to locate while preserving history in version control or the company project system. When a row changes, record why, who approved it, which routes depend on it, and which checks must run again. That change trail matters for authentication flow handoff because a small configuration edit can alter behavior beyond the page where it was first noticed.
-
-## Model the states and transitions
-
-Draw the important states as a short sequence, including who or what causes each transition. Label the point where the website hands responsibility to another service and the point where control returns. For every transition, decide what the customer sees, what the company records, and how an operator distinguishes delay from failure.
-
-Do not collapse interface status, provider status, and business status into one word. A request may be accepted by the browser but rejected by an API. A provider may finish while the company record remains stale. The business may require review after the technical action succeeds. The authentication state register should preserve these differences so retries and support messages do not create contradictory outcomes.
-
-Choose retry and cancellation behavior deliberately. State whether another attempt is safe, whether input is preserved, whether the action can run twice, and when human review becomes necessary. Give customers useful next steps without exposing internal infrastructure or blaming a provider they did not choose.
-
-## Test realistic variation and recovery
-
-Run the expected path first with representative content and a clean session. Then cover expired links, locked accounts, changed email addresses, password-manager use, rate limits, and interrupted multifactor checks. The purpose is not to collect a huge screenshot archive. It is to test assumptions most likely to cause a customer-facing failure or leave the company unable to recover.
-
-For each case, record expected and actual results separately. Save the release identity and time with the evidence. Check narrow and wide layouts, keyboard operation, focus order, readable labels, status announcements, reflow, and understandable errors wherever those qualities apply. A technical response alone does not demonstrate that the customer can understand or complete the task.
-
-Exercise recovery without damaging production. Confirm what information survives, which action is safe to repeat, how an operator finds the relevant record, and which company-controlled account can correct the state. Where a real failure cannot be triggered safely, use lower-level evidence and document that limitation instead of claiming a broader pass.
-
-## Run topic-specific acceptance scenarios
-
-Adapt these cases to the actual platform without putting credentials or personal customer data into shared evidence:
-
-- **Expired links:** Reproduce expired links from a clean session and record both the interface response and underlying system state.
-- **Locked accounts:** For locked accounts, decide what may be retained, what must be discarded, and which action is safe to repeat.
-- **Changed email addresses:** Simulate changed email addresses safely; verify keyboard and narrow-screen recovery as well as the technical response.
-- **Password-manager use:** Use password-manager use to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
-- **Rate limits:** Reproduce rate limits from a clean session and record both the interface response and underlying system state.
-- **Interrupted multifactor checks:** For interrupted multifactor checks, decide what may be retained, what must be discarded, and which action is safe to repeat.
-
-Preserve expected and actual outcomes separately. A pass needs observable evidence and an owner; a surprise needs correction or a time-bounded exception with a retest trigger.
+Acceptance evidence should pair a browser result with the corresponding account state. Record the test identity, environment, route, starting state, action, expected transition, actual transition, customer-visible copy, and cleanup. The flow is not accepted merely because the dashboard says success; the person must reach the intended state and have a safe route out of failure.
 
 ## Assign durable ownership and access
 

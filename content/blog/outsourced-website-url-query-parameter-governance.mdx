@@ -12,70 +12,23 @@ Document tracking, filtering, pagination, canonical behavior, privacy, caching, 
 
 The central failure to prevent is concrete: different parameter combinations create duplicate indexable pages, leak sensitive values, or show stale cached results. A polished screen or one successful demonstration does not prove the complete operating path. Acceptance must cover ownership, predictable variation, and recovery, while avoiding unsupported claims about security, compliance, customer results, or the business.
 
-## Define the outcome before discussing implementation
+## Classify parameters by function
 
-Start at the route where the customer arrives. Record the action, the information already available, the decision the interface asks the person to make, and the final state that confirms completion. For URL query parameter governance, this journey description keeps design, development, content, and operations aligned even if the chosen platform changes.
+Separate campaign attribution, user-interface state, search or filter state, pagination, experiments, and server control. For every parameter, define allowed values, normalization, persistence, sharing behavior, and whether it changes the page’s primary content. Reject parameters carrying emails, tokens, search terms with sensitive context, or other values that should not travel through logs and referrer headers.
 
-Separate company decisions from vendor proposals. The company should approve customer promises, policy, risk tolerance, data use, messages, and exception authority. The outsourced team may recommend an implementation and explain tradeoffs, but unknowns must remain visible. Turning an assumption into polished copy makes it harder for reviewers to see what still requires a decision.
+Test syntax deliberately: repeated keys, blank values, mixed case, encoded characters, unexpected values, and different ordering. Decide whether the server rejects, ignores, normalizes, or redirects each case. The same decision must hold for direct loads and client-side navigation.
 
-Define evidence in observable terms. Name the route, starting state, input, expected result, actual result, environment, time, and reviewer. Include a normal path, a meaningful edge condition, and a safe recovery exercise. If production testing could cause harm, agree on a staging test and state exactly what remains unproven until release.
+## Align canonical, index, and cache behavior
 
-## Turn the record into topic-specific decisions
+Campaign tags usually preserve the underlying canonical URL, while a genuinely distinct filtered landing page may need its own approved index strategy. Document the rule instead of applying one blanket canonical to every combination. Verify the rendered canonical, robots directives, internal links, sitemap inclusion, redirects, and status codes with representative URLs.
 
-The query parameter registry must answer these questions against actual routes and representative examples:
+Caching must include every parameter that changes the response and ignore only parameters proven not to matter. Test two users arriving with different filters or experiments to ensure a shared cache cannot serve the wrong variant. When parameters affect consent or personalization, record the privacy review and avoid persisting them longer than necessary.
 
-1. **Parameter.** Capture parameter when the website changes state, then compare it with the customer-visible result.
-2. **Purpose.** Name who supplies and may alter purpose, plus evidence that the recorded answer remains current.
-3. **Allowed values.** Review allowed values against a real route and representative input; record any template, provider, account, or regional boundary.
-4. **Default.** Make default recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
-5. **Persistence.** Capture persistence when the website changes state, then compare it with the customer-visible result.
-6. **Canonical treatment.** Name who supplies and may alter canonical treatment, plus evidence that the recorded answer remains current.
-7. **Indexing rule.** Review indexing rule against a real route and representative input; record any template, provider, account, or regional boundary.
-8. **Cache behavior.** Make cache behavior recoverable so the company can find, explain, and restore a known-good value without an old vendor account.
-9. **Analytics handling.** Capture analytics handling when the website changes state, then compare it with the customer-visible result.
-10. **Privacy review.** Name who supplies and may alter privacy review, plus evidence that the recorded answer remains current.
-11. **Owner.** Review owner against a real route and representative input; record any template, provider, account, or regional boundary.
+## Preserve attribution without polluting navigation
 
-Review the entries together. A technically correct value still fails acceptance when the customer message, support procedure, or approval authority contradicts it.
+Specify when campaign values enter analytics, how they survive a multi-page journey, and when they are discarded. Internal links should not continually append external acquisition tags. Copy-link and social-share controls need an explicit choice about whether filters remain and tracking values disappear.
 
-## Build a query parameter registry
-
-Create one controlled query parameter registry rather than distributing decisions across chat, screenshots, and private vendor notes. Give every row a stable identifier and capture parameter, purpose, allowed values, default, persistence, canonical treatment, indexing rule, cache behavior, analytics handling, privacy review, and owner. Link to company-controlled evidence. Never place passwords, tokens, personal data, private logs, or recovery codes in a public article or broadly shared acceptance document.
-
-Use statuses that communicate reality: proposed, ready for review, accepted, accepted with an exception, or blocked. An exception needs a reason, risk owner, review date, and removal condition. A bare label such as done cannot tell a future operator whether the item was implemented, tested, approved, or simply discussed.
-
-Keep the current decision easy to locate while preserving history in version control or the company project system. When a row changes, record why, who approved it, which routes depend on it, and which checks must run again. That change trail matters for URL query parameter governance because a small configuration edit can alter behavior beyond the page where it was first noticed.
-
-## Model the states and transitions
-
-Draw the important states as a short sequence, including who or what causes each transition. Label the point where the website hands responsibility to another service and the point where control returns. For every transition, decide what the customer sees, what the company records, and how an operator distinguishes delay from failure.
-
-Do not collapse interface status, provider status, and business status into one word. A request may be accepted by the browser but rejected by an API. A provider may finish while the company record remains stale. The business may require review after the technical action succeeds. The query parameter registry should preserve these differences so retries and support messages do not create contradictory outcomes.
-
-Choose retry and cancellation behavior deliberately. State whether another attempt is safe, whether input is preserved, whether the action can run twice, and when human review becomes necessary. Give customers useful next steps without exposing internal infrastructure or blaming a provider they did not choose.
-
-## Test realistic variation and recovery
-
-Run the expected path first with representative content and a clean session. Then cover unknown parameters, repeated keys, empty values, encoded characters, shared links, filter combinations, redirects, and client-side navigation. The purpose is not to collect a huge screenshot archive. It is to test assumptions most likely to cause a customer-facing failure or leave the company unable to recover.
-
-For each case, record expected and actual results separately. Save the release identity and time with the evidence. Check narrow and wide layouts, keyboard operation, focus order, readable labels, status announcements, reflow, and understandable errors wherever those qualities apply. A technical response alone does not demonstrate that the customer can understand or complete the task.
-
-Exercise recovery without damaging production. Confirm what information survives, which action is safe to repeat, how an operator finds the relevant record, and which company-controlled account can correct the state. Where a real failure cannot be triggered safely, use lower-level evidence and document that limitation instead of claiming a broader pass.
-
-## Run topic-specific acceptance scenarios
-
-Adapt these cases to the actual platform without putting credentials or personal customer data into shared evidence:
-
-- **Unknown parameters:** Reproduce unknown parameters from a clean session and record both the interface response and underlying system state.
-- **Repeated keys:** For repeated keys, decide what may be retained, what must be discarded, and which action is safe to repeat.
-- **Empty values:** Simulate empty values safely; verify keyboard and narrow-screen recovery as well as the technical response.
-- **Encoded characters:** Use encoded characters to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
-- **Shared links:** Reproduce shared links from a clean session and record both the interface response and underlying system state.
-- **Filter combinations:** For filter combinations, decide what may be retained, what must be discarded, and which action is safe to repeat.
-- **Redirects:** Simulate redirects safely; verify keyboard and narrow-screen recovery as well as the technical response.
-- **Client-side navigation:** Use client-side navigation to test ownership: find the record, identify the alert recipient, correct the state, and prove recovery.
-
-Preserve expected and actual outcomes separately. A pass needs observable evidence and an owner; a surprise needs correction or a time-bounded exception with a retest trigger.
+The handoff register should include an owner for application parsing, SEO behavior, analytics mapping, caching, and privacy. Acceptance should cover a valid campaign link, a complex filter, an unknown parameter, a reordered equivalent URL, and a cached response. The company must be able to add or retire a parameter and verify all five layers without relying on vendor memory.
 
 ## Assign durable ownership and access
 
