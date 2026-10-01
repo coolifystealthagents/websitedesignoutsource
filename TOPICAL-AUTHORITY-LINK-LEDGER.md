@@ -58,3 +58,10 @@ A fresh production build found that the performance-budget route already renders
 - Local production artifact: `Visual Hierarchy Evidence for Website Pages` has its canonical URL, one route-local `/services/website-ui-design` link, the owner-boundary sentence, Open Graph modified time, and Article `datePublished` `2026-08-14` / `dateModified` `2026-09-17`. The UI-design service artifact has its H1 and canonical URL; both routes are in the sitemap, which intentionally has no `<lastmod>`.
 - Public checks: cache-busted apex, `www`, and canonical sitemap each returned `403 text/plain` without an HTML or XML body. These denied responses provide no route-marker, H1, canonical, or sitemap evidence.
 - Preserve rendered-source commit `6bcd536d231b6838d99e61ad78cff08456e1299b`; source delivery is complete, while deployment remains pending public verification / public unavailable. Do not add a duplicate UI-design CTA to this research route; recheck the two hosts and sitemap after an approved rollout path is available.
+
+## 2026-10-01 — migration inventory handoff status
+
+- Rendered source: `511fb2d2742a5d570c1deff3a370d2904ff2f300`.
+- Local production artifact: the route has its H1, self-canonical URL, one route-local Website Content Migration service link, the owner-boundary sentence, Article `datePublished` `2026-08-10` / `dateModified` `2026-10-01`, and a sitemap `<loc>`. The sitemap intentionally has no `<lastmod>`.
+- Public checks: cache-busted apex and `www` returned `200 text/html` with the expected H1 and apex canonical, but both omit the new route-local marker, service href, and updated date. The cache-busted apex sitemap returned `200 application/xml`, includes the canonical route, and has no `<lastmod>` by contract.
+- Preserve rendered-source commit `511fb2d2742a5d570c1deff3a370d2904ff2f300`; source delivery is complete, while deployment remains pending public verification / public stale. No repository-approved deployment target or lifecycle handle was found, so none was inferred or triggered. Do not add a duplicate migration CTA; recheck both hosts after an approved rollout path is available.
