@@ -54,6 +54,14 @@ For each failure, capture route, viewport, component, trigger state, expected be
 
 A client can accept a bounded exception only with its affected content, user consequence, owner, and remediation decision stated. Third-party ownership does not make a defect disappear. It changes the escalation path: configure the widget, request a vendor fix, replace it, or document why the owner accepts the residual risk.
 
+## Separate root defects from route symptoms
+
+The acceptance log should group findings by implementation cause. If the same fixed-height button appears on twelve routes, record one component defect with its affected route inventory and verify the repair against several representative contexts. If one campaign card adds a local clamp that defeats the repaired component, preserve it as a separate content-template finding. This grouping makes the outsourced team's estimate auditable and prevents a large screenshot count from masquerading as broad engineering work.
+
+Regression ownership belongs in the final handoff. Store the spacing override alongside other repeatable accessibility checks, add high-risk components to the design-system examples, and run the check when typography tokens or shared controls change. Content editors should know which authored blocks have height or truncation constraints and how to preview them with long copy. The test is especially valuable before localization because it reveals brittle assumptions even when translated strings are not yet available.
+
+Automation can flag suspicious fixed dimensions, overflow, clamping, and single-line rules, but it cannot determine whether meaningful content became unavailable in every state. Use static analysis to focus human review, not to issue the final pass. The acceptance decision needs an operated page, the combined spacing state, and evidence that users can still read and complete the intended task.
+
 ## Decision framework
 
 Accept when all in-scope templates and risky components preserve their text and operation under the combined override, and when exceptions are explicit. Return the work when labels disappear, controls overlap so they cannot be used, or the team supplies only default-state screenshots. Treat untested authenticated or third-party states as coverage limits rather than silent passes.

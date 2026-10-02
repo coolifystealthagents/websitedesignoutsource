@@ -60,6 +60,14 @@ The design handoff should contain semantic tokens, component examples, asset map
 
 Accept the work when every promised mode renders the supported component and route inventory without lost meaning, unreadable states, or an unexplained initial flash. Return it when only showcase pages were themed, when native controls contradict their surroundings, or when persistence behavior is undocumented. Mark third-party limitations and untested states explicitly.
 
+## Put measurable evidence in the delivery package
+
+A useful acceptance packet contains more than paired screenshots. Ask for the theme token table, the supported-state matrix, automated contrast results with manually checked exceptions, and recordings of first load and preference changes. For each sampled route, record the browser, viewport, operating-system preference, stored site choice, and observed scheme. That detail lets a reviewer distinguish a styling defect from a stale preference or unsupported embedded surface.
+
+The packet should also identify who can change each layer. Brand owners approve semantic color intent, designers define token relationships, developers implement state and initialization, and content editors choose theme-safe media. Record component-level defects against the shared component rather than closing five route findings independently. Recheck representative pages after the root repair, since local overrides may still defeat the token.
+
+Dark appearance should be included in ordinary regression work after acceptance. A new status color, payment widget, campaign image, or cookie banner can create a failure without altering the theme switcher. Add both schemes to visual checks where they are reliable, but keep keyboard, contrast, and real-browser checks in the release checklist. Pixel comparison alone cannot decide whether a control communicates its state or whether a chart remains understandable.
+
 ## Practical conclusion
 
 Dark mode is a small product feature, not a palette export. Its reliable unit is a state machine connected to semantic design tokens, browser behavior, media policy, and accessibility evidence. A client who approves those decisions receives a maintainable appearance system. A team that supplies two attractive screenshots has supplied inspiration, not acceptance evidence.
