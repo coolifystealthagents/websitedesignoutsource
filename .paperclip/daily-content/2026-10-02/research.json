@@ -1,0 +1,123 @@
+{
+  "cycleLabel": "2026-10-02",
+  "family": "research",
+  "status": "staged",
+  "configuredSiteTimezone": "UTC",
+  "entries": [
+    {
+      "family": "research",
+      "topic": "CSS Subgrid Acceptance for Outsourced Website Components",
+      "slug": "css-subgrid-component-acceptance-outsourced-websites",
+      "route": "/research/css-subgrid-component-acceptance-outsourced-websites",
+      "sourcePath": "content/research/css-subgrid-component-acceptance-outsourced-websites.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/TR/css-grid-2/",
+        "https://www.w3.org/TR/css-grid-1/",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns",
+        "https://www.w3.org/TR/css-align-3/",
+        "https://www.w3.org/TR/css-writing-modes-3/",
+        "https://www.w3.org/TR/WCAG22/#meaningful-sequence",
+        "https://www.w3.org/TR/WCAG22/#focus-order",
+        "https://www.w3.org/TR/css-contain-3/"
+      ],
+      "contentHash": "bfa4ec2bd8bb4b2b18e5d6fe5518f36c1be035f3dcf5df70b79de45079df0cc6",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 1457
+    },
+    {
+      "family": "research",
+      "topic": "Native HTML Popover Handoffs for Outsourced Websites",
+      "slug": "native-html-popover-outsourced-website-handoff",
+      "route": "/research/native-html-popover-outsourced-website-handoff",
+      "sourcePath": "content/research/native-html-popover-outsourced-website-handoff.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://html.spec.whatwg.org/multipage/popover.html",
+        "https://html.spec.whatwg.org/multipage/popover.html#the-popover-target-attributes",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Popover_API",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover",
+        "https://www.w3.org/TR/css-position-4/#top-layer",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop",
+        "https://www.w3.org/TR/css-anchor-position-1/",
+        "https://www.w3.org/WAI/ARIA/apg/",
+        "https://www.w3.org/TR/WCAG22/#focus-order",
+        "https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus"
+      ],
+      "contentHash": "0bb5d7da713237ba9f42fabb1f77a6be9570e616262e5a83dd57246539f43799",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 1529
+    },
+    {
+      "family": "research",
+      "topic": "View Transition Handoffs for Outsourced Websites",
+      "slug": "view-transitions-outsourced-website-handoff",
+      "route": "/research/view-transitions-outsourced-website-handoff",
+      "sourcePath": "content/research/view-transitions-outsourced-website-handoff.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/TR/css-view-transitions-1/",
+        "https://www.w3.org/TR/css-view-transitions-2/",
+        "https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Document/startViewTransition",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/view-transition-name",
+        "https://html.spec.whatwg.org/multipage/browsing-the-web.html",
+        "https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion",
+        "https://www.w3.org/TR/WCAG22/#animation-from-interactions",
+        "https://www.w3.org/TR/WCAG22/#focus-order",
+        "https://web.dev/articles/vitals"
+      ],
+      "contentHash": "b2d5e32c31635f3a4e7a78b4d262051b7439f82f8ab801aa6c5f22ed2d3be9fa",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 1612
+    },
+    {
+      "family": "research",
+      "topic": "Dark Mode and Color-Scheme Handoffs for Outsourced Websites",
+      "slug": "website-dark-mode-color-scheme-handoff",
+      "route": "/research/website-dark-mode-color-scheme-handoff",
+      "sourcePath": "content/research/website-dark-mode-color-scheme-handoff.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme",
+        "https://www.w3.org/TR/css-color-adjust-1/",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme",
+        "https://html.spec.whatwg.org/multipage/semantics.html#meta-theme-color",
+        "https://www.w3.org/TR/WCAG22/#contrast-minimum",
+        "https://www.w3.org/TR/WCAG22/#non-text-contrast",
+        "https://www.w3.org/TR/WCAG22/#use-of-color",
+        "https://www.w3.org/TR/css-color-4/",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors"
+      ],
+      "contentHash": "8524ced829b6b6f92606891ac76ba2aa11deb77ee7cbf39f8373c54c74cfa2a5",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 1428
+    },
+    {
+      "family": "research",
+      "topic": "Text Spacing Acceptance for Outsourced Website Design",
+      "slug": "website-text-spacing-acceptance-outsourced-design",
+      "route": "/research/website-text-spacing-acceptance-outsourced-design",
+      "sourcePath": "content/research/website-text-spacing-acceptance-outsourced-design.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/TR/WCAG22/#text-spacing",
+        "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+        "https://www.w3.org/WAI/WCAG22/Techniques/css/C36",
+        "https://www.w3.org/WAI/WCAG22/Techniques/css/C35",
+        "https://www.w3.org/TR/css-text-3/",
+        "https://www.w3.org/TR/css-inline-3/",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height",
+        "https://www.w3.org/WAI/test-evaluate/preliminary/"
+      ],
+      "contentHash": "5acab6222796f714f848feb542084885cf3ffd3eab910042e7313d149143f708",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 1393
+    }
+  ]
+}
