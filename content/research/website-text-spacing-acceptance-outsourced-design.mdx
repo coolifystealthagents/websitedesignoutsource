@@ -1,0 +1,82 @@
+---
+title: "Text Spacing Acceptance for Outsourced Website Design"
+description: "A research-based acceptance method for checking whether custom text spacing remains readable without breaking website content or controls."
+slug: "website-text-spacing-acceptance-outsourced-design"
+published: "2026-10-02"
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Text Spacing Acceptance for Outsourced Website Design
+
+## Research question
+
+What evidence should a client request before accepting text-spacing behavior from an outsourced website team? WCAG 2.2 Success Criterion 1.4.12 establishes test values for line height, paragraph spacing, letter spacing, and word spacing. The criterion is not a request to redesign every page with those values permanently applied. It asks whether users can override spacing without losing content or functionality. That distinction matters because a screenshot of the default layout cannot prove the requirement, while an automated contrast report cannot expose clipped labels, overlapping navigation, or text hidden inside fixed-height cards.
+
+## Method and limits
+
+This review synthesizes W3C normative requirements, WAI techniques, CSS specifications, and browser guidance checked 2026-10-02. It translates them into an acceptance procedure for outsourced website projects. The sources define behavior but do not prescribe a universal browser extension, viewport list, or component library. Recommendations about sampling, evidence, and defect ownership are analysis for a practical handoff.
+
+The review covers HTML text that can receive author styles. It does not claim that text embedded in video or raster images can be repaired with CSS. Logos and essential text images require separate review. Passing the spacing test also does not prove readable copy, sufficient contrast, zoom support, or complete WCAG conformance.
+
+## Apply the four changes as one test state
+
+Create a repeatable browser test that sets line height to at least 1.5 times the font size, spacing after paragraphs to at least twice the font size, letter spacing to at least 0.12 times the font size, and word spacing to at least 0.16 times the font size. Apply all four together. Testing one property at a time can miss the combined pressure that exposes narrow buttons, pills, cards, accordions, and menu items.
+
+Record the exact CSS, browser, viewport, route, locale, and authentication state. The override should beat normal author declarations without replacing unrelated layout rules. If a team uses a bookmarklet or extension, retain its version or source. Evidence should show the changed computed styles on representative elements, not merely state that a tool was run.
+
+## Look for loss, not visual sameness
+
+The page is allowed to become taller and lines are allowed to wrap. Acceptance should focus on whether words, controls, and meaning remain available. Failures include clipped text, overlapping content that obscures reading or operation, labels escaping their controls, text hidden by `overflow`, and content that becomes unreachable because a container cannot grow. A changed card height or a less symmetrical row is not automatically a defect.
+
+Reviewers should operate controls in the modified state. Open menus and dialogs, expand disclosures, trigger errors, switch tabs, and submit representative forms. Dynamic text often lives in components that are absent from the initial screenshot. Verify keyboard focus remains visible and that additional wrapping does not place a sticky header over the active control.
+
+## Trace failures to layout constraints
+
+Fixed heights and single-line assumptions are common causes. A card designed around a two-line title may clip at four lines. An icon button may center its visible label inside a rigid width. `white-space: nowrap`, line clamping, absolute positioning, and overflow suppression each deserve inspection, but none is categorically forbidden. The defect is the loss of content or functionality under the required override.
+
+Prefer repairs that let containers grow, allow intentional wrapping, and preserve document flow. A minimum size can protect a target without capping its content. Grid and flex children may need explicit shrinking behavior, while localized controls may need a different composition at narrow widths. Avoid a global removal of overflow rules: some overflow creates scrolling or protects decorative effects and should be evaluated in context.
+
+## Sample by component risk
+
+A useful matrix combines page templates with stress-prone components. Include the homepage, a long service page, an article, search or listing results, contact and conversion forms, account interfaces when present, and error states. Within them sample navigation, breadcrumbs, badges, cards, tables, filters, dialogs, notifications, pagination, and footer links. Add the longest available labels and at least one narrow supported viewport.
+
+Do not substitute five visually similar marketing pages for component coverage. If a shared button fails everywhere, one root defect can have many route observations. If a content editor can introduce a fixed-height callout, test the authored pattern as well as the design-system example. The inventory should distinguish shared code, page-specific overrides, and third-party widgets because the repair owner differs.
+
+## Include content and localization pressure
+
+Text spacing interacts with real copy. Placeholder text with short English words rarely exercises the same wrapping as legal notices, validation messages, prices, dates, or translated navigation. Use production-shaped content without exposing personal data. When the site supports multiple languages, sample the longest supported strings and confirm that the spacing override is applied after the language-specific typography rules.
+
+Do not solve a failure by shortening an accurate label solely to fit a component. Copy changes require content approval and may change meaning. Likewise, reducing the override below the criterion values only hides the problem. The acceptance record should identify whether the remedy changed CSS, component structure, or approved content.
+
+## Make evidence reproducible
+
+For each failure, capture route, viewport, component, trigger state, expected behavior, actual loss, browser, and a screenshot or short recording. Include the override artifact and the relevant DOM selector without pasting private page data. After repair, repeat the same steps and retain the result beside the original finding.
+
+A client can accept a bounded exception only with its affected content, user consequence, owner, and remediation decision stated. Third-party ownership does not make a defect disappear. It changes the escalation path: configure the widget, request a vendor fix, replace it, or document why the owner accepts the residual risk.
+
+## Decision framework
+
+Accept when all in-scope templates and risky components preserve their text and operation under the combined override, and when exceptions are explicit. Return the work when labels disappear, controls overlap so they cannot be used, or the team supplies only default-state screenshots. Treat untested authenticated or third-party states as coverage limits rather than silent passes.
+
+This approach makes the criterion useful to both parties. The outsourced team receives a reproducible condition and a component-level defect. The client receives evidence tied to actual routes and supported states. Neither side has to confuse pixel fidelity with accessibility.
+
+## Sources
+
+1. [W3C, WCAG 2.2 Success Criterion 1.4.12 Text Spacing](https://www.w3.org/TR/WCAG22/#text-spacing) Normative requirement; checked 2026-10-02.
+2. [W3C WAI, Understanding Success Criterion 1.4.12](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html) Intent and examples; checked 2026-10-02.
+3. [W3C WAI, C36: Allowing text spacing without wrapping](https://www.w3.org/WAI/WCAG22/Techniques/css/C36) CSS technique; checked 2026-10-02.
+4. [W3C WAI, C35: Allowing text spacing without clipping](https://www.w3.org/WAI/WCAG22/Techniques/css/C35) CSS technique; checked 2026-10-02.
+5. [W3C, CSS Text Module Level 3](https://www.w3.org/TR/css-text-3/) Word and letter spacing model; checked 2026-10-02.
+6. [W3C, CSS Inline Layout Module Level 3](https://www.w3.org/TR/css-inline-3/) Line layout model; checked 2026-10-02.
+7. [MDN, letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing) Browser-facing property reference; checked 2026-10-02.
+8. [MDN, word-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing) Browser-facing property reference; checked 2026-10-02.
+9. [MDN, line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) Browser-facing property reference; checked 2026-10-02.
+10. [W3C WAI, Easy Checks: A First Review of Web Accessibility](https://www.w3.org/WAI/test-evaluate/preliminary/) Review context and limits; checked 2026-10-02.
+
+## Related Research
+
+[Website zoom and reflow acceptance](/research/website-zoom-reflow-acceptance-outsourced-design)
+
+[Content density reviews](/research/website-design-content-density-study)
+
+[Website accessibility test plans](/research/website-accessibility-test-plan-outsourced-team)
