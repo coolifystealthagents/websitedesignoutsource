@@ -1,0 +1,42 @@
+{
+  "cycleLabel": "2026-10-02",
+  "family": "blog",
+  "requiredCount": 12,
+  "actualCount": 12,
+  "configuredSiteTimezone": "UTC",
+  "bodyLengths": {
+    "outsourced-b2b-lead-qualification-form-brief": 938,
+    "outsourced-homepage-proof-architecture-brief": 1045,
+    "outsourced-international-domain-strategy-brief": 905,
+    "outsourced-membership-website-design-brief": 911,
+    "outsourced-multisite-website-governance-brief": 944,
+    "outsourced-nonprofit-donation-journey-brief": 923,
+    "outsourced-saas-trial-website-handoff": 934,
+    "outsourced-web-design-rfp-scoring-guide": 1074,
+    "outsourced-website-content-governance-operating-model": 905,
+    "outsourced-website-incumbent-vendor-transition-plan": 1009,
+    "outsourced-website-personalization-acceptance-plan": 922,
+    "outsourced-website-regulated-claims-approval-workflow": 909
+  },
+  "originality": {
+    "maximumPairwiseFiveWordShingleOverlapPercent": 2.44,
+    "maximumPair": [
+      "outsourced-b2b-lead-qualification-form-brief",
+      "outsourced-website-content-governance-operating-model"
+    ],
+    "repeatedParagraphCount": 0,
+    "sharedArgumentReview": "Passed: each article follows a topic-specific decision path, failure model, operational exercise, and reader outcome."
+  },
+  "checks": {
+    "nicheFit": "passed",
+    "authoritativeSources": "passed",
+    "internalLinks": "passed",
+    "contentHashes": "recorded",
+    "imagePaths": "passed",
+    "titles": "passed",
+    "publicationDates": "passed",
+    "canonicalConvention": "passed",
+    "indexAndSitemapLoader": "passed"
+  },
+  "failures": []
+}

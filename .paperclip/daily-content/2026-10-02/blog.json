@@ -1,0 +1,177 @@
+{
+  "cycleLabel": "2026-10-02",
+  "family": "blog",
+  "status": "staged",
+  "configuredSiteTimezone": "UTC",
+  "entries": [
+    {
+      "family": "blog",
+      "topic": "Design a B2B Lead Qualification Form Without Building a Sales Interrogation",
+      "slug": "outsourced-b2b-lead-qualification-form-brief",
+      "route": "/blog/outsourced-b2b-lead-qualification-form-brief",
+      "sourcePath": "content/blog/outsourced-b2b-lead-qualification-form-brief.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html"
+      ],
+      "contentHash": "61316f362a36b2ea48deca75e20684cf224a84749c0be82ba568008746e18b17",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 938
+    },
+    {
+      "family": "blog",
+      "topic": "Brief the Proof Architecture of an Outsourced Homepage",
+      "slug": "outsourced-homepage-proof-architecture-brief",
+      "route": "/blog/outsourced-homepage-proof-architecture-brief",
+      "sourcePath": "content/blog/outsourced-homepage-proof-architecture-brief.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "contentHash": "fd014d417ba2b383a3bc920a4b17ef9fa4d1a38f0f19e71e27515d9a5a291680",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 1045
+    },
+    {
+      "family": "blog",
+      "topic": "Brief International Domain and URL Decisions Before Outsourcing a Website Expansion",
+      "slug": "outsourced-international-domain-strategy-brief",
+      "route": "/blog/outsourced-international-domain-strategy-brief",
+      "sourcePath": "content/blog/outsourced-international-domain-strategy-brief.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://developers.google.com/search/docs/specialty/international/localized-versions"
+      ],
+      "contentHash": "a571cac4b948e5831487e070610ce503f01d362086873d21006fdb355a7e7ea3",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 905
+    },
+    {
+      "family": "blog",
+      "topic": "Scope an Outsourced Membership Website Around Member Journeys",
+      "slug": "outsourced-membership-website-design-brief",
+      "route": "/blog/outsourced-membership-website-design-brief",
+      "sourcePath": "content/blog/outsourced-membership-website-design-brief.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://pages.nist.gov/800-63-4/",
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "contentHash": "71ec588069d11c65046db65bee0f25beacc74edead5faeb2baa41f6a4e3a80fa",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 911
+    },
+    {
+      "family": "blog",
+      "topic": "Write a Multisite Governance Brief for an Outsourced Web Design Team",
+      "slug": "outsourced-multisite-website-governance-brief",
+      "route": "/blog/outsourced-multisite-website-governance-brief",
+      "sourcePath": "content/blog/outsourced-multisite-website-governance-brief.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://developers.google.com/search/docs/specialty/international/localized-versions"
+      ],
+      "contentHash": "d919eb917327fe1a8a2bbf00fa1437c62a4d4893d826a151f701bbd1beec9c7b",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 944
+    },
+    {
+      "family": "blog",
+      "topic": "Brief a Nonprofit Donation Journey for an Outsourced Website Team",
+      "slug": "outsourced-nonprofit-donation-journey-brief",
+      "route": "/blog/outsourced-nonprofit-donation-journey-brief",
+      "sourcePath": "content/blog/outsourced-nonprofit-donation-journey-brief.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/WAI/tutorials/forms/"
+      ],
+      "contentHash": "2304436a438a81ca8487332fd9dcabed5658ceef1abca6d47e79523cefaeedf6",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 923
+    },
+    {
+      "family": "blog",
+      "topic": "Hand Off a SaaS Trial Website From Marketing to Product Without Dropping the User",
+      "slug": "outsourced-saas-trial-website-handoff",
+      "route": "/blog/outsourced-saas-trial-website-handoff",
+      "sourcePath": "content/blog/outsourced-saas-trial-website-handoff.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html"
+      ],
+      "contentHash": "fc705643b1f4d7807a70350d48eab51fac83ed2e99e7a8606485ece2986317eb",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 934
+    },
+    {
+      "family": "blog",
+      "topic": "How to Score an Outsourced Web Design RFP Without Rewarding the Best Sales Deck",
+      "slug": "outsourced-web-design-rfp-scoring-guide",
+      "route": "/blog/outsourced-web-design-rfp-scoring-guide",
+      "sourcePath": "content/blog/outsourced-web-design-rfp-scoring-guide.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.gov.uk/guidance/assessing-and-scoring-bids"
+      ],
+      "contentHash": "7f15f54292372751f6193ca97dedc54e9e33934cb672ea23effcab5d973be1fc",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 1074
+    },
+    {
+      "family": "blog",
+      "topic": "Create a Content Governance Operating Model Before Outsourcing Website Production",
+      "slug": "outsourced-website-content-governance-operating-model",
+      "route": "/blog/outsourced-website-content-governance-operating-model",
+      "sourcePath": "content/blog/outsourced-website-content-governance-operating-model.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.nngroup.com/articles/content-governance/"
+      ],
+      "contentHash": "28bcc2d1e87ceba0bf6553a36e38d4fafb0a43b92c033d5cd4068a9bc8b732ad",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 905
+    },
+    {
+      "family": "blog",
+      "topic": "Plan the Transition From an Incumbent Web Vendor to an Outsourced Design Team",
+      "slug": "outsourced-website-incumbent-vendor-transition-plan",
+      "route": "/blog/outsourced-website-incumbent-vendor-transition-plan",
+      "sourcePath": "content/blog/outsourced-website-incumbent-vendor-transition-plan.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework"
+      ],
+      "contentHash": "933b852f45bc355e5a62afad6d5c7448f979adf533867b6ab20d5358f82a30b9",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 1009
+    },
+    {
+      "family": "blog",
+      "topic": "Accept Website Personalization Without Losing the Default Experience",
+      "slug": "outsourced-website-personalization-acceptance-plan",
+      "route": "/blog/outsourced-website-personalization-acceptance-plan",
+      "sourcePath": "content/blog/outsourced-website-personalization-acceptance-plan.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "contentHash": "0cf17905f0341866806870d62918b264d483a9143a37961d91e69e65b9d83e54",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 922
+    },
+    {
+      "family": "blog",
+      "topic": "Build a Claims Approval Workflow Into an Outsourced Website Project",
+      "slug": "outsourced-website-regulated-claims-approval-workflow",
+      "route": "/blog/outsourced-website-regulated-claims-approval-workflow",
+      "sourcePath": "content/blog/outsourced-website-regulated-claims-approval-workflow.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.ftc.gov/business-guidance/advertising-marketing"
+      ],
+      "contentHash": "45a5998a65e986e965bab7f8c3665c6eda8d2a545bf1e28d7b380f39224aaa03",
+      "sourceDate": "2026-10-02",
+      "bodyWords": 909
+    }
+  ]
+}

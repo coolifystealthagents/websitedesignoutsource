@@ -1,0 +1,67 @@
+---
+title: "Write a Multisite Governance Brief for an Outsourced Web Design Team"
+description: "Define what stays shared and what can vary across brands, regions, or business units before an outside team expands a multisite estate."
+slug: "outsourced-multisite-website-governance-brief"
+published: "2026-10-02"
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Write a Multisite Governance Brief for an Outsourced Web Design Team
+
+## Begin with reasons for having multiple sites
+
+A multisite estate may exist because of brands, countries, regulated entities, franchises, products, or acquisitions. Those reasons produce different design and governance rules. An outsourced team cannot infer the correct model from a list of domains. For every site, record its audience, owner, legal entity, language, conversion path, content authority, and relationship to the parent brand. Mark sites that are temporary, duplicated, or candidates for consolidation.
+
+Define success in operational terms. The goal may be faster launch of regional pages, consistent service presentation, local editorial control, or lower maintenance effort. These goals can conflict. A rigid global template may reduce build cost but prevent necessary local content; unlimited local variation can turn every update into a separate project. The brief must show who chooses when consistency yields to a real local requirement.
+
+## Draw three boundaries: platform, system, and content
+
+Platform rules cover hosting, identity, deployment, environments, backups, and observability. Design-system rules cover tokens, components, interaction behavior, accessibility, and versioning. Content rules cover taxonomy, required pages, reusable copy, translations, metadata, and approval. Discussing all three as "the template" hides important ownership differences.
+
+For each rule, classify it as mandatory, configurable, or local. A keyboard interaction pattern should rarely vary by region. A legal notice may need local ownership. A color theme can be configurable within tested combinations. Record the rationale and approval path. The outside team should implement the chosen boundary, not become the permanent arbiter of brand politics.
+
+## Model inheritance and exceptions
+
+Show how a global change reaches each site. If a component is fixed centrally, does every property receive it automatically, choose an upgrade window, or fork the component? What happens to local content fields when a schema changes? Define version visibility so an operator can tell which sites are current. Silent drift is more dangerous than an explicit older version with a migration plan.
+
+Create an exception record with requestor, business reason, affected property, proposed variation, accessibility and maintenance impact, approver, expiry or review trigger, and reintegration plan. An exception should not require copying the entire theme. Ask the design team for the narrowest extension point that meets the need while preserving shared behavior.
+
+## Design publishing authority around real roles
+
+Map who can create, approve, translate, publish, and remove content at global and local levels. Avoid a single super-administrator shared by every market. A local editor may publish an event without changing navigation structure; a global owner may update a required policy block without rewriting local service details. Preview must make the target property and language unmistakable.
+
+Test urgent corrections. If a phone number is wrong on one site, can its owner fix it promptly? If a shared claim becomes invalid, can the global owner find every instance and coordinate removal? Keep audit history and a safe fallback. Governance that works only during planned campaigns will fail during the moment it matters most.
+
+## Review discovery and search relationships
+
+Decide how visitors and search systems understand relationships among properties. Document canonical rules, language and regional alternatives, sitemaps, redirects, cross-site navigation, and domain ownership. Do not automatically point local pages to a global canonical; that can contradict the decision to maintain distinct pages. Google documents the use of localized versions and `hreflang` in its [localized-version guidance](https://developers.google.com/search/docs/specialty/international/localized-versions). Apply it only when the pages truly represent language or regional alternatives.
+
+Give each property a content-quality owner. Translation is not the same as localization, and domain strategy is not a substitute for useful local content. Test whether visitors can identify where an offer applies and reach the appropriate contact path without being trapped in automatic redirects.
+
+## Accept one change across the estate
+
+Before approving the system, run a representative shared change from proposal to every intended property. Record who approved it, how versions propagated, what local fields were preserved, what visual and accessibility checks ran, and how an exception behaved. Then restore or revise the change. This demonstrates governance more effectively than screenshots of several matching homepages.
+
+The final handoff should include the property register, inheritance map, role matrix, exception process, component and schema versions, release procedure, domain and analytics ownership, monitoring coverage, and consolidation backlog. Link the brief to the [design system production service](/services/design-system-production) when shared components are the delivery lane, and keep authority with named company roles after the outsourced engagement ends.
+
+## Decide how a new property earns its place
+
+Add an intake test for requests to create another site. The requestor should identify audience, distinct tasks, responsible legal entity, content owner, expected lifespan, required integrations, domain choice, analytics owner, and the reason an existing property cannot serve the need. Estimate not only build effort but ongoing translation, review, accessibility, security, and retirement work. A new domain can be inexpensive to launch and costly to govern for years.
+
+Give the governing group several possible outcomes: add content to an existing property, create a campaign section with an expiry date, enable a configured brand or region, approve a genuinely independent site, or reject the request. Publish the decision and the evidence required to reconsider it. This prevents organizational pressure from automatically becoming permanent technical sprawl.
+
+Apply the same discipline at retirement. Preserve useful content, map redirects where appropriate, update cross-site links, remove integrations, archive required records, communicate with owners, and retain domain control for a risk-based period. Test old entry routes and forms after closure. A multisite system is mature when it can decline and retire properties as deliberately as it launches them.
+
+## Put this guidance into a reviewable project
+
+[Explore the related WebsiteDesignOutsource.com service](/services/design-system-production).
+
+## Related reading
+
+[Read the first related guide](/blog/outsourced-website-design-component-library)
+
+[Read the second related guide](/blog/outsourced-website-design-localization-brief)
+
+## Discuss the work with WebsiteDesignOutsource.com
+
+[Contact WebsiteDesignOutsource.com](/contact) with the affected routes, platform, customer outcome, and blocked decision.
