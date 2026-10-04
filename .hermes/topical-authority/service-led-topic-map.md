@@ -1,6 +1,6 @@
 # Service-led topic map
 
-**Status:** source-only editorial ledger. Updated 2026-08-24.
+**Status:** source-only editorial ledger. Reconciled 2026-10-04.
 
 This ledger maps existing, Philippines-based service pages to existing research routes. It does not add a reader-facing link, change a sitemap, or make a claim about rankings, costs, availability, or provider quality. Before publishing any row, confirm that the source question is still present, the target service still fits that question, and the source needs one clear next step.
 
@@ -23,10 +23,14 @@ This ledger maps existing, Philippines-based service pages to existing research 
 | `/services/landing-page-design` | `/research/website-design-trust-signals-study` | Which page details help a visitor judge whether to continue? | Consider a landing-page-design handoff after the evidence boundary. | Target href absent from generated source. |
 | `/services/website-accessibility-remediation` | `/research/outsourced-website-accessibility-defect-escape-study` | Which accessibility faults can a review miss? | Highest-priority editorial candidate: add one remediation next step after the defect-review finding. | Target href absent from generated source. |
 | `/services/core-web-vitals-optimization` | `/research/core-web-vitals-field-data-interpretation-2026` | How should a buyer read field data before asking for a performance change? | Consider a Core Web Vitals handoff after the interpretation limits. | Target href absent from generated source. |
-| `/services/design-system-production` | `/research/design-system-handoff-controls` | What controls keep a design system usable across a distributed team? | Consider a design-system-production link after the control list. | Target href absent from generated source. |
+| `/services/design-system-production` | `/research/design-system-handoff-controls` | What controls keep a design system usable across a distributed team? | Delivered locally in rendered source `a08b20a0a20f56cf0479a7ffb0dacf94993d4ee1`; do not add a duplicate handoff. | One canonical route-local target href in the fresh production artifact; deployment_pending_public_verification / public_stale. |
 | `/services/website-content-migration` | `/research/content-migration-quality-controls` | What should a redesign migration check before content moves? | Consider a content-migration link after the inventory and QA guidance. | Target href absent from generated source. |
 | `/services/website-maintenance` | `/research/outsourced-website-release-notes-research` | What release record helps an owner review ongoing site changes? | Consider a maintenance handoff after the release-note evidence. | Target href absent from generated source. |
 
 ## Verification record
 
 The listed source and destination routes were present in the production build and in `sitemap.xml` on 2026-08-24. This is an editorial map, not a public release. The next operator should rebuild, recheck the exact source H1 and target href absence, then make at most one reader-facing handoff.
+
+## 2026-10-04 reconciliation
+
+A fresh production build selected the canonical `design-system-handoff-controls` research artifact and the actual `services/design-system-production.html` artifact. The source has one route-local canonical service anchor; both routes have one self-canonical link and a sitemap entry. This map now marks that pair delivered and non-duplicable. It does not change reader-facing output or prove public rollout; the earlier source/public-stale record remains in `TOPICAL-AUTHORITY-LINK-LEDGER.md`.
