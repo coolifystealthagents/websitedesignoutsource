@@ -1,0 +1,71 @@
+---
+title: "Run a Migration Delta Review Before an Outsourced Website Launch"
+description: "Catch content and URL changes that arrive after the original inventory so a website migration launches from current evidence."
+slug: "outsourced-website-migration-delta-review"
+published: "2026-10-05"
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# Run a Migration Delta Review Before an Outsourced Website Launch
+
+## Expect the source site to keep changing
+
+A website migration inventory begins aging the moment it is captured. Editors fix copy, publish announcements, replace files, add products, and retire pages while the outsourced redesign proceeds. A technically successful migration can therefore launch with older content than the site it replaces. A delta review identifies changes between the agreed baseline and the final content freeze, then assigns a deliberate treatment to each one.
+
+Do not solve this by repeatedly recrawling and importing everything. Uncontrolled refreshes can overwrite approved edits, reintroduce retired material, and change URLs after testing. Instead, name a baseline timestamp and source, preserve its inventory, and define how later differences enter the project. The goal is traceability: every changed item should be carried forward, intentionally excluded, or scheduled with an owner.
+
+## Establish comparison keys
+
+URLs are helpful identifiers but not sufficient. A source page may move, split, merge, or change its canonical address. Build the inventory with stable CMS identifiers where available, plus source URL, canonical URL, content type, title, locale, status, last-modified evidence, and content hash. For downloadable files, record the asset URL, filename, MIME type, size, and checksum when practical.
+
+Agree which fields matter for comparison. Body copy, metadata, relationships, images, redirects, and publication state can change independently. A single page hash tells you that something differs but not whether the difference affects migration. Field-level signals allow reviewers to distinguish a corrected phone number from a harmless CMS timestamp. Keep normalization rules documented so whitespace or generated markup does not flood the review with noise.
+
+## Capture changes through more than one channel
+
+Automated comparison finds many deltas, but people know about changes that are not public yet. Ask content owners to log scheduled campaigns, pending legal edits, planned removals, and new sections. Include a cutoff for submitting those changes and a clear emergency route after cutoff. The register should cover unpublished dependencies as well as pages visible to a crawler.
+
+Compare source inventories at agreed intervals, with one final capture close to freeze. Classify additions, removals, URL changes, textual changes, asset changes, metadata changes, and status changes. Investigate apparent removals before deleting anything; access controls, crawler failures, or temporary outages can make a page disappear from a capture. A delta is a review prompt, not an automatic instruction.
+
+## Decide treatment with content owners
+
+Give every material delta a disposition: migrate now, merge into an approved destination, redirect, retain on the legacy system temporarily, schedule after launch, or exclude with approval. Record the destination, responsible person, due date, and reason. Where a source edit conflicts with redesigned copy, the content owner should resolve meaning rather than asking a migration script to choose the newest timestamp.
+
+Prioritize by consequence. Changes to legal language, contact details, active offers, service availability, forms, high-traffic routes, and linked files deserve earlier review than punctuation on an archived post. Prioritization does not mean silently dropping low-risk differences. It means giving the team a workable order while preserving a complete exception list.
+
+## Protect URL and redirect decisions
+
+A late source URL can bypass the redirect map if it appears after the first crawl. Add every new, moved, or retired public route to the URL disposition table. Check internal links, canonicals, navigation, sitemaps, and external campaign destinations that refer to it. If two source pages now resolve to one destination, confirm that the destination answers both intents rather than choosing it only because the topic looks similar.
+
+Use server responses as acceptance evidence. Redirects should reach the intended final route without avoidable chains, loops, or soft error pages. Google Search Central's [site move guidance](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) recommends mapping old URLs to relevant new URLs and maintaining redirects. Your project record should go further by assigning owners and explaining exceptions that automated checks cannot judge.
+
+## Reconcile assets and structured fields
+
+Late asset changes can be easy to miss because the page title and copy remain the same. Compare image references, alternative text, captions, downloadable documents, and embedded media. Confirm that a replacement file is actually the approved version and that its public response has the expected type. Do not copy private drafts or obsolete documents merely because their URLs appear in rich text.
+
+Review fields that feed structured data, cards, search, and social previews. An updated event date or product status may render correctly in the body while stale metadata persists elsewhere. Test the final content through the real renderer. A source-to-source comparison alone cannot prove that transformed relationships, image variants, and metadata appear on the destination as intended.
+
+## Control the freeze without stopping the business
+
+A content freeze is a routing rule, not necessarily a ban on all publishing. Define which changes can proceed, which require migration coordination, and which wait. Provide an emergency path for factual or legal corrections. Give editors a visible acknowledgement so they know whether a request will appear before or after launch.
+
+During the freeze, keep a small forward-change queue. Applying a change to both sites can be appropriate for a critical correction, but record both applications and verify them independently. Avoid informal messages that ask a developer to "remember this at launch." Each request needs a source, destination, decision, evidence, and closure state.
+
+## Perform final reconciliation
+
+Immediately before release, rerun the bounded comparison against the frozen source and reconcile the delta register. Confirm counts by disposition, unresolved high-risk items, new URLs, removed URLs, changed assets, and scheduled follow-up. Sample rendered destination pages across templates and manually inspect every critical change. Make the launch decision from the current register, not from an inventory produced weeks earlier.
+
+After launch, retain the baseline, final capture, disposition table, redirect evidence, and deferred queue. Monitor important old URLs and compare the production destination with the approved final state. This record supports recovery when somebody later asks whether a page was lost, intentionally merged, or changed after launch. It turns a moving source site from a surprise into a governed input.
+
+## Further reading
+
+[Prepare a content migration brief](/blog/outsourced-website-design-content-migration-brief)
+
+[Review the redirect handoff](/blog/outsourced-website-design-redirect-handoff)
+
+## Related Articles
+
+[Explore website redesign services](/services/website-redesign)
+
+## Ready to plan a controlled migration?
+
+[Contact WebsiteDesignOutsource.com](/contact) with your source platform, target platform, and migration timeline.
