@@ -1,0 +1,363 @@
+{
+  "cycleLabel": "2026-10-05",
+  "configuredSiteTimezone": "UTC",
+  "status": "validated-combined-pre-push",
+  "requiredCount": 17,
+  "actualCount": 17,
+  "publicationDateReconciliationRequired": true,
+  "families": {
+    "blog": {
+      "requiredCount": 12,
+      "actualCount": 12,
+      "bodyLengths": {
+        "outsourced-website-portfolio-evidence-verification": 983,
+        "outsourced-cms-preview-fidelity-acceptance": 976,
+        "outsourced-website-migration-delta-review": 957,
+        "outsourced-site-search-analytics-handoff": 956,
+        "outsourced-website-calculator-design-brief": 958,
+        "outsourced-website-stakeholder-interview-plan": 934,
+        "outsourced-website-animation-storyboard-handoff": 942,
+        "outsourced-multilingual-form-routing-acceptance": 949,
+        "outsourced-design-system-adoption-measurement": 973,
+        "outsourced-accessibility-conformance-report-review": 963,
+        "outsourced-content-prototype-approval-guide": 990,
+        "outsourced-website-discovery-deliverables-checklist": 1134
+      },
+      "originality": {
+        "maximumPairwiseFiveWordShingleOverlapPercent": 0.11,
+        "maximumPair": [
+          "outsourced-website-portfolio-evidence-verification",
+          "outsourced-website-stakeholder-interview-plan"
+        ],
+        "repeatedParagraphCount": 0,
+        "sharedArgumentReview": "Passed: manual review confirms each article has topic-specific structure, examples, substantive reasoning, failure modes, and reader outcome."
+      },
+      "entries": [
+        {
+          "family": "blog",
+          "topic": "How to Verify Portfolio Evidence Before Hiring an Outsourced Website Team",
+          "slug": "outsourced-website-portfolio-evidence-verification",
+          "route": "/blog/outsourced-website-portfolio-evidence-verification",
+          "sourcePath": "content/blog/outsourced-website-portfolio-evidence-verification.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://www.ftc.gov/business-guidance/advertising-marketing/truth-advertising"
+          ],
+          "contentHash": "8a9f473c4ba399a9ce9e8b350a8ec26f0d2d637f39367fde4a78f74730c3d262",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 983
+        },
+        {
+          "family": "blog",
+          "topic": "How to Accept CMS Preview Fidelity in an Outsourced Website Build",
+          "slug": "outsourced-cms-preview-fidelity-acceptance",
+          "route": "/blog/outsourced-cms-preview-fidelity-acceptance",
+          "sourcePath": "content/blog/outsourced-cms-preview-fidelity-acceptance.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://www.w3.org/WAI/test-evaluate/"
+          ],
+          "contentHash": "69798bc42d5d3342fc5b76ee6c32c502c3fb0446970f05ec987fdb91e083b180",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 976
+        },
+        {
+          "family": "blog",
+          "topic": "Run a Migration Delta Review Before an Outsourced Website Launch",
+          "slug": "outsourced-website-migration-delta-review",
+          "route": "/blog/outsourced-website-migration-delta-review",
+          "sourcePath": "content/blog/outsourced-website-migration-delta-review.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+          ],
+          "contentHash": "d98854453cf48cb79d065b06f5dd515bee1b3407d7bc1151ecdcc596577d0eb5",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 957
+        },
+        {
+          "family": "blog",
+          "topic": "Plan a Site Search Analytics Handoff for an Outsourced Website",
+          "slug": "outsourced-site-search-analytics-handoff",
+          "route": "/blog/outsourced-site-search-analytics-handoff",
+          "sourcePath": "content/blog/outsourced-site-search-analytics-handoff.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/"
+          ],
+          "contentHash": "bd35f81264c9116f952aa1373fb91e98b83c7178c46b095d0f11e7e34f5d97b5",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 956
+        },
+        {
+          "family": "blog",
+          "topic": "How to Brief an Outsourced Website Calculator",
+          "slug": "outsourced-website-calculator-design-brief",
+          "route": "/blog/outsourced-website-calculator-design-brief",
+          "sourcePath": "content/blog/outsourced-website-calculator-design-brief.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://www.w3.org/WAI/tutorials/forms/instructions/"
+          ],
+          "contentHash": "ba0c86823aeb0976561bd081eb453a89ef84ed18466712934ec7e8c3532a6054",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 958
+        },
+        {
+          "family": "blog",
+          "topic": "A Stakeholder Interview Plan for Outsourced Website Design",
+          "slug": "outsourced-website-stakeholder-interview-plan",
+          "route": "/blog/outsourced-website-stakeholder-interview-plan",
+          "sourcePath": "content/blog/outsourced-website-stakeholder-interview-plan.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [],
+          "contentHash": "13c7055cb7647dae816b1e0d5bf881dfc8a349d66a4f5ae53c6d0cd18422f52a",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 934
+        },
+        {
+          "family": "blog",
+          "topic": "How to Hand Off an Animation Storyboard to an Outsourced Web Team",
+          "slug": "outsourced-website-animation-storyboard-handoff",
+          "route": "/blog/outsourced-website-animation-storyboard-handoff",
+          "sourcePath": "content/blog/outsourced-website-animation-storyboard-handoff.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html"
+          ],
+          "contentHash": "b022442b703335e36f1cfb7898a878b3150e274c88eb33075492939b45af75a3",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 942
+        },
+        {
+          "family": "blog",
+          "topic": "How to Accept Multilingual Form Routing in an Outsourced Website",
+          "slug": "outsourced-multilingual-form-routing-acceptance",
+          "route": "/blog/outsourced-multilingual-form-routing-acceptance",
+          "sourcePath": "content/blog/outsourced-multilingual-form-routing-acceptance.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://www.w3.org/WAI/tutorials/forms/"
+          ],
+          "contentHash": "235128ead4b59379a4d00acefd9fcd350814f3d42b8f3fe5163e38b1faf5b7cf",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 949
+        },
+        {
+          "family": "blog",
+          "topic": "How to Measure Design System Adoption After an Outsourced Build",
+          "slug": "outsourced-design-system-adoption-measurement",
+          "route": "/blog/outsourced-design-system-adoption-measurement",
+          "sourcePath": "content/blog/outsourced-design-system-adoption-measurement.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://design-system.w3.org/"
+          ],
+          "contentHash": "deb16ca93f861d77083bd5e78957db501aea1c88331cec22d1604b6d0912c78a",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 973
+        },
+        {
+          "family": "blog",
+          "topic": "How to Review an Accessibility Conformance Report from a Web Design Vendor",
+          "slug": "outsourced-accessibility-conformance-report-review",
+          "route": "/blog/outsourced-accessibility-conformance-report-review",
+          "sourcePath": "content/blog/outsourced-accessibility-conformance-report-review.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://www.w3.org/TR/WCAG22/"
+          ],
+          "contentHash": "eba842c98c5f018aa10ac7de28cf0755606ddf4d6b279a85e6c9e290b028b09d",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 963
+        },
+        {
+          "family": "blog",
+          "topic": "How to Approve a Content Prototype from an Outsourced Web Team",
+          "slug": "outsourced-content-prototype-approval-guide",
+          "route": "/blog/outsourced-content-prototype-approval-guide",
+          "sourcePath": "content/blog/outsourced-content-prototype-approval-guide.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://www.w3.org/WAI/tutorials/page-structure/"
+          ],
+          "contentHash": "a44dcf726fbb002850a22fa71cc12558931ed6e817425ae266bf6487e16139c4",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 990
+        },
+        {
+          "family": "blog",
+          "topic": "An Outsourced Website Discovery Deliverables Checklist",
+          "slug": "outsourced-website-discovery-deliverables-checklist",
+          "route": "/blog/outsourced-website-discovery-deliverables-checklist",
+          "sourcePath": "content/blog/outsourced-website-discovery-deliverables-checklist.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [],
+          "contentHash": "107b3494482a18795b3025660e1d691d7f3eab33bf232d0e1f58e0f293edcd2d",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 1134
+        }
+      ]
+    },
+    "research": {
+      "requiredCount": 5,
+      "actualCount": 5,
+      "bodyLengths": {
+        "css-cascade-layers-outsourced-website-handoff": 1242,
+        "content-visibility-performance-handoff-research": 1249,
+        "html-inert-attribute-outsourced-website-acceptance": 1263,
+        "native-details-summary-disclosure-handoff": 1327,
+        "image-fetchpriority-outsourced-website-handoff": 1260
+      },
+      "originality": {
+        "maximumPairwiseFiveWordShingleOverlapPercent": 0.55,
+        "maximumPair": "content-visibility-performance-handoff-research vs image-fetchpriority-outsourced-website-handoff",
+        "repeatedParagraphCount": 0,
+        "sharedArgumentReview": "PASS: distinct decisions, examples, failure modes, and reader outcomes"
+      },
+      "entries": [
+        {
+          "family": "research",
+          "topic": "CSS Cascade Layers for Outsourced Website Handoffs",
+          "slug": "css-cascade-layers-outsourced-website-handoff",
+          "route": "/research/css-cascade-layers-outsourced-website-handoff",
+          "sourcePath": "content/research/css-cascade-layers-outsourced-website-handoff.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://www.w3.org/TR/css-cascade-5/",
+            "https://developer.mozilla.org/en-US/docs/Web/CSS/@layer",
+            "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers",
+            "https://www.w3.org/TR/selectors-4/",
+            "https://www.w3.org/TR/css-values-4/",
+            "https://www.w3.org/TR/WCAG22/",
+            "https://www.w3.org/TR/cssom-1/",
+            "https://www.w3.org/TR/css-nesting-1/",
+            "https://www.w3.org/TR/mediaqueries-5/",
+            "https://www.w3.org/TR/css-variables-1/"
+          ],
+          "contentHash": "a1e5ee5372ee22fa4674bf57497645ea0b0e8ddbef506f92fa4c000c7d9463fa",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 1242
+        },
+        {
+          "family": "research",
+          "topic": "Content Visibility Performance Handoffs for Outsourced Websites",
+          "slug": "content-visibility-performance-handoff-research",
+          "route": "/research/content-visibility-performance-handoff-research",
+          "sourcePath": "content/research/content-visibility-performance-handoff-research.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://www.w3.org/TR/css-contain-2/",
+            "https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility",
+            "https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-size",
+            "https://web.dev/articles/content-visibility",
+            "https://web.dev/articles/vitals",
+            "https://www.w3.org/TR/WCAG22/",
+            "https://www.w3.org/TR/performance-timeline/",
+            "https://www.w3.org/TR/navigation-timing-2/",
+            "https://html.spec.whatwg.org/",
+            "https://www.w3.org/TR/cssom-view-1/"
+          ],
+          "contentHash": "1caf6d4edf3927dea0864566985ce54f8bf82b6467996257ed9b82e6907f1d11",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 1249
+        },
+        {
+          "family": "research",
+          "topic": "HTML Inert Attribute Acceptance for Outsourced Websites",
+          "slug": "html-inert-attribute-outsourced-website-acceptance",
+          "route": "/research/html-inert-attribute-outsourced-website-acceptance",
+          "sourcePath": "content/research/html-inert-attribute-outsourced-website-acceptance.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://html.spec.whatwg.org/multipage/interaction.html#the-inert-attribute",
+            "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inert",
+            "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+            "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+            "https://www.w3.org/TR/WCAG22/#focus-order",
+            "https://www.w3.org/TR/WCAG22/#name-role-value",
+            "https://www.w3.org/TR/wai-aria-1.2/",
+            "https://www.w3.org/TR/uievents/",
+            "https://dom.spec.whatwg.org/",
+            "https://www.w3.org/TR/html-aam-1.0/"
+          ],
+          "contentHash": "aef275cf0f443c0741f932ded6b4f176fdbd340b69deb7fae3497947bfcd4844",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 1263
+        },
+        {
+          "family": "research",
+          "topic": "Native Details and Summary Disclosure Handoffs",
+          "slug": "native-details-summary-disclosure-handoff",
+          "route": "/research/native-details-summary-disclosure-handoff",
+          "sourcePath": "content/research/native-details-summary-disclosure-handoff.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+            "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+            "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary",
+            "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+            "https://www.w3.org/TR/WCAG22/",
+            "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+            "https://www.w3.org/TR/html-aam-1.0/",
+            "https://www.w3.org/TR/css-ui-4/",
+            "https://url.spec.whatwg.org/",
+            "https://www.w3.org/TR/mediaqueries-5/"
+          ],
+          "contentHash": "f75945040f46a5b0a5824e734c98b9ca53ec399478e93eda66f0fce297a79fa8",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 1327
+        },
+        {
+          "family": "research",
+          "topic": "Image Fetch Priority Handoffs for Outsourced Websites",
+          "slug": "image-fetchpriority-outsourced-website-handoff",
+          "route": "/research/image-fetchpriority-outsourced-website-handoff",
+          "sourcePath": "content/research/image-fetchpriority-outsourced-website-handoff.mdx",
+          "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+          "sources": [
+            "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#fetch-priority-attributes",
+            "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/fetchPriority",
+            "https://fetch.spec.whatwg.org/",
+            "https://web.dev/articles/optimize-lcp",
+            "https://web.dev/articles/vitals",
+            "https://www.w3.org/TR/WCAG22/#non-text-content",
+            "https://html.spec.whatwg.org/multipage/images.html",
+            "https://www.w3.org/TR/resource-timing-2/",
+            "https://www.rfc-editor.org/rfc/rfc9218",
+            "https://www.w3.org/TR/preload/"
+          ],
+          "contentHash": "f623b3afb671a9b0fead5b412cf14f13e247df8fca26a4e3395ec10173ed321d",
+          "sourceDate": "2026-10-05",
+          "bodyWords": 1260
+        }
+      ]
+    }
+  },
+  "gates": {
+    "blogValidator": "PASS",
+    "researchValidator": "PASS",
+    "tests": "PASS (10/10)",
+    "typecheck": "PASS",
+    "cleanProductionBuild": "PASS (655 static pages)",
+    "renderedRoutes": "PASS (17/17 local)",
+    "renderedTitles": "PASS",
+    "renderedSubstantiveBodies": "PASS",
+    "canonicals": "PASS",
+    "dates": "PASS for staged 2026-10-05 UTC release",
+    "indexes": "PASS",
+    "sitemap": "PASS",
+    "imageHttpMimeSignatureDecode": "PASS (200 image/webp RIFF/WEBP, 136470 bytes)",
+    "internalDestinations": "PASS"
+  },
+  "production": {
+    "repository": "coolifystealthagents/websitedesignoutsource",
+    "branch": "main",
+    "baselineSha": "c1176b4da5cc5142ade9317eaeecbd373139ac85",
+    "draftBranch": "web-78-daily-blog-20261005",
+    "deploymentApplication": "bzwr1cecluixrzw89en7dguh",
+    "pushed": false,
+    "deployed": false,
+    "liveVerifiedCount": 0
+  }
+}

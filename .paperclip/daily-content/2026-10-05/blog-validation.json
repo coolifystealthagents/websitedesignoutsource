@@ -1,0 +1,43 @@
+{
+  "cycleLabel": "2026-10-05",
+  "family": "blog",
+  "requiredCount": 12,
+  "actualCount": 12,
+  "configuredSiteTimezone": "UTC",
+  "bodyLengths": {
+    "outsourced-website-portfolio-evidence-verification": 983,
+    "outsourced-cms-preview-fidelity-acceptance": 976,
+    "outsourced-website-migration-delta-review": 957,
+    "outsourced-site-search-analytics-handoff": 956,
+    "outsourced-website-calculator-design-brief": 958,
+    "outsourced-website-stakeholder-interview-plan": 934,
+    "outsourced-website-animation-storyboard-handoff": 942,
+    "outsourced-multilingual-form-routing-acceptance": 949,
+    "outsourced-design-system-adoption-measurement": 973,
+    "outsourced-accessibility-conformance-report-review": 963,
+    "outsourced-content-prototype-approval-guide": 990,
+    "outsourced-website-discovery-deliverables-checklist": 1134
+  },
+  "originality": {
+    "maximumPairwiseFiveWordShingleOverlapPercent": 0.11,
+    "maximumPair": [
+      "outsourced-website-portfolio-evidence-verification",
+      "outsourced-website-stakeholder-interview-plan"
+    ],
+    "repeatedParagraphCount": 0,
+    "sharedArgumentReview": "Passed: manual review confirms each article has topic-specific structure, examples, substantive reasoning, failure modes, and reader outcome."
+  },
+  "checks": {
+    "nicheFit": "passed",
+    "authoritativeSources": "passed",
+    "internalLinks": "passed",
+    "contentHashes": "recorded",
+    "imagePaths": "passed",
+    "titles": "passed",
+    "publicationDates": "staged for same-day UTC release; final live reconciliation required",
+    "canonicalConvention": "passed",
+    "indexAndSitemapLoader": "passed",
+    "renderedFullBodies": "passed locally for all 12"
+  },
+  "failures": []
+}
