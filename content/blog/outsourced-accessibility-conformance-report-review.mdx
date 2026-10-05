@@ -1,0 +1,83 @@
+---
+title: "How to Review an Accessibility Conformance Report from a Web Design Vendor"
+description: "Evaluate an outsourced website accessibility report by scope, evidence, exceptions, user impact, and owned remediation."
+slug: "outsourced-accessibility-conformance-report-review"
+published: "2026-10-05"
+image: "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp"
+---
+
+# How to Review an Accessibility Conformance Report from a Web Design Vendor
+
+## Clarify what the report claims
+
+An accessibility conformance report should identify a product, version, evaluation date, standard, conformance target, scope, and testing method. If any of these are missing, a statement such as “WCAG compliant” is too broad to guide a purchasing or launch decision. Ask the outsourced web team to distinguish a test report, an accessibility statement, and a formal product conformance document; they serve different audiences.
+
+Confirm whether the evaluated product is the actual website release, a component library, a template set, or a sample of pages. Record excluded areas such as authenticated journeys, third-party embeds, documents, videos, or legacy sections. An exclusion may be reasonable, but it must not disappear behind a site-wide headline.
+
+## Check the standard and evaluation date
+
+The report should name the exact WCAG version and conformance level used. Requirements and supporting techniques evolve, so retain the publication and evaluation dates. Review the current normative material from the [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG22/) rather than relying on a vendor summary alone.
+
+Look for criteria reported as supported, partially supported, not supported, or not applicable, along with an explanation. Labels should be defined. “Supported with exceptions” is meaningful only when the exception names the affected content, condition, user impact, and remediation status.
+
+## Evaluate scope coverage
+
+Compare the tested sample with the site's route and component inventory. It should include critical journeys, common templates, distinct interaction patterns, error states, responsive states, and content variations. A homepage-only review cannot represent an ecommerce checkout, account workflow, search, complex form, or embedded scheduler.
+
+Ask how the sample was selected and whether repeated components were tested in more than one context when composition changes behavior. Include newly built and inherited parts of the experience. If the vendor controls only a portion, the report should explain that boundary while the client maintains an end-to-end view of the public service.
+
+## Inspect the testing method
+
+Automated tools are useful for detecting certain code patterns, but they cannot determine all questions of meaning, focus behavior, instructions, or usability. The report should describe automated checks, manual inspection, keyboard operation, zoom and reflow, and assistive-technology combinations relevant to the agreed support matrix.
+
+Check who performed the evaluation, their independence from implementation, and how findings were reviewed. Independence does not require an outside firm for every check, but a developer asserting that their own markup “looks accessible” is weak evidence. User testing involving disabled people can reveal practical barriers that criterion-by-criterion inspection misses, while still not replacing standards evaluation.
+
+## Trace conclusions to evidence
+
+Select several high-impact and several “supported” criteria and ask for traceable evidence. Useful records name the route, component or step, viewport, browser, assistive technology, test action, expected result, actual result, timestamp, and build. Screenshots can support a finding, but keyboard sequence, accessible name, and announced status often require structured notes.
+
+Evidence should be reproducible without exposing customer data or private credentials. Verify that the build identifier matches the candidate release. A report copied forward after substantial navigation, component, or content changes no longer describes the current website, even when the date in the document is updated.
+
+## Examine not-applicable decisions
+
+“Not applicable” is a claim about product scope, not an easy way to clear a criterion. Sample these rows closely. If the site contains prerecorded video, captions are applicable. If there are no time limits, time-limit criteria may be genuinely inapplicable. Require a concise rationale that another reviewer could confirm.
+
+Also examine conditional features. Drag-and-drop may appear only to authenticated editors, or an error summary only after a particular submission. The report should account for reachable states, not just the initial render. Ask whether personalization, locale, and responsive changes introduce alternative content or interaction paths.
+
+## Turn exceptions into an owned plan
+
+For every unresolved barrier, record severity, affected users, frequency, workaround, owner, target release, and verification method. Severity should reflect task impact and reach, not only implementation effort. A keyboard trap in a rarely used modal can be more severe than a common decorative-image issue.
+
+Decide what blocks launch, what requires a documented temporary mitigation, and what enters a dated backlog. Do not describe inaccessible features as “known limitations” indefinitely. If a third party owns the defect, name the client owner responsible for escalation and the accessible alternative offered meanwhile.
+
+## Reconcile public statements
+
+Compare the internal report with procurement answers, contracts, sales claims, and the public accessibility statement. These documents can use different levels of detail, but they should not contradict one another. Public copy should explain the service's current accessibility and contact route without exposing security details or promising perfection the evidence cannot support.
+
+Confirm that the feedback channel itself is accessible and reaches a trained owner. Define how reports are acknowledged, triaged, fixed, and communicated. Operational response is part of accessibility maturity; a static report cannot protect users after content and software change.
+
+## Accept a living evidence package
+
+At handoff, retain the signed scope, criterion matrix, test plan, environment details, issue records, evidence links, remediation decisions, exceptions, public-statement inputs, and retest cadence. Store editable source as well as any exported document. Identify which changes trigger targeted or full reevaluation.
+
+Run a spot check before acceptance. Choose critical journeys and unresolved findings, reproduce the stated result, and verify issue links and ownership. If evidence cannot be found or repeated, return the report for correction rather than treating document completeness as product conformance.
+
+## Make the report support decisions
+
+A strong review does not reduce accessibility to a badge. It helps a client decide whether to launch, what to fix first, what risk remains, and how future changes will be checked. It also gives the outsourced team a fair, observable acceptance boundary instead of a vague instruction to “make it accessible.”
+
+The most useful report is candid about its limits. Clear scope, reproducible evidence, and owned remediation create more trust than an absolute claim. They give the organization a foundation for continuing accessibility work after the initial website project ends.
+
+## Further reading
+
+[Plan accessibility remediation acceptance](/blog/outsourced-website-design-accessibility-remediation-acceptance)
+
+[Prepare an accessibility statement workflow](/blog/outsourced-website-accessibility-statement-workflow)
+
+## Related Articles
+
+[Explore accessible web design services](/services/website-accessibility-remediation)
+
+## Ready to review vendor evidence?
+
+[Contact WebsiteDesignOutsource.com](/contact) with the target standard, website scope, and report you need to evaluate.
