@@ -27,6 +27,20 @@ function readPosts(kind: 'blog' | 'research'): ContentPost[] {
 export const contentBlogPosts = readPosts('blog');
 export const contentResearchPosts = readPosts('research');
 
+function renderInlineMarkdown(source: string) {
+  const parts = [];
+  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let cursor = 0;
+  let match;
+  while ((match = linkPattern.exec(source)) !== null) {
+    if (match.index > cursor) parts.push(source.slice(cursor, match.index));
+    parts.push(<a key={`${match.index}-${match[2]}`} href={match[2]}>{match[1]}</a>);
+    cursor = match.index + match[0].length;
+  }
+  if (cursor < source.length) parts.push(source.slice(cursor));
+  return parts;
+}
+
 export function renderMarkdown(source: string) {
   return source.split('\n').map((line, index) => {
     if (!line.trim()) return null;
@@ -34,7 +48,6 @@ export function renderMarkdown(source: string) {
     if (line.startsWith('## ')) return <h2 key={index}>{line.slice(3)}</h2>;
     if (line.startsWith('# ')) return null;
     if (line.startsWith('- ')) return <li key={index}>{line.slice(2)}</li>;
-    const linked = line.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => `<a href="${href}">${label}</a>`);
-    return <p key={index} dangerouslySetInnerHTML={{ __html: linked }} />;
+    return <p key={index}>{renderInlineMarkdown(line)}</p>;
   });
 }
