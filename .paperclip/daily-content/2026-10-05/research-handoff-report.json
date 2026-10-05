@@ -1,0 +1,40 @@
+{
+  "cycleLabel": "2026-10-05",
+  "required": 5,
+  "staged": 5,
+  "validator": "PASS",
+  "internalLinks": "PASS",
+  "imageSourceExists": true,
+  "maximumPairwiseFiveWordShingleOverlap": 0.55,
+  "maximumPair": "content-visibility-performance-handoff-research vs image-fetchpriority-outsourced-website-handoff",
+  "repeatedSubstantiveParagraphs": 0,
+  "sharedArgumentSequenceReview": "PASS: distinct decisions, examples, failure modes, and reader outcomes",
+  "publicationDateNote": "UTC; reconcile staged 2026-10-05 source dates to actual first-live date before sole combined push.",
+  "entries": [
+    {
+      "slug": "css-cascade-layers-outsourced-website-handoff",
+      "bodyWords": 1242,
+      "contentHash": "a1e5ee5372ee22fa4674bf57497645ea0b0e8ddbef506f92fa4c000c7d9463fa"
+    },
+    {
+      "slug": "content-visibility-performance-handoff-research",
+      "bodyWords": 1249,
+      "contentHash": "1caf6d4edf3927dea0864566985ce54f8bf82b6467996257ed9b82e6907f1d11"
+    },
+    {
+      "slug": "html-inert-attribute-outsourced-website-acceptance",
+      "bodyWords": 1263,
+      "contentHash": "aef275cf0f443c0741f932ded6b4f176fdbd340b69deb7fae3497947bfcd4844"
+    },
+    {
+      "slug": "native-details-summary-disclosure-handoff",
+      "bodyWords": 1327,
+      "contentHash": "f75945040f46a5b0a5824e734c98b9ca53ec399478e93eda66f0fce297a79fa8"
+    },
+    {
+      "slug": "image-fetchpriority-outsourced-website-handoff",
+      "bodyWords": 1260,
+      "contentHash": "f623b3afb671a9b0fead5b412cf14f13e247df8fca26a4e3395ec10173ed321d"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "cycleLabel": "2026-10-05",
+  "family": "research",
+  "status": "staged-local-handoff",
+  "configuredSiteTimezone": "UTC",
+  "publicationDateReconciliationRequired": true,
+  "entries": [
+    {
+      "family": "research",
+      "topic": "CSS Cascade Layers for Outsourced Website Handoffs",
+      "slug": "css-cascade-layers-outsourced-website-handoff",
+      "route": "/research/css-cascade-layers-outsourced-website-handoff",
+      "sourcePath": "content/research/css-cascade-layers-outsourced-website-handoff.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/TR/css-cascade-5/",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/@layer",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers",
+        "https://www.w3.org/TR/selectors-4/",
+        "https://www.w3.org/TR/css-values-4/",
+        "https://www.w3.org/TR/WCAG22/",
+        "https://www.w3.org/TR/cssom-1/",
+        "https://www.w3.org/TR/css-nesting-1/",
+        "https://www.w3.org/TR/mediaqueries-5/",
+        "https://www.w3.org/TR/css-variables-1/"
+      ],
+      "contentHash": "a1e5ee5372ee22fa4674bf57497645ea0b0e8ddbef506f92fa4c000c7d9463fa",
+      "sourceDate": "2026-10-05",
+      "bodyWords": 1242
+    },
+    {
+      "family": "research",
+      "topic": "Content Visibility Performance Handoffs for Outsourced Websites",
+      "slug": "content-visibility-performance-handoff-research",
+      "route": "/research/content-visibility-performance-handoff-research",
+      "sourcePath": "content/research/content-visibility-performance-handoff-research.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://www.w3.org/TR/css-contain-2/",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-size",
+        "https://web.dev/articles/content-visibility",
+        "https://web.dev/articles/vitals",
+        "https://www.w3.org/TR/WCAG22/",
+        "https://www.w3.org/TR/performance-timeline/",
+        "https://www.w3.org/TR/navigation-timing-2/",
+        "https://html.spec.whatwg.org/",
+        "https://www.w3.org/TR/cssom-view-1/"
+      ],
+      "contentHash": "1caf6d4edf3927dea0864566985ce54f8bf82b6467996257ed9b82e6907f1d11",
+      "sourceDate": "2026-10-05",
+      "bodyWords": 1249
+    },
+    {
+      "family": "research",
+      "topic": "HTML Inert Attribute Acceptance for Outsourced Websites",
+      "slug": "html-inert-attribute-outsourced-website-acceptance",
+      "route": "/research/html-inert-attribute-outsourced-website-acceptance",
+      "sourcePath": "content/research/html-inert-attribute-outsourced-website-acceptance.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#the-inert-attribute",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inert",
+        "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+        "https://www.w3.org/TR/WCAG22/#focus-order",
+        "https://www.w3.org/TR/WCAG22/#name-role-value",
+        "https://www.w3.org/TR/wai-aria-1.2/",
+        "https://www.w3.org/TR/uievents/",
+        "https://dom.spec.whatwg.org/",
+        "https://www.w3.org/TR/html-aam-1.0/"
+      ],
+      "contentHash": "aef275cf0f443c0741f932ded6b4f176fdbd340b69deb7fae3497947bfcd4844",
+      "sourceDate": "2026-10-05",
+      "bodyWords": 1263
+    },
+    {
+      "family": "research",
+      "topic": "Native Details and Summary Disclosure Handoffs",
+      "slug": "native-details-summary-disclosure-handoff",
+      "route": "/research/native-details-summary-disclosure-handoff",
+      "sourcePath": "content/research/native-details-summary-disclosure-handoff.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+        "https://www.w3.org/TR/WCAG22/",
+        "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+        "https://www.w3.org/TR/html-aam-1.0/",
+        "https://www.w3.org/TR/css-ui-4/",
+        "https://url.spec.whatwg.org/",
+        "https://www.w3.org/TR/mediaqueries-5/"
+      ],
+      "contentHash": "f75945040f46a5b0a5824e734c98b9ca53ec399478e93eda66f0fce297a79fa8",
+      "sourceDate": "2026-10-05",
+      "bodyWords": 1327
+    },
+    {
+      "family": "research",
+      "topic": "Image Fetch Priority Handoffs for Outsourced Websites",
+      "slug": "image-fetchpriority-outsourced-website-handoff",
+      "route": "/research/image-fetchpriority-outsourced-website-handoff",
+      "sourcePath": "content/research/image-fetchpriority-outsourced-website-handoff.mdx",
+      "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+      "sources": [
+        "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#fetch-priority-attributes",
+        "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/fetchPriority",
+        "https://fetch.spec.whatwg.org/",
+        "https://web.dev/articles/optimize-lcp",
+        "https://web.dev/articles/vitals",
+        "https://www.w3.org/TR/WCAG22/#non-text-content",
+        "https://html.spec.whatwg.org/multipage/images.html",
+        "https://www.w3.org/TR/resource-timing-2/",
+        "https://www.rfc-editor.org/rfc/rfc9218",
+        "https://www.w3.org/TR/preload/"
+      ],
+      "contentHash": "f623b3afb671a9b0fead5b412cf14f13e247df8fca26a4e3395ec10173ed321d",
+      "sourceDate": "2026-10-05",
+      "bodyWords": 1260
+    }
+  ]
+}
