@@ -3,7 +3,7 @@
   "family": "blog",
   "status": "staged-combined-pre-push",
   "configuredSiteTimezone": "UTC",
-  "publicationDateReconciliationRequired": true,
+  "publicationDateReconciliationRequired": false,
   "entries": [
     {
       "family": "blog",
@@ -16,8 +16,8 @@
         "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business"
       ],
       "contentHash": "0a589cf73d1d85d242b7ed67c0761d3145189b801bc99fd996e7c31c7ab5225f",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 983
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1044
     },
     {
       "family": "blog",
@@ -29,9 +29,9 @@
       "sources": [
         "https://www.w3.org/WAI/test-evaluate/"
       ],
-      "contentHash": "69798bc42d5d3342fc5b76ee6c32c502c3fb0446970f05ec987fdb91e083b180",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 976
+      "contentHash": "c31e5baa214e1966da01a45a84e8c8225e9a04578cd1a9cbc9a0403c499c14f8",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1036
     },
     {
       "family": "blog",
@@ -43,9 +43,9 @@
       "sources": [
         "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
       ],
-      "contentHash": "d98854453cf48cb79d065b06f5dd515bee1b3407d7bc1151ecdcc596577d0eb5",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 957
+      "contentHash": "0924f74cd3e1208adf7cf6b4ac8bff9cdc03502271a9d33b820ea13178812ec7",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1019
     },
     {
       "family": "blog",
@@ -57,9 +57,9 @@
       "sources": [
         "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/"
       ],
-      "contentHash": "bd35f81264c9116f952aa1373fb91e98b83c7178c46b095d0f11e7e34f5d97b5",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 956
+      "contentHash": "d4506c38930469d001302859cd3a209fa480762704bff1e567cd3ad91d69faa9",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1021
     },
     {
       "family": "blog",
@@ -71,9 +71,9 @@
       "sources": [
         "https://www.w3.org/WAI/tutorials/forms/instructions/"
       ],
-      "contentHash": "ba0c86823aeb0976561bd081eb453a89ef84ed18466712934ec7e8c3532a6054",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 958
+      "contentHash": "765a094837d41b63181ce16a25261c04de7cb53c1c5ad6760f8559a7573ec133",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1023
     },
     {
       "family": "blog",
@@ -82,10 +82,12 @@
       "route": "/blog/outsourced-website-stakeholder-interview-plan",
       "sourcePath": "content/blog/outsourced-website-stakeholder-interview-plan.mdx",
       "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
-      "sources": [],
-      "contentHash": "13c7055cb7647dae816b1e0d5bf881dfc8a349d66a4f5ae53c6d0cd18422f52a",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 934
+      "sources": [
+        "https://www.gov.uk/service-manual/user-research/plan-user-research-for-your-service"
+      ],
+      "contentHash": "4654c97ba49eb3d1c1eefc014ddb1ee85aea5221836e77478f1e2958d786fb50",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 992
     },
     {
       "family": "blog",
@@ -97,9 +99,9 @@
       "sources": [
         "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html"
       ],
-      "contentHash": "b022442b703335e36f1cfb7898a878b3150e274c88eb33075492939b45af75a3",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 942
+      "contentHash": "db52881b9c6204fb8cd83512d5fd42057498e04abfd8de7723b1756c21f1d69e",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1008
     },
     {
       "family": "blog",
@@ -111,9 +113,9 @@
       "sources": [
         "https://www.w3.org/WAI/tutorials/forms/"
       ],
-      "contentHash": "235128ead4b59379a4d00acefd9fcd350814f3d42b8f3fe5163e38b1faf5b7cf",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 949
+      "contentHash": "ff73e561d6da31cb3878057aa8c3e41db78946dbf4d6acb4fde301ec53ae14a8",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1016
     },
     {
       "family": "blog",
@@ -125,9 +127,9 @@
       "sources": [
         "https://design-system.w3.org/"
       ],
-      "contentHash": "deb16ca93f861d77083bd5e78957db501aea1c88331cec22d1604b6d0912c78a",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 973
+      "contentHash": "56c0b4dd82c93530376de5539a1c116fe69bfc6b8b0468fd2184a6c2150de9a9",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1036
     },
     {
       "family": "blog",
@@ -139,9 +141,9 @@
       "sources": [
         "https://www.w3.org/TR/WCAG22/"
       ],
-      "contentHash": "eba842c98c5f018aa10ac7de28cf0755606ddf4d6b279a85e6c9e290b028b09d",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 963
+      "contentHash": "b0fc37f6b40c06a7bca4d19afb8aad7d5908a21d6419d55bfb4ddfebbbb6ce7a",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1029
     },
     {
       "family": "blog",
@@ -153,9 +155,9 @@
       "sources": [
         "https://www.w3.org/WAI/tutorials/page-structure/"
       ],
-      "contentHash": "a44dcf726fbb002850a22fa71cc12558931ed6e817425ae266bf6487e16139c4",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 990
+      "contentHash": "b50a11b7b77afd39d93cc8ed3b245c611b75d95d29028be903d9269edf9e8472",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1059
     },
     {
       "family": "blog",
@@ -164,10 +166,12 @@
       "route": "/blog/outsourced-website-discovery-deliverables-checklist",
       "sourcePath": "content/blog/outsourced-website-discovery-deliverables-checklist.mdx",
       "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
-      "sources": [],
-      "contentHash": "107b3494482a18795b3025660e1d691d7f3eab33bf232d0e1f58e0f293edcd2d",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 1134
+      "sources": [
+        "https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works"
+      ],
+      "contentHash": "43c009fab18a401363f0cca63fdb8849e05c31a811871834ce2b6bbf71b66259",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1201
     }
   ]
 }

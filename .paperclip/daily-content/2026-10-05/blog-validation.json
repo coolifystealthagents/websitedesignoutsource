@@ -5,27 +5,27 @@
   "actualCount": 12,
   "configuredSiteTimezone": "UTC",
   "bodyLengths": {
-    "outsourced-website-portfolio-evidence-verification": 983,
-    "outsourced-cms-preview-fidelity-acceptance": 976,
-    "outsourced-website-migration-delta-review": 957,
-    "outsourced-site-search-analytics-handoff": 956,
-    "outsourced-website-calculator-design-brief": 958,
-    "outsourced-website-stakeholder-interview-plan": 934,
-    "outsourced-website-animation-storyboard-handoff": 942,
-    "outsourced-multilingual-form-routing-acceptance": 949,
-    "outsourced-design-system-adoption-measurement": 973,
-    "outsourced-accessibility-conformance-report-review": 963,
-    "outsourced-content-prototype-approval-guide": 990,
-    "outsourced-website-discovery-deliverables-checklist": 1134
+    "outsourced-website-portfolio-evidence-verification": 1044,
+    "outsourced-cms-preview-fidelity-acceptance": 1036,
+    "outsourced-website-migration-delta-review": 1019,
+    "outsourced-site-search-analytics-handoff": 1021,
+    "outsourced-website-calculator-design-brief": 1023,
+    "outsourced-website-stakeholder-interview-plan": 992,
+    "outsourced-website-animation-storyboard-handoff": 1008,
+    "outsourced-multilingual-form-routing-acceptance": 1016,
+    "outsourced-design-system-adoption-measurement": 1036,
+    "outsourced-accessibility-conformance-report-review": 1029,
+    "outsourced-content-prototype-approval-guide": 1059,
+    "outsourced-website-discovery-deliverables-checklist": 1201
   },
   "originality": {
-    "maximumPairwiseFiveWordShingleOverlapPercent": 0.11,
+    "maximumPairwiseFiveWordShingleOverlapPercent": 0.3,
     "maximumPair": [
       "outsourced-website-portfolio-evidence-verification",
       "outsourced-website-stakeholder-interview-plan"
     ],
     "repeatedParagraphCount": 0,
-    "sharedArgumentReview": "Passed: manual review confirms each article has topic-specific structure, examples, substantive reasoning, failure modes, and reader outcome."
+    "sharedArgumentReview": "Passed: manual all-17 review confirms topic-specific structures, examples, reasoning, and reader outcomes."
   },
   "checks": {
     "nicheFit": "passed",
@@ -34,7 +34,7 @@
     "contentHashes": "recorded",
     "imagePaths": "passed",
     "titles": "passed",
-    "publicationDates": "staged for same-day UTC release; final live reconciliation required",
+    "publicationDates": "passed: 2026-10-06 UTC",
     "canonicalConvention": "passed",
     "indexAndSitemapLoader": "passed",
     "renderedFullBodies": "passed locally for all 12"

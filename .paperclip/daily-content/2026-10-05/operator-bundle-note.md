@@ -13,7 +13,8 @@
 - Validators: PASS for both families
 - Tests: PASS, 10/10
 - Typecheck: PASS
-- Clean production build: PASS, 655 static pages
-- Rendered local verification: PASS, 17/17 routes; titles, substantive bodies, dates, canonicals, indexes, sitemap, and shared WebP response checked
+- Clean production build: PASS, 654 static pages
+- Rendered local verification: PASS, 17/17 routes and 675/675 ordered body lines; titles, substantive bodies, dates, canonicals, indexes, sitemap, and shared WebP response checked
 - Publication state: not pushed, not deployed, not live verified
-- Release rule: reconcile UTC date immediately before the sole non-force push; browser operator deploys the exact pushed SHA to Coolify3 app bzwr1cecluixrzw89en7dguh; existing company agent then live-verifies all 17 routes.
+- Approved first-publication date: 2026-10-06 UTC for all 17 still-unpublished entries; reconciled in source frontmatter and manifests before the sole corrective push.
+- Release rule: browser operator deploys the exact pushed SHA to Coolify3 app bzwr1cecluixrzw89en7dguh; existing company agent then live-verifies all 17 routes.

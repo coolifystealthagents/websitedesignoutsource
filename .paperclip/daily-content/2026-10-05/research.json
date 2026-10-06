@@ -3,7 +3,7 @@
   "family": "research",
   "status": "staged-local-handoff",
   "configuredSiteTimezone": "UTC",
-  "publicationDateReconciliationRequired": true,
+  "publicationDateReconciliationRequired": false,
   "entries": [
     {
       "family": "research",
@@ -24,9 +24,9 @@
         "https://www.w3.org/TR/mediaqueries-5/",
         "https://www.w3.org/TR/css-variables-1/"
       ],
-      "contentHash": "a1e5ee5372ee22fa4674bf57497645ea0b0e8ddbef506f92fa4c000c7d9463fa",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 1242
+      "contentHash": "e76d9fd3d84e707e2c6667ebd477eebad1a5b9bb571410ab11f24c8e0991eeb3",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1352
     },
     {
       "family": "research",
@@ -47,9 +47,9 @@
         "https://html.spec.whatwg.org/",
         "https://www.w3.org/TR/cssom-view-1/"
       ],
-      "contentHash": "1caf6d4edf3927dea0864566985ce54f8bf82b6467996257ed9b82e6907f1d11",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 1249
+      "contentHash": "53709ef2c349fc52228e41c7f3edccb1ef18564627f502544c9116d6e5dbd97e",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1372
     },
     {
       "family": "research",
@@ -70,9 +70,9 @@
         "https://dom.spec.whatwg.org/",
         "https://www.w3.org/TR/html-aam-1.0/"
       ],
-      "contentHash": "aef275cf0f443c0741f932ded6b4f176fdbd340b69deb7fae3497947bfcd4844",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 1263
+      "contentHash": "10df3fadaab0b2806aeab02592ae3b182073157f6b2d4223a3bf5fbc4437597d",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1372
     },
     {
       "family": "research",
@@ -93,9 +93,9 @@
         "https://url.spec.whatwg.org/",
         "https://www.w3.org/TR/mediaqueries-5/"
       ],
-      "contentHash": "f75945040f46a5b0a5824e734c98b9ca53ec399478e93eda66f0fce297a79fa8",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 1327
+      "contentHash": "3a51603c3e053ad33cbde6a4b7773e73f9a48a490667b5e1a746dec62efe3002",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1432
     },
     {
       "family": "research",
@@ -116,9 +116,9 @@
         "https://www.rfc-editor.org/rfc/rfc9218",
         "https://www.w3.org/TR/preload/"
       ],
-      "contentHash": "f623b3afb671a9b0fead5b412cf14f13e247df8fca26a4e3395ec10173ed321d",
-      "sourceDate": "2026-10-05",
-      "bodyWords": 1260
+      "contentHash": "e787f21e5bdd2b1d39f623c39c299fcd919eb433b0f729949df3bb346585b5e8",
+      "sourceDate": "2026-10-06",
+      "bodyWords": 1376
     }
   ]
 }

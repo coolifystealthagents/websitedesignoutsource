@@ -47,3 +47,11 @@ The stale shared `site-repo` checkout and prior-cycle worktrees contain unrelate
 5. Fetch/rebase safely, rerun affected gates, and make exactly one non-force push to `main`.
 6. Stop production mutations and hand the full combined SHA to the browser operator for Coolify3 deployment.
 7. After exact-SHA Success evidence, verify all 17 public routes and record per-route evidence.
+
+## Approved corrective release update
+
+- User approval received: 2026-10-06 UTC.
+- All 17 entries remained unpublished at approval time, so their truthful intended first-publication date is 2026-10-06 in the configured UTC timezone.
+- Source frontmatter and Blog/Research/combined manifests were reconciled to 2026-10-06 without changing the October 5 cycle label or the articles source-review dates.
+- The reviewed candidate remains subject to fresh locked-install, audit, validator, originality, link, image-decode, metadata, typecheck, test, clean-build, and rendered-route gates after the final safe rebase.
+- Exactly one non-force push to `main` is authorized. After reporting the remote full SHA and dedicated app, production mutations stop for browser-operator deployment.

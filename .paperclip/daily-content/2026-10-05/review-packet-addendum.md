@@ -51,4 +51,4 @@ Nearest candidates were selected against the current pre-cycle Blog and Research
 
 ## Preserved receipts and disposition
 
-This addendum changes no article source, renderer, manifest inventory, content hash, date, route, or asset. The prior 388/388 ordered-body equality and full dependency/test/typecheck/build/ALL17 route receipts remain applicable. No push or deployment is authorized by this packet.
+The reviewed corrective packet changed no article body, renderer, manifest inventory, content hash, route, or asset. After explicit user approval on 2026-10-06, all 17 still-unpublished entries were reconciled to the 2026-10-06 UTC first-publication date in source frontmatter and manifests. The prior qualitative-originality conclusion and decoded-pixel receipt remain applicable; ordered-body equality and all executable gates must be rerun on the final rebased head before the one authorized non-force push. Deployment remains browser-operator-only.

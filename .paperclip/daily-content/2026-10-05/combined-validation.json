@@ -4,33 +4,33 @@
   "status": "validated-combined-pre-push",
   "requiredCount": 17,
   "actualCount": 17,
-  "publicationDateReconciliationRequired": true,
+  "publicationDateReconciliationRequired": false,
   "families": {
     "blog": {
       "requiredCount": 12,
       "actualCount": 12,
       "bodyLengths": {
-        "outsourced-website-portfolio-evidence-verification": 983,
-        "outsourced-cms-preview-fidelity-acceptance": 976,
-        "outsourced-website-migration-delta-review": 957,
-        "outsourced-site-search-analytics-handoff": 956,
-        "outsourced-website-calculator-design-brief": 958,
-        "outsourced-website-stakeholder-interview-plan": 934,
-        "outsourced-website-animation-storyboard-handoff": 942,
-        "outsourced-multilingual-form-routing-acceptance": 949,
-        "outsourced-design-system-adoption-measurement": 973,
-        "outsourced-accessibility-conformance-report-review": 963,
-        "outsourced-content-prototype-approval-guide": 990,
-        "outsourced-website-discovery-deliverables-checklist": 1134
+        "outsourced-website-portfolio-evidence-verification": 1044,
+        "outsourced-cms-preview-fidelity-acceptance": 1036,
+        "outsourced-website-migration-delta-review": 1019,
+        "outsourced-site-search-analytics-handoff": 1021,
+        "outsourced-website-calculator-design-brief": 1023,
+        "outsourced-website-stakeholder-interview-plan": 992,
+        "outsourced-website-animation-storyboard-handoff": 1008,
+        "outsourced-multilingual-form-routing-acceptance": 1016,
+        "outsourced-design-system-adoption-measurement": 1036,
+        "outsourced-accessibility-conformance-report-review": 1029,
+        "outsourced-content-prototype-approval-guide": 1059,
+        "outsourced-website-discovery-deliverables-checklist": 1201
       },
       "originality": {
-        "maximumPairwiseFiveWordShingleOverlapPercent": 0.11,
+        "maximumPairwiseFiveWordShingleOverlapPercent": 0.3,
         "maximumPair": [
           "outsourced-website-portfolio-evidence-verification",
           "outsourced-website-stakeholder-interview-plan"
         ],
         "repeatedParagraphCount": 0,
-        "sharedArgumentReview": "Passed: manual review confirms each article has topic-specific structure, examples, substantive reasoning, failure modes, and reader outcome."
+        "sharedArgumentReview": "Passed: manual all-17 review confirms topic-specific structures, examples, reasoning, and reader outcomes."
       },
       "entries": [
         {
@@ -44,8 +44,8 @@
             "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business"
           ],
           "contentHash": "0a589cf73d1d85d242b7ed67c0761d3145189b801bc99fd996e7c31c7ab5225f",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 983
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1044
         },
         {
           "family": "blog",
@@ -57,9 +57,9 @@
           "sources": [
             "https://www.w3.org/WAI/test-evaluate/"
           ],
-          "contentHash": "69798bc42d5d3342fc5b76ee6c32c502c3fb0446970f05ec987fdb91e083b180",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 976
+          "contentHash": "c31e5baa214e1966da01a45a84e8c8225e9a04578cd1a9cbc9a0403c499c14f8",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1036
         },
         {
           "family": "blog",
@@ -71,9 +71,9 @@
           "sources": [
             "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
           ],
-          "contentHash": "d98854453cf48cb79d065b06f5dd515bee1b3407d7bc1151ecdcc596577d0eb5",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 957
+          "contentHash": "0924f74cd3e1208adf7cf6b4ac8bff9cdc03502271a9d33b820ea13178812ec7",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1019
         },
         {
           "family": "blog",
@@ -85,9 +85,9 @@
           "sources": [
             "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/"
           ],
-          "contentHash": "bd35f81264c9116f952aa1373fb91e98b83c7178c46b095d0f11e7e34f5d97b5",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 956
+          "contentHash": "d4506c38930469d001302859cd3a209fa480762704bff1e567cd3ad91d69faa9",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1021
         },
         {
           "family": "blog",
@@ -99,9 +99,9 @@
           "sources": [
             "https://www.w3.org/WAI/tutorials/forms/instructions/"
           ],
-          "contentHash": "ba0c86823aeb0976561bd081eb453a89ef84ed18466712934ec7e8c3532a6054",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 958
+          "contentHash": "765a094837d41b63181ce16a25261c04de7cb53c1c5ad6760f8559a7573ec133",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1023
         },
         {
           "family": "blog",
@@ -110,10 +110,12 @@
           "route": "/blog/outsourced-website-stakeholder-interview-plan",
           "sourcePath": "content/blog/outsourced-website-stakeholder-interview-plan.mdx",
           "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
-          "sources": [],
-          "contentHash": "13c7055cb7647dae816b1e0d5bf881dfc8a349d66a4f5ae53c6d0cd18422f52a",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 934
+          "sources": [
+            "https://www.gov.uk/service-manual/user-research/plan-user-research-for-your-service"
+          ],
+          "contentHash": "4654c97ba49eb3d1c1eefc014ddb1ee85aea5221836e77478f1e2958d786fb50",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 992
         },
         {
           "family": "blog",
@@ -125,9 +127,9 @@
           "sources": [
             "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html"
           ],
-          "contentHash": "b022442b703335e36f1cfb7898a878b3150e274c88eb33075492939b45af75a3",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 942
+          "contentHash": "db52881b9c6204fb8cd83512d5fd42057498e04abfd8de7723b1756c21f1d69e",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1008
         },
         {
           "family": "blog",
@@ -139,9 +141,9 @@
           "sources": [
             "https://www.w3.org/WAI/tutorials/forms/"
           ],
-          "contentHash": "235128ead4b59379a4d00acefd9fcd350814f3d42b8f3fe5163e38b1faf5b7cf",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 949
+          "contentHash": "ff73e561d6da31cb3878057aa8c3e41db78946dbf4d6acb4fde301ec53ae14a8",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1016
         },
         {
           "family": "blog",
@@ -153,9 +155,9 @@
           "sources": [
             "https://design-system.w3.org/"
           ],
-          "contentHash": "deb16ca93f861d77083bd5e78957db501aea1c88331cec22d1604b6d0912c78a",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 973
+          "contentHash": "56c0b4dd82c93530376de5539a1c116fe69bfc6b8b0468fd2184a6c2150de9a9",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1036
         },
         {
           "family": "blog",
@@ -167,9 +169,9 @@
           "sources": [
             "https://www.w3.org/TR/WCAG22/"
           ],
-          "contentHash": "eba842c98c5f018aa10ac7de28cf0755606ddf4d6b279a85e6c9e290b028b09d",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 963
+          "contentHash": "b0fc37f6b40c06a7bca4d19afb8aad7d5908a21d6419d55bfb4ddfebbbb6ce7a",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1029
         },
         {
           "family": "blog",
@@ -181,9 +183,9 @@
           "sources": [
             "https://www.w3.org/WAI/tutorials/page-structure/"
           ],
-          "contentHash": "a44dcf726fbb002850a22fa71cc12558931ed6e817425ae266bf6487e16139c4",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 990
+          "contentHash": "b50a11b7b77afd39d93cc8ed3b245c611b75d95d29028be903d9269edf9e8472",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1059
         },
         {
           "family": "blog",
@@ -192,10 +194,12 @@
           "route": "/blog/outsourced-website-discovery-deliverables-checklist",
           "sourcePath": "content/blog/outsourced-website-discovery-deliverables-checklist.mdx",
           "imagePath": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
-          "sources": [],
-          "contentHash": "107b3494482a18795b3025660e1d691d7f3eab33bf232d0e1f58e0f293edcd2d",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 1134
+          "sources": [
+            "https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works"
+          ],
+          "contentHash": "43c009fab18a401363f0cca63fdb8849e05c31a811871834ce2b6bbf71b66259",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1201
         }
       ]
     },
@@ -203,17 +207,20 @@
       "requiredCount": 5,
       "actualCount": 5,
       "bodyLengths": {
-        "css-cascade-layers-outsourced-website-handoff": 1242,
-        "content-visibility-performance-handoff-research": 1249,
-        "html-inert-attribute-outsourced-website-acceptance": 1263,
-        "native-details-summary-disclosure-handoff": 1327,
-        "image-fetchpriority-outsourced-website-handoff": 1260
+        "css-cascade-layers-outsourced-website-handoff": 1352,
+        "content-visibility-performance-handoff-research": 1372,
+        "html-inert-attribute-outsourced-website-acceptance": 1372,
+        "native-details-summary-disclosure-handoff": 1432,
+        "image-fetchpriority-outsourced-website-handoff": 1376
       },
       "originality": {
-        "maximumPairwiseFiveWordShingleOverlapPercent": 0.55,
-        "maximumPair": "content-visibility-performance-handoff-research vs image-fetchpriority-outsourced-website-handoff",
+        "maximumPairwiseFiveWordShingleOverlapPercent": 1.76,
+        "maximumPair": [
+          "content-visibility-performance-handoff-research",
+          "image-fetchpriority-outsourced-website-handoff"
+        ],
         "repeatedParagraphCount": 0,
-        "sharedArgumentReview": "PASS: distinct decisions, examples, failure modes, and reader outcomes"
+        "sharedArgumentReview": "Passed: manual all-17 review confirms topic-specific structures, examples, reasoning, and reader outcomes."
       },
       "entries": [
         {
@@ -235,9 +242,9 @@
             "https://www.w3.org/TR/mediaqueries-5/",
             "https://www.w3.org/TR/css-variables-1/"
           ],
-          "contentHash": "a1e5ee5372ee22fa4674bf57497645ea0b0e8ddbef506f92fa4c000c7d9463fa",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 1242
+          "contentHash": "e76d9fd3d84e707e2c6667ebd477eebad1a5b9bb571410ab11f24c8e0991eeb3",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1352
         },
         {
           "family": "research",
@@ -258,9 +265,9 @@
             "https://html.spec.whatwg.org/",
             "https://www.w3.org/TR/cssom-view-1/"
           ],
-          "contentHash": "1caf6d4edf3927dea0864566985ce54f8bf82b6467996257ed9b82e6907f1d11",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 1249
+          "contentHash": "53709ef2c349fc52228e41c7f3edccb1ef18564627f502544c9116d6e5dbd97e",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1372
         },
         {
           "family": "research",
@@ -281,9 +288,9 @@
             "https://dom.spec.whatwg.org/",
             "https://www.w3.org/TR/html-aam-1.0/"
           ],
-          "contentHash": "aef275cf0f443c0741f932ded6b4f176fdbd340b69deb7fae3497947bfcd4844",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 1263
+          "contentHash": "10df3fadaab0b2806aeab02592ae3b182073157f6b2d4223a3bf5fbc4437597d",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1372
         },
         {
           "family": "research",
@@ -304,9 +311,9 @@
             "https://url.spec.whatwg.org/",
             "https://www.w3.org/TR/mediaqueries-5/"
           ],
-          "contentHash": "f75945040f46a5b0a5824e734c98b9ca53ec399478e93eda66f0fce297a79fa8",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 1327
+          "contentHash": "3a51603c3e053ad33cbde6a4b7773e73f9a48a490667b5e1a746dec62efe3002",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1432
         },
         {
           "family": "research",
@@ -327,9 +334,9 @@
             "https://www.rfc-editor.org/rfc/rfc9218",
             "https://www.w3.org/TR/preload/"
           ],
-          "contentHash": "f623b3afb671a9b0fead5b412cf14f13e247df8fca26a4e3395ec10173ed321d",
-          "sourceDate": "2026-10-05",
-          "bodyWords": 1260
+          "contentHash": "e787f21e5bdd2b1d39f623c39c299fcd919eb433b0f729949df3bb346585b5e8",
+          "sourceDate": "2026-10-06",
+          "bodyWords": 1376
         }
       ]
     }
@@ -339,21 +346,24 @@
     "researchValidator": "PASS",
     "tests": "PASS (10/10)",
     "typecheck": "PASS",
-    "cleanProductionBuild": "PASS (655 static pages)",
-    "renderedRoutes": "PASS (17/17 local)",
+    "cleanProductionBuild": "PASS (654 static pages)",
+    "renderedRoutes": "PASS (17/17 local; 675/675 ordered body lines)",
     "renderedTitles": "PASS",
     "renderedSubstantiveBodies": "PASS",
     "canonicals": "PASS",
-    "dates": "PASS for staged 2026-10-05 UTC release",
+    "dates": "PASS for approved 2026-10-06 UTC first-publication release",
     "indexes": "PASS",
     "sitemap": "PASS",
-    "imageHttpMimeSignatureDecode": "PASS (200 image/webp RIFF/WEBP, 136470 bytes)",
-    "internalDestinations": "PASS"
+    "imageHttpMimeSignatureDecode": "PASS (200 image/webp, 136470 bytes, 1400x1400; raw-pixel SHA-256 63c2aa70d6d9daec988111b5d722db7ff9a7c70f94adb70d88ffdbe9581ccdcd)",
+    "internalDestinations": "PASS",
+    "authoritativeSources": "PASS",
+    "orderedBodyHashes": "PASS (17/17)",
+    "qualitativeOriginality": "PASS (0 repeated substantive paragraphs; distinct arguments/examples/outcomes)"
   },
   "production": {
     "repository": "coolifystealthagents/websitedesignoutsource",
     "branch": "main",
-    "baselineSha": "c1176b4da5cc5142ade9317eaeecbd373139ac85",
+    "baselineSha": "5c261ff39d7f81ac94ddea0b37a088f859103be5",
     "draftBranch": "web-78-daily-blog-20261005",
     "deploymentApplication": "bzwr1cecluixrzw89en7dguh",
     "pushed": false,
