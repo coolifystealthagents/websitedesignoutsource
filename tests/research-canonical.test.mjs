@@ -8,6 +8,7 @@ const accessibilityResearch = await readFile(new URL('../content/research/websit
 const performanceBudgetResearch = await readFile(new URL('../content/research/website-performance-budget-handoff.mdx', import.meta.url), 'utf8');
 const migrationInventoryResearch = await readFile(new URL('../content/research/website-migration-inventory-control-study.mdx', import.meta.url), 'utf8');
 const designSystemHandoffResearch = await readFile(new URL('../content/research/design-system-handoff-controls.mdx', import.meta.url), 'utf8');
+const changeManagementResearch = await readFile(new URL('../content/research/website-change-management-controls.mdx', import.meta.url), 'utf8');
 
 test('research metadata emits an exact production canonical route', () => {
   assert.match(source, /const baseUrl\s*=\s*['"]https:\/\/websitedesignoutsource\.com['"]/);
@@ -48,4 +49,12 @@ test('design-system handoff evidence gives a bounded production-support next ste
   assert.match(designSystemHandoffResearch, /\[Design System Production service\]\(https:\/\/websitedesignoutsource\.com\/services\/design-system-production\)/);
   assert.match(designSystemHandoffResearch, /The company owner approves component acceptance, access, and the production release\./);
   assert.doesNotMatch(designSystemHandoffResearch, /guarantees a consistency result/i);
+});
+
+test('change-management evidence gives a bounded Website Maintenance handoff', () => {
+  assert.match(changeManagementResearch, /^updated: "2026-10-07"$/m);
+  assert.match(changeManagementResearch, /## When regular changes need support/);
+  assert.match(changeManagementResearch, /\[Website Maintenance service\]\(https:\/\/websitedesignoutsource\.com\/services\/website-maintenance\)/);
+  assert.match(changeManagementResearch, /Your company owner still approves access, exceptions, and the release\./);
+  assert.doesNotMatch(changeManagementResearch, /guarantees a maintenance result/i);
 });
