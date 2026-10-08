@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-08",
+  "kind": "blog",
+  "count": 12,
+  "publicationDateVisible": true,
+  "image": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+  "items": [
+    {
+      "slug": "outsourced-website-accessibility-acceptance-checklist",
+      "title": "Outsourced Website Accessibility Acceptance Checklist",
+      "description": "Build an evidence based accessibility review before accepting pages from an outsourced website design team.",
+      "file": "content/blog/outsourced-website-accessibility-acceptance-checklist.mdx",
+      "route": "/blog/outsourced-website-accessibility-acceptance-checklist",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "responsive-breakpoint-review-protocol-outsourced-design",
+      "title": "Responsive Breakpoint Review Protocol for Outsourced Design",
+      "description": "Review responsive pages with a repeatable viewport matrix, named evidence, and clear defect ownership.",
+      "file": "content/blog/responsive-breakpoint-review-protocol-outsourced-design.mdx",
+      "route": "/blog/responsive-breakpoint-review-protocol-outsourced-design",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "design-system-token-handoff-outsourced-team",
+      "title": "Design System Token Handoff for an Outsourced Team",
+      "description": "Transfer design tokens with ownership, naming rules, implementation examples, and change control.",
+      "file": "content/blog/design-system-token-handoff-outsourced-team.mdx",
+      "route": "/blog/design-system-token-handoff-outsourced-team",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "website-form-validation-qa-outsourced-build",
+      "title": "Website Form Validation QA for an Outsourced Build",
+      "description": "Test labels, errors, focus, recovery, data handling, and confirmation states before accepting website forms.",
+      "file": "content/blog/website-form-validation-qa-outsourced-build.mdx",
+      "route": "/blog/website-form-validation-qa-outsourced-build",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "website-content-staging-governance-outsourced-design",
+      "title": "Website Content Staging Governance for Outsourced Design",
+      "description": "Keep draft, approved, staged, and published content distinct with a practical ownership record.",
+      "file": "content/blog/website-content-staging-governance-outsourced-design.mdx",
+      "route": "/blog/website-content-staging-governance-outsourced-design",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "analytics-event-handoff-outsourced-website",
+      "title": "Analytics Event Handoff for an Outsourced Website",
+      "description": "Define events, parameters, consent conditions, test evidence, and ownership before launch.",
+      "file": "content/blog/analytics-event-handoff-outsourced-website.mdx",
+      "route": "/blog/analytics-event-handoff-outsourced-website",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "website-image-rights-register-outsourced-project",
+      "title": "Website Image Rights Register for an Outsourced Project",
+      "description": "Track image sources, licenses, usage limits, credits, crops, and replacement responsibility.",
+      "file": "content/blog/website-image-rights-register-outsourced-project.mdx",
+      "route": "/blog/website-image-rights-register-outsourced-project",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "cookie-consent-interface-review-outsourced-design",
+      "title": "Cookie Consent Interface Review for Outsourced Design",
+      "description": "Review consent choices for clarity, parity, accessibility, persistence, and accurate script behavior.",
+      "file": "content/blog/cookie-consent-interface-review-outsourced-design.mdx",
+      "route": "/blog/cookie-consent-interface-review-outsourced-design",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "website-release-rollback-plan-outsourced-build",
+      "title": "Website Release Rollback Plan for an Outsourced Build",
+      "description": "Prepare release criteria, backups, decision owners, rollback triggers, and verification steps.",
+      "file": "content/blog/website-release-rollback-plan-outsourced-build.mdx",
+      "route": "/blog/website-release-rollback-plan-outsourced-build",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "website-localization-qa-outsourced-design",
+      "title": "Website Localization QA for Outsourced Design",
+      "description": "Check language, layout expansion, locale formats, direction, metadata, and fallback behavior.",
+      "file": "content/blog/website-localization-qa-outsourced-design.mdx",
+      "route": "/blog/website-localization-qa-outsourced-design",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "cms-permissions-matrix-outsourced-website-team",
+      "title": "CMS Permissions Matrix for an Outsourced Website Team",
+      "description": "Assign the least access needed for drafting, review, publishing, administration, and emergency work.",
+      "file": "content/blog/cms-permissions-matrix-outsourced-website-team.mdx",
+      "route": "/blog/cms-permissions-matrix-outsourced-website-team",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "post-launch-defect-triage-outsourced-website",
+      "title": "Post Launch Defect Triage for an Outsourced Website",
+      "description": "Create severity rules, intake evidence, ownership, response targets, and closure checks after launch.",
+      "file": "content/blog/post-launch-defect-triage-outsourced-website.mdx",
+      "route": "/blog/post-launch-defect-triage-outsourced-website",
+      "published": "2026-10-08"
+    }
+  ]
+}

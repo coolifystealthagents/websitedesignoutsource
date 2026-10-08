@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-08",
+  "kind": "research",
+  "count": 5,
+  "publicationDateVisible": true,
+  "image": "/illustrations/getillustrations/inkdex-saas/filipino-web-design-production.webp",
+  "items": [
+    {
+      "slug": "core-web-vitals-vendor-handoff-evidence",
+      "title": "Core Web Vitals Evidence for an Outsourced Website Handoff",
+      "description": "A research based framework for separating field data, lab diagnostics, thresholds, and release evidence.",
+      "file": "content/research/core-web-vitals-vendor-handoff-evidence.mdx",
+      "route": "/research/core-web-vitals-vendor-handoff-evidence",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "wcag-conformance-sampling-outsourced-web-design",
+      "title": "WCAG Conformance Sampling for Outsourced Web Design",
+      "description": "A research framework for choosing representative pages, states, components, and assistive technology checks.",
+      "file": "content/research/wcag-conformance-sampling-outsourced-web-design.mdx",
+      "route": "/research/wcag-conformance-sampling-outsourced-web-design",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "structured-data-visible-content-alignment-study",
+      "title": "Structured Data and Visible Content Alignment Study",
+      "description": "How outsourced teams can verify that structured claims match rendered titles, dates, authors, and page meaning.",
+      "file": "content/research/structured-data-visible-content-alignment-study.mdx",
+      "route": "/research/structured-data-visible-content-alignment-study",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "privacy-consent-dark-patterns-website-design-evidence",
+      "title": "Privacy Consent Dark Patterns in Website Design",
+      "description": "Evidence based review criteria for choice symmetry, clarity, accessibility, and consent withdrawal.",
+      "file": "content/research/privacy-consent-dark-patterns-website-design-evidence.mdx",
+      "route": "/research/privacy-consent-dark-patterns-website-design-evidence",
+      "published": "2026-10-08"
+    },
+    {
+      "slug": "design-system-accessibility-governance-research",
+      "title": "Design System Accessibility Governance Research",
+      "description": "How component ownership, token rules, testing, documentation, and exception control support accessible delivery.",
+      "file": "content/research/design-system-accessibility-governance-research.mdx",
+      "route": "/research/design-system-accessibility-governance-research",
+      "published": "2026-10-08"
+    }
+  ]
+}
