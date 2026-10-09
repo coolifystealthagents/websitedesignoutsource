@@ -46,7 +46,7 @@ export function BlogListing({ page = 1 }: { page?: number }) {
                   <h2>{p.title}</h2>
                   <p>{p.excerpt}</p>
                   <b>{"minutes" in p ? p.minutes : 8} min read</b>
-                  {"published" in p && (
+                  {"published" in p && typeof p.published === "string" && (
                     <time dateTime={p.published}>Published {formatDate(p.published)}</time>
                   )}
                 </a>
