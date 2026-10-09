@@ -41,6 +41,12 @@ The following five existing research routes were checked in a fresh production b
 
 The remaining older blog candidates need a separate metadata and artifact-contract review before they can enter this inventory. They are not treated as ready merely because a sitemap route exists.
 
+## Verified-absent candidate — 2026-10-09
+
+`/research/core-web-vitals-vendor-handoff-evidence` asks how a client can keep field data, lab diagnostics, sampled pages, and release evidence separate in an outsourced handoff. Its fresh production artifact has the exact H1 and self-canonical URL, and `/services/core-web-vitals-optimization` has its own H1, self-canonical URL, and sitemap entry. The research route has no route-local link to that service.
+
+This is the next reviewed candidate, not a delivered handoff. If it is later implemented, keep one link beside the evidence-record guidance and say that the owner still decides whether a result is sufficient for release. Do not add a duplicate link to the older performance-budget route, which is already delivered.
+
 ## 2026-09-28 — performance-handoff reconciliation
 
 A fresh production build found that the performance-budget route already renders exactly one canonical absolute link to the Core Web Vitals optimization service inside its route-local main. The earlier zero-link ledger row came from a probe that looked only for a relative href. The route and service each have a unique canonical artifact and a sitemap location; the sitemap intentionally has no lastmod. This source-only correction marks the pair delivered and promotes the migration pair without changing reader-facing output.
