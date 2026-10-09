@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-09",
+  "kind": "blog",
+  "count": 12,
+  "publicationDateVisible": true,
+  "items": [
+    {
+      "slug": "websitedesignoutsource-priority-intake-triage",
+      "title": "WebsiteDesignOutsource Priority Intake Triage",
+      "excerpt": "A practical outsourced website delivery guide to turn new requests into a sequenced queue with an accepted owner.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-priority-intake-triage"
+    },
+    {
+      "slug": "websitedesignoutsource-exception-owner-map",
+      "title": "WebsiteDesignOutsource Exception Owner Map",
+      "excerpt": "A practical outsourced website delivery guide to route ambiguous cases to the person authorized to decide them.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-exception-owner-map"
+    },
+    {
+      "slug": "websitedesignoutsource-source-record-verification",
+      "title": "WebsiteDesignOutsource Source Record Verification",
+      "excerpt": "A practical outsourced website delivery guide to verify the governing record before an operator acts.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-source-record-verification"
+    },
+    {
+      "slug": "websitedesignoutsource-handoff-acceptance-receipt",
+      "title": "WebsiteDesignOutsource Handoff Acceptance Receipt",
+      "excerpt": "A practical outsourced website delivery guide to prove that the receiving owner accepted the next action.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-handoff-acceptance-receipt"
+    },
+    {
+      "slug": "websitedesignoutsource-backlog-aging-review",
+      "title": "WebsiteDesignOutsource Backlog Aging Review",
+      "excerpt": "A practical outsourced website delivery guide to separate active work from items waiting on decisions or evidence.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-backlog-aging-review"
+    },
+    {
+      "slug": "websitedesignoutsource-quality-sample-calibration",
+      "title": "WebsiteDesignOutsource Quality Sample Calibration",
+      "excerpt": "A practical outsourced website delivery guide to compare reviewers against the same observable acceptance rule.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-quality-sample-calibration"
+    },
+    {
+      "slug": "websitedesignoutsource-access-scope-recertification",
+      "title": "WebsiteDesignOutsource Access Scope Recertification",
+      "excerpt": "A practical outsourced website delivery guide to keep permissions aligned with current responsibilities.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-access-scope-recertification"
+    },
+    {
+      "slug": "websitedesignoutsource-change-control-release-note",
+      "title": "WebsiteDesignOutsource Change Control Release Note",
+      "excerpt": "A practical outsourced website delivery guide to publish a dated operating change without erasing the prior rule.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-change-control-release-note"
+    },
+    {
+      "slug": "websitedesignoutsource-capacity-overflow-trigger",
+      "title": "WebsiteDesignOutsource Capacity Overflow Trigger",
+      "excerpt": "A practical outsourced website delivery guide to identify demand that exceeds the safe service window.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-capacity-overflow-trigger"
+    },
+    {
+      "slug": "websitedesignoutsource-client-decision-packet",
+      "title": "WebsiteDesignOutsource Client Decision Packet",
+      "excerpt": "A practical outsourced website delivery guide to prepare facts and options while preserving client decision authority.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-client-decision-packet"
+    },
+    {
+      "slug": "websitedesignoutsource-correction-propagation-check",
+      "title": "WebsiteDesignOutsource Correction Propagation Check",
+      "excerpt": "A practical outsourced website delivery guide to reconcile a correction across every dependent system.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-correction-propagation-check"
+    },
+    {
+      "slug": "websitedesignoutsource-monthly-control-closeout",
+      "title": "WebsiteDesignOutsource Monthly Control Closeout",
+      "excerpt": "A practical outsourced website delivery guide to close open exceptions and retain evidence for the next review.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/websitedesignoutsource-monthly-control-closeout"
+    }
+  ]
+}

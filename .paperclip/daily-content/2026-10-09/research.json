@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-09",
+  "kind": "research",
+  "count": 5,
+  "publicationDateVisible": true,
+  "items": [
+    {
+      "slug": "websitedesignoutsource-queue-wait-state-evidence-study",
+      "title": "WebsiteDesignOutsource Queue Wait-State Evidence Study",
+      "excerpt": "A source-backed outsourced website delivery study of whether waiting reasons and owner acceptance explain queue age.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/websitedesignoutsource-queue-wait-state-evidence-study"
+    },
+    {
+      "slug": "websitedesignoutsource-reviewer-agreement-reliability-study",
+      "title": "WebsiteDesignOutsource Reviewer Agreement Reliability Study",
+      "excerpt": "A source-backed outsourced website delivery study of whether two reviewers reach reproducible conclusions from the same evidence.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/websitedesignoutsource-reviewer-agreement-reliability-study"
+    },
+    {
+      "slug": "websitedesignoutsource-minimum-access-effectiveness-study",
+      "title": "WebsiteDesignOutsource Minimum Access Effectiveness Study",
+      "excerpt": "A source-backed outsourced website delivery study of whether permissions support required work without unnecessary exposure.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/websitedesignoutsource-minimum-access-effectiveness-study"
+    },
+    {
+      "slug": "websitedesignoutsource-handoff-completeness-observation",
+      "title": "WebsiteDesignOutsource Handoff Completeness Observation",
+      "excerpt": "A source-backed outsourced website delivery study of whether receiving teams can continue work without private clarification.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/websitedesignoutsource-handoff-completeness-observation"
+    },
+    {
+      "slug": "websitedesignoutsource-control-change-traceability-research",
+      "title": "WebsiteDesignOutsource Control Change Traceability Research",
+      "excerpt": "A source-backed outsourced website delivery study of whether rule changes remain attributable, dated, and reversible.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/websitedesignoutsource-control-change-traceability-research"
+    }
+  ]
+}
