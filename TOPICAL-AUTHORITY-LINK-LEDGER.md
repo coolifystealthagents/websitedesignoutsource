@@ -41,11 +41,12 @@ The following five existing research routes were checked in a fresh production b
 
 The remaining older blog candidates need a separate metadata and artifact-contract review before they can enter this inventory. They are not treated as ready merely because a sitemap route exists.
 
-## Verified-absent candidate — 2026-10-09
+## 2026-10-12 — Core Web Vitals vendor-handoff status
 
-`/research/core-web-vitals-vendor-handoff-evidence` asks how a client can keep field data, lab diagnostics, sampled pages, and release evidence separate in an outsourced handoff. Its fresh production artifact has the exact H1 and self-canonical URL, and `/services/core-web-vitals-optimization` has its own H1, self-canonical URL, and sitemap entry. The research route has no route-local link to that service.
-
-This is the next reviewed candidate, not a delivered handoff. If it is later implemented, keep one link beside the evidence-record guidance and say that the owner still decides whether a result is sufficient for release. Do not add a duplicate link to the older performance-budget route, which is already delivered.
+- Rendered source: `d4a52b8801c9d0aa76207383d16829aa72a9ce63`.
+- Local production artifact: `Core Web Vitals Evidence for an Outsourced Website Handoff` has its self-canonical URL, one route-local Core Web Vitals optimization service link, the owner-boundary sentence, Article `datePublished` `2026-10-08` / `dateModified` `2026-10-12`, and a sitemap `<loc>`. The Core Web Vitals Optimization service artifact has its H1 and self-canonical URL; the sitemap intentionally has no `<lastmod>`.
+- Public checks: cache-busted apex and `www` returned `200 text/html` with the expected H1 and apex canonical, but both omit the new section marker and service href and retain `article:modified_time` `2026-10-08`. The cache-busted apex sitemap returned `200 application/xml`, includes the canonical route, and has no `<lastmod>` by contract.
+- Preserve rendered-source commit `d4a52b8801c9d0aa76207383d16829aa72a9ce63`; source delivery is complete, while deployment remains pending public verification / public stale. No repository-approved deployment target or lifecycle handle was found, so none was inferred or triggered. Do not add a duplicate Core Web Vitals CTA to this research route; recheck both hosts after an approved rollout path is available.
 
 ## 2026-09-28 — performance-handoff reconciliation
 
