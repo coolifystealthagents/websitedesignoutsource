@@ -1,0 +1,138 @@
+{
+  "site": "WebsiteDesignOutsource.com",
+  "repository": "coolifystealthagents/websitedesignoutsource",
+  "branch": "main",
+  "baseSha": "3d73c048085774b13bd9655ab815bff14d8f15e7",
+  "publicationDate": "2026-10-12",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "thumbnails": 17
+  },
+  "registry": "app/content-library.tsx",
+  "routes": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "articles": [
+    {
+      "section": "Blog",
+      "title": "Print Stylesheet Acceptance for Outsourced Websites",
+      "slug": "outsourced-website-print-stylesheet-acceptance",
+      "sourcePath": "content/blog/outsourced-website-print-stylesheet-acceptance.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-print-stylesheet-acceptance.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Reduced-Data Mode Brief for Outsourced Website Teams",
+      "slug": "outsourced-website-reduced-data-mode-brief",
+      "sourcePath": "content/blog/outsourced-website-reduced-data-mode-brief.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-reduced-data-mode-brief.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Password Manager Form Review in Outsourced Design",
+      "slug": "outsourced-website-password-manager-form-review",
+      "sourcePath": "content/blog/outsourced-website-password-manager-form-review.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-password-manager-form-review.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Autofill Token Acceptance for Website Forms",
+      "slug": "outsourced-website-autofill-token-acceptance",
+      "sourcePath": "content/blog/outsourced-website-autofill-token-acceptance.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-autofill-token-acceptance.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Touch Target Spacing Review for Outsourced Interfaces",
+      "slug": "outsourced-website-touch-target-spacing-review",
+      "sourcePath": "content/blog/outsourced-website-touch-target-spacing-review.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-touch-target-spacing-review.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Motion Pause Control Handoff for Website Design",
+      "slug": "outsourced-website-motion-pause-control-handoff",
+      "sourcePath": "content/blog/outsourced-website-motion-pause-control-handoff.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-motion-pause-control-handoff.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Session Expiry Message Brief for Outsourced Websites",
+      "slug": "outsourced-website-session-expiry-message-brief",
+      "sourcePath": "content/blog/outsourced-website-session-expiry-message-brief.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-session-expiry-message-brief.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "PDF Link Label Audit for Outsourced Website Content",
+      "slug": "outsourced-website-pdf-link-label-audit",
+      "sourcePath": "content/blog/outsourced-website-pdf-link-label-audit.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-pdf-link-label-audit.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Status Page Link Handoff for Website Support",
+      "slug": "outsourced-website-status-page-link-handoff",
+      "sourcePath": "content/blog/outsourced-website-status-page-link-handoff.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-status-page-link-handoff.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Date and Time Localization Check for Website Handoffs",
+      "slug": "outsourced-website-date-time-localization-check",
+      "sourcePath": "content/blog/outsourced-website-date-time-localization-check.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-date-time-localization-check.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Native Dialog Acceptance for Outsourced Interfaces",
+      "slug": "outsourced-website-native-dialog-acceptance",
+      "sourcePath": "content/blog/outsourced-website-native-dialog-acceptance.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-native-dialog-acceptance.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Copy-and-Paste Formatting Review for CMS Handoffs",
+      "slug": "outsourced-website-copy-paste-formatting-review",
+      "sourcePath": "content/blog/outsourced-website-copy-paste-formatting-review.mdx",
+      "thumbnailPath": "public/oct12-heroes/outsourced-website-copy-paste-formatting-review.webp"
+    },
+    {
+      "section": "Research",
+      "title": "CSS Container Query Handoff Research",
+      "slug": "css-container-query-handoff-research",
+      "sourcePath": "content/research/css-container-query-handoff-research.mdx",
+      "thumbnailPath": "public/oct12-heroes/css-container-query-handoff-research.webp"
+    },
+    {
+      "section": "Research",
+      "title": "HTML Popover Interface Acceptance Research",
+      "slug": "html-popover-interface-acceptance-research",
+      "sourcePath": "content/research/html-popover-interface-acceptance-research.mdx",
+      "thumbnailPath": "public/oct12-heroes/html-popover-interface-acceptance-research.webp"
+    },
+    {
+      "section": "Research",
+      "title": "Focus Not Obscured Design Research",
+      "slug": "wcag-focus-not-obscured-design-research",
+      "sourcePath": "content/research/wcag-focus-not-obscured-design-research.mdx",
+      "thumbnailPath": "public/oct12-heroes/wcag-focus-not-obscured-design-research.webp"
+    },
+    {
+      "section": "Research",
+      "title": "Permissions Policy Research for Outsourced Websites",
+      "slug": "permissions-policy-outsourced-site-research",
+      "sourcePath": "content/research/permissions-policy-outsourced-site-research.mdx",
+      "thumbnailPath": "public/oct12-heroes/permissions-policy-outsourced-site-research.webp"
+    },
+    {
+      "section": "Research",
+      "title": "Interaction to Next Paint Handoff Research",
+      "slug": "core-web-vitals-inp-handoff-research",
+      "sourcePath": "content/research/core-web-vitals-inp-handoff-research.mdx",
+      "thumbnailPath": "public/oct12-heroes/core-web-vitals-inp-handoff-research.webp"
+    }
+  ]
+}
