@@ -1,0 +1,138 @@
+{
+  "site": "WebsiteDesignOutsource.com",
+  "repository": "coolifystealthagents/websitedesignoutsource",
+  "branch": "main",
+  "baseSha": "6a3e08fd032551fbfc79f933b6303274373a448d",
+  "publicationDate": "2026-10-13",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "thumbnails": 17
+  },
+  "registry": "app/content-library.tsx",
+  "routes": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "articles": [
+    {
+      "section": "Blog",
+      "title": "Accept Loading Skeletons Without Hiding Slow Content",
+      "slug": "outsourced-website-loading-skeleton-acceptance",
+      "sourcePath": "content/blog/outsourced-website-loading-skeleton-acceptance.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-loading-skeleton-acceptance.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Handoff Slotted Web Component Content With Clear Ownership",
+      "slug": "outsourced-web-component-slot-content-handoff",
+      "sourcePath": "content/blog/outsourced-web-component-slot-content-handoff.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-web-component-slot-content-handoff.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Brief Form Draft Recovery Before Outsourced Implementation",
+      "slug": "outsourced-website-form-draft-recovery-brief",
+      "sourcePath": "content/blog/outsourced-website-form-draft-recovery-brief.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-form-draft-recovery-brief.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Review Content Security Policy Reports Before Enforcement",
+      "slug": "outsourced-website-csp-report-only-review",
+      "sourcePath": "content/blog/outsourced-website-csp-report-only-review.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-csp-report-only-review.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Handoff Accessible Authentication Copy Without Leaking Account State",
+      "slug": "outsourced-website-accessible-authentication-copy-handoff",
+      "sourcePath": "content/blog/outsourced-website-accessible-authentication-copy-handoff.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-accessible-authentication-copy-handoff.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Review Pagination and Canonical Signals Before Launch",
+      "slug": "outsourced-website-pagination-canonical-review",
+      "sourcePath": "content/blog/outsourced-website-pagination-canonical-review.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-pagination-canonical-review.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Handoff Image Decoding and Fetch Priority With Measured Evidence",
+      "slug": "outsourced-website-image-decoding-priority-handoff",
+      "sourcePath": "content/blog/outsourced-website-image-decoding-priority-handoff.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-image-decoding-priority-handoff.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Review Inline Validation Timing Without Interrupting Form Entry",
+      "slug": "outsourced-website-inline-validation-timing-review",
+      "sourcePath": "content/blog/outsourced-website-inline-validation-timing-review.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-inline-validation-timing-review.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Accept Viewport Safe Areas Across Notched and Foldable Screens",
+      "slug": "outsourced-website-viewport-safe-area-acceptance",
+      "sourcePath": "content/blog/outsourced-website-viewport-safe-area-acceptance.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-viewport-safe-area-acceptance.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Handoff Language Switcher State Without Losing Visitor Context",
+      "slug": "outsourced-website-language-switcher-state-handoff",
+      "sourcePath": "content/blog/outsourced-website-language-switcher-state-handoff.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-language-switcher-state-handoff.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Plan a Maintenance Mode Escape Route Before Release",
+      "slug": "outsourced-website-maintenance-mode-escape-route",
+      "sourcePath": "content/blog/outsourced-website-maintenance-mode-escape-route.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-maintenance-mode-escape-route.webp"
+    },
+    {
+      "section": "Blog",
+      "title": "Triage Resize Observer Loops in Responsive Components",
+      "slug": "outsourced-website-resize-observer-loop-triage",
+      "sourcePath": "content/blog/outsourced-website-resize-observer-loop-triage.mdx",
+      "thumbnailPath": "public/oct13-heroes/outsourced-website-resize-observer-loop-triage.webp"
+    },
+    {
+      "section": "Research",
+      "title": "Back-Forward Cache Reliability in Outsourced Website Delivery",
+      "slug": "website-bfcache-reliability-outsourced-research",
+      "sourcePath": "content/research/website-bfcache-reliability-outsourced-research.mdx",
+      "thumbnailPath": "public/oct13-heroes/website-bfcache-reliability-outsourced-research.webp"
+    },
+    {
+      "section": "Research",
+      "title": "Inert Background Behavior Behind Website Dialogs",
+      "slug": "website-inert-background-dialog-research",
+      "sourcePath": "content/research/website-inert-background-dialog-research.mdx",
+      "thumbnailPath": "public/oct13-heroes/website-inert-background-dialog-research.webp"
+    },
+    {
+      "section": "Research",
+      "title": "Client Hints Privacy Boundaries for Outsourced Websites",
+      "slug": "website-client-hints-privacy-research",
+      "sourcePath": "content/research/website-client-hints-privacy-research.mdx",
+      "thumbnailPath": "public/oct13-heroes/website-client-hints-privacy-research.webp"
+    },
+    {
+      "section": "Research",
+      "title": "Subresource Integrity Coverage for Third-Party Website Assets",
+      "slug": "website-sri-third-party-asset-research",
+      "sourcePath": "content/research/website-sri-third-party-asset-research.mdx",
+      "thumbnailPath": "public/oct13-heroes/website-sri-third-party-asset-research.webp"
+    },
+    {
+      "section": "Research",
+      "title": "Live Region Announcement Reliability in Dynamic Interfaces",
+      "slug": "website-live-region-announcement-reliability",
+      "sourcePath": "content/research/website-live-region-announcement-reliability.mdx",
+      "thumbnailPath": "public/oct13-heroes/website-live-region-announcement-reliability.webp"
+    }
+  ]
+}
