@@ -10,6 +10,7 @@ const migrationInventoryResearch = await readFile(new URL('../content/research/w
 const designSystemHandoffResearch = await readFile(new URL('../content/research/design-system-handoff-controls.mdx', import.meta.url), 'utf8');
 const changeManagementResearch = await readFile(new URL('../content/research/website-change-management-controls.mdx', import.meta.url), 'utf8');
 const coreWebVitalsVendorHandoffResearch = await readFile(new URL('../content/research/core-web-vitals-vendor-handoff-evidence.mdx', import.meta.url), 'utf8');
+const websiteCopyEvidenceResearch = await readFile(new URL('../content/research/website-design-website-copy-evidence.mdx', import.meta.url), 'utf8');
 
 test('research metadata emits an exact production canonical route', () => {
   assert.match(source, /const baseUrl\s*=\s*['"]https:\/\/websitedesignoutsource\.com['"]/);
@@ -66,4 +67,12 @@ test('Core Web Vitals vendor-handoff evidence gives a bounded repair handoff', (
   assert.match(coreWebVitalsVendorHandoffResearch, /\[Core Web Vitals optimization service\]\(https:\/\/websitedesignoutsource\.com\/services\/core-web-vitals-optimization\)/);
   assert.match(coreWebVitalsVendorHandoffResearch, /Your company owner still decides the performance goal, approves access and scope, and accepts any release exception\./);
   assert.doesNotMatch(coreWebVitalsVendorHandoffResearch, /guarantees a performance result/i);
+});
+
+test('website-copy evidence gives a bounded Landing Page Design handoff', () => {
+  assert.match(websiteCopyEvidenceResearch, /^updated: "2026-10-16"$/m);
+  assert.match(websiteCopyEvidenceResearch, /## When an approved copy brief needs page production/);
+  assert.match(websiteCopyEvidenceResearch, /\[Landing Page Design service\]\(https:\/\/websitedesignoutsource\.com\/services\/landing-page-design\)/);
+  assert.match(websiteCopyEvidenceResearch, /The company owner still approves claims, offers, legal review, and publication\./);
+  assert.doesNotMatch(websiteCopyEvidenceResearch, /guarantees a conversion result/i);
 });
