@@ -11,6 +11,7 @@ const designSystemHandoffResearch = await readFile(new URL('../content/research/
 const changeManagementResearch = await readFile(new URL('../content/research/website-change-management-controls.mdx', import.meta.url), 'utf8');
 const coreWebVitalsVendorHandoffResearch = await readFile(new URL('../content/research/core-web-vitals-vendor-handoff-evidence.mdx', import.meta.url), 'utf8');
 const websiteCopyEvidenceResearch = await readFile(new URL('../content/research/website-design-website-copy-evidence.mdx', import.meta.url), 'utf8');
+const accessibilityDefectEscapeResearch = await readFile(new URL('../content/research/outsourced-website-accessibility-defect-escape-study.mdx', import.meta.url), 'utf8');
 
 test('research metadata emits an exact production canonical route', () => {
   assert.match(source, /const baseUrl\s*=\s*['"]https:\/\/websitedesignoutsource\.com['"]/);
@@ -75,4 +76,12 @@ test('website-copy evidence gives a bounded Landing Page Design handoff', () => 
   assert.match(websiteCopyEvidenceResearch, /\[Landing Page Design service\]\(https:\/\/websitedesignoutsource\.com\/services\/landing-page-design\)/);
   assert.match(websiteCopyEvidenceResearch, /The company owner still approves claims, offers, legal review, and publication\./);
   assert.doesNotMatch(websiteCopyEvidenceResearch, /guarantees a conversion result/i);
+});
+
+test('accessibility-defect evidence gives a bounded remediation handoff', () => {
+  assert.match(accessibilityDefectEscapeResearch, /^updated: "2026-10-20"$/m);
+  assert.match(accessibilityDefectEscapeResearch, /## When defect evidence needs a repair lane/);
+  assert.match(accessibilityDefectEscapeResearch, /\[Website Accessibility Remediation service\]\(https:\/\/websitedesignoutsource\.com\/services\/website-accessibility-remediation\)/);
+  assert.match(accessibilityDefectEscapeResearch, /The team can prepare fixes and record retests, while the company owner decides scope, access, risk acceptance, and release\./);
+  assert.doesNotMatch(accessibilityDefectEscapeResearch, /guarantees accessibility conformance/i);
 });
