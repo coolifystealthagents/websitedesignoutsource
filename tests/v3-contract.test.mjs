@@ -3,11 +3,11 @@ import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
 const read = (path) => readFile(new URL(path, import.meta.url), 'utf8');
-const [navigation, components, reviews, provenance, services, serviceDetails, editorial, toc, sitemap, nextConfig, contact, confirmation, contactHandler, booking, proxy] = await Promise.all([
+const [navigation, components, reviews, provenance, services, serviceDetails, editorial, toc, sitemap, nextConfig, contact, confirmation, contactHandler, booking, proxy, blogLayout] = await Promise.all([
   read('../app/site-navigation.tsx'), read('../app/components.tsx'), read('../app/reviews.ts'), read('../app/reviews-provenance.json'),
   read('../app/fleet-content.ts'), read('../app/service-details.ts'), read('../app/editorial-system.tsx'), read('../app/editorial-toc.tsx'),
   read('../app/sitemap.xml/route.ts'), read('../next.config.mjs'), read('../app/contact-us/page.tsx'), read('../app/thanks-whats-next/page.tsx'),
-  read('../app/api/contact/route.ts'), read('../app/booking-components.tsx'), read('../proxy.ts'),
+  read('../app/api/contact/route.ts'), read('../app/booking-components.tsx'), read('../proxy.ts'), read('../app/blog/layout.tsx'),
 ]);
 
 test('shared navigation uses the exact approved labels and routes', () => {
@@ -65,5 +65,6 @@ test('conversion, sitemap, redirect, and security contracts use contact-us', () 
   assert.match(nextConfig, /Content-Security-Policy/);
   assert.match(proxy, /cf-visitor/);
   assert.match(proxy, /visitorProtocol !== 'https'/);
+  assert.doesNotMatch(blogLayout, /BlogBanner/);
   for (const header of ['X-Content-Type-Options', 'Referrer-Policy', 'Permissions-Policy', 'Strict-Transport-Security']) assert.match(nextConfig, new RegExp(header));
 });
