@@ -30,7 +30,7 @@ export const philippinesAccessibleHandoff = {
       label: 'Launch check',
       title: 'Keep the final approval with your team',
       body: 'Your owner should approve the page, source files, access list, and launch notes before anything goes live.',
-      href: '/contact',
+      href: '/contact-us',
       cta: 'Plan the handoff',
     },
   ],
@@ -101,7 +101,7 @@ export const philippinesRedesignMigration = {
   banners: [
     { label: 'Map first', title: 'Keep every useful URL accounted for', body: 'Match each old page to a kept page, a new destination, or a clear removal decision. Finish the map before design work begins.', href: '/services/website-content-migration', cta: 'Review migration support' },
     { label: 'Test before launch', title: 'Review the working site, not a screenshot', body: 'Check redirects, forms, keyboard use, and mobile layouts on a private release candidate. Check the search files there too.', href: '/services/website-accessibility-remediation', cta: 'Check accessibility support' },
-    { label: 'Owner signoff', title: 'Keep launch approval inside your company', body: 'Your owner should accept the URL map, access list, and recovery plan. Public checks should pass before the owner closes the move.', href: '/contact', cta: 'Plan the redesign handoff' },
+    { label: 'Owner signoff', title: 'Keep launch approval inside your company', body: 'Your owner should accept the URL map, access list, and recovery plan. Public checks should pass before the owner closes the move.', href: '/contact-us', cta: 'Plan the redesign handoff' },
   ],
   sources: [
     { id: 1, name: 'World Bank: Individuals using the Internet, Philippines', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.USER.ZS?format=json&date=2023&per_page=1', note: 'The World Bank record, last updated July 13, 2026, reports 77.86699677% for the Philippines in 2023. The article rounds it to 77.9%.' },
@@ -128,7 +128,7 @@ export const philippinesMobileQa = {
   banners: [
     { label: 'Test set', title: 'Choose real visitor tasks before review', body: 'Name the page, browser, phone view, action, expected result, and owner. The team can then repeat the same test after each fix.', href: '/services/website-ui-design', cta: 'Review UI design support' },
     { label: 'Access check', title: 'Test keyboard, zoom, labels, and errors', body: 'A working mobile page needs more than a tidy screenshot. Use the page and record every failed task while fixes are still easy.', href: '/services/website-accessibility-remediation', cta: 'Check accessibility support' },
-    { label: 'Owner signoff', title: 'Close the job on the public page', body: 'Your owner should repeat the main phone task, confirm the expected content, and save the final signoff sheet with the release note.', href: '/contact', cta: 'Plan the QA handoff' },
+    { label: 'Owner signoff', title: 'Close the job on the public page', body: 'Your owner should repeat the main phone task, confirm the expected content, and save the final signoff sheet with the release note.', href: '/contact-us', cta: 'Plan the QA handoff' },
   ],
   sources: [
     { id: 1, name: 'Statcounter Global Stats: Desktop vs mobile vs tablet market share, Philippines', url: 'https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/philippines', note: 'The June 2026 page reports desktop at 54.04%, mobile at 44.99%, and tablet at 0.97% of measured page views in the Philippines, based on more than 3 billion monthly page views.' },

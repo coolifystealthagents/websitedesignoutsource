@@ -2,6 +2,8 @@ import { Footer, Header, JsonLd } from './components';
 import { blogPosts } from './data';
 import { fleetServices } from './fleet-content';
 
+export const metadata = { alternates: { canonical: '/' } };
+
 const work = [
   {
     number: '01',
@@ -61,7 +63,7 @@ export default function Home() {
               <h1>A Filipino web design pod that works behind your brand.</h1>
               <p className="studio-intro">Hand off the pages your team cannot get to. Our Philippines-based specialists help shape the brief, design the interface, build the site, and return clean source files for client review.</p>
               <div className="studio-actions">
-                <a className="studio-button studio-button-primary" href="/contact">Plan a website handoff <span>↗</span></a>
+                <a className="studio-button studio-button-primary" href="/contact-us">Plan a website handoff <span>↗</span></a>
                 <a className="studio-text-link" href="#work">See what the pod handles <span>↓</span></a>
               </div>
               <div className="studio-assurances" aria-label="Service assurances">
@@ -73,7 +75,7 @@ export default function Home() {
 
             <div className="studio-board" aria-label="Website design production workspace preview">
               <div className="studio-board-top">
-                <span className="studio-board-brand"><i>W</i> Production desk</span>
+                <span className="studio-board-brand"><img src="/logo.svg" alt="" /> Production desk</span>
                 <span className="studio-board-status"><i /> In review</span>
               </div>
               <div className="studio-canvas">
@@ -98,8 +100,8 @@ export default function Home() {
           </div>
 
           <div className="studio-shell studio-rail" aria-label="Website design capabilities">
-            {fleetServices.slice(0, 4).map((item, index) => (
-              <a href={`/services/${item.slug}`} key={item.slug}><i>{String(index + 1).padStart(2, '0')}</i>{item.title}</a>
+            {fleetServices.slice(0, 4).map((item) => (
+              <a href={`/services/${item.slug}`} key={item.slug}>{item.title}</a>
             ))}
           </div>
         </section>
@@ -114,8 +116,8 @@ export default function Home() {
           </div>
           <div className="studio-work-grid">
             {work.map((item) => (
-              <a href="/contact" className="studio-work-card" key={item.number}>
-                <div className="studio-work-meta"><span>{item.number}</span><small>{item.tag}</small></div>
+              <a href="/contact-us" className="studio-work-card" key={item.number}>
+                <div className="studio-work-meta"><small>{item.tag}</small></div>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
                 <b>Discuss this work <span>↗</span></b>
@@ -130,12 +132,11 @@ export default function Home() {
               <p className="studio-kicker"><span /> A visible process</p>
               <h2>The work stays quiet. The handoff does not.</h2>
               <p>Your client relationship stays yours. Behind it, your Filipino production team gives every page a brief, an owner, a review point, and a final file list.</p>
-              <a className="studio-button studio-button-primary" href="/contact">Map the first project <span>↗</span></a>
+              <a className="studio-button studio-button-primary" href="/contact-us">Map the first project <span>↗</span></a>
             </div>
             <div className="studio-step-list">
-              {steps.map(([title, body], index) => (
+              {steps.map(([title, body]) => (
                 <article key={title}>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
                   <div><h3>{title}</h3><p>{body}</p></div>
                 </article>
               ))}
@@ -153,9 +154,9 @@ export default function Home() {
             <div className="studio-fit-copy">
               <p>This works best when your agency already owns the strategy and client relationship but needs a dependable design and production lane.</p>
               <ul>
-                <li><span>01</span> You have approved brand rules and a real review owner.</li>
-                <li><span>02</span> You want the source files and build notes back in your tools.</li>
-                <li><span>03</span> You care about responsive QA as much as the first desktop concept.</li>
+                <li>You have approved brand rules and a real review owner.</li>
+                <li>You want the source files and build notes back in your tools.</li>
+                <li>You care about responsive QA as much as the first desktop concept.</li>
               </ul>
             </div>
           </div>
@@ -170,9 +171,9 @@ export default function Home() {
             <a className="studio-text-link studio-text-link-dark" href="/blog">Read all guides <span>↗</span></a>
           </div>
           <div className="studio-guide-grid">
-            {blogPosts.slice(0, 3).map((post, index) => (
+            {blogPosts.slice(0, 3).map((post) => (
               <a href={`/blog/${post.slug}`} key={post.slug}>
-                <span>{String(index + 1).padStart(2, '0')} / {post.minutes} min</span>
+                <span>{post.minutes} minute guide</span>
                 <h3>{post.title}</h3>
                 <p>{articleText(post)}</p>
                 <b>Read the note ↗</b>
@@ -188,7 +189,7 @@ export default function Home() {
           </div>
           <div>
             <p>Send the page list, platform, deadline, and what your team already has. We will help turn it into a handoff that a design pod can actually use.</p>
-            <a className="studio-button studio-button-primary" href="/contact">Plan the handoff <span>↗</span></a>
+            <a className="studio-button studio-button-primary" href="/contact-us">Plan the handoff <span>↗</span></a>
           </div>
         </section>
       </main>

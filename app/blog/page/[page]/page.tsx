@@ -11,6 +11,14 @@ export function generateStaticParams() {
     (_, i) => ({ page: String(i + 1) }),
   );
 }
+export async function generateMetadata({ params }: { params: Promise<{ page: string }> }) {
+  const { page } = await params;
+  return {
+    title: `Blog - Page ${page}`,
+    description: `Website design outsourcing guides, page ${page}.`,
+    alternates: { canonical: `/blog/page/${page}` },
+  };
+}
 export default async function NumberedBlogPage({
   params,
 }: {

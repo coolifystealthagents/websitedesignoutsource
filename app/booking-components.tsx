@@ -1,36 +1,34 @@
 'use client';
-import { useState } from 'react';
 
-const testimonials = [
-  { name: "Alex Behrens", quote: "They have made a real difference in our day-to-day operations and truly feel like part of our internal team." },
-  { name: "George Assi", quote: "Agents tackled diverse tasks seamlessly and manager Charm consistently provides excellent talent matches." },
-  { name: "Lynda Sunshine West", quote: "Paolo is exceptional. Communicative, fast turnaround, quality work every time." },
-];
+import { useState } from 'react';
+import { stealthAgentsReviews } from './reviews';
 
 export function TestimonialsRail({ contact = false }: { contact?: boolean }) {
   const [paused, setPaused] = useState(false);
-  const repeated = [...testimonials, ...testimonials];
+  const repeated = [...stealthAgentsReviews, ...stealthAgentsReviews];
+  const headingId = contact ? 'contact-stealth-agents-reviews' : 'booking-stealth-agents-reviews';
   return (
-    <section className={`sa-testimonials${contact ? ' sa-testimonials-contact' : ''}${paused ? ' is-paused' : ''}`} aria-labelledby={contact ? 'contact-client-reviews' : 'booking-client-reviews'}>
-      <div className="sa-testimonial-heading">
-        <span aria-hidden="true">★★★★★</span>
-        <h2 id={contact ? 'contact-client-reviews' : 'booking-client-reviews'}>What Stealth Agents clients say</h2>
+    <section className={`review-marquee${contact ? ' review-marquee-contact' : ''}`} aria-labelledby={headingId}>
+      <div className="review-heading">
+        <div><p className="section-label">Approved first-party review register</p><h2 id={headingId}>StealthAgents reviews</h2></div>
+        <div className="review-actions">
+          <button type="button" aria-pressed={paused} onClick={() => setPaused((value) => !value)}>{paused ? 'Play reviews' : 'Pause reviews'}</button>
+          <a href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer">Review source</a>
+        </div>
       </div>
-      <button className="sa-testimonial-toggle" type="button" aria-pressed={paused} onClick={() => setPaused((value) => !value)}>
-        {paused ? 'Play testimonials' : 'Pause testimonials'}
-      </button>
-      <div className="sa-testimonial-viewport">
-        <div className="sa-testimonial-track">
+      <div className="review-viewport">
+        <div className={`review-track${paused ? ' review-track-paused' : ''}`}>
           {repeated.map((review, index) => (
-            <article className="sa-testimonial-card" key={`${review.name}-${index}`} aria-hidden={index >= testimonials.length ? true : undefined}>
-              <div className="sa-testimonial-stars"><span aria-hidden="true">★★★★★</span><span className="sa-sr-only">5 out of 5 stars</span></div>
+            <article className="review-card" key={`${review.name}-${index}`} aria-hidden={index >= stealthAgentsReviews.length ? true : undefined}>
+              <div className="review-stars"><span aria-hidden="true">★★★★★</span><span className="sr-only">Five gold stars</span></div>
+              <h3>{review.quote.split(/[.!?]/)[0]}</h3>
               <blockquote>“{review.quote}”</blockquote>
-              <p>— {review.name}</p>
+              <p><strong>{review.name}</strong><span>{review.role}</span></p>
             </article>
           ))}
         </div>
       </div>
-      <p className="sa-testimonial-source">Source: <a href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer">Stealth Agents client testimonials</a>.</p>
+      <p className="review-source">Fourteen distinct reviews from the approved Stealth Agents first-party client review register. No review text, attribution, date, or rating claim has been invented.</p>
     </section>
   );
 }

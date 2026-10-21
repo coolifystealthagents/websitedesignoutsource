@@ -11,6 +11,7 @@ const formatDate = (date: string) =>
 export const metadata = {
   title: "Research",
   description: "Sourced research for outsourced website design.",
+  alternates: { canonical: "/research" },
 };
 export default function Research() {
   const posts = [

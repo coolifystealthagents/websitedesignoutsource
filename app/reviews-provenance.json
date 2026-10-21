@@ -1,0 +1,8 @@
+{
+  "sourceOwner": "Stealth Agents",
+  "sourceType": "Approved first-party client review register",
+  "sourcePage": "https://stealthagents.com/",
+  "reviewCount": 14,
+  "approvalNote": "The names, roles, and quotations in app/reviews.ts were imported unchanged from the approved first-party Stealth Agents review register supplied for this V3 release.",
+  "verificationLimits": "The supplied register did not include a unique public URL for each review. No individual source URLs, dates, ratings, or claims were invented."
+}

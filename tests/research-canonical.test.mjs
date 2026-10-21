@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
 const source = await readFile(new URL('../app/research/[slug]/page.tsx', import.meta.url), 'utf8');
+const editorialSystem = await readFile(new URL('../app/editorial-system.tsx', import.meta.url), 'utf8');
 const contentLibrary = await readFile(new URL('../app/content-library.tsx', import.meta.url), 'utf8');
 const accessibilityResearch = await readFile(new URL('../content/research/website-accessibility-conformance-evidence-2026.mdx', import.meta.url), 'utf8');
 const performanceBudgetResearch = await readFile(new URL('../content/research/website-performance-budget-handoff.mdx', import.meta.url), 'utf8');
@@ -24,10 +25,10 @@ test('accessibility evidence links its documented next step and carries a record
   assert.match(accessibilityResearch, /\[website accessibility remediation\]\(https:\/\/websitedesignoutsource\.com\/services\/website-accessibility-remediation\)/);
   assert.match(contentLibrary, /updated\?: string/);
   assert.match(contentLibrary, /updated: fields\.updated \|\| undefined/);
-  assert.match(source, /const modified=contentPost\.updated\|\|contentPost\.published/);
-  assert.match(source, /dateModified:modified/);
-  assert.match(source, /modifiedTime:modified/);
-  assert.match(source, /contentPost\.updated&&<time dateTime=\{contentPost\.updated\}>Updated/);
+  assert.match(source, /modifiedTime: post\.updated \|\| post\.published/);
+  assert.match(editorialSystem, /const modified = cleanVisibleText\(post\.updated \|\| post\.published\)/);
+  assert.match(editorialSystem, /dateModified:modified/);
+  assert.match(editorialSystem, /post\.updated \? <time dateTime=\{modified\}>Updated/);
 });
 
 test('performance-budget evidence gives a bounded Core Web Vitals repair handoff', () => {
