@@ -5,7 +5,9 @@ const canonicalHost = 'websitedesignoutsource.com';
 export function proxy(request: NextRequest) {
   const host = (request.headers.get('host') || '').split(':')[0].toLowerCase();
   const forwardedProtocol = (request.headers.get('x-forwarded-proto') || request.nextUrl.protocol.replace(':', '')).split(',')[0].trim();
-  if ((host === canonicalHost || host === `www.${canonicalHost}`) && (host !== canonicalHost || forwardedProtocol !== 'https')) {
+  const cloudflareVisitor = request.headers.get('cf-visitor') || '';
+  const visitorProtocol = cloudflareVisitor.match(/"scheme"\s*:\s*"(https?)"/i)?.[1]?.toLowerCase() || forwardedProtocol;
+  if ((host === canonicalHost || host === `www.${canonicalHost}`) && (host !== canonicalHost || visitorProtocol !== 'https')) {
     const destination = request.nextUrl.clone();
     destination.protocol = 'https:';
     destination.host = canonicalHost;
