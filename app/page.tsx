@@ -135,8 +135,9 @@ export default function Home() {
               <a className="studio-button studio-button-primary" href="/contact-us">Map the first project <span>↗</span></a>
             </div>
             <div className="studio-step-list">
-              {steps.map(([title, body]) => (
+              {steps.map(([title, body], index) => (
                 <article key={title}>
+                  <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                   <div><h3>{title}</h3><p>{body}</p></div>
                 </article>
               ))}
