@@ -13,6 +13,7 @@ const changeManagementResearch = await readFile(new URL('../content/research/web
 const coreWebVitalsVendorHandoffResearch = await readFile(new URL('../content/research/core-web-vitals-vendor-handoff-evidence.mdx', import.meta.url), 'utf8');
 const websiteCopyEvidenceResearch = await readFile(new URL('../content/research/website-design-website-copy-evidence.mdx', import.meta.url), 'utf8');
 const accessibilityDefectEscapeResearch = await readFile(new URL('../content/research/outsourced-website-accessibility-defect-escape-study.mdx', import.meta.url), 'utf8');
+const syntheticMonitoringResearch = await readFile(new URL('../content/research/website-synthetic-monitoring-maintenance-handoff.mdx', import.meta.url), 'utf8');
 
 test('research metadata emits an exact production canonical route', () => {
   assert.match(source, /const baseUrl\s*=\s*['"]https:\/\/websitedesignoutsource\.com['"]/);
@@ -85,4 +86,12 @@ test('accessibility-defect evidence gives a bounded remediation handoff', () => 
   assert.match(accessibilityDefectEscapeResearch, /\[Website Accessibility Remediation service\]\(https:\/\/websitedesignoutsource\.com\/services\/website-accessibility-remediation\)/);
   assert.match(accessibilityDefectEscapeResearch, /The team can prepare fixes and record retests, while the company owner decides scope, access, risk acceptance, and release\./);
   assert.doesNotMatch(accessibilityDefectEscapeResearch, /guarantees accessibility conformance/i);
+});
+
+test('synthetic-monitoring evidence gives a bounded Website Maintenance handoff', () => {
+  assert.match(syntheticMonitoringResearch, /^updated: "2026-10-24"$/m);
+  assert.match(syntheticMonitoringResearch, /## When monitoring needs website maintenance support/);
+  assert.match(syntheticMonitoringResearch, /\[Website Maintenance service\]\(https:\/\/websitedesignoutsource\.com\/services\/website-maintenance\)/);
+  assert.match(syntheticMonitoringResearch, /Your company owner still decides the service level, account access, escalation rules, and any production action\./);
+  assert.doesNotMatch(syntheticMonitoringResearch, /automatic production action/i);
 });
