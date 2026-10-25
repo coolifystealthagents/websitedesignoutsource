@@ -1,0 +1,303 @@
+{
+  "site": "WebsiteDesignOutsource.com",
+  "domain": "https://websitedesignoutsource.com",
+  "repository": "coolifystealthagents/websitedesignoutsource",
+  "branch": "main",
+  "baseSha": "1ef15bda7ae98da6cf493ef31c10742206980a1d",
+  "publicationDate": "2026-10-22",
+  "visibleDate": "October 22, 2026",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "total": 17,
+    "thumbnails": 17
+  },
+  "routes": {
+    "blog": "/blog/[slug]",
+    "research": "/research/[slug]"
+  },
+  "checks": {
+    "contentCounts": "12 blog + 5 research",
+    "publicationDate": "2026-10-22",
+    "thumbnailSize": "1200x630",
+    "uniqueSlugs": true,
+    "uniqueTitles": true,
+    "contentHashes": "sha256 recorded per article",
+    "thumbnailHashes": "sha256 recorded per article",
+    "build": "pass (npm run build through safe_build.sh; prebuild tests pass)",
+    "renderedAudit": "17/17 articles pass desktop+mobile",
+    "visibleDate": "October 22, 2026 observed",
+    "timeDatetime": "2026-10-22 observed",
+    "desktopStickyToc": "pass",
+    "mobileStickyToc": "pass",
+    "horizontalOverflow": "0",
+    "missingAnchors": "none",
+    "brokenImages": "none",
+    "sources": "research articles have >=10 distinct HTTPS sources; blogs carry sources section"
+  },
+  "articles": [
+    {
+      "section": "Blog",
+      "title": "Record Cookie Preference Withdrawals Without Ambiguity",
+      "slug": "cookie-preference-withdrawal-evidence",
+      "route": "/blog/cookie-preference-withdrawal-evidence",
+      "sourcePath": "content/blog/cookie-preference-withdrawal-evidence.mdx",
+      "thumbnailPath": "public/oct22-heroes/cookie-preference-withdrawal-evidence.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "dbea95fb96acb0f3d92efa50bf505633f252e606ab40c458752517ce67060220",
+      "thumbnailSha256": "1ed45c5021b0b72b1df5916bb82bb8c2f71afd6c4b69b1df6f4b4155a559b826",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Check the Redirect Map Before a Launch Cutover",
+      "slug": "redirect-map-completeness-check",
+      "route": "/blog/redirect-map-completeness-check",
+      "sourcePath": "content/blog/redirect-map-completeness-check.mdx",
+      "thumbnailPath": "public/oct22-heroes/redirect-map-completeness-check.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "932f89f06bb5e0e102ca3447d95db989b0f3c62ecaf78825f20bd8fe628cf87c",
+      "thumbnailSha256": "8ade22047e6be8dfdb4f47fa0a7dfc0876ddd728f6e40d44e86ce73f087f9ac7",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Hand Off Font Licences With the Production Build",
+      "slug": "font-licence-handoff",
+      "route": "/blog/font-licence-handoff",
+      "sourcePath": "content/blog/font-licence-handoff.mdx",
+      "thumbnailPath": "public/oct22-heroes/font-licence-handoff.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "91aec14969d8b19f902f019f0c224b4e6a2601a3d047499aff3d72a229444915",
+      "thumbnailSha256": "5830ee0839e85a228908ef8f4e81688e309f3ffc39c382d93cc407a35e2ef806",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Verify Staging Noindex Controls Before Sharing a Preview",
+      "slug": "staging-noindex-verification",
+      "route": "/blog/staging-noindex-verification",
+      "sourcePath": "content/blog/staging-noindex-verification.mdx",
+      "thumbnailPath": "public/oct22-heroes/staging-noindex-verification.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "e051dd173bc21b7dd5be5300c53ce66e2fee8a5a5fb7672abd7a23705f4dc07e",
+      "thumbnailSha256": "4f4c17f0abb721055bb9f5738ff529cc4d17de886ba52256ce9f41d169b7fd30",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Verify Form Notification Recipients Before Go-Live",
+      "slug": "form-notification-recipient-verification",
+      "route": "/blog/form-notification-recipient-verification",
+      "sourcePath": "content/blog/form-notification-recipient-verification.mdx",
+      "thumbnailPath": "public/oct22-heroes/form-notification-recipient-verification.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "2b84a2ddbe44675de10b5dfe72a27aece29f85976cb3d6b84ca9394a0657e7c3",
+      "thumbnailSha256": "82eaa41138e89d9a1ac22f6905677a9604f6b1e630db0393067bb315e470a73d",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Accept a CMS Role Matrix With Real Editorial Tasks",
+      "slug": "cms-role-matrix-acceptance",
+      "route": "/blog/cms-role-matrix-acceptance",
+      "sourcePath": "content/blog/cms-role-matrix-acceptance.mdx",
+      "thumbnailPath": "public/oct22-heroes/cms-role-matrix-acceptance.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "e7215b0a9a1dd95ad1b098757102fccaec8b1b2423d6963c10e1d74becc941e2",
+      "thumbnailSha256": "64dceaf9bf54b3845c4ae7e6f17ab352a66c8ed57fe918c78072364f4f5689e0",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Keep Analytics Event Names Stable Through a Migration",
+      "slug": "analytics-event-naming-migration",
+      "route": "/blog/analytics-event-naming-migration",
+      "sourcePath": "content/blog/analytics-event-naming-migration.mdx",
+      "thumbnailPath": "public/oct22-heroes/analytics-event-naming-migration.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "9641b9bcccf974d45032f510f3b0d2719f787b4ac3755457b1bdf91bc88e34a9",
+      "thumbnailSha256": "601cacc1fd065ff5fea951af1c052a776bc06d51031e3fa359d1dbd212026cb1",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Review Image Alt Text at the CMS Entry Point",
+      "slug": "image-alt-text-cms-review",
+      "route": "/blog/image-alt-text-cms-review",
+      "sourcePath": "content/blog/image-alt-text-cms-review.mdx",
+      "thumbnailPath": "public/oct22-heroes/image-alt-text-cms-review.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "f4bb6ff506992d75eb6b578362ecce0792547fa30729c98f772d687faafb82f7",
+      "thumbnailSha256": "39b8b657f15764fb95d4753280f8452f5a43eeffc968db2ab3289b9f2504bf5a",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Secure Preview Links With Explicit Expiry",
+      "slug": "preview-link-expiry-security",
+      "route": "/blog/preview-link-expiry-security",
+      "sourcePath": "content/blog/preview-link-expiry-security.mdx",
+      "thumbnailPath": "public/oct22-heroes/preview-link-expiry-security.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "14cdc5d64d04a17e7627bd0969fcc725de360e28525560bcffec8e156bd3738a",
+      "thumbnailSha256": "80fd5334c8862ec20126f44d44e56a579e69b4c54f760b2c70e8c6d22a6d4464",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Keep a DNS Cutover Rollback Receipt",
+      "slug": "dns-cutover-rollback-receipt",
+      "route": "/blog/dns-cutover-rollback-receipt",
+      "sourcePath": "content/blog/dns-cutover-rollback-receipt.mdx",
+      "thumbnailPath": "public/oct22-heroes/dns-cutover-rollback-receipt.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "1445ee8de49c1f38e8c4a3aaf63a1f7daec831c6a7fc025fa91b7728dbf2de1d",
+      "thumbnailSha256": "b36dae118a9bec57af41af31a2854ea3300a621c10793c0e1ee48f1ec2ef0c77",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Gate Third-Party Embeds Behind a Consent Placeholder",
+      "slug": "third-party-embed-consent-placeholder",
+      "route": "/blog/third-party-embed-consent-placeholder",
+      "sourcePath": "content/blog/third-party-embed-consent-placeholder.mdx",
+      "thumbnailPath": "public/oct22-heroes/third-party-embed-consent-placeholder.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "0c1bcb2af35c3d090d93a6a7b9ef991064fcffed207a8a1d463efecfeb7c9a6f",
+      "thumbnailSha256": "b4fe7b2cfd95714c5aefaa7051616877d49751125394365b6abc016718c8cdd5",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Blog",
+      "title": "Run a Content Freeze Exception Log",
+      "slug": "content-freeze-exception-log",
+      "route": "/blog/content-freeze-exception-log",
+      "sourcePath": "content/blog/content-freeze-exception-log.mdx",
+      "thumbnailPath": "public/oct22-heroes/content-freeze-exception-log.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "464e9e273a675e857923858c2d6cf293b4934442cf728c82e9b90248663182fc",
+      "thumbnailSha256": "eb24563de134a0aa8fbf6cecce0ff9e88b1f383ad57120962fb39aee95c2b585",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Research",
+      "title": "Redirect Map Verification Study",
+      "slug": "redirect-map-verification-study",
+      "route": "/research/redirect-map-verification-study",
+      "sourcePath": "content/research/redirect-map-verification-study.mdx",
+      "thumbnailPath": "public/oct22-heroes/redirect-map-verification-study.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "0c92314da17e28b093f32307a2ff48c2a7b30da7027ec1b363edeaff2cebcebb",
+      "thumbnailSha256": "6e17bbc11a157f0644a465454406ca49c5205d7e7f7647ed5e379c0f20e763fe",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Research",
+      "title": "Staging Indexation Control Study",
+      "slug": "staging-indexation-control-study",
+      "route": "/research/staging-indexation-control-study",
+      "sourcePath": "content/research/staging-indexation-control-study.mdx",
+      "thumbnailPath": "public/oct22-heroes/staging-indexation-control-study.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "561e782e9cdc02d2e5f3460f4a1a933f03ff8b07a9f4546c38fb5f911ad5b746",
+      "thumbnailSha256": "f94b0358e8fb80499d9b08f8ef33d20e2a2f796beb84e28502d398cf3e2eee26",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Research",
+      "title": "Form Notification Delivery Study",
+      "slug": "form-notification-delivery-study",
+      "route": "/research/form-notification-delivery-study",
+      "sourcePath": "content/research/form-notification-delivery-study.mdx",
+      "thumbnailPath": "public/oct22-heroes/form-notification-delivery-study.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "87e2554326146a3783e597731d88bdf0663930439d2775882aaac80642cc01ee",
+      "thumbnailSha256": "f9ff5bbc7ed80718de867f54a48f4e8caaf4d54f7effed45bc6dec67217dc987",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Research",
+      "title": "CMS Role Drift Study",
+      "slug": "cms-role-drift-study",
+      "route": "/research/cms-role-drift-study",
+      "sourcePath": "content/research/cms-role-drift-study.mdx",
+      "thumbnailPath": "public/oct22-heroes/cms-role-drift-study.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "9cfa26e29d7b05ef3e968b9be97d52f4dd07c3e414fb92fc933afb857667f3d1",
+      "thumbnailSha256": "347fb35b0e8b9ebe321b617cfa90fc19e33d635c28057a6e3e5bb25578599ff6",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "section": "Research",
+      "title": "Preview Link Exposure Study",
+      "slug": "preview-link-exposure-study",
+      "route": "/research/preview-link-exposure-study",
+      "sourcePath": "content/research/preview-link-exposure-study.mdx",
+      "thumbnailPath": "public/oct22-heroes/preview-link-exposure-study.webp",
+      "publicationDate": "2026-10-22",
+      "contentSha256": "8355a92b69e86aedb99e2dd1ad43d15fbdd821f46fc0973844d03d9d90aacd36",
+      "thumbnailSha256": "3241db1a181e49f2c9d3010d36173ef31a6ed0318ee027ef6a3b7adee6fe87db",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ]
+    }
+  ],
+  "errors": [],
+  "generatedAt": "2026-10-24",
+  "coverageJob": "websitedesignoutsource|2026-10-22|render_evidence",
+  "evidence": {
+    "helperArtifact": "helper-2/qa/coverage-websitedesignoutsource/render/qa.json",
+    "screenshots": "helper-2/qa/coverage-websitedesignoutsource/render/shots",
+    "note": "Evidence generated from local production server at baseSha before this manifest-only commit."
+  }
+}
