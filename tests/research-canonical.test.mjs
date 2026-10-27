@@ -22,8 +22,8 @@ test('research metadata emits an exact production canonical route', () => {
 });
 
 test('accessibility evidence links its documented next step and carries a record-level update date', () => {
-  assert.match(accessibilityResearch, /^updated: "2026-09-13"$/m);
-  assert.match(accessibilityResearch, /\[website accessibility remediation\]\(https:\/\/websitedesignoutsource\.com\/services\/website-accessibility-remediation\)/);
+  assert.match(accessibilityResearch, /^updated: "2026-10-20"$/m);
+  assert.match(accessibilityResearch, /\[Website Accessibility Remediation service\]\(https:\/\/websitedesignoutsource\.com\/services\/website-accessibility-remediation\)/);
   assert.match(contentLibrary, /updated\?: string/);
   assert.match(contentLibrary, /updated: fields\.updated \|\| undefined/);
   assert.match(source, /modifiedTime: post\.updated \|\| post\.published/);
