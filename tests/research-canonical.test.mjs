@@ -28,8 +28,8 @@ test('accessibility evidence links its documented next step and carries a record
   assert.match(contentLibrary, /updated: fields\.updated \|\| undefined/);
   assert.match(source, /modifiedTime: post\.updated \|\| post\.published/);
   assert.match(editorialSystem, /const modified = displayDate\(post\.updated \|\| post\.published\)/);
-  assert.match(editorialSystem, /dateModified:modified/);
-  assert.match(editorialSystem, /post\.updated \? <time dateTime=\{modified\}>Updated/);
+  assert.match(editorialSystem, /dateModified:post\.updated \|\| post\.published/);
+  assert.match(editorialSystem, /post\.updated \? <time dateTime=\{post\.updated\}>Updated/);
 });
 
 test('performance-budget evidence gives a bounded Core Web Vitals repair handoff', () => {
