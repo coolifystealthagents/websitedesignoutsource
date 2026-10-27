@@ -23,11 +23,11 @@ test('research metadata emits an exact production canonical route', () => {
 
 test('accessibility evidence links its documented next step and carries a record-level update date', () => {
   assert.match(accessibilityResearch, /^updated: "2026-09-13"$/m);
-  assert.match(accessibilityResearch, /\[website accessibility remediation\]\(https:\/\/websitedesignoutsource\.com\/services\/website-accessibility-remediation\)/);
+  assert.match(accessibilityResearch, /\[Website Accessibility Remediation service\]\(https:\/\/websitedesignoutsource\.com\/services\/website-accessibility-remediation\)/);
   assert.match(contentLibrary, /updated\?: string/);
   assert.match(contentLibrary, /updated: fields\.updated \|\| undefined/);
   assert.match(source, /modifiedTime: post\.updated \|\| post\.published/);
-  assert.match(editorialSystem, /const modified = cleanVisibleText\(post\.updated \|\| post\.published\)/);
+  assert.match(editorialSystem, /const modified = displayDate\(post\.updated \|\| post\.published\)/);
   assert.match(editorialSystem, /dateModified:modified/);
   assert.match(editorialSystem, /post\.updated \? <time dateTime=\{modified\}>Updated/);
 });
@@ -83,7 +83,7 @@ test('website-copy evidence gives a bounded Landing Page Design handoff', () => 
 test('accessibility-defect evidence gives a bounded remediation handoff', () => {
   assert.match(accessibilityDefectEscapeResearch, /^updated: "2026-10-20"$/m);
   assert.match(accessibilityDefectEscapeResearch, /## When defect evidence needs a repair lane/);
-  assert.match(accessibilityDefectEscapeResearch, /\[website accessibility remediation\]\(https:\/\/websitedesignoutsource\.com\/services\/website-accessibility-remediation\)/);
+  assert.match(accessibilityDefectEscapeResearch, /\[Website Accessibility Remediation service\]\(https:\/\/websitedesignoutsource\.com\/services\/website-accessibility-remediation\)/);
   assert.match(accessibilityDefectEscapeResearch, /The team can prepare fixes and record retests, while the company owner decides scope, access, risk acceptance, and release\./);
   assert.doesNotMatch(accessibilityDefectEscapeResearch, /guarantees accessibility conformance/i);
 });
