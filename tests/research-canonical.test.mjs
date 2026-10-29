@@ -14,6 +14,7 @@ const coreWebVitalsVendorHandoffResearch = await readFile(new URL('../content/re
 const websiteCopyEvidenceResearch = await readFile(new URL('../content/research/website-design-website-copy-evidence.mdx', import.meta.url), 'utf8');
 const accessibilityDefectEscapeResearch = await readFile(new URL('../content/research/outsourced-website-accessibility-defect-escape-study.mdx', import.meta.url), 'utf8');
 const syntheticMonitoringResearch = await readFile(new URL('../content/research/website-synthetic-monitoring-maintenance-handoff.mdx', import.meta.url), 'utf8');
+const structuredDataHandoffResearch = await readFile(new URL('../content/research/website-structured-data-handoff.mdx', import.meta.url), 'utf8');
 
 test('research metadata emits an exact production canonical route', () => {
   assert.match(source, /const baseUrl\s*=\s*['"]https:\/\/websitedesignoutsource\.com['"]/);
@@ -94,4 +95,12 @@ test('synthetic-monitoring evidence gives a bounded Website Maintenance handoff'
   assert.match(syntheticMonitoringResearch, /\[Website Maintenance service\]\(https:\/\/websitedesignoutsource\.com\/services\/website-maintenance\)/);
   assert.match(syntheticMonitoringResearch, /Your company owner still decides the service level, account access, escalation rules, and any production action\./);
   assert.doesNotMatch(syntheticMonitoringResearch, /automatic production action/i);
+});
+
+test('structured-data evidence gives a bounded Next.js build-support handoff', () => {
+  assert.match(structuredDataHandoffResearch, /^updated: "2026-10-29"$/m);
+  assert.match(structuredDataHandoffResearch, /## When structured data needs build support/);
+  assert.match(structuredDataHandoffResearch, /\[Next\.js website development service\]\(https:\/\/websitedesignoutsource\.com\/services\/nextjs-website-development\)/);
+  assert.match(structuredDataHandoffResearch, /Your company owner still approves identity details, claims, access, and the release\./);
+  assert.doesNotMatch(structuredDataHandoffResearch, /guarantees a search feature or ranking performance/i);
 });
