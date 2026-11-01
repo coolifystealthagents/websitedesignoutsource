@@ -7,7 +7,7 @@ Status: source-only planning record. It maps existing Philippines-based service 
 | Service pillar | Existing supporting research | Buyer question answered there | Controlled next action |
 | --- | --- | --- | --- |
 | `/services/website-ui-design` | `/research/website-design-service-page-evidence` | What proof should a buyer ask for before a website UI page moves into review? | Already linked in the body and publicly verified on 2026-08-21. Do not add a duplicate handoff. |
-| `/services/nextjs-website-development` | `/research/website-structured-data-handoff` | What needs to be checked before a coded page is handed back to the owner? | Audit the research body for a short, useful build-support handoff. |
+| `/services/nextjs-website-development` | `/research/website-structured-data-handoff` | What needs to be checked before a coded page is handed back to the owner? | Delivered in rendered source `ca1d0b870c096e99e1619de8f4ac2f92cceaa620`; the source has one route-local service anchor. Do not add a duplicate handoff. |
 | `/services/wordpress-website-builds` | `/research/website-migration-inventory-outsourced-team` | How can a team keep useful pages, redirects, and ownership records during a WordPress rebuild? | Audit the research body for a WordPress rebuild handoff. |
 | `/services/shopify-store-design` | `/research/website-form-consent-handoff` | What should a team test when a store form collects customer details? | Audit only if the page names a store-specific design decision; otherwise keep this pairing in planning. |
 | `/services/landing-page-design` | `/research/website-design-client-journey-evidence` | What evidence helps a buyer decide where a landing page should lead? | Audit the research body for one landing-page design handoff. |
