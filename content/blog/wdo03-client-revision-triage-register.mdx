@@ -1,0 +1,41 @@
+---
+title: "Run a client revision triage register for outsourced design work"
+description: "A practical register for sorting client design revisions by evidence, impact, and owner before the offshore build queue changes."
+slug: "wdo03-client-revision-triage-register"
+published: "2026-11-03"
+updated: "2026-11-03"
+image: "/images/blog/wdo03-client-revision-triage-register.webp"
+category: "outsourced website design operations"
+---
+
+## Why a revision needs triage before it becomes work
+
+A client revision can arrive as a single sentence in a message thread and spread into several unrelated changes before anyone checks the brief. One request may correct a typo, another may change a public claim, and a third may alter a layout that was already approved. A triage register separates those cases before the offshore designer starts, so the team spends its revision budget on the changes that actually matter. The register is not a replacement for the design brief or the client approval. It is the operational view that shows what was requested, what evidence supports it, who owns the decision, and which build task should receive the change. That view is especially important when several clients share one design queue and the same revision window.
+
+## Capture the request in the client's words
+
+Start with the exact request and the date it arrived. Record the client, the page or component, the person who sent the request, and the channel used. If the request references a screenshot or a document, attach the reference rather than describing it from memory. The original wording matters because a later reader may interpret a short phrase differently from the person who triaged it. Do not edit the client's words into a polished brief at this stage. Keep the raw request beside a short internal summary that names the likely change. That pairing lets the reviewer see both the intent and the interpretation, which is where most revision disputes begin.
+
+## Classify the change by evidence and impact
+
+A useful triage register has a small set of change types: content correction, brand or visual adjustment, layout change, functional change, accessibility fix, and commercial claim change. Each type carries a different evidence requirement and a different approval owner. A typo may need only a source document, while a claim change may need legal or marketing review before the designer touches the page. Add an impact field that states what the change affects: one page, a shared component, a template, or a live campaign. A change to a shared component can affect pages the client did not mention, and that risk belongs in the register before the work starts. The impact field also helps the queue owner decide whether the revision can wait for the normal cycle or needs an immediate decision.
+
+## Name the decision owner and the build owner
+
+Every revision needs a decision owner who can accept or reject the change, and a build owner who will implement it if approved. The decision owner is usually the client contact, the account lead, or a marketing owner, depending on the change type. The build owner is the designer or developer assigned to the queue. Keeping the two roles separate prevents a designer from approving a commercial change simply because they are already editing the page. Record the date the decision was requested and the date it was received. If the client has not responded, mark the item as waiting rather than assuming approval from silence. If the decision owner is unavailable, name the backup and the date the request was escalated.
+
+## Separate approved work from open questions
+
+The queue should show approved revisions, open questions, and rejected requests as distinct states. An approved revision can move to the build queue with its evidence and due date. An open question stays with the decision owner and does not consume design time. A rejected request stays in the register with the reason, because the next reviewer may need to explain why the change was not made. When a revision is approved with a condition, record the condition in plain language. For example, a client may approve a layout change only if the mobile view keeps the primary call to action visible. The designer needs that condition before starting, and the reviewer needs it to judge the result.
+
+## Review the register before the build queue changes
+
+The queue owner should review the register before assigning new work. Check that every approved item has a decision owner, a build owner, a due date, and enough evidence to implement. Check that open questions are not blocking a page that could otherwise move forward. The review should take minutes, not an hour, because the register is designed to answer a few specific questions. The review should also look for revisions that were implemented without an approval record. Those items are not necessarily wrong, but they need a retrospective decision before the page is released. A short note that names the change, the person who made it, and the owner who accepted it is enough to close the gap.
+
+## Close with deployment evidence
+
+A revision closes when the staging or production page shows the approved change and the reviewer records the confirmation date. The register should link the build task, the preview, and the client approval in one place. If the change affects a shared component, record the other pages that were checked before release. At the end of the cycle, review the register for patterns. A cluster of content corrections may point to a brief problem, while repeated layout changes may point to a missing design system rule. Use the pattern to fix the brief or the template, not to add more approvals.
+
+## Keep the register small enough to maintain
+
+A triage register works when it holds the changes that need a decision and the evidence that supports them. It should not become a second project plan or a transcript of every message. Keep the fields short, the states clear, and the review rhythm predictable. The test is whether a new coordinator can open one row and understand what the client asked for, who decides, who builds, and what would close the item. If that is possible, the register is doing its job and the design queue can move without guessing.

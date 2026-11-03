@@ -1,0 +1,48 @@
+---
+title: "How old do open design revisions become by change type?"
+description: "A bounded protocol for measuring the age of open client revisions in outsourced website design operations, with a frozen population and a dated review."
+slug: "wdo03-research-revision-aging-by-type"
+published: "2026-11-03"
+updated: "2026-11-03"
+image: "/images/research/wdo03-research-revision-aging-by-type.webp"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+How long do open client revisions stay in the design queue before they are approved, rejected, or closed? The scope is the revision register in one outsourced design operation during a defined period, not an industry benchmark. The measure matters because an old revision can block a page launch while looking like a normal item on a shared queue. This protocol does not decide whether a revision request was reasonable or whether the designer performed well. Those questions require the brief, the client conversation, and the design review. The narrow purpose is to describe the age of open revisions by change type and the stage where time accumulates.
+
+## Population and unit of analysis
+
+Start with a dated export of revisions opened during the review window. Record the client, page, change type, request date, decision owner, build owner, and current status. Include revisions that were closed during the window so the review can compare open and closed aging. The unit is one revision request. A message that contains three unrelated changes should be split into three units when each has its own decision and build path. If the team tracked the message as one item, keep it as one unit and note the reduced precision. Exclude internal quality fixes that never went to the client, and exclude revisions that were withdrawn before review. Record the exclusions with reasons so the denominator can be reproduced.
+
+## Definitions and measures
+
+A revision begins when the request is recorded with a page, a change description, and a decision owner. It closes when the change is approved and implemented, rejected with a reason, or withdrawn by the client. A status change without a decision is not a close. Compute age in whole days from the request date to the review date for open items, and from request to close for closed items. Report the median, the 75th percentile, and age bands such as under three days, three to seven days, seven to fourteen days, and over fourteen days. Report the age by change type, because a content correction and a functional change follow different paths. Split the age into decision wait and build wait. Decision wait is the time before the client or account owner accepts the change. Build wait is the time between approval and the completed implementation. The split shows whether the queue is waiting on the client or on design capacity.
+
+## Evidence and data dictionary
+
+Each revision needs the request reference, the page, the change type, the decision owner, the decision date, the build owner, the implementation date, and the evidence link. If the decision was given verbally and recorded later, mark the date as reconstructed and note who recorded it. Preserve rejected and withdrawn requests. Removing them from the population can make the queue look healthier while hiding a pattern of unclear briefs or changing client priorities. If the rejection reason is free text, group it into a small controlled list before analysis and keep the original text as a reference. Keep client content, unpublished designs, and access details in the approved system. The analysis file should use a revision reference and a change category rather than copying the full design or the client's private content into a separate spreadsheet.
+
+## Measures and limitations
+
+The result can support a decision about review coverage, the brief template, or the point at which a revision should escalate. It cannot prove that the client was satisfied or that the page will perform well. Those conclusions require the launched site, the client feedback, and a wider commercial review. A short age does not always mean a healthy process. A revision can be closed quickly by rejecting it without a clear reason, which moves the problem to the next request. Pair the timing measure with a sample of close reasons and client confirmations before declaring the queue healthy. Avoid ranking designers by average revision age. Change type, client responsiveness, and page complexity all affect the path. The useful management question is whether the queue gives each change type a fair decision window.
+
+## Review and next action
+
+Report open and closed revisions separately, and show the oldest item in each change type. Keep the limitations beside the finding and name one process change, one owner, and one recheck date. That is more useful than a single average that mixes a typo correction with a layout redesign. Keep the observation window beside the result so the next review can compare like with like.
+
+## Review cadence
+
+Run a baseline review, then repeat after any change to the brief, the approval path, or the build queue. A monthly cadence is practical during active client work, while a quarterly review may be enough for a stable portfolio. Archive the export, the coding sheet, and the notes so another reviewer can repeat the measurement. A repeated pattern should change the template before it changes the review cadence.
+
+## Sources
+
+The sources below provide general context for accessibility, security, and business operations. They do not supply a local design-queue result or a performance benchmark for this team, and they were checked on November 3, 2026. Use them for general context only, and keep the local observation separate from any external claim. The source list is not a substitute for the design record or the client's approval.
+
+- W3C Web Content Accessibility Guidelines — https://www.w3.org/WAI/standards-guidelines/wcag/
+- NIST Cybersecurity Framework — https://www.nist.gov/cyberframework
+- NIST Privacy Framework — https://www.nist.gov/privacy-framework
+- Federal Trade Commission — https://www.ftc.gov/
+- U.S. Small Business Administration — https://www.sba.gov/
+- U.S. Government Accountability Office — https://www.gao.gov/

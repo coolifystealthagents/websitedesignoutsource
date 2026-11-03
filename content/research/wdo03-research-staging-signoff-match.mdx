@@ -1,0 +1,52 @@
+---
+title: "Testing whether staging signoff screenshots match the deployed page"
+description: "A bounded test for comparing the screenshots used at design signoff with the page that actually deploys, with a frozen sample and a dated result."
+slug: "wdo03-research-staging-signoff-match"
+published: "2026-11-03"
+updated: "2026-11-03"
+image: "/images/research/wdo03-research-staging-signoff-match.webp"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+When a client signs off on a design using staging screenshots, does the deployed page match what was approved? The question sounds like a final quality check, but the gap can appear much earlier: a responsive breakpoint changes, a font fails to load, or a component is swapped during the deployment handoff. The result is a page the client approved in one state and received in another. This test does not decide whether the deployed page is better or worse than the approved design. Those judgments belong to the client and the design lead. The narrow purpose is to describe whether the signoff evidence and the deployed page are comparable, and where the comparison breaks.
+
+## Population and unit of analysis
+
+Start with a dated list of pages that received design signoff during the review period. Record the client, page, signoff date, the person who approved it, the staging environment, and the deployment date. Keep the list stable and document any later addition. The unit is one approved page, not one client or one project. A project with six pages can have five clean matches and one mismatch, and a project-level pass rate would hide the difference. If a page was approved in several versions, keep the final approved version as the unit and link the earlier versions. Exclude pages that were never deployed during the review window, but record them as open rather than as passes. A page that has not deployed cannot test the signoff-to-production path.
+
+## Definitions and measures
+
+A signoff screenshot is usable when it identifies the page, the viewport, the date, and the approved state. A deployed page matches when the same viewport and content conditions produce a page that is visually and structurally consistent with the approved screenshot, allowing for documented differences such as live data or a dated promotion. For each page, record whether the match is exact, matches with a documented difference, does not match, or cannot be verified because the screenshot lacks a viewport or the deployed page is unavailable. Report the counts by state rather than a single pass rate, because the repairs differ. Also record the viewport width, the browser, and the date of the deployed capture. A comparison at a different width is not evidence of a match or a mismatch. Without those fields, the test is only an impression.
+
+## Test design
+
+Use a census when the number of pages is small. For a larger set, select a documented sample that includes the main breakpoints, pages with dynamic content, pages with third-party embeds, and pages deployed close to the signoff date. Freeze the sample before reviewing the captures. Have one reviewer compare the images and a second reviewer check a subsample. Record disagreements before resolving them, because a difference in what counts as a documented variation can change the result. Keep the original screenshots and the deployed captures in separate folders. Where the deployed page has changed since signoff, capture it as close to the deployment date as possible. If the page has already been updated, mark the comparison as historical and note the limitation rather than comparing against the current state.
+
+## Evidence and data dictionary
+
+Each page needs the signoff reference, the approved screenshot, the viewport, the browser, the deployment reference, and the deployed capture. If the screenshot was taken from a design file rather than a staging page, mark that difference because a design file is not the same evidence as a rendered page. Preserve the signoff conversation and the conditions attached to the approval. A client may approve a layout while noting that a specific image is a placeholder, and the deployed page will differ for a legitimate reason. The comparison should separate an approved condition from an unexplained change. Keep client content and unpublished designs in the approved system. The analysis file should use a page reference and a comparison state rather than copying the full page content or private client material.
+
+## Measures and limitations
+
+The result can support a change to the signoff checklist, the screenshot standard, or the deployment handoff. It cannot prove that the client is satisfied or that the page meets every accessibility and performance requirement. Those conclusions need a broader review. A high match rate does not mean the signoff process is strong. The approved screenshot may match the deployed page while the page still contains an error that both versions share. Pair the comparison with a separate content and accessibility check before declaring the release healthy. A mismatch does not prove that the designer or developer was careless. A font may fail in one environment, a third-party script may change, or a client may have requested a late change after signoff. Report the observed difference and the evidence, not a conclusion about intent.
+
+## Review and next action
+
+Report exact matches, documented differences, mismatches, and unverifiable pages separately. Show the oldest open page and the viewport that produced the most differences. Name one process change, one owner, and one recheck date. Keep the comparison sheet beside the captures so the next reviewer can repeat the classification.
+
+## Review cadence
+
+Run the test after each launch and summarize the results at the next design operations review. A small sample is enough to reveal a screenshot or viewport problem, while a larger review is useful before a template change. Archive the captures and the comparison sheet so the result can be repeated. A recurring mismatch should change the signoff standard before it changes the launch checklist.
+
+## Sources
+
+The sources below provide general context for accessibility, security, and business operations. They do not supply a local signoff result or a performance benchmark for this team, and they were checked on November 3, 2026. Use them for general context only, and keep the local observation separate from any external claim. The source list is not a substitute for the deployed page or the client's signoff.
+
+- W3C Web Content Accessibility Guidelines — https://www.w3.org/WAI/standards-guidelines/wcag/
+- NIST Cybersecurity Framework — https://www.nist.gov/cyberframework
+- NIST Privacy Framework — https://www.nist.gov/privacy-framework
+- Federal Trade Commission — https://www.ftc.gov/
+- U.S. Small Business Administration — https://www.sba.gov/
+- U.S. Government Accountability Office — https://www.gao.gov/
