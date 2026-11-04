@@ -1,0 +1,48 @@
+---
+title: "Measuring Revision Concentration by Page Template"
+description: "A bounded protocol for measuring which page templates absorb the most client revision rounds in outsourced design work."
+slug: "measuring-revision-concentration-by-page-template"
+published: "2026-11-04"
+updated: "2026-11-04"
+image: "/images/research/nov04/measuring-revision-concentration-by-page-template.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+Which page templates absorb the most client revision rounds, and where does the rework concentrate? The scope is the revision log in one outsourced design operation during a defined period, not an industry benchmark. The measure matters because a template problem can look like a series of unrelated client requests. The protocol does not decide whether a revision was reasonable or whether the designer performed well. The narrow purpose is to describe the distribution of revision work across templates and identify where a brief or component change could reduce rework.
+
+## Population and unit of analysis
+
+Start with a dated export of revision rounds completed during the review window. Record the project, page, template, round number, request type, decision owner, and build owner. Include rounds that were rejected or withdrawn so the distribution is not biased toward accepted work. The unit is one revision round tied to one page template. A project with several pages has several units, and a page revised twice has two rounds. If the team logged several pages as one round, keep the group as one unit and note the reduced precision. Exclude internal quality fixes that never went to the client, and record the exclusions. A fix made before the client saw the page is a different signal from a client-requested change.
+
+## Definitions and measures
+
+A revision round begins when the client returns a consolidated set of changes and ends when the changes are implemented or the round is closed. The template is the reusable page pattern, not the individual page title. Define the template names before collection so two reviewers classify the same page consistently. Compute the number of rounds per template, the share of total rounds, and the median rounds per page. Report the distribution and the top templates rather than a single average. A small number of templates may absorb most of the work, which is more useful than a company-wide mean. Also record the request type for each round: content, layout, brand, functional, accessibility, or scope change. The type explains why the template is under pressure and points to the repair.
+
+## Evidence and data dictionary
+
+Each round needs the project reference, page, template, date, request summary, request type, decision owner, build owner, and close evidence. If the client made the request verbally and the coordinator recorded it, mark the date as reconstructed and note who recorded it. Preserve rejected and withdrawn rounds. Removing them can make a template look cleaner while hiding repeated attempts. If the request type is free text, group it into a controlled list before analysis and keep the original text as a reference. Keep client content and unpublished designs in the approved system. The analysis file should use a page reference and a change category rather than copying the full design or private content.
+
+## Measures and limitations
+
+The result can support a decision about the design system, the brief template, or the review sequence. It cannot prove that the client was satisfied or that the page will perform well. Those conclusions require the launched site and client feedback. A high round count does not always mean the template is poor. A complex page with regulated content may require more review than a simple landing page. Report the template type and the request mix beside the count. Avoid ranking designers by revision count. The same template can behave differently depending on the client, the content readiness, and the review owner. The useful question is whether the template gives the team a clear starting point.
+
+## Review and next action
+
+Report rounds by template, request type, and project phase. Show the templates with the highest concentration and the most repeated request type. Name one template change, one owner, and one recheck date. Keep the sample and the coding sheet with the finding.
+
+## Review cadence
+
+Run the review monthly during active client work and repeat it after a design-system change. Archive the export, the coding sheet, and the notes so the measurement can be repeated. A repeated pattern should change the template before the review cadence. Keep the observation window beside the result so the next review compares like with like.
+
+## Sources
+
+The sources below provide general context for accessibility, security, and business operations. They do not supply a local design result or a performance benchmark for this team, and they were checked on November 4, 2026. Use them for general context only, and keep the local observation separate from any external claim. The source list is not a substitute for the design record.
+
+- W3C Web Content Accessibility Guidelines — https://www.w3.org/WAI/standards-guidelines/wcag/
+- NIST Cybersecurity Framework — https://www.nist.gov/cyberframework
+- NIST Privacy Framework — https://www.nist.gov/privacy-framework
+- Federal Trade Commission — https://www.ftc.gov/
+- U.S. Small Business Administration — https://www.sba.gov/
+- U.S. Government Accountability Office — https://www.gao.gov/

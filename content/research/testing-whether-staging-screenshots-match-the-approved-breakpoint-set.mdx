@@ -1,0 +1,52 @@
+---
+title: "Testing Whether Staging Screenshots Match the Approved Breakpoint Set"
+description: "A bounded test for checking whether the staging screenshots used at signoff cover the approved breakpoint set."
+slug: "testing-whether-staging-screenshots-match-the-approved-breakpoint-set"
+published: "2026-11-04"
+updated: "2026-11-04"
+image: "/images/research/nov04/testing-whether-staging-screenshots-match-the-approved-breakpoint-set.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+When a client signs off on a design, do the staging screenshots cover the breakpoint set that was approved? A signoff can look complete while showing only the desktop view, leaving the tablet and mobile layouts unverified. The result is a page that was approved in one state and launched in another. This test does not decide whether the design is good or whether the breakpoints are correct. The narrow purpose is to describe whether the screenshot set matches the approved coverage and whether a reviewer can compare the views.
+
+## Population and unit of analysis
+
+Start with a dated list of pages that received design signoff during the review period. Record the project, page, signoff date, approver, and the screenshot set. Keep the list stable and document any later addition. The unit is one page signoff. A project with several pages has several units, and a page approved twice has two signoff events. If the screenshots were delivered as one file, keep the file as one unit and note the reduced precision. Exclude pages that were never deployed during the window, but record them as open. A page that has not deployed cannot test the signoff-to-production path.
+
+## Definitions and measures
+
+The approved breakpoint set is the list of widths recorded in the brief or design system, such as desktop, tablet, and mobile. A screenshot is usable when it identifies the page, the width, the date, and the approved state. A set is complete when every approved breakpoint has at least one usable capture. For each page, record complete coverage, partial coverage, no coverage, or unverified. Report counts by state rather than a single pass rate. Also record whether the screenshots were taken from staging or from a design file, because a design file is different evidence. A screenshot at a different width is not proof of coverage. Record the width and the browser used so a reviewer can judge whether the comparison is valid.
+
+## Test design
+
+Use a census when the number of pages is small. For a larger set, select a documented sample that includes the main breakpoints, pages with custom components, and pages deployed close to signoff. Freeze the sample before review. Have one reviewer compare the set and a second reviewer check a subsample. Record disagreements before resolving them, because a difference in what counts as complete coverage can change the result. Keep the captures and the comparison sheet separate. Where a breakpoint is missing, mark it as missing rather than assuming the layout was tested elsewhere. A conservative result is more useful than a confident pass built on an unstated assumption.
+
+## Evidence and data dictionary
+
+Each page needs the signoff reference, the approved breakpoint list, the screenshot files, the widths, the browser, the capture date, and the reviewer. If the screenshots were taken after a code change, record the deployment reference so the evidence is tied to the right version. Preserve the signoff conversation and any conditions attached to the approval. A client may approve a desktop view while asking for a mobile change, and the record should show that condition. Keep client content and unpublished designs in the approved system. The analysis file should use a page reference and a coverage state rather than copying the full page content.
+
+## Measures and limitations
+
+The result can support a change to the signoff checklist, the screenshot standard, or the deployment handoff. It cannot prove that the page is accessible or that the client is satisfied. Those conclusions need a broader review. A complete screenshot set does not mean the page is correct. The approved views may share the same error. Pair the coverage test with a separate content and accessibility check. A missing screenshot does not prove that the layout was not tested. The team may have tested it without capturing the view. Report the observed evidence and the gap rather than assigning fault.
+
+## Review and next action
+
+Report complete, partial, missing, and unverified coverage separately. Show the breakpoint that produced the most gaps. Name one process change, one owner, and one recheck date. Keep the captures and the comparison sheet with the finding.
+
+## Review cadence
+
+Run the test after each launch and summarize the results at the next design operations review. Archive the captures and the comparison sheet so the result can be repeated. A repeated gap should change the signoff standard before the launch checklist. Keep the observation window beside the result so the next review compares like with like.
+
+## Sources
+
+The sources below provide general context for accessibility, security, and business operations. They do not supply a local signoff result or a performance benchmark for this team, and they were checked on November 4, 2026. Use them for general context only, and keep the local observation separate from any external claim. The source list is not a substitute for the deployed page or the client signoff.
+
+- W3C Web Content Accessibility Guidelines — https://www.w3.org/WAI/standards-guidelines/wcag/
+- NIST Cybersecurity Framework — https://www.nist.gov/cyberframework
+- NIST Privacy Framework — https://www.nist.gov/privacy-framework
+- Federal Trade Commission — https://www.ftc.gov/
+- U.S. Small Business Administration — https://www.sba.gov/
+- U.S. Government Accountability Office — https://www.gao.gov/
