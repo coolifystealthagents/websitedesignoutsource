@@ -1,0 +1,52 @@
+---
+title: "Measuring Review Queue Collisions Across Outsourced Website Projects"
+description: "A bounded method for measuring when client review windows collide across outsourced website projects."
+slug: "measuring-review-queue-collisions-across-outsourced-website-projects"
+published: "2026-11-05"
+updated: "2026-11-05"
+image: "/images/research/nov05/measuring-review-queue-collisions-across-outsourced-website-projects.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+When do client review windows collide across outsourced website projects, and which queue conditions make the collision likely? The scope is the review calendar of one design operation during a defined period, not an industry benchmark. The measure matters because a collision can look like a slow designer when the real constraint is a shared reviewer or a single correction slot. This protocol does not judge whether a client or designer performed well. It describes when independent projects compete for the same review capacity and where a scheduling rule could reduce the conflict.
+
+## Population and unit of analysis
+
+Start with a dated export of review events scheduled or completed during the observation window. Record the project, page, reviewer, review start, review end, correction window, and decision owner, and include reviews that were rescheduled or cancelled so the calendar is not biased toward work that ran smoothly. The unit is one review window tied to one project and one primary reviewer. Two reviews for the same project still count as two units when they use separate windows. If a single meeting covered several pages, keep it as one unit and note the reduced precision.
+
+## Definitions and measures
+
+A review window is the period in which the client is expected to read the work and return a consolidated decision. A collision occurs when two or more active review windows depend on the same reviewer or the same correction capacity at overlapping times. Define overlap before collection, including whether a one-hour handover counts as a collision. For each reviewer, report the number of overlapping windows, the total overlapping hours, and the projects involved. Also record the review type, such as page design, content approval, accessibility check, or final signoff, so the analysis can show whether one scarce specialist or a broad scheduling habit is responsible.
+
+## Evidence and data dictionary
+
+Each review needs the project reference, page set, reviewer role, start date, end date, time zone, and the channel used to request feedback. Record the scheduled window separately from the actual response time so a late reply is not confused with a late booking. Preserve reschedule notices and the reason given, because a cancelled review can reveal a capacity problem that a completed review hides. If the team uses one shared calendar, export it with an audit trail rather than copying entries by hand. Keep client names and unpublished designs in the approved system, and use a project reference in the analysis file.
+
+## Test design
+
+Use a census when the number of active projects is small. For a larger portfolio, select a documented sample that includes peak weeks, long-running projects, and projects with more than one reviewer. Freeze the sample before analysis and have a second reviewer check a subsample of collision calls. Record disagreements before resolving them, because the definition of overlap can change the result. Separate planned collisions from unplanned ones; a deliberate shared review session is different from two teams accidentally booking the same hour.
+
+## Measures and limitations
+
+The result can support a change to the review calendar, the staffing plan, or the client onboarding sequence. It cannot prove that a collision caused a late launch, because other dependencies may also be present. A high collision count does not always mean the queue is badly managed, since a small team with many small projects may collide even with careful planning. Report the reviewer role and the project mix beside the count, and avoid ranking reviewers by availability. The useful question is whether the operating model creates avoidable competition for a scarce approval slot.
+
+## Review and next action
+
+Report collisions by reviewer, week, project, and review type. Show the period with the highest overlap and the reviewer who absorbed the most competing windows. Distinguish planned shared sessions from accidental double bookings so the result does not inflate the problem. Name one scheduling change, one owner, and one recheck date. Keep the export and the coding sheet with the finding so a later reviewer can repeat the comparison.
+
+## Review cadence
+
+Run the review monthly during active client work and repeat it after a staffing change or a new intake rule. Archive the calendar export, the coding sheet, and the notes so the measurement can be repeated. A repeated collision pattern should change the booking rule before the next sprint. Keep the observation window beside the result so the next review compares like with like.
+
+## Sources
+
+The sources below provide general context for scheduling, accessibility, and business operations. They do not supply a local collision rate or a performance benchmark for this team, and they were checked on November 5, 2026. Use them for general context only, and keep the local observation separate from any external claim. The source list is not a substitute for the review calendar.
+
+- W3C Web Content Accessibility Guidelines — https://www.w3.org/WAI/standards-guidelines/wcag/
+- NIST Cybersecurity Framework — https://www.nist.gov/cyberframework
+- NIST Privacy Framework — https://www.nist.gov/privacy-framework
+- Federal Trade Commission — https://www.ftc.gov/
+- U.S. Small Business Administration — https://www.sba.gov/
+- U.S. Government Accountability Office — https://www.gao.gov/

@@ -1,0 +1,52 @@
+---
+title: "Testing Whether Client Signoff Dates Match the Production Queue"
+description: "A bounded test for checking whether recorded client signoff dates match the dates used by the production queue."
+slug: "testing-whether-client-signoff-dates-match-the-production-queue"
+published: "2026-11-05"
+updated: "2026-11-05"
+image: "/images/research/nov05/testing-whether-client-signoff-dates-match-the-production-queue.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+When a client signs off on a page, does the date recorded in the approval match the date used by the production queue? A queue can move on an assumed approval while the written signoff arrives later, or it can wait after the client has already approved in a message thread. The mismatch matters because the queue date becomes the evidence used to explain delivery and rework. This test does not decide whether the signoff was valid or whether the queue was correct. Its narrow purpose is to describe whether the approval record and the production record agree on the same date and version.
+
+## Population and unit of analysis
+
+Start with a dated list of pages that entered the production queue during the review period. Record the project, page, queue entry date, recorded signoff date, approver, and approved version, and keep the list stable while documenting any page added later. The unit is one page signoff tied to one production queue entry. A project with several pages has several units, and a page approved twice has two signoff events. If a single approval covered several pages, keep the group as one unit and note that the per-page dates are not independent.
+
+## Definitions and measures
+
+The signoff date is the date on which the authorized reviewer accepted a specific page version, as shown by the approval record. The queue date is the date the production owner marked the page ready to build or release, and a match means both dates refer to the same version and approval event. Record each case as matched, earlier approval, later approval, disputed, or unverified, and report counts by state rather than a single pass rate. Also record the approval channel, because a written ticket is different evidence from a verbal confirmation. A queue date that follows an unrecorded conversation is not proof that signoff happened that day.
+
+## Test design
+
+Use a census when the number of pages is small. For a larger set, select a documented sample that includes pages approved near a deadline, pages with revisions, and pages that moved through more than one queue lane. Freeze the sample before review and have a second reviewer check a subsample, recording disagreements before resolving them because a time zone difference or a late-evening message can change the comparison. Keep the approval record and the queue export separate. Where a date is missing, mark it as unverified rather than inferring it from the next build event.
+
+## Evidence and data dictionary
+
+Each page needs the approval reference, the approved version, the approver, the approval date, the queue entry, the queue owner, and the release date if one exists. If the approval arrived by email, preserve the message header and the attached page reference. If the queue date was edited after entry, keep the audit trail rather than the current value alone. A client may approve a page with a condition, such as a copy change before launch, and the record should show that condition. Use a page reference and a match state in the analysis file rather than copying unpublished designs.
+
+## Measures and limitations
+
+The result can support a change to the approval form, the queue handoff, or the weekly release review. It cannot prove that the site is correct or that the client is satisfied, because those conclusions need a separate content and accessibility check. A date match does not mean the approved version was the version that shipped, so pair the test with a build-reference check. A mismatch does not prove that anyone acted in bad faith, since the approval may have been valid but recorded late or the queue may have waited on another dependency. Report the cause beside each mismatch so the result is not reduced to a blame count.
+
+## Review and next action
+
+Report matched, earlier, later, disputed, and unverified cases separately. Show the queue lane with the most mismatches and the approval channel that produced the weakest evidence. Separate a late record from a late approval so the result does not blame the wrong step. Name one process change, one owner, and one recheck date. Keep the approval records and the queue export with the finding so the comparison can be repeated.
+
+## Review cadence
+
+Run the test after each release cycle and summarize the results at the next design operations review. Archive the exports and the comparison sheet so the result can be repeated. A repeated mismatch should change the signoff template or the queue entry rule before the next launch. Keep the observation window beside the result so the next review compares like with like.
+
+## Sources
+
+The sources below provide general context for accessibility, security, and business operations. They do not supply a local signoff rate or a performance benchmark for this team, and they were checked on November 5, 2026. Use them for general context only, and keep the local observation separate from any external claim. The source list is not a substitute for the approval record or the production queue.
+
+- W3C Web Content Accessibility Guidelines — https://www.w3.org/WAI/standards-guidelines/wcag/
+- NIST Cybersecurity Framework — https://www.nist.gov/cyberframework
+- NIST Privacy Framework — https://www.nist.gov/privacy-framework
+- Federal Trade Commission — https://www.ftc.gov/
+- U.S. Small Business Administration — https://www.sba.gov/
+- U.S. Government Accountability Office — https://www.gao.gov/
