@@ -1,0 +1,49 @@
+---
+title: "A 404 Page Recovery Check Before an Outsourced Website Launch"
+description: "A practical pre-launch check that turns a 404 page from a dead end into a tested recovery path for visitors."
+slug: "a-404-page-recovery-check-before-an-outsourced-website-launch"
+published: "2026-11-06"
+updated: "2026-11-06"
+image: "/images/blog/nov06/a-404-page-recovery-check-before-an-outsourced-website-launch.jpg"
+category: "outsourced website design operations"
+---
+
+## Why the 404 page belongs in the launch checklist
+
+A missing page is easy to dismiss as an edge case until a campaign link, an old bookmark, or a typed URL sends a real visitor there. The 404 page is the last useful piece of navigation a visitor sees before leaving, so it deserves a test before the site opens. An outsourced build can pass every page-template review while leaving the error route as a default server message. Checking the recovery path before launch protects paid traffic, search referrals, and the credibility of the new design.
+
+## Confirm the status code before judging the design
+
+Start by requesting a URL that does not exist and recording the HTTP status code. A page that returns 200 with an apology is not a proper 404, because search engines and monitoring tools will treat it as real content. The server response should return 404 or 410 and still render the site's branded error page. Test the same request with and without a trailing slash, because routing rules sometimes produce a redirect loop instead of the error page. Record the response code beside the URL so the result is evidence rather than a visual impression.
+
+## Give the visitor a route back to useful content
+
+A recovery page should offer at least one obvious way forward, usually a link to the home page and a link to the main service or content index. Add a search field when the site already has search, and make sure the field submits to a working results route. A short list of popular pages can help, but it should be curated rather than filled with the newest posts. Keep the primary action above the fold on mobile so a visitor does not have to scroll past a large illustration to recover.
+
+## Check the search and contact paths on the error page
+
+If the 404 page includes search, submit a query that should return results and one that should return none. The zero-results state needs its own helpful message, which is a separate design problem from the missing-page message, and it helps to review the [zero-results recovery guidance](/research/website-design-search-zero-results-outsourced-research) before writing that copy. If the page offers a contact link, open it and confirm the form still routes to the correct inbox. A broken contact path on an error page compounds the original failure. Test these paths on staging with production-like data so the result reflects the launch configuration.
+
+## Review the message, tone, and page title
+
+The heading should say plainly that the page was not found, without blaming the visitor or using an internal error code as the main message. The browser tab title and the visible heading should agree, because a tab that reads "Page not found" beside a blank screen looks unfinished. Avoid promising that the visitor can use the site map when no site map exists. Keep the copy short enough to scan on a phone, and remove any placeholder text from the outsourced template. A calm, specific message is more credible than a humorous one that hides the recovery options.
+
+## Measure the recovery event before launch
+
+Decide what a successful recovery looks like and record it as an analytics event. Useful signals include a click on the home link, a search submit, or a contact action taken from the error page. Confirm that the event fires once and carries the missing path as a property, without collecting personal data from the visitor. A recovery event that fires on every page load will pollute the report and hide the real behavior. Review the event in the analytics debug view before the launch, not after the first weekly report.
+
+## Confirm mobile, keyboard, and reduced-motion behavior
+
+Open the 404 route on a phone and check that the recovery links are reachable without horizontal scrolling. Tab through the page with a keyboard and confirm that focus stays visible on every link and form control, using the [WCAG focus guidance](https://www.w3.org/WAI/standards-guidelines/wcag/) as the review reference. If the page uses animation, test it with reduced motion enabled and make sure the message appears immediately. The error page should not depend on a script that may fail when the missing route is served by a different layer. A static, readable fallback is better than an elaborate page that sometimes renders blank.
+
+## Put the check on the handoff record
+
+Add the tested URL, status code, recovery links, and analytics result to the launch handoff record. Name the person who will own the error page after launch and the date of the next recheck. A [broken-link monitoring plan](/blog/outsourced-website-broken-link-monitoring-plan) can catch new missing URLs later, but it does not prove that the error page itself helps visitors. A short written record lets the next coordinator repeat the check without rediscovering the route. If a recovery link points to a page that will change after launch, note the dependency and test it again at cutover.
+
+## Recheck at cutover, not only in staging
+
+Run the same requests after the domain cutover, because server rules and redirects can differ between environments. Test one old URL from each major section and one URL from the previous site if a migration is involved. Confirm that the error page still loads its styles and images from the production host. If a content delivery network serves the error page, verify that its cache does not keep an outdated version. Record the cutover result and close the check only when the production route behaves as designed.
+
+## Keep the error page in the maintenance cycle
+
+The error page is a small page with a long life, so include it in the quarterly content review. Check that the recovery links still point to live pages and that the analytics event still fires. Update the page when the navigation or primary service changes, and remove links to retired campaigns. Assign the check to the same owner who reviews broken links, with a separate line for the error page itself. A page that was correct at launch can become a dead end after a later redesign.

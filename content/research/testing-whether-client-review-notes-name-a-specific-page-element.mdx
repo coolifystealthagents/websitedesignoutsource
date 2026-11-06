@@ -1,0 +1,60 @@
+---
+title: "Testing Whether Client Review Notes Name a Specific Page Element"
+description: "A bounded test for checking whether client review notes identify the page, section, and element needed for a clear correction."
+slug: "testing-whether-client-review-notes-name-a-specific-page-element"
+published: "2026-11-06"
+updated: "2026-11-06"
+image: "/images/research/nov06/testing-whether-client-review-notes-name-a-specific-page-element.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+Do client review notes identify the page, section, and element that the designer must change, or do they leave the target to inference? The scope is the written review notes from one outsourced design operation during a defined period, not an industry benchmark. The question matters because an ambiguous note can send a correction to the wrong page or start a round of clarification that looks like design rework. This test does not judge whether the requested change was reasonable. It measures whether the note is specific enough for another person to locate the target without asking the author.
+
+## Population and unit of analysis
+
+Start with a dated export of review notes submitted during the observation period, including notes sent by email, ticket, shared document, and review tool. Record the project, the note author, the submission date, the page or screen named, and the review round. Keep the export stable and document any note added later. The unit is one note tied to one page or screen and one review round. A comment thread with several distinct requests counts as several units only when each has its own resolvable target, while a general note about the whole site counts once and is marked page-unspecific.
+
+Record which review version the note refers to, because a note written against an older build may name an element that no longer exists. A note that was resolved and then reopened should keep both events linked to the same unit. If the client submitted the same request through two channels, keep one unit and record both channel references. This prevents duplicate counting without erasing the evidence that the request arrived twice. The population should describe the work reviewed, not the number of messages in an inbox.
+
+## Definitions and measures
+
+A specific note names the page or screen, the section or component, and the element or behavior that should change. A partially specific note names the page but leaves the section or element to inference. An unspecific note offers only a general impression, such as "make it cleaner" or "the page feels crowded." For each note, record whether the page, section, and element are explicit, plus the review round and any screenshot, URL, or quoted label. These fields separate a missing target from a missing description of the desired change.
+
+## Evidence and data dictionary
+
+Each note needs the project reference, review round, author role, submission date, channel, and exact text. Preserve the surrounding thread when a note depends on an earlier message, but do not merge separate requests. If the note includes an annotated screenshot, store the image reference and note which element was marked. If the page has only a nickname, record it and the page it maps to rather than translating silently. Use project references in the analysis file, keep unpublished designs inside the approved system, and mark a note that cannot be located in the current build as unverified rather than assuming it refers to the latest version.
+
+## Test design
+
+Use a census when the number of notes is small enough to read directly. For a larger set, select a documented sample that includes early rounds, late rounds, large page sets, and projects with more than one reviewer. Freeze the sample before coding so the definition cannot drift toward the notes that are easiest to classify. Have a second reviewer code a subsample and record disagreements before resolving them. A disagreement often reveals a note that names a section but not the element, so keep the original text beside the coded value for later checks.
+
+Write a short codebook with one example for each combination of explicit and missing fields. Use examples from outside the sample when possible so the coders are not anchored by a specific project. Test the codebook on ten notes before the full review and revise any category that produces repeated disagreement. Record the revision date so a later comparison does not mix two versions of the definition. The codebook is part of the evidence, not an administrative extra.
+
+## Measures and limitations
+
+The result can support a change to the review form, the [review commentary protocol](/research/website-design-review-commentary-protocol), or the reviewer onboarding session. It cannot prove that a specific note caused a faster correction, because the designer may have known the page from earlier work. A high specificity rate does not guarantee a good request, since a note can name the element and still ask for the wrong change. Report the review round and the project mix beside the rate, and avoid ranking individual authors. The useful question is whether the note gives a new designer enough information to act without a meeting.
+
+Consider the possibility that specificity reflects familiarity rather than a better form. A reviewer who has worked on the project for months may write a short note that the current designer understands but a new designer does not. Test this by asking a person outside the project to locate a sample of notes using only the written text and the page inventory. Record whether that person found the target and how long it took. This small usability check is stronger evidence than the author's opinion of their own note.
+
+## Review and next action
+
+Report the share of notes with an explicit page, section, and element, and show the most common missing field. Separate notes that include a screenshot or URL from notes that rely on prose alone. Name one change to the review template, one owner, and one recheck date. For example, a team might require a page URL and a section label before a note can be submitted, then pilot the change inside the [existing approval path](/blog/outsourced-website-design-approval-path). Keep the note export and coding sheet with the finding so the comparison can be repeated, and use the same definitions next time to show whether the change helped.
+
+Report the result by review round and by page type so a single difficult page does not dominate the total. Show the share of notes that were actionable without a follow-up question, not only the share that named every field. A note can name the element and still be unclear about the desired behavior. If the sample includes several reviewers, show the categories side by side without ranking people. The report should help the team improve the form and the onboarding material, not settle a disagreement about who writes better notes.
+
+## Review cadence
+
+Run the test after each major review round and summarize it at the monthly design operations review. Repeat it after a change to the review tool, the page inventory, or the reviewer roster. Archive the export, the coding sheet, and the disagreement notes so the result can be reproduced. A repeated pattern should change the form or the onboarding material before the next project starts. Keep the observation window beside the result so the next review compares like with like.
+
+## Sources
+
+The sources below provide general context for accessibility, security, and business operations. They do not supply a local specificity rate or a performance benchmark for this team, and they were checked on November 6, 2026. Use them for general context only, and keep the local observation separate from any external claim. The source list is not a substitute for the review notes or the page inventory.
+
+- W3C Web Content Accessibility Guidelines — https://www.w3.org/WAI/standards-guidelines/wcag/
+- NIST Cybersecurity Framework — https://www.nist.gov/cyberframework
+- NIST Privacy Framework — https://www.nist.gov/privacy-framework
+- Federal Trade Commission — https://www.ftc.gov/
+- U.S. Small Business Administration — https://www.sba.gov/
+- U.S. Government Accountability Office — https://www.gao.gov/
