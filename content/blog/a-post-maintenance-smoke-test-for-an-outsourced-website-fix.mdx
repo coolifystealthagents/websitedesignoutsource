@@ -1,0 +1,41 @@
+---
+title: "A Post-Maintenance Smoke Test for an Outsourced Website Fix"
+description: "A short production check that confirms a small outsourced maintenance fix worked without disturbing shared templates."
+slug: "a-post-maintenance-smoke-test-for-an-outsourced-website-fix"
+published: "2026-11-07"
+updated: "2026-11-07"
+image: "/images/blog/nov07/a-post-maintenance-smoke-test-for-an-outsourced-website-fix.jpg"
+category: "outsourced website design operations"
+---
+
+## Why a small fix still needs a smoke test
+
+A maintenance release can look trivial in the ticket and still disturb a shared template that serves dozens of pages. The developer tested one route, but the change may load a new script, alter a cache rule, or shift a component that appears elsewhere. A short smoke test after release confirms that the fix works and that the surrounding site still behaves. Without that check, a small repair can become the next support incident.
+
+## Define the changed surface before testing
+
+Write down the route that was fixed, the template it uses, and the assets or settings the release touched. Include the content editor, the form handler, and any analytics event that depends on the same component. If the ticket does not name those dependencies, ask the developer before the release window closes. A short list turns the smoke test into a repeatable check rather than a vague look around the site.
+
+## Test the fixed route in a clean browser session
+
+Open the production route in a private window so an old cache does not hide the new result. Confirm the original symptom is gone, then reload once to make sure the fix persists. Check the page title, the main heading, and the visible publication or status text for accidental changes. Record the browser, viewport, and timestamp beside the result. A screenshot is useful evidence, but the written result should say what was tested and what passed.
+
+## Check the sibling pages that share the template
+
+Open at least two other pages that use the same template, including one with a long title and one with a form or table. Confirm that spacing, images, and interactive controls still render correctly at desktop and mobile widths. Shared components often fail at the edges first, so test an empty state and a page with unusually long content. If the fix changed a global style, include the home page and a listing page in the sample.
+
+## Verify forms, links, and analytics after the change
+
+Submit a test form or complete the primary action on the fixed route and confirm that the expected confirmation appears. Follow every link the release touched and check that redirects still land on a live page. Open the analytics debug view and confirm that the event fires once with the expected route property. A release that fixes the visual defect but breaks tracking leaves the team without evidence for the next review.
+
+## Confirm the rollback point is still usable
+
+Find the release note and confirm that it names the commit, the changed files, and the previous working state. Check that the rollback step can be performed by someone other than the developer who shipped the fix. If the release included a database or content change, verify that the reversal covers that change as well. A [rollback plan](/blog/website-release-rollback-plan-outsourced-build) that exists only in a chat message is not a real recovery path.
+
+## Close the maintenance window with a written result
+
+Record the tested routes, the result of each check, and any exception that remains open. Name the person who accepted the fix and the date of the next scheduled review. If a check failed, keep the window open and assign a correction rather than marking the release complete. Link the record to the ticket so the next coordinator can see what was actually verified. A short closing note prevents the same route from being retested from scratch.
+
+## Keep the smoke test short enough to repeat
+
+The test should take minutes, not a full afternoon, so the team will actually run it after every small release. Use a fixed checklist with the same core routes and let the developer add one or two page-specific checks. Review the checklist after a failed release and remove steps that never produce a useful result. A lean test that runs every time is stronger than a thorough test that gets skipped.

@@ -1,0 +1,52 @@
+---
+title: "Testing Whether Maintenance Tickets Name the Affected Page Template"
+description: "A bounded test for checking whether maintenance requests identify the page, shared template, and element needed for a correct fix."
+slug: "testing-whether-maintenance-tickets-name-the-affected-page-template"
+published: "2026-11-07"
+updated: "2026-11-07"
+image: "/images/research/nov07/testing-whether-maintenance-tickets-name-the-affected-page-template.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+Do maintenance tickets name the page, template, and element that a fix must touch, or do they leave the target to inference? The scope is the written maintenance requests from one outsourced website operation during a defined period, not an industry benchmark. The question matters because a ticket that names only a symptom can send a developer to the wrong template and produce a fix that works on one page but not its siblings. This test measures whether the ticket is specific enough for another person to locate the target without asking the author.
+
+## Population and unit of analysis
+
+Start with a dated export of maintenance tickets opened during the observation period, including requests from email, chat, the support desk, and the client review tool. Record the project, the reporter role, the submission date, the route named, and the ticket status. Keep the export stable and document any ticket added later. The unit is one ticket tied to one reported defect or change. A ticket that covers several unrelated pages counts as several units only when each has its own resolvable target.
+
+## Definitions and measures
+
+A specific ticket names the route or page, the shared template or component, and the element or behavior that should change. A partially specific ticket names the page but leaves the template or element to inference. An unspecific ticket offers only a symptom, such as a footer that looks wrong or a mobile layout that appears broken. For each ticket, record whether the page, template, and element are explicit, plus any screenshot, URL, or quoted label. These fields separate a missing target from a missing description of the desired result.
+
+## Evidence and data dictionary
+
+Each ticket needs the project reference, reporter role, submission date, channel, exact text, and the route where the problem appears. Preserve the surrounding thread when a ticket depends on an earlier message, but do not merge separate requests. If the reporter attached a screenshot, store the image reference and note which element was marked. If the page has only a nickname, record it and the route it maps to rather than translating silently. Mark a ticket that cannot be located in the current build as unverified rather than assuming it refers to the latest template.
+
+## Test design
+
+Use a census when the number of tickets is small enough to read directly. For a larger set, select a documented sample that includes urgent fixes, routine content corrections, and tickets that arrived through more than one channel. Freeze the sample before coding so the definition cannot drift toward the easiest tickets. Have a second reviewer code a subsample and record disagreements before resolving them. A disagreement often reveals a ticket that names a page but not the template that renders it.
+
+## Measures and limitations
+
+The result can support a change to the ticket form, the support intake script, or the developer onboarding note. It cannot prove that a specific ticket caused a faster fix, because the developer may have known the template from earlier work. A high specificity rate does not guarantee a good request, since a ticket can name the template and still describe the wrong behavior. Report the ticket type and project mix beside the rate, and avoid ranking individual reporters. The useful question is whether a new developer can find the target without a meeting.
+
+## Review and next action
+
+Report the share of tickets with an explicit page, template, and element, and show the most common missing field. Separate tickets with a screenshot or URL from tickets that rely on prose alone. Name one change to the intake form, one owner, and one recheck date. For example, a team might require the route and template name before a ticket can be submitted, then test the change through the [existing change control path](/blog/fixed-scope-web-design-change-control).
+
+## Review cadence
+
+Run the test after each maintenance cycle and summarize it at the monthly operations review. Repeat it after a change to the support tool, the page inventory, or the template library. Archive the export, the coding sheet, and the disagreement notes so the result can be reproduced. A repeated pattern should change the form or the onboarding material before the next maintenance window opens. Keep the observation period beside the result so the next review compares like with like.
+
+## Sources
+
+The sources below provide general context for accessibility, security, and business operations. They do not supply a local specificity rate or a performance benchmark for this team, and they were checked on November 7, 2026. Use them for general context only, and keep the local observation separate from any external claim. The source list is not a substitute for the ticket export or the page inventory.
+
+- W3C Web Content Accessibility Guidelines — https://www.w3.org/WAI/standards-guidelines/wcag/
+- NIST Cybersecurity Framework — https://www.nist.gov/cyberframework
+- NIST Privacy Framework — https://www.nist.gov/privacy-framework
+- Federal Trade Commission — https://www.ftc.gov/
+- U.S. Small Business Administration — https://www.sba.gov/
+- U.S. Government Accountability Office — https://www.gao.gov/
