@@ -45,6 +45,9 @@ export default function Research() {
                 href={`/research/${p.slug}`}
                 key={p.slug}
               >
+                {typeof (p as { image?: string }).image === "string" && (
+                  <img className="fleet-card-image" src={(p as { image?: string }).image} alt={`Thumbnail for ${p.title}`} width="1200" height="630" loading="lazy" />
+                )}
                 <h2>{p.title}</h2>
                 <p>{p.excerpt}</p>
                 <time dateTime={p.published}>Published {formatDate(p.published)}</time>

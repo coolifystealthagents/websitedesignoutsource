@@ -43,6 +43,9 @@ export function BlogListing({ page = 1 }: { page?: number }) {
             <div className="fleet-card-grid">
               {pagePosts.map((p) => (
                 <a className="fleet-card" href={`/blog/${p.slug}`} key={p.slug}>
+                  {typeof (p as { image?: string }).image === "string" && (
+                    <img className="fleet-card-image" src={(p as { image?: string }).image} alt={`Thumbnail for ${p.title}`} width="1200" height="630" loading="lazy" />
+                  )}
                   <h2>{p.title}</h2>
                   <p>{p.excerpt}</p>
                   <b>{"minutes" in p ? p.minutes : 8} min read</b>

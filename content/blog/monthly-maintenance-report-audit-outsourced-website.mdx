@@ -1,0 +1,67 @@
+---
+title: "A Monthly Maintenance Report Audit for Outsourced Website Clients"
+description: "A practical review that turns a monthly website maintenance report into evidence of completed work, open risk, and next month's priorities."
+slug: "monthly-maintenance-report-audit-outsourced-website"
+published: "2026-11-08"
+updated: "2026-11-08"
+image: "/images/blog/nov08/monthly-maintenance-report-audit-outsourced-website.jpg"
+category: "outsourced website design operations"
+---
+
+# A Monthly Maintenance Report Audit for Outsourced Website Clients
+
+## Why a monthly report needs its own audit
+
+A monthly maintenance report is often the only regular artifact a client sees from an outsourced web team. It may arrive as a PDF, a spreadsheet, or a link to a project tool, and it usually mixes hours, ticket counts, and short summaries. The document can look complete while leaving the most important questions unanswered, especially whether the site is safer, faster, and easier to operate than it was last month. A short audit can turn that report into a decision tool.
+
+The audit does not require deep technical knowledge, but it does require comparing claims with evidence. Pick one person to review the report within five working days of receipt, before the next billing cycle closes. Give that reviewer the prior month's report, the current site inventory, and the approved scope. The goal is to confirm what changed, what was verified, and what remains at risk, not to second-guess every hour on the invoice.
+
+## Separate completed work from billed activity
+
+Start by listing every item the report marks as done. For each item, ask what changed in production and how the team confirmed it, because a closed ticket can mean a patch was applied, a content request was answered, or a conversation simply ended. Write the verification method beside the claim, such as a release note, a live URL, a screenshot with a timestamp, or a monitoring record. Items that cannot be tied to an observable result should be marked unverified rather than accepted.
+
+Hours measure effort, and effort alone cannot show whether the site works. A report can show forty billable hours and still miss a broken form that generated support tickets all month. Group the work into maintenance categories such as security updates, content changes, performance work, accessibility repairs, and incident response. That grouping shows where the retainer is actually going and whether the mix matches the agreement. If one category dominates for several months, raise it as a scope conversation rather than a complaint about a single invoice.
+
+## Check patch and version evidence
+
+Security maintenance needs a version trail, not a reassuring sentence. Ask for the software or dependency name, the previous version, the installed version, and the source of the update. If the team uses a content management system, plugin, or theme, the report should show which components changed and whether any were removed. A [CISA known exploited vulnerabilities](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) entry can support urgency, but it does not prove that the update was applied to this site.
+
+Ask how the team checked that the update did not break the site. A successful install is not the same as a working contact form, a functioning search box, or a checkout that still calculates totals. The report should name the routes and interactions tested after the release. If the team cannot name them, treat the month's patch work as incomplete and request a short verification pass before the next release window.
+
+## Verify backup and restore evidence
+
+A backup line item is easy to write and hard to trust. The report should state what was backed up, where the copy is stored, how long it is retained, and who can restore it. A file count or a green dashboard icon is weaker evidence than a dated restore test. Ask for the date of the last restore rehearsal and the environment used, because a backup that has never been restored is only a hope.
+
+Access matters as much as existence. Confirm that at least two named people can perform a restore, and that neither depends on a personal account that leaves when a contractor does. Check that the retention period matches the business requirement, not just the hosting plan default. If the report says backups are handled by the host, ask for the host's restoration procedure and the client's role in requesting it.
+
+## Compare changes with the approved scope
+
+Maintenance retainers drift when small requests accumulate without a record. Compare the month's changes with the approved scope and the change log. Items inside scope should have a clear requester, approval, and release date. Items outside scope should have a separate quote or a written acceptance of the overage. That record keeps the renewal conversation grounded in agreed work.
+
+Look for repeated exceptions that have become normal. A weekly emergency fix, a recurring plugin conflict, or a persistent cache purge can signal an underlying problem that no single ticket owns. Name one systemic issue in the report and ask for a root cause note. The aim is to stop paying for the same repair in a new form every month without turning the review into a blame exercise.
+
+## Confirm the client can still edit content
+
+Outsourced maintenance should not make the client dependent on the vendor for routine copy changes. Test one ordinary edit in the content system, such as changing a headline or replacing an image, using a client account. Confirm that the change can be drafted, reviewed, published, and reversed without a support ticket. If the interface requires a developer, the report should explain why and what training or permission change would remove that dependency.
+
+Check that the team documented the fields, templates, and publishing rules a client editor is expected to use. A short guide with screenshots is more useful than a recorded call nobody can find. Confirm that the client still owns the domain, hosting, analytics, and repository accounts, and that recovery codes are stored in an approved place. Ownership that exists only in the vendor's account list is not ownership.
+
+## Look for silent degradation
+
+Some of the most expensive maintenance problems do not appear as tickets. Page weight can grow, third-party scripts can multiply, and accessibility can regress after a small template change. Compare a few baseline signals month to month, such as Core Web Vitals field data, error rates, uptime, and the number of blocked or failed form submissions. A trend line is more useful than a single green check.
+
+Ask the team to flag anything they noticed but did not fix. That category often reveals the early warning that a report otherwise hides. A slow query, a deprecated integration, or a certificate expiring in ninety days belongs in the report even when it is not yet an incident. The client can then decide whether to fund the work now or accept the risk with a named owner and a review date.
+
+## Turn findings into next month's brief
+
+Close the audit with three lists: accepted work, open questions, and items for next month. Give each open question an owner and a response date, and put the next month's priorities in writing before the first invoice arrives. If a claim lacked evidence, say what evidence would be sufficient next time. This keeps the review calm and repeatable instead of turning it into a monthly argument.
+
+## Further reading
+
+Two related guides extend this review into the release itself. The [release rollback plan](/blog/website-release-rollback-plan-outsourced-build) explains how to keep a recovery path ready before a maintenance window. The [post-maintenance smoke test](/blog/a-post-maintenance-smoke-test-for-an-outsourced-website-fix) shows what to check after a small fix ships. Read both before the next monthly review so the report can be judged against a known process.
+
+## Related Articles
+
+- [Website Release Rollback Plan for an Outsourced Build](/blog/website-release-rollback-plan-outsourced-build)
+- [A Post-Maintenance Smoke Test for an Outsourced Website Fix](/blog/a-post-maintenance-smoke-test-for-an-outsourced-website-fix)
+- [WebsiteDesignOutsource Monthly Control Closeout](/blog/websitedesignoutsource-monthly-control-closeout)

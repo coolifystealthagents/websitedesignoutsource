@@ -1,0 +1,86 @@
+---
+title: "Testing Whether Maintenance Reports Prove Completed Work or Only Billed Hours"
+description: "A bounded coding method for testing whether monthly website maintenance reports show verifiable outcomes or only activity and billed time."
+slug: "testing-maintenance-reports-completed-work-billed-hours"
+published: "2026-11-08"
+updated: "2026-11-08"
+image: "/images/research/nov08/testing-maintenance-reports-completed-work-billed-hours.jpg"
+category: "outsourced website design operations"
+---
+
+# Testing Whether Maintenance Reports Prove Completed Work or Only Billed Hours
+
+## Research question and scope
+
+A monthly maintenance report can describe activity with great precision while saying almost nothing about the state of the site. Hours, ticket counts, and closure rates are easy to count, but they do not show whether a security patch reached production or whether a content editor can still publish a page without help. This study asks a narrow question: when a report says work is complete, does it supply evidence that an independent reader can verify? The scope is the written monthly report from one outsourced website relationship during a defined observation period, not an industry benchmark or a vendor rating.
+
+The test separates three things that reports often blend: effort, output, and outcome. Effort is time spent and people involved, output is an artifact such as a patch, page, or ticket update, and outcome is the verified state of the production site. A report may be honest about effort and still weak on outcome, and that distinction is the point of the exercise. The method does not assume that every small task needs a formal artifact, because a five-minute copy change can be confirmed with a live URL and a timestamp.
+
+## Population and unit of analysis
+
+Start with a dated set of monthly reports covering a fixed number of billing periods. Record the client, the vendor team, the report format, the reporting period, and the person who prepared the document. Keep the original files unchanged and store a working copy for coding. The unit of analysis is one reported work item, such as a patch, content change, performance task, accessibility repair, or incident response. A narrative paragraph that covers several unrelated items should be split only when the report itself gives each item a distinct claim.
+
+Define what counts as a report before collecting anything. A slide deck with three bullet points and a spreadsheet with forty rows are different instruments, and mixing them without a note will distort the comparison. Include the delivery channel, because a report sent as a chat summary may omit detail that a formal document contains. If a report links to a ticket system, treat the linked record as supporting evidence rather than as part of the report text.
+
+## Definitions and coding categories
+
+Code each work item into one of four evidence levels. A claimed item has a description but no verifiable reference. A referenced item names a route, ticket, version, or asset that a reviewer can locate. A verified item includes a second artifact, such as a live page, a release note, a monitoring record, or a dated screenshot, that confirms the claim. An independently verified item has been checked by someone who did not perform the work.
+
+Also code the work category, the affected surface, and whether the item changed a shared template. These fields matter because a plugin update and a homepage copy edit carry different risk even when both close in the same hour. Record whether the report names the requester and the approver, since a completed item without a named decision owner is hard to accept as scope-controlled work. Leave a field blank rather than inferring a value from context, and note the blank in the data dictionary.
+
+## Evidence and data dictionary
+
+Each coded item needs the report page or row, the exact claim text, the category, the evidence level, and the artifact reference. Preserve the report date and the date the evidence was checked, because a live page can change after the reporting period closes. If the evidence is a screenshot, record the route, viewport, and timestamp shown in the image. If the evidence is a ticket, record the ticket identifier and the status at the time of coding rather than the status at the end of the project.
+
+Where a report makes a security claim, add fields for the component, previous version, installed version, and advisory source. Where it makes a backup claim, add fields for backup scope, storage location, retention, and the last restore test. These extra fields should be defined before coding begins so that one reviewer does not demand more proof for one category than another. A short codebook with examples and counterexamples is more reliable than a long policy that nobody reads.
+
+## Test design and sampling
+
+Use a census when the number of work items is small enough to read in full. For a larger set, draw a documented sample that includes at least one item from each work category and each evidence level. Stratify by month so seasonal spikes, such as a holiday campaign or a security incident, do not dominate the result. Freeze the sample before coding and record any item added later as a separate observation.
+
+Include reports from more than one preparer when the relationship has changed account managers, because a new author may describe the same work very differently. If the vendor changed its reporting template during the period, treat that as a documented break and analyze the periods separately. Keep a note of the preparer change so the coding sheet can distinguish a reporting shift from a work shift. Do not silently normalize a new template into the old one, since the change itself may be the reason evidence improved or disappeared.
+
+## Coding procedure and reliability
+
+Have two reviewers code a subsample independently before the full pass. Calculate simple agreement on the evidence level and the work category, then discuss every disagreement against the codebook. Record the discussion outcome and update the codebook only when the rule was genuinely ambiguous. A disagreement about whether a screenshot counts as verified evidence usually means the definition needs a clearer boundary, not that one reviewer is careless.
+
+After calibration, code the full set and keep a short rationale for every item that sits near a boundary. Do not let one reviewer code both the claim and the independent verification, because that recreates the dependence the study is trying to measure. If a second verifier is unavailable, mark those items as referenced rather than independently verified and report the limitation plainly. The credibility of the result depends more on honest labeling than on a large sample.
+
+## Measures and analysis
+
+Report the share of items at each evidence level, both overall and by work category. A single percentage hides the pattern that matters, so show security, backup, content, performance, and incident work as separate rows. Report the share of items with a named requester and approver, and the share that touched a shared template. These breakdowns show whether weak evidence is concentrated in one type of work or spread across the retainer.
+
+Compare the evidence profile with the site's actual risk. A report can be rich in content-change references and thin on restore tests, which is a very different finding from uniformly thin evidence. Use counts and simple proportions rather than a composite score, because a weighted index invites false precision. Keep the raw coding sheet beside the summary so a reader can trace every number back to a specific claim.
+
+## Limitations and threats to validity
+
+A report is a communication artifact, and it is never a complete record of the work. Some teams do careful work and write poor summaries, while others write polished summaries that overstate small tasks. The test measures what the report proves; what the team actually did may be broader. State that boundary in the finding so the result is not used as a performance verdict.
+
+The method also depends on access to the artifacts behind the report. If the client cannot see the ticket system or the production site, the reviewer may be unable to verify even a well-documented item. Record access limits as a separate condition and avoid treating missing access as missing evidence. Finally, a short observation window can miss quarterly or annual maintenance, so keep the period and the excluded cadence visible in the report.
+
+## Review and next action
+
+Summarize the evidence profile in one page with the category breakdown, the count of unverified claims, and the most common missing field. Name one change to the reporting template, one owner, and one recheck date. A practical change might be a required evidence link for every security and backup item, or a monthly restore-test line that the client signs. Link the change to the next report so the comparison is direct.
+
+Repeat the test after two reporting cycles, or sooner if the template changes. Archive the coded sheets, the codebook version, and the report files so the next reviewer can reproduce the result. A repeated pattern should change the reporting requirement, not just the commentary around it. The useful outcome is a report that a new client contact can read and verify without a meeting.
+
+## Sources
+
+The sources below provide context for patch management, accessibility, performance, and small-business compliance. They do not supply a local evidence rate or a benchmark for this team, and they were checked on November 8, 2026. Use them to frame the review, and keep the local coding sheet separate from any external claim. The list is not a substitute for the vendor's report or the client's acceptance record.
+
+1. [Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+2. [Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
+3. [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+4. [NIST SP 800-40 Rev. 4, Guide to Enterprise Patch Management Planning](https://csrc.nist.gov/pubs/sp/800/40/r4/final)
+5. [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+6. [CISA Secure Our World](https://www.cisa.gov/secure-our-world)
+7. [web.dev: Core Web Vitals](https://web.dev/articles/vitals)
+8. [web.dev: Optimize Largest Contentful Paint](https://web.dev/articles/optimize-lcp)
+9. [HTTP Archive: Page Weight](https://httparchive.org/reports/page-weight)
+10. [U.S. Small Business Administration: Stay legally compliant](https://www.sba.gov/business-guide/manage-your-business/stay-legally-compliant)
+
+## Related Research
+
+- [Measuring How Long an Approved Maintenance Fix Waits for Release](/research/measuring-how-long-an-approved-maintenance-fix-waits-for-release)
+- [Testing Whether Maintenance Tickets Name the Affected Page Template](/research/testing-whether-maintenance-tickets-name-the-affected-page-template)
+- [Website Security Update Acceptance for Maintenance Teams](/research/website-security-update-acceptance-maintenance)
