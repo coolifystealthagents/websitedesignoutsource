@@ -1,0 +1,82 @@
+---
+title: "Testing Whether Maintenance Change Logs Name the Routes That Were Retested"
+description: "A coding method for checking whether each maintenance change log entry names the production routes that were retested after the change shipped."
+slug: "testing-whether-maintenance-change-logs-name-the-routes-that-were-retested"
+published: "2026-11-09"
+updated: "2026-11-09"
+image: "/images/research/nov09/testing-whether-maintenance-change-logs-name-the-routes-that-were-retested.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+A change log can record that a fix shipped without recording where anyone looked afterward. The entry says the form validation was corrected, the cache was cleared, or the template was updated, and the ticket closes. A reader cannot tell whether the team checked the checkout page, the search page, or a shared header used across the site. This study asks whether each maintenance change log entry names the routes that were retested after the change reached production.
+
+The unit of analysis is one change log entry, not the monthly report and not the ticket as a whole. That choice keeps the question close to the work: one change should have one set of checks tied to the surfaces it can affect. The scope covers entries from a defined observation period in one outsourced website relationship. The method measures the record, not the skill of the person who wrote it.
+
+## Why route-level evidence matters
+
+A shared template can fail on pages the author never opened. A header change may break a dropdown on a product page, and a form change may leave an error message unstyled on a mobile checkout. Naming the tested routes forces the team to connect the change to the surfaces a user actually visits. It also gives the next maintainer a starting point when a related defect appears weeks later.
+
+Route-level evidence is more useful than a vague claim that the site was tested. That phrase can mean a homepage glance or a full regression pass, and the reader cannot tell which one happened. A list of routes with a result beside each one can be checked by another person. The list also shows which high-risk surfaces were skipped, such as checkout, search, or an authenticated dashboard.
+
+## Sampling change log entries
+
+Start with the change log export for the observation period and keep the original file unchanged. Record the entry identifier, date, author, change type, affected component, and the linked ticket. Exclude entries that only update documentation or internal notes, because they do not change a production surface. State the exclusion rule before sampling so the denominator stays stable.
+
+Use a census when the log is small enough to read in full. For a larger log, stratify by change type so security patches, template edits, content-model changes, and integration work are all represented. Include at least one entry from each week in the period to catch a reporting habit that changed over time. Freeze the sample before coding and record any entry added later as a separate observation.
+
+## Defining a route and a retest claim
+
+A route is a path a user can request, such as a product page, a search results page, a checkout step, or a form confirmation. A route can also be a distinct state within a page when the state changes what the user sees, such as an empty cart or an error summary. Write the route as a path plus any required state, so another reviewer can open the same view. Do not accept a page title alone because titles often duplicate across templates.
+
+A retest claim is a statement that someone checked a named route after the change reached production. The claim can be a line in the change log, a linked screenshot, a monitoring record, or a test result. A description of what was changed is not a retest claim. The codebook should make that boundary explicit with an example of each.
+
+## Coding evidence levels
+
+Code each entry into one of four levels. A named route with no result is level one. A named route with a pass or fail result is level two. A named route with a linked artifact, such as a screenshot or test run, is level three. A named route verified by someone who did not make the change is level four.
+
+Record the change type and the number of routes named beside the level. An entry that names one low-risk route after a shared header change should not receive the same treatment as an entry that names five routes across three templates. Keep the count of unnamed high-risk surfaces as a separate field. That field often explains more than the evidence level alone.
+
+## Shared templates and partial routes
+
+Shared templates need a wider route sample than a single page edit. A change to a header, footer, navigation menu, or global style can affect every page that uses the template. The change log should name the template and at least one route from each major page family. If the team tested only the homepage, record that as a partial route sample and explain why.
+
+Partial coverage is not always a failure. A change to a single campaign page may need only that page and its confirmation state. The reviewer should judge coverage against the change's reach, not against a fixed number of routes. Write that reach rule into the codebook so two reviewers can apply it the same way. The result should show both the evidence level and the coverage judgment.
+
+## Reviewer calibration and reliability
+
+Have two reviewers code a subsample independently before the full pass. Compare their route counts, evidence levels, and coverage judgments, then discuss each disagreement against the codebook. Update the codebook only when the rule was truly ambiguous. A disagreement about whether a screenshot proves a route works usually means the definition needs a sharper boundary.
+
+After calibration, code the full sample and keep a short note for every boundary case. Do not let the person who made the change also assign the final evidence level, because that recreates the dependence the study is trying to measure. If a second reviewer is unavailable, mark the entry as self-reported and report the limitation. Honest labeling matters more than a large sample.
+
+## Measures and reporting
+
+Report the share of entries at each evidence level, both overall and by change type. Show the share of entries that name at least one route, the share that name a result, and the share with a linked artifact. Add the average number of routes named per entry and the share of entries that skip a high-risk surface. These counts are easy to recalculate and hard to misread.
+
+Break the results down by shared-template changes and single-page changes. A team may be strong on page edits and weak on global changes, and a single overall percentage would hide that pattern. Report the count of entries with no route at all separately. That number is often the clearest signal that the change log template needs a required field.
+
+## Limitations and threats to validity
+
+A change log is a communication record, not a complete account of the work. Some teams test carefully and write short entries, while others write detailed entries for small changes. The method measures what the log proves, and the actual testing may be broader. State that boundary so the result is not used as a performance verdict on an individual.
+
+Access also limits verification. If the reviewer cannot open the production site or the test artifacts, even a well-written entry cannot be confirmed. Record access limits as a separate condition and avoid treating missing access as missing evidence. A short observation period may also miss quarterly releases or annual campaigns, so keep the period visible and avoid generalizing beyond it.
+
+## Turning the result into a template change
+
+Summarize the result in one page with the evidence-level distribution, the route counts, and the most common missing field. Name one change to the change log template, one owner, and one recheck date. A required "routes retested" field with a pass or fail column is a practical start. Add a short note for shared-template changes that asks for one route per page family.
+
+Repeat the check after two maintenance cycles, or sooner if the template changes. Archive the coded sheet, the codebook version, and the log export so the next reviewer can reproduce the result. A repeated pattern should change the template, not just the commentary around it. The useful outcome is a change log that a new client contact can read and verify without a meeting.
+
+## Sources
+
+The sources below frame accessibility regression, patch management, and performance risk. They do not supply a local retest rate, and each was checked on November 9, 2026. Use them to judge risk, and keep the local coding sheet separate from any external claim. They are context for the review, not a benchmark for this team.
+
+1. [Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+2. [Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
+3. [NIST SP 800-40 Rev. 4, Guide to Enterprise Patch Management Planning](https://csrc.nist.gov/pubs/sp/800/40/r4/final)
+4. [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+5. [CISA Secure Our World](https://www.cisa.gov/secure-our-world)
+6. [web.dev: Core Web Vitals](https://web.dev/articles/vitals)
+7. [web.dev: Optimize Largest Contentful Paint](https://web.dev/articles/optimize-lcp)
+8. [HTTP Archive: Page Weight](https://httparchive.org/reports/page-weight)

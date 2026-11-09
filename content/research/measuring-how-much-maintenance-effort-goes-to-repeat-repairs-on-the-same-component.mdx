@@ -1,0 +1,82 @@
+---
+title: "Measuring How Much Maintenance Effort Goes to Repeat Repairs on the Same Component"
+description: "A bounded coding method for measuring the share of maintenance tickets and hours spent repairing the same website component more than once."
+slug: "measuring-how-much-maintenance-effort-goes-to-repeat-repairs-on-the-same-component"
+published: "2026-11-09"
+updated: "2026-11-09"
+image: "/images/research/nov09/measuring-how-much-maintenance-effort-goes-to-repeat-repairs-on-the-same-component.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+An outsourced maintenance retainer can look healthy while the same defect returns every few weeks under a new ticket number. Hours are billed, the ticket closes, and the client sees activity without seeing the underlying problem resolved. This study asks a narrow question: what share of maintenance effort goes to repairing the same component more than once inside a defined window? The scope is the written ticket history and component inventory from one website relationship, not an industry average.
+
+The method counts effort in two ways so the result is hard to misread. One count uses tickets, which shows how often the team revisited a component. The other uses recorded hours, which shows how much paid capacity the repeats consumed. A component with five small tickets may cost less than one component with two long rebuilds. Reporting both counts keeps the finding tied to the client's budget.
+
+## Defining a repair and a component
+
+A repair is any maintenance ticket that changes production code, configuration, content structure, or a third-party integration to correct a defect or restore an intended behavior. Routine content edits and planned feature work are excluded, even when they touch the same template. The definition should be written before coding starts and applied to every ticket in the sample. A boundary that shifts halfway through the review will produce a number no one can reproduce.
+
+A component is the smallest stable unit the team can name in both the ticket system and the site inventory. A header, a checkout form, a navigation menu, a gallery block, and a consent banner are useful units. A vague label such as "homepage" is too broad because it hides which part failed. If a ticket names a full page, record the page and the specific element when the ticket text allows it.
+
+## Data sources and unit of analysis
+
+Start with the ticket export, the maintenance log, and the component inventory for the same period. Keep the original export unchanged and work from a copy with a stable ticket identifier. Record the ticket status, creation date, close date, reported hours, component, and a short description. The unit of analysis is one ticket-component pair, because a single ticket can touch two components and one component can appear in many tickets.
+
+Add the deployment record where it exists, since a ticket may close before the fix reaches production. That link lets a reviewer distinguish a repair that shipped from one that was only marked done. If the team uses a single ticket for several unrelated changes, split it only when the ticket itself names each change. Do not infer extra work from a general note.
+
+## Linking tickets to components
+
+Build the component list from the production site rather than from the ticket labels. Walk the main templates, shared blocks, forms, and integrations, and give each one a stable name. Then map each ticket to that list using the page, element, and symptom named in the text. A ticket that cannot be mapped stays in an "unmapped" row and is reported as a data gap.
+
+Use two passes when the ticket volume is large. The first pass maps obvious tickets with a named page or element. The second pass reviews ambiguous tickets with the person who did the work, and records the decision and its reason. This step is slower than keyword matching, but it prevents a shared template from being split across five inconsistent labels. The mapping sheet becomes the backbone of every later count.
+
+## Coding repeat repairs
+
+Sort each component's tickets by the date the repair shipped, not the date the ticket opened. A repeat is a later repair on the same component inside the chosen window, whether or not the symptom looks identical. Code the repeat type as same symptom, related symptom, or new symptom, because the three mean different things for root cause work. A same-symptom repeat is the strongest signal that the first repair did not hold.
+
+Record the evidence behind each repeat code, such as the ticket text, a screenshot, or a log entry. Do not treat a reopened ticket as the only form of repeat, because many clients open a fresh ticket instead of reopening the old one. Do not treat every visit to a component as a repeat either, since planned improvements can touch the same code. The codebook should show examples and counterexamples for both boundaries.
+
+## Choosing the repeat window
+
+Pick the window before looking at the data, and tie it to the maintenance cadence. A thirty-day window fits a monthly retainer, while a ninety-day window captures slower regressions that survive one billing cycle. Run the count at both windows when the history allows it, and report them side by side. A result that changes sharply between windows is itself useful information.
+
+The window should start at the production release date and end at the same clock time on the closing date. Use a fixed timezone and note it, because a ticket that closes late in one month can land in the next month's report. Exclude repairs that fall outside the observation period even when they belong to the same component. The boundary rule must be identical for every component or the comparison will be unfair.
+
+## Measures and denominators
+
+Report the repeat share by ticket count and by recorded hours, with the component as the grouping unit. A simple formula is repeat tickets divided by all repair tickets in the period, and repeat hours divided by all repair hours. Show the numerator and denominator beside every percentage so a reader can recalculate it. Avoid a single composite score because it hides whether the problem is frequency or cost.
+
+Add the number of distinct components with at least one repeat and the distribution of repeats per component. One component with many repeats tells a different story from many components with one repeat each. Report unmapped tickets separately rather than dropping them, because a large unmapped share weakens the result. A short table with the top components by repeat hours is usually more actionable than a long appendix.
+
+## Separating recurrence from rework
+
+A repeat can come from an incomplete first fix, a new trigger, or a change made elsewhere. Read the repair notes for evidence of each cause and code them separately. An incomplete fix often shows the same symptom returning after a short interval, while a new trigger may appear after a plugin update or a content change. The distinction matters because only some repeats point to a quality problem.
+
+Rework also includes a fix that had to be redone because the release was rolled back. Link the rollback record to the original ticket and count the second attempt as part of the same repair episode, not as a new repeat. Otherwise a single bad release can inflate the repeat rate and hide the real recurrence pattern. State the rule in the codebook so another reviewer can reproduce it.
+
+## Limitations and threats to validity
+
+Ticket text is written for speed, not for research, and it often omits the element that failed. A team that writes detailed tickets will appear to have more repeat repairs than a team that writes vague ones, even if the underlying work is similar. Report the share of unmapped and ambiguous tickets so the reader can judge that risk. Treat the result as a property of the record, not a verdict on individual technicians.
+
+The observation period may also be too short to catch seasonal or annual maintenance. A plugin that fails after a yearly renewal or a campaign launch may never appear in a ninety-day sample. Keep the period visible and avoid generalizing beyond it. External sources such as the [NIST patch management guide](https://csrc.nist.gov/pubs/sp/800/40/r4/final) and the [CISA known exploited vulnerabilities catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) can frame risk, but they do not supply a local repeat rate.
+
+## Reporting and next action
+
+Summarize the result in one page with the ticket and hour shares, the top three components, and the count of unmapped tickets. Name one component for a root cause review and one change to the ticket template that would make the next count easier. A required element field or a short symptom code can improve the record without adding much work. Assign an owner and a recheck date before the next reporting cycle.
+
+Repeat the count after two maintenance cycles and compare the same components. A falling repeat share is useful only when the ticket volume and the observation window stayed comparable. Keep the mapping sheet and the codebook with the report so the next reviewer can reproduce the numbers. The goal is a maintenance plan that spends less on the same repair and more on the work that prevents it.
+
+## Sources
+
+The sources below frame patch management, accessibility regression, and performance risk. They do not provide a local repeat rate, and each was checked on November 9, 2026. Keep the coding sheet separate from these external references. Read them as context for risk, not as evidence about this site.
+
+1. [NIST SP 800-40 Rev. 4, Guide to Enterprise Patch Management Planning](https://csrc.nist.gov/pubs/sp/800/40/r4/final)
+2. [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+3. [Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+4. [Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
+5. [web.dev: Core Web Vitals](https://web.dev/articles/vitals)
+6. [web.dev: Optimize Largest Contentful Paint](https://web.dev/articles/optimize-lcp)
+7. [HTTP Archive: Page Weight](https://httparchive.org/reports/page-weight)
+8. [WordPress Plugin Handbook](https://developer.wordpress.org/plugins/)
