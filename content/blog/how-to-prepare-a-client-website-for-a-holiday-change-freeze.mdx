@@ -1,0 +1,51 @@
+---
+title: "How to Prepare a Client Website for a Holiday Change Freeze"
+description: "A practical change-freeze checklist for an outsourced website maintenance team, covering scheduled work, exceptions, monitoring, rollback, and the return to normal releases."
+slug: "how-to-prepare-a-client-website-for-a-holiday-change-freeze"
+published: "2026-11-10"
+updated: "2026-11-10"
+image: "/images/blog/nov10/how-to-prepare-a-client-website-for-a-holiday-change-freeze.jpg"
+category: "outsourced website design operations"
+---
+
+## Why a holiday freeze needs a written plan
+
+A holiday change freeze is not a pause button that someone remembers to press. It is a short period when the client wants the site stable while their own staff are away, traffic shifts, and a failed release would be hard to staff. Without a written plan, the team either keeps shipping risky changes or stops everything and misses a security fix. The plan should state the window, the work that continues, and who can approve an exception.
+
+The freeze also protects the maintenance team from ambiguous requests. A client who asks for a small banner change on the last working day may not realize that the change needs a template release and a cache purge. A written rule lets the account manager answer without negotiating each request. It also gives the client an honest picture of what "frozen" means for routine content edits.
+
+## Inventory the changes already scheduled
+
+Start with the release calendar and list every deployment that falls inside or just before the freeze. Include plugin updates, theme releases, form changes, DNS work, and third-party script changes, because each one can fail in a different way. Mark the owner, the approval state, and the rollback method for each item. Anything that cannot be tested and reversed before the window should move to the re-entry queue.
+
+Then check the client's own marketing calendar. A holiday campaign, a price change, or a temporary store closure may depend on a content edit during the freeze. Those edits are usually safe when they use the CMS and do not touch templates. Separate them from code releases in the inventory so the client can see which requests are still possible. This distinction prevents a blanket refusal that damages trust.
+
+## Set the freeze window and the exception rule
+
+Write the freeze start and end as exact dates and times in the client's timezone, then convert them for the delivery team. A window that begins at close of business on one side of the world may already be underway for the people who must support it. Publish the window in the maintenance calendar and in the client-facing summary. The rule should also name the person who can shorten or extend it.
+
+Exceptions should be narrow and evidence-based. A critical security patch, a legal notice, or a broken checkout can justify a release, but the request needs an approver, a test plan, and a rollback path. Define those three conditions in advance so no one has to invent a process during an incident. Record every exception with its reason and outcome, and review the list after the freeze.
+
+## Decide what monitoring continues
+
+Freezing releases does not freeze the site. Uptime checks, form submission alerts, certificate expiry, and error monitoring should keep running through the window. Confirm that the alert recipient is someone who is actually available, not a shared inbox that nobody reads on a holiday. Test the escalation path with a low-severity message before the freeze begins. A monitoring gap is often discovered only after a customer reports the problem.
+
+Review the thresholds as well. Holiday traffic can change normal error rates and response times, so a fixed threshold may produce noise or hide a real failure. Ask the client about expected campaigns and adjust the baseline where the monitoring tool allows it. Keep a short list of the checks that matter most, such as checkout, login, and the main lead form. That list becomes the first thing the on-call person opens.
+
+## Prepare the client content plan
+
+Content work usually continues during a freeze, but it needs a boundary. Give the client a list of editable areas, the approval path, and the latest time for same-day publication. Confirm that the editor accounts are active and that the people who need them are not on leave. A content owner who loses access during the holiday can turn a simple update into an emergency.
+
+Draft the seasonal copy before the freeze, even when it will publish later. Headlines, dates, offer terms, and contact details are easier to check while the full team is available. Store the approved copy in the CMS as a draft or in a shared document with a named owner. This step reduces the chance that an untested template change gets bundled into a last-minute content request.
+
+## Test the rollback and contact path
+
+A freeze plan is only credible if the team can return to the previous release. Test the restore or redeploy path before the window and record the version that would be restored. Confirm that the database backup is recent enough for the client's tolerance and that the restore has been practiced, not just documented. Use the existing [release rollback plan](/blog/website-release-rollback-plan-outsourced-build) as the basis rather than writing a new one under pressure.
+
+Publish a short contact card with the account owner, the technical escalation, and the client decision-maker. Include the hours when each person is reachable and a backup for every role. Send the card to the client before the freeze and ask them to confirm the names. The [post-maintenance smoke test](/blog/a-post-maintenance-smoke-test-for-an-outsourced-website-fix) should also be ready so an exception release ends with the same checks as normal work.
+
+## Schedule the re-entry review
+
+The end of the freeze is a release event of its own. Queue the deferred changes, confirm that each still has an owner and a current approval, and check whether the holiday period changed the requirements. A campaign that was cancelled may make a scheduled feature unnecessary, while a new offer may create a new page. Review the queue before the first post-freeze deployment instead of releasing everything at once.
+
+Use the first week back to inspect logs, form results, and monitoring history from the freeze. Look for errors that were never escalated because the site stayed reachable. Update the freeze plan with what worked and what caused confusion, then keep it for the next holiday. The [synthetic monitoring handoff](/research/website-synthetic-monitoring-maintenance-handoff) and the [WCAG 2.2 guidelines](https://www.w3.org/TR/WCAG22/) are useful references when the review touches accessibility or alert coverage. A short retrospective turns one seasonal pause into a repeatable control.

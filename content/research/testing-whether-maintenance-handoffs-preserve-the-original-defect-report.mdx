@@ -1,0 +1,81 @@
+---
+title: "Testing Whether Maintenance Handoffs Preserve the Original Defect Report"
+description: "A coding method for checking whether each maintenance handoff keeps the original defect report intact, including the symptom, page, browser, evidence, and reporter intent."
+slug: "testing-whether-maintenance-handoffs-preserve-the-original-defect-report"
+published: "2026-11-10"
+updated: "2026-11-10"
+image: "/images/research/nov10/testing-whether-maintenance-handoffs-preserve-the-original-defect-report.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+A defect report moves through intake, triage, assignment, repair, and release notes, and each step rewrites it a little. By the time a developer reads the ticket, the symptom may be a summary, the browser may be missing, and the screenshot may be several messages up the thread. This study asks whether each maintenance handoff preserves the original report with enough fidelity that a second person could reproduce the problem. The scope is the written handoff record from one outsourced website relationship.
+
+The unit of analysis is one defect report and its chain of handoffs, not a single ticket comment. A chain begins when the client or a monitoring tool first reports the problem and ends when the fix is verified. The method compares each later version against the first complete report. It does not judge whether the repair was correct; it judges whether the information needed to understand the repair survived the handoff.
+
+## Why the original report matters
+
+The first report contains details that are expensive to recover later: the exact page, the action that triggered the fault, the browser and device, the time it happened, and what the reporter expected to see. Those details narrow the search space and prevent a fix that works only on the developer's machine. Once they are lost, the team spends diagnostic time reconstructing a scene that was already described. The loss also makes the estimate harder to justify, because no one can see how much evidence the first report supplied.
+
+Preservation also protects the client relationship. A client who reports a checkout failure and later sees a ticket titled "button alignment" may conclude that no one listened. Keeping the original words and evidence beside the summary shows that the report was understood. When the summary must change for clarity, the original should remain visible and the change should be attributed rather than silently merged.
+
+## Defining preservation and distortion
+
+Preservation means the later handoff keeps the original symptom, affected surface, environment, reproduction steps, evidence, and reporter intent. It may add a diagnosis, a priority, or a proposed fix, because those are new work rather than replacement text. It must not delete a field because the next person thinks it is unimportant. A summary is acceptable when the original remains available in the same record.
+
+Distortion is any change that alters the meaning of the original report. Examples include turning "the form submits twice on Safari" into "form bug", dropping the browser, or changing "sometimes" into "always". Distortion also occurs when a screenshot is replaced by a description that misses the visible error. Code each distortion with the field it affected so the pattern is visible in the aggregate.
+
+## Sampling handoff records
+
+Start with the defect reports opened in the observation period and keep the original export unchanged. Record the report identifier, the intake channel, the reporter, the affected component, and the date. Exclude feature requests and planned content changes, because they do not describe a defect. Add the first handoff date so the chain has a clear starting point. State the exclusion rule before sampling so the denominator stays stable.
+
+Use a census when the volume is small. For a larger set, stratify by intake channel and by component so a quiet channel such as monitoring alerts is not missed. Include at least one report from each week in the period to catch a handoff habit that changed over time. Freeze the sample before coding and record any report added later as a separate observation.
+
+## Coding fields and fidelity levels
+
+Build a field list from the first complete report, not from the ticket template. Typical fields are symptom, page or route, environment, reproduction steps, expected behavior, actual behavior, evidence, and reporter priority. Add a field only when at least one report in the sample uses it. This keeps the coding sheet tied to real records instead of an ideal template that no one follows.
+
+For each field, code one of three levels: preserved, partial, or lost. Preserved means the later handoff carries the same meaning with enough detail to act on. Partial means some detail remains but a reproduction step or environment is missing. Lost means the field is absent or contradicts the original. Two reviewers should code a sample independently and compare results before the full pass.
+
+## Comparing summaries against the source
+
+Read the latest handoff first, then the original, so the summary cannot anchor your reading of the source. Note every claim in the summary that does not appear in the original. A claim may be a reasonable inference, such as a likely cause, but it should be marked as an addition rather than presented as the reporter's words. This step catches the common drift from observation to interpretation.
+
+Then read forward from the original to the latest handoff and mark where each field disappears. A field may be dropped at intake, at triage, or at assignment, and the location matters for the repair. If the browser is lost at intake, the fix is a form change. If it is lost at assignment, the fix is a handoff rule. Record the stage where each loss occurs.
+
+## Handling attachments and screenshots
+
+Attachments are part of the report, not decoration. A screenshot can show an error message, a layout break, or a state that words do not capture. Check whether the attachment is still reachable from the latest handoff and whether the filename or caption identifies the page. A link that requires a login the next person does not have is effectively lost.
+
+Do not treat a screenshot as a substitute for the text. It may omit the browser, the time, or the steps that produced the state. Code the attachment as evidence and keep the textual fields separate. If the team stores screenshots in a chat thread that is not part of the ticket, note that gap, because the record will not survive a change of personnel.
+
+## Measures and denominators
+
+Report the share of reports with every core field preserved at the final handoff. Show the count of reports, the count with full preservation, and the count by stage where the first loss occurred. A single percentage is easier to read when the numerator and denominator sit beside it. Avoid a weighted score that hides which field is most often lost.
+
+Add the preservation rate for each field, because a report can keep the symptom and lose the environment. The field-level view often shows that one intake form question is doing most of the damage. Report attachments separately from text fields, since a reachable screenshot and a complete description are different achievements. These counts give the team a specific place to intervene.
+
+## Limitations and threats to validity
+
+The original report is itself a human account and may be incomplete or mistaken. A later handoff that adds a corrected page name is not necessarily a distortion, and the coding sheet needs a rule for verified corrections. Mark a change as a correction only when the record shows evidence, such as a log entry or a second report. Otherwise code it as an unverified change.
+
+The sample may also overrepresent articulate reporters or simple defects. A client who writes detailed reports will produce a higher preservation rate than one who sends a single sentence. Report the intake channel and the reporter type so the reader can judge that difference. External references such as the [W3C evaluation guidance](https://www.w3.org/WAI/test-evaluate/) and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) describe what good defect evidence looks like, but they do not measure this team's handoffs.
+
+## Reporting and next action
+
+Summarize the result in one page with the full-preservation rate, the field-level losses, and the stage where most losses occur. Name one intake field to make required and one handoff step to change. A short template that asks for the page, the browser, and the expected result can improve preservation without lengthening the form much. Assign an owner and a recheck date before the next reporting cycle.
+
+Repeat the count after the template change and compare the same fields. A rising preservation rate is useful only when the report mix stayed similar. Keep the coding sheet and the field definitions with the report so another reviewer can reproduce the result. Note any field that improved and any field that still drops at the same stage. The [decision provenance research](/research/outsourced-website-design-decision-provenance-study) and the [handoff acceptance receipt](/blog/websitedesignoutsource-handoff-acceptance-receipt) offer related controls for the same record.
+
+## Sources
+
+The sources below describe accessible evaluation, patch management, and production risk. They do not measure how well this team preserves a defect report, and each was checked on November 10, 2026. Use them to frame the evidence a report should contain, not as a benchmark for the local rate. Keep the coding sheet separate from these references when the report is reviewed.
+
+1. [W3C: Evaluating Web Accessibility Overview](https://www.w3.org/WAI/test-evaluate/)
+2. [Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+3. [NIST SP 800-40 Rev. 4, Guide to Enterprise Patch Management Planning](https://csrc.nist.gov/pubs/sp/800/40/r4/final)
+4. [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+5. [web.dev: Core Web Vitals](https://web.dev/articles/vitals)
+6. [HTTP Archive: Page Weight](https://httparchive.org/reports/page-weight)
+7. [WordPress Plugin Handbook](https://developer.wordpress.org/plugins/)

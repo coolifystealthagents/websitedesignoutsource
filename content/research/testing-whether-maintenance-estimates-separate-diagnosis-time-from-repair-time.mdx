@@ -1,0 +1,81 @@
+---
+title: "Testing Whether Maintenance Estimates Separate Diagnosis Time From Repair Time"
+description: "A coding method for checking whether outsourced website maintenance estimates separate fault diagnosis from repair and verification, so recurring diagnostic cost becomes visible."
+slug: "testing-whether-maintenance-estimates-separate-diagnosis-time-from-repair-time"
+published: "2026-11-10"
+updated: "2026-11-10"
+image: "/images/research/nov10/testing-whether-maintenance-estimates-separate-diagnosis-time-from-repair-time.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+A maintenance estimate often arrives as a single number of hours for a single ticket, and the client approves it without knowing how much of that time goes to finding the fault. The repair may take twenty minutes once the cause is known, while the diagnosis consumes most of the day. This study asks a narrow question: do maintenance estimates record diagnosis and repair as separate quantities, and when they do not, what does the blended figure hide? The scope is the written estimate history from one outsourced website relationship.
+
+The unit of analysis is one estimate line tied to one maintenance ticket. A line may cover a single component or several, and it may include testing that happens after the code change. The method does not judge whether the estimate was accurate. It judges whether the record distinguishes the search for a cause from the work of correcting it, because that distinction changes how a maintenance retainer is planned.
+
+## Why blended estimates hide the work
+
+Diagnosis and repair respond to different management actions. A team can reduce diagnosis time with better logging, a component inventory, and a searchable ticket history. It reduces repair time with cleaner code, reusable patterns, and a shorter release path. A blended estimate cannot show which of those investments is working, so the client and the team keep funding the same mix without evidence.
+
+Blended figures also distort comparisons between months. A quiet month with two difficult diagnoses can look more expensive than a busy month of simple content fixes, even when the total workload is similar. The client sees a higher bill and may assume the team is slower. Separating the two quantities gives the monthly report a vocabulary for explaining the difference without relying on anecdotes.
+
+## Defining diagnosis, repair, and verification
+
+Diagnosis is the work required to identify the cause of a reported defect or to confirm that a requested change is feasible. It includes reading logs, reproducing the issue, inspecting templates, checking third-party services, and narrowing the affected component. It ends when the team can state a cause with enough confidence to choose a fix. A guess that later proves wrong belongs to diagnosis, not repair.
+
+Repair is the work of changing code, configuration, content structure, or an integration so the confirmed cause no longer produces the defect. Verification is the check that the change behaves correctly in the target environment and does not break a related surface. Keep verification separate from repair even when the same person performs both, because a repair that ships without a check is a different risk from one that does. The codebook should define all three terms before coding begins.
+
+## Data sources and coding sheet
+
+Start with the estimate export, the ticket history, and the deployment record for the same period. Keep the original export unchanged and work from a copy with a stable ticket identifier. Record the estimate hours, the ticket description, the component, the person who estimated, and the final billed hours where they exist. The billed figure lets a reviewer see whether the split was merely a planning convention or matched the work.
+
+Build a coding sheet with one row per estimate line and columns for diagnosis, repair, verification, waiting, and unallocated time. Add a short evidence note for each allocation, such as a log excerpt, a ticket comment, or a deployment timestamp. Two reviewers should code a small sample independently and compare their results before the full pass. A disagreement rate above an agreed threshold means the definitions need another revision.
+
+## Splitting a single estimate line
+
+Many estimates cannot be split from the record alone. When the ticket shows a clear sequence, such as a log review followed by a template change, allocate the estimate in proportion to the described work. When the ticket only says "fix form", mark the line as unsplittable and report it separately. Do not invent a percentage just to fill the columns. An honest unsplittable count is more useful than a precise-looking number built on guesswork.
+
+Where the team uses time tracking, compare the tracked categories with the estimate split. A mismatch is a finding, not an error to correct silently. It may show that diagnosis is consistently underestimated, or that verification is absorbed into repair and never planned. Record the mismatch and its likely cause in the coding sheet so the next estimate can be adjusted with evidence.
+
+## Handling waiting time and external dependencies
+
+Waiting time is not diagnosis or repair, even when it happens inside the same ticket. A ticket may wait for the client to supply an account, for a vendor to answer a support request, or for a release window to open. Code it as waiting and keep it out of both denominators. Otherwise a slow third party looks like a slow maintenance team and the split loses its meaning.
+
+External dependencies also affect diagnosis. A fault in a payment provider or a CDN may take hours to isolate because the evidence lives outside the site. Note the dependency and the time spent requesting information. The [NIST patch management guide](https://csrc.nist.gov/pubs/sp/800/40/r4/final) treats maintenance as a planned process with defined roles, and the same discipline applies here: the record should show where the team was blocked, not only how long the ticket stayed open.
+
+## Measures and denominators
+
+Report the diagnosis share and the repair share as fractions of allocated estimate hours. Show the numerator, the denominator, and the count of unsplittable lines beside every percentage. A simple ratio such as diagnosis hours divided by total allocated hours is easy to recalculate and hard to misread. Avoid a single efficiency score because it collapses two different kinds of work into one number.
+
+Add the median and the range of diagnosis hours per component, not only the average. One component with a very long diagnosis can pull the mean away from the typical case. Report the number of tickets that required a second diagnostic pass after the first fix failed. That count is often more actionable than the share, because it points to a specific component or a specific gap in the evidence.
+
+## Interpreting the split
+
+A high diagnosis share is not automatically bad. Older sites, undocumented integrations, and inherited code often require more search before a safe repair is possible. The useful question is whether diagnosis time is falling as the team builds history. A stable or rising share on the same components suggests that the team is rediscovering the same facts instead of recording them.
+
+A low diagnosis share can be a warning when it comes with repeated repairs. If the team fixes quickly but the same component returns, the first diagnosis was probably shallow. Compare the split with the repeat-repair rate and with the [change-log retest evidence](/research/testing-whether-maintenance-change-logs-name-the-routes-that-were-retested). The combination tells a more honest story than either measure alone. Record which components show that pattern before changing the estimate template.
+
+## Limitations and threats to validity
+
+Estimates are written before the work, so they reflect what the estimator expected, not what happened. A team that estimates conservatively will show a different split from a team that estimates optimistically, even when their actual work is similar. Treat the result as a property of the estimate record, not a direct measurement of effort. State this limitation in the report so the client does not overread the number.
+
+The observation period may also be too short to capture seasonal work or a large migration. A single difficult plugin removal can dominate a small sample. Keep the period visible, report the number of tickets, and avoid generalizing beyond the relationship studied. External references such as the [CISA known exploited vulnerabilities catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) and the [WCAG 2.2 guidelines](https://www.w3.org/TR/WCAG22/) can frame why certain defects are costly, but they do not supply a local diagnosis share.
+
+## Reporting and next action
+
+Summarize the result in one page with the diagnosis share, the repair share, the unsplittable count, and the top three components by diagnosis hours. Name one component for a documentation review and one change to the estimate template that would make the next split easier. A required diagnosis field and a short cause note can improve the record without adding much work. Assign an owner and a recheck date before the next reporting cycle.
+
+Repeat the count after two maintenance cycles and compare the same components. A falling diagnosis share is useful only when the ticket mix and the observation window stayed comparable. Keep the coding sheet and the definitions with the report so another reviewer can reproduce the numbers. The goal is an estimate that shows where the hours went and helps the client decide which maintenance investment to fund next.
+
+## Sources
+
+The sources below frame patch management, vulnerability risk, accessibility, and performance work. They do not provide a local diagnosis share, and each was checked on November 10, 2026. Use them as context for why diagnosis and verification deserve separate records. Keep the local coding sheet separate from these external references, and read them as background rather than as evidence about this relationship.
+
+1. [NIST SP 800-40 Rev. 4, Guide to Enterprise Patch Management Planning](https://csrc.nist.gov/pubs/sp/800/40/r4/final)
+2. [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+3. [Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+4. [W3C: Evaluating Web Accessibility Overview](https://www.w3.org/WAI/test-evaluate/)
+5. [web.dev: Core Web Vitals](https://web.dev/articles/vitals)
+6. [HTTP Archive: Page Weight](https://httparchive.org/reports/page-weight)
+7. [WordPress Plugin Handbook](https://developer.wordpress.org/plugins/)
