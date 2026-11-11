@@ -1,0 +1,81 @@
+---
+title: "Testing Whether Maintenance Tickets Record the Browser and Device Used to Reproduce a Defect"
+description: "A coding study for checking whether outsourced website maintenance tickets record the browser, device, viewport, and version used to reproduce a defect, and what the missing context costs."
+slug: "testing-whether-maintenance-tickets-record-the-browser-and-device-used-to-reproduce-a-defect"
+published: "2026-11-11"
+updated: "2026-11-11"
+image: "/images/research/nov11/testing-whether-maintenance-tickets-record-the-browser-and-device-used-to-reproduce-a-defect.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+A maintenance ticket often says that a form is broken or a layout overlaps, without saying where the reporter saw it. The developer then spends the first part of the ticket trying to make the fault appear, and may close it as unreproducible when the real cause was a different browser, viewport, or device. This study asks whether maintenance tickets record the environment used to reproduce a defect, and which fields are most often missing. The scope is the ticket history from one outsourced website maintenance queue.
+
+The unit of analysis is one defect ticket that reached a reproducible state. A ticket may cover several symptoms, and it may include comments from the client, the account manager, and the developer. The method does not judge whether the fix was correct. It judges whether the record contains enough context for a second person to reach the same observation without asking the original reporter.
+
+## Why reproduction context disappears
+
+Reproduction context disappears because the person who sees the defect is rarely the person who writes the ticket. A client sends a screenshot from a phone, the account manager summarizes it in an email, and the developer receives a sentence without the device, the browser, or the page state. Each transfer drops detail that the sender assumed was obvious. By the time the ticket is written, the only reliable evidence may be an image with no address bar.
+
+The cost appears as diagnosis time and as disagreement. A developer who cannot reproduce the fault may ask for a screen recording, wait a day for a reply, and then discover the issue only appears at a narrow width. A client who receives a "cannot reproduce" response may conclude that the team is careless. A recorded environment turns both outcomes into a shorter exchange, because the second person can test the same conditions on the first attempt.
+
+## Defining a reproducible environment record
+
+A reproducible environment record has five fields: browser name and major version, operating system, device type, viewport width, and the page or route where the fault appeared. It may also include zoom level, input method, login state, and any feature flag or experiment that changes the page. These extra fields matter when the defect depends on a condition that is not visible in a screenshot. Name the five core fields in the coding sheet before sampling begins so the rule does not drift.
+
+Code a ticket as complete when all five core fields are present in the ticket or in a linked comment. Code it as partial when at least three are present and the missing fields can be inferred from a screenshot with a visible browser frame. Code it as absent when the ticket names only a page and a symptom. A short evidence note should accompany each code so a reviewer can see the exact wording that supported it.
+
+## Sampling tickets from the queue
+
+Export every defect ticket opened during the observation period, including tickets closed as duplicate or unreproducible. Keep the original export unchanged and work from a copy with a stable ticket identifier. Record the open date, the close date, the component, the reporter role, the assignee, and the final status. Include tickets that were reopened, because a second attempt often adds the context the first attempt lacked.
+
+Exclude planned change requests and content updates, since they describe intended work rather than a fault. Exclude tickets with no written description at all, but count them separately as an evidence gap. If the queue links tickets to chat threads, keep the link and note whether the environment detail lives there. The unit remains the ticket, even when the useful context sits in a comment or an attachment rather than the opening message.
+
+## Coding the five core fields
+
+Browser name and major version is the first field, because rendering differences still appear across engines and release channels. Record the name and the number separately so a later analysis can group by family without losing the version. Operating system covers the platform that affects fonts, scrolling, and input. Device type separates desktop, tablet, and phone, and should note when the reporter used a simulator rather than a physical device.
+
+Viewport width is the field most often missing, and it is often the one that explains the defect. Record the width in CSS pixels when the reporter supplies it, and record the orientation when the page is responsive. The route field should name the page and any state that changes it, such as a query parameter, a tab, or a step in a checkout. A ticket that names only the home page is weak evidence when the fault appears on a product page.
+
+## Measuring agreement between reporters
+
+Ask two reviewers to code a sample of tickets independently before the full pass. Compare their codes field by field and record every disagreement with the wording that caused it. A disagreement about whether a screenshot shows a phone or a tablet is a definition problem, not a coding error. Revise the definitions, recode the sample, and only then continue with the full set. Report the disagreement rate beside the results.
+
+The comparison also reveals which fields are genuinely ambiguous in practice. If reviewers disagree most often on device type, the coding sheet may need a rule for emulated devices. If they agree on browser but disagree on version, the ticket template may need a separate version field. The point of the exercise is to make the record easier to read, not to produce a perfect inter-rater score.
+
+## Handling anonymous and redacted reports
+
+Some tickets arrive through a generic contact form with no device detail, and some are redacted before the research team sees them. Keep those tickets in the sample but mark the reason for missing context. Separate "the reporter did not supply it" from "the record removed it" and from "the team never asked". The three causes point to different fixes, and merging them hides the one the team can control.
+
+Redaction also affects screenshots. A screenshot may show the fault clearly while hiding the browser frame, the address bar, or the account name. Note which fields the image could have supplied and which it could not. A ticket that includes a full-window screenshot is easier to code than a cropped image, even when both describe the same defect. This distinction should appear in the report so the template recommendation is grounded in the actual record.
+
+## Interpreting the record rate
+
+A high complete rate is useful only when the fields are accurate. A ticket that lists a browser version copied from a default user agent string may be technically complete and practically wrong, especially when the reporter used a different device. Read a sample of tickets against their screenshots and comments to check for obvious mismatches. Report the mismatch count separately from the completeness count.
+
+A low rate is not proof that the team is careless. Small queues with one developer and one client may carry context in conversation, and the written ticket may be a summary rather than the working record. The risk rises when the queue is shared, the team changes, or the client reports through several channels. Compare the record rate with the repeat-repair rate and with the number of tickets closed as unreproducible before drawing a conclusion.
+
+## Limitations and threats to validity
+
+The observation covers one maintenance queue, so the result describes that queue rather than the wider industry. A different client mix, ticket tool, or support model may produce a different pattern. The coding also depends on the quality of screenshots and comments, which vary with the reporter's habits and the tool's attachment limits. Treat the result as a property of the written record, not as a direct measure of diagnostic skill.
+
+The period may also be too short to capture a browser release that changes rendering across the estate. A single major release can create a cluster of tickets that share an environment and distort the rate. Note the release dates that fall inside the window and check whether the cluster changes the result. External references can explain why environment detail matters, but they do not supply a local completeness rate.
+
+## Reporting and next action
+
+Summarize the result in one page with the complete, partial, and absent counts, the field most often missing, and the number of tickets closed as unreproducible. Name one change to the ticket template and one change to the intake script. A required viewport field and a short prompt for browser and device can improve the record without adding much work. Assign an owner and a recheck date before the next reporting cycle.
+
+Repeat the count after two maintenance cycles and compare the same fields. A rising complete rate is useful only when the ticket mix and the observation window stayed comparable. Keep the old and new templates with the report so the effect of the change can be read. The goal is a ticket that lets the next person reproduce the fault without a round of questions, and a queue that can show the client where the time went.
+
+## Sources
+
+The sources below frame browser detection, responsive design, accessibility, and patch management. They do not provide a local completeness rate, and each was checked on November 11, 2026. Use them as context for why environment detail belongs in a maintenance record, and keep the local coding sheet separate from these references. Read them as background for the ticket template rather than as evidence about this queue.
+
+1. [MDN: Browser detection using the user agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
+2. [web.dev: Responsive web design basics](https://web.dev/articles/responsive-web-design-basics)
+3. [MDN: Responsive design](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
+4. [Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+5. [W3C: Evaluating Web Accessibility Overview](https://www.w3.org/WAI/test-evaluate/)
+6. [NIST SP 800-40 Rev. 4, Guide to Enterprise Patch Management Planning](https://csrc.nist.gov/pubs/sp/800/40/r4/final)
+7. [web.dev: Core Web Vitals](https://web.dev/articles/vitals)
