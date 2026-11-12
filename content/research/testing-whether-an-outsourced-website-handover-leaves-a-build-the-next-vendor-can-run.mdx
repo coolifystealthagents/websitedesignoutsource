@@ -1,0 +1,80 @@
+---
+title: "Testing Whether an Outsourced Website Handover Leaves a Build the Next Vendor Can Run"
+description: "A clean-room method for testing whether an outsourced website handover includes everything the next vendor needs to install, build, and serve the site without asking the outgoing team."
+slug: "testing-whether-an-outsourced-website-handover-leaves-a-build-the-next-vendor-can-run"
+published: "2026-11-12"
+updated: "2026-11-12"
+image: "/images/research/nov12/testing-whether-an-outsourced-website-handover-leaves-a-build-the-next-vendor-can-run.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+A website handover usually transfers files, accounts, and a document that describes the stack. The harder question is whether the next vendor can take those materials and produce a working build without asking the outgoing team for help. This study tests that question directly on handover packages from outsourced website projects. The scope is the packages delivered at the end of five maintenance and redesign engagements.
+
+The unit of analysis is one handover package and one clean-room rebuild attempt. A package includes the repository, the dependency manifest, the environment notes, the asset sources, and the deployment description. A build succeeds only when a reviewer with general skills can install, compile, and run the site locally from those materials alone. Partial success, such as a build that needs a missing credential, is recorded as a failure with a reason.
+
+## Why a runnable build is the real handover test
+
+Documents can look complete while the build depends on a file that lives only on someone's laptop. A runnable build proves that the written instructions and the repository agree with each other. It also exposes hidden services, private registries, and environment variables that the outgoing team supplied from memory. The test is not about code quality; it is about whether the next team can start work on day one.
+
+Vendor lock-in rarely arrives as a dramatic refusal. It arrives as a small missing piece that makes a routine task expensive. The next vendor bills discovery hours to reconstruct what a proper handover would have included, which is the pattern described in the [vendor lock-in research](/research/website-design-outsourcing-vendor-lock-in-risks-research). A clean-room build turns that risk into a check the client can run before the final payment, which is the point of the exercise.
+
+## Defining a reproducible build
+
+A reproducible build starts from a clean machine with the stated runtime versions and follows the written steps. It downloads dependencies from public or documented sources, compiles the site, and starts a local server that serves the home page and one inner page. It does not require a password that only the outgoing team holds. Any step that depends on undocumented access is a gap, even when the build eventually works.
+
+The definition should name the expected output, not only the command. For a static site, that means generated files in a known directory. For a server-rendered site, it means a running process and a page that returns the expected status. Write the acceptance check before the attempt so the reviewer cannot rationalize a partial result. A build that works only after a phone call has not passed.
+
+## Selecting handover packages to test
+
+Test packages that a real successor would receive, including the small sites that seem too simple to fail. Include at least one package that changed vendors under time pressure, because those are where documentation usually lags. Exclude packages still under active development, since the repository is a moving target. Record the date the package was frozen and the commit used for the attempt.
+
+Ask for the package exactly as the client would receive it, without a friendly engineer walking you through the gaps. That constraint feels artificial, but it reproduces the successor's actual position. If the outgoing team wants to add a missing note, record the addition and count it as a finding. The test measures the package, not the willingness of the people who built it.
+
+## The clean-room rebuild procedure
+
+Begin with a fresh virtual machine or container and a new user account with no inherited configuration. Install only the runtime versions named in the handover, then follow the steps in order without improvising. Log every command, every error, and every workaround in a timestamped note. Stop when the acceptance check passes or when the package requires information that is not present.
+
+Do not copy cached dependencies, global packages, or environment files from the old machine. Those are exactly the hidden inputs the test is designed to find. If a step fails, try the documented fallback before inventing a new one. A reviewer who fixes the package silently has tested their own skill rather than the handover.
+
+## Recording dependencies and hidden services
+
+List every external service the build touches: the content API, the image host, the form endpoint, the analytics account, and the database. For each, record whether the credential is included, documented as client-owned, or missing. A build that needs a live production database to compile is a design problem, not only a handover problem. The successor should be able to run the site with a local or staging copy.
+
+Check the dependency manifest for private packages, git URLs, and version ranges that resolve differently over time. A lockfile with a private registry entry will fail on any machine without that registry. Note whether the runtime version is pinned and whether the package manager version matters. These details are boring in a healthy project and decisive in a broken one.
+
+## Scoring the result without inventing a grade
+
+Score each package on four binary checks: the build completes, the site serves, the inner page serves, and no undocumented credential is required. Report the four results separately rather than collapsing them into a single percentage. A package that builds but cannot serve is different from one that serves but cannot build, and the fixes differ. Binary checks keep the report reproducible.
+
+Add a short reason for every failed check, using the exact error text and the step where it appeared. Do not estimate how long a fix would take unless the reviewer actually performed it. A reason such as missing environment variable is useful; a reason such as poor documentation is not. The successor needs the specific gap, not a judgment about the vendor.
+
+## Common failure modes
+
+The most common failure is a missing environment file, followed by an undocumented private package and an unpinned runtime. Another frequent gap is an asset pipeline that points to a folder excluded from the repository. Less often, the build depends on a global command that the outgoing team installed years ago. Each failure is small on its own and expensive in combination.
+
+A second pattern is documentation that describes the old infrastructure rather than the current one. The steps mention a server that was retired or a branch that no longer exists. Reviewers should compare each instruction with the repository at the frozen commit. A handover that was accurate six months ago is still a failed handover today.
+
+## Limitations and threats to validity
+
+Five packages from one client base cannot represent the whole market, and the reviewer's skill affects how quickly a gap is found. A very experienced reviewer may succeed where a typical successor would stall, which understates the risk. The test also depends on access to the same public services the site uses. Record these conditions beside the results rather than presenting the outcome as universal.
+
+A package may pass the build test and still fail on operations, because deployment, backup, and monitoring are separate skills. This study measures the local build, not the full operational handover. Treat a pass as one necessary condition, not a certificate of readiness, and pair it with the [handoff completeness observation](/research/websitedesignoutsource-handoff-completeness-observation). Add a deployment rehearsal and an access review before the final payment.
+
+## Reporting and next action
+
+Produce a one-page report with the four binary checks per package, the exact failing step, and the evidence file for each attempt. Name the single fix that would unblock the largest number of packages, such as adding an environment template with documented variables. Give the outgoing vendor a deadline to supply the missing items and a date for the retest. Attach the report to the final acceptance record.
+
+Repeat the clean-room test after any major platform change, not only at the end of a contract. A build that was reproducible last year can break when a runtime reaches end of life or a registry changes its policy. Keep the successful procedure as part of the client's own documentation. The next vendor should inherit a working method, not a pile of files.
+
+## Sources
+
+The sources below describe secure build practice, supply-chain levels, dependency installation, and the separation of build, release, and run. They do not report a handover success rate for these five packages, and each was checked on November 12, 2026. Use them to justify the clean-room procedure and to explain why a local build is a necessary first test. Read them as context for the test design, not as a reported handover result for these packages.
+
+1. [NIST SP 800-218, Secure Software Development Framework](https://csrc.nist.gov/pubs/sp/800/218/final)
+2. [SLSA Specification v1.0, Levels](https://slsa.dev/spec/v1.0/levels)
+3. [The Twelve-Factor App, Build, release, run](https://12factor.net/build-release-run)
+4. [npm Documentation, npm ci](https://docs.npmjs.com/cli/v10/commands/npm-ci)
+5. [Node.js Documentation, Packages](https://nodejs.org/api/packages.html)
+6. [NIST SP 800-40 Rev. 4, Guide to Enterprise Patch Management Planning](https://csrc.nist.gov/pubs/sp/800/40/r4/final)
