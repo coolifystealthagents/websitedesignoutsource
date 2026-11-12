@@ -1,26 +1,11 @@
-import {ServicePhoto} from '../../refresh-experience';
-import { notFound } from 'next/navigation';
-import { Header, Footer, CTA, JsonLd } from '../../components';
-import { fleetServices } from '../../fleet-content';
-import { serviceDetails } from '../../service-details';
-import { site } from '../../data';
-import { TopicHero } from '../../editorial-system';
-export function generateStaticParams() { return fleetServices.map((service) => ({ slug: service.slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const service = fleetServices.find((item) => item.slug === slug); if (!service) return {}; const canonical = `https://${site.domain.toLowerCase()}/services/${service.slug}`; return { title: service.title, description: service.summary, alternates: { canonical }, openGraph: { title: service.title, description: service.summary, url: canonical, type: 'website' } }; }
-export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params; const service = fleetServices.find((item) => item.slug === slug); const detail = serviceDetails[slug]; if (!service || !detail) notFound();
-  const url = `https://${site.domain.toLowerCase()}/services/${service.slug}`;
-  const relatedSlugs = detail.related || fleetServices.filter((item) => item.slug !== slug).slice(0, 3).map((item) => item.slug);
-  const related = relatedSlugs.map((relatedSlug) => fleetServices.find((item) => item.slug === relatedSlug)).filter(Boolean);
-  return <><Header/><main className="service-page"><JsonLd data={{'@context':'https://schema.org','@type':'Service',name:service.title,description:service.summary,url,provider:{'@type':'Organization',name:'Website Design Outsource'},areaServed:'Worldwide'}}/>
-    <header className="service-hero"><div className="service-hero-copy"><p className="section-label">Specialist website production</p><h1>{service.title}</h1><p className="service-summary">{service.summary}</p><div className="hero-actions"><a className="button button-primary" href="/contact-us">Discuss this service</a><a className="text-link" href="#scope">Review the scope</a></div></div><ServicePhoto slug={slug}/></header>
-    <section className="service-intro" id="scope"><div><p className="section-label">Who it is for</p><h2>A focused production lane for teams that keep ownership.</h2></div><div><p>{detail.audience}</p><p>{detail.problem}</p></div></section>
-    <section className="service-scope"><div className="scope-column"><h2>Inputs that make the work ready</h2><p>The service starts when the responsible owner can supply enough context to avoid design by guesswork.</p><ul>{detail.inputs.map((item) => <li key={item}>{item}</li>)}</ul></div><div className="scope-column scope-column-dark"><h2>Work performed inside the lane</h2><p>The production team executes the agreed work and makes exceptions visible instead of making business decisions silently.</p><ul>{detail.work.map((item) => <li key={item}>{item}</li>)}</ul></div></section>
-    <section className="deliverable-band"><div><p className="section-label">What comes back</p><h2>Deliverables designed for review, ownership, and reuse.</h2></div><ul>{detail.deliverables.map((item) => <li key={item}>{item}</li>)}</ul></section>
-    <section className="decision-section"><div className="decision-heading"><p className="section-label">Decision boundaries</p><h2>Human approval remains explicit.</h2><p>Production can move quickly without blurring accountability. These limits keep access, claims, scope, and release authority with the right owner.</p></div><div className="decision-list">{detail.boundaries.map((item) => <article key={item}><h3>{item.split('.')[0]}.</h3><p>{item}</p></article>)}</div></section>
-    <section className="quality-section"><div><p className="section-label">Quality control</p><h2>Acceptance is based on evidence, not a vague feeling of done.</h2></div><div className="quality-grid">{detail.controls.map((item) => <article key={item}><span aria-hidden="true">✓</span><p>{item}</p></article>)}</div><ol className="launch-flow"><li><strong>Brief</strong><span>Confirm the route, owner, inputs, constraints, and finished condition.</span></li><li><strong>Pilot</strong><span>Review a representative sample with realistic content and edge cases.</span></li><li><strong>Produce</strong><span>Move approved work through the shared pattern and log exceptions.</span></li><li><strong>Accept</strong><span>Check the deliverables, evidence, open decisions, and ownership handoff.</span></li></ol></section>
-    <section className="scenario-section"><div><p className="section-label">Common starting scenarios</p><h2>Recognizable work, not generic capacity.</h2></div>{detail.scenarios.map((item) => <blockquote key={item}>{item}</blockquote>)}</section>
-    <section className="service-faq"><div><p className="section-label">Questions before kickoff</p><h2>What teams usually clarify first.</h2></div><div>{detail.faqs.map(([question, answer]) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
-    <section className="related-services"><p className="section-label">Related production lanes</p><div>{related.map((item) => item && <a href={`/services/${item.slug}`} key={item.slug}><span>{item.title}</span><small>{item.summary}</small></a>)}</div></section><CTA/>
-  </main><Footer/></>;
-}
+import {notFound} from 'next/navigation';
+import {ServiceDetail} from '../../inner-pages';
+import data from '../../refresh-data.json';
+import {fleetServices} from '../../fleet-content';
+import {serviceDetails} from '../../service-details';
+import {Header,Footer} from '../../components';
+export function generateStaticParams(){return fleetServices.map(x=>({slug:x.slug}))}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const v=data.services.find(x=>x.slug===slug);if(!v)return {};return {title:v.title,description:v.description,alternates:{canonical:'https://websitedesignoutsource.com/services/'+slug},openGraph:{title:v.title,description:v.description,images:[{url:v.image,alt:v.alt}]}}}
+export default async function Page({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const v=fleetServices.find(x=>x.slug===slug),b=serviceDetails[slug];if(!v||!b)notFound();const content={slug,audience:[b.audience],problem:b.problem,inputs:b.inputs,work:b.work,outputs:b.deliverables,controls:b.controls,boundaries:b.boundaries,scenarios:b.scenarios,workflow:[],faqs:b.faqs.map(([question,answer])=>({question,answer}))};
+const display=data.services.find(x=>x.slug===slug)!;const schema={'@context':'https://schema.org','@type':'Service',name:display.title,description:display.description,url:'https://websitedesignoutsource.com/services/'+slug,provider:{'@type':'Organization',name:data.brand}};
+return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><Header/><main id="main-content"><ServiceDetail content={content}/></main><Footer/></>}
