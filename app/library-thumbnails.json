@@ -1,0 +1,734 @@
+{
+  "blog/outsourced-website-native-dialog-acceptance": {
+    "image": "/oct12-heroes/outsourced-website-native-dialog-acceptance.webp",
+    "imageAlt": "Visual guide for Native Dialog Acceptance for Outsourced Interfaces"
+  },
+  "blog/outsourced-website-inline-validation-timing-review": {
+    "image": "/oct13-heroes/outsourced-website-inline-validation-timing-review.webp",
+    "imageAlt": "Visual guide for Review Inline Validation Timing Without Interrupting Form Entry"
+  },
+  "blog/website-design-outsourcing-milestone-planning": {
+    "image": "/aug20-heroes/website-design-outsourcing-milestone-planning.webp",
+    "imageAlt": "Visual guide for Mastering Website Design Outsourcing: The Power of Milestone Planning"
+  },
+  "blog/how-to-reconcile-an-outsourced-website-maintenance-invoice-against-the-ticket-log": {
+    "image": "/images/blog/nov12/how-to-reconcile-an-outsourced-website-maintenance-invoice-against-the-ticket-log.jpg",
+    "imageAlt": "Visual guide for How to Reconcile an Outsourced Website Maintenance Invoice Against the Ticket Log"
+  },
+  "blog/wdo-queue-ownership": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Give Every Outsourced Website Design And Delivery Queue Item One Owner"
+  },
+  "blog/outsourced-website-reduced-data-mode-brief": {
+    "image": "/oct12-heroes/outsourced-website-reduced-data-mode-brief.webp",
+    "imageAlt": "Visual guide for Reduced-Data Mode Brief for Outsourced Website Teams"
+  },
+  "blog/wdo02-design-brief-intake-01": {
+    "image": "/images/blog/wdo02-design-brief-intake-01.webp",
+    "imageAlt": "Visual guide for Give the design brief intake decision one accountable owner"
+  },
+  "blog/wdo02-staging-review-06": {
+    "image": "/images/blog/wdo02-staging-review-06.webp",
+    "imageAlt": "Visual guide for Build an exception code list the staging review team will use"
+  },
+  "blog/a-404-page-recovery-check-before-an-outsourced-website-launch": {
+    "image": "/images/blog/nov06/a-404-page-recovery-check-before-an-outsourced-website-launch.jpg",
+    "imageAlt": "Visual guide for A 404 Page Recovery Check Before an Outsourced Website Launch"
+  },
+  "blog/preview-link-expiry-security": {
+    "image": "/oct22-heroes/preview-link-expiry-security.webp",
+    "imageAlt": "Visual guide for Secure Preview Links With Explicit Expiry"
+  },
+  "blog/website-design-change-control-record": {
+    "image": "/aug19-heroes/website-design-change-control-record.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Change Control Record"
+  },
+  "blog/outsourced-website-pdf-link-label-audit": {
+    "image": "/oct12-heroes/outsourced-website-pdf-link-label-audit.webp",
+    "imageAlt": "Visual guide for PDF Link Label Audit for Outsourced Website Content"
+  },
+  "blog/dns-cutover-rollback-receipt": {
+    "image": "/oct22-heroes/dns-cutover-rollback-receipt.webp",
+    "imageAlt": "Visual guide for Keep a DNS Cutover Rollback Receipt"
+  },
+  "blog/wdo02-qa-signoff-04": {
+    "image": "/images/blog/wdo02-qa-signoff-04.webp",
+    "imageAlt": "Visual guide for Resolve a conflicting QA signoff record without erasing history"
+  },
+  "blog/website-design-outsourcing-budget-allocation": {
+    "image": "/aug20-heroes/website-design-outsourcing-budget-allocation.webp",
+    "imageAlt": "Visual guide for Mastering Your Website Design Outsourcing Budget: A Strategic Guide"
+  },
+  "blog/outsourced-website-pagination-canonical-review": {
+    "image": "/oct13-heroes/outsourced-website-pagination-canonical-review.webp",
+    "imageAlt": "Visual guide for Review Pagination and Canonical Signals Before Launch"
+  },
+  "blog/website-design-outsourcing-conversion-optimization": {
+    "image": "/aug20-heroes/website-design-outsourcing-conversion-optimization.webp",
+    "imageAlt": "Visual guide for Maximizing ROI: How Website Design Outsourcing Drives Conversion Optimization"
+  },
+  "blog/outsourced-website-session-expiry-message-brief": {
+    "image": "/oct12-heroes/outsourced-website-session-expiry-message-brief.webp",
+    "imageAlt": "Visual guide for Session Expiry Message Brief for Outsourced Websites"
+  },
+  "blog/outsourced-website-image-decoding-priority-handoff": {
+    "image": "/oct13-heroes/outsourced-website-image-decoding-priority-handoff.webp",
+    "imageAlt": "Visual guide for Handoff Image Decoding and Fetch Priority With Measured Evidence"
+  },
+  "blog/wdo-exception-trend-brief": {
+    "image": "/daily26/websitedesignoutsource/wdo-exception-trend-brief.webp",
+    "imageAlt": "Visual guide for Turn Outsourced Website Design And Delivery Exception Trends Into a Monthly Owner Brief"
+  },
+  "blog/wdo-duplicate-request-screen": {
+    "image": "/daily26/websitedesignoutsource/wdo-duplicate-request-screen.webp",
+    "imageAlt": "Visual guide for Screen Duplicate Requests Before They Split Outsourced Website Design And Delivery Ownership"
+  },
+  "blog/outsourced-website-csp-report-only-review": {
+    "image": "/oct13-heroes/outsourced-website-csp-report-only-review.webp",
+    "imageAlt": "Visual guide for Review Content Security Policy Reports Before Enforcement"
+  },
+  "blog/outsourced-website-accessible-authentication-copy-handoff": {
+    "image": "/oct13-heroes/outsourced-website-accessible-authentication-copy-handoff.webp",
+    "imageAlt": "Visual guide for Handoff Accessible Authentication Copy Without Leaking Account State"
+  },
+  "blog/outsourced-website-touch-target-spacing-review": {
+    "image": "/oct12-heroes/outsourced-website-touch-target-spacing-review.webp",
+    "imageAlt": "Visual guide for Touch Target Spacing Review for Outsourced Interfaces"
+  },
+  "blog/website-design-intake-source-register": {
+    "image": "/aug19-heroes/website-design-intake-source-register.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Intake Source Register"
+  },
+  "blog/content-freeze-exception-log": {
+    "image": "/oct22-heroes/content-freeze-exception-log.webp",
+    "imageAlt": "Visual guide for Run a Content Freeze Exception Log"
+  },
+  "blog/website-design-quality-review-cadence": {
+    "image": "/aug19-heroes/website-design-quality-review-cadence.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Quality Review Cadence"
+  },
+  "blog/outsourced-website-date-time-localization-check": {
+    "image": "/oct12-heroes/outsourced-website-date-time-localization-check.webp",
+    "imageAlt": "Visual guide for Date and Time Localization Check for Website Handoffs"
+  },
+  "blog/wdo02-deployment-checklist-07": {
+    "image": "/images/blog/wdo02-deployment-checklist-07.webp",
+    "imageAlt": "Visual guide for Keep deployment checklist evidence durable when the systems change"
+  },
+  "blog/website-design-exception-queue-triage": {
+    "image": "/aug19-heroes/website-design-exception-queue-triage.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Exception Queue Triage"
+  },
+  "blog/website-design-outsourcing-performance-metrics": {
+    "image": "/aug20-heroes/website-design-outsourcing-performance-metrics.webp",
+    "imageAlt": "Visual guide for Mastering Website Design Outsourcing: Key Performance Metrics for Success"
+  },
+  "blog/wdo-capacity-plan": {
+    "image": "/daily27/websitedesignoutsource/wdo-capacity-plan.webp",
+    "imageAlt": "Visual guide for Plan Outsourced Website Design And Delivery Capacity From Queue Demand"
+  },
+  "blog/a-monthly-maintenance-report-audit-for-outsourced-website-clients": {
+    "image": "/images/blog/nov08/a-monthly-maintenance-report-audit-for-outsourced-website-clients.jpg",
+    "imageAlt": "Visual guide for A Monthly Maintenance Report Audit for Outsourced Website Clients"
+  },
+  "blog/outsourced-website-copy-paste-formatting-review": {
+    "image": "/oct12-heroes/outsourced-website-copy-paste-formatting-review.webp",
+    "imageAlt": "Visual guide for Copy-and-Paste Formatting Review for CMS Handoffs"
+  },
+  "blog/wdo-cross-team-escalation": {
+    "image": "/daily27/websitedesignoutsource/wdo-cross-team-escalation.webp",
+    "imageAlt": "Visual guide for Route Cross-Team Outsourced Website Design And Delivery Escalations to One Owner"
+  },
+  "blog/wdo-tool-consolidation-access": {
+    "image": "/daily26/websitedesignoutsource/wdo-tool-consolidation-access.webp",
+    "imageAlt": "Visual guide for Review Outsourced Website Design And Delivery Access Before a Tool Consolidation"
+  },
+  "blog/outsourced-website-print-stylesheet-acceptance": {
+    "image": "/oct12-heroes/outsourced-website-print-stylesheet-acceptance.webp",
+    "imageAlt": "Visual guide for Print Stylesheet Acceptance for Outsourced Websites"
+  },
+  "blog/outsourced-website-resize-observer-loop-triage": {
+    "image": "/oct13-heroes/outsourced-website-resize-observer-loop-triage.webp",
+    "imageAlt": "Visual guide for Triage Resize Observer Loops in Responsive Components"
+  },
+  "blog/wdo02-wireframe-queue-10": {
+    "image": "/images/blog/wdo02-wireframe-queue-10.webp",
+    "imageAlt": "Visual guide for Decide what an offshore designer may ship on wireframe queue without a second review"
+  },
+  "blog/website-design-outsourcing-usability-testing": {
+    "image": "/aug20-heroes/website-design-outsourcing-usability-testing.webp",
+    "imageAlt": "Visual guide for Mastering Website Design Outsourcing: The Power of Usability Testing"
+  },
+  "blog/website-design-escalation-path-design": {
+    "image": "/aug19-heroes/website-design-escalation-path-design.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Escalation Path Design"
+  },
+  "blog/wdo-intake-evidence-control": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Build an Outsourced Website Design And Delivery Intake Record That Preserves"
+  },
+  "blog/website-design-approval-evidence-matrix": {
+    "image": "/aug19-heroes/website-design-approval-evidence-matrix.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Approval Evidence Matrix"
+  },
+  "blog/website-design-weekly-decision-brief": {
+    "image": "/aug19-heroes/website-design-weekly-decision-brief.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Weekly Decision Brief"
+  },
+  "blog/wdo-onboarding-packet": {
+    "image": "/daily26/websitedesignoutsource/wdo-onboarding-packet.webp",
+    "imageAlt": "Visual guide for Build an Outsourced Website Design And Delivery Onboarding Packet the Owner Can Accept"
+  },
+  "blog/website-design-outsourcing-ip-ownership": {
+    "image": "/aug20-heroes/website-design-outsourcing-ip-ownership.webp",
+    "imageAlt": "Visual guide for Securing Your Digital Assets: A Guide to Website Design Outsourcing IP Ownership"
+  },
+  "blog/redirect-map-completeness-check": {
+    "image": "/oct22-heroes/redirect-map-completeness-check.webp",
+    "imageAlt": "Visual guide for Check the Redirect Map Before a Launch Cutover"
+  },
+  "blog/wdo03-client-revision-triage-register": {
+    "image": "/images/blog/wdo03-client-revision-triage-register.webp",
+    "imageAlt": "Visual guide for Run a client revision triage register for outsourced design work"
+  },
+  "blog/website-design-outsourcing-vendor-vetting-checklist": {
+    "image": "/aug20-heroes/website-design-outsourcing-vendor-vetting-checklist.webp",
+    "imageAlt": "Visual guide for Your Ultimate Website Design Outsourcing Vendor Vetting Checklist"
+  },
+  "blog/wdo02-qa-signoff-queue-12": {
+    "image": "/images/blog/wdo02-qa-signoff-queue-12.webp",
+    "imageAlt": "Visual guide for Protect QA signoff queue coverage during leave and turnover"
+  },
+  "blog/website-design-launch-readiness-review": {
+    "image": "/aug19-heroes/website-design-launch-readiness-review.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Launch Readiness Review"
+  },
+  "blog/website-design-work-queue-ownership": {
+    "image": "/aug19-heroes/website-design-work-queue-ownership.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Work Queue Ownership"
+  },
+  "blog/outsourced-website-status-page-link-handoff": {
+    "image": "/oct12-heroes/outsourced-website-status-page-link-handoff.webp",
+    "imageAlt": "Visual guide for Status Page Link Handoff for Website Support"
+  },
+  "blog/outsourced-website-loading-skeleton-acceptance": {
+    "image": "/oct13-heroes/outsourced-website-loading-skeleton-acceptance.webp",
+    "imageAlt": "Visual guide for Accept Loading Skeletons Without Hiding Slow Content"
+  },
+  "blog/wdo-source-map": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Map the Sources Behind Outsourced Website Design And Delivery Decisions"
+  },
+  "blog/website-design-outsourcing-technical-seo-audit": {
+    "image": "/aug20-heroes/website-design-outsourcing-technical-seo-audit.webp",
+    "imageAlt": "Visual guide for Unlock Your Website's Potential: The Power of Technical SEO Audits in Website Design Outsourcing"
+  },
+  "blog/website-design-outsourcing-contract-review-guide": {
+    "image": "/aug20-heroes/website-design-outsourcing-contract-review-guide.webp",
+    "imageAlt": "Visual guide for The Essential Guide to Website Design Outsourcing Contract Review"
+  },
+  "blog/wdo02-post-launch-fix-queue-08": {
+    "image": "/images/blog/wdo02-post-launch-fix-queue-08.webp",
+    "imageAlt": "Visual guide for Prepare post-launch fix queue work for launch without a scramble"
+  },
+  "blog/wdo02-content-handoff-03": {
+    "image": "/images/blog/wdo02-content-handoff-03.webp",
+    "imageAlt": "Visual guide for Cut rework at the content handoff handoff with a two-field check"
+  },
+  "blog/wdo-vendor-onboarding-packet": {
+    "image": "/daily27/websitedesignoutsource/wdo-vendor-onboarding-packet.webp",
+    "imageAlt": "Visual guide for Build an Outsourced Website Design And Delivery Vendor Onboarding Evidence Packet"
+  },
+  "blog/wdo-recurring-report-reconciliation": {
+    "image": "/daily26/websitedesignoutsource/wdo-recurring-report-reconciliation.webp",
+    "imageAlt": "Visual guide for Reconcile Recurring Outsourced Website Design And Delivery Reports Before Release"
+  },
+  "blog/form-notification-recipient-verification": {
+    "image": "/oct22-heroes/form-notification-recipient-verification.webp",
+    "imageAlt": "Visual guide for Verify Form Notification Recipients Before Go-Live"
+  },
+  "blog/how-to-set-a-maintenance-retainer-boundary-between-fixes-and-new-features": {
+    "image": "/images/blog/nov11/how-to-set-a-maintenance-retainer-boundary-between-fixes-and-new-features.jpg",
+    "imageAlt": "Visual guide for How to Set a Maintenance Retainer Boundary Between Fixes and New Features"
+  },
+  "blog/wdo-customer-rep-handoff": {
+    "image": "/daily27/websitedesignoutsource/wdo-customer-rep-handoff.webp",
+    "imageAlt": "Visual guide for Hand Off an Outsourced Website Design And Delivery Customer After a Rep Change"
+  },
+  "blog/wdo-quality-sample": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Run an Outsourced Website Design And Delivery Quality Sample That Changes the"
+  },
+  "blog/wdo-role-change-handover": {
+    "image": "/daily26/websitedesignoutsource/wdo-role-change-handover.webp",
+    "imageAlt": "Visual guide for Keep the Outsourced Website Design And Delivery Handover Intact Through a Role Change"
+  },
+  "blog/wdo-calendar-conflict-rules": {
+    "image": "/daily26/websitedesignoutsource/wdo-calendar-conflict-rules.webp",
+    "imageAlt": "Visual guide for Write Calendar Conflict Rules for Outsourced Website Design And Delivery Support"
+  },
+  "blog/wdo02-design-brief-queue-09": {
+    "image": "/images/blog/wdo02-design-brief-queue-09.webp",
+    "imageAlt": "Visual guide for Coach a designer through a design brief queue near miss"
+  },
+  "blog/outsourced-website-viewport-safe-area-acceptance": {
+    "image": "/oct13-heroes/outsourced-website-viewport-safe-area-acceptance.webp",
+    "imageAlt": "Visual guide for Accept Viewport Safe Areas Across Notched and Foldable Screens"
+  },
+  "blog/wdo-sampling-ai-assisted": {
+    "image": "/daily26/websitedesignoutsource/wdo-sampling-ai-assisted.webp",
+    "imageAlt": "Visual guide for Sample AI-Assisted Outsourced Website Design And Delivery Work Without Guessing"
+  },
+  "blog/wdo02-accessibility-review-05": {
+    "image": "/images/blog/wdo02-accessibility-review-05.webp",
+    "imageAlt": "Visual guide for Sample accessibility review quality weekly, not only volume"
+  },
+  "blog/how-to-retire-an-abandoned-wordpress-plugin-in-outsourced-website-maintenance": {
+    "image": "/images/blog/nov09/how-to-retire-an-abandoned-wordpress-plugin-in-outsourced-website-maintenance.jpg",
+    "imageAlt": "Visual guide for How to Retire an Abandoned WordPress Plugin in Outsourced Website Maintenance"
+  },
+  "blog/outsourced-web-component-slot-content-handoff": {
+    "image": "/oct13-heroes/outsourced-web-component-slot-content-handoff.webp",
+    "imageAlt": "Visual guide for Handoff Slotted Web Component Content With Clear Ownership"
+  },
+  "blog/wdo-audit-pack": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Build an Outsourced Website Design And Delivery Audit Pack Before Anyone Asks"
+  },
+  "blog/wdo02-wireframe-approval-02": {
+    "image": "/images/blog/wdo02-wireframe-approval-02.webp",
+    "imageAlt": "Visual guide for Write the wireframe approval intake note that survives a review"
+  },
+  "blog/wdo02-content-handoff-queue-11": {
+    "image": "/images/blog/wdo02-content-handoff-queue-11.webp",
+    "imageAlt": "Visual guide for Turn a content handoff queue backlog into a dated work plan"
+  },
+  "blog/wdo-meeting-followup": {
+    "image": "/daily27/websitedesignoutsource/wdo-meeting-followup.webp",
+    "imageAlt": "Visual guide for Keep Outsourced Website Design And Delivery Meeting Follow-Ups With One Owner"
+  },
+  "blog/wdo-evidence-aged-backlog": {
+    "image": "/daily26/websitedesignoutsource/wdo-evidence-aged-backlog.webp",
+    "imageAlt": "Visual guide for Triage an Aged Outsourced Website Design And Delivery Backlog by Evidence Quality"
+  },
+  "blog/cookie-preference-withdrawal-evidence": {
+    "image": "/oct22-heroes/cookie-preference-withdrawal-evidence.webp",
+    "imageAlt": "Visual guide for Record Cookie Preference Withdrawals Without Ambiguity"
+  },
+  "blog/wdo-metric-definition": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Define Outsourced Website Design And Delivery Metrics Before You Report Them"
+  },
+  "blog/a-revision-budget-check-before-an-offshore-design-sprint": {
+    "image": "/images/blog/nov04/a-revision-budget-check-before-an-offshore-design-sprint.jpg",
+    "imageAlt": "Visual guide for A Revision Budget Check Before an Offshore Design Sprint"
+  },
+  "blog/wdo-weekly-brief": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Write a Weekly Outsourced Website Design And Delivery Owner Brief From Queue"
+  },
+  "blog/website-design-outsourcing-post-launch-support": {
+    "image": "/aug20-heroes/website-design-outsourcing-post-launch-support.webp",
+    "imageAlt": "Visual guide for Beyond Launch: The Critical Role of Post-Launch Support in Website Design Outsourcing"
+  },
+  "blog/wdo-risk-register": {
+    "image": "/daily27/websitedesignoutsource/wdo-risk-register.webp",
+    "imageAlt": "Visual guide for Turn the Outsourced Website Design And Delivery Risk Register Into a Monthly Decision"
+  },
+  "blog/wdo-retention-disposal": {
+    "image": "/daily27/websitedesignoutsource/wdo-retention-disposal.webp",
+    "imageAlt": "Visual guide for Put Outsourced Website Design And Delivery Records on a Retention and Disposal Schedule"
+  },
+  "blog/font-licence-handoff": {
+    "image": "/oct22-heroes/font-licence-handoff.webp",
+    "imageAlt": "Visual guide for Hand Off Font Licences With the Production Build"
+  },
+  "blog/third-party-embed-consent-placeholder": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Gate Third-Party Embeds Behind a Consent Placeholder"
+  },
+  "blog/staging-noindex-verification": {
+    "image": "/oct22-heroes/staging-noindex-verification.webp",
+    "imageAlt": "Visual guide for Verify Staging Noindex Controls Before Sharing a Preview"
+  },
+  "blog/wdo-cross-training-map": {
+    "image": "/daily27/websitedesignoutsource/wdo-cross-training-map.webp",
+    "imageAlt": "Visual guide for Map Cross-Training Coverage for Outsourced Website Design And Delivery Work"
+  },
+  "blog/website-design-handoff-acceptance-log": {
+    "image": "/aug19-heroes/website-design-handoff-acceptance-log.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Handoff Acceptance Log"
+  },
+  "blog/wdo-access-recertification": {
+    "image": "/daily27/websitedesignoutsource/wdo-access-recertification.webp",
+    "imageAlt": "Visual guide for Run an Outsourced Website Design And Delivery Access Recertification Campaign"
+  },
+  "blog/wdo-documentation-drift": {
+    "image": "/daily27/websitedesignoutsource/wdo-documentation-drift.webp",
+    "imageAlt": "Visual guide for Audit Outsourced Website Design And Delivery Documentation Drift Before It Bites"
+  },
+  "blog/outsourced-website-form-draft-recovery-brief": {
+    "image": "/oct13-heroes/outsourced-website-form-draft-recovery-brief.webp",
+    "imageAlt": "Visual guide for Brief Form Draft Recovery Before Outsourced Implementation"
+  },
+  "blog/image-alt-text-cms-review": {
+    "image": "/oct22-heroes/image-alt-text-cms-review.webp",
+    "imageAlt": "Visual guide for Review Image Alt Text at the CMS Entry Point"
+  },
+  "blog/outsourced-website-autofill-token-acceptance": {
+    "image": "/oct12-heroes/outsourced-website-autofill-token-acceptance.webp",
+    "imageAlt": "Visual guide for Autofill Token Acceptance for Website Forms"
+  },
+  "blog/wdo-onboarding-plan": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Onboard an Outsourced Website Design And Delivery Assistant in Small, Checkable"
+  },
+  "blog/wdo-access-boundary": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Set the Outsourced Website Design And Delivery Access Boundary Before Day One"
+  },
+  "blog/how-to-prepare-a-client-website-for-a-holiday-change-freeze": {
+    "image": "/images/blog/nov10/how-to-prepare-a-client-website-for-a-holiday-change-freeze.jpg",
+    "imageAlt": "Visual guide for How to Prepare a Client Website for a Holiday Change Freeze"
+  },
+  "blog/website-design-source-of-truth-map": {
+    "image": "/aug19-heroes/website-design-source-of-truth-map.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Source of Truth Map"
+  },
+  "blog/wdo-decision-log": {
+    "image": "/daily26/websitedesignoutsource/wdo-decision-log.webp",
+    "imageAlt": "Visual guide for Turn Outsourced Website Design And Delivery Decisions Into a Traceable Log"
+  },
+  "blog/a-review-calendar-check-before-an-outsourced-website-sprint": {
+    "image": "/images/blog/nov05/a-review-calendar-check-before-an-outsourced-website-sprint.jpg",
+    "imageAlt": "Visual guide for A Review Calendar Check Before an Outsourced Website Sprint"
+  },
+  "blog/website-design-access-recertification-review": {
+    "image": "/aug19-heroes/website-design-access-recertification-review.webp",
+    "imageAlt": "Visual guide for Website Design Operations: Access Recertification Review"
+  },
+  "blog/website-design-outsourcing-client-onboarding": {
+    "image": "/aug20-heroes/website-design-outsourcing-client-onboarding.webp",
+    "imageAlt": "Visual guide for Mastering Client Onboarding for Website Design Outsourcing Success"
+  },
+  "blog/wdo-duplicate-payment-prevention": {
+    "image": "/daily27/websitedesignoutsource/wdo-duplicate-payment-prevention.webp",
+    "imageAlt": "Visual guide for Prevent Duplicate Outsourced Website Design And Delivery Payments Before Release"
+  },
+  "blog/wdo-sla-review": {
+    "image": "/daily27/websitedesignoutsource/wdo-sla-review.webp",
+    "imageAlt": "Visual guide for Review Outsourced Website Design And Delivery SLAs With Exception Evidence"
+  },
+  "blog/cms-role-matrix-acceptance": {
+    "image": "/oct22-heroes/cms-role-matrix-acceptance.webp",
+    "imageAlt": "Visual guide for Accept a CMS Role Matrix With Real Editorial Tasks"
+  },
+  "blog/wdo-shared-inbox-map": {
+    "image": "/daily26/websitedesignoutsource/wdo-shared-inbox-map.webp",
+    "imageAlt": "Visual guide for Map Shared Inbox Ownership for Outsourced Website Design And Delivery Work"
+  },
+  "blog/outsourced-website-language-switcher-state-handoff": {
+    "image": "/oct13-heroes/outsourced-website-language-switcher-state-handoff.webp",
+    "imageAlt": "Visual guide for Handoff Language Switcher State Without Losing Visitor Context"
+  },
+  "blog/wdo-exception-path": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Write the Outsourced Website Design And Delivery Exception Path Before Volume"
+  },
+  "blog/wdo-document-expiry-watch": {
+    "image": "/daily26/websitedesignoutsource/wdo-document-expiry-watch.webp",
+    "imageAlt": "Visual guide for Put Outsourced Website Design And Delivery Document Expiry on a Review Clock"
+  },
+  "blog/analytics-event-naming-migration": {
+    "image": "/oct22-heroes/analytics-event-naming-migration.webp",
+    "imageAlt": "Visual guide for Keep Analytics Event Names Stable Through a Migration"
+  },
+  "blog/wdo-escalation-log": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Keep an Outsourced Website Design And Delivery Escalation Log That Moves Work"
+  },
+  "blog/a-post-maintenance-smoke-test-for-an-outsourced-website-fix": {
+    "image": "/images/blog/nov07/a-post-maintenance-smoke-test-for-an-outsourced-website-fix.jpg",
+    "imageAlt": "Visual guide for A Post-Maintenance Smoke Test for an Outsourced Website Fix"
+  },
+  "blog/outsourced-website-motion-pause-control-handoff": {
+    "image": "/oct12-heroes/outsourced-website-motion-pause-control-handoff.webp",
+    "imageAlt": "Visual guide for Motion Pause Control Handoff for Website Design"
+  },
+  "blog/wdo-handoff-record": {
+    "image": "/oct22-heroes/third-party-embed-consent-placeholder.webp",
+    "imageAlt": "Visual guide for Make the Outsourced Website Design And Delivery Handoff Survive a Second Reviewer"
+  },
+  "blog/website-design-outsourcing-communication-cadence": {
+    "image": "/aug20-heroes/website-design-outsourcing-communication-cadence.webp",
+    "imageAlt": "Visual guide for Mastering Your Outsourced Website Design: The Power of Communication Cadence"
+  },
+  "blog/outsourced-website-password-manager-form-review": {
+    "image": "/oct12-heroes/outsourced-website-password-manager-form-review.webp",
+    "imageAlt": "Visual guide for Password Manager Form Review in Outsourced Design"
+  },
+  "blog/outsourced-website-maintenance-mode-escape-route": {
+    "image": "/oct13-heroes/outsourced-website-maintenance-mode-escape-route.webp",
+    "imageAlt": "Visual guide for Plan a Maintenance Mode Escape Route Before Release"
+  },
+  "research/outsourced-website-content-approval-bottleneck-evidence": {
+    "image": "/research-heroes/2026-08-21/content-approval-bottlenecks.png",
+    "imageAlt": "Visual guide for Where Do Content Approvals Stall an Outsourced Website Redesign?"
+  },
+  "research/css-container-query-handoff-research": {
+    "image": "/oct12-heroes/css-container-query-handoff-research.webp",
+    "imageAlt": "Visual guide for CSS Container Query Handoff Research"
+  },
+  "research/website-client-hints-privacy-research": {
+    "image": "/oct13-heroes/website-client-hints-privacy-research.webp",
+    "imageAlt": "Visual guide for Client Hints Privacy Boundaries for Outsourced Websites"
+  },
+  "research/website-design-access-governance-research": {
+    "image": "/aug19-heroes/website-design-access-governance-research.webp",
+    "imageAlt": "Visual guide for Research Brief: Website Design Operations Access Governance"
+  },
+  "research/outsourced-website-review-comment-reproducibility": {
+    "image": "/research-heroes/2026-08-21/review-comment-reproducibility.png",
+    "imageAlt": "Visual guide for Can Two Reviewers Reproduce the Same Outsourced Website Design Finding?"
+  },
+  "research/outsourced-website-responsive-viewport-sampling-study": {
+    "image": "/research-heroes/2026-08-21/responsive-viewport-sampling.png",
+    "imageAlt": "Visual guide for How Much Viewport Sampling Finds Responsive Website Design Defects?"
+  },
+  "research/wdo-escalation-wait": {
+    "image": "/daily27/websitedesignoutsource/wdo-escalation-wait.webp",
+    "imageAlt": "Visual guide for Where Does Outsourced Website Design And Delivery Escalation Time Go?"
+  },
+  "research/wdo02-wireframe-approval-research-02": {
+    "image": "/images/research/wdo02-wireframe-approval-research-02.webp",
+    "imageAlt": "Visual guide for Where does delay accumulate in the wireframe approval handoff?"
+  },
+  "research/auditing-whether-outsourced-website-quotes-state-the-assumptions-behind-each-price": {
+    "image": "/images/research/nov11/auditing-whether-outsourced-website-quotes-state-the-assumptions-behind-each-price.jpg",
+    "imageAlt": "Visual guide for Auditing Whether Outsourced Website Quotes State the Assumptions Behind Each Price"
+  },
+  "research/testing-whether-maintenance-change-logs-name-the-routes-that-were-retested": {
+    "image": "/images/research/nov09/testing-whether-maintenance-change-logs-name-the-routes-that-were-retested.jpg",
+    "imageAlt": "Visual guide for Testing Whether Maintenance Change Logs Name the Routes That Were Retested"
+  },
+  "research/measuring-review-queue-collisions-across-outsourced-website-projects": {
+    "image": "/images/research/nov05/measuring-review-queue-collisions-across-outsourced-website-projects.jpg",
+    "imageAlt": "Visual guide for Measuring Review Queue Collisions Across Outsourced Website Projects"
+  },
+  "research/wdo-vendor-cycle": {
+    "image": "/daily27/websitedesignoutsource/wdo-vendor-cycle.webp",
+    "imageAlt": "Visual guide for How Complete Is the Outsourced Website Design And Delivery Vendor Onboarding Packet at First Review?"
+  },
+  "research/website-sri-third-party-asset-research": {
+    "image": "/oct13-heroes/website-sri-third-party-asset-research.webp",
+    "imageAlt": "Visual guide for Subresource Integrity Coverage for Third-Party Website Assets"
+  },
+  "research/testing-whether-staging-screenshots-match-the-approved-breakpoint-set": {
+    "image": "/images/research/nov04/testing-whether-staging-screenshots-match-the-approved-breakpoint-set.jpg",
+    "imageAlt": "Visual guide for Testing Whether Staging Screenshots Match the Approved Breakpoint Set"
+  },
+  "research/website-design-outsourcing-accessibility-compliance-research": {
+    "image": "/aug20-heroes/website-design-outsourcing-accessibility-compliance-research.webp",
+    "imageAlt": "Visual guide for Website Design Outsourcing Accessibility Compliance Research: Navigating Global Standards and Strategic Implementation"
+  },
+  "research/auditing-how-quickly-an-outsourced-website-vendor-acknowledges-a-critical-outage": {
+    "image": "/images/research/nov12/auditing-how-quickly-an-outsourced-website-vendor-acknowledges-a-critical-outage.jpg",
+    "imageAlt": "Visual guide for Auditing How Quickly an Outsourced Website Vendor Acknowledges a Critical Outage"
+  },
+  "research/website-design-source-quality-evidence-research": {
+    "image": "/aug19-heroes/website-design-source-quality-evidence-research.webp",
+    "imageAlt": "Visual guide for Research Brief: Website Design Operations Source Quality Evidence"
+  },
+  "research/wdo03-research-staging-signoff-match": {
+    "image": "/images/research/wdo03-research-staging-signoff-match.webp",
+    "imageAlt": "Visual guide for Testing whether staging signoff screenshots match the deployed page"
+  },
+  "research/redirect-map-verification-study": {
+    "image": "/oct22-heroes/redirect-map-verification-study.webp",
+    "imageAlt": "Visual guide for Redirect Map Verification Study"
+  },
+  "research/wdo-capacity-error": {
+    "image": "/daily27/websitedesignoutsource/wdo-capacity-error.webp",
+    "imageAlt": "Visual guide for How Accurate Is Outsourced Website Design And Delivery Capacity Forecasting?"
+  },
+  "research/website-live-region-announcement-reliability": {
+    "image": "/oct13-heroes/website-live-region-announcement-reliability.webp",
+    "imageAlt": "Visual guide for Live Region Announcement Reliability in Dynamic Interfaces"
+  },
+  "research/measuring-how-much-maintenance-effort-goes-to-repeat-repairs-on-the-same-component": {
+    "image": "/images/research/nov09/measuring-how-much-maintenance-effort-goes-to-repeat-repairs-on-the-same-component.jpg",
+    "imageAlt": "Visual guide for Measuring How Much Maintenance Effort Goes to Repeat Repairs on the Same Component"
+  },
+  "research/testing-whether-maintenance-handoffs-preserve-the-original-defect-report": {
+    "image": "/images/research/nov10/testing-whether-maintenance-handoffs-preserve-the-original-defect-report.jpg",
+    "imageAlt": "Visual guide for Testing Whether Maintenance Handoffs Preserve the Original Defect Report"
+  },
+  "research/cms-role-drift-study": {
+    "image": "/oct22-heroes/cms-role-drift-study.webp",
+    "imageAlt": "Visual guide for CMS Role Drift Study"
+  },
+  "research/wdo-document-expiry-risk": {
+    "image": "/daily26/websitedesignoutsource/wdo-document-expiry-risk.webp",
+    "imageAlt": "Visual guide for What Share of Outsourced Website Design And Delivery Documents Reach Expiry Without a Review?"
+  },
+  "research/website-design-exception-aging-patterns-research": {
+    "image": "/aug19-heroes/website-design-exception-aging-patterns-research.webp",
+    "imageAlt": "Visual guide for Research Brief: Website Design Operations Exception Aging Patterns"
+  },
+  "research/wcag-focus-not-obscured-design-research": {
+    "image": "/oct12-heroes/wcag-focus-not-obscured-design-research.webp",
+    "imageAlt": "Visual guide for Focus Not Obscured Design Research"
+  },
+  "research/wdo02-design-brief-intake-research-01": {
+    "image": "/images/research/wdo02-design-brief-intake-research-01.webp",
+    "imageAlt": "Visual guide for How complete is the evidence in the design brief intake record?"
+  },
+  "research/testing-whether-maintenance-estimates-separate-diagnosis-time-from-repair-time": {
+    "image": "/images/research/nov10/testing-whether-maintenance-estimates-separate-diagnosis-time-from-repair-time.jpg",
+    "imageAlt": "Visual guide for Testing Whether Maintenance Estimates Separate Diagnosis Time From Repair Time"
+  },
+  "research/measuring-the-blast-radius-of-shared-template-changes-in-website-maintenance": {
+    "image": "/images/research/nov08/measuring-the-blast-radius-of-shared-template-changes-in-website-maintenance.jpg",
+    "imageAlt": "Visual guide for Measuring the Blast Radius of Shared Template Changes in Website Maintenance"
+  },
+  "research/testing-whether-client-review-notes-name-a-specific-page-element": {
+    "image": "/images/research/nov06/testing-whether-client-review-notes-name-a-specific-page-element.jpg",
+    "imageAlt": "Visual guide for Testing Whether Client Review Notes Name a Specific Page Element"
+  },
+  "research/wdo02-qa-signoff-research-04": {
+    "image": "/images/research/wdo02-qa-signoff-research-04.webp",
+    "imageAlt": "Visual guide for What happens to QA signoff coverage when the owner is away?"
+  },
+  "research/core-web-vitals-inp-handoff-research": {
+    "image": "/oct12-heroes/core-web-vitals-inp-handoff-research.webp",
+    "imageAlt": "Visual guide for Interaction to Next Paint Handoff Research"
+  },
+  "research/wdo02-content-handoff-research-03": {
+    "image": "/images/research/wdo02-content-handoff-research-03.webp",
+    "imageAlt": "Visual guide for How old are the exceptions in the content handoff queue?"
+  },
+  "research/measuring-how-long-an-approved-maintenance-fix-waits-for-release": {
+    "image": "/images/research/nov07/measuring-how-long-an-approved-maintenance-fix-waits-for-release.jpg",
+    "imageAlt": "Visual guide for Measuring How Long an Approved Maintenance Fix Waits for Release"
+  },
+  "research/website-design-outsourcing-vendor-lock-in-risks-research": {
+    "image": "/aug20-heroes/website-design-outsourcing-vendor-lock-in-risks-research.webp",
+    "imageAlt": "Visual guide for Unlocking Agility: Research into Website Design Outsourcing Vendor Lock-In Risks"
+  },
+  "research/testing-whether-client-signoff-dates-match-the-production-queue": {
+    "image": "/images/research/nov05/testing-whether-client-signoff-dates-match-the-production-queue.jpg",
+    "imageAlt": "Visual guide for Testing Whether Client Signoff Dates Match the Production Queue"
+  },
+  "research/form-notification-delivery-study": {
+    "image": "/oct22-heroes/form-notification-delivery-study.webp",
+    "imageAlt": "Visual guide for Form Notification Delivery Study"
+  },
+  "research/wdo-duplicate-request-rate": {
+    "image": "/daily26/websitedesignoutsource/wdo-duplicate-request-rate.webp",
+    "imageAlt": "Visual guide for How Often Do Duplicate Requests Enter the Outsourced Website Design And Delivery Queue?"
+  },
+  "research/website-design-outsourcing-data-privacy-regulations-research": {
+    "image": "/aug20-heroes/website-design-outsourcing-data-privacy-regulations-research.webp",
+    "imageAlt": "Visual guide for Navigating Global Data Privacy: A Research Outlook for Website Design Outsourcing"
+  },
+  "research/testing-whether-maintenance-tickets-name-the-affected-page-template": {
+    "image": "/images/research/nov07/testing-whether-maintenance-tickets-name-the-affected-page-template.jpg",
+    "imageAlt": "Visual guide for Testing Whether Maintenance Tickets Name the Affected Page Template"
+  },
+  "research/wdo03-research-revision-aging-by-type": {
+    "image": "/images/research/wdo03-research-revision-aging-by-type.webp",
+    "imageAlt": "Visual guide for How old do open design revisions become by change type?"
+  },
+  "research/measuring-revision-concentration-by-page-template": {
+    "image": "/images/research/nov04/measuring-revision-concentration-by-page-template.jpg",
+    "imageAlt": "Visual guide for Measuring Revision Concentration by Page Template"
+  },
+  "research/wdo-aged-backlog-evidence": {
+    "image": "/daily26/websitedesignoutsource/wdo-aged-backlog-evidence.webp",
+    "imageAlt": "Visual guide for How Does Evidence Quality Change Across an Aged Outsourced Website Design And Delivery Backlog?"
+  },
+  "research/preview-link-exposure-study": {
+    "image": "/oct22-heroes/preview-link-exposure-study.webp",
+    "imageAlt": "Visual guide for Preview Link Exposure Study"
+  },
+  "research/wdo-role-change-continuity": {
+    "image": "/daily26/websitedesignoutsource/wdo-role-change-continuity.webp",
+    "imageAlt": "Visual guide for Does Outsourced Website Design And Delivery Handover Quality Survive a Role Change?"
+  },
+  "research/measuring-rework-that-returns-after-an-outsourced-website-handoff": {
+    "image": "/images/research/nov06/measuring-rework-that-returns-after-an-outsourced-website-handoff.jpg",
+    "imageAlt": "Visual guide for Measuring Rework That Returns After an Outsourced Website Handoff"
+  },
+  "research/website-inert-background-dialog-research": {
+    "image": "/oct13-heroes/website-inert-background-dialog-research.webp",
+    "imageAlt": "Visual guide for Inert Background Behavior Behind Website Dialogs"
+  },
+  "research/html-popover-interface-acceptance-research": {
+    "image": "/oct12-heroes/html-popover-interface-acceptance-research.webp",
+    "imageAlt": "Visual guide for HTML Popover Interface Acceptance Research"
+  },
+  "research/outsourced-website-accessibility-defect-escape-study": {
+    "image": "/research-heroes/2026-08-21/accessibility-defect-escape.png",
+    "imageAlt": "Visual guide for Which Accessibility Defects Escape Outsourced Website Design Review?"
+  },
+  "research/website-design-outsourcing-cross-cultural-communication-research": {
+    "image": "/aug20-heroes/website-design-outsourcing-cross-cultural-communication-research.webp",
+    "imageAlt": "Visual guide for Navigating Global Waters: A Cross-Cultural Communication Research on Website Design Outsourcing"
+  },
+  "research/staging-indexation-control-study": {
+    "image": "/oct22-heroes/staging-indexation-control-study.webp",
+    "imageAlt": "Visual guide for Staging Indexation Control Study"
+  },
+  "research/testing-whether-an-outsourced-website-handover-leaves-a-build-the-next-vendor-can-run": {
+    "image": "/images/research/nov12/testing-whether-an-outsourced-website-handover-leaves-a-build-the-next-vendor-can-run.jpg",
+    "imageAlt": "Visual guide for Testing Whether an Outsourced Website Handover Leaves a Build the Next Vendor Can Run"
+  },
+  "research/website-bfcache-reliability-outsourced-research": {
+    "image": "/oct13-heroes/website-bfcache-reliability-outsourced-research.webp",
+    "imageAlt": "Visual guide for Back-Forward Cache Reliability in Outsourced Website Delivery"
+  },
+  "research/outsourced-website-design-decision-provenance-study": {
+    "image": "/research-heroes/2026-08-21/design-decision-provenance.png",
+    "imageAlt": "Visual guide for What Decision Provenance Should an Outsourced Website Handoff Preserve?"
+  },
+  "research/wdo-retention-compliance": {
+    "image": "/daily27/websitedesignoutsource/wdo-retention-compliance.webp",
+    "imageAlt": "Visual guide for Do Outsourced Website Design And Delivery Records Follow the Retention Schedule?"
+  },
+  "research/website-design-review-consistency-research": {
+    "image": "/aug19-heroes/website-design-review-consistency-research.webp",
+    "imageAlt": "Visual guide for Research Brief: Website Design Operations Review Consistency"
+  },
+  "research/wdo02-accessibility-review-research-05": {
+    "image": "/images/research/wdo02-accessibility-review-research-05.webp",
+    "imageAlt": "Visual guide for Can the accessibility review report be reproduced from its sources?"
+  },
+  "research/wdo-cross-training-coverage": {
+    "image": "/daily27/websitedesignoutsource/wdo-cross-training-coverage.webp",
+    "imageAlt": "Visual guide for Does Cross-Training Cover the Outsourced Website Design And Delivery Queue?"
+  },
+  "research/website-design-handoff-reliability-research": {
+    "image": "/aug19-heroes/website-design-handoff-reliability-research.webp",
+    "imageAlt": "Visual guide for Research Brief: Website Design Operations Handoff Reliability"
+  },
+  "research/testing-whether-maintenance-tickets-record-the-browser-and-device-used-to-reproduce-a-defect": {
+    "image": "/images/research/nov11/testing-whether-maintenance-tickets-record-the-browser-and-device-used-to-reproduce-a-defect.jpg",
+    "imageAlt": "Visual guide for Testing Whether Maintenance Tickets Record the Browser and Device Used to Reproduce a Defect"
+  },
+  "research/website-design-outsourcing-agile-methodology-impact-research": {
+    "image": "/aug20-heroes/website-design-outsourcing-agile-methodology-impact-research.webp",
+    "imageAlt": "Visual guide for Website Design Outsourcing: A Deep Dive into Agile Methodology's Transformative Impact"
+  },
+  "research/wdo-shared-inbox-coverage": {
+    "image": "/daily26/websitedesignoutsource/wdo-shared-inbox-coverage.webp",
+    "imageAlt": "Visual guide for Who Owns the Shared Outsourced Website Design And Delivery Inbox at First Response?"
+  },
+  "research/permissions-policy-outsourced-site-research": {
+    "image": "/oct12-heroes/permissions-policy-outsourced-site-research.webp",
+    "imageAlt": "Visual guide for Permissions Policy Research for Outsourced Websites"
+  },
+  "research/testing-whether-maintenance-reports-prove-completed-work-or-only-billed-hours": {
+    "image": "/images/research/nov08/testing-whether-maintenance-reports-prove-completed-work-or-only-billed-hours.jpg",
+    "imageAlt": "Visual guide for Testing Whether Maintenance Reports Prove Completed Work or Only Billed Hours"
+  }
+}

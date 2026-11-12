@@ -8,3 +8,22 @@
 @media(max-width:1100px){.lx-wrap{width:calc(100% - 56px)}.lx-hero-layout{gap:32px}.lx-page h1{font-size:44px}.lx-article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lx-article{padding:24px}.lx-engineering .lx-article{grid-template-columns:140px 1fr;gap:20px}.lx-engineering .lx-article h3{grid-row:auto}.lx-engineering .lx-article>p,.lx-engineering .lx-card-bottom{grid-column:2}.lx-engineering .lx-card-top{grid-row:1/4}.lx-guide-grid{gap:40px}.lx-cta{gap:35px}.lx-strip p{display:none}.lx-tools{padding:20px}.lx-library-heading{gap:30px}.lx-workspace .lx-photo{transform:none;margin:0}.lx-photo img,.lx-engineering .lx-photo img,.lx-wellness .lx-photo img{height:390px}}
 @media(max-width:700px){.lx-wrap{width:calc(100% - 36px)}.lx-hero{padding:32px 0}.lx-page .lx-hero-layout{display:flex;flex-direction:column;gap:28px;align-items:stretch}.lx-page .lx-hero-copy{padding:0;text-align:left}.lx-page h1{font-size:38px;line-height:1.08}.lx-intro{font-size:16px;margin-top:20px!important}.lx-page .lx-actions{justify-content:flex-start;gap:20px}.lx-page .lx-photo{width:100%;padding:0;transform:none}.lx-page .lx-photo img{height:280px;border-radius:0}.lx-wellness .lx-photo img{border-radius:100px 100px 0 0}.lx-conversation .lx-photo img{border-radius:48px 48px 8px 8px}.lx-photo figcaption{padding:12px 0;font-size:10px}.lx-strip{padding:16px 0}.lx-strip>.lx-wrap{gap:15px;font-size:11px}.lx-library{padding-block:44px}.lx-library-heading{display:block}.lx-library-heading>p{margin-top:18px}.lx-page h2{font-size:32px}.lx-tools{flex-direction:column;align-items:stretch;padding:18px;gap:15px}.lx-page .lx-article-grid{grid-template-columns:1fr;gap:20px}.lx-page .lx-article{display:flex;padding:25px;gap:0;border-radius:var(--rf-radius,0)}.lx-studio .lx-article{padding:24px 0}.lx-page .lx-article h3{font-size:25px;margin-bottom:15px}.lx-page .lx-card-top{display:flex;margin-bottom:20px;gap:8px 14px}.lx-page .lx-card-top time{margin:0}.lx-page .lx-article>p{margin-bottom:22px}.lx-page .lx-card-bottom{margin-top:auto}.lx-guide{padding:44px 0}.lx-guide-grid{grid-template-columns:1fr;gap:30px}.lx-guide-title{transform:none!important}.lx-cta{padding-block:44px;display:block}.lx-cta>.lx-button{margin-top:26px}.lx-label{margin-bottom:14px!important}.lx-engineering .lx-article{border-left:3px solid var(--rf-deep)}.lx-page .lx-pagination{gap:6px}.lx-pagination>span{gap:6px}.lx-pagination a,.lx-pagination button{padding:10px 12px;min-width:40px}}
 @media(prefers-reduced-motion:reduce){.lx-page *{animation:none!important;transition:none!important}.lx-page .lx-photo img,.lx-guide-title,.lx-guide-copy{transform:none!important;opacity:1!important}}
+
+/* Article thumbnails stay in their own frame; copy has independent padding. */
+.lx-page .lx-article{padding:0;overflow:hidden;gap:0}
+.lx-page .lx-card-media{display:block;width:100%;aspect-ratio:1200/630;overflow:hidden;background:#e8e9e4;flex-shrink:0;border-bottom:1px solid var(--rf-line);text-decoration:none}
+.lx-page .lx-card-media img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .45s ease}
+.lx-page .lx-card-media:hover img{transform:scale(1.025)}
+.lx-page .lx-card-body{display:flex;flex-direction:column;gap:0;padding:28px;min-width:0;flex:1}
+.lx-page .lx-card-body>p{font-size:14px;line-height:1.7;color:var(--rf-muted);margin-bottom:25px}
+.lx-page .lx-card-body h3{margin-bottom:16px}
+.lx-page .lx-card-body .lx-card-top{display:flex;flex-wrap:wrap;gap:8px 14px;margin-bottom:20px;grid-row:auto}
+.lx-page .lx-card-body .lx-card-top time{margin:0}
+.lx-page .lx-card-body .lx-card-bottom{margin-top:auto}
+.lx-studio .lx-article{background:#fff;border:1px solid var(--rf-line)}
+.lx-page.lx-engineering .lx-article{grid-template-columns:minmax(220px,.8fr) minmax(0,1.6fr);align-items:stretch}
+.lx-page.lx-engineering .lx-card-media{aspect-ratio:auto;height:100%;min-height:230px;border-bottom:0;border-right:1px solid var(--rf-line)}
+.lx-page.lx-engineering .lx-card-media img{object-fit:contain}
+.lx-page.lx-engineering .lx-card-body h3{grid-row:auto}
+@media(max-width:1100px){.lx-page .lx-card-body{padding:24px}.lx-page.lx-engineering .lx-article{grid-template-columns:minmax(200px,.8fr) minmax(0,1.3fr)}}
+@media(max-width:700px){.lx-page .lx-card-body{padding:23px}.lx-page.lx-engineering .lx-article{display:flex;flex-direction:column}.lx-page.lx-engineering .lx-card-media{aspect-ratio:1200/630;min-height:0;height:auto;border-right:0;border-bottom:1px solid var(--rf-line)}.lx-page .lx-card-body h3{font-size:25px}}
