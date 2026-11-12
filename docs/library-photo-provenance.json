@@ -1,0 +1,32 @@
+[
+  {
+    "theme": "studio",
+    "kind": "blog",
+    "id": "6615292",
+    "source": "https://www.pexels.com/photo/person-people-woman-creative-6615292/",
+    "photographer": "Tima Miroshnichenko",
+    "alt": "Designer sketching at her desk in a modern creative office",
+    "license": "https://www.pexels.com/license/",
+    "download": "https://images.pexels.com/photos/6615292/pexels-photo-6615292.jpeg?auto=compress&cs=tinysrgb&w=2200&q=90",
+    "file": "/Users/wrayns/Documents/Codex/2026-11-10/optimization-design-knowledge/work/six-listing-refresh/assets/studio-blog-6615292.webp",
+    "width": 2200,
+    "height": 1467,
+    "sha256": "f202144f78e2f08952af647ccbb1340668bffa3de5e63826c1584972ff84f591",
+    "visual_review": "Reviewed actual photograph in contact sheet on 2026-11-12. No AI rendering or title overlay; subject sharp and suitable for a wide hero."
+  },
+  {
+    "theme": "studio",
+    "kind": "research",
+    "id": "196644",
+    "source": "https://www.pexels.com/photo/notebook-beside-the-iphone-on-table-196644/",
+    "photographer": "picjumbo.com",
+    "alt": "Notebook with hand-drawn website wireframes beside a smartphone",
+    "license": "https://www.pexels.com/license/",
+    "download": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=2200&q=90",
+    "file": "/Users/wrayns/Documents/Codex/2026-11-10/optimization-design-knowledge/work/six-listing-refresh/assets/studio-research-196644.webp",
+    "width": 2200,
+    "height": 1467,
+    "sha256": "347e58075563ab258de6b16635d4e7c210c9d946ca7aa457d6318b51e8fcdff5",
+    "visual_review": "Reviewed actual photograph in contact sheet on 2026-11-12. No AI rendering or title overlay; subject sharp and suitable for a wide hero."
+  }
+]

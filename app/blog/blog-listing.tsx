@@ -1,78 +1,9 @@
-import { FeaturedComparison } from "./FeaturedComparison";
-import { notFound } from "next/navigation";
-import { Header, Footer } from "../components";
-import { blogPosts } from "../data";
-import { contentBlogPosts } from "../content-library";
-const posts = [
-  ...contentBlogPosts,
-  ...blogPosts.filter((p) => !contentBlogPosts.some((c) => c.slug === p.slug)),
-].sort(
-  (a, b) =>
-    ("published" in b ? b.published : "").localeCompare(
-      "published" in a ? a.published : "",
-    ) || a.slug.localeCompare(b.slug),
-);
-const PAGE_SIZE = 20;
-const formatDate = (date: string) =>
-  new Intl.DateTimeFormat("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(`${date}T00:00:00Z`));
-export function BlogListing({ page = 1 }: { page?: number }) {
-  const total = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
-  if (page < 1 || page > total) notFound();
-  const pagePosts = posts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-  return (
-    <>
-      <Header />
-      <main className="fleet-main">
-        <section className="fleet-hero">
-          <div className="container">
-            <p className="eyebrow">Blog</p>
-            <h1>Practical guides for outsourced website design</h1>
-            <p className="lead">
-              Browse daily production guides with metadata, citations, internal
-              links, and clear next steps.
-            </p>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container">
-            <div className="fleet-card-grid">
-              {pagePosts.map((p) => (
-                <a className="fleet-card" href={`/blog/${p.slug}`} key={p.slug}>
-                  {typeof (p as { image?: string }).image === "string" && (
-                    <img className="fleet-card-image" src={(p as { image?: string }).image} alt={`Thumbnail for ${p.title}`} width="1200" height="630" loading="lazy" />
-                  )}
-                  <h2>{p.title}</h2>
-                  <p>{p.excerpt}</p>
-                  <b>{"minutes" in p ? p.minutes : 8} min read</b>
-                  {"published" in p && typeof p.published === "string" && (
-                    <time dateTime={p.published}>Published {formatDate(p.published)}</time>
-                  )}
-                </a>
-              ))}
-            </div>
-            <nav className="pagination" aria-label="Blog pages">
-              {Array.from({ length: total }, (_, i) => i + 1).map((n) => (
-                <a
-                  className={n === page ? "active" : ""}
-                  aria-current={n === page ? "page" : undefined}
-                  href={n === 1 ? "/blog" : `/blog/page/${n}`}
-                  key={n}
-                >
-                  {n}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </section>
-        {page === 2 && <FeaturedComparison />}
-      </main>
-      <Footer />
-    </>
-  );
-}
-export { PAGE_SIZE };
+import { Header, Footer } from '../components';
+import { Library } from '../library';
+import { normalizePosts } from '../library-normalize';
+import { blogPosts } from '../data';
+import { contentBlogPosts } from '../content-library';
+import { notFound } from 'next/navigation';
+import { FeaturedComparison } from './FeaturedComparison';
+export const PAGE_SIZE=20;
+export function BlogListing({page=1}:{page?:number}){const posts=normalizePosts([...contentBlogPosts,...blogPosts.filter(p=>!contentBlogPosts.some(c=>c.slug===p.slug))]);if(!Number.isInteger(page)||page<1||page>Math.max(1,Math.ceil(posts.length/PAGE_SIZE)))notFound();return <><Header/><main><Library kind="blog" posts={posts} page={page} pageSize={20} archive>{page===2&&<FeaturedComparison/>}</Library></main><Footer/></>;}

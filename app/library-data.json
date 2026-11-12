@@ -1,0 +1,55 @@
+{
+  "theme": "studio",
+  "shortBrand": "Website Design Outsource",
+  "ctaText": "Website design, development, and ongoing production support for agencies and growing businesses. Tell us where your team needs support and we will help define a useful starting point.",
+  "blog": {
+    "title": "Design worth thinking about.",
+    "intro": "Practical notes on briefs, interfaces, accessibility, and the details that turn a promising design into a better live website.",
+    "ribbon": "Design, build, review, refine.",
+    "search": "Search design, accessibility, QA\u2026",
+    "cta": "Turn a useful idea into a better website.",
+    "image": "/library-20261112/studio-blog-6615292.webp",
+    "alt": "Designer sketching at her desk in a modern creative office",
+    "caption": "The Blog \u00b7 Practical reading for Website Design Outsource",
+    "guideTitle": "Make the reading useful.",
+    "guides": [
+      {
+        "title": "Start with a specific workflow",
+        "text": "Choose the task your team is working through today. Use the article to clarify the inputs, the person responsible, and what a useful finished result looks like."
+      },
+      {
+        "title": "Adapt the guidance to your team",
+        "text": "Compare the suggested approach with your current systems, access rules, and review process. Agree on a small change before applying it to the wider operation."
+      },
+      {
+        "title": "Keep the next step visible",
+        "text": "Give the change an owner and a review date. Record what improved, what still needs attention, and the questions to bring to your next team discussion."
+      }
+    ]
+  },
+  "research": {
+    "title": "Better websites. Better evidence.",
+    "intro": "Explore sourced perspectives on web production, usability, performance, and the decisions behind a dependable website.",
+    "ribbon": "Sources for more thoughtful website decisions.",
+    "search": "Search usability, performance, SEO\u2026",
+    "cta": "Turn a useful idea into a better website.",
+    "image": "/library-20261112/studio-research-196644.webp",
+    "alt": "Notebook with hand-drawn website wireframes beside a smartphone",
+    "caption": "Research \u00b7 Sources, context, and operating questions",
+    "guideTitle": "A source is the start of the conversation.",
+    "guides": [
+      {
+        "title": "Open the underlying source",
+        "text": "Follow the references in each brief. Check the original publication date, definitions, population, and geography before using a finding in your own planning."
+      },
+      {
+        "title": "Separate evidence from interpretation",
+        "text": "These briefs synthesize published material and practical operating questions. A bibliography is not evidence of original empirical research or a guarantee of provider performance."
+      },
+      {
+        "title": "Use the limits to ask better questions",
+        "text": "Check whether the finding fits your team, market, and workflow. Bring unresolved questions to the people responsible for the relevant decisions."
+      }
+    ]
+  }
+}

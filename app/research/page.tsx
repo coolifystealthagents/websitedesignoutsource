@@ -1,62 +1,7 @@
-import { Header, Footer } from "../components";
-import { researchPosts } from "../fleet-content";
-import { contentResearchPosts } from "../content-library";
-const formatDate = (date: string) =>
-  new Intl.DateTimeFormat("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(`${date}T00:00:00Z`));
-export const metadata = {
-  title: "Research",
-  description: "Sourced research for outsourced website design.",
-  alternates: { canonical: "/research" },
-};
-export default function Research() {
-  const posts = [
-    ...contentResearchPosts,
-    ...researchPosts.filter(
-      (p) => !contentResearchPosts.some((c) => c.slug === p.slug),
-    ),
-  ].sort(
-    (a, b) =>
-      b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug),
-  );
-  return (
-    <>
-      <Header />
-      <main className="fleet-main">
-        <section className="fleet-hero">
-          <div className="container">
-            <p className="eyebrow">Research library</p>
-            <h1>Research for outsourced website design</h1>
-            <p className="lead">
-              Daily sourced articles covering QA, accessibility, SEO, and
-              reliable website production.
-            </p>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container fleet-card-grid">
-            {posts.map((p) => (
-              <a
-                className="fleet-card"
-                href={`/research/${p.slug}`}
-                key={p.slug}
-              >
-                {typeof (p as { image?: string }).image === "string" && (
-                  <img className="fleet-card-image" src={(p as { image?: string }).image} alt={`Thumbnail for ${p.title}`} width="1200" height="630" loading="lazy" />
-                )}
-                <h2>{p.title}</h2>
-                <p>{p.excerpt}</p>
-                <time dateTime={p.published}>Published {formatDate(p.published)}</time>
-              </a>
-            ))}
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-}
+import { Header, Footer } from '../components';
+import { Library } from '../library';
+import { normalizePosts } from '../library-normalize';
+import { researchPosts } from '../fleet-content';
+import { contentResearchPosts } from '../content-library';
+export const metadata={title:'Research',description:"Explore sourced perspectives on web production, usability, performance, and the decisions behind a dependable website.",alternates:{canonical:'/research'},openGraph:{images:[{url:"/library-20261112/studio-research-196644.webp",alt:"Notebook with hand-drawn website wireframes beside a smartphone"}]}};
+export default function Index(){const posts=normalizePosts([...contentResearchPosts,...researchPosts.filter(p=>!contentResearchPosts.some(c=>c.slug===p.slug))]);const schema={'@context':'https://schema.org','@type':'CollectionPage',name:'Research',url:'https://websitedesignoutsource.com/research',mainEntity:{'@type':'ItemList',itemListElement:posts.map((p,index)=>({'@type':'ListItem',position:index+1,url:`https://websitedesignoutsource.com/research/${p.slug}`,name:p.title}))}};return <><Header/><main><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema).replace(/</g,"\u003c")}}/><Library kind="research" posts={posts}/></main><Footer/></>;}
