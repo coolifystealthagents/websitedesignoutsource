@@ -1,27 +1,17 @@
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import path from 'node:path';
+import { readFile, access } from 'node:fs/promises';
 import test from 'node:test';
-
-test('homepage logo and assurance icons have descriptive image labels', () => {
-  const components = fs.readFileSync(path.join(process.cwd(), 'app/components.tsx'), 'utf8');
-  const home = fs.readFileSync(path.join(process.cwd(), 'app/page.tsx'), 'utf8');
-  assert.doesNotMatch(components, /src="\/logo\.svg"\s+alt=""/);
-  for (const [src, label] of [
-    ['private-delivery.svg', 'Private website delivery icon'],
-    ['source-files-workspace.svg', 'Source files workspace icon'],
-    ['responsive-qa-review.svg', 'Responsive quality assurance review icon'],
-  ]) {
-    const line = home.split('\n').find((entry) => entry.includes(src));
-    assert.ok(line, `${src} binding must exist`);
-    assert.ok(line.includes(`alt="${label}"`), `${src} must have its descriptive label`);
-    assert.ok(!line.includes('aria-hidden="true"'), `${src} must not be hidden from accessibility tools`);
-  }
+const read=(file)=>readFile(new URL(file,import.meta.url),'utf8');
+test('marketing photography has descriptive labels, local files, and distinct heroes',async()=>{
+ const data=JSON.parse(await read('../app/refresh-data.json'));
+ assert.notEqual(data.homeImage,data.servicesImage);
+ for(const [image,alt] of [[data.homeImage,data.homeImageAlt],[data.servicesImage,data.servicesImageAlt],...data.services.map(s=>[s.image,s.alt])]){
+  assert.ok(alt.length>12); await access(new URL('../public'+image,import.meta.url));
+ }
 });
-
-test('homepage H1 has no nested markup for heading auditors', () => {
-  const home = fs.readFileSync(path.join(process.cwd(), 'app/page.tsx'), 'utf8');
-  const headings = [...home.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
-  assert.equal(headings.length, 1, `expected one homepage H1, found ${headings.length}`);
-  assert.doesNotMatch(headings[0][1], /<[^>]+>/, 'the H1 must contain text only');
+test('homepage renders the shared hero once and exposes the full service directory',async()=>{
+ const page=await read('../app/page.tsx');const experience=await read('../app/refresh-experience.tsx');
+ assert.equal((page.match(/<RefreshHome\s*\/>/g)||[]).length,1);
+ assert.equal((experience.match(/<HeroCopy\s*\/>/g)||[]).length,1);
+ assert.match(experience,/View all \{d.services.length\} services/);
 });

@@ -1,0 +1,110 @@
+{
+  "domain": "websitedesignoutsource.com",
+  "brand": "Website Design Outsource",
+  "theme": "studio",
+  "eyebrow": "Your next great website starts here",
+  "headline": "Make room for",
+  "accent": "remarkable work.",
+  "intro": "A dedicated design and development team for the pages you keep meaning to launch. From the first wireframe to the final responsive detail, we help turn your brief into a website worth sharing.",
+  "cta": "Tell us what you\u2019re building",
+  "serviceTitle": "From a first idea to a better live site.",
+  "serviceIntro": "Bring us the part of the website that needs attention. We connect thoughtful interface design with practical production, testing, and a clear handoff.",
+  "storyTitle": "The care is in the details.",
+  "story": "A good-looking first screen is only the beginning. We think through real content, mobile layouts, interaction states, and the way your team will maintain the finished website.",
+  "pillars": [
+    [
+      "A brief with a point of view",
+      "Share the audience, brand, page goals, references, and platform. We turn that context into a focused scope with clear decisions."
+    ],
+    [
+      "Design that survives the build",
+      "Responsive layouts, reusable components, and useful content states keep the original direction intact as the site takes shape."
+    ],
+    [
+      "A handoff you can own",
+      "Your team receives source files, implementation notes, and review evidence in your own workspace. You keep the final approval."
+    ]
+  ],
+  "tags": [
+    "UI design",
+    "Web development",
+    "Responsive QA"
+  ],
+  "footer": "Website design, development, and ongoing production support for agencies and growing businesses.",
+  "homeImage": "/refresh-20261112/13451104.webp",
+  "homeImageAlt": "Graphic designer working on a desktop computer",
+  "servicesImage": "/refresh-20261112/3184357.webp",
+  "servicesImageAlt": "Design team collaborating at computers",
+  "services": [
+    {
+      "slug": "website-ui-design",
+      "title": "Website UI Design",
+      "description": "Design responsive interfaces that give your content a clear hierarchy and your visitors an obvious next step.",
+      "image": "/refresh-20261112/9281786.webp",
+      "alt": "Laptop showing design software in a creative workspace"
+    },
+    {
+      "slug": "nextjs-website-development",
+      "title": "Next.js Website Development",
+      "description": "Build approved page designs into responsive Next.js routes, reusable components, and tested interactions.",
+      "image": "/refresh-20261112/7988742.webp",
+      "alt": "Developers discussing code on a screen"
+    },
+    {
+      "slug": "wordpress-website-builds",
+      "title": "WordPress Website Builds",
+      "description": "Create manageable WordPress pages and templates that fit your content, publishing workflow, and brand.",
+      "image": "/refresh-20261112/8872202.webp",
+      "alt": "A diverse team collaborates in an office meeting, using a laptop and taking notes"
+    },
+    {
+      "slug": "shopify-store-design",
+      "title": "Shopify Store Design",
+      "description": "Shape storefront pages, product layouts, and merchant-editable sections around your approved commerce experience.",
+      "image": "/refresh-20261112/7888760.webp",
+      "alt": "Engaged office team in business discussion around a laptop, fostering collaboration"
+    },
+    {
+      "slug": "landing-page-design",
+      "title": "Landing Page Design",
+      "description": "Turn a campaign brief into a focused page with a clear offer, useful content, and a purposeful call to action.",
+      "image": "/refresh-20261112/7693733.webp",
+      "alt": "Business team analyzing data and charts during a meeting with a laptop on the table"
+    },
+    {
+      "slug": "website-accessibility-remediation",
+      "title": "Website Accessibility Remediation",
+      "description": "Find and repair interface barriers with keyboard, screen-reader, form, and contrast checks.",
+      "image": "/refresh-20261112/6937819.webp",
+      "alt": "Adult using a laptop for video conferencing, taking notes during a remote meeting indoors."
+    },
+    {
+      "slug": "core-web-vitals-optimization",
+      "title": "Core Web Vitals Optimization",
+      "description": "Investigate loading and interaction bottlenecks, then validate targeted performance improvements.",
+      "image": "/refresh-20261112/7693253.webp",
+      "alt": "Diverse business team collaborating in an office, working on laptops and discussing projects."
+    },
+    {
+      "slug": "design-system-production",
+      "title": "Design System Production",
+      "description": "Build the reusable components, styles, and states that help your next page feel like part of the same website.",
+      "image": "/refresh-20261112/12903182.webp",
+      "alt": "A collaborative team working together on laptops in a modern office setting."
+    },
+    {
+      "slug": "website-content-migration",
+      "title": "Website Content Migration",
+      "description": "Move approved content into a new structure with a route inventory, redirect plan, and careful publishing checks.",
+      "image": "/refresh-20261112/9281786.webp",
+      "alt": "Laptop showing design software in a creative workspace"
+    },
+    {
+      "slug": "website-maintenance",
+      "title": "Website Maintenance",
+      "description": "Keep an existing website current through scoped updates, defect fixes, and release checks.",
+      "image": "/refresh-20261112/7988742.webp",
+      "alt": "Developers discussing code on a screen"
+    }
+  ]
+}

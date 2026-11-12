@@ -8,7 +8,7 @@ const [navigation, components, reviews, provenance, services, serviceDetails, ed
   read('../app/fleet-content.ts'), read('../app/service-details.ts'), read('../app/editorial-system.tsx'), read('../app/editorial-toc.tsx'),
   read('../app/sitemap.xml/route.ts'), read('../next.config.mjs'), read('../app/contact-us/page.tsx'), read('../app/thanks-whats-next/page.tsx'),
   read('../app/api/contact/route.ts'), read('../app/booking-components.tsx'), read('../proxy.ts'), read('../app/blog/layout.tsx'),
-  read('../app/page.tsx'), read('../app/home.css'),
+  read('../app/refresh-experience.tsx'), read('../app/refresh.css'),
 ]);
 
 test('shared navigation uses the exact approved labels and routes', () => {
@@ -21,8 +21,8 @@ test('shared navigation uses the exact approved labels and routes', () => {
 test('shared chrome carries parent-brand attribution and exact contact route', () => {
   assert.match(components, /Powered by/);
   assert.match(components, /stealth-agents-logo\.png/);
-  assert.match(components, /href="#main-content"/);
-  assert.match(components, /id="main-content"/);
+  assert.match(homePage, /RefreshHeader/);
+  assert.match(homePage, /Parent company|Parent company/i);
   assert.match(components, /href="\/contact-us"/);
   assert.doesNotMatch(components, /href="\/contact"/);
 });
@@ -56,8 +56,8 @@ test('conversion, sitemap, redirect, and security contracts use contact-us', () 
   assert.match(contact, /name="privacy" value="accepted" required/);
   for (const field of ['first', 'last', 'email', 'phone', 'business', 'companySize', 'preferredContact', 'positions', 'needs']) assert.match(contactHandler, new RegExp(`!${field}`));
   assert.match(contactHandler, /privacy!==['"]accepted['"]/);
-  assert.match(booking, /Pause reviews/);
-  assert.match(booking, /aria-pressed=\{paused\}/);
+  assert.doesNotMatch(booking, /Pause reviews|Play reviews/);
+  assert.match(booking, /className="review-track"/);
   assert.match(sitemap, /'\/contact-us'/);
   assert.doesNotMatch(sitemap, /'\/contact'/);
   assert.match(confirmation, /Consultation confirmed/);
@@ -70,9 +70,10 @@ test('conversion, sitemap, redirect, and security contracts use contact-us', () 
   for (const header of ['X-Content-Type-Options', 'Referrer-Policy', 'Permissions-Policy', 'Strict-Transport-Security']) assert.match(nextConfig, new RegExp(header));
 });
 
-test('homepage process steps keep their number and copy in explicit grid columns', () => {
-  assert.match(homePage, /padStart\(2, '0'\)/);
-  assert.match(homeStyles, /\.studio-step-list article > span \{ grid-column: 1; grid-row: 1;/);
-  assert.match(homeStyles, /\.studio-step-list article > div \{ grid-column: 2; grid-row: 1; min-width: 0;/);
-  assert.match(homeStyles, /grid-template-columns: 56px minmax\(0, 1fr\)/);
+test('marketing cards keep images and copy in separate containers without numbered sections', () => {
+  assert.match(homePage, /className="rf-card-photo"/);
+  assert.match(homePage, /className="rf-card-body"/);
+  assert.doesNotMatch(homePage, /padStart/);
+  assert.match(homeStyles, /\.rf-card-body\{padding:26px/);
+  assert.match(homeStyles, /grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/);
 });

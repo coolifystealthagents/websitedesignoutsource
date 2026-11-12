@@ -1,0 +1,129 @@
+{
+  "homepageHero": {
+    "id": "13451104",
+    "source": "https://www.pexels.com/photo/graphic-designer-working-on-computer-13451104/",
+    "alt": "Graphic designer working on a desktop computer",
+    "photographer": "Jonathan Borba",
+    "license": "https://www.pexels.com/license/",
+    "download": "https://images.pexels.com/photos/13451104/pexels-photo-13451104.jpeg?auto=compress&cs=tinysrgb&w=2000",
+    "width": 2000,
+    "height": 1333,
+    "sha256": "698ce7c8e3e40c8da742d929c8cd71ad11a74f8745f93f8c761b46cf1c966fbb",
+    "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay."
+  },
+  "servicesHero": {
+    "id": "3184357",
+    "source": "https://www.pexels.com/photo/people-working-in-front-of-the-computer-3184357/",
+    "alt": "Design team collaborating at computers",
+    "photographer": "fauxels",
+    "license": "https://www.pexels.com/license/",
+    "download": "https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=2000",
+    "width": 2000,
+    "height": 1335,
+    "sha256": "69e96a1cab60904de380213c8dda6b89022b1efc2bbe8a0a71fb9581d3921801",
+    "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay."
+  },
+  "thumbnailCandidates": [
+    {
+      "id": "9281786",
+      "source": "https://www.pexels.com/photo/graphic-softer-on-laptop-screen-9281786/",
+      "alt": "Laptop showing design software in a creative workspace",
+      "photographer": "",
+      "license": "https://www.pexels.com/license/",
+      "download": "https://images.pexels.com/photos/9281786/pexels-photo-9281786.jpeg?auto=compress&cs=tinysrgb&w=2000",
+      "width": 1334,
+      "height": 2000,
+      "sha256": "75d744dc5c90cd9502f3617bceacd18f419ba57bad8a383bf84af03b9d623903",
+      "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay."
+    },
+    {
+      "id": "7988742",
+      "source": "https://www.pexels.com/photo/men-working-on-a-computer-7988742/",
+      "alt": "Developers discussing code on a screen",
+      "photographer": "Mikhail Nilov",
+      "license": "https://www.pexels.com/license/",
+      "download": "https://images.pexels.com/photos/7988742/pexels-photo-7988742.jpeg?auto=compress&cs=tinysrgb&w=2000",
+      "width": 2000,
+      "height": 1335,
+      "sha256": "f1ebc36557eaa2da212b449e2b6af69041acdbf3e15ee4facb5a5c2777fc50d1",
+      "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay."
+    },
+    {
+      "id": "8872202",
+      "alt": "A diverse team collaborates in an office meeting, using a laptop and taking notes",
+      "source": "https://www.pexels.com/photo/people-in-the-office-having-meeting-while-taking-notes-8872202/",
+      "download": "https://images.pexels.com/photos/8872202/pexels-photo-8872202.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "license": "https://www.pexels.com/license/",
+      "width": 1800,
+      "height": 1202,
+      "sha256": "b1d672159d05e8dec7d6a1c29bacba6bf3fcf6f7c0318d48fbffd7f18d62e27d",
+      "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay.",
+      "objectPosition": "50% 40%"
+    },
+    {
+      "id": "7888760",
+      "alt": "Engaged office team in business discussion around a laptop, fostering collaboration",
+      "source": "https://www.pexels.com/photo/people-in-a-business-meeting-7888760/",
+      "download": "https://images.pexels.com/photos/7888760/pexels-photo-7888760.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "license": "https://www.pexels.com/license/",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "198a31a7cb1b21d09635baaea1189082f37d93fc0bd6599e5ae2ba340502a550",
+      "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay.",
+      "objectPosition": "50% 40%"
+    },
+    {
+      "id": "7693733",
+      "alt": "Business team analyzing data and charts during a meeting with a laptop on the table",
+      "source": "https://www.pexels.com/photo/a-person-using-a-laptop-while-in-a-meeting-7693733/",
+      "download": "https://images.pexels.com/photos/7693733/pexels-photo-7693733.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "license": "https://www.pexels.com/license/",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "f6e749bbcbe82c68a913ec928bff6f9076e5739bf9bd22bcbc9f741579a625f7",
+      "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay.",
+      "objectPosition": "50% 40%"
+    },
+    {
+      "id": "6937819",
+      "alt": "Adult using a laptop for video conferencing, taking notes during a remote meeting indoors.",
+      "source": "https://www.pexels.com/photo/man-taking-notes-while-video-calling-using-a-laptop-6937819/",
+      "photographer": "Diva Plavalaguna",
+      "license": "https://www.pexels.com/license/",
+      "download": "https://images.pexels.com/photos/6937819/pexels-photo-6937819.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "sha256": "ff519b1eb61a3de25f854a86c717c4db20b3feb20d3d39d4651d67f2698ef32c",
+      "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay.",
+      "sourceType": "real stock photography, not presented as StealthAgents staff",
+      "width": 1100,
+      "height": 733
+    },
+    {
+      "id": "7693253",
+      "alt": "Diverse business team collaborating in an office, working on laptops and discussing projects.",
+      "source": "https://www.pexels.com/photo/colleagues-working-inside-the-office-together-7693253/",
+      "photographer": "Yan Krukau",
+      "license": "https://www.pexels.com/license/",
+      "download": "https://images.pexels.com/photos/7693253/pexels-photo-7693253.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "sha256": "f68092734dea88ebb87daf5edf35be0e08a1b188b52cbb5a172edb82c87cf9e0",
+      "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay.",
+      "sourceType": "real stock photography, not presented as StealthAgents staff",
+      "width": 934,
+      "height": 1400
+    },
+    {
+      "id": "12903182",
+      "alt": "A collaborative team working together on laptops in a modern office setting.",
+      "source": "https://www.pexels.com/photo/employees-working-together-in-coworking-office-12903182/",
+      "photographer": "Mizuno K",
+      "license": "https://www.pexels.com/license/",
+      "download": "https://images.pexels.com/photos/12903182/pexels-photo-12903182.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "sha256": "c235375f9c290b1760f6f58ee6d7a315bc682e0ca3bd272f07e688b0bd185d42",
+      "visual_review": "Reviewed in a contact sheet on 2026-11-12: photographic scene with no generated illustration or added title overlay.",
+      "sourceType": "real stock photography, not presented as StealthAgents staff",
+      "width": 934,
+      "height": 1400
+    }
+  ],
+  "usage": "Real illustrative stock photos; do not identify stock subjects as StealthAgents employees. Preserve source aspect ratio, crop with object-fit:cover inside a fixed image frame; place text in a separate padded body.",
+  "recommendedFrame": "Keep the current hero frame ratio. Cards: 16:10 image frame with object-fit cover, then separate padded text body. Never fixed-height text."
+}
