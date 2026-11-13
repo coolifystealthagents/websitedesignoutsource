@@ -1,0 +1,16 @@
+[
+  {
+    "placement": "services hero",
+    "source": "https://www.pexels.com/photo/36765627/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Designers reviewing photographs and colour palettes",
+    "assets": [
+      {
+        "path": "/refresh-20261112/3184357-20261114.webp",
+        "width": 2000,
+        "height": 1335
+      }
+    ],
+    "reason": "Replace a photograph repeated on another portfolio homepage or service hero; preserve the existing display frame."
+  }
+]

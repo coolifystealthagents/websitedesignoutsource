@@ -13,3 +13,35 @@
 
 /* Keep required markers on the label line and pair short fields. */
 .ip-page .ip-form-panel :is(label,.form label){display:block}.ip-page .ip-form-panel label>span[aria-hidden=true]{display:inline}.ip-page .ip-form-panel label>:is(input,select,textarea){margin-top:8px}.ip-page .ip-form-panel form.lead-form>label:not(.form-wide):not(.honeypot){grid-column:auto}.ip-page .ip-form-panel .privacy-check{display:flex}.ip-page .ip-form-panel .sa-phone{margin-top:8px}.ip-page .ip-form-panel .sa-phone :is(input,select){margin-top:0}.ip-engineering .ip-contact-top>.ip-kicker,.ip-conversation .ip-contact-top>.ip-kicker,.ip-wellness .ip-contact-top>.ip-kicker{margin-inline:auto}@media(max-width:760px){.ip-page .ip-form-panel form.lead-form>label{grid-column:1/-1}}
+
+/* Portfolio review: complete desktop booking form above the fold. */
+.ip-contact .ip-booking-hero{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px;align-items:start;padding-block:24px 32px}
+.ip-contact .ip-contact-top{width:auto;max-width:none;margin:0;padding:8px 0;display:block;text-align:left}
+.ip-contact .ip-contact-top .ip-kicker{margin-bottom:12px}
+.ip-contact .ip-contact-top h1{font-size:clamp(34px,3.2vw,48px);line-height:1.12;max-width:18ch;margin:0}
+.ip-contact .ip-contact-top>.ip-lead{font-size:17px;line-height:1.55;margin:18px 0 20px;max-width:46ch}
+.ip-contact .ip-contact-photo{margin-top:24px}
+.ip-contact .ip-contact-photo img{height:230px;width:100%;object-fit:cover}
+.ip-contact .ip-form-panel{padding:20px 24px;margin:0}
+.ip-contact .ip-form-panel>.ip-kicker{margin-bottom:5px}
+.ip-contact .ip-form-panel h2{font-size:25px;line-height:1.2;margin:0}
+.ip-contact .ip-form-intro{margin:8px 0 14px;font-size:13px;line-height:1.45}
+.ip-contact .ip-form-panel form{gap:10px}
+.ip-contact .ip-form-panel :is(.form-grid,.contact-fields,.sa-grid){grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 12px}
+.ip-contact .ip-form-panel :is(label,.form label){font-size:12px;line-height:1.3;gap:4px}
+.ip-contact .ip-form-panel :is(input:not([type=checkbox]):not([type=hidden]),select,textarea){min-height:38px;padding:8px 10px;font-size:14px;line-height:1.35}
+.ip-contact .ip-form-panel textarea{min-height:58px;height:58px}
+.ip-contact .ip-form-panel .privacy-check{font-size:11px;line-height:1.4}
+.ip-contact .ip-form-panel button{min-height:42px;padding:10px 18px;font-size:14px}
+.ip-contact .ip-privacy-note{margin-top:10px!important;font-size:11px;line-height:1.4}
+.ip-contact .ip-preparation{padding-block:32px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.ip-contact .ip-preparation .ip-contact-note{padding:0}
+.ip-contact .ip-preparation h2{font-size:30px;margin-bottom:14px}
+.ip-contact .ip-preparation .ip-list{margin:0}
+@media(min-width:1024px){.ip-contact .ip-form-panel .contact-fields{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.ip-contact .ip-booking-hero{display:flex;flex-direction:column;gap:20px;padding-block:24px}.ip-contact .ip-contact-top{width:100%}.ip-contact .ip-contact-top h1{max-width:24ch;font-size:36px}.ip-contact .ip-contact-photo{display:none}.ip-contact .ip-form-panel{width:100%;padding:20px}.ip-contact .ip-preparation{grid-template-columns:1fr;gap:20px}.ip-contact .ip-form-panel :is(input:not([type=checkbox]):not([type=hidden]),select,textarea){font-size:16px;min-height:44px}.ip-contact .ip-form-panel textarea{height:86px}}
+@media(max-width:440px){.ip-contact .ip-form-panel :is(.form-grid,.contact-fields,.sa-grid){grid-template-columns:1fr 1fr;gap:12px 10px}.ip-contact .ip-form-panel .sa-phone{grid-template-columns:82px minmax(0,1fr)}.ip-contact .ip-form-panel{padding:18px 14px}}
+
+.ip-contact .ip-form-panel form>label:not(.privacy-check):not(.honeypot){grid-column:auto;display:block}.ip-contact .ip-form-panel form>label:has(textarea){grid-column:1/-1}.ip-contact .ip-form-panel label>span[aria-hidden=true]{display:inline}.ip-contact .ip-form-panel label>:is(input,select,textarea){margin-top:4px}.ip-contact .ip-form-panel .form-help{margin:0;font-size:11px;line-height:1.3}.ip-contact .ip-form-panel .form-wide:not(label){grid-column:1/-1}
+
+.ip-page.ip-contact .ip-form-panel form>label:has(input[type=email]){grid-column:1/-1}
