@@ -1,0 +1,92 @@
+---
+title: "Auditing Whether an Outsourced Website Vendor's Incident Postmortem Names a Preventable Cause"
+description: "A document audit for outsourced website incident postmortems, testing whether the record separates the trigger from the cause and assigns a corrective action with an owner."
+slug: "auditing-whether-an-outsourced-website-vendors-incident-postmortem-names-a-preventable-cause"
+published: "2026-11-16"
+updated: "2026-11-16"
+image: "/images/research/nov16/auditing-whether-an-outsourced-website-vendors-incident-postmortem-names-a-preventable-cause.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+When a website goes down, the first question is how quickly service returns. The second is whether the same failure will happen again. This study asks whether the vendor's written postmortem names a preventable cause, rather than only describing the symptoms and the repair. The unit of analysis is one postmortem from an outsourced website maintenance relationship, reviewed against the incident timeline and the corrective actions that followed.
+
+The scope is the document set produced after a customer-facing incident: the postmortem, the incident thread, the monitoring alerts, and the change log. A postmortem that exists only as a verbal briefing is recorded as absent. The audit does not attempt to judge whether the vendor is competent in general. It tests whether this record would let a new engineer prevent a recurrence.
+
+## Why a postmortem is a maintenance artifact
+
+A postmortem is often treated as a communication exercise for the client, written after the pressure has passed. In a maintenance relationship it is also an engineering artifact, because the next fix depends on what the record says about the failure. A document that stops at "the server ran out of memory" gives the next engineer a symptom, not a cause. A document that explains why the memory limit was wrong gives the next engineer something to change.
+
+The distinction matters for renewal and for scope. If postmortems rarely name a preventable cause, the maintenance plan is paying for repeated repair rather than improvement. The [repeat repair measurement](/research/measuring-how-much-maintenance-effort-goes-to-repeat-repairs-on-the-same-component) can show the pattern, while the postmortem explains the mechanism. Read together, the two records turn a complaint about instability into a specific process question.
+
+## Defining a preventable cause
+
+A preventable cause is a condition that the vendor or the client could have changed before the incident. It is not the same as a person to blame. Examples include a certificate renewal that had no calendar owner, a deployment that skipped a staging check, or a third-party script that was never placed behind a failure boundary. The cause must be stated as a condition, not as a character judgment about the engineer on call.
+
+The test is whether the cause points to a change that could be made in a document, a schedule, a configuration, or a review step. "Human error" fails this test because it does not identify what made the error easy. "The deploy checklist had no step for verifying the cache purge" passes, because someone can add the step and test it. Code the document against that standard, not against how satisfying the explanation feels.
+
+## Building the postmortem sample
+
+Start with every incident that met the agreed severity threshold during the observation period. Include incidents that were resolved by a restart as well as those that required a code change, because simple recoveries often hide preventable conditions. Exclude planned maintenance windows and customer-side outages where the vendor had no control. Keep the original postmortem file and the full incident thread for each case.
+
+Record the incident date, duration, affected pages, detection source, and whether the postmortem was delivered within the promised window. Note whether the document was written by the person who handled the incident or by an account manager working from notes. These context fields help explain quality differences without turning the audit into a performance review. They also show whether a thin postmortem is an isolated case or the normal output.
+
+## Coding the timeline against independent evidence
+
+Read the timeline beside the monitoring alerts, the deployment log, and the message thread. Mark each time in the postmortem as supported, contradicted, or unverifiable. A timeline built only from memory is not useless, but it should not be treated as precise. The audit is looking for a sequence that explains how the failure began, how it was detected, and what finally restored service.
+
+Check whether the timeline includes the period before the customer noticed. A postmortem that starts at the first support ticket may miss the deployment or configuration change that created the condition. Look for the last known good state and the first signal that something changed. If the document cannot name either, the cause will usually remain vague.
+
+## Checking whether the cause is specific and testable
+
+A specific cause names the component, the condition, and the mechanism. For example, a form notification failed because the sending domain's authentication record was changed without updating the mail provider. That statement can be checked against the DNS record and the change log. A vague cause such as "email delivery issue" cannot be tested and cannot be prevented with confidence.
+
+Test the cause by asking what would have to be true for the incident not to happen. If the answer is "someone would have noticed", the cause is still a hope rather than a control. If the answer is "the change would have been blocked by a named check", the cause is actionable. Record the test result in the coding sheet and quote the sentence that supports it.
+
+## Separating trigger, cause, and contributing condition
+
+The trigger is the event that started the incident, such as a routine deployment or a certificate expiry. The cause is the condition that allowed the trigger to become an outage, such as a missing rollback step or an unmonitored dependency. The contributing condition is a factor that made detection or recovery slower, such as an alert that went to an unread inbox. A good postmortem names all three without merging them.
+
+Merging the three produces a misleading corrective action. If the team treats the deployment as the cause, it may add more approval without fixing the missing rollback. If it treats the unread inbox as the cause, it may change the alert recipient without fixing the deployment check. Code each element separately so the report can show which part of the record is weak.
+
+## Checking corrective actions, owners, and dates
+
+A preventable cause should produce at least one corrective action that addresses the condition, not just the symptom. The action needs an owner, a due date, and a way to verify completion. "Improve monitoring" is not a corrective action because no one can tell when it is done. "Add a synthetic check for the checkout confirmation page and route it to the on-call rotation by the next release" is testable.
+
+Check whether the corrective actions from earlier postmortems were actually completed before the next incident. A repeated cause with an open action is a stronger finding than a single vague document. The audit can count how many actions are open past their due date, but it should also read the action text to see whether it addresses the stated cause. A completed action that does not match the cause is not evidence of prevention.
+
+## Checking detection and escalation evidence
+
+The postmortem should say how the incident was detected and how it was escalated. Detection can come from monitoring, a customer report, or an internal check, and each source has a different reliability. Record the time from the first signal to the first human acknowledgement, then compare it with the stated support window. A detection gap is often a more useful finding than a slow repair.
+
+Escalation is the path from the first responder to the person with authority to change the system. The document should name the path and any point where it stalled. NIST's incident response guidance treats detection, analysis, containment, and recovery as connected activities, which supports reviewing the handoffs rather than only the final fix. Google's incident management guidance makes a similar point about the value of a clear role structure during a disruption.
+
+## What the postmortem cannot prove
+
+A postmortem is a reconstruction, and a careful writer can make a messy incident sound orderly. The document cannot prove that the stated cause is the only cause, or that the corrective action will work. It also cannot show whether the team learned anything beyond the immediate fix. Treat the record as evidence of what the vendor is willing to commit to, not as a complete account of the failure.
+
+The audit also cannot compare vendors fairly without context. A small site with a single maintainer will produce a different document from a large agency with a dedicated reliability team. Report the project size and the incident severity beside the findings. The goal is to improve the next postmortem, not to rank vendors on a document format they were never asked to use.
+
+## Limitations and threats to validity
+
+The sample comes from one relationship and one observation period, so the findings describe that history. A single severe incident can dominate the impression, and a quiet period can make the process look better than it is. The coding also depends on access to the underlying alerts and logs, which may be incomplete or held by a third party. State the access limits in the report.
+
+Two reviewers should code a sample independently before the full pass. Disagreements often reveal that one reviewer counted a symptom as a cause while the other did not. Resolve the rule with the definitions above, recode the sample, and keep the change log. A transparent method is more valuable than a large sample with inconsistent judgment.
+
+## Reporting and next action
+
+Report one row per incident with the severity, duration, detection source, stated cause, corrective action, owner, due date, and completion status. Add a short note on whether the cause passes the test of being specific and changeable. Summarize the share of postmortems that name a preventable cause and the share of actions completed on time. Keep the raw quotes in an appendix so the summary can be checked.
+
+Agree one change with the vendor and a date to recheck it. A useful first step is a postmortem template that requires a trigger, a cause, a contributing condition, and one testable action with an owner. The [CISA incident response playbooks](https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks) and [NIST SP 800-61 Rev. 3](https://csrc.nist.gov/pubs/sp/800/61/r3/final) provide a public reference for the phases the template should cover. Review the next two postmortems against the template before changing the contract.
+
+## Sources
+
+The sources below describe incident response phases, postmortem practice, and log evidence. They do not report a result for this sample, and each was checked on November 16, 2026. Use them to justify the coding fields, and keep the local incident table separate from these references. They are background for the audit method rather than evidence about any named vendor.
+
+1. [NIST SP 800-61 Rev. 3, Incident Response Recommendations and Considerations for Cybersecurity Risk Management](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
+2. [CISA, Federal Government Cybersecurity Incident and Vulnerability Response Playbooks](https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks)
+3. [Google Site Reliability Engineering, Postmortem Culture: Learning from Failure](https://sre.google/sre-book/postmortem-culture/)
+4. [Google Site Reliability Engineering, Managing Incidents](https://sre.google/sre-book/managing-incidents/)
+5. [NIST SP 800-92, Guide to Computer Security Log Management](https://csrc.nist.gov/pubs/sp/800/92/final)
+6. [CISA, Incident and Vulnerability Response](https://www.cisa.gov/topics/cybersecurity-best-practices/incident-and-vulnerability-response)

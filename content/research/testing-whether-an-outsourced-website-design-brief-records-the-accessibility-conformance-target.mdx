@@ -1,0 +1,86 @@
+---
+title: "Testing Whether an Outsourced Website Design Brief Records the Accessibility Conformance Target"
+description: "A repeatable audit of whether outsourced website design briefs name an accessibility standard, version, level, page scope, and evidence route before production begins."
+slug: "testing-whether-an-outsourced-website-design-brief-records-the-accessibility-conformance-target"
+published: "2026-11-16"
+updated: "2026-11-16"
+image: "/images/research/nov16/testing-whether-an-outsourced-website-design-brief-records-the-accessibility-conformance-target.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+Accessibility is often discussed at the end of a website project, when a reviewer runs a checklist against finished pages. This study asks an earlier question: does the design brief record the conformance target that the finished site is supposed to meet? The unit of analysis is one brief from an outsourced website design or redesign engagement, together with any attached standard, page inventory, or test plan. The scope is the written brief, not the vendor's reputation or the final audit result.
+
+The review looks for six fields: a named standard, a version, a conformance level, a page and component scope, a stated testing method, and an evidence or exception route. Each field must be visible in the document itself. A brief can be long and still leave all six implicit. The method treats an unstated field as missing rather than assuming a reasonable default, because the purpose is to test what a new vendor could act on without asking.
+
+## Why the brief is the right place to record the target
+
+A conformance target is a requirement, and requirements belong where the work is defined. If the target appears only in a contract appendix or a kickoff slide, the designer may never see it while making layout decisions. The brief is the document that travels into wireframes, component specifications, content entry, and acceptance review. Putting the target there gives every later decision a shared reference.
+
+The target also shapes cost and schedule, which makes it a commercial fact rather than a technical detail. A brief that asks for a general commitment to accessibility invites a general answer, while a brief that names a standard and level lets the vendor estimate the testing and remediation effort. That estimate should appear in the proposal. The [accessibility acceptance checklist](/blog/outsourced-website-accessibility-acceptance-checklist) is easier to apply when the brief has already fixed the standard.
+
+## Defining the fields a complete target needs
+
+The first field is the standard, written by name and edition. "Accessibility compliant" is not a standard, and "latest guidelines" is not a version that a reviewer can test against. A usable entry names the standard and the exact version, such as Web Content Accessibility Guidelines 2.2. The version matters because success criteria are added, clarified, and retired between editions.
+
+The second field is the conformance level. Level A, AA, and AAA describe different obligations, and a brief that omits the level leaves the vendor to choose the cheapest interpretation. Most public-facing website briefs name Level AA, but the brief should also say whether any pages or components are held to a higher level. Record the answer as written, then note whether the level applies to the whole site or a subset.
+
+## Building the brief sample
+
+Start with every design brief attached to a website project that reached production during the observation window. Exclude early discovery notes and sales proposals unless the signed brief incorporates them by reference. Read the main document and every appendix that defines requirements, because a target recorded only in an appendix still counts as recorded. Keep the original file and a working copy so the coding can be checked later.
+
+Give each brief an identifier and record its date, project type, page count, and whether an accessibility specialist was named. These context fields help explain differences without turning the study into a vendor ranking. If a brief is a slide deck, export it to a readable format and preserve the slide numbers. A target buried in a speaker note is not visible to the team, so note the location rather than counting it as present.
+
+## Coding the standard, version, and level
+
+Code the standard as present only when the brief names a recognizable published standard. A link to a vendor blog post is not enough, because the linked page can change or disappear. A link to the standard itself is stronger, provided the brief also states the version. Record the version separately so a brief that names the standard but not the edition does not receive full credit.
+
+Code the level as present only when the brief states a level or an equivalent conformance claim. A phrase such as "meets accessibility law" is not a level, because the legal obligation may differ by jurisdiction and entity type. Record the exact wording and whether the brief explains what the level applies to. When the wording is ambiguous, mark it ambiguous and bring it to the reviewer discussion rather than guessing.
+
+## Checking scope across pages, states, and components
+
+A conformance target without scope is easy to satisfy on a homepage and impossible to verify across a large site. Check whether the brief lists the templates, page types, and interactive components in scope. The list should include forms, menus, dialogs, tables, carousels, and any third-party embeds that appear on public pages. If the brief uses a page count, ask whether it refers to unique templates or every published URL.
+
+Check whether the scope includes states that only appear after interaction. Error messages, empty states, loading states, and focus behavior are common places for accessibility defects to hide. A brief that names only default page views has a scope gap even when the standard and level are correct. The target should say whether these states are in scope or explicitly deferred.
+
+## Checking the testing method and evidence
+
+A named standard does not describe how anyone will know whether the site meets it. Look for a testing method that combines automated checks with manual keyboard and screen reader review. Automated tools catch some issues but cannot judge reading order, meaningful link text, or whether a custom widget behaves like its native equivalent. The brief should say which methods are required and who performs them.
+
+Look for the evidence the vendor will deliver. A useful brief asks for a report that lists the pages tested, the success criteria checked, the tools and assistive technologies used, and the defects found. It should also say whether the report covers the pre-launch build or the live site. Without an evidence requirement, the client receives an assurance rather than a record that can be reviewed.
+
+## Checking the exception and remediation route
+
+Some accessibility issues cannot be fixed within the current release, especially when a third-party service controls part of the experience. A mature brief says how exceptions are recorded, who accepts them, and when they must be revisited. The exception record should name the affected page, the success criterion, the reason, the owner, and the target date. An undocumented exception is indistinguishable from an oversight.
+
+The brief should also define what happens when a defect is found after launch. Name the route back into the maintenance queue and the severity rule that decides whether a fix waits for the next release. This connects design acceptance to [post-launch defect triage](/blog/post-launch-defect-triage-for-an-outsourced-website), which is where many accessibility promises quietly expire. The route should be written before the first exception exists.
+
+## What the brief cannot prove
+
+A brief can record intent, but it cannot prove that the delivered site meets the target. A complete brief with a clear standard may still produce an inaccessible build, and a thin brief may be rescued by a careful team. The audit therefore measures the quality of the requirement, not the quality of the website. Keep the two findings separate when reporting to a client or a procurement team.
+
+The brief also cannot capture undocumented decisions made during design reviews. A team may discuss contrast or focus behavior and never update the document. Treat the written record as the evidence and note where verbal agreements are known to exist. If those agreements matter, the correct action is to amend the brief, not to give the document credit for a conversation.
+
+## Limitations and threats to validity
+
+The sample is small and drawn from one site's project history, so the result describes those briefs rather than the wider market. Project size, sector, and the presence of a specialist reviewer can all affect how much detail a brief contains. A brief written for a marketing site may reasonably say less than one written for a public-sector service. Report the context beside the count so the reader can judge comparability.
+
+Coding also depends on the reviewer's familiarity with accessibility standards. Two reviewers should independently code a sample and compare results before the full pass. Disagreements usually point to a vague field definition, such as whether a linked policy counts as a stated standard. Resolve the definition, recode the sample, and record the change so the final count is reproducible.
+
+## Reporting and next action
+
+Report one row per brief with the six fields marked present, partial, or missing, plus a short note on where each answer appears. Summarize how many briefs named a standard and version together, how many stated a level, and how many defined scope and evidence. Add two examples, one complete and one thin, with the identifying details removed. Keep the raw table available for anyone who wants to verify a row.
+
+Agree one change with the design team and a date to recheck it. A common first step is a required brief section with the six fields and a link to the standard, reviewed before the kickoff. The [W3C conformance guidance](https://www.w3.org/WAI/WCAG22/Understanding/conformance) explains why a conformance claim needs a defined scope and evidence, which is the same logic applied to the brief. Repeat the audit after two projects with the same definitions.
+
+## Sources
+
+The sources below define the standard, explain how conformance claims work, and describe public-sector accessibility expectations. They do not report a result for this sample, and each was checked on November 16, 2026. Use them to justify the fields in the audit, and keep the local brief table separate from these references. They are background for the method rather than evidence about any named vendor.
+
+1. [W3C, Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+2. [W3C, Understanding Conformance](https://www.w3.org/WAI/WCAG22/Understanding/conformance)
+3. [ADA.gov, Guidance on Web Accessibility and the ADA](https://www.ada.gov/resources/web-guidance/)
+4. [Section508.gov, Laws and Policies](https://www.section508.gov/manage/laws-and-policies/)
+5. [W3C, Evaluating Web Accessibility Overview](https://www.w3.org/WAI/test-evaluate/)
+6. [GSA, Accessibility Requirements and Testing](https://www.section508.gov/test/)

@@ -730,5 +730,17 @@
   "research/testing-whether-maintenance-reports-prove-completed-work-or-only-billed-hours": {
     "image": "/images/research/nov08/testing-whether-maintenance-reports-prove-completed-work-or-only-billed-hours.jpg",
     "imageAlt": "Visual guide for Testing Whether Maintenance Reports Prove Completed Work or Only Billed Hours"
+  },
+  "blog/how-to-review-the-exclusion-list-in-an-outsourced-website-maintenance-contract": {
+    "image": "/images/blog/nov16/how-to-review-the-exclusion-list-in-an-outsourced-website-maintenance-contract.jpg",
+    "imageAlt": "Visual guide for How to Review the Exclusion List in an Outsourced Website Maintenance Contract"
+  },
+  "research/auditing-whether-an-outsourced-website-vendors-incident-postmortem-names-a-preventable-cause": {
+    "image": "/images/research/nov16/auditing-whether-an-outsourced-website-vendors-incident-postmortem-names-a-preventable-cause.jpg",
+    "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Vendor's Incident Postmortem Names a Preventable Cause"
+  },
+  "research/testing-whether-an-outsourced-website-design-brief-records-the-accessibility-conformance-target": {
+    "image": "/images/research/nov16/testing-whether-an-outsourced-website-design-brief-records-the-accessibility-conformance-target.jpg",
+    "imageAlt": "Visual guide for Testing Whether an Outsourced Website Design Brief Records the Accessibility Conformance Target"
   }
 }
