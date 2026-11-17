@@ -1,0 +1,57 @@
+---
+title: "How to Check an Outsourced Website Vendor's Backup Restore Evidence Before You Need It"
+description: "A practical review of restore records, recovery points, and storage controls so an outsourced website maintenance agreement proves recovery instead of merely promising a nightly copy."
+slug: "how-to-check-an-outsourced-website-vendors-backup-restore-evidence-before-you-need-it"
+published: "2026-11-17"
+updated: "2026-11-17"
+image: "/images/blog/nov17/how-to-check-an-outsourced-website-vendors-backup-restore-evidence-before-you-need-it.jpg"
+category: "outsourced website design operations"
+---
+
+## A backup you have never restored is only a hope
+
+Most maintenance contracts mention backups in a single line, usually a promise that files and databases are copied nightly. That line tells you almost nothing about whether the site can be recovered after a bad plugin update, a deleted page, or a corrupted table. The useful question is not whether backups exist, but whether someone has restored one and recorded what happened. Treat the restore record as the evidence and the schedule as a supporting detail.
+
+A restore test is also a test of the vendor's documentation. If the person who runs it needs to ask you for an account password or a database name, the recovery path depends on knowledge that may be unavailable during an emergency. A written record exposes those dependencies before they matter. Ask for the last restore record at the start of the relationship, not after the first outage.
+
+## Ask for the restore record, not the backup schedule
+
+Request the most recent restore exercise, including the date, the person who performed it, and the environment used. A real record names the backup set that was restored and the point in time it represented. It should also state how long the restore took and whether the result matched the production site. A schedule alone cannot answer any of those questions.
+
+If the vendor has never run a restore, that is a finding rather than a reason to end the conversation. A small site may have backups that were never tested because no one defined the drill. What matters is whether the vendor can run one now, document it, and commit to a repeat interval. The [contingency planning guidance from NIST](https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final) treats testing as part of the plan rather than an optional extra.
+
+## Read the restore log for scope and evidence
+
+Files and databases are separate recovery problems, and a record that covers only one is incomplete. Look for the database dump, the uploads directory, theme or plugin files, and any configuration stored outside the repository. If the site uses a form plugin, a membership plugin, or an ecommerce table, those records must be in the database restore too. A file-only restore can bring back the design while losing every order.
+
+The record should also show how completeness was checked. Row counts, file counts, checksums, and a spot check of key pages are all reasonable evidence. A note that says "restore completed successfully" without a comparison is a status update, not proof. Ask for the check that would have caught a truncated table or a missing image directory. Keep that comparison with the restore note.
+
+## Test a sample restore before you need it
+
+Pick a recent backup and restore it into a staging environment that the vendor controls. Keep the production site untouched and give the test a fixed time box so it does not become an open-ended project. Ask the vendor to show the restored homepage, a deep page, the login screen, and one form submission. That short list catches missing files, broken permalinks, and database tables that were never included.
+
+Record how long the test took from the first command to the working page. Compare that duration with the recovery time your business can tolerate. A restore that works in six hours may still be useless for a store that loses sales every minute. The test gives you a real number instead of a promise in a proposal. That number belongs in the recovery note.
+
+## Check the recovery point against the work you do
+
+The recovery point describes how much recent work you can lose, and it should match how often the site changes. A brochure site updated twice a month may tolerate a daily backup. A store that takes orders all day needs a much shorter interval or point-in-time recovery. Ask the vendor to state the interval in hours, not in vague terms such as "regular."
+
+Then check whether the interval survives a partial failure. A nightly database backup does not help if a plugin deletes uploaded images at noon and the restore rolls back the whole site to midnight. The record should explain whether single-table or single-directory recovery is possible. Where it is not, the vendor should say so plainly and help you plan around the gap.
+
+## Confirm where the copies live and who can delete them
+
+A backup stored on the same server as the website is not a backup against server loss. Ask where the copies are held, whether the storage account is separate, and who holds the credentials. The vendor should be able to restore without access to the production server. If the answer depends on the same login that was compromised, the copy is exposed to the same incident.
+
+Retention matters as much as location. A seven-day window cannot recover a problem that went unnoticed for two weeks. Ask how long daily, weekly, and monthly copies are kept, and whether deletion requires more than one person. The record should name the retention period and the deletion authority so a departing contractor cannot remove the history on the way out.
+
+## Look for the places backups usually miss
+
+Most backup reviews stop at the WordPress database and the uploads folder, which leaves several common gaps. Email forms, CRM integrations, analytics configurations, and redirect rules often live outside the site itself. A restore that brings back the pages but loses the form routing can look successful while silently stopping leads. List every service the site depends on and ask which ones the backup covers.
+
+DNS is another frequent gap. A domain record change, an expired certificate, or a deleted subdomain may not be in the website backup at all. Keep the DNS zone export and the certificate inventory in the same recovery folder as the site backup. The [domain and DNS handoff audit](/research/auditing-whether-an-outsourced-website-vendor-documents-the-handoff-of-domain-and-dns-control) covers that evidence in more detail. Record where that export lives.
+
+## Put the result in the maintenance record
+
+Write a one-page recovery note with the last test date, the backup set used, the time taken, the checks performed, and the next test date. Store it with the contract and the access register so it is available when the usual contact is away. Update it after any major platform change, because a restore that worked before a migration may not work after one. The note should be short enough that a new account manager can read it in five minutes.
+
+Review the note at each quarterly service meeting and after any incident that required a restore. If the test was skipped, record the reason and the new date rather than leaving a blank field. A visible gap is easier to fix than an assumed capability. That habit turns a vague backup clause into a recovery process you can actually rely on.

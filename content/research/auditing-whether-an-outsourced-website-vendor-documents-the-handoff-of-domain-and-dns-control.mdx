@@ -1,0 +1,92 @@
+---
+title: "Auditing Whether an Outsourced Website Vendor Documents the Handoff of Domain and DNS Control"
+description: "A document audit of domain and DNS handoff records in outsourced website maintenance, testing whether the client can renew, edit, transfer, and recover the name without relying on the vendor's memory."
+slug: "auditing-whether-an-outsourced-website-vendor-documents-the-handoff-of-domain-and-dns-control"
+published: "2026-11-17"
+updated: "2026-11-17"
+image: "/images/research/nov17/auditing-whether-an-outsourced-website-vendor-documents-the-handoff-of-domain-and-dns-control.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+A website can be rebuilt from a repository, but the domain name and its DNS zone are usually held somewhere else entirely. This study asks whether an outsourced website vendor documents the handoff of domain and DNS control in a form the client can actually use. The unit of analysis is one handoff record from a design, rebuild, or maintenance relationship, reviewed against the registrar account, the DNS zone, and the renewal records. The record is therefore a governance document, not a technical appendix.
+
+The scope is the written handoff: the account inventory, the credential and recovery record, the DNS export, and any transfer or renewal note. The audit does not test the vendor's technical skill or the site's performance. It tests whether a new maintainer, or the client acting alone, could change a record, renew the name, and recover access without asking the departing vendor for help. That separation between technical delivery and asset control is the core of the audit.
+
+## Why domain and DNS control is a handoff artifact
+
+Domain control is often treated as a purchase rather than an asset with an owner. The vendor buys the name, points it at the host, and renews it quietly for years. That arrangement works until the relationship ends, the invoice changes hands, or the named contact leaves. The handoff record is what turns an informal arrangement into an asset the client can govern.
+
+DNS control is broader than the domain registration. It includes the zone file, the nameservers, the records for email and verification, and the security settings that protect them. A client who owns the registration but cannot edit the zone has partial control at best. The audit therefore treats registrar access and DNS access as separate fields, because one can be handed over while the other is still held by the vendor.
+
+## Defining the minimum handoff record
+
+A complete record names the registrar, the account owner, the registrant contact, and the renewal date. It also names the DNS provider, the nameservers in use, and the location of the zone export. Those six facts are the minimum for a new maintainer to understand where control sits. A record that lists only the registrar leaves the DNS side invisible.
+
+The record should also describe how access is recovered, not only who has it now. That means the recovery email, the backup contact, and any hardware key or authenticator enrolled on the account. It should state whether the domain is locked against transfer and who can unlock it. Finally, it should name the billing owner and the payment method, because an expired card can take a site offline as effectively as a bad deployment.
+
+## Building the document sample
+
+Start with every website project that launched or changed maintainers during the observation window. Include projects where the vendor retained the domain and projects where the client already held it, because both should produce a handoff note. Exclude projects that never had a public domain. Keep the original handoff document, the registrar screenshot, and the DNS export for each case.
+
+Record the project type, the launch date, the registrar, the DNS provider, and whether the client had any account access before the handoff. These fields explain differences without turning the audit into a vendor ranking. They also show whether a missing record is an isolated oversight or the normal practice for a particular account manager. That context keeps the findings comparable across projects of different sizes.
+
+## Coding registrar-level control
+
+Code the registrar field as complete only when the record names the registrar and the account that holds the domain. A reseller arrangement should be recorded as such, because the client may have no direct relationship with the underlying registrar. Check whether the registrant contact is the client's organization or the vendor's. A vendor-owned registrant contact is a risk that should be visible in the report.
+
+Then check the access path. The record should say whether the client has a named user account, a delegated role, or only a promise that the vendor will act on request. A shared login is weaker than a named account because it cannot be revoked individually. Mark the access path as absent when the only entry is a password in an email thread.
+
+## Coding DNS zone and nameserver control
+
+The DNS section should name the provider, the zone name, and the nameservers that the registrar delegates to. Check whether the record includes a zone export with record types, values, and time to live. An export is more useful than a screenshot because it can be compared and reimported. Without it, a migration depends on reading the old provider's interface before access is lost.
+
+Check whether the client can edit the zone directly or must request every change. A client with read-only access can verify a record but cannot fix a broken verification token at short notice. The record should state the access level for each named person and the process for granting a new one. It should also name the person who approves DNS changes, because an unapproved edit can break email for the whole organization.
+
+## Checking DNSSEC and email authentication records
+
+DNSSEC adds a chain of trust that can break a domain if keys are not managed during a provider change. The handoff record should state whether DNSSEC is enabled, where the keys are held, and who is responsible for rotating them. A record that omits DNSSEC can leave a client with a domain that resolves for the vendor but fails for everyone else after a transfer. The [NIST secure DNS deployment guidance](https://csrc.nist.gov/pubs/sp/800/81/r3/final) describes the operational controls that a handoff should preserve.
+
+Email authentication records deserve the same treatment. SPF, DKIM, and DMARC entries are DNS records, and they are often the first thing to break when a zone is rebuilt. The record should list the sending services and the record values, not just a note that email works. Mark the field complete only when the records can be reconstructed from the handoff document alone.
+
+## Checking renewal, billing, and expiry ownership
+
+A domain renewal is a recurring obligation, and the handoff should say who pays, from which account, and by what date. Check whether the record includes the expiry date, the auto-renew setting, and the grace period for the registrar. A name that expires during a vendor transition can enter a redemption period that costs far more than the renewal itself. The [ICANN registrant rights page](https://www.icann.org/resources/pages/registrant-rights-2013-09-16-en) explains the notices and processes a registrant should expect.
+
+The billing owner and the technical owner are not always the same person. The record should name both, along with the backup contact for each. If the vendor's card pays for the domain, the client needs a plan to move billing before the relationship ends. A note that says "vendor manages renewal" is a dependency, not a handoff. Move that dependency into the handoff plan.
+
+## Testing whether the client can actually operate the account
+
+Documents can look complete while access remains untested. Ask the client to log in to the registrar, open the DNS zone, and read one record without vendor assistance. Ask them to locate the renewal date and the transfer lock in the interface. That short exercise reveals whether the documented access path works in practice. A client who can read a record but cannot change it has evidence without control.
+
+Repeat the test for the DNS provider, because registrar access does not guarantee zone access. Check that the client can see the records and, if intended, edit a test record in a controlled way. Record the result as pass, partial, or fail, and note what blocked it. A handoff that fails this test is still a draft, even if the document is well written.
+
+## What the documents cannot prove
+
+A handoff record cannot prove that the client understands the risk of the assets they now control. It also cannot prove that the registrar will honor a recovery request or that the vendor will cooperate after the contract ends. Treat the record as evidence of transferred knowledge, not as a guarantee of future behavior. The test of operation is stronger than any signature on a checklist.
+
+The audit also cannot compare vendors fairly without context. A small client with one domain will need a shorter record than a multi-brand organization with dozens of zones. Report the number of domains and the account structure beside the findings. The goal is a usable handoff, not a document that matches an enterprise template. The report should state which standard it applied and why.
+
+## Limitations and threats to validity
+
+The sample comes from one relationship and one observation period, so the findings describe that history. Registrar interfaces change, and a screenshot taken during the audit may not match the screen a client sees later. Access may be limited by the vendor's cooperation, which can bias the sample toward clients with a cooperative relationship. State those limits in the report.
+
+Two reviewers should code a small overlap sample before the full pass. Disagreements often reveal that one reviewer counted a vendor-held account as client access or treated a DNS screenshot as a zone export. Resolve the rule with the definitions above, recode the sample, and keep the change log. A transparent method is more useful than a large sample with inconsistent judgment.
+
+## Reporting and next action
+
+Report one row per domain with the registrar, registrant contact, account owner, DNS provider, nameservers, DNSSEC status, email authentication records, renewal date, billing owner, and access test result. Add a short note on whether the client could perform the login test unaided. Summarize the share of domains with a complete DNS export and the share with client-held registrar access. Keep the evidence in an appendix so the summary can be checked.
+
+Agree one change with the vendor and a date to recheck it. A useful first step is a one-page domain handoff sheet with the registrar, account owner, recovery contact, DNS provider, nameservers, renewal date, billing owner, and access test date. The [ICANN transfer policy](https://www.icann.org/resources/pages/policy-2012-02-25-en) and [RFC 1034](https://www.rfc-editor.org/rfc/rfc1034) provide public references for the registration and DNS concepts the sheet should cover. Review the next handoff against the sheet before the contract renewal.
+
+## Sources
+
+The sources below describe domain registration policy, registrant rights, and DNS operations. They do not report a result for this sample, and each was checked on November 17, 2026. Use them to justify the coding fields, and keep the local domain table separate from these references. They are background for the audit method rather than evidence about any named vendor.
+
+1. [NIST SP 800-81 Rev. 3, Secure Domain Name System (DNS) Deployment Guide](https://csrc.nist.gov/pubs/sp/800/81/r3/final)
+2. [ICANN, Transfer Policy](https://www.icann.org/resources/pages/policy-2012-02-25-en)
+3. [ICANN, Registrant Rights and Responsibilities](https://www.icann.org/resources/pages/registrant-rights-2013-09-16-en)
+4. [RFC 1034, Domain Names: Concepts and Facilities](https://www.rfc-editor.org/rfc/rfc1034)
+5. [NIST SP 800-53 Rev. 5, Security and Privacy Controls for Information Systems and Organizations](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)
+6. [CISA, Cyber Essentials](https://www.cisa.gov/cyber-essentials)
