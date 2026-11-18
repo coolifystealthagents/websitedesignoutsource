@@ -754,5 +754,17 @@
   "research/auditing-whether-an-outsourced-website-vendor-documents-the-handoff-of-domain-and-dns-control": {
     "image": "/images/research/nov17/auditing-whether-an-outsourced-website-vendor-documents-the-handoff-of-domain-and-dns-control.jpg",
     "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Vendor Documents the Handoff of Domain and DNS Control"
+  },
+  "blog/how-to-review-a-monthly-website-maintenance-report-from-an-outsourced-team": {
+    "image": "/images/blog/nov18/how-to-review-a-monthly-website-maintenance-report-from-an-outsourced-team.jpg",
+    "imageAlt": "Visual guide for How to Review a Monthly Website Maintenance Report From an Outsourced Team"
+  },
+  "research/auditing-whether-an-outsourced-website-maintenance-ticket-records-the-acceptance-test-that-closed-it": {
+    "image": "/images/research/nov18/auditing-whether-an-outsourced-website-maintenance-ticket-records-the-acceptance-test-that-closed-it.jpg",
+    "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Maintenance Ticket Records the Acceptance Test That Closed It"
+  },
+  "research/auditing-whether-an-outsourced-website-accessibility-statement-names-a-feedback-route-and-review-date": {
+    "image": "/images/research/nov18/auditing-whether-an-outsourced-website-accessibility-statement-names-a-feedback-route-and-review-date.jpg",
+    "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Accessibility Statement Names a Feedback Route and Review Date"
   }
 }

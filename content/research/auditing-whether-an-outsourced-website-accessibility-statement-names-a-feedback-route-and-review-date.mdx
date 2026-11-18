@@ -1,0 +1,95 @@
+---
+title: "Auditing Whether an Outsourced Website Accessibility Statement Names a Feedback Route and Review Date"
+description: "A document audit of public accessibility statements, testing whether each one names a conformance target, a working feedback route, a review date, and the known gaps a maintenance team is still fixing."
+slug: "auditing-whether-an-outsourced-website-accessibility-statement-names-a-feedback-route-and-review-date"
+published: "2026-11-18"
+updated: "2026-11-18"
+image: "/images/research/nov18/auditing-whether-an-outsourced-website-accessibility-statement-names-a-feedback-route-and-review-date.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+An accessibility statement is often written once during a launch and then left alone while the site changes underneath it. This audit asks whether a public statement names a conformance target, a feedback route that works, a review date, and the known gaps the maintenance team is still fixing. The unit of analysis is one published statement, read beside the site it describes. The retrieval date is recorded for every page so the result is a snapshot rather than a standing judgment.
+
+The scope is the statement page, its linked policies, and the contact path it offers. The audit does not score the whole site against WCAG, because a statement is a disclosure rather than an audit report. It tests whether the document gives a reader enough information to judge the claim, report a barrier, and see when the position was last checked. Where a statement covers only part of the site, the audit records the boundary as a finding rather than assuming the rest is included.
+
+## Why the statement is an operating document
+
+A statement that says the site "strives to be accessible" tells a reader nothing they can act on. A usable statement names the standard, the level, the pages in scope, the known exceptions, and the person or team that receives feedback. Those details turn a general promise into a set of commitments that a maintenance vendor can be held to. A reader who finds a barrier needs a route they can use, not a slogan about inclusion.
+
+The statement also has an operational use inside the relationship. When a client asks whether an outsourced team is maintaining accessibility, the statement is one of the few public artifacts that shows the target and the last review. If the statement has not changed in two years while the site has gained new templates, the gap is visible to anyone who compares the two. That comparison is the start of the audit.
+
+## Defining the fields the audit expects
+
+The audit uses six fields: conformance target, scope, known limitations, feedback route, response commitment, and review date. The conformance target names a standard and level, such as WCAG 2.2 level AA. The scope says which site, subdomain, or set of pages the claim covers, because an intranet or a separate shop domain may sit outside it. Each field is coded present, partial, or absent, and the coding notes quote the wording that supported the decision.
+
+Known limitations describe barriers the team already knows about, with an alternative route where one exists. The feedback route gives an email address, form, or phone number that a person can actually use. The response commitment says what happens after a report arrives, even if it only promises an acknowledgement. The review date records when the statement was last checked against the site.
+
+## Building the statement sample
+
+Collect the statement linked from the footer, the accessibility page, and any sitemap entry that mentions accessibility. Many sites publish more than one version, especially after a redesign, so record every URL that presents itself as the statement. Note which one the footer links to, because that is the version most readers will find. If the footer points to an older copy, record both URLs and treat the linked page as the public statement.
+
+For each statement, capture the publication date, the last update date shown, the standard named, the level, the contact details, and whether the page is reachable without JavaScript. A statement that only renders after a client-side script runs may be invisible to the assistive technology used to read it. Record the retrieval date and keep a saved copy, since statements change without notice. Save the page as a PDF or an archived copy so the exact wording can be checked after the next edit.
+
+## Coding the conformance claim
+
+Code the target as specific only when it names a standard and a level. "WCAG 2.2 AA" is specific, while "accessible" or "follows best practice" is not. If the statement names a standard but no level, mark it as partial, because level A and level AA imply very different obligations. The [W3C guidance on developing an accessibility statement](https://www.w3.org/WAI/planning/statements/) recommends naming the standard and the level rather than a vague aspiration.
+
+Check the claim against the site's actual state where the audit has evidence. A statement that claims full conformance while the same page has unlabeled form fields is contradictory. The audit does not need a full evaluation to note the contradiction, because the statement itself is the subject. Record the specific page and element so the finding can be reproduced.
+
+## Checking the feedback route
+
+Send one test message to the published address and record what happens. Note whether the address accepts mail, whether an auto-reply arrives, and whether a human responds within the stated period. If the statement offers a form, submit it with a short, polite description of a barrier and see whether the confirmation page appears. A feedback route that bounces is worse than no route, because it suggests a process that does not exist.
+
+Check who owns the inbox. If the address belongs to a former vendor or an individual who has left, the route is fragile even when it currently works. The statement should name a role or team that survives staff changes, and the client should be able to redirect it without editing the page. Record the owner and the last known working date.
+
+## Checking the review and update record
+
+A review date is only useful when it is close enough to the current site to mean something. Compare the stated date with the last template change, the last plugin update, and the last content migration. A statement reviewed before a major redesign describes a site that no longer exists, even if every other field is well written. A page that shows only a copyright year has no review date at all, because the year changes with the calendar rather than with the site.
+
+Look for a change history rather than a single date. A short list of reviews, each with a date and a note about what changed, shows a habit instead of a one-time exercise. If the page shows a date that updates automatically on every page load, treat it as decoration until the text itself shows evidence of a review. The [W3C evaluation guidance](https://www.w3.org/WAI/test-evaluate/) describes the kind of checking that should precede a new claim.
+
+## Checking the scope and known limitations
+
+Scope is where many statements quietly overreach. A statement on the marketing site may not cover a booking tool hosted on a subdomain, a help center, or a customer portal. The audit should list the domains and paths a reader would reasonably assume are included and check whether the statement names the exclusions. List those excluded domains in the appendix so the boundary can be checked again after a migration.
+
+Known limitations should be specific enough to help. "Some older PDFs are not tagged" tells a reader what to expect and where to ask for an alternative. "We are working on accessibility" tells them nothing. A limitation without an alternative route is still a finding, but it is a more honest one than silence. Record whether each stated limitation links to a workaround or a contact.
+
+## Checking the statement against the site
+
+Open the statement with a keyboard only and confirm that focus is visible, the heading order is logical, and the contact details can be reached without a mouse. Run the page at 200 percent zoom and at a narrow viewport to see whether the text reflows or disappears. These checks are small, but they reveal whether the page describing accessibility is itself usable. Note any element that traps focus, opens a dialog without a keyboard exit, or disappears when the viewport narrows.
+
+Compare the statement's contact details with the site's general contact page. A mismatch in email address, phone number, or response time suggests that one of the two pages was updated without the other. Record the mismatch and the date observed. The statement should be treated as part of the site, not as a legal appendix that nobody maintains.
+
+## Limitations and threats to validity
+
+The sample is a set of public pages from one relationship, so the findings describe those pages rather than the vendor's general practice. A statement can be accurate on the day it is read and wrong a week later, which makes any single observation a snapshot. The audit records the retrieval date for that reason and does not present the result as a permanent rating. Two statements from the same site, one before and one after a release, make the change visible in a way a single reading cannot.
+
+A full conformance judgment needs manual testing, assistive technology, and user research that this method does not include. The audit also cannot verify whether a feedback message reached a human, only whether the channel accepted it. Keep those limits in the report so a reader does not mistake a document review for an accessibility evaluation. Keep the document review and the evaluation findings in separate sections, because they answer different questions.
+
+## Reporting and next action
+
+Report one row per statement with the URL, the named standard and level, the scope, the limitations, the feedback route, the response commitment, the review date, and the retrieval date. Add a short note on whether the page is usable with a keyboard and at zoom. Summarize which fields are present, partial, or absent, and quote the wording in an appendix so the coding can be checked. Agree the owner and the next review date in the same meeting, then store the row with the contract.
+
+Agree two changes with the vendor and a date to recheck them. The first is a review date that reflects the last real check, with a named owner and a linked change note. The second is a feedback route owned by a role rather than a person, tested once a quarter. The [ADA web accessibility guidance](https://www.ada.gov/resources/web-guidance/) and the [Section 508 management guidance](https://www.section508.gov/manage/) provide public context for keeping the statement current.
+
+## Sources
+
+The sources below describe accessibility statements, evaluation, and public accessibility policy. They do not report a result for this sample, and each was checked on November 18, 2026. Use them to justify the fields in the audit, and keep the local statement table separate from these references. They are background for the method rather than evidence about any named vendor.
+
+1. [W3C WAI, Developing an Accessibility Statement](https://www.w3.org/WAI/planning/statements/)
+2. [W3C WAI, Accessibility Statement Generator](https://www.w3.org/WAI/planning/statements/generator/)
+3. [W3C, Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+4. [W3C WAI, Evaluating Web Accessibility Overview](https://www.w3.org/WAI/test-evaluate/)
+5. [W3C WAI, WCAG 2 Overview](https://www.w3.org/WAI/standards-guidelines/wcag/)
+6. [U.S. Department of Justice, Guidance on Web Accessibility and the ADA](https://www.ada.gov/resources/web-guidance/)
+7. [Section508.gov, Manage accessibility programs](https://www.section508.gov/manage/)
+8. [Section508.gov, Test for accessibility](https://www.section508.gov/test/)
+9. [European Commission, Web Accessibility Directive](https://digital-strategy.ec.europa.eu/en/policies/web-accessibility)
+10. [CISA, Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+
+## Related Research
+
+- [Testing whether an outsourced website design brief records the accessibility conformance target](/research/testing-whether-an-outsourced-website-design-brief-records-the-accessibility-conformance-target) covers the target before the build starts.
+- [Auditing whether an outsourced website vendor documents the handoff of domain and DNS control](/research/auditing-whether-an-outsourced-website-vendor-documents-the-handoff-of-domain-and-dns-control) covers another public-facing ownership record that often goes stale.
