@@ -1,0 +1,86 @@
+---
+title: "Auditing Whether an Outsourced Website Design Vendor Discloses Subprocessors and Notifies Clients Before Adding One"
+description: "A document audit of how an outsourced website design vendor names the hosting, form, analytics, and support subprocessors that touch client data, authorizes their use, and gives notice before the list changes."
+slug: "auditing-whether-an-outsourced-website-design-vendor-discloses-subprocessors-and-notifies-clients-before-adding-one"
+published: "2026-11-19"
+updated: "2026-11-19"
+image: "/images/research/nov19/auditing-whether-an-outsourced-website-design-vendor-discloses-subprocessors-and-notifies-clients-before-adding-one.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+This audit asks whether an outsourced website design vendor discloses the subprocessors that touch client data, obtains written authorization for their use, and notifies the client before the list changes. The unit of analysis is the vendor's public privacy notice and the relevant contract schedule, read beside the site features that depend on those services. The retrieval date is recorded for every document so the finding describes a snapshot rather than a permanent judgment. The audit does not test the security of any named provider, because a disclosure record shows who was engaged and how the client was informed, not how well the service is configured.
+
+The scope covers hosting, content delivery, form handling, email delivery, analytics, support chat, error monitoring, and any backup or staging service that receives production data. A vendor may be a processor itself and still rely on other companies to deliver the work, which is why the disclosure question survives a direct contract with the client. The audit treats the visible privacy page and the contract schedule as separate artifacts, because one may be current while the other is not. Where a vendor publishes a trust center, that page is included only when it states which entities process data rather than offering a general security claim.
+
+## Why subprocessors matter in website work
+
+A website project usually begins with a hosting account and grows a stack of services around it. A form plugin sends entries through an email provider, a consent tool logs preferences, a chat widget loads a third-party script, and an error tracker receives stack traces that may contain personal data. Each of those services is a subprocessor when it handles data on the client's behalf. The client often learns the names only after a breach notice or a procurement review forces the question.
+
+The disclosure matters because the client remains accountable for the data even when the work is outsourced. A contract that says the vendor will protect personal data is incomplete if it does not say which companies receive it and under what terms. A named subprocessor list also gives the client a practical way to check jurisdiction, retention, and breach history before approving a change. Without that list, the client cannot exercise the authorization right that most data protection agreements promise.
+
+## Defining the disclosure fields
+
+The audit uses six fields: a current subprocessor list, the purpose of each engagement, the data categories each one receives, the location of processing, the authorization mechanism, and the notice commitment for changes. Each field is coded present, partial, or absent, and the coding note quotes the wording that supported the decision. A list that names only the hosting provider is partial coverage even if the named entry is accurate. A general statement that "trusted partners may process data" is absent for this purpose, because it cannot be checked against the site's actual stack.
+
+The authorization field asks whether the contract uses specific approval or general written authorization with an objection right. Specific approval names the entity and the scope before work begins. General authorization allows the vendor to appoint subprocessors and gives the client a defined period to object. Both can be valid, but they produce different operating duties. The audit records which model applies and whether the client has a practical route to use it.
+
+## Collecting the documents
+
+Collect the privacy notice linked from the footer, the data processing agreement, the security schedule, and any subprocessor page linked from those documents. Record the URL, the retrieval date, and whether the page is reachable without JavaScript, since a list that only renders in a client-side widget is hard to preserve. Save a copy of each page so the exact wording can be checked after the next edit. If the contract is unavailable, mark the authorization and notice fields as unverified rather than absent.
+
+Many vendors publish a privacy notice for their own marketing site that does not describe client project processing. Read the notice for the entity that signed the contract, not the brand name on the homepage. Check whether the list covers entities outside the vendor's home country, because cross-border transfers usually carry separate safeguards. If the vendor provides a trust center, record whether the subprocessor list has a version or last-updated date. A list without a date is difficult to audit across two reviews.
+
+## Checking the authorization clause
+
+Read the data processing agreement for the clause that governs further processing. Under the General Data Protection Regulation, a processor may not engage another processor without prior specific or general written authorization from the controller. That requirement appears in Article 28, and the contract should reflect it in language a client can act on. Check whether the clause names a notice period, an objection route, and what happens if the client objects. A clause that mentions authorization but provides no mechanism is only partial.
+
+Compare the contract language with the vendor's actual practice. If the vendor added a chat tool six months ago and the client received no notice, the clause did not operate even if it is well written. Ask for the last three subprocessor changes and the messages that announced them. Record the dates and the recipient. That sample shows whether the notice commitment is a live process or a sentence that was copied from a template.
+
+## Testing the notice commitment
+
+Send one test question to the vendor's privacy contact asking for the current subprocessor list and the process for being notified of changes. Record how long a response takes and whether the answer names an owner. A reply that points back to the same undated web page is weaker than a reply that names the list version and the next review. The audit does not need to provoke a real change, because the response itself shows whether the route works.
+
+Check the notice terms for the period between announcement and use. A commitment to "notify" is not enough if the new processor starts work the same day and the client has no meaningful chance to object. Look for a stated notice window, the channel used, and the consequence of an objection. If the contract allows the vendor to proceed when the client objects, record that asymmetry. It may be acceptable in a small engagement, but the client should know it before a new service appears in the stack.
+
+## Mapping subprocessors to site features
+
+Walk through the live site and list every feature that sends data to another company. Include the form recipient, the booking tool, the payment processor, the analytics tag, the consent manager, the chat widget, and the error monitor. Then match each feature to a named subprocessor and a data category. A feature with no matching entry is a gap, and an entry with no matching feature may be a stale listing. Record both directions because a list can be incomplete and outdated at the same time.
+
+Pay attention to services that receive data indirectly. A tag manager can load a vendor that never appears in the code review, and a form plugin can route entries through a transactional email service that the client never approved. Check the network panel on a test submission and a consent interaction. If a request goes to a domain that is not on the list, record the domain and the page. That evidence is more useful than a general request to update the privacy page.
+
+## Checking the client's own processor list
+
+The client may also be a controller with its own disclosure duties, and the vendor's list feeds that obligation. Compare the vendor's subprocessors with the client's published privacy notice and its internal record of processing activities. A mismatch means one of the two documents is incomplete. The client should not copy the vendor's list without checking which entities actually receive data from the client's site.
+
+Assign an owner for the combined list and a review date that matches the contract renewal. The owner should be able to answer which service receives form entries, where backups are stored, and who is notified when a provider changes. If the owner cannot answer without asking the vendor, the record is not yet operational. Store the list with the contract and the site inventory so the next reviewer can compare all three.
+
+## Limitations and threats to validity
+
+The sample is limited to documents the vendor makes available, so a vendor with a complete internal register but a thin public page will score poorly. The audit measures disclosure and process evidence, not the security posture of any named provider. A list can be accurate on the retrieval date and wrong after the next product launch, which is why the date is part of every row. The test message shows whether one route responds, not whether every notice reaches every client contact.
+
+The audit also cannot verify jurisdiction or data volume from public pages alone. Those facts require the contract schedule and a conversation with the vendor. Keep the document findings separate from any security assessment, and do not present a disclosure gap as proof of a breach. The appropriate conclusion is that the client lacks evidence for a specific field, not that the vendor has done something unlawful.
+
+## Reporting and next action
+
+Report one row per vendor with the document URLs, the six fields, the retrieval date, and a short note on the test message. Summarize which fields are present, partial, or absent, and quote the contract language in an appendix. Agree two changes with the vendor and a date to recheck them. The first is a dated subprocessor list with a named owner and a version. The second is a notice route with a stated window and a recorded objection path.
+
+The [EUR-Lex text of the General Data Protection Regulation](https://eur-lex.europa.eu/eli/reg/2016/679/oj) provides the Article 28 requirement for processor authorization. The [ICO guidance on controllers and processors](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/contracts-and-liabilities/controllers-and-processors/) explains how written contracts and subprocessor arrangements are expected to work. The [NIST Special Publication 800-161 Revision 1](https://csrc.nist.gov/pubs/sp/800/161/r1/final) covers supply chain risk management for the services a website depends on, and the [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials) gives a plain starting point for third-party access questions. Keep the retrieval date with each link so a later reviewer can tell which version supported the coding.
+
+## Sources
+
+The sources below describe processor obligations and supply chain practice. They do not report a result for this sample, and each was checked on November 19, 2026. Use them to justify the fields in the audit, and keep the local vendor table separate from these references. Record the retrieval date beside each entry when the table is reused.
+
+1. [EUR-Lex, Regulation (EU) 2016/679, Article 28](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
+2. [ICO, Controllers and processors](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/contracts-and-liabilities/controllers-and-processors/)
+3. [NIST, Special Publication 800-161 Revision 1](https://csrc.nist.gov/pubs/sp/800/161/r1/final)
+4. [CISA, Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+5. [FTC, Data security](https://www.ftc.gov/business-guidance/privacy-security/data-security)
+6. [NIST, Special Publication 800-53 Revision 5](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf)
+
+## Related Research
+
+- [Third Party Script Inventories for Outsourced Web Projects](/research/third-party-script-inventory-web-projects) shows how to find the services that load outside the theme.
+- [Navigating Global Data Privacy: A Research Outlook for Website Design Outsourcing](/research/website-design-outsourcing-data-privacy-regulations-research) covers the wider contractual context for cross-border website work.
+- [Auditing Whether an Outsourced Website Vendor Documents the Handoff of Domain and DNS Control](/research/auditing-whether-an-outsourced-website-vendor-documents-the-handoff-of-domain-and-dns-control) applies the same evidence test to another account that often stays with the vendor.

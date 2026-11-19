@@ -1,0 +1,89 @@
+---
+title: "Auditing Whether an Outsourced Website Maintenance Vendor Documents Backup Frequency, Retention, and a Restore Test"
+description: "A document audit of backup claims in an outsourced website maintenance relationship, covering schedule, retention, restore evidence, account ownership, and the difference between a backup and a staging copy."
+slug: "auditing-whether-an-outsourced-website-maintenance-vendor-documents-backup-frequency-retention-and-a-restore-test"
+published: "2026-11-19"
+updated: "2026-11-19"
+image: "/images/research/nov19/auditing-whether-an-outsourced-website-maintenance-vendor-documents-backup-frequency-retention-and-a-restore-test.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+This audit asks whether an outsourced website maintenance vendor documents how often backups run, how long copies are kept, and when a restore was last tested. The unit of analysis is the vendor's written backup statement together with the restore record and the account details that support it. The retrieval date is recorded for every document so the finding describes a specific moment in the relationship. The audit does not attempt to verify the provider's infrastructure directly, because a client review usually works from documents and a supervised test rather than from access to the backup system.
+
+The scope covers the production website, its database, its uploaded files, and any configuration that would be needed to rebuild the site after loss. It includes the hosting provider's backup feature, any plugin or third-party service the vendor uses, and the vendor's own copy of the site. Staging environments and version control are noted but treated separately, because neither is a substitute for a restorable production backup. The audit also records who controls the backup account, since access can disappear when a contract ends.
+
+## Why a backup claim needs evidence
+
+A statement that a site is "backed up daily" tells a client very little. It does not say what is included, where the copy lives, how long it survives, or whether anyone has restored it. A backup that has never been tested is a hope about a file, and the failure often appears at the worst moment, during a botched update or a deleted page. The audit replaces the general claim with a small set of facts that can be checked before an incident.
+
+The operating risk is concrete for a maintenance relationship. A vendor may update a plugin, a theme, and a PHP version in the same window, then discover that the site will not load. The useful question at that point is which copy can be restored, how old it is, and how long the restore takes. A client who has never seen a restore record cannot answer, and the vendor may be learning the procedure under pressure. The audit exists to move that learning before the incident.
+
+## Defining the audit fields
+
+The audit uses six fields: backup scope, schedule, retention, storage location, restore evidence, and account ownership. Scope names the database, uploads, themes, plugins, and configuration included in the copy. Schedule states the frequency and the time of day, including whether the job runs before or after maintenance windows. Retention states how many daily, weekly, and monthly copies survive and what deletes them. Each field is coded present, partial, or absent, and the coding note quotes the wording that supported the decision.
+
+Storage location names the provider, region, and account, because a copy in the same account as the live site can be lost with it. Restore evidence names the date, the person, the target environment, and the result of the last test. Account ownership names the client or vendor entity that controls the backup destination and the billing relationship. A statement that covers scope and schedule but omits restore evidence is partial, even when the other fields are detailed.
+
+## Finding the backup statement
+
+Start with the maintenance agreement, the service description, and the vendor's public support pages. Search for the words backup, restore, retention, snapshot, and disaster. Record every document that makes a claim, including a sales page that promises daily copies. If the contract and the sales page disagree, treat the contract as the governing text and record the public claim as a discrepancy. That difference is useful evidence for the next service review.
+
+Ask the vendor for the current backup configuration rather than a description written at onboarding. A screenshot of the hosting panel is more useful than a paragraph, provided it shows the schedule, the destination, and the retention rule. Check whether the screenshot has a date and whether the account name matches the client's site. If the vendor cannot produce a current view, record the field as unverified instead of accepting the original promise.
+
+## Checking frequency against the change rate
+
+Backup frequency should reflect how often the site changes and how much work a lost day would cost. A brochure site with monthly edits may be fine with a daily copy, while a store with hourly orders needs a shorter interval and a database backup that captures transactions. Compare the stated schedule with the maintenance calendar, the publish history, and the order or form volume. A schedule that runs after the nightly update is more useful than one that runs before it.
+
+Check what happens during a maintenance window. If the vendor takes a backup, applies updates, and then keeps the site open while testing, the interval between the backup and the change is the exposure. Ask whether an on-demand backup is taken before every release and where that copy is stored. A daily job alone leaves several hours of change unprotected. Record the on-demand step separately from the scheduled job, because the two serve different purposes.
+
+## Checking retention against the recovery need
+
+Retention is often set by the hosting plan rather than by the client's needs. A seven-day window may be enough to recover from a bad update, but it will not help when a content error is discovered a month later or when a legal hold requires an older copy. Compare the stated retention with the site's publishing cycle and any record-keeping obligation the client has. A short window is not automatically wrong, but the client should know what it cannot recover.
+
+Look for the deletion rule as well as the retention period. Some services keep daily copies for seven days, weekly copies for four weeks, and monthly copies for a year, while others keep only the most recent snapshot. Ask which tier applies to the site and whether the client can request an export before a copy expires. Record the answer with the date, because retention terms change with plan upgrades and provider migrations.
+
+## Testing the restore record
+
+A restore record should name the date, the person who ran the test, the source copy, the target environment, and the result. It should also state how long the restore took and what was checked afterward, such as the home page, a form submission, and a login. A record that says "restore tested successfully" without those details cannot be reproduced. Ask for the last two records so the reviewer can see whether testing is a habit or a one-time event.
+
+If no record exists, ask for a supervised test on a staging copy. The test should use a recent backup, restore it to a separate environment, and verify that the database and uploads are both present. Check that the restored site does not send live email or accept real orders. Record the start and end time, the size of the copy, and any error encountered. That exercise produces better evidence than another written assurance.
+
+## Checking account ownership and separation
+
+The backup destination should not depend on the same credentials as the live site. If an attacker or a departing vendor can delete both the site and its copies with one login, the backup is not a control. Ask who owns the storage account, whether multi-factor authentication is enabled, and whether the client has an independent recovery path. A client-held copy in a separate account gives the relationship a fallback that does not rely on the vendor's goodwill.
+
+Check the billing relationship as well. A backup add-on paid through the vendor's account may stop when the contract ends, and the client may not learn until a restore is needed. Ask whether the client can open the backup console directly and download a copy. If the answer is no, record the dependency and agree an export at handover. Ownership is part of the backup claim, not an administrative detail.
+
+## Separating backups from staging and version control
+
+A staging site is a working copy, not a recovery point. It may be overwritten on the next deployment, and it often excludes uploads or the production database. Version control preserves code but usually not the database, the media library, or the server configuration. The audit records those systems separately so a vendor cannot answer a backup question by pointing to a repository. A complete answer names the copy that would be used to rebuild the live site and the person who would run the restore.
+
+## Limitations and threats to validity
+
+The audit relies on documents and a supervised test, so it describes the evidence the client can see rather than the provider's internal reliability. A vendor may have a strong backup system that is poorly documented, and the audit will score the documentation low. A single restore test shows that one copy worked on one day, not that every scheduled job succeeds. The report should state those limits so a reader does not treat a passing row as a guarantee.
+
+The audit also cannot judge how much data loss the business can tolerate. That tolerance belongs to the client and may vary by page, season, and legal obligation. Keep the technical findings separate from the business decision about recovery targets. If the client has never set a target, the audit can expose the gap, but it should not invent a number on the client's behalf.
+
+## Reporting and next action
+
+Report one row per site with the scope, schedule, retention, location, last restore test, and account owner. Quote the contract and the current configuration in an appendix, and note any difference between the sales page and the agreement. Agree two changes with the vendor and a date to recheck them. The first is a dated restore record with the target environment and the checks performed. The second is a client-held export or a separate account that survives the contract.
+
+The [NIST Contingency Planning Guide, Special Publication 800-34 Revision 1](https://csrc.nist.gov/pubs/sp/800/34/r1/final) describes how recovery plans and testing should be documented. The [NIST Special Publication 800-53 Revision 5](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf) covers backup and contingency controls in its CP family, and the [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials) gives a practical starting point for backups and recovery testing. The [CISA StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide) explains why offline copies and tested restores matter when a site is locked or wiped. Keep the retrieval date with each link so a later reviewer can tell which version supported the coding.
+
+## Sources
+
+The sources below describe contingency planning, backup controls, and recovery practice. They do not report a result for this sample, and each was checked on November 19, 2026. Use them to justify the fields in the audit, and keep the local vendor table separate from these references. Record the retrieval date beside each entry when the table is reused.
+
+1. [NIST, Contingency Planning Guide, SP 800-34 Revision 1](https://csrc.nist.gov/pubs/sp/800/34/r1/final)
+2. [NIST, Special Publication 800-53 Revision 5](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf)
+3. [CISA, Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+4. [CISA, StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide)
+5. [FTC, Data security](https://www.ftc.gov/business-guidance/privacy-security/data-security)
+
+## Related Research
+
+- [Website Release Rollback Readiness in an Outsourced Handoff](/research/website-release-rollback-readiness-outsourced-handoff) covers the decision to reverse a change once it reaches production.
+- [Testing Whether an Outsourced Website Handover Leaves a Build the Next Vendor Can Run](/research/testing-whether-an-outsourced-website-handover-leaves-a-build-the-next-vendor-can-run) tests a related form of recovery evidence at handoff.
+- [Auditing Whether an Outsourced Website Maintenance Change Record Names the Rollback Decision Point](/research/auditing-whether-an-outsourced-website-maintenance-change-record-names-the-rollback-decision-point) shows how a release record should name who decided to reverse course.

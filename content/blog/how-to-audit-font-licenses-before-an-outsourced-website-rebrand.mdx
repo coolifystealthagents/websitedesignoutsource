@@ -1,0 +1,52 @@
+---
+title: "How to Audit Font Licenses Before an Outsourced Website Rebrand"
+description: "A practical font-license audit for a rebrand, covering the files a site actually serves, web embedding terms, pageview limits, ownership, self-hosting, and the evidence the next vendor will need."
+slug: "how-to-audit-font-licenses-before-an-outsourced-website-rebrand"
+published: "2026-11-19"
+updated: "2026-11-19"
+image: "/images/blog/nov19/how-to-audit-font-licenses-before-an-outsourced-website-rebrand.jpg"
+category: "outsourced website design operations"
+---
+
+## Map the license question before design starts
+
+A rebrand brief usually names a new typeface and leaves licensing to whoever configures the site. That order creates avoidable risk, because the chosen family may not be licensed for web embedding, the traffic the site receives, or the channels the brand uses. Add a license field to the shortlist before the design is approved. Each candidate should arrive with the license name, the permitted channels, the price basis, and a link to the terms. A family that cannot answer those four points is not ready for the shortlist, even if it looks right in the mockup.
+
+## Start with the fonts the site actually serves
+
+Audit the live site first, because the font files in a repository may not match what visitors receive. Use the browser network panel to list every font loaded on the home page, a template page, and a form or checkout page. Record the family name, file format, hosting location, and the CSS rule that requests it. Include fonts loaded by a tag manager or a third-party embed, since those often sit outside the theme. That list becomes the scope for the audit instead of a guess based on the design file.
+
+## Separate open-source from commercial licenses
+
+Open-source families usually arrive under the SIL Open Font License, which allows web embedding and modification under stated conditions. Commercial families are licensed per desktop user, per pageview, or per product, and those categories are not interchangeable. A desktop license does not automatically grant web embedding, and a web license may not cover an app or an email template. Read the terms for the exact family and version, then note which channels they cover. Do not assume a font bundled by a theme or page builder carries a transferable license.
+
+## Check embedding and traffic terms
+
+Many commercial web licenses are sold in pageview bands, and a rebrand can move a site into a higher band without anyone noticing. Find the licensed traffic ceiling and compare it with the site's monthly pageviews from analytics. Check whether the license covers subdomains, staging environments, and campaign microsites. Some licenses exclude PDFs, email, or embedded widgets, which matters when the brand appears in a newsletter. Write the ceiling and the measurement method beside the font record so the next review starts from a baseline.
+
+## Trace who owns the license
+
+A license bought by an agency may be registered to the agency's account and end when the relationship ends. Ask for the account holder, the order number, and the seat count for every commercial family. Confirm whether the license can be transferred to the client or must be repurchased in the client's name. If the vendor self-hosts the files, the client still needs evidence that the license permits that delivery. Put the answer in the handover record rather than in an email thread that will be lost.
+
+## Review self-hosting and subsetting
+
+Serving fonts from the site's own domain can improve privacy and performance, but it changes the license question. Some licenses allow self-hosting, others require a hosted service, and some count self-hosted pageviews differently. Subsetting and format conversion can count as modification, which open-source licenses permit and some commercial ones do not. Check the modification terms before a developer converts files to WOFF2 or strips unused glyphs. Record the permitted formats and the tool used so the decision can be reproduced later.
+
+## Check fonts bundled by themes and page builders
+
+Themes, page builders, and plugin packs often ship fonts that nobody selected in the brand process. Those files may be licensed to the theme vendor rather than to the client, and the right to use them can end with a subscription. Search the stylesheet and the uploads directory for font files that do not appear in the brand guide. Ask the vendor to name the source and license for each one. Replace anything that cannot be evidenced before the rebrand adds another dependency on top.
+
+## Check fallbacks and variable fonts
+
+A rebrand should not leave the site dependent on a font that may fail to load. Review the fallback stack for each family and confirm it renders at a similar size and weight. Variable fonts add another license dimension because one file can replace several weights, and not every license prices them the same way. Test the page with the web font blocked to see how much the layout shifts. A fallback that looks acceptable on a fast office connection may still fail on a slow phone.
+
+## Record the evidence and assign a renewal owner
+
+Build one row per family with the license type, proof link, account owner, renewal date, pageview ceiling, and permitted channels. Store the row with the brand assets and link it from the handoff document. Assign a named person to review the record before each renewal and after any traffic milestone. If a family cannot be evidenced, replace it before the rebrand ships instead of carrying an unknown risk into the new design. The audit is finished when the record can answer a license question without contacting the original designer.
+
+## Related reading
+
+- [SIL Open Font License](https://openfontlicense.org/) explains the permissions and conditions that apply to most open-source typefaces.
+- [Google Fonts frequently asked questions](https://developers.google.com/fonts/faq) covers licensing, self-hosting, and attribution for the Google Fonts library.
+- [Image License Handoff Checklist for Web Teams](/research/website-image-license-handoff-checklist) applies the same evidence discipline to photography and illustration.
+- [Website Image Rights Register for an Outsourced Project](/blog/website-image-rights-register-outsourced-project) shows how to keep asset rights visible after launch.
