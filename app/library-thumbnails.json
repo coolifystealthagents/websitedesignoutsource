@@ -778,5 +778,17 @@
   "research/auditing-whether-an-outsourced-website-maintenance-vendor-documents-backup-frequency-retention-and-a-restore-test": {
     "image": "/images/research/nov19/auditing-whether-an-outsourced-website-maintenance-vendor-documents-backup-frequency-retention-and-a-restore-test.jpg",
     "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Maintenance Vendor Documents Backup Frequency, Retention, and a Restore Test"
+  },
+  "blog/how-to-set-ai-copy-rules-for-an-outsourced-website-build": {
+    "image": "/images/blog/nov20/how-to-set-ai-copy-rules-for-an-outsourced-website-build.jpg",
+    "imageAlt": "Visual guide for How to Set AI Copy Rules for an Outsourced Website Build"
+  },
+  "research/auditing-whether-an-outsourced-website-vendors-uptime-report-separates-scheduled-maintenance-from-unplanned-downtime": {
+    "image": "/images/research/nov20/auditing-whether-an-outsourced-website-vendors-uptime-report-separates-scheduled-maintenance-from-unplanned-downtime.jpg",
+    "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Vendor's Uptime Report Separates Scheduled Maintenance From Unplanned Downtime"
+  },
+  "research/auditing-whether-an-outsourced-website-maintenance-vendor-documents-how-it-deletes-client-data-at-contract-end": {
+    "image": "/images/research/nov20/auditing-whether-an-outsourced-website-maintenance-vendor-documents-how-it-deletes-client-data-at-contract-end.jpg",
+    "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Maintenance Vendor Documents How It Deletes Client Data at Contract End"
   }
 }

@@ -1,0 +1,91 @@
+---
+title: "Auditing Whether an Outsourced Website Vendor's Uptime Report Separates Scheduled Maintenance From Unplanned Downtime"
+description: "A document audit of uptime reporting in an outsourced website maintenance relationship, covering the measurement window, planned maintenance exclusions, partial outages, status-page evidence, service credits, and the limits of a monthly availability figure."
+slug: "auditing-whether-an-outsourced-website-vendors-uptime-report-separates-scheduled-maintenance-from-unplanned-downtime"
+published: "2026-11-20"
+updated: "2026-11-20"
+image: "/images/research/nov20/auditing-whether-an-outsourced-website-vendors-uptime-report-separates-scheduled-maintenance-from-unplanned-downtime.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+This audit asks whether an outsourced website maintenance vendor's uptime report distinguishes planned maintenance from unplanned downtime. The unit of analysis is the monthly or quarterly report the client receives, together with the service-level terms, the status-page history, and the incident records that support the figures. The retrieval date is recorded for every document so the finding describes a specific reporting period rather than a general impression. The audit does not test the vendor's monitoring stack directly, because a client review normally works from reports and a sample of public or shared evidence.
+
+The scope covers the production website, its origin server, its content management system, and any hosted service the vendor includes in the availability claim. It includes the maintenance window defined in the agreement, the notice given before planned work, and the way the vendor counts a partial failure. A broken checkout and a slow admin login both belong in the review because each affects a real task. The audit separates the website from third-party services the vendor does not control, since an outage in a payment provider may appear in the same summary without being the vendor's responsibility.
+
+## Why one availability number hides the problem
+
+A report that says the site was available 99.9 percent of the month tells a client almost nothing about the experience. It does not say whether the missing minutes came from a planned upgrade at midnight or an unplanned failure during a campaign launch. It does not say whether the site was fully usable or merely returning a page. A single number can therefore look healthy while the failures that matter to the business remain invisible.
+
+The distinction matters because the two categories carry different obligations. Planned maintenance can be scheduled, announced, and moved away from a busy sales period. Unplanned downtime needs an incident record, a cause, and a corrective action. When a vendor combines them, the client cannot tell whether the maintenance calendar is working or whether the site is failing unpredictably. The audit restores that distinction before renewal or a service-credit claim.
+
+## Defining the audit fields
+
+The audit uses seven fields: measurement window, planned-maintenance exclusion, notice period, unplanned-incident list, partial-outage treatment, evidence source, and remedy calculation. The measurement window states the exact start and end of the reporting period and the time zone used. The planned-maintenance exclusion states which work may be removed from the availability calculation and what notice the client should receive. Each field is coded present, partial, or absent, and the coding note quotes the report language that supported the decision.
+
+The remaining fields carry the operational detail. The unplanned-incident list names each event, its duration, and the affected function. Partial-outage treatment explains whether a broken form or a slow checkout counts as downtime, degraded service, or nothing at all. The evidence source names the monitoring system, status page, or ticket record behind the number, and the remedy calculation shows how a missed target becomes a credit or a service review. A report that supplies a percentage but none of these fields is not auditable.
+
+## Finding the claim and the measurement window
+
+Start with the service agreement, the statement of work, and the vendor's public service description. Search for availability, uptime, service level, maintenance window, and credit. Record every document that makes a promise, including a sales page that advertises a target the contract does not repeat. If the contract and the sales page disagree, treat the contract as the governing text and record the public claim as a discrepancy for the next service review.
+
+Then locate the reporting period in the monthly document. Check whether the period is a calendar month, a four-week cycle, or a rolling window, because the choice changes what the percentage means. Confirm the time zone, since a report generated in one region can shift an incident across a month boundary. Check whether the report covers the whole site or only the home page. A measurement window that nobody can reproduce is the first finding, even before the vendor explains the number.
+
+## Separating planned work from unplanned failure
+
+Ask the vendor to list every maintenance window that was excluded from the availability figure. For each one, record the date, the start and end time, the notice given, the work performed, and whether the site remained usable during the window. A planned upgrade that took the site down for two hours is still a real interruption for a customer, even if the contract permits the exclusion. The audit should show the excluded time beside the reported availability so the client can see the size of the allowance.
+
+Then list the unplanned incidents separately. Each entry should name the time the failure began, the time it was detected, the time service returned, and the function that failed. Compare the detection time with the client's own report, if one exists, because a vendor may learn about an outage from a customer rather than from monitoring. A report that lists planned windows but omits unplanned events is incomplete, and a report that lists incidents without durations cannot support a credit calculation.
+
+## Checking the measurement method and rounding
+
+Availability is usually calculated from a monitoring check, an error-rate threshold, or a synthetic transaction. Each method produces a different result, and the report should name the one used. Ask how often the check runs, from how many locations, and what counts as a failed check. A check that runs every five minutes can miss a short failure, while a check that runs once an hour can report a healthy month after a long outage between probes.
+
+Rounding deserves separate attention. A report may show two decimal places while the underlying calculation uses a different precision, or it may round a figure up at the boundary of a target. Ask for the raw minutes and the formula, then reproduce the percentage from those inputs. If the numbers do not reconcile, record the difference rather than assuming a typo. The goal is not to catch the vendor in a small arithmetic error but to confirm that the reported figure comes from a method the client can inspect.
+
+## Testing exclusions and partial outages
+
+Read the exclusions in the service terms and compare them with the incidents the vendor reported. Common exclusions include scheduled maintenance, force majeure, customer-caused failures, and outages in third-party services. Some agreements also exclude periods when the site is under a content freeze or when the client has not approved an update. The audit records which exclusions were applied in the period and whether the client was told before or after the fact.
+
+Partial outages are harder to classify and often disappear from a simple uptime report. A site that loads but cannot accept a form submission is not fully available to the business, even if the home page returns a success response. Ask whether the monitoring covers the checkout, the contact form, the login, and the search function. If the report only measures the home page, record that limitation explicitly. The client can then decide whether a broader check is worth adding to the next contract.
+
+## Comparing the report with the status page
+
+A status page is not a substitute for a report, but it is a useful cross-check. Export or screenshot the status history for the same period and compare the incidents, start times, and durations with the monthly document. Look for an incident that appears on the status page but not in the report, or a planned window that was announced late. Keep the capture with the retrieval date, because status pages often replace history rather than preserve it.
+
+Differences are not automatically evidence of bad faith. A status page may include a third-party service the vendor excludes, or it may use a different definition of resolution. The audit records the difference and asks the vendor to explain it. A vendor that can reconcile the two sources has a stronger reporting process than one that dismisses the gap. A vendor that cannot explain a missing incident has given the client a concrete question for the service review.
+
+## Reading service credits and remedies
+
+Many maintenance agreements attach a credit to a missed availability target, but the credit formula can be weaker than the headline suggests. Check the threshold that triggers a credit, the evidence the client must submit, the claim deadline, and the maximum credit. A target that excludes planned maintenance and partial outages may be difficult to miss, while a credit capped at a small percentage of the monthly fee may not reflect the business loss. Write the formula down so the client can test it against a future report.
+
+The audit should calculate a sample remedy from the reported figures and compare it with the contract. If the report shows a miss but no credit was issued, record the gap. If the contract requires the client to claim within a short window, add that deadline to the review calendar. The purpose is to make the remedy usable before an incident, not to argue about a credit after the relationship has already soured.
+
+## Limitations and threats to validity
+
+The audit works from documents and a sample of public evidence, so it describes what the client can inspect rather than the vendor's internal reliability. A vendor may run excellent monitoring and still produce a poor monthly summary, and the audit will score the summary low. A single reporting period may be unusually quiet or unusually busy, so one month should not be treated as a trend. Keep the finding tied to the period it covers. That limit belongs in the report.
+
+The audit also cannot decide how much downtime the business can tolerate. That tolerance depends on the site's role, the season, the campaign calendar, and the client's own obligations to its customers. Keep the technical findings separate from the business decision about an acceptable target. If the client has never set a target, the audit can expose the gap, but it should not invent a number on the client's behalf.
+
+## Reporting and next action
+
+Report one row per reporting period with the measurement window, excluded maintenance minutes, unplanned incident minutes, partial-outage treatment, evidence source, and remedy. Quote the contract terms and the report language in an appendix, and note any difference between the sales page and the agreement. Agree the report template and the review owner with the vendor, then set a date to inspect the next cycle. That cycle becomes the next sample in the audit.
+
+The [Google SRE Workbook chapter on implementing SLOs](https://sre.google/workbook/implementing-slos/) explains how service-level indicators and objectives are defined and measured. The [AWS Well-Architected Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html) covers availability targets, monitoring, and recovery practices for production workloads. The [NIST Special Publication 800-53 Revision 5](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf) addresses contingency planning controls in its CP family. The [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials) gives a practical starting point for continuity and recovery planning. Keep the retrieval date so a reviewer can tell which version supported the coding.
+
+## Sources
+
+The sources below describe service-level measurement, reliability practice, and contingency planning. They do not report a result for this sample, and each was checked on November 20, 2026. Use them to justify the fields in the audit, and keep the local vendor table separate from these references. Record the retrieval date beside each entry when the table is reused.
+
+1. [Google SRE Workbook, Implementing SLOs](https://sre.google/workbook/implementing-slos/)
+2. [AWS Well-Architected Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html)
+3. [NIST, Special Publication 800-53 Revision 5](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf)
+4. [CISA, Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+5. [NIST, Contingency Planning Guide, SP 800-34 Revision 1](https://csrc.nist.gov/pubs/sp/800/34/r1/final)
+
+## Related Research
+
+- [Auditing How Quickly an Outsourced Website Vendor Acknowledges a Critical Outage](/research/auditing-how-quickly-an-outsourced-website-vendor-acknowledges-a-critical-outage) covers the first response that sits behind an availability figure.
+- [Auditing Whether an Outsourced Website Vendor's Incident Postmortem Names a Preventable Cause](/research/auditing-whether-an-outsourced-website-vendors-incident-postmortem-names-a-preventable-cause) examines the follow-up record after an unplanned failure.
+- [Auditing Whether an Outsourced Website Maintenance Change Record Names the Rollback Decision Point](/research/auditing-whether-an-outsourced-website-maintenance-change-record-names-the-rollback-decision-point) shows how a release record should document the decision to reverse a change.
