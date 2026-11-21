@@ -1,0 +1,97 @@
+---
+title: "Auditing Whether an Outsourced Website Vendor Rechecks Security Headers After a CDN or Proxy Change"
+description: "A document and response audit of security header continuity in outsourced website maintenance, covering the baseline, the delivery path, change records, enforcement modes, rollback, and the evidence a client should retain."
+slug: "auditing-whether-an-outsourced-website-vendor-rechecks-security-headers-after-a-cdn-or-proxy-change"
+published: "2026-11-21"
+updated: "2026-11-21"
+image: "/images/research/nov21/auditing-whether-an-outsourced-website-vendor-rechecks-security-headers-after-a-cdn-or-proxy-change.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+This audit asks whether an outsourced website maintenance vendor rechecks security headers after a content delivery network, reverse proxy, or hosting layer changes. The unit of analysis is the vendor's change record together with the live response headers observed after the change. The review covers the production site, the staging site where it is used for pre-release testing, and any hostname that serves the same application through a different edge configuration. Each observation is dated so the finding describes a specific deployment rather than a general claim.
+
+The scope includes response headers such as Content-Security-Policy, Strict-Transport-Security, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy. It also includes the redirect from HTTP to HTTPS, because a header that only appears after an extra hop may behave differently for a first-time visitor. The audit does not attempt a penetration test and does not claim that a header set is complete. It tests whether the vendor preserved and verified the agreed baseline through a delivery-path change.
+
+## Why a header baseline depends on the delivery path
+
+Security headers are usually added by the origin server, the application framework, the CDN, or a combination of all three. When a site moves behind a new proxy, the layer that once added a header may no longer be in the response path. A configuration that looked correct on the old host can therefore produce a clean page with missing protections. The failure is quiet because the page still loads and most visitors notice nothing.
+
+The reverse can also happen. A new CDN may add a header that conflicts with the origin, or it may rewrite a policy in a way that breaks scripts the site depends on. The vendor then faces a choice between disabling the header and weakening it until the page works. An audit that compares the baseline with the live response makes either outcome visible. It also separates a deliberate change from an accidental omission.
+
+## Defining the audit fields
+
+The audit uses seven fields: baseline source, expected value, observed value, observation point, change record, enforcement mode, and follow-up action. The baseline source names the document or ticket that defines the approved header set. The expected and observed values are recorded as exact strings rather than summaries, because a policy can look similar while allowing a different source. The observation point records whether the header came from the origin, the edge, or an intermediate proxy.
+
+The remaining fields carry the accountability. The change record links the header check to the deployment or infrastructure ticket that triggered it. The enforcement mode states whether a policy is report-only or blocking, and whether that matches the approved state. The follow-up action names the owner, the date, and the evidence required to close a gap. A vendor that supplies a screenshot of a header scanner without these fields has given the client a picture, not an auditable result.
+
+## Locating the baseline and the current response
+
+Start with the security baseline, the launch checklist, and the most recent infrastructure change record. Search for header names, the word "baseline," and any scanner report attached to a previous release. If no written baseline exists, reconstruct one from the last known-good response and mark the reconstruction as provisional. The audit should not pretend that an undocumented configuration was an approved standard.
+
+Then capture the current response from more than one location. Use a command-line request that shows raw headers, a browser developer tools capture, and an external header scanner if the vendor already relies on one. Record the URL, the date, the time, and whether the request followed redirects. A header value collected from a cached response can describe an earlier deployment, so note the cache status and repeat the request after a purge when possible.
+
+## Checking each header against the baseline
+
+Compare the exact values, not just the presence of a header. A Content-Security-Policy that has been widened to allow unsafe inline scripts is present but materially weaker than the approved policy. A Strict-Transport-Security value with a short max-age may satisfy a scanner while giving the client little protection. Record both the presence and the substance of each header so a later reviewer can see what changed.
+
+Pay attention to headers that are easy to duplicate. A response can contain two Content-Security-Policy headers, and browsers may enforce the intersection rather than the intended policy. Multiple Access-Control-Allow-Origin values can also produce behavior that differs from a single clean value. The audit should list duplicates explicitly and ask the vendor which value the edge is expected to emit. Duplicate headers are a configuration problem, not a cosmetic one.
+
+## Testing the page types that matter
+
+Check the home page, a content page, a form page, and an authenticated page if one exists. Each template may be served by a different route, and a proxy rule can apply to one path but not another. Test the checkout or donation flow when the site has one, because a header change that breaks a payment script may be reverted only on that route. The audit records the page type beside every observation.
+
+Test both the apex domain and the www hostname, plus any subdomain that serves customer-facing content. A CDN configuration is often attached to one hostname and forgotten on another. If the site uses a separate asset host, record whether that host carries the same policy or a documented exception. The goal is a map of what a visitor actually receives, not a single sample from the marketing home page.
+
+## Comparing origin and edge behavior
+
+Request the site directly from the origin where the vendor can provide a safe test path, then compare that response with the public edge response. The difference shows which layer adds, removes, or rewrites each header. A header present at the origin but absent at the edge points to a proxy rule or a cache behavior. A header present only at the edge may disappear during an origin failover.
+
+Do not ask the client to bypass the CDN in production just to satisfy the audit. Use a staging hostname or a vendor-provided diagnostic route with access controls. Record the method so the comparison can be repeated. If the vendor cannot provide an origin check, treat the edge observation as the primary evidence and note the limitation. The audit can still identify a missing header without exposing the origin to public traffic.
+
+## Reviewing the change record for the CDN switch
+
+Read the change record for the CDN or proxy migration and look for a header verification step. A useful record names the person who checked the response, the URLs tested, the expected values, and the result. It also states whether the old configuration was retained for rollback. A record that lists only the DNS change and the go-live time has not shown that the security baseline survived.
+
+Compare the change date with the observation date. A check performed before the cutover does not prove the post-cutover state, and a check performed a month later may miss a temporary gap. The strongest evidence is a pre-change baseline, a post-change comparison, and a second check after the cache has warmed. If the vendor skipped the post-change check, the audit should record that omission even when the current headers look correct.
+
+## Checking report-only and enforcement modes
+
+A Content-Security-Policy delivered in report-only mode does not block a violation, so a vendor may describe a site as protected while the browser is only collecting reports. Confirm the header name and the disposition directive, then compare them with the approved rollout stage. If the policy was meant to move to enforcement, record the planned date and the evidence required before the switch. A permanent report-only state is a decision that should be documented.
+
+The same discipline applies to other headers with staged behavior. Permissions-Policy may be introduced gradually, and a report-only trial may be appropriate before a restrictive value ships. The audit should not treat every non-blocking mode as a failure. It should ask whether the mode matches the phase the client approved and whether anyone owns the next step. Unowned staging is how a temporary setting becomes permanent.
+
+## Evaluating the rollback path
+
+Ask what happens if a new header breaks a checkout, an embedded video, or an analytics tag. A rollback plan should name the configuration that will be restored, the person authorized to restore it, and the check that confirms service has recovered. It should also say whether the rollback restores the full baseline or only the header that caused the problem. A partial rollback can leave the site in a state that matches neither the old nor the new design.
+
+Test the rollback in staging if the vendor can do so without disrupting production. At minimum, confirm that the previous configuration is versioned and retrievable. A screenshot of the old settings is not a rollback artifact. The check that confirms recovery should be written down before the change window opens. The audit records the rollback evidence beside the change record so a future incident does not require reconstructing the decision under pressure.
+
+## Limitations and threats to validity
+
+This audit observes headers at a point in time and cannot prove that every visitor receives the same response. Geolocation, device type, authentication state, and cache shards can all produce variation. A single clean result from one network is therefore evidence of a configuration, not proof of universal behavior. The report should state the observation points and avoid claiming more than the sample supports.
+
+The audit also cannot decide the correct policy for the client's business. A strict Content-Security-Policy may be appropriate for a brochure site and impractical for a site with many third-party embeds. The reviewer can test whether the approved baseline survived, but the client and vendor must decide whether that baseline still fits. Keep the technical finding separate from that product decision so the record stays honest.
+
+## Reporting and next action
+
+Report one row per hostname and page type with the expected value, observed value, observation point, change record, mode, and follow-up action. Attach the raw response capture and the change ticket reference, and note any difference between the origin and the edge. Give the vendor a short window to correct a missing header before the next release, then repeat the same checks. The repeat becomes the evidence that the fix held.
+
+The [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/) explains the purpose of common security headers and links to configuration guidance. The [OWASP HTTP Headers Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html) describes recommended values and implementation notes. The [MDN Strict-Transport-Security reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) covers HSTS behavior and directives, and the [MDN Content-Security-Policy guide](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) explains policy syntax and enforcement. The [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials) provides a broader starting point for configuration and access controls.
+
+## Sources
+
+The sources below describe header configuration, browser behavior, and baseline security practice. They do not report a result for this sample, and each was checked on November 21, 2026. Keep the local observation table separate from these references and record the retrieval date when the table is reused. Treat them as background for the audit fields, not as evidence about this vendor.
+
+1. [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
+2. [OWASP HTTP Security Response Headers Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html)
+3. [MDN, Strict-Transport-Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+4. [MDN, Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+5. [CISA, Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+
+## Related Research
+
+- [Website Security Update Acceptance for Maintenance Teams](/research/website-security-update-acceptance-maintenance) covers the review that should accompany a security patch.
+- [Subresource Integrity Coverage for Third-Party Website Assets](/research/website-sri-third-party-asset-research) examines control over externally loaded scripts.
+- [Website Secrets and Configuration Handoff Research](/research/website-secrets-configuration-handoff-research) shows how infrastructure configuration should be transferred and recorded.

@@ -1,0 +1,63 @@
+---
+title: "Write a Website Maintenance Request Template That Captures Enough Context to Act On"
+description: "A practical intake template for outsourced website maintenance requests, covering page identification, reproduction steps, impact, evidence handling, acceptance conditions, and closure records."
+slug: "write-a-website-maintenance-request-template-that-captures-enough-context-to-act-on"
+published: "2026-11-21"
+updated: "2026-11-21"
+image: "/images/blog/nov21/write-a-website-maintenance-request-template-that-captures-enough-context-to-act-on.jpg"
+category: "outsourced website design operations"
+---
+
+## Why a vague request stalls the maintenance queue
+
+A request that says "the contact page is broken" gives the vendor a symptom but no target. The vendor must ask which page, which device, what the visitor saw, and when it started, and each question adds a day to the queue. Multiply that exchange across ten requests a month and the maintenance budget disappears into clarification. A template that captures the missing facts at intake shortens the loop without asking the client to diagnose the cause.
+
+Clarification is not the only cost. A thin request also makes it hard to decide severity, assign the right specialist, and prove the work was finished. Two clients can describe the same failure in completely different words, so the vendor ends up comparing narratives rather than records. A shared template gives every request the same fields and makes the queue sortable. It also creates a fair basis for comparing vendor response times across a quarter.
+
+## Name the page and the observed behavior
+
+Start with the canonical URL and the page title, not a screenshot alone. The URL lets the vendor open the exact page, check the template, and find the content record behind it. If the request concerns a page that is not yet live, name the staging URL and the page identifier used in the CMS. A screenshot is still useful, but it should support the URL rather than replace it.
+
+Then describe what the visitor sees in plain language. "The form submits but no confirmation appears" is more actionable than "the form is broken." Note the expected result and the actual result in separate sentences so the gap is unambiguous. Avoid guessing at code or plugin causes unless the reporter has evidence. The vendor can investigate causes once the behavior is clear.
+
+## Record reproduction steps and environment
+
+Ask for the shortest sequence that reproduces the problem. Number the steps, name the starting page, and include the button or link used at each stage. If the issue appears only after login, say which role and whether the account is a test account. A five-step sequence that always fails is worth more than a paragraph of description. It also tells the vendor where to start looking.
+
+Record the environment beside the steps. Include the browser, the operating system, the device type, and whether the visitor was signed in or using a browser extension. For layout issues, add the viewport width and a screenshot at that width. These details let the vendor reproduce the failure before touching production. Without them, a fix becomes a guess that may not survive the next browser update.
+
+## State the business impact and the urgency
+
+Urgency should follow impact, not the tone of the message. State which task is blocked, who is affected, and whether money, legal obligations, or a campaign deadline are involved. A checkout failure during a sale is different from a typo on an archived page, even when both arrive marked urgent. The template should ask for the consequence rather than a priority label.
+
+Ask the reporter to choose from a small set of severity definitions. For example: site down, key task broken, degraded experience, or cosmetic issue. Each level should carry a response expectation that the contract already defines. The vendor can then override the level with a reason instead of arguing about adjectives. Consistent definitions make the queue auditable and keep escalation from depending on who complained loudest.
+
+## Attach evidence without exposing credentials
+
+Screenshots, screen recordings, and exported error messages help, but they must not carry passwords, API keys, or customer data. Ask reporters to redact personal information and to attach files through the approved shared drive rather than pasting them into email. A screenshot of a console error is useful; a screenshot of a full admin session is a security incident waiting to happen. The template should name the approved attachment location so nobody improvises.
+
+Never ask for production credentials in the request template. If the vendor needs access, use a named account with the minimum role and a time limit, and record who granted it. The template should include a checkbox confirming that attachments contain no secrets. That small control prevents the most common leak in maintenance intake. It also gives the reviewer a reason to reject an unsafe attachment before it spreads.
+
+## Define the acceptance condition before work starts
+
+Write the condition that will prove the request is complete. "The confirmation message appears after a valid submission and the entry appears in the CRM" is testable. "Form works" is not. The acceptance condition should be visible to both the reporter and the person doing the work before anyone opens a code editor. It becomes the basis for the close-out note and the client's approval.
+
+If the fix changes visible copy or layout, attach the approved wording or reference image. If it changes behavior, name the expected result for a valid case and an invalid case. This prevents a repair that passes one test and breaks the adjacent path. The vendor should confirm the condition before starting, not after the invoice. A confirmed condition also limits scope creep during the fix.
+
+## Set the fields that close the loop
+
+The template should capture the requester, the date, the page, the behavior, the steps, the environment, the impact, the evidence, and the acceptance condition. Add fields for the assigned owner, the target date, the change record, and the verification note. These are completed by the vendor rather than the reporter. Keeping both halves in one record makes the request traceable from intake to proof.
+
+A closure note should say what changed and how it was verified. Link the deployment or content revision, name the person who checked it, and record the date. If the request was declined, state the reason and the alternative. A queue that closes with evidence is easier to reconcile at invoice time. It also gives the next request a better starting point and reduces repeat tickets.
+
+## Test the template on a live request
+
+Run the template on one real request before rolling it out. Watch where the reporter hesitates, which fields get skipped, and which answers still trigger a follow-up question. Trim anything that does not change the vendor's decision or the acceptance check. A template that takes ten minutes but saves two days of exchange is worth keeping. Keep the first version short enough that a busy editor will actually use it.
+
+Review the first month of requests with the vendor. Count how many arrived complete, how many needed clarification, and where the delays occurred. Update the definitions and examples rather than adding more fields. The goal is a short form that produces an actionable record, not a questionnaire that discourages reporting. One revision after the first month is usually enough to settle the format.
+
+## Related reading
+
+- [How to Reconcile an Outsourced Website Maintenance Invoice Against the Ticket Log](/blog/how-to-reconcile-an-outsourced-website-maintenance-invoice-against-the-ticket-log) shows how intake records support billing review.
+- [Review Windows and Approval SLAs for Outsourced Website Design](/blog/outsourced-website-design-approval-sla) explains how response expectations become a workable schedule.
+- [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials) offers a practical baseline for access control and incident reporting.

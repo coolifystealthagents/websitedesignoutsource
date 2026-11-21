@@ -790,5 +790,17 @@
   "research/auditing-whether-an-outsourced-website-maintenance-vendor-documents-how-it-deletes-client-data-at-contract-end": {
     "image": "/images/research/nov20/auditing-whether-an-outsourced-website-maintenance-vendor-documents-how-it-deletes-client-data-at-contract-end.jpg",
     "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Maintenance Vendor Documents How It Deletes Client Data at Contract End"
+  },
+  "blog/write-a-website-maintenance-request-template-that-captures-enough-context-to-act-on": {
+    "image": "/images/blog/nov21/write-a-website-maintenance-request-template-that-captures-enough-context-to-act-on.jpg",
+    "imageAlt": "Visual guide for Write a Website Maintenance Request Template That Captures Enough Context to Act On"
+  },
+  "research/auditing-whether-an-outsourced-website-vendor-rechecks-security-headers-after-a-cdn-or-proxy-change": {
+    "image": "/images/research/nov21/auditing-whether-an-outsourced-website-vendor-rechecks-security-headers-after-a-cdn-or-proxy-change.jpg",
+    "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Vendor Rechecks Security Headers After a CDN or Proxy Change"
+  },
+  "research/auditing-whether-an-outsourced-website-design-contract-defines-what-happens-when-the-client-misses-a-review-deadline": {
+    "image": "/images/research/nov21/auditing-whether-an-outsourced-website-design-contract-defines-what-happens-when-the-client-misses-a-review-deadline.jpg",
+    "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Design Contract Defines What Happens When the Client Misses a Review Deadline"
   }
 }
