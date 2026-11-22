@@ -1,0 +1,86 @@
+---
+title: "Auditing Whether an Outsourced Website Design Vendor Checks Keyboard Access Before Handing Off a Prototype"
+description: "A design-handoff audit of keyboard access evidence, covering tab order, focus visibility, overlays, reproducible test scripts, and the artifacts a client should receive before build starts."
+slug: "auditing-whether-an-outsourced-website-design-vendor-checks-keyboard-access-before-handing-off-a-prototype"
+published: "2026-11-22"
+updated: "2026-11-22"
+image: "/images/research/nov22/auditing-whether-an-outsourced-website-design-vendor-checks-keyboard-access-before-handing-off-a-prototype.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+This audit asks whether an outsourced website design vendor tests keyboard access before it hands a prototype to the build team. The unit of analysis is the evidence attached to the handoff, not the visual quality of the screens. A usable handoff shows which interactive elements were tested, the order in which focus moved, what the focus indicator looked like, and which issues remained open. The review covers the main templates in the prototype and any component that opens, closes, or changes state.
+
+The scope includes navigation, forms, dialogs, menus, carousels, cookie banners, and any custom control that a visitor can operate. It excludes static content pages with no interactive elements beyond links. The audit does not certify the final website, because a prototype cannot prove how a browser or assistive technology will behave in production. It tests whether the design vendor produced evidence that the build team can use and verify.
+
+## What keyboard access means in a design prototype
+
+Keyboard access means a person can reach and operate every function without a mouse. In a prototype, that usually means pressing Tab to move through links and controls, Shift plus Tab to move backward, Enter or Space to activate a button, and the arrow keys where a widget expects them. The design should show the expected behaviour for each control, especially when the control looks unlike a native button or link. The notes should also say which key activates a custom control when the native convention is ambiguous.
+
+A prototype can demonstrate intent even when it is not fully interactive. The vendor can annotate a screen with the intended tab sequence and the expected focus state. It can also mark which elements are decorative and should not receive focus. The audit asks whether those annotations exist and whether they match the visual hierarchy. A beautiful screen with no keyboard notes leaves the build team to guess at behaviour that should have been designed.
+
+## The evidence a design vendor can produce before build
+
+Useful evidence starts with a coverage list. The list names each template, each interactive component, and the keyboard test performed on it. For a dialog, the test should include opening it, moving through its controls, closing it, and returning focus to the trigger. For a menu, the test should include opening, moving between items, and escaping without losing the current page position. A coverage list turns a vague claim of accessibility into a set of checkable claims.
+
+The second artifact is a focus-order map. It can be a numbered screenshot, a short recording, or a table that lists the element, its role, and the order in which it receives focus. The map should distinguish the visual order from the DOM order when they differ. It should also note any element that is intentionally skipped. The auditor can compare the map with the prototype and with the eventual build, which makes the handoff useful long after the design review ends.
+
+## Testing tab order against the visual order
+
+Tab order should follow the reading and task order that a sighted keyboard user expects. A common failure is a layout built with absolute positioning, where the visual columns read left to right but the focus order jumps down one column and back up the other. The vendor should test the prototype at desktop and mobile widths, because a responsive reflow can change the order. Any difference between the visual and focus order needs a reason.
+
+The audit should also check reverse navigation. Pressing Shift plus Tab from the end of a form should return through the same controls in reverse, without skipping a field or landing on a hidden element. Focus should not move into off-screen menus, collapsed panels, or content that is visually hidden. These behaviors are easy to miss in a click-through review and easy to catch with a keyboard script.
+
+## Focus visibility and the browser default trap
+
+A focus indicator must remain visible against the page background, including on dark sections, images, and coloured buttons. Designers often remove the browser outline to make a screen look clean, then forget to supply a replacement. The handoff should show the focus style for every interactive state: default, hover, active, and focus. It should also show the style on a link inside body copy, not only on the primary button.
+
+The audit compares the proposed indicator with the surrounding contrast, not with an abstract colour swatch. A thin outline that disappears against a photograph is not adequate even if its colour passes a contrast check in isolation. The handoff should state the indicator width, offset, and colour, and identify any component that cannot accept the standard treatment. That detail lets the build team implement the style consistently instead of inventing a per-component exception.
+
+## Keyboard traps, skip links, and overlays
+
+A keyboard trap occurs when focus enters a component and cannot leave using the keyboard. Embedded players, modal dialogs, and third-party chat widgets are common sources. The vendor should show how each overlay opens, how focus is contained while it is open, and how the close action returns focus to the element that launched it. A prototype that shows only the open state has not designed the exit path.
+
+Skip links and landmark structure are part of the same review. A skip link should be reachable as the first focusable element and should move focus to the main content rather than merely scroll the page. The audit checks whether the prototype includes that link and whether the target region is identified. It also checks that a cookie banner or promotional overlay does not sit in the tab sequence after it has been dismissed. These controls are small, but they determine whether a keyboard user can move through the page efficiently.
+
+## Documenting findings with a reproducible script
+
+Ask for a short test script that another reviewer can repeat. The script should name the starting page, the browser, the viewport, and the exact keys pressed. It should record the expected focus target after each step and the observed result. A script that says "test the menu with the keyboard" is not reproducible; a numbered sequence that names each control is. The difference is the same as the difference between a bug report and a complaint.
+
+The script should also capture evidence. Screenshots of the focus indicator, a recording of the tab sequence, and the browser and assistive technology versions are enough for a design handoff. The vendor does not need to run a full audit, but it should be able to show that the basic paths work. If an issue is known and deferred, the script should name the owner and the acceptance condition for closing it.
+
+## Reviewing the handoff artifact
+
+A complete handoff combines the coverage list, the focus-order map, the focus-style specification, the test script, and the open-issues log. Each artifact should reference the same component names so the build team can move between them without translation. The handoff should state which items are requirements and which are recommendations, because a build team under schedule pressure will treat an unlabelled suggestion as optional. A separate list of deferred items keeps the main package focused on what the build must deliver now.
+
+The audit also checks version control. A prototype that changes after the handoff can invalidate the evidence, so the vendor should identify the reviewed version and the date. If the design changes later, the keyboard notes should be updated with it. A handoff folder that contains five files with similar names and no version marker creates avoidable confusion. The client should be able to point to one reviewed package and know what it covers.
+
+## Limits of prototype testing
+
+A prototype cannot prove how a real browser, a screen reader, or a switch device will behave. It can show the intended order and the intended focus style, but it cannot guarantee that a framework preserves them. The audit should therefore describe the handoff as design evidence, not as a conformance claim. The build team still needs to test the implemented pages with a keyboard and with assistive technology.
+
+The review is also limited by the components the vendor chose to show. A prototype may include the happy path and omit the error state, the empty state, or the long-content case. The auditor should ask for those states explicitly and mark them as unverified when they are absent. A narrow sample can still be useful, provided the report states its boundaries and does not imply coverage it did not achieve.
+
+## Reporting and next action
+
+Report one row per template and component with the test performed, the expected focus behaviour, the observed result, and the open issue. Attach the reviewed prototype version and the test script. Give the vendor a chance to correct the design notes before the build starts, then recheck only the changed components. The follow-up is cheap at the design stage and expensive after the templates are coded.
+
+The [W3C Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/) define the keyboard, focus-order, and focus-visibility requirements referenced in this audit. The [WAI understanding document for keyboard accessibility](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) explains how the success criterion applies to common controls. The [Section 508 website](https://www.section508.gov/) provides a public-sector baseline, and the [WebAIM keyboard accessibility guide](https://webaim.org/techniques/keyboard/) describes practical testing techniques. These sources inform the review method and do not report a result for this vendor.
+
+## Sources
+
+The sources below describe keyboard access requirements and testing practice. They do not report a finding for this sample, and each was checked on November 22, 2026. Keep the local coverage table separate from these references and record the retrieval date when the table is reused. Use them to check terminology and test coverage, not to substitute for the vendor's own artifact.
+
+1. [W3C, Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
+2. [W3C WAI, Understanding Keyboard Accessible](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html)
+3. [W3C WAI, Understanding Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html)
+4. [W3C WAI, Understanding Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html)
+5. [Section508.gov](https://www.section508.gov/)
+6. [WebAIM, Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
+
+## Related Research
+
+- [Keyboard Focus Order Website Review](/research/keyboard-focus-order-website-review) covers the review method for focus sequence in a built page.
+- [Focus Appearance Outsourced Design Review](/research/focus-appearance-outsourced-design-review) examines the visual treatment of the focus indicator.
+- [Accessible Dialog Focus Management Research](/research/accessible-dialog-focus-management-research) explains how focus should move into and out of a modal.
