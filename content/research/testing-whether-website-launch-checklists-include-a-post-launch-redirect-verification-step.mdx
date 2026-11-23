@@ -1,0 +1,92 @@
+---
+title: "Testing Whether Website Launch Checklists Include a Post-Launch Redirect Verification Step"
+description: "An audit design for redirect verification in website launch checklists, covering the redirect map, HTTP status codes, post-launch evidence, scoring, and the limits of a checklist review."
+slug: "testing-whether-website-launch-checklists-include-a-post-launch-redirect-verification-step"
+published: "2026-11-23"
+updated: "2026-11-23"
+image: "/images/research/nov23/testing-whether-website-launch-checklists-include-a-post-launch-redirect-verification-step.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+This audit asks whether a website launch checklist includes a step that verifies redirects after the new site is live. The unit of analysis is the checklist item and the evidence attached to it, not the redirect configuration alone. A qualifying item names who performs the check, when it happens relative to the launch, which URLs are covered, and what result counts as a pass. The review covers launches that replaced an existing site or changed a meaningful set of URLs.
+
+The scope includes the launch checklist, the redirect map, the post-launch verification record, and a sample of live redirect responses. It excludes routine link checking that only tests links inside the new site. The audit does not certify that every old URL was preserved. It tests whether the launch process asked for that proof and kept a record that the proof was produced.
+
+## Why redirect verification is easy to leave out
+
+A launch checklist usually grows from the build tasks that the team can see. Templates, forms, analytics, and DNS all have obvious owners and visible failure modes. Redirects are less visible because a broken one still returns a page, often a generic 404 that looks like ordinary missing content. The site can appear healthy while a large share of old inbound links lands nowhere useful.
+
+The gap also comes from timing. Redirect rules may be prepared before launch, but they can only be verified after the new host is serving traffic. A checklist written for the cutover moment may include "deploy redirect map" and stop there. That item confirms the file was uploaded, not that the old URLs now resolve to the right pages. The distinction is the heart of this audit.
+
+## Defining the checklist item and the redirect map
+
+Start by defining what a redirect map is for this project. It should list the old URL, the intended destination, the intended status code, and an owner. Some maps also record the reason for the redirect and the date it was added. Without a map, a post-launch check has no expected result to compare against, and the tester can only confirm that a URL did something.
+
+A checklist item is more than a short instruction to look at redirects. It should specify the sample or the full list, the tool or method, the expected status, and the person who signs off. It should also say what happens when a redirect fails, including who fixes it and how the fix is rechecked. A vague item produces a vague result, which is hard to audit later.
+
+## Sampling the checklist and the map
+
+Collect the launch checklist versions that were actually used, including any spreadsheet, ticket template, or project board. Note the version date and the person who owned it, because a later revision may look better than the one used on launch day. Search for terms such as redirect, 301, 302, legacy URL, old site, and broken link. Record every item that mentions redirects, even if it is buried in a general quality section.
+
+Then sample the redirect map. If the map is short, review all rows; if it is long, stratify by page type, traffic, and destination. Include home page equivalents, top landing pages, product or service pages, and a set of low-traffic URLs. Keep the selection rule in the audit file so a second reviewer can reproduce the sample. The map is the baseline, so gaps in the map are findings in their own right.
+
+## Testing status codes after launch
+
+For each sampled URL, send a request after the launch and record the response chain. Capture the initial status code, every hop, the final URL, and the final status. A single permanent redirect to a live page is the usual target. A chain of several hops still works for a visitor but adds latency and can confuse crawlers, so record the chain length rather than only the endpoint.
+
+Pay attention to the difference between a permanent and a temporary redirect. A 301 or 308 tells clients that the move is permanent, while a 302 or 307 signals a temporary arrangement. The map should state which one is intended, and the test should compare the observed code with that intent. A correct destination reached through the wrong status is still a partial pass, because the signal to search engines and browsers is not the one the team planned.
+
+## Looking for verification evidence
+
+The strongest evidence is a dated record that lists the tested URLs and their results. It can be a spreadsheet export, a script log, a monitoring report, or a signed checklist with an attachment. The record should identify the environment, because a test against staging does not prove the production host behaves the same way. It should also name the person who reviewed the failures, not only the person who ran the tool.
+
+A screenshot of one successful redirect is weak evidence for a sitewide launch. It proves that one URL worked at one moment, which may still be useful, but it does not show coverage. The audit should score evidence by coverage and reproducibility. A repeatable script with a saved output is stronger than a set of manual notes, even when both find the same result.
+
+## Distinguishing a redirect test from a link check
+
+A link check crawls the new site and reports broken internal links. It is valuable, but it does not test the old URLs that external sites, ads, and bookmarks still use. Those URLs may never appear in the new site's navigation, so a crawl will not see them at all. The audit should record whether the checklist conflates the two activities, because the mistake changes the meaning of a pass.
+
+A redirect test starts from the old URL list and asks where each one goes. A link check starts from the new pages and asks whether their links resolve. Both belong in a launch process, and one cannot substitute for the other. When a checklist contains only a link checker, the audit marks the redirect item as absent rather than counting the crawl as coverage.
+
+## Scoring checklist inclusion and evidence
+
+Use a three-level score for the checklist item. Complete means the item names the owner, the timing, the URL coverage, the expected status, and the failure path. Partial means the item exists but misses one or more of those elements. Absent means no item addresses post-launch redirect verification. Report the score for each checklist version so changes over time are visible.
+
+Score the evidence separately. Verified means a dated record covers the sampled URLs and matches the map. Partial means the record exists but covers a subset or lacks the observed status. Missing means no record was produced. Keeping the two scores apart matters, because a good checklist with no evidence and a weak checklist with strong evidence call for different fixes.
+
+## Common failure patterns
+
+The most common pattern is a map that was built from the old sitemap rather than from actual inbound traffic. It covers the pages the team remembers and misses the campaign URLs that still receive visitors. A second pattern is a redirect that points to a relevant page but not the equivalent page, which sends a visitor to the home page instead of the product they wanted. Both look like passes in a simple up or down check.
+
+A third pattern is a test performed before DNS propagation finished, producing failures that were never repeated. A fourth is a redirect added after launch and never recorded, so the map and the live configuration drift apart. The audit should note these patterns rather than treating every failure as a one-off. Recurring patterns point to a missing step in the launch template.
+
+## Limitations and threats to validity
+
+This audit reviews checklists and records, not the full history of the launch. A team may have verified redirects thoroughly without writing it down, and a tidy record may describe a test that was rushed. The reviewer should corroborate the record with server logs, monitoring history, and a fresh sample of live responses. The report should state which of those sources were available.
+
+Live redirects also change after launch, so a test run months later measures the current state, not the state on launch day. The audit should date every observation and avoid presenting a later result as proof of launch behavior. Sample size is another limit. A small sample can show that a process exists, but it cannot prove that every old URL was preserved. The report should say what the sample can and cannot support.
+
+## Reporting and next action
+
+Report one row per checklist version and one row per sampled URL. Include the checklist item, the map row, the expected status, the observed chain, the final URL, and the evidence reference. Mark each row complete, partial, or missing, and attach the date of the live test. Summarize the failures by pattern so the launch owner can fix the template rather than only the individual URLs.
+
+The [Google Search Central guide to redirects](https://developers.google.com/search/docs/crawling-indexing/301-redirects) explains how permanent redirects are treated and why the destination should be equivalent. [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html) defines the status code semantics that the map should reflect. The [Google Search Console change of address](https://support.google.com/webmasters/answer/9370220) documentation describes the site-move signal that depends on working redirects. These references inform the method; they do not report a result for any launch in this sample.
+
+## Sources
+
+The sources below describe redirect behavior, HTTP status semantics, and site-move practice. They do not report a finding for this sample, and each was checked on November 23, 2026. Keep the local checklist table separate from these references and record the retrieval date when the table is reused. The list is background for the audit method, not evidence that any particular launch was verified.
+
+1. [Google Search Central, Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects)
+2. [RFC 9110, HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html)
+3. [MDN, 301 Moved Permanently](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301)
+4. [Google Search Console Help, Change of Address](https://support.google.com/webmasters/answer/9370220)
+5. [NIST SP 800-128, Guide for Security-Focused Configuration Management](https://csrc.nist.gov/pubs/sp/800/128/final)
+6. [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+
+## Related Research
+
+- [Outsourced Website Redirect Map Validation](/research/outsourced-website-redirect-map-validation) covers how to check the map itself before launch.
+- [Website Redirect Chain Measurement 2026](/research/website-redirect-chain-measurement-2026) explains how chain length and status codes can be measured consistently.
+- [Redirect Map Verification Study](/research/redirect-map-verification-study) examines the evidence a redirect review should leave behind.

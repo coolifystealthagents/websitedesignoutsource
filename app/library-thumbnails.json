@@ -814,5 +814,17 @@
   "research/auditing-whether-an-outsourced-website-design-vendor-checks-keyboard-access-before-handing-off-a-prototype": {
     "image": "/images/research/nov22/auditing-whether-an-outsourced-website-design-vendor-checks-keyboard-access-before-handing-off-a-prototype.jpg",
     "imageAlt": "Visual guide for Auditing Whether an Outsourced Website Design Vendor Checks Keyboard Access Before Handing Off a Prototype"
+  },
+  "blog/a-pre-handoff-website-content-freeze-checklist-for-design-vendors": {
+    "image": "/images/blog/nov23/a-pre-handoff-website-content-freeze-checklist-for-design-vendors.jpg",
+    "imageAlt": "Visual guide for A Pre-Handoff Website Content Freeze Checklist for Design Vendors"
+  },
+  "research/auditing-whether-outsourced-design-vendors-record-the-clients-approval-of-final-copy": {
+    "image": "/images/research/nov23/auditing-whether-outsourced-design-vendors-record-the-clients-approval-of-final-copy.jpg",
+    "imageAlt": "Visual guide for Auditing Whether Outsourced Design Vendors Record the Client's Approval of Final Copy"
+  },
+  "research/testing-whether-website-launch-checklists-include-a-post-launch-redirect-verification-step": {
+    "image": "/images/research/nov23/testing-whether-website-launch-checklists-include-a-post-launch-redirect-verification-step.jpg",
+    "imageAlt": "Visual guide for Testing Whether Website Launch Checklists Include a Post-Launch Redirect Verification Step"
   }
 }

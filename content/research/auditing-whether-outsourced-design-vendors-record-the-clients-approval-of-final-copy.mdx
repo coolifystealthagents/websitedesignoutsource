@@ -1,0 +1,85 @@
+---
+title: "Auditing Whether Outsourced Design Vendors Record the Client's Approval of Final Copy"
+description: "A document audit of final-copy approval in outsourced website design, covering a sampling method across approval threads, prototypes, and published pages, plus scoring and limits."
+slug: "auditing-whether-outsourced-design-vendors-record-the-clients-approval-of-final-copy"
+published: "2026-11-23"
+updated: "2026-11-23"
+image: "/images/research/nov23/auditing-whether-outsourced-design-vendors-record-the-clients-approval-of-final-copy.jpg"
+category: "outsourced website design operations"
+---
+
+## Research question and scope
+
+This audit asks whether an outsourced design vendor keeps a record that the client approved the final copy before the page went to build or publication. The unit of analysis is the approval event for a defined content set, such as a landing page, a set of product descriptions, or a legal notice. A qualifying record links a specific version of the text to a named client approver and a date. The review covers the handoff from design to build and the first published version of each sampled page.
+
+The scope includes marketing pages, navigation labels, form copy, error messages, and legal text that the vendor placed or implemented. It excludes internal notes, draft copy with no client review, and brand assets with no text. The audit does not judge whether the copy itself was good. It tests whether the vendor can show, after the fact, that the client saw and accepted the words that shipped.
+
+## Why final copy approval is easy to lose
+
+Copy approval is usually spread across tools that were never designed to hold a record. A comment in a design file, a reply in a chat thread, and a verbal approval on a call can all feel decisive at the time. None of them necessarily names the version that was approved or the person who had authority to approve it. When the build team later asks which sentence is final, the trail depends on someone's memory.
+
+The problem grows when copy changes in small increments. A headline is approved in a prototype, then edited in a document, then shortened during build to fit a narrow column. Each step may be reasonable, but the original approval no longer covers the text on the page. An audit that samples only the final page will see a plausible result and miss the broken chain behind it. The method therefore has to look at more than the published output.
+
+## What counts as a record of approval
+
+A usable record has four parts: the content, the version, the approver, and the decision. The content can be a page list, a copy deck, or a labelled prototype screen. The version can be a date, a revision number, or a stable snapshot link. The approver should be a named person with a role that matches the decision. The decision should be explicit, such as approved, approved with changes, or rejected.
+
+A record that says only "client signed off" is weak because it cannot be tied to a version. A record that names the approver but not the text is equally weak, because the vendor cannot prove what was accepted. The audit treats a record as complete only when all four parts are present and can be matched to the built page. Partial records are scored separately rather than counted as passes.
+
+## Sampling across approval threads
+
+Draw the first sample from approval threads. Start with the project's main client communication channel and search for terms such as approval, final, sign-off, copy, and the page names in the sample frame. Keep a log of the search terms and the date range so another reviewer can repeat the search. Select threads that contain a decision about copy, not every thread that mentions the word final.
+
+For each thread, extract the message that carries the decision and the message that carries the text. Check whether the text in the thread matches the text in the handoff pack. A thread that approves an earlier draft is not evidence for the final version, even if it is the most recent message in the channel. This step often exposes the gap between a conversational yes and a controlled approval.
+
+## Sampling across prototypes
+
+The second sample comes from design prototypes and review links. Open each prototype at the version that was current at handoff, not the latest editable file. Record the page or screen name, the visible copy, and any comment that states client approval. If the prototype has version history, note the revision that the approval refers to and whether later edits touched the same text.
+
+Prototype comments are useful but easy to misread. A comment that says "looks great" may refer to layout rather than wording, and a resolved comment may hide a request that was never confirmed. The auditor should quote the comment and record what it appears to approve. Where the meaning is ambiguous, the record is marked as unclear rather than converted into a pass.
+
+## Sampling across published pages
+
+The third sample is the published page itself. Capture the page at a fixed date, record the URL, and save the visible text in a form that can be compared later. Match the captured text to the approved version, checking headings, body paragraphs, button labels, form hints, and legal lines. Small differences matter because a change made during build may never have been reviewed by the client.
+
+This sample is the easiest to collect and the least informative on its own. A page can match the approved text and still lack any record that the client approved it. It can also differ from the approved text because the vendor made a sensible implementation fix that the client would have accepted. The published page tells the auditor what shipped; the other two samples explain whether anyone agreed to it.
+
+## Reading the three sources together
+
+Score each sampled content set on a simple ladder. A complete record has a named approver, a version, and a decision that matches the published text. A partial record has some of those elements but cannot be tied to the final version. A missing record has no client decision that the auditor can find. Report the counts by source so the reader can see whether the gap sits in the thread, the prototype, or the page.
+
+Then look for the pattern behind the gaps. If approvals are complete in prototypes but absent in threads, the team may be treating the design tool as the system of record. If threads are complete but pages drift, the build step is the weak link. The pattern points to a specific remedy, such as a versioned copy deck or a build-time copy check, instead of a general instruction to communicate better.
+
+## Scoring and reviewer agreement
+
+Use two reviewers on a subsample and compare their scores before the full review. Disagreements usually come from ambiguous comments or from a version that cannot be identified. Discuss those cases and write a short rule for each, then rescore the subsample. Report the level of agreement rather than implying that the scores are objective. A simple percentage of matching rows is enough for a small audit, provided the reviewer explains how ties were resolved.
+
+The audit should also separate a documentation failure from an approval failure. A client may have approved the copy clearly on a call, while the vendor failed to record it. That is different from a client never seeing the final text. The report should say which condition it found, because the first calls for a record-keeping fix and the second calls for a process change.
+
+## Limitations and threats to validity
+
+This method reviews artifacts, not intentions. A vendor with a tidy approval record may still have shipped copy the client disliked, and a vendor with a thin record may have followed a sound verbal process. The auditor should corroborate the record with build tickets, email, and the client's own files where permission exists. The report should name the sources it could not access and avoid treating absence as proof of misconduct.
+
+Retention is another limit that deserves an explicit note in the method. Chat platforms expire messages, prototypes are overwritten, and staff leave, so the available record may be thinner than the original process. A short retention window can make a complete approval practice look incomplete. The audit should state the observation period and the tools available for each sample. It should also avoid generalizing from one project to a vendor's whole practice, especially when the sample is small.
+
+## Reporting and next action
+
+Report one row per content set with the page, the approved version, the approver, the decision, the published match, and the source references. Mark each row complete, partial, or missing, and add a short note for every partial case. Give the vendor a defined window to fill gaps, then recheck a sample rather than the whole set. The recheck shows whether the fix became a habit or only cleaned up the audit file.
+
+The [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) control catalog treats audit records and configuration control as related practices, which is a useful frame for linking an approval to a version. The [NIST SP 800-128](https://csrc.nist.gov/pubs/sp/800/128/final) guide to security-focused configuration management explains why a recorded baseline matters when many people can change a system. The [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials) offers a plain-language baseline for access and change control. These references inform the method; they do not report a result for any vendor in this sample.
+
+## Sources
+
+The sources below describe records, configuration control, and plain-language review. They do not report a finding for this sample, and each was checked on November 23, 2026. Keep the local approval table separate from these references and record the retrieval date when the table is reused. A source list is background for the method, not a substitute for the vendor's own approval records.
+
+1. [NIST SP 800-53 Rev. 5, Security and Privacy Controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)
+2. [NIST SP 800-128, Guide for Security-Focused Configuration Management](https://csrc.nist.gov/pubs/sp/800/128/final)
+3. [CISA Cyber Essentials](https://www.cisa.gov/cyber-essentials)
+4. [National Archives, Records Management](https://www.archives.gov/records-mgmt)
+5. [Plain Language Guidelines, plainlanguage.gov](https://www.plainlanguage.gov/guidelines/)
+
+## Related Research
+
+- [Website Design Approval Evidence](/research/website-design-approval-evidence) covers the broader approval artifacts that should accompany a design handoff.
+- [Website Copy Evidence for Outsourced Design](/research/website-design-website-copy-evidence) explains how copy versions can be traced through a project.
+- [Outsourced Website Content Approval Bottleneck Evidence](/research/outsourced-website-content-approval-bottleneck-evidence) examines where approval delays accumulate in a content queue.
