@@ -826,5 +826,17 @@
   "research/testing-whether-website-launch-checklists-include-a-post-launch-redirect-verification-step": {
     "image": "/images/research/nov23/testing-whether-website-launch-checklists-include-a-post-launch-redirect-verification-step.jpg",
     "imageAlt": "Visual guide for Testing Whether Website Launch Checklists Include a Post-Launch Redirect Verification Step"
+  },
+  "blog/a-website-accessibility-handoff-checklist-for-outsourced-design-teams": {
+    "image": "/images/blog/nov24/a-website-accessibility-handoff-checklist-for-outsourced-design-teams.jpg",
+    "imageAlt": "Visual guide for A Website Accessibility Handoff Checklist for Outsourced Design Teams"
+  },
+  "research/auditing-whether-design-vendors-record-who-approved-a-scope-change-after-kickoff": {
+    "image": "/images/research/nov24/auditing-whether-design-vendors-record-who-approved-a-scope-change-after-kickoff.jpg",
+    "imageAlt": "Visual guide for Auditing Whether Design Vendors Record Who Approved a Scope Change After Kickoff"
+  },
+  "research/testing-whether-website-launch-checklists-verify-analytics-and-consent-settings": {
+    "image": "/images/research/nov24/testing-whether-website-launch-checklists-verify-analytics-and-consent-settings.jpg",
+    "imageAlt": "Visual guide for Testing Whether Website Launch Checklists Verify Analytics and Consent Settings"
   }
 }

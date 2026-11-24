@@ -1,0 +1,66 @@
+---
+title: "A Website Accessibility Handoff Checklist for Outsourced Design Teams"
+description: "A practical accessibility handoff checklist for outsourced design teams, covering the conformance target, structure, keyboard access, forms, contrast, alternative text, ownership, and a reproducibility test."
+slug: "a-website-accessibility-handoff-checklist-for-outsourced-design-teams"
+published: "2026-11-24"
+updated: "2026-11-24"
+image: "/images/blog/nov24/a-website-accessibility-handoff-checklist-for-outsourced-design-teams.jpg"
+category: "outsourced website design operations"
+---
+
+## Why accessibility evidence should travel with the handoff
+
+An accessibility review that stays inside the design vendor's tool is difficult for anyone else to trust. When the build team receives a file, a prototype, or a set of screenshots, it also needs the evidence behind each claim. A handoff that says the design "meets WCAG" without naming the level, the pages, or the method leaves the next team guessing. This checklist turns those claims into items a reviewer can confirm or reject.
+
+## Record the conformance target and the audit scope
+
+Start with a dated statement of the target standard, such as WCAG 2.2 level AA, and the pages it covers. Use the [W3C WCAG 2.2 specification](https://www.w3.org/TR/WCAG22/) as the shared reference for each criterion and the [WAI evaluation guidance](https://www.w3.org/WAI/test-evaluate/) for the method. Name the page templates, the languages, and the user journeys that were reviewed, because a claim that covers only the home page is not a sitewide claim. The target and the scope should sit on the same page so nobody can cite one without the other.
+
+State what was excluded as clearly as what was included. Third-party checkout flows, embedded booking widgets, and legacy pages often sit outside the design vendor's control. Listing those exclusions prevents the build team from inheriting an implied promise it cannot keep. Each exclusion should name the party that owns it and the date by which it will be reviewed.
+
+## Check the semantic structure and reading order
+
+Ask for evidence that headings follow a logical order and that each page has one main heading. A screenshot cannot show this, so the vendor should supply the heading outline or a link to the reviewed page. Check that lists, tables, and form groups use the right elements rather than styled paragraphs. The handoff should also record any decorative structure that was intentionally hidden from assistive technology.
+
+Reading order is easy to break when a layout is built from absolute positioning or a visual grid. Ask the vendor to note where the DOM order differs from the visual order and why. For each case, record the assistive technology and browser used to confirm the experience. A short table of exceptions is more useful than a statement that the order was checked.
+
+## Verify keyboard access and focus behaviour
+
+Keyboard evidence should name the routes that were tested and the controls that received focus. For each interactive element, the vendor should confirm that it can be reached, operated, and left without a mouse. Record the visible focus indicator and whether it stays visible against the surrounding colours. A note that "keyboard works" is not enough, because it does not show coverage or the focus style that was accepted.
+
+Modal dialogs, menus, and carousels deserve their own line in the checklist. Ask how focus enters the component, whether it is trapped while the component is open, and where it returns when the component closes. Record what happens when the escape key is pressed and whether background content can still be reached. These behaviours are commonly lost between a static design and a dynamic build.
+
+## Confirm forms, labels, and error messages
+
+For every form in scope, collect the visible label, the accessible name, and the hint text as a single record. Check that required fields are identified in text, not only by colour or an asterisk. Ask the vendor to show the error message that appears for each validation rule and where it is announced. A form that looks correct but announces no error can block a screen reader user.
+
+Record the decisions that are easy to lose in implementation, such as autocomplete attributes and input types. Note whether the design uses placeholder text as a label, because that pattern usually fails once the field is filled. Include the success and failure messages that appear after submission. The build team should not have to invent this copy during implementation.
+
+## Collect contrast, zoom, and reflow evidence
+
+Contrast should be recorded with the measured ratio and the tool that produced it, not a visual opinion. List the text and background pairs that were checked, including hover, focus, disabled, and error states. Ask for the largest text sizes and the ratio that applies to each. A single pass on body text can hide failures in buttons, links, and status messages.
+
+Zoom and reflow evidence should show the pages at 200 percent zoom and at a narrow viewport equivalent to 320 CSS pixels. Record whether content is clipped, whether horizontal scrolling appears, and whether controls remain usable. Screenshots are acceptable when dated and labelled with the viewport and zoom level. The build team needs to know which layouts were accepted, not only that they were seen.
+
+## Package alternative text and media decisions
+
+Alternative text belongs in the handoff as a list keyed to the image or media file. Record which images are decorative, which carry information, and which are links with their own purpose. For video and audio, note captions, transcripts, and audio description decisions. A folder of images without that list forces the build team to guess at intent.
+
+The checklist should also cover charts, icons, and images of text. Charts need a short description and a way to reach the underlying data. Icons that trigger an action need an accessible name, and images of text should be replaced or justified. Each item is small on its own and expensive to reconstruct after launch.
+
+## Name the owner for post-handoff accessibility fixes
+
+Every checklist needs a named owner for the questions that arrive after handoff. That person should be able to decide whether a requested change preserves the approved design or needs a new review. Record a response time so the build team is not blocked for days. The owner can be the design lead, but the role should be written down rather than assumed.
+
+Also name the person who accepts the handoff on the build side. The acceptance record should list the items received, the items still open, and the date of the next check. Keep it short enough that both sides actually read it. A handoff with two named owners and a small open list is easier to defend than a long document with no signature.
+
+## Close the handoff with a reproducibility test
+
+Finish by asking a second reviewer to reproduce three of the recorded checks from the handoff pack alone. Pick one structural item, one keyboard item, and one form item. If the reviewer cannot reach the same result, the record is missing a step or a reference. This short test shows whether the checklist works as evidence rather than as a summary.
+
+The last step is to route the accessibility items into the build team's own QA list. Link the handoff pack from the build ticket and set a review date after launch. That closing loop is what turns a handoff document into a control. See [Image Alt Text at the CMS Entry Point](/blog/image-alt-text-cms-review) and [Gate Third-Party Embeds Behind a Consent Placeholder](/blog/third-party-embed-consent-placeholder) for two related checks.
+
+## Related reading
+
+- [Image Alt Text at the CMS Entry Point](/blog/image-alt-text-cms-review) covers the alt-text decision record that this handoff depends on.
+- [Gate Third-Party Embeds Behind a Consent Placeholder](/blog/third-party-embed-consent-placeholder) explains how embedded media can be held to the same accessibility and consent standard.
